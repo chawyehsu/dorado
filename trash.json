@@ -8,5 +8,6 @@
     "hash": [
         "6f605ff88aa63c613073b2bb475eae61b24d477caf119e107134780085a3e47b"
     ],
-    "bin": "bin\\trash.exe"
+    "pre_install": "Rename-Item @(Get-ChildItem $dir\\recycle-bin.exe)[0] $dir\\trash.exe",
+    "bin": "trash.exe"
 }
