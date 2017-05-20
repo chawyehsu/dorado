@@ -1,0 +1,17 @@
+{
+  "version": "4.3.1",
+  "homepage": "https://www.continuum.io/anaconda-overview",
+  "license": "BSD 3-Clause",
+  "architecture": {
+    "64bit": {
+      "url": "https://repo.continuum.io/archive/.winzip/Anaconda2-$version-Windows-x86_64.zip",
+      "hash": "md5:152aa56d31dd256f7ce9f9fe27246bc5"
+    },
+    "32bit": {
+      "url": "https://repo.continuum.io/archive/.winzip/Anaconda2-$version-Windows-x86.zip",
+      "hash": "md5:bb44d53bd11f6a42bf8bbc30060cece5"
+    }
+  },
+  "bin": "bin\\idea.bat",
+  "env_add_path": "bin"
+}
