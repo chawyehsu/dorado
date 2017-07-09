@@ -1,0 +1,35 @@
+{
+    "homepage": "https://github.com/h404bi/nvm-windows",
+    "version": "1.1.6-p1",
+    "url": "https://github.com/h404bi/nvm-windows/releases/download/$version/nvm-noinstall.zip",
+    "bin": [
+        "nvm.exe"
+    ],
+    "persist": [
+       "nodejs",
+        "settings.txt"
+    ],
+    "env_add_path": "nodejs\\nodejs",
+    "env_set": {
+        "NVM_HOME": "$dir",
+        "NVM_SYMLINK": "$persist_dir\\nodejs\\nodejs"
+    },
+    "hash": "00de031fbb2704eb77cb563855907c78a6b7a3b43144c5ea5420ab1696b2c294",
+    "architecture": {
+        "64bit": {
+            "pre_install": "if(!(test-path \"$dir\\settings.txt\")) {
+                write-output \"root: $persist_dir\\nodejs`r`narch: 64`r`nproxy: none\" | Out-File -encoding \"ASCII\" $dir\\settings.txt
+            }"
+        },
+        "32bit": {
+            "pre_install": "if(!(test-path \"$dir\\settings.txt\")) {
+                write-output \"root: $persist_dir\\nodejs`r`narch: 32`r`nproxy: none\" | Out-File -encoding \"ASCII\" $dir\\settings.txt
+            }"
+        }
+    },
+    "notes": "You'll need to restart powershell/cmd to have it reload Environment Variables so nvm will work correctly",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/h404bi/nvm-windows/releases/download/$version/nvm-noinstall.zip"
+    }
+}
