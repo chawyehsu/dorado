@@ -13,30 +13,30 @@
     }
   },
   "installer": {
-      "args":[
-        "/S",
-        "/InstallationType=JustMe",
-        "/RegisterPython=0",
-        "/AddToPath=0",
-        "/D=$dir"
-        ]
-    },
-    "uninstaller":{
-      "file":"Uninstall-Anaconda.exe",
-      "args":[
-        "/S"
+    "args":[
+      "/S",
+      "/InstallationType=JustMe",
+      "/RegisterPython=0",
+      "/AddToPath=0",
+      "/D=$dir"
       ]
-    },
-    "bin": [
+  },
+  "uninstaller":{
+    "file":"Uninstall-Anaconda.exe",
+    "args":[
+      "/S"
+    ]
+  },
+  "bin": [
+    "python.exe",
+    "pythonw.exe",
+    [
       "python.exe",
-      "pythonw.exe",
-      [
-        "python.exe",
-        "python2"
-      ]
-    ],
-    "env_add_path": [
-      "scripts"
-    ],
-    "notes": "Currently conda envs activate and deactivate doesn't work on PowerShell, for workaround and more information, see: https://github.com/conda/conda/issues/626"
+      "python2"
+    ]
+  ],
+  "env_add_path": [
+    "scripts"
+  ],
+  "notes": "Currently conda envs activate and deactivate doesn't work on PowerShell, for workaround and more information, see: https://github.com/conda/conda/issues/626"
 }
