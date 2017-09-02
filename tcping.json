@@ -1,17 +1,21 @@
 {
-  "homepage": "https://elifulkerson.com/projects/tcping.php",
-  "license": "https://elifulkerson.com/projects/tcping.php",
-  "version": "0.34",
-  "architecture": {
-    "64bit": {
-      "url": "https://elifulkerson.com/projects/downloads/tcping-0.34/tcping64.exe",
-      "hash": "0baefa74b761e490c6ab7906faf184cd141c88dfb0d4388d6bc3ecc9739a3c89"
+    "homepage": "https://elifulkerson.com/projects/tcping.php",
+    "license": "GPL",
+    "version": "0.36",
+    "checkver": {
+        "url": "https://www.elifulkerson.com/projects/tcping.php",
+        "re": "https://download.elifulkerson.com/files/tcping/([\\d.]+)"
     },
-    "32bit": {
-      "url": "https://elifulkerson.com/projects/downloads/tcping-0.34/tcping.exe",
-      "hash": "d0e526a19497117a854f1ac9a9347f7621709afc3548c2e6a46b19e833578eac"
-    }
-  },
-  "pre_install": "Rename-Item @(Get-ChildItem $dir\\tcping*.exe)[0] $dir\\tcping.exe",
-  "bin": "tcping.exe"
+    "architecture": {
+        "64bit": {
+            "url": "https://download.elifulkerson.com/files/tcping/0.36/x64/tcping64.exe",
+            "hash": "42f1796677b163675e70ed31430d82614c199aca47a6c3e5ce39cc982668a342"
+        },
+        "32bit": {
+            "url": "https://download.elifulkerson.com/files/tcping/0.36/tcping.exe",
+            "hash": "40bfb658ad1c48d9ca81209cb16edcfbb31c3a70cf1d3f825bbd85c68ae94629"
+        }
+    },
+    "pre_install": "Rename-Item @(Get-ChildItem $dir\\tcping*.exe)[0] $dir\\tcping.exe",
+    "bin": "tcping.exe"
 }

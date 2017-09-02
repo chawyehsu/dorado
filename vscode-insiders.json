@@ -1,42 +1,42 @@
 {
-  "homepage": "https://code.visualstudio.com/insiders",
-  "version": "1.16.0-insider",
-  "license": "https://code.visualstudio.com/License/",
-  "notes": "Want to add vscode as a context menu option in explorer? See this guide: http://thisdavej.com/right-click-on-windows-folder-and-open-with-visual-studio-code/",
-  "bin": [
-    [
-      "bin\\code-insiders.cmd",
-      "code-insiders"
-    ]
-  ],
-  "shortcuts": [
-    [
-      "Code - Insiders.exe",
-      "Visual Studio Code - Insiders"
-    ]
-  ],
-  "checkver": {
-    "url": "https://vscode-update.azurewebsites.net/api/releases/insider/win32",
-    "jp": "$.[0]"
-  },
-  "architecture": {
-    "64bit": {
-      "url": "https://vscode-update.azurewebsites.net/1.16.0-insider/win32-x64-archive/insider#/dl.7z",
-      "hash": "2e00c2f2cd7774c92e950bfa7ba62c0c51cdd4106ad96c30f778ba878401c723"
+    "homepage": "https://code.visualstudio.com/insiders",
+    "version": "1.16.0-insider",
+    "license": "https://code.visualstudio.com/License/",
+    "notes": "Want to add vscode as a context menu option in explorer? See this guide: http://thisdavej.com/right-click-on-windows-folder-and-open-with-visual-studio-code/",
+    "bin": [
+        [
+            "bin\\code-insiders.cmd",
+            "code-insiders"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "Code - Insiders.exe",
+            "Visual Studio Code - Insiders"
+        ]
+    ],
+    "checkver": {
+        "url": "https://vscode-update.azurewebsites.net/api/releases/insider/win32",
+        "jp": "$.[0]"
     },
-    "32bit": {
-      "url": "https://vscode-update.azurewebsites.net/1.16.0-insider/win32-archive/insider#/dl.7z",
-      "hash": "fd2e35ae4c0e7da73af22d605465ac9e3cda7adc92d19ffddc2dcca524794453"
-    }
-  },
-  "autoupdate": {
     "architecture": {
-      "64bit": {
-        "url": "https://vscode-update.azurewebsites.net/$version/win32-x64-archive/insider#/dl.7z"
-      },
-      "32bit": {
-        "url": "https://vscode-update.azurewebsites.net/$version/win32-archive/insider#/dl.7z"
-      }
+        "64bit": {
+            "url": "https://vscode-update.azurewebsites.net/1.16.0-insider/win32-x64-archive/insider#/dl.7z",
+            "hash": "2e00c2f2cd7774c92e950bfa7ba62c0c51cdd4106ad96c30f778ba878401c723"
+        },
+        "32bit": {
+            "url": "https://vscode-update.azurewebsites.net/1.16.0-insider/win32-archive/insider#/dl.7z",
+            "hash": "fd2e35ae4c0e7da73af22d605465ac9e3cda7adc92d19ffddc2dcca524794453"
+        }
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://vscode-update.azurewebsites.net/$version/win32-x64-archive/insider#/dl.7z"
+            },
+            "32bit": {
+                "url": "https://vscode-update.azurewebsites.net/$version/win32-archive/insider#/dl.7z"
+            }
+        }
     }
-  }
 }
