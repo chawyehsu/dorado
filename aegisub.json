@@ -1,0 +1,60 @@
+{
+    "homepage": "http://www.aegisub.org",
+    "description": "Aegisub is a free, cross-platform open source tool for creating and modifying subtitles.",
+    "version": "3.2.2",
+    "license": "BSD 3-Clause",
+    "architecture": {
+        "64bit": {
+            "url": "http://ftp.aegisub.org/pub/archives/releases/windows/aegisub-3.2.2-portable-64.exe#dl.7z",
+            "hash": "md5:d316e4ce9bcbfb53d3803c86804c3f69",
+            "extract_dir": "aegisub-3.2.2-portable-64",
+            "bin":  [
+                [
+                    "aegisub64.exe",
+                    "aegisub"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "aegisub64.exe",
+                    "Aegisub x64"
+                ]
+            ]
+        },
+        "32bit": {
+            "url": "http://ftp.aegisub.org/pub/archives/releases/windows/aegisub-3.2.2-portable-32.exe#dl.7z",
+            "hash": "md5:908016606d64c52ef52b52a3704fc1b2",
+            "extract_dir": "aegisub-3.2.2-portable-32",
+            "bin":  [
+                [
+                    "aegisub32.exe",
+                    "aegisub"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "aegisub32.exe",
+                    "Aegisub"
+                ]
+            ]
+        }
+    },
+    "checkver": {
+        "url": "http://www.aegisub.org/downloads/",
+        "re": "The latest version is ([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "http://ftp.aegisub.org/pub/archives/releases/windows/aegisub-$version-portable-64.exe#dl.7z"
+            },
+            "32bit": {
+                "url": "http://ftp.aegisub.org/pub/archives/releases/windows/aegisub-$version-portable-32.exe#dl.7z"
+            }
+        },
+        "hash": {
+            "mode": "extract",
+            "url": "$url.md5"
+        }
+    }
+}
