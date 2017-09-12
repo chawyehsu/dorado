@@ -1,8 +1,8 @@
 {
-    "version": "2017.2.3",
+    "version": "2017.2.4",
     "homepage": "https://www.jetbrains.com/idea/",
-    "url": "https://download.jetbrains.com/idea/ideaIC-2017.2.3.win.zip",
-    "hash": "232067a3bf7a77967a3c294707970b76b85bc89f9f40538b6d5b6b353ede57e1",
+    "url": "https://download.jetbrains.com/idea/ideaIC-2017.2.4.win.zip",
+    "hash": "1f08ec6e7d6b7b63ffb56c48657525939cce71c61a5457b14d6692266526a17f",
     "bin": "bin\\idea.bat",
     "env_add_path": "bin",
     "shortcuts": [
@@ -17,7 +17,7 @@
     ],
     "checkver": {
         "url": "https://data.services.jetbrains.com/products/releases?code=IIC&latest=true&type=release",
-        "jp": "$.IIC.version"
+        "jp": "$..version"
     },
     "autoupdate": {
         "url": "https://download.jetbrains.com/idea/ideaIC-$version.win.zip",
