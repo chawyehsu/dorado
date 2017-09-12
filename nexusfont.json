@@ -14,5 +14,13 @@
     ],
     "persist": [
         "userdata"
-    ]
+    ],
+    "checkver": {
+        "url": "http://www.xiles.net/",
+        "re": "ver (?<version>[\\d.]+) \\((?<date>[\\d.]+)\\)",
+        "reverse": true
+    },
+    "autoupdate": {
+        "url": "http://www.xiles.net/pds/nexusfont_$version.zip"
+    }
 }

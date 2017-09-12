@@ -41,7 +41,7 @@
     },
     "checkver": {
         "url": "http://www.aegisub.org/downloads/",
-        "re": "The latest version is ([\\d.]+)"
+        "re": "The latest version is \\<strong\\>([\\d.]+)\\<\\/strong\\>"
     },
     "autoupdate": {
         "architecture": {

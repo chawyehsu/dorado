@@ -16,6 +16,20 @@
             "hash": "40bfb658ad1c48d9ca81209cb16edcfbb31c3a70cf1d3f825bbd85c68ae94629"
         }
     },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://download.elifulkerson.com/files/tcping/$version/x64/tcping64.exe"
+            },
+            "32bit": {
+                "url": "https://download.elifulkerson.com/files/tcping/$version/tcping.exe"
+            }
+        },
+        "hash": {
+            "mode": "extract",
+            "url": "$url.sha256"
+        }
+    },
     "pre_install": "Rename-Item @(Get-ChildItem $dir\\tcping*.exe)[0] $dir\\tcping.exe",
     "bin": "tcping.exe"
 }
