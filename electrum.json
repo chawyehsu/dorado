@@ -1,0 +1,21 @@
+{
+    "homepage": "https://electrum.org/",
+    "version": "2.9.3",
+    "license": "MIT",
+    "url": "https://download.electrum.org/2.9.3/electrum-2.9.3.exe#/electrum.exe",
+    "bin": "electrum.exe",
+    "shortcuts": [
+        [
+            "electrum.exe",
+            "Electrum"
+        ]
+    ],
+    "checkver": {
+        "url": "https://electrum.org/",
+        "re": "Latest release: Electrum-([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://download.electrum.org/$version/electrum-$version.exe#/electrum.exe"
+    },
+    "notes": "Your electrum_data (wallet) will be storaged in %APPDATA%\\Electrum\\wallets, please be careful."
+}
