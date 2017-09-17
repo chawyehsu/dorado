@@ -1,0 +1,43 @@
+{
+    "homepage": "https://www.jetbrains.com/pycharm/",
+    "description": "Python IDE for Professional Developers",
+    "version": "2017.2.3",
+    "url": "https://download.jetbrains.com/python/pycharm-community-2017.2.3.zip",
+    "hash": "3c77056e3b54875b8060e9d71dc14b16c465747266dc5a1211887848e6a0f3ef",
+    "bin": "bin\\pycharm.bat",
+    "architecture": {
+        "64bit": {
+            "shortcuts": [
+                [
+                    "bin\\pycharm64.exe",
+                    "PyCharm Community Edition"
+                ]
+            ]
+        },
+        "32bit": {
+            "shortcuts": [
+                [
+                    "bin\\pycharm.exe",
+                    "PyCharm Community Edition"
+                ]
+            ]
+        }
+    },
+    "suggest": {
+        "Python": [
+            "python",
+            "dorado/anaconda2",
+            "dorado/anaconda3"
+        ]
+    },
+    "checkver": {
+        "url": "https://data.services.jetbrains.com/products/releases?code=PCC&latest=true&type=release",
+        "jp": "$..version"
+    },
+    "autoupdate": {
+        "url": "https://download.jetbrains.com/python/pycharm-community-$version.zip",
+        "hash": {
+            "url": "$url.sha256"
+        }
+    }
+}
