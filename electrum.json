@@ -12,8 +12,7 @@
         ]
     ],
     "checkver": {
-        "url": "https://electrum.org/",
-        "re": "Latest release: Electrum-([\\d.]+)"
+        "github": "https://github.com/spesmilo/electrum"
     },
     "autoupdate": {
         "url": "https://download.electrum.org/$version/electrum-$version.exe#/electrum.exe"
