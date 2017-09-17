@@ -1,0 +1,25 @@
+{
+    "homepage": "http://hackjutsu.com/Lepton/",
+    "version": "1.4.2",
+    "url": "https://github.com/hackjutsu/Lepton/releases/download/v1.4.2/Lepton-1.4.2-win.7z",
+    "hash": "d479a5eac9be7c97074491e1e8f380e85ea97499e8c5f701f27d9b7bcc62d8dd",
+    "extract_dir": "win-unpacked",
+    "bin": [
+        [
+            "Lepton.exe",
+            "lepton"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "Lepton.exe",
+            "Lepton"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/hackjutsu/Lepton"
+    },
+    "autoupdate": {
+        "url": "https://github.com/hackjutsu/Lepton/releases/download/v$version/Lepton-$version-win.7z"
+    }
+}
