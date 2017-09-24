@@ -1,0 +1,26 @@
+{
+    "homepage": "http://16-bits.org/ft2.php",
+    "version": "Beta #25 - 20.09.2017",
+    "checkver": {
+        "url": "http://16-bits.org/ft2_changelog.txt",
+        "re": "([\\w]+ #[\\d.]+ - [\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "http://16-bits.org/ft2-win32.zip"
+    },
+    "url": "http://16-bits.org/ft2-win32.zip",
+    "hash": "9c7370b3fcafb57b6acf996c0f46294ce7771c9792f1d8b4984e43cc2f151cd8",
+    "extract_dir": "ft2-win32",
+    "bin":  [
+        [
+            "ft2-win32.exe",
+            "ft2"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "ft2-win32.exe",
+            "Fasttracker II clone"
+        ]
+    ]
+}
