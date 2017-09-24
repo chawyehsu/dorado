@@ -1,0 +1,27 @@
+{
+    "homepage": "https://www.planetminecraft.com/mod/mcskin3d/",
+    "version": "1.6.0.602",
+    "url": "http://alteredsoftworks.com/mcskin3d/v1_6/mcskin3d_1_6_0_602.zip",
+    "hash": "0a6f3a81c876ea55618a6672b4e0f277b85864fa616b9855ac62f50f80a0f038",
+    "bin": [
+        [
+            "MCSkin3D.exe",
+            "mcskin3d"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "MCSkin3D.exe",
+            "MCSkin3D"
+        ]
+    ],
+    "pre_install": "if (! (test-path \"$dir\\settings.ini\")) { write-output \"\" | Out-File -encoding \"ASCII\" $dir\\settings.ini }",
+    "persist": [
+        "Skins",
+        "settings.ini"
+    ],
+    "checkver": {
+        "url": "https://www.planetminecraft.com/mod/mcskin3d/",
+        "re": "Latest version \\(([\\d.]+)\\)"
+    }
+}
