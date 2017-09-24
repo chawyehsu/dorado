@@ -1,9 +1,9 @@
 {
     "homepage": "http://16-bits.org/ft2.php",
-    "version": "Beta #25 - 20.09.2017",
+    "version": "20.09.2017",
     "checkver": {
         "url": "http://16-bits.org/ft2_changelog.txt",
-        "re": "([\\w]+ #[\\d.]+ - [\\d.]+)"
+        "re": "[\\w]+ #[\\d.]+ - (?<version>[\\d.]+)"
     },
     "autoupdate": {
         "url": "http://16-bits.org/ft2-win32.zip"
