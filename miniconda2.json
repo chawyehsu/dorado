@@ -1,5 +1,5 @@
 {
-    "version": "4.3.21",
+    "version": "4.3.27",
     "homepage": "https://conda.io/miniconda.html",
     "license": "BSD 3-Clause",
     "checkver": {
@@ -8,12 +8,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://repo.continuum.io/miniconda/Miniconda2-4.3.21-Windows-x86_64.exe",
-            "hash": "md5:9c98e98931b952848c7372a63e04cdc7"
+            "url": "https://repo.continuum.io/miniconda/Miniconda2-4.3.27-Windows-x86_64.exe",
+            "hash": "md5:51428e8e9da2340c54b6b823a72a5711"
         },
         "32bit": {
-            "url": "https://repo.continuum.io/miniconda/Miniconda2-4.3.21-Windows-x86.exe",
-            "hash": "md5:49e26b862472a2e05d6b5954abcdb5c4"
+            "url": "https://repo.continuum.io/miniconda/Miniconda2-4.3.27-Windows-x86.exe",
+            "hash": "md5:355a27de5b00b866aea47ff5cf0eae38"
         }
     },
     "autoupdate": {
@@ -31,7 +31,7 @@
         }
     },
     "installer": {
-        "args":[
+        "args": [
             "/S",
             "/InstallationType=JustMe",
             "/RegisterPython=0",
@@ -39,9 +39,9 @@
             "/D=$dir"
         ]
     },
-    "uninstaller":{
-        "file":"Uninstall-Anaconda.exe",
-        "args":[
+    "uninstaller": {
+        "file": "Uninstall-Anaconda.exe",
+        "args": [
             "/S"
         ]
     },
