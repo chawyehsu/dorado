@@ -1,5 +1,5 @@
 {
-    "version": "4.4.0",
+    "version": "5.0.0",
     "homepage": "https://www.anaconda.com/",
     "license": "BSD 3-Clause",
     "checkver": {
@@ -8,12 +8,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://repo.continuum.io/archive/Anaconda2-4.4.0-Windows-x86_64.exe",
-            "hash": "md5:0f60aa52ef3a5d6170aeb6f7e3651f91"
+            "url": "https://repo.continuum.io/archive/Anaconda2-5.0.0-Windows-x86_64.exe",
+            "hash": "md5:8323b1d5f0b1c3fdb5b85efbb099beb0"
         },
         "32bit": {
-            "url": "https://repo.continuum.io/archive/Anaconda2-4.4.0-Windows-x86.exe",
-            "hash": "md5:51f14d30b08b82cd5e44bbb6b0d63349"
+            "url": "https://repo.continuum.io/archive/Anaconda2-5.0.0-Windows-x86.exe",
+            "hash": "md5:bd3ed48229db828cef4c6b371a8759d1"
         }
     },
     "autoupdate": {
@@ -31,7 +31,7 @@
         }
     },
     "installer": {
-        "args":[
+        "args": [
             "/S",
             "/InstallationType=JustMe",
             "/RegisterPython=0",
@@ -39,9 +39,9 @@
             "/D=$dir"
         ]
     },
-    "uninstaller":{
-        "file":"Uninstall-Anaconda.exe",
-        "args":[
+    "uninstaller": {
+        "file": "Uninstall-Anaconda.exe",
+        "args": [
             "/S"
         ]
     },
