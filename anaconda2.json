@@ -53,6 +53,9 @@
             "python2"
         ]
     ],
+    "persist": [
+        "envs"
+    ],
     "env_add_path": "scripts",
     "notes": "Currently conda envs activate and deactivate doesn't work on PowerShell, for workaround and more information, see: https://github.com/conda/conda/issues/626"
 }
