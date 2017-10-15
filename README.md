@@ -8,10 +8,16 @@ Question
 
 **1. How to install scoop apps from this bucket?**
 
-To install and use apps from this bucket, run below command in PowerShell:
+Run below command in PowerShell to tap the bucket:
 
 ``` powershell
 scoop bucket add dorado https://github.com/h404bi/dorado
+```
+
+Install apps from this bucket with below command:
+
+``` powershell
+scoop install dorado/<app_name>
 ```
 
 **2. Some apps are outdated, please update it!**
