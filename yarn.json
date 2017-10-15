@@ -1,0 +1,27 @@
+{
+    "homepage": "https://yarnpkg.com/",
+    "license": "BSD",
+    "version": "1.2.1",
+    "suggest": {
+        "Node.js": [
+            "nodejs",
+            "nodejs-lts"
+        ],
+        "NVM": [
+            "nvm"
+        ]
+    },
+    "url": "https://yarnpkg.com/downloads/1.2.1/yarn-1.2.1.msi",
+    "hash": "a8b09e1239dabd53b1be41e594f74ce0a97148cfdfa380a79277b673ffe2082f",
+    "env_add_path": [
+        "Yarn\\bin"
+    ],
+    "checkver": {
+        "url": "https://yarnpkg.com/latest-version",
+        "re": "([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://yarnpkg.com/downloads/$version/yarn-$version.msi"
+    },
+    "notes": "Add '$LOCALAPPDATA\\Yarn\\bin' to your USER PATH to use yarn global pkgs."
+}
