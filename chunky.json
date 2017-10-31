@@ -1,0 +1,35 @@
+{
+    "homepage": "http://chunky.llbit.se/",
+    "license": "GPLv3",
+    "version": "1.4.3",
+    "url": "https://launchpad.net/chunky/1.4/1.4.3/+download/Chunky-1.4.3.exe",
+    "hash": "098d491f1e6aadb9360df9f9cd62eef302f3dc4ddd3214468cd5a739ebd866cc",
+    "suggest": {
+        "JDK": [
+            "extras/oraclejdk",
+            "openjdk"
+        ]
+    },
+    "installer": {
+        "args": [
+            "/S",
+            "/D=$dir"
+        ]
+    },
+    "uninstaller": {
+        "file": "Uninstall.exe",
+        "args": [
+            "/S"
+        ]
+    },
+    "bin": "chunky.jar",
+    "checkver": {
+        "url": "http://chunky.llbit.se/index.html",
+        "re": "Download version ([\\d.]+)"
+    },
+    "autoupdate": "https://launchpad.net/chunky/$majorVersion.$minorVersion/$version/+download/Chunky-$version.exe",
+    "notes": [
+        "When run first time, select the recommended directory,
+        i.e. 'Home Directory', to store Chunky configuration"
+    ]
+}
