@@ -22,6 +22,12 @@
             "/S"
         ]
     },
+    "shortcuts": [
+        [
+            "chunky.jar",
+            "Chunky"
+        ]
+    ],
     "bin": "chunky.cmd",
     "pre_install": "\"@java -jar \"\"$dir\\chunky.jar\"\" %*\" | out-file -en oem \"$dir\\chunky.cmd\"",
     "checkver": {
