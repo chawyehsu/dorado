@@ -2,39 +2,27 @@
     "homepage": "http://chunky.llbit.se/",
     "license": "GPLv3",
     "version": "1.4.3",
-    "url": "https://launchpad.net/chunky/1.4/1.4.3/+download/Chunky-1.4.3.exe",
-    "hash": "098d491f1e6aadb9360df9f9cd62eef302f3dc4ddd3214468cd5a739ebd866cc",
+    "url": "http://chunkyupdate.llbit.se/ChunkyLauncher.jar",
+    "hash": "0d14445c5d5d5351df98b9a72910b1734fff7a3539f62173866d38a5f209c948",
     "suggest": {
         "JDK": [
             "extras/oraclejdk",
             "openjdk"
         ]
     },
-    "installer": {
-        "args": [
-            "/S",
-            "/D=$dir"
-        ]
-    },
-    "uninstaller": {
-        "file": "Uninstall.exe",
-        "args": [
-            "/S"
-        ]
-    },
     "shortcuts": [
         [
-            "chunky.jar",
+            "ChunkyLauncher.jar",
             "Chunky"
         ]
     ],
     "bin": "chunky.cmd",
-    "pre_install": "\"@java -jar \"\"$dir\\chunky.jar\"\" %*\" | out-file -en oem \"$dir\\chunky.cmd\"",
+    "pre_install": "\"@java -jar \"\"$dir\\ChunkyLauncher.jar\"\" %*\" | out-file -en oem \"$dir\\chunky.cmd\"",
     "checkver": {
         "url": "http://chunky.llbit.se/index.html",
         "re": "Download version ([\\d.]+)"
     },
-    "autoupdate": "https://launchpad.net/chunky/$majorVersion.$minorVersion/$version/+download/Chunky-$version.exe",
+    "autoupdate": "http://chunkyupdate.llbit.se/ChunkyLauncher.jar",
     "notes": [
         "When run first time, select the recommended directory,
         i.e. 'Home Directory', to store Chunky configuration"
