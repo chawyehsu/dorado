@@ -1,9 +1,9 @@
 {
     "homepage": "https://electrum.org/",
-    "version": "2.9.3",
+    "version": "3.0.0",
     "license": "MIT",
-    "url": "https://download.electrum.org/2.9.3/electrum-2.9.3.exe#/electrum.exe",
-    "hash": "5ae1c81deddfea7a1bae1b56da8a2cdb5a53dd5567b45aa9c726d4a4473165fe",
+    "url": "https://download.electrum.org/3.0/electrum-3.0.0.exe#/electrum.exe",
+    "hash": "3ee300799bfb4d9f88f9bf94c5d3d1b53ec42afd794b6f31febdf06b4b5d4aca",
     "bin": "electrum.exe",
     "shortcuts": [
         [
@@ -13,9 +13,6 @@
     ],
     "checkver": {
         "github": "https://github.com/spesmilo/electrum"
-    },
-    "autoupdate": {
-        "url": "https://download.electrum.org/$version/electrum-$version.exe#/electrum.exe"
     },
     "notes": "Your electrum_data (wallet) will be storaged in %APPDATA%\\Electrum\\wallets, please be careful."
 }
