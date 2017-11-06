@@ -1,0 +1,25 @@
+{
+    "homepage": "https://github.com/jaquadro/NBTExplorer",
+    "description": "A graphical NBT editor for all Minecraft NBT data sources",
+    "license": "MIT",
+    "version": "2.7.6",
+    "url": "https://github.com/jaquadro/NBTExplorer/releases/download/v2.7.6.-win/NBTExplorer-2.7.6.zip",
+    "hash": "d0e6f3143b2224f15d0c3c048a7c7117b37f86759c2a3f1db4e6e54a2d4c46f5",
+    "shortcuts": [
+        [
+            "NBTExplorer.exe",
+            "NBTExplorer"
+        ]
+    ],
+    "bin": [
+        [
+            "NBTExplorer.exe",
+            "nbtexplorer"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/jaquadro/NBTExplorer",
+        "re": "v([\\d.]+)"
+    },
+    "autoupdate": "https://github.com/jaquadro/NBTExplorer/releases/download/v$version.-win/NBTExplorer-$version.zip"
+}
