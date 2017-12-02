@@ -20,5 +20,6 @@
     "checkver": {
         "github": "https://github.com/jaquadro/NBTExplorer",
         "re": "v([\\d.]+)"
-    }
+    },
+    "autoupdate": "https://github.com/jaquadro/NBTExplorer/releases/download/v$version-win/NBTExplorer-$version.zip"
 }
