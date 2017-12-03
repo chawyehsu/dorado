@@ -1,7 +1,8 @@
 {
     "homepage": "https://github.com/h404bi/nvm-windows",
-    "version": "1.1.6-p1",
-    "url": "https://github.com/h404bi/nvm-windows/releases/download/1.1.6-p1/nvm-noinstall.zip",
+    "version": "1.1.6",
+    "url": "https://github.com/h404bi/nvm-windows/releases/download/1.1.6/nvm-noinstall.zip",
+    "hash": "8d4506134ec262dfdc1bc81bac731f01d078f368f4abb3d5b366b2237abb7342",
     "bin": [
         "nvm.exe"
     ],
@@ -14,7 +15,6 @@
         "NVM_HOME": "$dir",
         "NVM_SYMLINK": "$persist_dir\\nodejs\\nodejs"
     },
-    "hash": "00de031fbb2704eb77cb563855907c78a6b7a3b43144c5ea5420ab1696b2c294",
     "architecture": {
         "64bit": {
             "pre_install": "if(!(test-path \"$dir\\settings.txt\")) {
