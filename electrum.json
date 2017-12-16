@@ -14,5 +14,8 @@
     "checkver": {
         "github": "https://github.com/spesmilo/electrum"
     },
+    "autoupdate": {
+        "url": "https://download.electrum.org/$version/electrum-$version.exe#/electrum.exe"
+    },
     "notes": "Your electrum_data (wallet) will be storaged in %APPDATA%\\Electrum\\wallets, please be careful."
 }
