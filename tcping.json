@@ -1,19 +1,19 @@
 {
     "homepage": "https://elifulkerson.com/projects/tcping.php",
     "license": "GPL",
-    "version": "0.37",
+    "version": "0.39",
     "checkver": {
         "url": "https://www.elifulkerson.com/projects/tcping.php",
         "re": "https://download.elifulkerson.com/files/tcping/([\\d.]+)"
     },
     "architecture": {
         "64bit": {
-            "url": "https://download.elifulkerson.com/files/tcping/0.37/x64/tcping64.exe",
-            "hash": "1270b0be8ab806a0b3116b6cafe93d7687b2c03cfc8f75556d5c0816cb57e725"
+            "url": "https://download.elifulkerson.com/files/tcping/0.39/x64/tcping64.exe",
+            "hash": "af3c12da527e88c9db3774f5f12baecc2d211c801ae4421c7b16e80f6440ed35"
         },
         "32bit": {
-            "url": "https://download.elifulkerson.com/files/tcping/0.37/tcping.exe",
-            "hash": "1610060bc90af49a1a5f705b371aee49698ba7b655f5289fdc6c63b5f3f8b6d1"
+            "url": "https://download.elifulkerson.com/files/tcping/0.39/tcping.exe",
+            "hash": "9f04c46e0cdaa5bce32d98065e1e510a5f174e51b399d6408f2446444cccd5ff"
         }
     },
     "autoupdate": {
