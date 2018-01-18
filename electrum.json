@@ -12,7 +12,8 @@
         ]
     ],
     "checkver": {
-        "github": "https://github.com/spesmilo/electrum"
+        "url": "https://raw.githubusercontent.com/spesmilo/electrum/master/RELEASE-NOTES",
+        "re": "# Release ([\\d.]+)"
     },
     "autoupdate": {
         "url": "https://download.electrum.org/$version/electrum-$version.exe#/electrum.exe"
