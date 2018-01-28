@@ -1,0 +1,20 @@
+{
+    "homepage": "http://www.rejetto.com/hfs/",
+    "version": "2.3k",
+    "url": "http://www.rejetto.com/hfs/hfs.exe",
+    "hash": "3b4ad8f1f15f1a73e99cf082ae38a821a7567b63415f57d63595baec079a4b07",
+    "bin": "hfs.exe",
+    "shortcuts": [
+        [
+            "hfs.exe",
+            "HFS"
+        ]
+    ],
+    "checkver": {
+        "url": "http://www.rejetto.com/hfs/?f=dl",
+        "re": "Latest version: \\<b\\>([\\w\\d.]+)\\<\\/b\\>"
+    },
+    "autoupdate": {
+        "url": "http://www.rejetto.com/hfs/hfs.exe"
+    }
+}
