@@ -19,8 +19,7 @@
     "bin": "chunky.cmd",
     "pre_install": "\"@java -jar \"\"$dir\\ChunkyLauncher.jar\"\" %*\" | out-file -en oem \"$dir\\chunky.cmd\"",
     "checkver": {
-        "github": "https://github.com/llbit/chunky",
-        "re": "Version ([\\d.]+)"
+        "re": "Download version ([\\d.]+)"
     },
     "autoupdate": "http://chunkyupdate.llbit.se/ChunkyLauncher.jar",
     "notes": [
