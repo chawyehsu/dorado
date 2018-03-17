@@ -1,9 +1,17 @@
 {
     "homepage": "http://hackjutsu.com/Lepton/",
+    "description": "",
     "version": "1.6.0",
-    "url": "https://github.com/hackjutsu/Lepton/releases/download/v1.6.0/Lepton-1.6.0-win.7z",
-    "hash": "7acfcbbbf72357ca569f711cfb11caee80461127c5b92b3bcb8a34d09cad5546",
-    "extract_dir": "win-unpacked",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/hackjutsu/Lepton/releases/download/v1.6.0/Lepton-1.6.0-win.7z",
+            "hash": "7acfcbbbf72357ca569f711cfb11caee80461127c5b92b3bcb8a34d09cad5546"
+        },
+        "32bit": {
+            "url": "https://github.com/hackjutsu/Lepton/releases/download/v1.6.0/Lepton-1.6.0-ia32-win.7z",
+            "hash": "338f987e02b6dfc3fcc0929cfa8fd9866130d15c62490b6f35bf2b10f1602e68"
+        }
+    },
     "bin": [
         [
             "Lepton.exe",
@@ -20,6 +28,13 @@
         "github": "https://github.com/hackjutsu/Lepton"
     },
     "autoupdate": {
-        "url": "https://github.com/hackjutsu/Lepton/releases/download/v$version/Lepton-$version-win.7z"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/hackjutsu/Lepton/releases/download/v$version/Lepton-$version-win.7z"
+            },
+            "32bit": {
+                "url": "https://github.com/hackjutsu/Lepton/releases/download/v$version/Lepton-$version-ia32-win.7z"
+            }
+        }
     }
 }
