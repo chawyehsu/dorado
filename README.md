@@ -1,7 +1,11 @@
 dorado
 ======
 
+[![license](https://img.shields.io/github/license/h404bi/dorado.svg?style=flat-square)](LICENSE) ![Repo size](https://img.shields.io/github/repo-size/h404bi/dorado.svg?style=flat-square)
+
 Yet another [`bucket`](https://github.com/lukesampson/scoop/wiki/Buckets) for [Scoop](https://github.com/lukesampson/scoop).
+
+All apps in this repository should **NOT** require elevated privileges.
 
 Question
 --------
