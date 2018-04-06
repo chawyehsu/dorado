@@ -5,7 +5,7 @@ dorado
 
 Yet another [`bucket`](https://github.com/lukesampson/scoop/wiki/Buckets) for [Scoop](https://github.com/lukesampson/scoop).
 
-All apps in this repository should **NOT** require elevated privileges.
+All apps in this repository should **NOT** require elevated privileges while installation.
 
 Question
 --------
