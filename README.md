@@ -1,7 +1,8 @@
 dorado
 ======
 
-[![license](https://img.shields.io/github/license/h404bi/dorado.svg?style=flat-square)](LICENSE) ![Repo size](https://img.shields.io/github/repo-size/h404bi/dorado.svg?style=flat-square)
+[![AppVeyor branch](https://img.shields.io/appveyor/ci/h404bi/dorado/master.svg?style=flat-square)](https://ci.appveyor.com/project/h404bi/dorado)
+ [![license](https://img.shields.io/github/license/h404bi/dorado.svg?style=flat-square)](LICENSE) ![Repo size](https://img.shields.io/github/repo-size/h404bi/dorado.svg?style=flat-square)
 
 Yet another [`bucket`](https://github.com/lukesampson/scoop/wiki/Buckets) for [Scoop](https://github.com/lukesampson/scoop).
 

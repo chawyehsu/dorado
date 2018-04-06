@@ -21,7 +21,9 @@
     "checkver": {
         "re": "Download version ([\\d.]+)"
     },
-    "autoupdate": "http://chunkyupdate.llbit.se/ChunkyLauncher.jar",
+    "autoupdate": {
+        "url": "http://chunkyupdate.llbit.se/ChunkyLauncher.jar"
+    },
     "notes": [
         "When run first time, select the recommended directory,
         i.e. 'Home Directory', to store Chunky configuration"
