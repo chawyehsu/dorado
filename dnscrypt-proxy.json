@@ -2,16 +2,16 @@
     "homepage": "https://dnscrypt.info",
     "description": "A flexible DNS proxy, with support for encrypted DNS protocols.",
     "license": "ISC",
-    "version": "2.0.13",
+    "version": "2.0.14",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/jedisct1/dnscrypt-proxy/releases/download/2.0.13/dnscrypt-proxy-win64-2.0.13.zip",
-            "hash": "b436a336d24267d1558b8970e81f723ef5eb937744f5963e65fc29fe3b1b04b9",
+            "url": "https://github.com/jedisct1/dnscrypt-proxy/releases/download/2.0.14/dnscrypt-proxy-win64-2.0.14.zip",
+            "hash": "afdef08481b101ed61fe1cc283beb1afe96474afa805d3d795ff0703c9d287f0",
             "extract_dir": "win64"
         },
         "32bit": {
-            "url": "https://github.com/jedisct1/dnscrypt-proxy/releases/download/2.0.13/dnscrypt-proxy-win32-2.0.13.zip",
-            "hash": "80819b6d106102893dc8c39cda351300838fc9a444bce471dafbb3749f38a265",
+            "url": "https://github.com/jedisct1/dnscrypt-proxy/releases/download/2.0.14/dnscrypt-proxy-win32-2.0.14.zip",
+            "hash": "b80466078042dc681210a55c1186e37d3fd01053a9a42d5d3cc7295458c66660",
             "extract_dir": "win32"
         }
     },
