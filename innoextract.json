@@ -1,7 +1,7 @@
 {
     "homepage": "http://constexpr.org/innoextract/",
     "license": "zlib/libpng",
-    "version": "1.6",
+    "version": "1.7",
     "checkver": {
         "url": "http://constexpr.org/innoextract/",
         "re": "innoextract-([\\d.]+)-windows.zip"
@@ -9,7 +9,7 @@
     "autoupdate": {
         "url": "http://constexpr.org/innoextract/files/innoextract-$version-windows.zip"
     },
-    "url": "http://constexpr.org/innoextract/files/innoextract-1.6-windows.zip",
-    "hash": "md5:e3abf26e436c8f1858e2e06a67a37b60",
+    "url": "http://constexpr.org/innoextract/files/innoextract-1.7-windows.zip",
+    "hash": "9a0ede947448132c9a8fa390ae92da8fb25a5dffc666306f777e611b60b82fbd",
     "bin": "innoextract.exe"
 }
