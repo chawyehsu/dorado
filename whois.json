@@ -1,7 +1,10 @@
 {
     "homepage": "https://technet.microsoft.com/en-us/sysinternals/whois.aspx",
     "version": "1.20",
-    "license": "Microsoft SysInternals EULA",
+    "license": {
+        "identifier": "Microsoft SysInternals EULA",
+        "url": "https://docs.microsoft.com/en-us/sysinternals/license-terms"
+    },
     "url": "https://download.sysinternals.com/files/WhoIs.zip",
     "hash": "f4965fc138de2441999c7ad705f15d5274be8e5343f915ae11e1b7daa6ba5228",
     "bin": "whois.exe",
