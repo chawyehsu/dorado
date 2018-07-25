@@ -12,6 +12,12 @@
             "HMCL"
         ]
     ],
+    "suggest": {
+        "JDK": [
+            "java/oraclejdk",
+            "java/openjdk"
+        ]
+    },
     "pre_install": [
         "if (!(test-path \"$persist_dir\\hmcl.json\")) { new-item \"$persist_dir\\hmcl.json\" | out-null }",
         "if (!(test-path \"$persist_dir\\.minecraft\")) { new-item \"$persist_dir\\.minecraft\" -itemtype directory | out-null }"
@@ -24,6 +30,6 @@
         "github": "https://github.com/huanghongxun/HMCL"
     },
     "autoupdate": {
-        "url": "https://github.com/huanghongxun/HMCL/releases/download/v$version/HMCL-$version.exe"
+        "url": "https://github.com/huanghongxun/HMCL/releases/download/v$version/HMCL-$version.exe#/hmcl.exe"
     }
 }

@@ -18,14 +18,18 @@
     },
     "architecture": {
         "64bit": {
-            "pre_install": "if(!(test-path \"$dir\\settings.txt\")) {
-                write-output \"root: $persist_dir\\nodejs`r`narch: 64`r`nproxy: none\" | Out-File -encoding \"ASCII\" $dir\\settings.txt
-            }"
+            "pre_install": [
+                "if(!(test-path \"$dir\\settings.txt\")) {",
+                "    write-output \"root: $persist_dir\\nodejs`r`narch: 64`r`nproxy: none\" | out-file -encoding \"ASCII\" $dir\\settings.txt",
+                "}"
+            ]
         },
         "32bit": {
-            "pre_install": "if(!(test-path \"$dir\\settings.txt\")) {
-                write-output \"root: $persist_dir\\nodejs`r`narch: 32`r`nproxy: none\" | Out-File -encoding \"ASCII\" $dir\\settings.txt
-            }"
+            "pre_install": [
+                "if(!(test-path \"$dir\\settings.txt\")) {",
+                "    write-output \"root: $persist_dir\\nodejs`r`narch: 32`r`nproxy: none\" | out-file -encoding \"ASCII\" $dir\\settings.txt",
+                "}"
+            ]
         }
     },
     "notes": "You'll need to restart powershell/cmd to have it reload Environment Variables so nvm will work correctly"
