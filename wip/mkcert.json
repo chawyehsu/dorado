@@ -1,0 +1,17 @@
+{
+    "homepage": "https://github.com/FiloSottile/mkcert",
+    "description": "A simple zero-config tool to make locally trusted development certificates with any names you'd like.",
+    "license": "BSD",
+    "version": "1.1.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/FiloSottile/mkcert/releases/download/v1.1.0/mkcert-v1.1.0-windows-amd64.exe#/mkcert.exe",
+            "hash": "d445822464cfccb3ce2cd3f3c52949ea142500ae4b9eca0b5f4c540c93370c84"
+        }
+    },
+    "bin": "mkcert.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/FiloSottile/mkcert/releases/download/v$version/mkcert-v$version-windows-amd64.exe#/mkcert.exe"
+    }
+}
