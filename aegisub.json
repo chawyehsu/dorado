@@ -46,10 +46,12 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "http://ftp.aegisub.org/pub/archives/releases/windows/aegisub-$version-portable-64.exe#dl.7z"
+                "url": "http://ftp.aegisub.org/pub/archives/releases/windows/aegisub-$version-portable-64.exe#dl.7z",
+                "extract_dir": "aegisub-$version-portable-64",
             },
             "32bit": {
-                "url": "http://ftp.aegisub.org/pub/archives/releases/windows/aegisub-$version-portable-32.exe#dl.7z"
+                "url": "http://ftp.aegisub.org/pub/archives/releases/windows/aegisub-$version-portable-32.exe#dl.7z",
+                "extract_dir": "aegisub-$version-portable-32",
             }
         },
         "hash": {
