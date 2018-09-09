@@ -1,11 +1,18 @@
 {
     "homepage": "https://itch.io/app",
     "description": "The best way to play your itch.io games",
-    "version": "23.6.3",
+    "version": "25.0.0",
     "license": "MIT",
-    "url": "https://github.com/itchio/itch/releases/download/v23.6.3/itch-23.6.3-full.nupkg#/dl.7z",
-    "hash": "sha1:488446E87BE3EC978FDE7A77264F97A0512DB38C",
-    "extract_dir": "lib\\net45",
+    "architecture": {
+        "64bit": {
+            "url": "https://broth.itch.ovh/itch/windows-amd64/25.0.0/archive/default#/dl.7z",
+            "hash": "e2464ef31499b72e46dc2845f1df1e9eff138cbce949c2c89b6542fc5e1a906f"
+        },
+        "32bit": {
+            "url": "https://broth.itch.ovh/itch/windows-386/25.0.0/archive/default#/dl.7z",
+            "hash": "895bacb2e6459d655f78211b7fab8d4ea207f71d3db76efcec1fa6ef3eb57e54"
+        }
+    },
     "bin": "itch.exe",
     "shortcuts": [
         [
@@ -14,12 +21,17 @@
         ]
     ],
     "checkver": {
-        "github": "https://github.com/itchio/itch"
+        "url": "https://itch.io/app",
+        "re": "version_split\">v(?<version>[\\d.]+)</span"
     },
     "autoupdate": {
-        "url": "https://github.com/itchio/itch/releases/download/v$version/itch-$version-full.nupkg#/dl.7z",
-        "hash": {
-            "url": "$baseurl/RELEASES"
+        "architecture": {
+            "64bit": {
+                "url": "https://broth.itch.ovh/itch/windows-amd64/$version/archive/default#/dl.7z"
+            },
+            "32bit": {
+                "url": "https://broth.itch.ovh/itch/windows-386/$version/archive/default#/dl.7z"
+            }
         }
     }
 }
