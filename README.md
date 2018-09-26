@@ -27,4 +27,4 @@ scoop install dorado/<app_name>
 
 **2. Some apps are outdated, please update it!**
 
-Be a contributor, man! Fork it, update the outdated apps app manifest, and fire a pull-request. :D
+Be a contributor, man! Fork it, update the outdated apps app manifest, and file pull-request. :D
