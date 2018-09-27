@@ -8,6 +8,7 @@ shallow_clone: true
 cache:
   - '%USERPROFILE%\Documents\WindowsPowerShell\Modules -> appveyor.yml'
 install:
+  - ps: iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
   - ps: .\test\bin\init.ps1
 test_script:
   - ps: $result = invoke-pester -path test/ -outputfile TestResults.xml -outputformat NUnitXML -passthru; $env:failedcount = $result.failedcount
