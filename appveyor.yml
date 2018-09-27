@@ -4,7 +4,7 @@ branches:
   - master
 build: off
 deploy: off
-clone_depth: 1
+clone_depth: 2
 cache:
   - '%USERPROFILE%\Documents\WindowsPowerShell\Modules -> appveyor.yml'
 install:
