@@ -20,13 +20,13 @@
     },
     "checkver": {
         "url": "https://www.mls-software.com/opensshd.html",
-        "re": "<h3><b>New Version</b></h3>\n<b>OpenSSH (?<version>[\\d.\\-p]+)<br />"
+        "re": "New Version<.*\\n<b>OpenSSH (?<version>[\\d.\\-p]+)<br />"
     },
     "autoupdate": {
         "url": "https://www.mls-software.com/files/setupssh-$version.exe#/setupssh.exe",
         "hash": {
-            "url": "$baseurl",
-            "find": "setupssh-$version.exe</a.*\n<.*<small>SHA1=([a-fA-F0-9]+)</small>"
+            "url": "https://www.mls-software.com/opensshd.html",
+            "find": "$basename</a.*\\n<.*<small>SHA1=([a-fA-F0-9]+)</small>"
         }
     }
 }
