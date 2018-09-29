@@ -16,6 +16,15 @@
             "/S"
         ]
     },
+    "bin": [
+        "bin\\scp.exe",
+        "bin\\sftp.exe",
+        "bin\\ssh-add.exe",
+        "bin\\ssh-agent.exe",
+        "bin\\ssh-keygen.exe",
+        "bin\\ssh-keyscan.exe",
+        "bin\\ssh.exe"
+    ],
     "checkver": {
         "url": "https://www.mls-software.com/opensshd.html",
         "re": "New Version<.*\\n<b>OpenSSH (?<version>[\\d.\\-p]+)<br />"
