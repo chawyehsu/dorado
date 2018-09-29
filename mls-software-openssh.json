@@ -7,9 +7,7 @@
     "hash": "sha1:ec1e5644314a335b70b45bb6254ec63b8bd50dcb",
     "installer": {
         "args": [
-            "/S",
-            "/D=$dir",
-            "/clientonly=1"
+            "/S /clientonly=1 /D=$dir"
         ]
     },
     "uninstaller": {
