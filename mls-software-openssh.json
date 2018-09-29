@@ -1,0 +1,32 @@
+{
+    "homepage": "https://www.mls-software.com/opensshd.html",
+    "description": "A Windows installer package of Openssh for Windows that is actively maintained and current.",
+    "license": "ISC",
+    "version": "7.7p1-1",
+    "url": "https://www.mls-software.com/files/setupssh-7.7p1-1.exe#/setupssh.exe",
+    "hash": "sha1:ec1e5644314a335b70b45bb6254ec63b8bd50dcb",
+    "installer": {
+        "args": [
+            "/S",
+            "/D=$dir",
+            "/clientonly=1"
+        ]
+    },
+    "uninstaller": {
+        "file": "uninstall.exe",
+        "args": [
+            "/S"
+        ]
+    },
+    "checkver": {
+        "url": "https://www.mls-software.com/opensshd.html",
+        "re": "<h3><b>New Version</b></h3>\n<b>OpenSSH (?<version>[\\d.\\-p]+)<br />"
+    },
+    "autoupdate": {
+        "url": "https://www.mls-software.com/files/setupssh-$version.exe#/setupssh.exe",
+        "hash": {
+            "url": "$baseurl",
+            "find": "setupssh-$version.exe</a.*\n<.*<small>SHA1=([a-fA-F0-9]+)</small>"
+        }
+    }
+}
