@@ -21,8 +21,7 @@
         ]
     ],
     "checkver": {
-        "url": "https://itch.io/app",
-        "re": "version_split\">v(?<version>[\\d.]+)</span"
+        "github": "https://github.com/itchio/itch"
     },
     "autoupdate": {
         "architecture": {
