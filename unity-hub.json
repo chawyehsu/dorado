@@ -1,0 +1,25 @@
+{
+    "homepage": "https://unity3d.com",
+    "description": "The world’s most popular development platform for creating 2D and 3D multiplatform games",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://unity3d.com/legal/terms-of-service"
+    },
+    "version": "1.1.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://public-cdn.cloud.unity3d.com/hub/prod/UnityHubSetup.exe#/dl.7z",
+            "hash": "082f75c266906768846c89f9f2294adaa7c81e6a853fce66ff42553390d46e15",
+            "pre_install": [
+                "extract_7zip \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
+                "Remove-Item \"$dir\\`$PLUGINSDIR\" -Recurse"
+            ]
+        }
+    },
+    "shortcuts": [
+        [
+            "Unity Hub.exe",
+            "Unity Hub"
+        ]
+    ]
+}
