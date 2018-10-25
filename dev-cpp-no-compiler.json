@@ -1,0 +1,22 @@
+{
+    "homepage": "https://sourceforge.net/projects/orwelldevcpp/",
+    "description": "A free, portable, fast and simple C/C++ IDE",
+    "license": "GPL-2.0-only",
+    "version": "5.11",
+    "architecture": {
+        "64bit": {
+            "url": "https://downloads.sourceforge.net/project/orwelldevcpp/Portable%20Releases/Dev-Cpp%205.11%20No%20Compiler%20Portable.7z#/dl.7z",
+            "hash": "1f5f9be540e28cda26b5ac0906bf7c9cb997574af755c5280e0d5a528f7fedd6",
+            "extract_dir": "Dev-Cpp"
+        }
+    },
+    "persist": [
+        "config"
+    ],
+    "shortcuts": [
+        [
+            "devcppPortable.exe",
+            "Dev-Cpp"
+        ]
+    ]
+}
