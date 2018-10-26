@@ -1,0 +1,18 @@
+{
+    "homepage": "https://nuwen.net/mingw.html",
+    "description": "MinGW distribution (distro) for nuwen",
+    "license": "GPL-2.0-only",
+    "version": "8.1.0",
+    "url": "https://nuwen.net/files/mingw/components-16.0.7z",
+    "hash": "fc54d0a212e053c33f6db9dccb428e04b9c4da7717e3bbd8f2df073c012034d9",
+    "extract_dir": "components-16.0",
+    "pre_install": [
+        "extract_7zip \"$dir\\mingw-w64+gcc.7z\" \"$dir\"",
+        "Remove-Item \"$dir\\*.7z\""
+    ],
+    "env_add_path": "bin",
+    "env_set": {
+        "C_INCLUDE_PATH": "$dir\\include",
+        "CPLUS_INCLUDE_PATH": "$dir\\include"
+    }
+}
