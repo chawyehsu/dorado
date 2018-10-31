@@ -2,13 +2,9 @@
     "homepage": "https://elifulkerson.com/projects/tcping.php",
     "license": "GPL-2.0-only",
     "version": "0.39",
-    "checkver": {
-        "url": "https://www.elifulkerson.com/projects/tcping.php",
-        "re": "https://download.elifulkerson.com/files/tcping/([\\d.]+)"
-    },
     "architecture": {
         "64bit": {
-            "url": "https://download.elifulkerson.com/files/tcping/0.39/x64/tcping64.exe",
+            "url": "https://download.elifulkerson.com/files/tcping/0.39/x64/tcping64.exe#/tcping.exe",
             "hash": "af3c12da527e88c9db3774f5f12baecc2d211c801ae4421c7b16e80f6440ed35"
         },
         "32bit": {
@@ -16,10 +12,15 @@
             "hash": "9f04c46e0cdaa5bce32d98065e1e510a5f174e51b399d6408f2446444cccd5ff"
         }
     },
+    "bin": "tcping.exe",
+    "checkver": {
+        "url": "https://www.elifulkerson.com/projects/tcping.php",
+        "re": "https://download.elifulkerson.com/files/tcping/([\\d.]+)"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://download.elifulkerson.com/files/tcping/$version/x64/tcping64.exe"
+                "url": "https://download.elifulkerson.com/files/tcping/$version/x64/tcping64.exe#/tcping.exe"
             },
             "32bit": {
                 "url": "https://download.elifulkerson.com/files/tcping/$version/tcping.exe"
@@ -29,7 +30,5 @@
             "mode": "extract",
             "url": "$url.sha256"
         }
-    },
-    "pre_install": "Rename-Item @(Get-ChildItem $dir\\tcping*.exe)[0] $dir\\tcping.exe",
-    "bin": "tcping.exe"
+    }
 }
