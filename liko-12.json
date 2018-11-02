@@ -1,0 +1,26 @@
+{
+    "homepage": "https://liko-12.github.io/",
+    "description": "LIKO-12 is a fantasy computer that you can use to make, play and share tiny retro-looking games and programs.",
+    "license": "MIT",
+    "version": "1.0.0",
+    "url": "https://github.com/LIKO-12/LIKO-12/releases/download/1.0.0/LIKO-12_V1.0.0_Windows.zip",
+    "hash": "b3ace7df4178ddaac760ed036356cf0faadd6310b5a92c7c658ec44a8588a701",
+    "extract_dir": "Windows_x86",
+    "bin": [
+        "LIKO-12.exe",
+        "LIKO-12_Console.exe"
+    ],
+    "shortcuts": [
+        [
+            "LIKO-12.exe",
+            "LIKO-12"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/LIKO-12/LIKO-12/releases/download/$version/LIKO-12_V$version_Windows.zip"
+    },
+    "notes": [
+        "Please note that system and data files of LIKO-12 will be storaged in: %APPDATA%\\LIKO-12."
+    ]
+}
