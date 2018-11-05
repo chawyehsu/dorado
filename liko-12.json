@@ -16,7 +16,9 @@
             "LIKO-12"
         ]
     ],
-    "checkver": "github",
+    "checkver": {
+        "github": "https://github.com/LIKO-12/LIKO-12"
+    },
     "autoupdate": {
         "url": "https://github.com/LIKO-12/LIKO-12/releases/download/$version/LIKO-12_V$version_Windows.zip"
     },
