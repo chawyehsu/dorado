@@ -2,16 +2,16 @@
     "homepage": "https://dnscrypt.info",
     "description": "A flexible DNS proxy, with support for encrypted DNS protocols.",
     "license": "ISC",
-    "version": "2.0.17",
+    "version": "2.0.18",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/jedisct1/dnscrypt-proxy/releases/download/2.0.17/dnscrypt-proxy-win64-2.0.17.zip",
-            "hash": "a7b9474e79c218d77f97436defda99ed0c68c0a5180ad131da2ed59eaa2628f2",
+            "url": "https://github.com/jedisct1/dnscrypt-proxy/releases/download/2.0.18/dnscrypt-proxy-win64-2.0.18.zip",
+            "hash": "f94d18a88e7315acbe68f3836801ff68a27e2c89394fdc6234ae7cd3379edb2b",
             "extract_dir": "win64"
         },
         "32bit": {
-            "url": "https://github.com/jedisct1/dnscrypt-proxy/releases/download/2.0.17/dnscrypt-proxy-win32-2.0.17.zip",
-            "hash": "a45df15641df0b3fd3cf69a6996f4772e04ec6f3ab5ae52aa5c51797cf64df93",
+            "url": "https://github.com/jedisct1/dnscrypt-proxy/releases/download/2.0.18/dnscrypt-proxy-win32-2.0.18.zip",
+            "hash": "b83e3371a0f34beb526f36668c1ec51c38c8dc0e2c6bcdf3c90c28496c0408e5",
             "extract_dir": "win32"
         }
     },
@@ -21,9 +21,7 @@
             "dnscrypt-proxy"
         ]
     ],
-    "persist": [
-        "dnscrypt-proxy.toml"
-    ],
+    "persist": "dnscrypt-proxy.toml",
     "checkver": {
         "github": "https://github.com/jedisct1/dnscrypt-proxy"
     },
