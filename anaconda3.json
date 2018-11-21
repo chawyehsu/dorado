@@ -1,5 +1,5 @@
 {
-    "version": "5.3.0",
+    "version": "5.3.1",
     "homepage": "https://www.anaconda.com/",
     "license": "BSD-3-Clause",
     "checkver": {
@@ -8,12 +8,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://repo.continuum.io/archive/Anaconda3-5.3.0-Windows-x86_64.exe",
-            "hash": "md5:1807a3c595ed2dab9fc7662f2cdf79fd"
+            "url": "https://repo.continuum.io/archive/Anaconda3-5.3.1-Windows-x86_64.exe",
+            "hash": "md5:3e4d013223d8a71d0fa4d58fe5b31023"
         },
         "32bit": {
-            "url": "https://repo.continuum.io/archive/Anaconda3-5.3.0-Windows-x86.exe",
-            "hash": "md5:72e4f7bf75eb46c60f496d326631fddd"
+            "url": "https://repo.continuum.io/archive/Anaconda3-5.3.1-Windows-x86.exe",
+            "hash": "md5:52d9041d33c0134dd3824e6c15b458c4"
         }
     },
     "autoupdate": {
@@ -41,9 +41,7 @@
     },
     "uninstaller": {
         "file": "Uninstall-Anaconda3.exe",
-        "args": [
-            "/S"
-        ]
+        "args": "/S"
     },
     "bin": [
         "python.exe",
@@ -53,9 +51,7 @@
             "python3"
         ]
     ],
-    "persist": [
-        "envs"
-    ],
+    "persist": "envs",
     "env_add_path": "scripts",
     "notes": [
         "Currently conda envs activate and deactivate doesn't work on PowerShell,",
