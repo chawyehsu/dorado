@@ -1,0 +1,16 @@
+{
+    "homepage": "https://github.com/lltcggie/waifu2x-caffe",
+    "description": "A GUI/CLI version of waifu2x, an image-upscaling AI.",
+    "version": "1.2.0",
+    "license": "MIT",
+    "url": "https://github.com/lltcggie/waifu2x-caffe/releases/download/1.2.0/waifu2x-caffe.zip",
+    "hash": "d8a2a85d25c10c591912c437439b2c6420275c49b7664e54a057012d5ab00938",
+    "bin": [
+        "waifu2x-caffe/waifu2x-caffe.exe",
+        "waifu2x-caffe/waifu2x-caffe-cui.exe"
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/lltcggie/waifu2x-caffe/releases/download/$version/waifu2x-caffe.zip"
+    }
+}
