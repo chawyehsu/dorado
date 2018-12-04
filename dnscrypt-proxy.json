@@ -15,12 +15,7 @@
             "extract_dir": "win32"
         }
     },
-    "bin": [
-        [
-            "dnscrypt-proxy.exe",
-            "dnscrypt-proxy"
-        ]
-    ],
+    "bin": "dnscrypt-proxy.exe",
     "persist": "dnscrypt-proxy.toml",
     "checkver": {
         "github": "https://github.com/jedisct1/dnscrypt-proxy"
