@@ -5,12 +5,7 @@
     "version": "1.6.5",
     "url": "http://www.moitah.net/download/latest/FLV_Extract.zip",
     "hash": "134e3de7d6150213c2f261270525333f411a11c02499dd5f0c236395dc19d297",
-    "bin": [
-        [
-            "FLVExtract.exe",
-            "flvextract"
-        ]
-    ],
+    "bin": "FLVExtract.exe",
     "checkver": {
         "url": "http://www.moitah.net/",
         "re": "\\/latest\\/FLV_Extract.zip\"\\>v(?<version>[\\d.]+) \\(Binary and Source\\)"
