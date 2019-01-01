@@ -8,6 +8,7 @@
         "url": "https://www.jmc2obj.net/downloads/update.xml",
         "re": "jMc2Obj-([\\w_\\d]+).jar"
     },
+    "pre_install": "Rename-Item @(Get-ChildItem $dir\\jMc2Obj-*.jar)[0] $dir\\jMc2Obj.jar",
     "autoupdate": {
         "url": "https://www.jmc2obj.net/downloads/jMc2Obj-$version.jar"
     }
