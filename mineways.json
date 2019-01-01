@@ -1,0 +1,15 @@
+{
+    "homepage": "http://mineways.com/",
+    "description": "Exports models from Minecraft for 3D printing or rendering.",
+    "version": "6.04",
+    "url": "http://realtimerendering.com/erich/minecraft/public/mineways/mineways.zip",
+    "hash": "a9140cff86665f1e9646e1e02f9857be02ca0b487035e6032e3eb56dafae769d",
+    "extract_dir": "mineways",
+    "bin": "Mineways.exe",
+    "checkver": {
+        "re": "Download Mineways ([\\d.]+) for Windows"
+    },
+    "autoupdate": {
+        "url": "http://realtimerendering.com/erich/minecraft/public/mineways/mineways.zip"
+    }
+}
