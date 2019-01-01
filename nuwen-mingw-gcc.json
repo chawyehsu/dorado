@@ -2,12 +2,12 @@
     "homepage": "https://nuwen.net/mingw.html",
     "description": "Minimalist GCC package from nuwen's MinGW distribution (distro)",
     "license": "GPL-2.0-only",
-    "version": "8.1.0",
-    "url": "https://nuwen.net/files/mingw/components-16.0.7z",
-    "hash": "fc54d0a212e053c33f6db9dccb428e04b9c4da7717e3bbd8f2df073c012034d9",
-    "extract_dir": "components-16.0",
+    "version": "8.2.0",
+    "url": "https://nuwen.net/files/mingw/components-16.1.7z",
+    "hash": "87a962005981f91ff4c854ab9ea057b1748188dde5645a04fde17b86bcd754e9",
+    "extract_dir": "components-16.1",
     "pre_install": [
-        "extract_7zip \"$dir\\binutils-2.30.7z\" \"$dir\"",
+        "extract_7zip \"$dir\\binutils-2.31.1.7z\" \"$dir\"",
         "extract_7zip \"$dir\\mingw-w64+gcc.7z\" \"$dir\"",
         "Remove-Item \"$dir\\*.7z\""
     ],
