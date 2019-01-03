@@ -1,5 +1,5 @@
 {
-    "version": "4.5.11",
+    "version": "4.5.12",
     "homepage": "https://conda.io/miniconda.html",
     "license": "BSD-3-Clause",
     "checkver": {
@@ -8,12 +8,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://repo.continuum.io/miniconda/Miniconda2-4.5.11-Windows-x86_64.exe",
-            "hash": "md5:d7da3126f26f37205dd8da5ff5732501"
+            "url": "https://repo.continuum.io/miniconda/Miniconda2-4.5.12-Windows-x86_64.exe",
+            "hash": "md5:e7626f133e803ac970fe963507c62dc1"
         },
         "32bit": {
-            "url": "https://repo.continuum.io/miniconda/Miniconda2-4.5.11-Windows-x86.exe",
-            "hash": "md5:e7629d753c04404e84241f90c3cab57d"
+            "url": "https://repo.continuum.io/miniconda/Miniconda2-4.5.12-Windows-x86.exe",
+            "hash": "md5:6c4300ec4aac538c47e82506277c31b8"
         }
     },
     "autoupdate": {
@@ -41,9 +41,7 @@
     },
     "uninstaller": {
         "file": "Uninstall-Miniconda2.exe",
-        "args": [
-            "/S"
-        ]
+        "args": "/S"
     },
     "bin": [
         "python.exe",
@@ -53,9 +51,7 @@
             "python2"
         ]
     ],
-    "persist": [
-        "envs"
-    ],
+    "persist": "envs",
     "env_add_path": "scripts",
     "notes": [
         "Currently conda envs activate and deactivate doesn't work on PowerShell,",
