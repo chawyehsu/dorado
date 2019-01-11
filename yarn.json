@@ -1,7 +1,7 @@
 {
     "homepage": "https://yarnpkg.com/",
     "license": "BSD-2-Clause",
-    "version": "1.12.3",
+    "version": "1.13.0",
     "suggest": {
         "Node.js": [
             "nodejs",
@@ -12,17 +12,15 @@
             "dorado/nvm-windows"
         ]
     },
-    "url": "https://yarnpkg.com/downloads/1.12.3/yarn-1.12.3.msi",
-    "hash": "0657a3883b9338b22c61abc6a97279f0dac4c0b2b97de9e59c9d0fa919ccbf00",
+    "url": "https://yarnpkg.com/downloads/1.13.0/yarn-1.13.0.msi",
+    "hash": "e3da89d8ea6b200908e1a47ed95a474e0acd5437b719590f497f52c1a9d32730",
     "installer": {
         "script": "add_first_in_path \"$env:LOCALAPPDATA\\Yarn\\bin\" $global"
     },
     "uninstaller": {
         "script": "remove_from_path \"$env:LOCALAPPDATA\\Yarn\\bin\" $global"
     },
-    "env_add_path": [
-        "Yarn\\bin"
-    ],
+    "env_add_path": "Yarn\\bin",
     "checkver": {
         "url": "https://yarnpkg.com/latest-version",
         "re": "([\\d.]+)"
