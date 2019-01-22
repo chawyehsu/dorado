@@ -1,15 +1,15 @@
 {
-    "homepage": "http://16-bits.org/ft2.php",
+    "homepage": "https://16-bits.org/ft2.php",
     "description": "A clone of Fasttracker II, a music tracker created in the 1990s",
     "version": "14.01.2019",
     "checkver": {
-        "url": "http://16-bits.org/ft2_changelog.txt",
+        "url": "https://16-bits.org/ft2_clone_changelog.txt",
         "re": "[\\w]+ #[\\d.]+ - (?<version>[\\d.]+)"
     },
     "autoupdate": {
-        "url": "http://16-bits.org/ft2-win32.zip"
+        "url": "https://16-bits.org/ft2-win32.zip"
     },
-    "url": "http://16-bits.org/ft2-win32.zip",
+    "url": "https://16-bits.org/ft2-win32.zip",
     "hash": "6015f863fb40b0833e5f5797ed7239dbbc63508b8b0721caef8898f5d34a5f6b",
     "extract_dir": "ft2-win32",
     "bin": [
