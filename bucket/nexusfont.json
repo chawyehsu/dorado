@@ -12,9 +12,7 @@
             "NexusFont"
         ]
     ],
-    "persist": [
-        "userdata"
-    ],
+    "persist": "userdata",
     "checkver": {
         "url": "http://www.xiles.net/",
         "re": "ver (?<version>[\\d.]+) \\((?<date>[\\d.]+)\\)",
