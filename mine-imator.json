@@ -18,7 +18,7 @@
     ],
     "checkver": {
         "url": "https://www.mineimator.com/download",
-        "re": "Download version <a.*>([\\d.]+)<\\/a>"
+        "re": "Download version <b>([\\d.]+)<\\/b>"
     },
     "autoupdate": {
         "url": "https://www.mineimator.com/dl/mineimator-zip",
