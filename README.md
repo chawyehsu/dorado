@@ -1,12 +1,19 @@
-🐟 dorado
-=========
-
-[![AppVeyor Build Status](https://img.shields.io/appveyor/ci/h404bi/dorado/master.svg?style=flat-square&label=AppVeyor&logo=appveyor)](https://ci.appveyor.com/project/h404bi/dorado/branch/master)
- [![License](https://img.shields.io/github/license/h404bi/dorado.svg?style=flat-square)](LICENSE) ![Repo size](https://img.shields.io/github/repo-size/h404bi/dorado.svg?style=flat-square) [![Mentioned in Awesome Scoop](https://awesome.re/mentioned-badge.svg)](https://github.com/h404bi/awesome-scoop/blob/master/README.md "Awesome Scoop")
-
-Yet another [`bucket`](https://github.com/lukesampson/scoop/wiki/Buckets) for [Scoop](https://github.com/lukesampson/scoop).
-
-All apps in this repository should **NOT** require elevated privileges while installation.
+<div align="center">
+    <h1 align="center">🐟 dorado</h1>
+    <p align="center">
+        <a href="https://ci.appveyor.com/project/h404bi/dorado/branch/master"><img src="https://img.shields.io/appveyor/ci/h404bi/dorado/master.svg?style=flat-square&amp;label=AppVeyor&amp;logo=appveyor" alt="AppVeyor Build Status"></a>
+        <a href="https://github.com/h404bi/dorado/blob/master/LICENSE"><img src="https://img.shields.io/github/license/h404bi/dorado.svg?style=flat-square" alt="License"></a>
+        <a href="https://github.com/h404bi/dorado"><img src="https://img.shields.io/github/repo-size/h404bi/dorado.svg?style=flat-square" alt="Repo size"></a>
+        <a href="https://github.com/h404bi/awesome-scoop/blob/master/README.md" title="Awesome Scoop"><img src="https://awesome.re/mentioned-badge.svg" alt="Mentioned in Awesome Scoop"></a>
+    </p>
+    <p align="center"><img align="center" src="https://www.h404bi.com/uploads/2018/05/20180512002.gif" alt="highlight" /></p>
+    <p align="center">
+        Yet another <a href="https://github.com/lukesampson/scoop/wiki/Buckets"><code>bucket</code></a> for <a href="https://github.com/lukesampson/scoop">Scoop</a>.
+    </p>
+    <p align="center">
+        All apps in this repository should <strong>NOT</strong> require elevated privileges while installation.
+    </p>
+</div>
 
 Question
 --------
