@@ -1,16 +1,16 @@
 {
     "description": "Popular open source web browser. Cross-platform and available in many languages.",
     "homepage": "https://www.mozilla.org/zh-CN/firefox/new/",
-    "version": "64.0.2",
+    "version": "65.0",
     "license": "MPL-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://download.mozilla.org/?product=firefox-64.0.2-SSL&os=win64&lang=zh-CN#/firefox.7z",
-            "hash": "53515a025af2a00d906aafdd54ada60a8b9a26c4f0837bd727ade46c1574faed"
+            "url": "https://download.mozilla.org/?product=firefox-65.0-SSL&os=win64&lang=zh-CN#/firefox.7z",
+            "hash": "9d3debb5f16599c304ced7a96d703e1132ec31c499392a3350fc2c6427892879"
         },
         "32bit": {
-            "url": "https://download.mozilla.org/?product=firefox-64.0.2-SSL&os=win&lang=zh-CN#/firefox.7z",
-            "hash": "de103fec7e0cc271b1ecfaae01f42462e3566b31e41948a2d3624eb16e178a4e"
+            "url": "https://download.mozilla.org/?product=firefox-65.0-SSL&os=win&lang=zh-CN#/firefox.7z",
+            "hash": "e5b729f99d16bf5ea68ad3557c9df501cf4d137b2d8bc31887ea046fb21eaabe"
         }
     },
     "extract_dir": "core",
