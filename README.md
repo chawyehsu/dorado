@@ -15,6 +15,18 @@
     </p>
 </div>
 
+Feature Apps
+------------
+
+| Manifest | Description |
+|----------|-------------|
+| hmcl.json | The most famous Minecraft launcher made in China |
+| nuwen-mingw-gcc.json | Minimalist GCC package from nuwen's MinGW distribution (distro) | 
+| nvm-windows.json | A fork of [nvm-windows](https://github.com/coreybutler/nvm-windows), removed elevated permission, for low permission scoop user |
+| tcping.json | Eli Fulkerson's TCP ping tool, ping over a tcp connection |
+| trash.json | Move files and folders to the recycle bin instead directly `rm-rf` it, like `brew install trash` but for Windows |
+| yarn.json | The `non-portable` version of the Yarn application. Keep global node_modules in its original location: `$env:LOCALAPPDATA\\Yarn\\bin` |
+
 Question
 --------
 
