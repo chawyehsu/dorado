@@ -21,7 +21,7 @@ Feature Apps
 | Manifest | Description |
 |----------|-------------|
 | hmcl.json | The most famous Minecraft launcher made in China |
-| nuwen-mingw-gcc.json | Minimalist GCC package from nuwen's MinGW distribution | 
+| nuwen-mingw-gcc.json | Minimalist GCC package from nuwen's [MinGW Distro](https://nuwen.net/mingw.html) | 
 | nvm-windows.json | A fork of [nvm-windows](https://github.com/coreybutler/nvm-windows), removed elevated permission, for low permission scoop user |
 | tcping.json | Eli Fulkerson's TCP ping tool, ping over a tcp connection |
 | trash.json | Move files and folders to recycle bin instead of directly `rm-rf` it, like `brew install trash` but for Windows |
