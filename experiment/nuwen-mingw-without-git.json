@@ -1,0 +1,22 @@
+{
+    "homepage": "https://nuwen.net/mingw.html",
+    "description": "nuwen's MinGW Distro without git",
+    "license": "GPL-2.0-only",
+    "version": "16.1",
+    "url": "https://nuwen.net/files/mingw/mingw-16.1-without-git.exe#/dl.7z",
+    "hash": "2ae4ba74cff89a081b3aa1f3f174834e7fe2518fabbbdc71ddf18081d676f164",
+    "extract_dir": "MinGW",
+    "bin": "set_distro_paths.bat",
+    "shortcuts": [
+        [
+            "open_distro_window.bat",
+            "Open nuwen MinGW"
+        ]
+    ],
+    "checkver": {
+        "re": "mingw-([\\d.]+).exe</a>"
+    },
+    "autoupdate": {
+        "url": "https://nuwen.net/files/mingw/mingw-$version-without-git.exe#/dl.7z"
+    }
+}
