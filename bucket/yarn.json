@@ -1,5 +1,6 @@
 {
     "homepage": "https://yarnpkg.com/",
+    "description": "📦🐈Fast, reliable, and secure dependency management.",
     "license": "BSD-2-Clause",
     "version": "1.12.3",
     "suggest": {
@@ -23,5 +24,8 @@
     "checkver": {
         "url": "https://yarnpkg.com/latest-version",
         "re": "([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://yarnpkg.com/downloads/$version/yarn-$version.msi"
     }
 }
