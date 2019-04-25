@@ -4,7 +4,7 @@
     "license": "Apache-2.0",
     "version": "0.6.5",
     "url": "https://github.com/MultiMC/MultiMC5/releases/download/0.6.5/mmc-stable-win32.zip",
-    "hash": "61b314a7aec49d0f237206955670787afd6fbd2f7f865199a0c8559fc0a1a3c1",
+    "hash": "4fa91828aaeb571193397028ce21674b8d4430a4e092e11a18fcc41c770d18b5",
     "extract_dir": "MultiMC",
     "bin": "MultiMC.exe",
     "shortcuts": [
@@ -15,18 +15,17 @@
     ],
     "pre_install": [
         "function CreateFile([String] $file, [String] $content = $null) {",
-        "    if(!(Test-Path \"$persist_dir\\$file\")) {",
+        "    if (!(Test-Path \"$persist_dir\\$file\")) {",
         "        New-Item -Force -Path \"$persist_dir\\$file\" -ItemType file -Value $content | Out-Null",
         "    }",
+        "    # Create symbolic link directly",
+        "    New-Item -ItemType SymbolicLink -Path \"$dir\\$file\" -Target \"$persist_dir\\$file\" | Out-Null",
         "}",
-        "CreateFile 'accounts.json' '{}'",
-        "CreateFile 'multimc.cfg' 'Analytics=false\nAnalyticsClientID=\nLanguage=en\nLastHostname=\nJavaPath=javaw\nMaxMemAlloc=1024\nMinMemAlloc=512\nShownNotifications=\nUpdateChannel=stable\n'",
-        "CreateFile 'notifications.json' '{}'"
+        "CreateFile 'accounts.json'",
+        "CreateFile 'multimc.cfg' 'UpdateChannel=stable\n'",
+        "CreateFile 'notifications.json'"
     ],
     "persist": [
-        "accounts.json",
-        "multimc.cfg",
-        "notifications.json",
         "accounts",
         "assets",
         "instances",
