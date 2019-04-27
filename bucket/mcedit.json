@@ -1,0 +1,45 @@
+{
+    "homepage": "https://www.mcedit.net/",
+    "description": "World Editor for Minecraft",
+    "license": {
+        "identifier": "MCEdit and MCEditLib license",
+        "url": "https://github.com/mcedit/mcedit2/blob/master/LICENSE.md"
+    },
+    "version": "2.0.0-beta14",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/mcedit/mcedit2/releases/download/2.0.0-beta14/mcedit2-win64-2.0.0-beta14.exe#/dl.7z",
+            "hash": "7b481550cb6ceae28deacb4072eafb5201bb111c65a7389c4aa66495fa670b55",
+            "extract_dir": "mcedit2-win64-2.0.0-beta14"
+        },
+        "32bit": {
+            "url": "https://github.com/mcedit/mcedit2/releases/download/2.0.0-beta14/mcedit2-win32-2.0.0-beta14.exe#/dl.7z",
+            "hash": "d98471a303215de878c97fd86e263912825fa56eb3fc4347e5afc78e191953a4",
+            "extract_dir": "mcedit2-win32-2.0.0-beta14"
+        }
+    },
+    "bin": "mcedit2.exe",
+    "persist": "MCEdit 2 Files",
+    "shortcuts": [
+        [
+            "mcedit2.exe",
+            "MCEdit"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/mcedit/mcedit2",
+        "regex": "tag/(?:v)?([\\w.-]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/mcedit/mcedit2/releases/download/$version/mcedit2-win64-$version.exe#/dl.7z",
+                "extract_dir": "mcedit2-win64-$version"
+            },
+            "32bit": {
+                "url": "https://github.com/mcedit/mcedit2/releases/download/$version/mcedit2-win32-$version.exe#/dl.7z",
+                "extract_dir": "mcedit2-win32-$version"
+            }
+        }
+    }
+}
