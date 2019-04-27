@@ -1,15 +1,15 @@
 {
     "homepage": "https://www.jmc2obj.net/",
     "description": "A Minecraft to .Obj exporter written in Java.",
-    "version": "dev_g50",
-    "url": "https://www.jmc2obj.net/downloads/jMc2Obj-dev_g50.jar",
-    "hash": "810455c73d0042a135a2d0c92ad93da5abab9629b8bd202898ecb4d6fd6bde47",
+    "version": "104",
+    "url": "https://github.com/jmc2obj/j-mc-2-obj/releases/download/104/jMc2Obj-104.jar",
+    "hash": "d71ebbe075ddbb561318dde46958fc8d4e8103a9c66d5c84a2beb06f073f1cff",
     "checkver": {
-        "url": "https://www.jmc2obj.net/downloads/update.xml",
-        "re": "jMc2Obj-([\\w_\\d]+).jar"
+        "github": "https://github.com/jmc2obj/j-mc-2-obj",
+        "regex": "tag/([\\d]+)"
     },
     "pre_install": "Rename-Item @(Get-ChildItem $dir\\jMc2Obj-*.jar)[0] $dir\\jMc2Obj.jar",
     "autoupdate": {
-        "url": "https://www.jmc2obj.net/downloads/jMc2Obj-$version.jar"
+        "url": "https://github.com/jmc2obj/j-mc-2-obj/releases/download/$version/jMc2Obj-$version.jar"
     }
 }
