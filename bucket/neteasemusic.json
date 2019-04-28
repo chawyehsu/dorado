@@ -7,7 +7,7 @@
         "url": "https://music.163.com/html/web2/service.html"
     },
     "url": "https://d1.music.126.net/dmusic/cloudmusicsetup_2.5.2.197409.exe#/dl.7z",
-    "hash": "38c526813aebb40be33f181131b07f3518fa560329dcc68d89e11b9240219aef",
+    "hash": "md5:c9d5faabfecd7ac1bd51545a27fd8806",
     "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\" -Force -Recurse",
     "bin": "cloudmusic.exe",
     "shortcuts": [
@@ -21,7 +21,11 @@
         "jp": "$.updateFiles[0].version"
     },
     "autoupdate": {
-        "url": "https://d1.music.126.net/dmusic/cloudmusicsetup_$version.exe#/dl.7z"
+        "url": "https://d1.music.126.net/dmusic/cloudmusicsetup_$version.exe#/dl.7z",
+        "hash": {
+            "url": "https://h404bi.azurewebsites.net/ncmversion.php",
+            "jp": "$.updateFiles[0].hash"
+        }
     },
     "notes": "We don't persist your CloudMusic data, they are still storaged in '%LOCALAPPDATA%\\Netease\\CloudMusic'."
 }
