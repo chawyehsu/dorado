@@ -22,7 +22,8 @@
         "    New-Item -ItemType SymbolicLink -Path \"$dir\\$file\" -Target \"$persist_dir\\$file\" | Out-Null",
         "}",
         "CreateFile 'accounts.json'",
-        "CreateFile 'multimc.cfg' 'UpdateChannel=stable\n'",
+        "CreateFile 'multimc.cfg' 'UpdateChannel=stable
+'",
         "CreateFile 'notifications.json'"
     ],
     "persist": [
@@ -35,9 +36,7 @@
         "translations"
     ],
     "suggest": {
-        "MCEdit": [
-            "dorado/mcedit"
-        ]
+        "MCEdit": "dorado/mcedit"
     },
     "checkver": {
         "github": "https://github.com/MultiMC/MultiMC5"
