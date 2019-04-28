@@ -1,7 +1,7 @@
 version: '{branch}-{build}'
 branches:
-  only:
-  - master
+  except:
+    - gh-pages
 build: off
 deploy: off
 clone_depth: 2
