@@ -1,0 +1,22 @@
+{
+    "homepage": "https://pandownload.com/",
+    "description": "A Baidu Netdisk Downloader",
+    "version": "2.1.0",
+    "license": "Freeware",
+    "url": "http://dl.pandownload.club/dl/PanDownload_v2.1.0.zip",
+    "hash": "71EAB7EE717ABB56C3C14C7963E07D44FDE61B18D495E379248F498FB0125054",
+    "extract_dir": "PanDownload",
+    "shortcuts": [
+        [
+            "PanDownload.exe",
+            "PanDownload"
+        ]
+    ],
+    "checkver": {
+        "url": "https://pandownload.com/",
+        "re": ">v([\\d.]+)<"
+    },
+    "autoupdate": {
+        "url": "http://dl.pandownload.club/dl/PanDownload_v$version.zip"
+    }
+}

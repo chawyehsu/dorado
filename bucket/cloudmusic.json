@@ -1,0 +1,17 @@
+{
+    "homepage": "https://music.163.com/#/download",
+    "description": "Official NetEase Cloud Music Client",
+    "version": "2.5.2.197409",
+    "license": "Freeware",
+    "url": "https://d1.music.126.net/dmusic/cloudmusicsetup_2.5.2.197409.exe#/cloudmusic.7z",
+    "hash": "38C526813AEBB40BE33F181131B07F3518FA560329DCC68D89E11B9240219AEF",
+    "shortcuts": [
+        [
+            "cloudmusic.exe",
+            "NetEase Cloud Music"
+        ]
+    ],
+    "autoupdate": {
+        "url": "https://d1.music.126.net/dmusic/cloudmusicsetup_$version.exe#/cloudmusic.7z"
+    }
+}

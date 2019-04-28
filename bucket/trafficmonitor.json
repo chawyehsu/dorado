@@ -1,0 +1,21 @@
+{
+    "homepage": "https://github.com/zhongyang219/TrafficMonitor",
+    "description": "TrafficMonitor is a network monitoring suspension window software in Windows platform.",
+    "version": "1.76",
+    "license": "GPL-3.0",
+    "url": "https://github.com/zhongyang219/TrafficMonitor/releases/download/V1.76/TrafficMonitor_V1.76.7z",
+    "hash": "F29DF465AE81089595B30EB775EC9E93950D2CDBBDD5B78A44E96EFDE8955E88",
+    "extract_dir": "TrafficMonitor",
+    "shortcuts": [
+        [
+            "TrafficMonitor.exe",
+            "TrafficMonitor"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/zhongyang219/TrafficMonitor"
+    },
+    "autoupdate": {
+        "url": "https://github.com/zhongyang219/TrafficMonitor/releases/download/$version/TrafficMonitor_$version.7z"
+    }
+}
