@@ -1,9 +1,9 @@
 {
-    "homepage": "http://chunky.llbit.se/",
+    "homepage": "https://chunky.llbit.se/",
     "description": "Chunky is a Minecraft mapping and rendering tool.",
     "license": "GPL-3.0-only",
     "version": "1.4.5",
-    "url": "http://chunkyupdate.llbit.se/ChunkyLauncher.jar",
+    "url": "https://chunkyupdate.llbit.se/ChunkyLauncher.jar",
     "hash": "16b79375066cbd3e4e2f11406f6600248542f8281636af28d8489b684afa0d36",
     "suggest": {
         "JDK": [
@@ -17,13 +17,12 @@
             "Chunky"
         ]
     ],
-    "bin": "chunky.cmd",
-    "pre_install": "\"@java -jar \"\"$dir\\ChunkyLauncher.jar\"\" %*\" | out-file -en oem \"$dir\\chunky.cmd\"",
+    "bin": "ChunkyLauncher.jar",
     "checkver": {
         "re": "Download version ([\\d.]+)"
     },
     "autoupdate": {
-        "url": "http://chunkyupdate.llbit.se/ChunkyLauncher.jar"
+        "url": "https://chunkyupdate.llbit.se/ChunkyLauncher.jar"
     },
     "notes": [
         "When run first time, select the recommended directory,",
