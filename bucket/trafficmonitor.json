@@ -1,10 +1,18 @@
 {
     "homepage": "https://github.com/zhongyang219/TrafficMonitor",
     "description": "TrafficMonitor is a network monitoring suspension window software in Windows platform.",
-    "version": "1.76",
+    "version": "1.77",
     "license": "GPL-3.0-only",
-    "url": "https://github.com/zhongyang219/TrafficMonitor/releases/download/V1.76/TrafficMonitor_V1.76.7z",
-    "hash": "f29df465ae81089595b30eb775ec9e93950d2cdbbdd5b78a44e96efde8955e88",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/zhongyang219/TrafficMonitor/releases/download/V1.77/TrafficMonitor_V1.77_x64.7z",
+            "hash": "3ecbb52a939301544b293a05bdd39f76c3329604221f6660824f8150d0be493a"
+        },
+        "32bit": {
+            "url": "https://github.com/zhongyang219/TrafficMonitor/releases/download/V1.77/TrafficMonitor_V1.77_x86.7z",
+            "hash": "3973d2db7b9869ecbe40a0c6b12fbad3155f40a14dbf11dbb4aac975b3831487"
+        }
+    },
     "extract_dir": "TrafficMonitor",
     "shortcuts": [
         [
@@ -26,6 +34,13 @@
     ],
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/zhongyang219/TrafficMonitor/releases/download/V$version/TrafficMonitor_V$version.7z"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/zhongyang219/TrafficMonitor/releases/download/V$version/TrafficMonitor_V$version_x64.7z"
+            },
+            "32bit": {
+                "url": "https://github.com/zhongyang219/TrafficMonitor/releases/download/V$version/TrafficMonitor_V$version_x86.7z"
+            }
+        }
     }
 }
