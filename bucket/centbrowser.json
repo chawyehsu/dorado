@@ -1,0 +1,37 @@
+{
+    "homepage": "https://www.centbrowser.com/",
+    "description": "The Most Feature Rich Chromium",
+    "version": "3.9.2.45",
+    "license": "Freeware",
+    "architecture": {
+        "64bit": {
+            "url": "http://static.centbrowser.com/installer_64/centbrowser_3.9.2.45_x64_portable.exe#/dl.7z",
+            "hash": "a7ade8d9fb84b4b36377cddcd3e41e9cf93532d405caa76d2f4defd8ccbb5389"
+        },
+        "32bit": {
+            "url": "http://static.centbrowser.com/installer_32/centbrowser_3.9.2.45_portable.exe#/dl.7z",
+            "hash": "952cb3467726f6fd6ddb200695c560f6261cec6ef6d2bb8f59debf2e00ea232a"
+        }
+    },
+    "shortcuts": [
+        [
+            "chrome.exe",
+            "Cent Browser"
+        ]
+    ],
+    "persist": "User Data",
+    "checkver": {
+        "url": "https://www.centbrowser.com/history.html",
+        "re": "<p id=\"[\\d.]+\">v([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "http://static.centbrowser.com/installer_64/centbrowser_$version_x64_portable.exe#/dl.7z"
+            },
+            "32bit": {
+                "url": "http://static.centbrowser.com/installer_32/centbrowser_$version_portable.exe#/dl.7z"
+            }
+        }
+    }
+}
