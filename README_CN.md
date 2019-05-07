@@ -33,7 +33,7 @@
 | nvm-windows | 颇受欢迎的 [nvm-windows](https://github.com/coreybutler/nvm-windows) 的修改版，移除了管理员提权要求，使得低权限的普通用户亦可无障碍使用 |
 | tcping | 通过 TCP 进行 ping 操作 |
 | translucenttb | 你可能需要的 Windows 10 任务栏透明化小工具 |
-| trash | 将待删除文件移植回收站，而不是直接 `rm-rf`，类似于 macOS 的 trash |
+| trash | 将待删除文件移至回收站，而不是直接 `rm-rf`，类似于 macOS 的 trash |
 | yarn | 非便携版的 Yarn，全局安装的 `node_modules` 仍然保持在原有的 `$env:LOCALAPPDATA\\Yarn\\bin` 路径下 |
 | wechat | 你可能需要的微信 PC 客户端 |
 
