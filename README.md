@@ -7,6 +7,9 @@
         <a href="https://github.com/h404bi/dorado"><img src="https://img.shields.io/github/repo-size/h404bi/dorado.svg?style=flat-square" alt="Repo size"></a>
         <a href="https://github.com/h404bi/awesome-scoop/blob/master/README.md" title="Awesome Scoop"><img src="https://awesome.re/mentioned-badge-flat.svg" alt="Mentioned in Awesome Scoop"></a>
     </p>
+    <p align="center">
+        <a href="README.md">English</a>|<a href="README_CN.md">简体中文</a>
+    </p>
     <p align="center"><img align="center" src="https://www.h404bi.com/uploads/2018/05/20180512002.gif" alt="highlight" /></p>
     <p align="center">
         Yet another <a href="https://github.com/lukesampson/scoop/wiki/Buckets"><code>bucket</code></a> for <a href="https://github.com/lukesampson/scoop">Scoop</a>.
@@ -22,7 +25,7 @@ Feature Apps
 | Manifest | Description |
 |----------|-------------|
 | hmcl.json | The most famous Minecraft launcher made in China |
-| nuwen-mingw-gcc.json | Minimalist GCC package from nuwen's [MinGW Distro](https://nuwen.net/mingw.html) | 
+| nuwen-mingw-gcc.json | Minimalist GCC package from nuwen's [MinGW Distro](https://nuwen.net/mingw.html) |
 | nvm-windows.json | A fork of [nvm-windows](https://github.com/coreybutler/nvm-windows), removed elevated permission, for low permission scoop user |
 | tcping.json | Eli Fulkerson's TCP ping tool, ping over a tcp connection |
 | trash.json | Move files and folders to recycle bin instead of directly `rm-rf` it, like `brew install trash` but for Windows |
