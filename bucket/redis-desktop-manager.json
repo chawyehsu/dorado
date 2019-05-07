@@ -1,0 +1,19 @@
+{
+    "homepage": "https://redisdesktop.com/",
+    "description": "Cross-platform GUI management tool for Redis",
+    "license": "GPL-3.0-only",
+    "version": "2019.0",
+    "url": "https://github.com/necan/RedisDesktopManager-Windows/releases/download/2019.0/redis-desktop-manager-2019.0.0.exe#/dl.7z",
+    "hash": "f9e92a761bcc0b7af5b421e9975b3813c26d8b13af62cf3c3f6450afd0295a49",
+    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\" -Recurse",
+    "bin": "rdm.exe",
+    "shortcuts": [
+        [
+            "rdm.exe",
+            "Redis Desktop Manager"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/necan/RedisDesktopManager-Windows"
+    }
+}
