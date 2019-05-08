@@ -1,0 +1,17 @@
+{
+    "homepage": "https://www.origin.com/",
+    "description": "Platform Packed with Great PC Games",
+    "license": "Freeware",
+    "version": "nightly",
+    "url": "https://download.dm.origin.com/origin/live/OriginSetup.exe#/dl.7z",
+    "extract_dir": "update",
+    "installer": {
+        "script": "Expand-7zipArchive \"$dir\\OriginUpdate*.zip\" \"$dir\" -Removal"
+    },
+    "shortcuts": [
+        [
+            "Origin.exe",
+            "Origin"
+        ]
+    ]
+}
