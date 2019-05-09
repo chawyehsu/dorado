@@ -14,7 +14,6 @@
         ]
     },
     "env_add_path": "bin",
-    "persist": "bin",
     "checkver": {
         "url": "https://raw.githubusercontent.com/chocolatey/choco/master/CHANGELOG.md",
         "re": "## \\[([\\d.]+)\\].*\\)"
@@ -22,5 +21,8 @@
     "autoupdate": {
         "url": "https://packages.chocolatey.org/chocolatey.$version.nupkg"
     },
-    "notes": "You may not to upgrade Chocolatey through choco itself, use Scoop to do it instead."
+    "notes": [
+        "There are limitations to use Chocolatey within Scoop, please be careful.",
+        "You may not to upgrade Chocolatey through choco itself, use Scoop to do it instead."
+    ]
 }
