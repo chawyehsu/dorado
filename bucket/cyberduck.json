@@ -14,7 +14,7 @@
     ],
     "checkver": {
         "url": "https://update.cyberduck.io/windows/",
-        "re": "Cyberduck-Installer-([\\d.]+).msi "
+        "re": "Cyberduck-Installer-([\\d.]+).msi"
     },
     "autoupdate": {
         "url": "https://update.cyberduck.io/windows/Cyberduck-Installer-$version.msi"

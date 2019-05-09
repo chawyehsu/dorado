@@ -9,7 +9,7 @@
     "bin": "duck.exe",
     "checkver": {
         "url": "https://dist.duck.sh/",
-        "re": "duck-([\\d.]+).msi "
+        "re": "duck-([\\d.]+).msi"
     },
     "autoupdate": {
         "url": "https://dist.duck.sh/duck-$version.msi"
