@@ -1,0 +1,26 @@
+{
+    "homepage": "https://chocolatey.org/",
+    "description": "Chocolatey is a CLI-based package manager for Windows that is sort of like apt-get",
+    "license": "Apache-2.0",
+    "version": "0.10.13",
+    "url": "https://packages.chocolatey.org/chocolatey.0.10.13.nupkg",
+    "hash": "d270b2d563433cbb3a49353242f5401d7885cb8e9782e3364fe24826c06b179c",
+    "extract_dir": "tools\\chocolateyInstall",
+    "installer": {
+        "script": [
+            "Rename-Item \"$dir\\redirects\" \"$dir\\bin\" | Out-Null",
+            "Remove-Item \"$dir\\bin\\*.ignore\" | Out-Null",
+            "New-Item -ItemType Directory -Force -Path \"$dir\\lib\\chocolatey\" | Out-Null"
+        ]
+    },
+    "env_add_path": "bin",
+    "persist": "bin",
+    "checkver": {
+        "url": "https://raw.githubusercontent.com/chocolatey/choco/master/CHANGELOG.md",
+        "re": "## \\[([\\d.]+)\\].*\\)"
+    },
+    "autoupdate": {
+        "url": "https://packages.chocolatey.org/chocolatey.$version.nupkg"
+    },
+    "notes": "You may not to upgrade Chocolatey through choco itself, use Scoop to do it instead."
+}
