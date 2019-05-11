@@ -1,0 +1,32 @@
+{
+    "homepage":"https://www.axure.com/",
+    "description":"Prototypes, Specifications, and Diagrams in One Tool",
+    "version":"9.0.0.3647",
+    "url":"https://axure.cachefly.net/versions/9-0/AxureRP-Setup-3647.exe#/installer.exe",
+    "hash": "4028e8b6aaf1b10aba67f22010a17d1e1bb14b8d59690cb36a56b873ebf48225",
+    "depends": "dark",
+    "installer": {
+        "script": [
+            "$extracted = \"$dir\\extracted\"",
+            "$msi = \"$dir\\msi\"",
+            "dark.exe -nologo -x \"$extracted\" \"$dir\\installer.exe\" | Out-Null",
+            "Rename-Item \"$extracted\\AttachedContainer\\Axure*.msi\" -NewName \"Axure.msi\"",
+            "Expand-MsiArchive \"$extracted\\AttachedContainer\\Axure.msi\" \"$msi\"",
+            "Move-Item \"$msi\\Axure\\Axure*\\*\" \"$dir\" -Force",
+            "Remove-Item $extracted, $msi, \"$dir\\installer.exe\" -Force -Recurse"
+        ]
+    },
+    "shortcuts": [
+        [
+            "AxureRP9.exe",
+            "AxureRP"
+        ]
+    ],
+    "checkver": {
+        "url": "https://www.axure.com/release-history",
+        "re": "<h3>Axure RP ([\\d.]+)</h3>"
+    },
+    "autoupdate": {
+        "url": "https://axure.cachefly.net/versions/$majorVersion-$minorVersion/AxureRP-Setup-$buildVersion.exe#/installer.exe"
+    }
+}
