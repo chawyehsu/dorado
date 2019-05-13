@@ -1,0 +1,53 @@
+{
+    "homepage": "https://www.google.com/chrome/",
+    "description": "The Fast, Simple and Secure Browser from Google",
+    "version": "74.0.3729.131",
+    "license": "Freeware",
+    "architecture": {
+        "64bit": {
+            "url": "https://redirector.gvt1.com/edgedl/release2/chrome/VgjlGsaFfgA_74.0.3729.131/74.0.3729.131_chrome_installer.exe#/dl.7z",
+            "hash": "aafc8b370770ed51e2ede16731e303347ee7184376c54d09d2d1fb44a95627a1"
+        },
+        "32bit": {
+            "url": "https://redirector.gvt1.com/edgedl/release2/chrome/AN8PReQd-R9n_74.0.3729.131/74.0.3729.131_chrome_installer.exe#/dl.7z",
+            "hash": "8e2b910de0047a488266e0521339c1aa25e0dc6c950a184893efe269b18d9588"
+        }
+    },
+    "installer": {
+        "script": [
+            "Expand-7ZipArchive \"$dir\\chrome.7z\" \"$dir\" -Removal",
+            "Move-Item \"$dir\\Chrome-bin\\*\" \"$dir\"",
+            "Remove-Item \"$dir\\Chrome-bin\" -Force -Recurse"
+        ]
+    },
+    "bin": "chrome.exe",
+    "shortcuts": [
+        [
+            "chrome.exe",
+            "Google Chrome",
+            "--disable-directwrite-for-ui --disable-features=Windows10CustomTitlebar"
+        ]
+    ],
+    "checkver": {
+        "url": "https://lab.skk.moe/chrome/api/chrome.min.xml",
+        "regex": "(?sm)<stable32>.*<version>(?<version>[\\d.]+)</version>.*release2/chrome/(?<32>[\\w-]+)_.*<stable64>.*release2/chrome/(?<64>[\\w-]+)_.*</stable64>"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://redirector.gvt1.com/edgedl/release2/chrome/$match64_$version/$version_chrome_installer.exe#/dl.7z",
+                "hash": {
+                    "url": "https://lab.skk.moe/chrome/api/chrome.min.xml",
+                    "xpath": "/chromechecker/stable64[version=\"$version\"]/sha256"
+                }
+            },
+            "32bit": {
+                "url": "https://redirector.gvt1.com/edgedl/release2/chrome/$match32_$version/$version_chrome_installer.exe#/dl.7z",
+                "hash": {
+                    "url": "https://lab.skk.moe/chrome/api/chrome.min.xml",
+                    "xpath": "/chromechecker/stable32[version=\"$version\"]/sha256"
+                }
+            }
+        }
+    }
+}
