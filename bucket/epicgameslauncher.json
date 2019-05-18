@@ -1,0 +1,14 @@
+{
+    "homepage": "https://www.epicgames.com/store/",
+    "description": "The Launcher of the digital video game platform operated by Epic Games.",
+    "version": "nightly",
+    "license": "Freeware",
+    "url": "https://launcher-public-service-prod06.ol.epicgames.com/launcher/api/installer/download/EpicGamesLauncherInstaller.msi",
+    "extract_dir": "Epic Games",
+    "shortcuts": [
+        [
+            "Launcher\\Portal\\Binaries\\Win32\\EpicGamesLauncher.exe",
+            "Epic Games Launcher"
+        ]
+    ]
+}
