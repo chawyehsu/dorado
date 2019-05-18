@@ -24,6 +24,11 @@
             "}"
         ]
     },
+    "uninstaller": {
+        "script": [
+            "Remove-Item \"$env:APPDATA\\Tencent\\QQ\" -Recurse -Force"
+        ]
+    },
     "shortcuts": [
         [
             "Bin\\QQScLauncher.exe",
