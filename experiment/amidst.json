@@ -13,7 +13,8 @@
     },
     "bin": "amidst.jar",
     "checkver": {
-        "re": "tag/v([\\w\\.-]+)"
+        "url": "https://github.com/toolbox4minecraft/amidst/releases",
+        "regex": "tag/v([\\w.-]+)"
     },
     "autoupdate": {
         "url": "https://github.com/toolbox4minecraft/amidst/releases/download/v$version/amidst-v$version.jar#/amidst.jar"
