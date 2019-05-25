@@ -2,9 +2,9 @@
     "homepage": "https://im.qq.com/pcqq/",
     "description": "An instant messaging software service developed by Tencent",
     "license": "Freeware",
-    "version": "9.1.2.25096",
-    "url": "https://dldir1.qq.com/qqfile/qq/PCQQ9.1.2/25096/QQ9.1.2.25096.exe#/dl.7z",
-    "hash": "3c30131d3de9a536f213f9f72f8819a3778464ab4bb4e9c7722a443e21b8a958",
+    "version": "9.1.3.25323",
+    "url": "https://dldir1.qq.com/qqfile/qq/PCQQ9.1.3/25323/QQ9.1.3.25323.exe#/dl.7z",
+    "hash": "337f51c9aa7921b0a8222236f7e3bd073160243aee6e43bf3c735d6f38f6c0e5",
     "installer": {
         "script": [
             "$qqRoaming = \"$env:APPDATA\\Tencent\\QQ\"",
@@ -25,9 +25,7 @@
         ]
     },
     "uninstaller": {
-        "script": [
-            "Remove-Item \"$env:APPDATA\\Tencent\\QQ\" -Recurse -Force"
-        ]
+        "script": "Remove-Item \"$env:APPDATA\\Tencent\\QQ\" -Recurse -Force"
     },
     "shortcuts": [
         [
