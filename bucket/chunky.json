@@ -3,8 +3,8 @@
     "description": "Chunky is a Minecraft mapping and rendering tool.",
     "license": "GPL-3.0-only",
     "version": "1.4.5",
-    "url": "https://chunkyupdate.llbit.se/ChunkyLauncher.jar",
-    "hash": "16b79375066cbd3e4e2f11406f6600248542f8281636af28d8489b684afa0d36",
+    "url": "https://launchpad.net/chunky/1.4/1.4.5/+download/Chunky-1.4.5.exe#/dl.7z",
+    "hash": "md5:9013ca1b9dcfd3c38b8a69577e157502",
     "suggest": {
         "JDK": [
             "java/oraclejdk",
@@ -13,19 +13,24 @@
     },
     "shortcuts": [
         [
-            "ChunkyLauncher.jar",
-            "Chunky"
+            "chunky.jar",
+            "Chunky",
+            "",
+            "chunky.ico"
         ]
     ],
-    "bin": "ChunkyLauncher.jar",
+    "bin": "chunky.jar",
     "checkver": {
         "re": "Download version ([\\d.]+)"
     },
     "autoupdate": {
-        "url": "https://chunkyupdate.llbit.se/ChunkyLauncher.jar"
+        "url": "https://launchpad.net/chunky/$majorVersion.$minorVersion/$version/+download/Chunky-$version.exe#/dl.7z",
+        "hash": {
+            "url": "https://launchpad.net/chunky/1.4/1.4.5/+download/Chunky-1.4.5.exe/+md5"
+        }
     },
     "notes": [
-        "When run first time, select the recommended directory,",
-        "i.e. 'Home Directory', to store Chunky configuration"
+        "You'll need a JAVA runtime installed to run Chunky.",
+        "Select the recommended directory, i.e. 'Home Directory' to store Chunky configuration."
     ]
 }
