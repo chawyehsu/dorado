@@ -2,6 +2,7 @@
     "homepage": "https://github.com/TroZ/s2cb",
     "description": "Schematic To Command Block - A utility for Minecraft that will convert .schematic or .nbt structure files into commands.",
     "version": "1.13c",
+    "license": "Apache-2.0",
     "url": "https://github.com/TroZ/s2cb/releases/download/S2CB113c/S2CBv1.13c.zip",
     "hash": "3adf80441020aea36f6f636f9c08ca5c9fb828f099726ac47480d02da64dc803",
     "pre_install": "Rename-Item @(Get-ChildItem $dir\\s2cb-*.jar)[0] $dir\\s2cb.jar",
