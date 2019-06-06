@@ -1,0 +1,19 @@
+{
+  "name": "dorado",
+  "version": "0.0.0",
+  "homepage": "https://github.com/h404bi/dorado",
+  "description": "🐟 A bucket of Scoop, for h404bi",
+  "author": "Chawye Hsu <h404bi@gmail.com>",
+  "private": true,
+  "repository": {
+    "url": "git+https://github.com/h404bi/dorado.git",
+    "type": "git"
+  },
+  "scripts": {
+    "checkver": "powershell -noprofile ./bin/checkver.ps1",
+    "lint": "powershell -noprofile  ./bin/formatjson.ps1",
+    "update": "powershell -noprofile ./bin/auto-pr.ps1 -push",
+    "sync": "powershell -noprofile ./bin/sync-mirror.ps1",
+    "test": "powershell -noprofile ./bin/test.ps1"
+  }
+}
