@@ -6,7 +6,7 @@
         "url": "https://tms.dingtalk.com/markets/dingtalk/service-terms-zh"
     },
     "version": "4.6.33.76",
-    "url": "https://download.alicdn.com/dingtalk-desktop/win_installer/Release/DingTalk_v4.6.33.76.exe#/dl.7z",
+    "url": "https://dtapp-pub.dingtalk.com/dingtalk-desktop/win_installer/Release/DingTalk_v4.6.33.76.exe#/dl.7z",
     "hash": "md5:cb6cd397631a1f97dcbb30a91223c8fa",
     "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\" -Recurse",
     "shortcuts": [
@@ -20,10 +20,10 @@
         "regex": "DingTalk_v([\\d.]+).exe"
     },
     "autoupdate": {
-        "url": "https://download.alicdn.com/dingtalk-desktop/win_installer/Release/DingTalk_v$version.exe#/dl.7z",
+        "url": "https://dtapp-pub.dingtalk.com/dingtalk-desktop/win_installer/Release/DingTalk_v$version.exe#/dl.7z",
         "hash": {
             "url": "https://im.dingtalk.com/manifest/release_nativeui_windows_manual_check.json",
-            "jp": "$.win.install.md5"
+            "regex": "(?sm)install\".*?md5.*?\"$md5\""
         }
     },
     "notes": "We don't persist your DingTalk data, they are still storaged in '%APPDATA%\\DingTalk'."
