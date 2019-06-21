@@ -18,10 +18,10 @@
     ],
     "checkver": {
         "url": "https://h404bi.azurewebsites.net/ncmversion.php",
-        "jp": "$.updateFiles[0].version"
+        "regex": "dmusic\\\\/(?<ts4>[\\d]+)\\\\/(?<ts13>[\\d]+)\\\\/cloudmusicsetup(?<version>[\\d.]+).exe"
     },
     "autoupdate": {
-        "url": "https://d1.music.126.net/dmusic/cloudmusicsetup$version.exe#/dl.7z",
+        "url": "https://d1.music.126.net/dmusic/$ts4/$$ts13/cloudmusicsetup$version.exe#/dl.7z",
         "hash": {
             "url": "https://h404bi.azurewebsites.net/ncmversion.php",
             "jp": "$.updateFiles[0].hash"
