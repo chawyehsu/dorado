@@ -2,7 +2,7 @@
     "homepage": "https://redisdesktop.com/",
     "description": "Cross-platform GUI management tool for Redis",
     "license": "GPL-3.0-only",
-    "version": "2019.0",
+    "version": "2019.1",
     "url": "https://github.com/necan/RedisDesktopManager-Windows/releases/download/2019.1/redis-desktop-manager.2019.1.exe#/dl.7z",
     "hash": "ecdeb0ad0b98b51eb33db33d837a765ac03b11302b891e7f6f76fa631d95fe47",
     "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\" -Recurse",
