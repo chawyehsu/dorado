@@ -6,7 +6,7 @@
     "architecture": {
         "64bit": {
             "url": "https://sourceforge.net/projects/mpcbe/files/MPC-BE/Release%20builds/1.5.3/MPC-BE.1.5.3.x64.7z",
-            "hash": "fbcf5c3719b9945ee012a36becbdcde07594196a50d38972ba85141fd8634958",
+            "hash": "sha1:a5bfb364e2c3518a249980ff6f2937c2ae5d82a8",
             "extract_dir": "MPC-BE.1.5.3.4488.x64",
             "bin": "mpc-be64.exe",
             "shortcuts": [
@@ -18,7 +18,7 @@
         },
         "32bit": {
             "url": "https://sourceforge.net/projects/mpcbe/files/MPC-BE/Release%20builds/1.5.3/MPC-BE.1.5.3.x86.7z",
-            "hash": "1116e306db905ed71d7b66105a04070610a0486175c5a49fa2fe51b80f8e082d",
+            "hash": "sha1:6b7d71f5c342ef4dee372a1a085947219bcf22bf",
             "extract_dir": "MPC-BE.1.5.3.4488.x86",
             "bin": "mpc-be.exe",
             "shortcuts": [
@@ -30,7 +30,33 @@
         }
     },
     "checkver": {
-        "url": "https://forum.doom9.org/showthread.php?t=165890",
-        "re": "Changes in release ([\\d.]+)"
+        "url": "https://sourceforge.net/p/mpcbe/code/HEAD/tree/",
+        "regex": "(?sm)tags<.*?\\[r(?<build>[\\d]+)\\].*?MPC-BE v([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://sourceforge.net/projects/mpcbe/files/MPC-BE/Release%20builds/$version/MPC-BE.$version.x64.7z",
+                "extract_dir": "MPC-BE.$version.$matchBuild.x64",
+                "bin": "mpc-be64.exe",
+                "shortcuts": [
+                    [
+                        "mpc-be64.exe",
+                        "MPC-BE x64"
+                    ]
+                ]
+            },
+            "32bit": {
+                "url": "https://sourceforge.net/projects/mpcbe/files/MPC-BE/Release%20builds/$version/MPC-BE.$version.x86.7z",
+                "extract_dir": "MPC-BE.$version.$matchBuild.x86",
+                "bin": "mpc-be.exe",
+                "shortcuts": [
+                    [
+                        "mpc-be.exe",
+                        "MPC-BE"
+                    ]
+                ]
+            }
+        }
     }
 }
