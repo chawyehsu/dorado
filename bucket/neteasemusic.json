@@ -6,7 +6,7 @@
         "identifier": "EULA",
         "url": "https://music.163.com/html/web2/service.html"
     },
-    "url": "https://d1.music.126.net/dmusic/cloudmusicsetup2.5.3.197682.exe#/dl.7z",
+    "url": "https://d1.music.126.net/dmusic/2001/2019520193036/cloudmusicsetup2.5.3.197682.exe#/dl.7z",
     "hash": "md5:517f966aa591b04b6ff22ca4c7702240",
     "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\" -Force -Recurse",
     "bin": "cloudmusic.exe",
@@ -18,10 +18,10 @@
     ],
     "checkver": {
         "url": "https://h404bi.azurewebsites.net/ncmversion.php",
-        "regex": "dmusic\\\\/(?<ts4>[\\d]+)\\\\/(?<ts13>[\\d]+)\\\\/cloudmusicsetup(?<version>[\\d.]+).exe"
+        "regex": "dmusic\\\\/(?<4>[\\d]+)\\\\/(?<13>[\\d]+)\\\\/cloudmusicsetup(?<version>[\\d.]+).exe"
     },
     "autoupdate": {
-        "url": "https://d1.music.126.net/dmusic/$ts4/$$ts13/cloudmusicsetup$version.exe#/dl.7z",
+        "url": "https://d1.music.126.net/dmusic/$match4/$match13/cloudmusicsetup$version.exe#/dl.7z",
         "hash": {
             "url": "https://h404bi.azurewebsites.net/ncmversion.php",
             "jp": "$.updateFiles[0].hash"
