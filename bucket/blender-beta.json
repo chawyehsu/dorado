@@ -1,18 +1,18 @@
 {
     "homepage": "https://www.blender.org/",
     "description": "Blender is the free and open source 3D creation suite.",
-    "version": "2.80-ee0d8426ab6d",
+    "version": "2.80-d30f72dfd8ac",
     "license": "GPL-3.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://builder.blender.org/download/blender-2.80-ee0d8426ab6d-win64.zip",
-            "hash": "02727287591c72cb2d3f5d75d239ed6040dd070541d8ce49354da82a54c7700d",
-            "extract_dir": "blender-2.80.0-git.ee0d8426ab6d-windows64"
+            "url": "https://builder.blender.org/download/blender-2.80-d30f72dfd8ac-win64.zip",
+            "hash": "d89281e22fdc8f9cc529691d500d5a7e34bdf51e367d9f8f7cdc215b6b1f8ca7",
+            "extract_dir": "blender-2.80.0-git.d30f72dfd8ac-windows64"
         },
         "32bit": {
-            "url": "https://builder.blender.org/download/blender-2.80-ee0d8426ab6d-win32.zip",
-            "hash": "46a78fc49ca511f3d8414b4f2fe9fbeb447a26da151f89100c1389c11df80b9c",
-            "extract_dir": "blender-2.80.0-git.ee0d8426ab6d-windows32"
+            "url": "https://builder.blender.org/download/blender-2.80-197661c7334d-win32.zip",
+            "hash": "9636952c13eba377db702ffcc92454d21095aa7b1cbc9446d4b90cea38d853a8",
+            "extract_dir": "blender-2.80.0-git.197661c7334d-windows32"
         }
     },
     "bin": "blender.exe",
@@ -24,6 +24,18 @@
     ],
     "checkver": {
         "url": "https://builder.blender.org/download/",
-        "re": "blender-(?<version>(?<major>[\\d]+).(?<minor>[\\d]+)-(?<commit>(?:[0-9a-z]+)?))-win64.zip"
+        "re": "(?sm)blender-(?<version>(?<major>[\\d]+).(?<minor>[\\d]+)-(?<64>[\\w]+))-win64.zip.*?-(?<32>[\\w]+)-win32.zip"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://builder.blender.org/download/blender-$majorVersion.$minorVersion-$match64-win64.zip",
+                "extract_dir": "blender-$majorVersion.$minorVersion.0-git.$match64-windows64"
+            },
+            "32bit": {
+                "url": "https://builder.blender.org/download/blender-$majorVersion.$minorVersion-$match32-win32.zip",
+                "extract_dir": "blender-$majorVersion.$minorVersion.0-git.$match32-windows32"
+            }
+        }
     }
 }
