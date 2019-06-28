@@ -12,6 +12,12 @@
             "PanDownload"
         ]
     ],
+    "persist": [
+        "PanData/config.ini",
+        "PanData/share.db",
+        "PanData/task.db",
+        "PanData/user.db"
+    ],
     "checkver": {
         "re": "<strong>v([\\d.]+)</strong>"
     },
