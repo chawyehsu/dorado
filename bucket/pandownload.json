@@ -12,6 +12,17 @@
             "PanDownload"
         ]
     ],
+    "pre_install": [
+        "function CreateFile([String] $file, [String] $content = $null) {",
+        "    if (!(Test-Path \"$persist_dir\\$file\")) {",
+        "        New-Item -Force -Path \"$persist_dir\\$file\" -ItemType file -Value $content | Out-Null",
+        "    }",
+        "}",
+        "CreateFile 'PanData/config.ini'",
+        "CreateFile 'PanData/share.db'",
+        "CreateFile 'PanData/task.db'",
+        "CreateFile 'PanData/user.db'"
+    ],
     "persist": [
         "PanData/config.ini",
         "PanData/share.db",
