@@ -13,5 +13,8 @@
             "TranslucentTB"
         ]
     ],
-    "checkver": "github"
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/TranslucentTB/TranslucentTB/releases/download/$version/TranslucentTB-setup.exe"
+    }
 }

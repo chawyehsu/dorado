@@ -18,7 +18,7 @@
     ],
     "checkver": {
         "url": "https://h404bi.azurewebsites.net/ncmversion.php",
-        "regex": "dmusic\\\\/(?<4>[\\d]+)\\\\/(?<13>[\\d]+)\\\\/cloudmusicsetup(?<version>[\\d.]+).exe"
+        "regex": "dmusic\\\\/(?<4>[\\w]+)\\\\/(?<13>[\\d]+)\\\\/cloudmusicsetup(?<version>[\\d.]+).exe"
     },
     "autoupdate": {
         "url": "https://d1.music.126.net/dmusic/$match4/$match13/cloudmusicsetup$version.exe#/dl.7z",
