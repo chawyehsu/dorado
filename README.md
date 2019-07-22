@@ -10,7 +10,7 @@
     <p align="center">
         <a href="README.md">English</a>|<a href="README_CN.md">简体中文</a>
     </p>
-    <p align="center"><img align="center" src="https://www.h404bi.com/uploads/2018/05/20180512002.gif" alt="highlight" /></p>
+    <p align="center"><img align="center" src="screenshot.gif" alt="highlight" /></p>
     <p align="center">
         Yet another <a href="https://github.com/lukesampson/scoop/wiki/Buckets"><code>bucket</code></a> for <a href="https://github.com/lukesampson/scoop">Scoop</a>.
     </p>
