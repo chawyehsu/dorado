@@ -10,7 +10,7 @@
     <p align="center">
         <a href="README.md">English</a>|<a href="README_CN.md">简体中文</a>
     </p>
-    <p align="center"><img align="center" src="https://www.h404bi.com/uploads/2018/05/20180512002.gif" alt="highlight" /></p>
+    <p align="center"><img align="center" src="screenshot.gif" alt="highlight" /></p>
     <p align="center">
         又一个 <a href="https://github.com/lukesampson/scoop">Scoop</a> 的软件仓库（<a href="https://github.com/lukesampson/scoop/wiki/Buckets">bucket</a>）
     </p>
