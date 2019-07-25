@@ -1,18 +1,18 @@
 {
     "homepage": "https://www.blender.org/",
     "description": "Blender is the free and open source 3D creation suite.",
-    "version": "2.80-687f1df5dbe2",
+    "version": "2.80-bfe580642f46",
     "license": "GPL-3.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://builder.blender.org/download/blender-2.80-687f1df5dbe2-win64.zip",
-            "hash": "16019f596ab2b533bb9e232a3a97c5929eb4c5fb2fe9e0da0a3373e29952101c",
-            "extract_dir": "blender-2.80.0-git.687f1df5dbe2-windows64"
+            "url": "https://builder.blender.org/download/blender-2.80-bfe580642f46-win64.zip",
+            "hash": "9bc4b787d8735cb919ddabdaa5ccbf976aee8103b2ba4a699d0aa37621e9b9d2",
+            "extract_dir": "blender-2.80.0-git.bfe580642f46-windows64"
         },
         "32bit": {
-            "url": "https://builder.blender.org/download/blender-2.80-7a82896fbc07-win32.zip",
-            "hash": "31b1642d6404e9b19bded69f32be7d4261c5e37359fbedc00cd89d90a74b66cf",
-            "extract_dir": "blender-2.80.0-git.7a82896fbc07-windows32"
+            "url": "https://builder.blender.org/download/blender-2.80-bfe580642f46-win32.zip",
+            "hash": "49331ae181f1890dd9b96e1ecc4a3e33ed32f0f32742326492efb5943aadf32c",
+            "extract_dir": "blender-2.80.0-git.bfe580642f46-windows32"
         }
     },
     "bin": "blender.exe",
