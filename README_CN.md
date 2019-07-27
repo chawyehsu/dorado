@@ -48,6 +48,8 @@
 
 ``` powershell
 scoop bucket add dorado https://github.com/h404bi/dorado
+# 或者使用国内镜像，速度快但是非实时同步
+scoop bucket add dorado https://git.dev.tencent.com/h404bi/dorado.git
 ```
 
 执行以下命令安装本仓库中的软件：
