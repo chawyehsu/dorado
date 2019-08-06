@@ -1,0 +1,63 @@
+{
+    "homepage": "https://developers.weixin.qq.com/miniprogram/dev/devtools/devtools.html",
+    "description": "The official devtool to develop and debug WeChat Mini Programs",
+    "version": "1.02.1907160",
+    "license": "Freeware",
+    "architecture": {
+        "64bit": {
+            "url": "https://servicewechat.com/wxa-dev-logic/download_redirect?type=x64&from=mpwiki&download_version=1021907160&version_type=1#/installer.exe",
+            "hash": "34beb020b4f6ef2464a0c33db2f72e53fbbde81c83d220377071cb47a8396f59"
+        },
+        "32bit": {
+            "url": "https://servicewechat.com/wxa-dev-logic/download_redirect?type=ia32&from=mpwiki&download_version=1021907160&version_type=1#/installer.exe",
+            "hash": "403c377ac483134b04c96dbf8570ba2afe334119a9c3224546b1e73db459513f"
+        }
+    },
+    "pre_install": "Expand-7zipArchive \"$dir\\installer.exe\" \"$dir\\app\" -Removal",
+    "installer": {
+        "script": [
+            "$devtoolRoaming = \"$env:APPDATA\\Tencent\\微信开发者工具\"",
+            "$nwPath = \"$env:APPDATA\\Tencent\\微信开发者工具\\package.nw\"",
+            "if (Test-Path $nwPath) {",
+            "    Write-Output 'Removing old version NW.JS...'",
+            "    Remove-Item -Path \"$nwPath\" -Recurse -Force",
+            "}",
+            "if (!(Test-Path $devtoolRoaming)) {",
+            "    New-Item -Path \"$devtoolRoaming\" -ItemType Directory | Out-Null",
+            "}",
+            "Move-Item \"$dir\\app\\`$APPDATA\\Tencent\\微信开发者工具\\*\" \"$devtoolRoaming\" -Force",
+            "# Cleanup useless files",
+            "@('$APPDATA', '$PLUGINSDIR', '卸载微信开发者工具.exe.nsis') | ForEach-Object {",
+            "    Remove-Item \"$dir\\app\\$_\" -Recurse -Force",
+            "}"
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "# Cleanup NW.JS",
+            "$nwPath = \"$env:APPDATA\\Tencent\\微信开发者工具\\package.nw\"",
+            "Remove-Item -Path \"$nwPath\" -Recurse -Force"
+        ]
+    },
+    "shortcuts": [
+        [
+            "app\\微信开发者工具.exe",
+            "微信开发者工具"
+        ]
+    ],
+    "checkver": {
+        "url": "https://developers.weixin.qq.com/miniprogram/dev/devtools/stable.html",
+        "regex": "稳定版 Stable Build 更新日志<.*?> ([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://servicewechat.com/wxa-dev-logic/download_redirect?type=x64&from=mpwiki&download_version=$majorVersion$minorVersion$patchVersion$buildVersion&version_type=1#/installer.exe"
+            },
+            "32bit": {
+                "url": "https://servicewechat.com/wxa-dev-logic/download_redirect?type=ia32&from=mpwiki&download_version=$majorVersion$minorVersion$patchVersion$buildVersion&version_type=1#/installer.exe"
+            }
+        }
+    },
+    "notes": "We don't persist your WeChat DevTool data, they are still storaged in '%APPDATA%\\微信开发者工具'."
+}
