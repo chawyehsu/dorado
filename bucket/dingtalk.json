@@ -7,7 +7,7 @@
     },
     "version": "4.7.0.55",
     "url": "https://dtapp-pub.dingtalk.com/dingtalk-desktop/win_installer/Release/DingTalk_v4.7.0.55.exe#/dl.7z",
-    "hash": "md5:deb89b3ea1c1ae77530be5c5d545dc94",
+    "hash": "md5:3eb5c8946d19cc50f6a3aba52b127506",
     "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\" -Recurse",
     "shortcuts": [
         [
@@ -23,7 +23,7 @@
         "url": "https://dtapp-pub.dingtalk.com/dingtalk-desktop/win_installer/Release/DingTalk_v$version.exe#/dl.7z",
         "hash": {
             "url": "https://im.dingtalk.com/manifest/release_nativeui_windows_manual_check.json",
-            "regex": "(?sm)exe\".*?md5.*?\"$md5\""
+            "jsonpath": "$.win.install.md5"
         }
     },
     "notes": "We don't persist your DingTalk data, they are still storaged in '%APPDATA%\\DingTalk'."
