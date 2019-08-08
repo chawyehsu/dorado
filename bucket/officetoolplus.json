@@ -1,0 +1,25 @@
+{
+    "homepage": "https://otp.landian.vip/",
+    "description": "A Office deploy tool based on Office Deployment Tool",
+    "version": "6.4.0",
+    "license": "Freeware",
+    "url": "https://delivery.yuntu.moe/office-tool/Office-Tool-v6_4_0_0.zip",
+    "hash": "7e86ccd92b0222c5c5257e9fa9fe975ae681022a6a312716a833a58379025dfe",
+    "extract_dir": "Office Tool",
+    "shortcuts": [
+        [
+          "Office Tool Plus.exe",
+          "Office Tool Plus"
+        ]
+    ],
+    "persist": [
+        "Office"
+    ],
+    "checkver": {
+        "url": "https://otp.landian.vip/zh-cn/",
+        "regex": "最新版本：([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://delivery.yuntu.moe/office-tool/Office-Tool-v$underscoreVersion_0.zip"
+    }
+}
