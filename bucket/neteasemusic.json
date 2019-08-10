@@ -1,13 +1,13 @@
 {
     "homepage": "https://music.163.com/",
     "description": "The official NetEase Cloud Music client.",
-    "version": "2.5.5.197764",
+    "version": "2.5.5.197810",
     "license": {
         "identifier": "EULA",
         "url": "https://music.163.com/html/web2/service.html"
     },
-    "url": "https://d1.music.126.net/dmusic/8c6c/20197113137/cloudmusicsetup2.5.5.197764.exe#/dl.7z",
-    "hash": "md5:4545d84b65aee2094f8b10ccb09a2345",
+    "url": "https://d1.music.126.net/dmusic/4ec1/201978183952/cloudmusicsetup2.5.5.197810.exe#/dl.7z",
+    "hash": "md5:b72853abb8113ed0c96c1351045270b9",
     "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\" -Force -Recurse",
     "bin": "cloudmusic.exe",
     "shortcuts": [
