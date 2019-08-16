@@ -1,0 +1,26 @@
+{
+    "homepage": "https://y.qq.com/",
+    "description": "The official QQ Music client.",
+    "version": "1712",
+    "license": "Freeware",
+    "url": "https://dldir1.qq.com/music/clntupate/QQMusic_Setup_1712.exe#/dl.7z",
+    "hash": "md5:ba82e6608a837b9737837f6945c6f690",
+    "shortcuts": [
+        [
+            "QQMusic.exe",
+            "QQ音乐"
+        ]
+    ],
+    "checkver": {
+        "url": "https://h404bi.azurewebsites.net/qqmversion.php",
+        "regex": "QQMusic_Setup_(\\d+).exe"
+    },
+    "autoupdate": {
+        "url": "https://dldir1.qq.com/music/clntupate/QQMusic_Setup_$version.exe#/dl.7z",
+        "hash": {
+            "url": "https://h404bi.azurewebsites.net/qqmversion.php",
+            "xpath": "//module_hash"
+        }
+    },
+    "notes": "We don't persist your QQMusic data, they are still storaged in '%LOCALAPPDATA%\\Tencent\\QQMusic'."
+}
