@@ -1,11 +1,10 @@
 {
-    "homepage": "https://otp.landian.vip/",
-    "description": "A Office deploy tool based on Office Deployment Tool",
-    "version": "6.5.0",
-    "license": "Freeware",
-    "url": "https://delivery.yuntu.moe/office-tool/Office-Tool-v6_5_0_0.zip",
-    "hash": "ae84a0ee954da903c6d35993d40c5de566d626813f97915ef3d89dba897722ea",
-    "extract_dir": "Office Tool",
+    "homepage": "https://github.com/YerongAI/Office-Tool",
+    "description": "Office Tool Plus is a tool for managing, downloading and installing Office.",
+    "version": "6.5.1",
+    "license": "GPL-3.0-only",
+    "url": "https://github.com/YerongAI/Office-Tool/releases/download/6.5.1/OTP.zip",
+    "hash": "0989f074ffd5c82d3a646a8b6e2e768de76f5fc5189a060c6b82fa893aa0cc48",
     "shortcuts": [
         [
             "Office Tool Plus.exe",
@@ -13,11 +12,8 @@
         ]
     ],
     "persist": "Office",
-    "checkver": {
-        "url": "https://otp.landian.vip/zh-cn/",
-        "regex": "最新版本：([\\d.]+)"
-    },
+    "checkver": "github",
     "autoupdate": {
-        "url": "https://delivery.yuntu.moe/office-tool/Office-Tool-v$underscoreVersion_0.zip"
+        "url": "https://github.com/YerongAI/Office-Tool/releases/download/$version/OTP.zip"
     }
 }
