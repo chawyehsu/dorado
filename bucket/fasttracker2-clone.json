@@ -3,26 +3,34 @@
     "description": "A clone of Fasttracker II, a music tracker created in the 1990s",
     "version": "09.08.2019",
     "license": "BSD-3-clause",
-    "checkver": {
-        "url": "https://16-bits.org/ft2_clone_changelog.txt",
-        "re": "[\\w]+ #[\\d.]+ - (?<version>[\\d.]+)"
+    "architecture": {
+        "64bit": {
+            "url": "https://16-bits.org/ft2-win64.zip",
+            "hash": "6a7c95c3255e56b4a079e892657bfe9867865d8c0261ac8d339ece1d5e10d87a"
+        }
     },
-    "autoupdate": {
-        "url": "https://16-bits.org/ft2-win32.zip"
-    },
-    "url": "https://16-bits.org/ft2-win32.zip",
-    "hash": "413ea7fc99f82872144612130186b0fe36b927f26755fa42b4fe73e890fd84fe",
-    "extract_dir": "ft2-win32",
+    "extract_dir": "ft2-win64",
     "bin": [
         [
-            "ft2-win32.exe",
+            "ft2-win64.exe",
             "ft2"
         ]
     ],
     "shortcuts": [
         [
-            "ft2-win32.exe",
+            "ft2-win64.exe",
             "Fasttracker II clone"
         ]
-    ]
+    ],
+    "checkver": {
+        "url": "https://16-bits.org/ft2_clone_changelog.txt",
+        "re": "[\\w]+ #[\\d.]+ - (?<version>[\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://16-bits.org/ft2-win64.zip"
+            }
+        }
+    }
 }
