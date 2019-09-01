@@ -2,9 +2,9 @@
     "homepage": "https://tim.qq.com/",
     "description": "An lightweight instant messaging software service developed by Tencent",
     "license": "Freeware",
-    "version": "2.3.2.21158",
-    "url": "https://dldir1.qq.com/qqfile/qq/PCTIM2.3.2/21158/TIM2.3.2.21158.exe#/dl.7z",
-    "hash": "212f45d12fa9d705d4caa99d6a674a42f3818d83d364f7e5c1c70028e3a0e77f",
+    "version": "2.3.2.21168",
+    "url": "https://dldir1.qq.com/qqfile/qq/TIM2.3.2/21168/TIM2.3.2.21168.exe#/dl.7z",
+    "hash": "d25ec1458e67919b02ba990c6bd1ed57ee7c36a71ad2d59c9854d20fb4203356",
     "installer": {
         "script": [
             "$timRoaming = \"$env:APPDATA\\Tencent\\TIM\"",
@@ -35,10 +35,10 @@
     ],
     "checkver": {
         "url": "https://tim.qq.com/download.html",
-        "regex": "https://dldir1.qq.com/qqfile/qq/PCTIM(?:[\\d.]+)/(?:[\\d]+)/TIM(?<version>[\\d.]+).exe"
+        "regex": "https://dldir1.qq.com/qqfile/qq/TIM(?:[\\d.]+)/(?:[\\d]+)/TIM(?<version>[\\d.]+).exe"
     },
     "autoupdate": {
-        "url": "https://dldir1.qq.com/qqfile/qq/PCTIM$majorVersion.$minorVersion.$patchVersion/$buildVersion/TIM$majorVersion.$minorVersion.$patchVersion.$buildVersion.exe#/dl.7z"
+        "url": "https://dldir1.qq.com/qqfile/qq/TIM$majorVersion.$minorVersion.$patchVersion/$buildVersion/TIM$majorVersion.$minorVersion.$patchVersion.$buildVersion.exe#/dl.7z"
     },
     "notes": "We don't persist your TIM data, they are still storaged in '%APPDATA%\\Tencent'."
 }
