@@ -47,7 +47,7 @@
     ],
     "checkver": {
         "url": "https://developers.weixin.qq.com/miniprogram/dev/devtools/stable.html",
-        "regex": "稳定版 Stable Build 更新日志<.*?> ([\\d.]+)"
+        "regex": "#</a> ([\\d.]+) <a href=\"https://.*?Windows"
     },
     "autoupdate": {
         "architecture": {
