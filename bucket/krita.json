@@ -1,21 +1,21 @@
 {
     "homepage": "https://krita.org/",
     "description": "Krita. Professional, FREE and open source painting program.",
-    "version": "4.2.5",
+    "version": "4.2.6",
     "license": {
         "identifier": "Freeware",
         "url": "https://docs.krita.org/en/KritaFAQ.html#license-rights-and-the-krita-foundation"
     },
     "architecture": {
         "64bit": {
-            "url": "https://download.kde.org/stable/krita/4.2.5/krita-x64-4.2.5.zip",
-            "hash": "md5:dd663779872d08b80076364a93a0a8b1",
-            "extract_dir": "krita-x64-4.2.5"
+            "url": "https://download.kde.org/stable/krita/4.2.6/krita-x64-4.2.6.zip",
+            "hash": "md5:b38c935d9eca86b97424e7729de12b34",
+            "extract_dir": "krita-x64-4.2.6"
         },
         "32bit": {
-            "url": "https://download.kde.org/stable/krita/4.2.5/krita-x86-4.2.5.zip",
-            "hash": "md5:01e0f0ddbaff577eda1eaeba8f702e63",
-            "extract_dir": "krita-x86-4.2.5"
+            "url": "https://download.kde.org/stable/krita/4.2.6/krita-x86-4.2.6.zip",
+            "hash": "md5:fc7f1727b740c8ca8d4935719a62a8a3",
+            "extract_dir": "krita-x86-4.2.6"
         }
     },
     "bin": "bin\\krita.exe",
