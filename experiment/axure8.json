@@ -1,0 +1,27 @@
+{
+    "homepage": "https://www.axure.com/",
+    "description": "Prototypes, Specifications, and Diagrams in One Tool",
+    "version": "8.1.0.3388",
+    "license": "Proprietary",
+    "url": "https://axure.cachefly.net/versions/8-0/AxureRP-Setup-3388.exe#/installer.7z",
+    "hash": "10e71acba85d4316d2b6ad3088375cd2ca41ced96f03db70644fd6996937cc14",
+    "depends": "dark",
+    "installer": {
+        "_script": [
+            "TODO"
+        ]
+    },
+    "shortcuts": [
+        [
+            "AxureRP8.exe",
+            "Axure RP 8"
+        ]
+    ],
+    "checkver": {
+        "url": "https://www.axure.com/release-history/rp8",
+        "re": "<h3>Version ([\\d.]+) \\(PC.*</h3>"
+    },
+    "autoupdate": {
+        "url": "https://axure.cachefly.net/versions/$majorVersion-$minorVersion/AxureRP-Setup-$buildVersion.exe#/installer.7z"
+    }
+}
