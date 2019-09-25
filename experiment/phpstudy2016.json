@@ -1,0 +1,42 @@
+{
+    "homepage": "https://www.xp.cn/download.html",
+    "description": "The best PHP integrated development environment for Windows users",
+    "license": "Freeware",
+    "version": "2016.11.03",
+    "url": "http://public.xp.cn/upgrades/phpStudy20161103.zip",
+    "hash": "md5:5bf5f785f027bf0c99cd02692cf7c322",
+    "installer": {
+        "script": [
+            "Expand-7zipArchive \"$dir\\phpStudy20161103.exe\" \"$dir\" | Out-Null",
+            "Remove-Item \"$dir\\phpStudy20161103.exe\" | Out-Null"
+        ]
+    },
+    "suggest": {
+        "Visual C++ Redistributable": [
+            "extras/vcredist"
+        ]
+    },
+    "shortcuts": [
+        [
+            "phpStudy.exe",
+            "phpStudy 2016"
+        ]
+    ],
+    "persist": [
+        "Apache\\conf",
+        "Apache\\logs",
+        "backup",
+        "MySQL\\data",
+        "MySQL\\my.ini",
+        "nginx\\conf",
+        "nginx\\logs",
+        "SQL-Front\\Accounts",
+        "WWW",
+        "tools\\phpStudy.ini"
+    ],
+    "notes": [
+        "此为 phpStudy 2016 最终版。集成环境会有许多配置文件，请在卸载、更新、",
+        "迁移等危险操作前，停止所有 phpStudy 的进程与服务，并且务必留意您的重要",
+        "数据（如 WWW 目录、MySQL 数据、php.ini、nginx.conf 等）。"
+    ]
+}
