@@ -1,35 +1,36 @@
 {
     "homepage": "https://16-bits.org/ft2.php",
     "description": "A clone of Fasttracker II, a music tracker created in the 1990s",
-    "version": "04.09.2019",
+    "version": "1.00",
     "license": "BSD-3-clause",
     "architecture": {
         "64bit": {
-            "url": "https://16-bits.org/ft2-win64.zip",
-            "hash": "c02984fa79b0bb64b56743f33ea2b8bf87c826feda03f8f0df6fb459e965a962"
+            "url": "https://16-bits.org/ft2-clone-v1.00-win64.zip",
+            "hash": "89040ab9ff02d5babaa11dd9b95f08b35a134173de6f92b528b36495d0130461",
+            "extract_dir": "ft2-clone-v1.00-win64",
+            "bin": [
+                [
+                    "ft2-clone-win64.exe",
+                    "ft2"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "ft2-clone-win64.exe",
+                    "Fasttracker II clone"
+                ]
+            ]
         }
     },
-    "extract_dir": "ft2-win64",
-    "bin": [
-        [
-            "ft2-win64.exe",
-            "ft2"
-        ]
-    ],
-    "shortcuts": [
-        [
-            "ft2-win64.exe",
-            "Fasttracker II clone"
-        ]
-    ],
     "checkver": {
-        "url": "https://16-bits.org/ft2_clone_changelog.txt",
-        "re": "[\\w]+ #[\\d.]+ - (?<version>[\\d.]+)"
+        "url": "https://16-bits.org/ft2-clone-changelog.txt",
+        "re": "v(?<version>[\\d.]+) - (?<date>[\\d.]+)"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://16-bits.org/ft2-win64.zip"
+                "url": "https://16-bits.org/ft2-clone-v$version-win64.zip",
+                "extract_dir": "ft2-clone-v$version-win64"
             }
         }
     }
