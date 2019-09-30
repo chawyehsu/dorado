@@ -2,7 +2,7 @@
     "homepage": "https://yarnpkg.com/",
     "description": "📦🐈Fast, reliable, and secure dependency management.",
     "license": "BSD-2-Clause",
-    "version": "1.17.3",
+    "version": "1.19.0",
     "suggest": {
         "Node.js": [
             "nodejs",
@@ -10,8 +10,8 @@
         ],
         "NVM": "dorado/nvm-windows"
     },
-    "url": "https://yarnpkg.com/downloads/1.17.3/yarn-1.17.3.msi",
-    "hash": "46e618592076ff2882a5d7e1d4f8d0ffb8b29918a6366a1fea0f0bbdf145a4fa",
+    "url": "https://yarnpkg.com/downloads/1.19.0/yarn-1.19.0.msi",
+    "hash": "9347b7454f540eeaae8b5a002296eff26ecb8476d3bcea763052df548fc47acc",
     "installer": {
         "script": "add_first_in_path \"$env:LOCALAPPDATA\\Yarn\\bin\" $global"
     },
