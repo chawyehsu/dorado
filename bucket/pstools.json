@@ -1,0 +1,46 @@
+{
+    "homepage": "https://docs.microsoft.com/en-us/sysinternals/downloads/pstools",
+    "description": "The PsTools suite includes command-line utilities for listing the processes running on local or remote computers, running processes remotely, rebooting computers, dumping event logs, and more.",
+    "version": "2.45",
+    "license": {
+        "identifier": "Microsoft SysInternals EULA",
+        "url": "https://docs.microsoft.com/en-us/sysinternals/license-terms"
+    },
+    "url": "https://download.sysinternals.com/files/PSTools.zip",
+    "hash": "b9f404d4c7b6bf3a37746c66bcd014e75859d2fcf887b1db527ec3ed2ccdeb30",
+    "architecture": {
+        "32bit": {
+            "bin": [
+                "psexec.exe",
+                "psfile.exe",
+                "psgetsid.exe",
+                "psinfo.exe",
+                "pskill.exe",
+                "pslist.exe",
+                "psloggedon.exe",
+                "psloglist.exe",
+                "pspasswd.exe",
+                "psping.exe",
+                "psservice.exe",
+                "psshutdown.exe",
+                "pssuspend.exe"
+            ]
+        },
+        "64bit": {
+            "bin": [
+                "psexec64.exe",
+                "psfile64.exe",
+                "psgetsid64.exe",
+                "psinfo64.exe",
+                "pskill64.exe",
+                "pslist64.exe",
+                "psloggedon64.exe",
+                "psloglist64.exe",
+                "pspasswd64.exe",
+                "psping64.exe",
+                "psservice64.exe",
+                "pssuspend64.exe"
+            ]
+        }
+    }
+}
