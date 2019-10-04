@@ -1,0 +1,27 @@
+{
+    "homepage": "https://mubu.com/apps",
+    "description": "Mubu - Mind mapping tool",
+    "version": "1.1.15",
+    "license": "Freeware",
+    "url": "http://lf6-ttcdn-tos.pstatp.com/obj/mubu-img/client/Mubu-1.1.15.exe#/dl.7z",
+    "hash": "abe7fd48693520d89fd4ee28925351eb08aee4c2bb603d31c3876fcdd41c8842",
+    "extract_dir": "$PLUGINSDIR",
+    "installer": {
+        "script": [
+            "Remove-Item \"$dir\\*\" -Exclude \"app-32.7z\"",
+            "Expand-7zipArchive \"$dir\\app-32.7z\" \"$dir\"",
+            "Remove-Item \"$dir\\app-32.7z\""
+        ]
+    },
+    "shortcuts": [
+        [
+            "幕布.exe",
+            "幕布"
+        ]
+    ],
+    "notes": "Your Mubu data are storaged in '%LOCALAPPDATA%\\Mubu'.",
+    "checkver": {
+        "url": "https://mubu.com/apps",
+        "regex": "client/Mubu-([\\d.]+).exe"
+    }
+}
