@@ -19,9 +19,12 @@
             "幕布"
         ]
     ],
-    "notes": "Your Mubu data are storaged in '%LOCALAPPDATA%\\Mubu'.",
     "checkver": {
         "url": "https://mubu.com/apps",
         "regex": "client/Mubu-([\\d.]+).exe"
-    }
+    },
+    "autoupdate": {
+        "url": "http://lf6-ttcdn-tos.pstatp.com/obj/mubu-img/client/Mubu-$version.exe#/dl.7z"
+    },
+    "notes": "Your Mubu data are storaged in '%LOCALAPPDATA%\\Mubu'."
 }
