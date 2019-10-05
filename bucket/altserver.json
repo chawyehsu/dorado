@@ -1,0 +1,30 @@
+{
+    "homepage": "https://altstore.io/",
+    "description": "A home for apps that push the boundaries of iOS. No jailbreak required.",
+    "license": "AGPL-3.0",
+    "version": "1.0.1",
+    "url": "https://f000.backblazeb2.com/file/altstore/altinstaller.zip",
+    "hash": "b6fa83f0e120955bc56dc63594c639fc7a84e4d466c2086a68381005bbded129",
+    "installer": {
+        "script": [
+            "if ([Environment]::OSVersion.Version.Major -ne \"10\") {",
+            "    throw \"AltServer requires Windows 10 to work.\"",
+            "}",
+            "Remove-Item \"$dir\\setup.exe\"",
+            "Expand-MsiArchive \"$dir\\AltInstaller.msi\" \"$dir\" -Removal"
+        ]
+    },
+    "shortcuts": [
+        [
+            "AltServer.exe",
+            "AltServer"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/rileytestut/AltStore"
+    },
+    "autoupdate": {
+        "url": "https://f000.backblazeb2.com/file/altstore/altinstaller.zip"
+    },
+    "notes": "AltServer requires a 'Native' iTunes installed to work, you must download and install iTunes from Apple's webstie."
+}
