@@ -1,0 +1,35 @@
+{
+    "homepage": "https://tug.org/texlive/",
+    "description": "TeX Live is a cross-platform, free software distribution for the TeX typesetting system.",
+    "license": "LPPL,GPL2",
+    "version": "2019",
+    "url": "http://mirror.ctan.org/systems/texlive/tlnet/install-tl.zip",
+    "hash": "1104204002a7b7f1f79add94d6e40602b2b11559e23980de3e0b0ad13201778d",
+    "pre_install": "Write-Host 'Installing TeX Live. This requires network connection and can take a few minutes to a long time due to your network.' -ForegroundColor DarkCyan",
+    "installer": {
+        "script": [
+            "Rename-Item \"$dir\\install-tl-*\" \"$dir\\installer\"",
+            "$env:TEXLIVE_INSTALL_PREFIX=\"$dir\"",
+            "$env:TEXLIVE_INSTALL_ENV_NOCHECK=1",
+            "Write-Output \"selected_scheme scheme-minimal\" | Out-File \"$dir\\minimal.profile\"",
+            "Write-Output 'Downloading TeX Live packages...'",
+            "& \"$dir\\installer\\install-tl-windows.bat\" -no-gui -portable -non-admin -profile=\"$dir\\minimal.profile\"",
+            "$env:TEXLIVE_INSTALL_PREFIX=\"\"",
+            "$env:TEXLIVE_INSTALL_ENV_NOCHECK=\"\"",
+            "Remove-Item \"$dir\\installer\" -Recurse -Force"
+        ]
+    },
+    "shortcuts": [
+        [
+            "tl-tray-menu.exe",
+            "Tex Live"
+        ]
+    ],
+    "checkver": {
+        "regex": "Current release: TeX Live ([\\d]+)"
+    },
+    "autoupdate": {
+        "url": "http://mirror.ctan.org/systems/texlive/tlnet/install-tl.zip"
+    },
+    "notes": "The PATH has not been adjusted, to find all Tex binaries and use Tex, you need to startup the Tex Live tray and open Tex's command prompt."
+}
