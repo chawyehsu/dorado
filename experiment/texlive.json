@@ -11,14 +11,15 @@
             "Rename-Item \"$dir\\install-tl-*\" \"$dir\\installer\"",
             "$env:TEXLIVE_INSTALL_PREFIX=\"$dir\"",
             "$env:TEXLIVE_INSTALL_ENV_NOCHECK=1",
-            "Write-Output \"selected_scheme scheme-minimal\" | Out-File \"$dir\\minimal.profile\"",
+            "Write-Output \"selected_scheme scheme-basic\" | Out-File \"$dir\\default.profile\"",
             "Write-Output 'Downloading TeX Live packages...'",
-            "& \"$dir\\installer\\install-tl-windows.bat\" -no-gui -portable -non-admin -profile=\"$dir\\minimal.profile\"",
+            "& \"$dir\\installer\\install-tl-windows.bat\" -no-gui -portable -non-admin -profile=\"$dir\\default.profile\"",
             "$env:TEXLIVE_INSTALL_PREFIX=\"\"",
             "$env:TEXLIVE_INSTALL_ENV_NOCHECK=\"\"",
             "Remove-Item \"$dir\\installer\" -Recurse -Force"
         ]
     },
+    "env_add_path": "bin\\win32",
     "shortcuts": [
         [
             "tl-tray-menu.exe",
@@ -30,6 +31,5 @@
     },
     "autoupdate": {
         "url": "http://mirror.ctan.org/systems/texlive/tlnet/install-tl.zip"
-    },
-    "notes": "The PATH has not been adjusted, to find all Tex binaries and use Tex, you need to startup the Tex Live tray and open Tex's command prompt."
+    }
 }
