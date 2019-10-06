@@ -3,7 +3,7 @@
     "description": "Create animated videos using blocks, items and the lovable characters from Minecraft.",
     "license": "Freeware",
     "version": "1.2.5",
-    "url": "https://www.mineimator.com/dl/mineimator-zip",
+    "url": "https://www.mineimator.com/version/1.2.5/Mine-imator 1.2.5.zip",
     "hash": "376a8277f22d602279e07536bbb5fb7c82a07ee74553841d6226954b442298bc",
     "extract_dir": "Mine-imator 1.2.5",
     "shortcuts": [
@@ -21,7 +21,7 @@
         "re": "Download version <b>([\\d.]+)<\\/b>"
     },
     "autoupdate": {
-        "url": "https://www.mineimator.com/dl/mineimator-zip",
+        "url": "https://www.mineimator.com/version/$version/Mine-imator $version.zip",
         "extract_dir": "Mine-imator $version"
     }
 }
