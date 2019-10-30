@@ -1,0 +1,48 @@
+{
+    "homepage": "https://www.snipaste.com/",
+    "description": "A snipping tool, which allows you to pin the screenshot back onto the screen.",
+    "version": "2.2.4-Beta",
+    "license": "Proprietary",
+    "architecture": {
+        "64bit": {
+            "url": "https://bitbucket.org/liule/snipaste/downloads/Snipaste-2.2.4-Beta-x64.zip",
+            "hash": "sha1:955369d8ae2d64917a809da58d3e5d2f6eb2d129"
+        },
+        "32bit": {
+            "url": "https://bitbucket.org/liule/snipaste/downloads/Snipaste-2.2.4-Beta-x86.zip",
+            "hash": "sha1:03db1e31c24982d84c157fa5de83d32d503a1b6b"
+        }
+    },
+    "pre_install": "if (!(Test-Path \"$persist_dir\\config.ini\")) { Set-Content \"$dir\\config.ini\" '' -Encoding ASCII }",
+    "persist": [
+        "history",
+        "config.ini"
+    ],
+    "bin": "Snipaste.exe",
+    "shortcuts": [
+        [
+            "Snipaste.exe",
+            "Snipaste"
+        ]
+    ],
+    "suggest": {
+        "vcredist": "extras/vcredist2015"
+    },
+    "checkver": {
+        "url": "https://bitbucket.org/liule/snipaste/downloads/",
+        "regex": "Snipaste-(([\\d.]+)-Beta[\\d]*?)-x64.zip"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://bitbucket.org/liule/snipaste/downloads/Snipaste-$version-x64.zip"
+            },
+            "32bit": {
+                "url": "https://bitbucket.org/liule/snipaste/downloads/Snipaste-$version-x86.zip"
+            }
+        },
+        "hash": {
+            "url": "https://dl.snipaste.com/sha-1.txt"
+        }
+    }
+}
