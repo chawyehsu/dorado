@@ -8,13 +8,10 @@
     "depends": "dark",
     "installer": {
         "script": [
-            "$extracted = \"$dir\\extracted\"",
-            "$msi = \"$dir\\msi\"",
-            "dark.exe -nologo -x \"$extracted\" \"$dir\\installer.exe\" | Out-Null",
-            "Rename-Item \"$extracted\\AttachedContainer\\Axure*.msi\" -NewName \"Axure.msi\"",
-            "Expand-MsiArchive \"$extracted\\AttachedContainer\\Axure.msi\" \"$msi\"",
-            "Move-Item \"$msi\\Axure\\Axure*\\*\" \"$dir\" -Force",
-            "Remove-Item $extracted, $msi, \"$dir\\installer.exe\" -Force -Recurse"
+            "dark.exe -nologo -x \"$dir\\extracted\" \"$dir\\installer.exe\" | Out-Null",
+            "Expand-MsiArchive \"$dir\\extracted\\AttachedContainer\\AxureRp9.msi\" \"$dir\\msi\"",
+            "Move-Item \"$dir\\msi\\Axure\\Axure*\\*\" \"$dir\" -Force",
+            "Remove-Item \"$dir\\extracted\", \"$dir\\msi\", \"$dir\\installer.exe\" -Force -Recurse"
         ]
     },
     "shortcuts": [
