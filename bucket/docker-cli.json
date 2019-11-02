@@ -1,0 +1,15 @@
+{
+    "homepage": "https://github.com/docker/cli",
+    "description": "Unofficial build of Docker CLI for Windows",
+    "version": "19.03.3",
+    "license": "Apache-2.0",
+    "url": "https://github.com/StefanScherer/docker-cli-builder/releases/download/19.03.3/docker.exe",
+    "hash": "2d6ff967c717a38dd41f5ad418396bdeb84642fe04985b30925e38f593d386da",
+    "bin": "docker.exe",
+    "checkver": {
+        "github": "https://github.com/StefanScherer/docker-cli-builder"
+    },
+    "autoupdate": {
+        "url": "https://github.com/StefanScherer/docker-cli-builder/releases/download/$version/docker.exe"
+    }
+}
