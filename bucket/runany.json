@@ -12,6 +12,19 @@
             "RunAny"
         ]
     ],
+    "pre_install": [
+        "function CreateFile([String] $file, [String] $content = $null) {",
+        "    if (!(Test-Path \"$persist_dir\\$file\")) {",
+        "        New-Item -Force -Path \"$persist_dir\\$file\" -ItemType file -Value $content | Out-Null",
+        "    }",
+        "}",
+        "CreateFile 'RunAny.ini'",
+        "CreateFile 'RunAnyConfig.ini'"
+    ],
+    "persist": [
+        "RunAny.ini",
+        "RunAnyConfig.ini"
+    ],
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/hui-Zz/RunAny/archive/v$version.zip",
