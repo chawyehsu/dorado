@@ -28,8 +28,10 @@
         "args": "/S"
     },
     "bin": [
-        "condabin\\conda.bat"
+        "condabin\\conda.bat",
+        "shell\\condabin\\conda-hook.ps1"
     ],
+    "post_install": "& conda-hook",
     "checkver": {
         "url": "https://repo.continuum.io/archive",
         "re": "Anaconda2-([\\d.]+)-Windows"
@@ -49,6 +51,9 @@
         }
     },
     "notes": [
+        "The deafult (base) env is not exposed, you'll need to run 'conda activate base' to activate it.",
+        "If you're using conda under PowerShell, before using activate cmd, you need to run '& conda-hook' every time you open a new PowerShell session.",
+        "Or you can add '& conda-hook' into your PowerShell PROFILE for autoload.",
         "Conda envs are not persisted, better to setup envs_dirs to use '~/.conda/envs' first.",
         "  https://conda.io/projects/conda/en/latest/user-guide/configuration/use-condarc.html#specify-environment-directories-envs-dirs"
     ]
