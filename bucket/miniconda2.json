@@ -18,6 +18,7 @@
             "/S",
             "/InstallationType=JustMe",
             "/RegisterPython=1",
+            "/NoRegistry=1",
             "/AddToPath=0",
             "/D=$dir"
         ]
@@ -27,16 +28,7 @@
         "args": "/S"
     },
     "bin": [
-        "python.exe",
-        "pythonw.exe",
-        [
-            "python.exe",
-            "python2"
-        ]
-    ],
-    "env_add_path": [
-        "Scripts",
-        "Library\\bin"
+        "condabin\\conda.bat"
     ],
     "checkver": {
         "url": "https://repo.continuum.io/miniconda",

@@ -18,21 +18,20 @@
             "/S",
             "/InstallationType=JustMe",
             "/RegisterPython=1",
+            "/NoRegistry=1",
             "/AddToPath=0",
             "/D=$dir"
         ]
     },
-    "bin": [
-        "python.exe",
-        "pythonw.exe",
-        [
-            "python.exe",
-            "python3"
+    "uninstaller": {
+        "file": "Uninstall-Miniconda3.exe",
+        "args": [
+            "/S"
         ]
-    ],
-    "env_add_path": [
-        "Scripts",
-        "Library\\bin"
+
+    },
+    "bin": [
+        "condabin\\conda.bat"
     ],
     "checkver": {
         "url": "https://repo.continuum.io/miniconda",
