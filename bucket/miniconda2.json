@@ -3,10 +3,6 @@
     "homepage": "https://conda.io/miniconda.html",
     "description": "Miniconda is a free minimal installer for conda.",
     "license": "BSD-3-Clause",
-    "checkver": {
-        "url": "https://repo.continuum.io/miniconda",
-        "re": "Miniconda2-([\\d.]+)-Windows"
-    },
     "architecture": {
         "64bit": {
             "url": "https://repo.continuum.io/miniconda/Miniconda2-4.7.12.1-Windows-x86_64.exe",
@@ -17,25 +13,11 @@
             "hash": "md5:5558fc87a4bd5a66d5b2969a04010712"
         }
     },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://repo.continuum.io/miniconda/Miniconda2-$version-Windows-x86_64.exe"
-            },
-            "32bit": {
-                "url": "https://repo.continuum.io/miniconda/Miniconda2-$version-Windows-x86.exe"
-            }
-        },
-        "hash": {
-            "url": "$baseurl",
-            "find": "$basename<.*\\s+<.*\\s+<.*\\s+<td>([a-fA-F0-9]{32})</td>"
-        }
-    },
     "installer": {
         "args": [
             "/S",
             "/InstallationType=JustMe",
-            "/RegisterPython=0",
+            "/RegisterPython=1",
             "/AddToPath=0",
             "/D=$dir"
         ]
@@ -52,14 +34,30 @@
             "python2"
         ]
     ],
-    "persist": "envs",
     "env_add_path": [
-        "scripts",
-        "library\\bin"
+        "Scripts",
+        "Library\\bin"
     ],
+    "checkver": {
+        "url": "https://repo.continuum.io/miniconda",
+        "re": "Miniconda2-([\\d.]+)-Windows"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://repo.continuum.io/miniconda/Miniconda2-$version-Windows-x86_64.exe"
+            },
+            "32bit": {
+                "url": "https://repo.continuum.io/miniconda/Miniconda2-$version-Windows-x86.exe"
+            }
+        },
+        "hash": {
+            "url": "$baseurl",
+            "find": "$basename<.*\\s+<.*\\s+<.*\\s+<td>([a-fA-F0-9]{32})</td>"
+        }
+    },
     "notes": [
-        "Currently conda envs activate and deactivate doesn't work on PowerShell,",
-        "for more information, see: https://github.com/conda/conda/issues/626,",
-        "or just execute: 'conda install -n root -c pscondaenvs pscondaenvs'"
+        "Conda envs are not persisted, better to setup envs_dirs to use '~/.conda/envs' first.",
+        "  https://conda.io/projects/conda/en/latest/user-guide/configuration/use-condarc.html#specify-environment-directories-envs-dirs"
     ]
 }

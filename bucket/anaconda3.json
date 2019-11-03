@@ -3,10 +3,6 @@
     "homepage": "https://www.anaconda.com/",
     "description": "The most popular Python distribution for data science",
     "license": "BSD-3-Clause",
-    "checkver": {
-        "url": "https://repo.continuum.io/archive",
-        "re": "Anaconda3-([\\d.]+)-Windows"
-    },
     "architecture": {
         "64bit": {
             "url": "https://repo.continuum.io/archive/Anaconda3-2019.10-Windows-x86_64.exe",
@@ -17,25 +13,11 @@
             "hash": "md5:0e71632df6a17f625c1103b34f66e8ba"
         }
     },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://repo.continuum.io/archive/Anaconda3-$version-Windows-x86_64.exe"
-            },
-            "32bit": {
-                "url": "https://repo.continuum.io/archive/Anaconda3-$version-Windows-x86.exe"
-            }
-        },
-        "hash": {
-            "url": "$baseurl",
-            "find": "$basename<.*\\s+<.*\\s+<.*\\s+<td>([a-fA-F0-9]{32})</td>"
-        }
-    },
     "installer": {
         "args": [
             "/S",
             "/InstallationType=JustMe",
-            "/RegisterPython=0",
+            "/RegisterPython=1",
             "/AddToPath=0",
             "/D=$dir"
         ]
@@ -52,14 +34,30 @@
             "python3"
         ]
     ],
-    "persist": "envs",
     "env_add_path": [
-        "scripts",
-        "library\\bin"
+        "Scripts",
+        "Library\\bin"
     ],
+    "checkver": {
+        "url": "https://repo.continuum.io/archive",
+        "re": "Anaconda3-([\\d.]+)-Windows"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://repo.continuum.io/archive/Anaconda3-$version-Windows-x86_64.exe"
+            },
+            "32bit": {
+                "url": "https://repo.continuum.io/archive/Anaconda3-$version-Windows-x86.exe"
+            }
+        },
+        "hash": {
+            "url": "$baseurl",
+            "find": "$basename<.*\\s+<.*\\s+<.*\\s+<td>([a-fA-F0-9]{32})</td>"
+        }
+    },
     "notes": [
-        "Currently conda envs activate and deactivate doesn't work on PowerShell,",
-        "for more information, see: https://github.com/conda/conda/issues/626,",
-        "or just execute: 'conda install -n root -c pscondaenvs pscondaenvs'"
+        "Conda envs are not persisted, better to setup envs_dirs to use '~/.conda/envs' first.",
+        "  https://conda.io/projects/conda/en/latest/user-guide/configuration/use-condarc.html#specify-environment-directories-envs-dirs"
     ]
 }
