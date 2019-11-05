@@ -10,10 +10,10 @@
     "type": "git"
   },
   "scripts": {
-    "checkver": "powershell -noprofile ./bin/checkver.ps1",
-    "lint": "powershell -noprofile  ./bin/formatjson.ps1",
-    "update": "powershell -noprofile ./bin/auto-pr.ps1 -push",
-    "sync": "powershell -noprofile ./bin/sync-mirror.ps1",
-    "test": "powershell -noprofile ./bin/test.ps1"
+    "checkver": "pwsh -noprofile ./bin/checkver.ps1",
+    "lint": "pwsh -noprofile  ./bin/formatjson.ps1",
+    "update": "pwsh -noprofile ./bin/auto-pr.ps1 -push",
+    "sync": "pwsh -noprofile ./bin/sync-mirror.ps1",
+    "test": "pwsh -noprofile ./bin/test.ps1"
   }
 }
