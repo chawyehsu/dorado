@@ -1,0 +1,27 @@
+{
+    "homepage": "https://github.com/tylearymf/SETUNA2",
+    "description": "A tiny but useful screenshot software.",
+    "version": "2.5.6",
+    "license": "MIT",
+    "url": "https://github.com/tylearymf/SETUNA2/releases/download/2.5.6/SETUNA2.5.6.7z",
+    "hash": "7c6fb38cc5fc7be032e4cbe54ae33324f578e62ca70a9d4599666907fcac0cbc",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\SetunaConfig.xml\")) {",
+        "    New-Item -Force -Path \"$persist_dir\\SetunaConfig.xml\" -ItemType File -Value '<?xml version=\"1.0\"?><SetunaOption></SetunaOption>' | Out-Null",
+        "}"
+    ],
+    "bin": "SETUNA.exe",
+    "shortcuts": [
+        [
+            "SETUNA.exe",
+            "SETUNA"
+        ]
+    ],
+    "persist": [
+        "SetunaConfig.xml"
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/tylearymf/SETUNA2/releases/download/$version/SETUNA$version.7z"
+    }
+}
