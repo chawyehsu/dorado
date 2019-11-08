@@ -34,7 +34,7 @@
         "script": [
             "add_first_in_path \"$env:USERPROFILE\\.cargo\\bin\" $global",
             "# Install Rustup",
-            "& \"$dir\\rustup-init.exe\" -y --no-modify-path"
+            "& \"$dir\\rustup-init.exe\" -y --no-modify-path --default-toolchain stable-gnu"
         ]
     },
     "uninstaller": {
