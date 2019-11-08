@@ -24,12 +24,14 @@ Feature Apps
 
 | Manifest | Description |
 |----------|-------------|
-| hmcl.json | The most famous Minecraft launcher made in China |
-| nuwen-mingw-gcc.json | Minimalist GCC package from nuwen's [MinGW Distro](https://nuwen.net/mingw.html) |
-| nvm-windows.json | A fork of [nvm-windows](https://github.com/coreybutler/nvm-windows), removed elevated permission, for low permission scoop user |
-| tcping.json | Eli Fulkerson's TCP ping tool, ping over a tcp connection |
-| trash.json | Move files and folders to recycle bin instead of directly `rm-rf` it, like `brew install trash` but for Windows |
-| yarn.json | The `non-portable` version of the Yarn application. Keep global node_modules in its original location: `$env:LOCALAPPDATA\\Yarn\\bin` |
+| hmcl | The most famous Minecraft launcher made in China |
+| miniconda3 | A `lazy & clean` version of Miniconda3, which will not add the default root env into your PATH unless you activate it |
+| nuwen-mingw-gcc | Minimalist GCC package from nuwen's [MinGW Distro](https://nuwen.net/mingw.html) |
+| nvm-windows | A fork of [nvm-windows](https://github.com/coreybutler/nvm-windows), removed elevated permission, for non-admin scoop user |
+| tcping | Eli Fulkerson's TCP ping tool, ping over a tcp connection |
+| trash | Move files and folders to recycle bin instead of directly `rm-rf` it, like `brew install trash` but for Windows |
+| rustup-np | The `non-portable` version of Rustup. Keeping .rustup and .cargo in its original location: `$env:USERPROFILE` |
+| yarn-np | The `non-portable` version of the Yarn application. Keeping global node_modules in its original location: `$env:LOCALAPPDATA\\Yarn\\bin` |
 
 Question
 --------
