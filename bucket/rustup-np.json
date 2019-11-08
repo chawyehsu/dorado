@@ -1,0 +1,44 @@
+{
+    "homepage": "https://github.com/rust-lang-nursery/rustup.rs",
+    "description": "The Rust toolchain installer",
+    "version": "1.20.2",
+    "license": "MIT|Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://static.rust-lang.org/rustup/archive/1.20.2/x86_64-pc-windows-gnu/rustup-init.exe",
+            "hash": "85beabd0694999b36c7c6da527a5a3d92ab50b5834b1b9a3993a8243ebb71de3"
+        },
+        "32bit": {
+            "url": "https://static.rust-lang.org/rustup/archive/1.20.2/i686-pc-windows-gnu/rustup-init.exe",
+            "hash": "2632c2bc4a43f788eead0515024b8ce9b957e1816196511ef18e2dfa41db20fe"
+        }
+    },
+    "checkver": {
+        "url": "https://raw.githubusercontent.com/rust-lang-nursery/rustup.rs/master/Cargo.toml",
+        "regex": "version = \"([\\d.]+)\""
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://static.rust-lang.org/rustup/archive/$version/x86_64-pc-windows-gnu/rustup-init.exe"
+            },
+            "32bit": {
+                "url": "https://static.rust-lang.org/rustup/archive/$version/i686-pc-windows-gnu/rustup-init.exe"
+            }
+        },
+        "hash": {
+            "url": "$url.sha256"
+        }
+    },
+    "installer": {
+        "script": [
+            "add_first_in_path \"$env:USERPROFILE\\.cargo\\bin\" $global",
+            "# Install Rustup",
+            "& \"$dir\\rustup-init.exe\" -y --no-modify-path"
+        ]
+    },
+    "uninstaller": {
+        "script": "remove_from_path \"$env:USERPROFILE\\.cargo\\bin\" $global"
+    },
+    "notes": "To use the MSVC ABI without Visual Studio 2015 (or higher) installed, you will need the Visual Studio 2019 Build Tools: https://www.visualstudio.com/downloads/"
+}
