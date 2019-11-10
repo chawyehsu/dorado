@@ -1,0 +1,41 @@
+{
+    "homepage": "https://github.com/PowerShell/PowerShell/",
+    "description": "PowerShell (Preview), the cross-platform task automation and configuration management framework/tool.",
+    "version": "7.0.0-preview.5",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.0.0-preview.5/PowerShell-7.0.0-preview.5-win-x64.zip",
+            "hash": "f344c8397fe3016cf764756e8abe4ace89898e6228f7142c176896a148b1381b"
+        },
+        "32bit": {
+            "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.0.0-preview.5/PowerShell-7.0.0-preview.5-win-x86.zip",
+            "hash": "6cdac42e223a9f183e7c2d0158afa75320937b7b1abb55fc58dcba7fea9662ee"
+        }
+    },
+    "bin": "pwsh.exe",
+    "shortcuts": [
+        [
+            "pwsh.exe",
+            "PowerShell Preview"
+        ]
+    ],
+    "checkver": {
+        "url": "https://www.github.com/PowerShell/PowerShell/releases",
+        "regex": "v([\\d.]+-preview[\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/PowerShell/PowerShell/releases/download/v$version/PowerShell-$version-win-x64.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/PowerShell/PowerShell/releases/download/v$version/PowerShell-$version-win-x86.zip"
+            }
+        },
+        "hash": {
+            "url": "https://github.com/PowerShell/PowerShell/releases/tag/v$version/",
+            "regex": "$basename\\s*<ul>\\s*<li>($sha256)"
+        }
+    }
+}
