@@ -1,0 +1,29 @@
+{
+    "homepage": "https://tim.qq.com/",
+    "description": "Free messaging and calling app.",
+    "version": "2.3.2-21173",
+    "license": {
+        "identifier": "EULA",
+        "url": "http://play.mobile.qq.com/yy/eim/help/serverinfo.html"
+    },
+    "url": "https://dldir1.qq.com/qqfile/qq/TIM2.3.2/21173/TIM2.3.2.21173.exe#/dl.7z",
+    "shortcuts": [
+        [
+            "Files\\Bin\\TIM.exe",
+            "Tim"
+        ]
+    ],
+    "checkver": {
+        "url": "https://tim.qq.com/download.html",
+        "re": "qqfile/qq/(?<path>TIM(?<major>[\\d.]+)/(?<build>[\\d]+)/TIM[\\d.]+.exe)",
+        "replace": "${major}-${build}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://dldir1.qq.com/qqfile/qq/$matchPath#/dl.7z"
+            }
+        }
+    },
+    "notes": "We don't persist your tim data, they are still storaged in '%APPDATA%\\Tencent\\Tim'."
+}
