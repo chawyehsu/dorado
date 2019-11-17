@@ -7,7 +7,7 @@
     "hash": "43ebea717fc6364be1cbfe4f1dfcdb88738b9f720bfbbd08cd075c931d7b4a28",
     "installer": {
         "script": [
-            "Rename-Item \"$dir\\redis-desktop-manager-*.exe\" \"$dir\\installer.exe\"",
+            "Get-ChildItem \"$dir\\redis-desktop-manager-*.exe\" | Rename-Item -NewName \"$dir\\installer.exe\"",
             "Expand-7zipArchive \"$dir\\installer.exe\" \"$dir\" | Out-Null",
             "Remove-Item \"$dir\\`$PLUGINSDIR\" -Recurse",
             "Remove-Item \"$dir\\installer.exe\" | Out-Null"
