@@ -4,11 +4,11 @@
     "license": "LPPL,GPL2",
     "version": "2019",
     "url": "http://mirror.ctan.org/systems/texlive/tlnet/install-tl.zip",
-    "hash": "1104204002a7b7f1f79add94d6e40602b2b11559e23980de3e0b0ad13201778d",
+    "hash": "sha512:966d7d2cd54dbc7fa1ed132445a4448b6234ae5b9870dd881283179a890b57ced17a6dbe1c3d678e45d767c9f11108152e706df6c85a78cf3863932c0a975cc4",
     "pre_install": "Write-Host 'Installing TeX Live. This requires network connection and can take a few minutes to a long time due to your network.' -ForegroundColor DarkCyan",
     "installer": {
         "script": [
-            "Rename-Item \"$dir\\install-tl-*\" \"$dir\\installer\"",
+            "Get-ChildItem \"$dir\\install-tl-*\" | Rename-Item -NewName \"$dir\\installer\"",
             "$env:TEXLIVE_INSTALL_PREFIX=\"$dir\"",
             "$env:TEXLIVE_INSTALL_ENV_NOCHECK=1",
             "Write-Output \"selected_scheme scheme-basic\" | Out-File \"$dir\\default.profile\"",
@@ -30,6 +30,9 @@
         "regex": "Current release: TeX Live ([\\d]+)"
     },
     "autoupdate": {
-        "url": "http://mirror.ctan.org/systems/texlive/tlnet/install-tl.zip"
+        "url": "http://mirror.ctan.org/systems/texlive/tlnet/install-tl.zip",
+        "hash": {
+            "url": "$url.sha512"
+        }
     }
 }
