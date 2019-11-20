@@ -1,0 +1,77 @@
+{
+    "homepage": "https://www.adiirc.com/",
+    "description": "AdiIRC is a free Internet Relay Chat (IRC) client.",
+    "version": "3.6",
+    "license": "Freeware",
+    "architecture": {
+        "64bit": {
+            "url": "https://www.adiirc.com/AdiIRC64_3.6.zip",
+            "hash": "f5f82cccc339db3c245d8dc42a69507afddfb612c49d8da93642e8f380d051e0"
+        },
+        "32bit": {
+            "url": "https://www.adiirc.com/AdiIRC_3.6.zip",
+            "hash": "35d926a57c0f2972036017f56816d8a0ba5b3972095c416aac554d44946cd8a2"
+        }
+    },
+    "shortcuts": [
+        [
+            "AdiIRC.exe",
+            "AdiIRC"
+        ]
+    ],
+    "pre_install": [
+        "#Create placeholder files",
+        "function CreateFile([String]$file, [String]$content = $null) {",
+        "    if(!(Test-Path \"$persist_dir\\$file\")) {",
+        "        Write-Host \"Create placeholder for AdiIRC: $file\"",
+        "        New-Item -Force -Path \"$persist_dir\\$file\" -ItemType file -Value $content | Out-Null",
+        "    }",
+        "}",
+        "CreateFile 'commands.ini'",
+        "CreateFile 'config.ini'",
+        "CreateFile 'networks.ini'",
+        "#Download translation file",
+        "$LocaleFileNames = 'da-DK', 'de-DE', 'es-ES', 'fr-FR', 'it-IT', 'ko', 'pl-PL', 'pt-BR', 'pt-PT', 'ru-RU', 'zh-CN'",
+        "$LocaleNames = 'da-DK', 'de-DE', 'es-ES', 'fr-FR', 'it-IT', 'ko-*', 'pl-PL', 'pt-BR', 'pt-PT', 'ru-RU', 'zh-CN'",
+        "$LocaleName = (Get-WinSystemLocale).Name",
+        "for ($i = 0; $i -lt $LocaleNames.Length; $i++) {",
+        "    if ($LocaleName -like $LocaleNames[$i]) {",
+        "        break",
+        "    }",
+        "}",
+        "mkdir $original_dir\\$($LocaleFileNames[$i]) | Out-Null",
+        "Invoke-WebRequest -Uri \"https://github.com/AdiIRC/Translations/raw/master/compiled/$($LocaleFileNames[$i])/AdiIRC.resources.dll\" -OutFile $original_dir\\$($LocaleFileNames[$i])\\AdiIRC.resources.dll"
+    ],
+    "uninstaller": {
+        "script": [
+            "function BackupSettings([String]$fileName) {",
+            "    if (!(get-item \"$dir\\$fileName\").LinkType) {",
+            "        Copy-Item \"$dir\\$fileName\" $persist_dir",
+            "    }",
+            "}",
+            "BackupSettings 'commands.ini'",
+            "BackupSettings 'config.ini'",
+            "BackupSettings 'networks.ini'"
+        ]
+    },
+    "persist": [
+        "commands.ini",
+        "config.ini",
+        "networks.ini",
+        "Logs"
+    ],
+    "checkver": {
+        "url": "https://www.adiirc.com/download.php",
+        "regex": "Latest stable:.*?>AdiIRC ([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://www.adiirc.com/AdiIRC64_$version.zip"
+            },
+            "32bit": {
+                "url": "https://www.adiirc.com/AdiIRC_$version.zip"
+            }
+        }
+    }
+}
