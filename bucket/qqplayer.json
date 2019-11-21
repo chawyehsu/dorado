@@ -1,10 +1,10 @@
 {
     "homepage": "https://player.qq.com/",
     "description": "QQPlayer software is a free application that helps you play videos, movies and music.",
-    "version": "4.4.4.1001",
+    "version": "4.5.2.1039",
     "license": "Freeware",
-    "url": "https://dldir1.qq.com/qqyy/pc/QQPlayerSetup4.4.4.1001.exe#/dl.7z",
-    "hash": "df8e92a5e290147b4b30d5ab09fa42d49177f0283f2d5bfc557aa4302a61dba2",
+    "url": "https://dldir1.qq.com/qqyy/pc/QQPlayerSetup4.5.2.1039.exe#/dl.7z",
+    "hash": "af7ac24d5e750d6ff15ec5f038da0025e3900fcd43c48008b37827461bee730f",
     "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\" -Recurse -Force",
     "shortcuts": [
         [
