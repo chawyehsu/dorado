@@ -15,7 +15,7 @@
         又一个 <a href="https://github.com/lukesampson/scoop">Scoop</a> 的软件仓库（<a href="https://github.com/lukesampson/scoop/wiki/Buckets">bucket</a>）
     </p>
     <p align="center">
-        宗旨：本仓库内的所有软件在安装时都<strong>无需</strong>管理员权限，同时<strong>尽可能地</strong>保持软件原始配置（即无主观安装设置）
+        宗旨：本仓库内的所有软件在安装时都应<strong>无需</strong>管理员权限
     </p>
 </div>
 
