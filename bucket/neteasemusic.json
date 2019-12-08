@@ -1,13 +1,13 @@
 {
     "homepage": "https://music.163.com/",
     "description": "The official NetEase Cloud Music client.",
-    "version": "2.6.0.198181",
+    "version": "2.7.0.198230",
     "license": {
         "identifier": "EULA",
         "url": "https://music.163.com/html/web2/service.html"
     },
-    "url": "https://d1.music.126.net/dmusic/72dc/2019101414334/cloudmusicsetup2.6.0.198181.exe#/dl.7z",
-    "hash": "md5:ffa44784e27f3af8e6df137ad99dd914",
+    "url": "https://d1.music.126.net/dmusic/obj/w5zCg8OCw6fCn2vDicOl/586346057/3e98/201911319853/cloudmusicsetup2.7.0.198230.exe#/dl.7z",
+    "hash": "md5:258c01e5d53104aa40ea5c1d00d04e0e",
     "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\" -Force -Recurse",
     "bin": "cloudmusic.exe",
     "shortcuts": [
@@ -18,10 +18,10 @@
     ],
     "checkver": {
         "url": "https://h404bi.azurewebsites.net/ncmversion.php",
-        "regex": "dmusic\\\\/(?<4>[\\w]+)\\\\/(?<13>[\\d]+)\\\\/cloudmusicsetup(?<version>[\\d.]+).exe"
+        "regex": "dmusic/(?<randompath>[\\w/]+)/cloudmusicsetup(?<version>[\\d.]+).exe"
     },
     "autoupdate": {
-        "url": "https://d1.music.126.net/dmusic/$match4/$match13/cloudmusicsetup$version.exe#/dl.7z",
+        "url": "https://d1.music.126.net/dmusic/$matchRandompath/cloudmusicsetup$version.exe#/dl.7z",
         "hash": {
             "url": "https://h404bi.azurewebsites.net/ncmversion.php",
             "jp": "$.updateFiles[0].hash"
