@@ -15,5 +15,12 @@
             "Figma.exe",
             "Figma"
         ]
-    ]
+    ],
+    "checkver": {
+        "url": "https://desktop.figma.com/win/RELEASE.json",
+        "jsonpath": "$.version"
+    },
+    "autoupdate": {
+        "url": "https://desktop.figma.com/win/FigmaSetup.exe#/dl.7z"
+    }
 }
