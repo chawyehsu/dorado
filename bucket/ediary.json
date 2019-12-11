@@ -1,0 +1,28 @@
+{
+    "homepage": "http://www.haoxg.net/ediary/index.html",
+    "description": "eDiary的作用不仅仅在于写日记，也可以用它来记流水帐、写工作日志， 记录学习心得，或者用它来管理你的日常文档。",
+    "version": "3.3.7",
+    "license": "Unknown",
+    "url": "http://www.haoxg.net/ediary/download/ediary-3.3.7-copy.zip",
+    "hash": "223aed6b0024f08e6f00a7cb391efaced7c16c90d8942de95a48f71267f0ac6a",
+    "extract_dir": "eDiary-3.3.7",
+    "pre_install": "if (!(Test-Path $persist_dir\\Config.ini)) { New-Item $dir\\Config.ini | Out-Null }",
+    "shortcuts": [
+        [
+            "eDiary.exe",
+            "eDiary"
+        ]
+    ],
+    "persist": [
+        "Config.ini",
+        "Users"
+    ],
+    "checkver": {
+        "url": "http://www.haoxg.net/ediary/history.html",
+        "regex": " (\\d.[\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "http://www.haoxg.net/ediary/download/ediary-$version-copy.zip",
+        "extract_dir": "eDiary-$version"
+    }
+}
