@@ -19,7 +19,7 @@
     ],
     "checkver": {
         "url": "http://www.haoxg.net/ediary/history.html",
-        "regex": " (\\d.[\\d.]+)"
+        "regex": "([\\d.]+)</strong"
     },
     "autoupdate": {
         "url": "http://www.haoxg.net/ediary/download/ediary-$version-copy.zip",
