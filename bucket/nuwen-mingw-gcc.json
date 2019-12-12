@@ -2,12 +2,12 @@
     "homepage": "https://nuwen.net/mingw.html",
     "description": "Minimalist GCC package from nuwen's MinGW distro",
     "license": "GPL-2.0-only",
-    "version": "9.2.0",
-    "url": "https://nuwen.net/files/mingw/components-17.0.7z",
-    "hash": "7984348061eabdc42d2ea0f3d7bbcc19392c428d2ba6bd7e9e029168dbb8a83b",
-    "extract_dir": "components-17.0",
+    "version": "9.2.0-17.1",
+    "url": "https://nuwen.net/files/mingw/components-17.1.7z",
+    "hash": "02939286a984937f78b7871f43ec605ab577bd5e9928972bb2b1741f3e372929",
+    "extract_dir": "components-17.1",
     "pre_install": [
-        "Expand-7ZipArchive \"$dir\\binutils-2.33.1.7z\" \"$dir\"",
+        "Expand-7ZipArchive \"$dir\\binutils-*.7z\" \"$dir\"",
         "Expand-7ZipArchive \"$dir\\mingw-w64+gcc.7z\" \"$dir\"",
         "Get-ChildItem \"$dir\\*.7z\" | Remove-Item -Recurse -Force"
     ],
@@ -17,6 +17,11 @@
         "CPLUS_INCLUDE_PATH": "$dir\\include"
     },
     "checkver": {
-        "re": "currently contains <b>GCC ([\\d.]+)</b>"
+        "re": "(?sm)currently contains <b>GCC (?<version>[\\d.]+)</b>.*?components-(?<components>[\\d.]+).7z",
+        "replace": "${version}-${components}"
+    },
+    "autoupdate": {
+        "url": "https://nuwen.net/files/mingw/components-$matchComponents.7z",
+        "extract_dir": "components-$matchComponents"
     }
 }
