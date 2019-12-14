@@ -1,15 +1,22 @@
 {
     "homepage": "http://www.hellofont.cn/",
     "description": "HelloFont - Font tool for designers",
-    "version": "2.2.0.1",
+    "version": "2.4.0.3",
     "license": "Freeware",
-    "url": "https://hellofont.oss-cn-beijing.aliyuncs.com/Client/0/HelloFont.win.2.2.0.1.zip",
-    "hash": "8505d2e631900df876dd87089ea23b5d30107a37b5b8f074c2efa63e7ec6713f",
+    "url": "https://hellofont.oss-cn-beijing.aliyuncs.com/Client/0/HelloFont.win.2.4.0.3.zip",
+    "hash": "22eafba94fb45263ace8d770cf0e20e3fd9c9828d43765108cf7cdfac2c0e63f",
     "shortcuts": [
         [
             "HelloFont.exe",
-            "HelloFont"
+            "字由"
         ]
     ],
+    "checkver": {
+        "url": "https://h404bi.azurewebsites.net/hellofont.php",
+        "jsonpath": "$.Version"
+    },
+    "autoupdate": {
+        "url": "https://hellofont.oss-cn-beijing.aliyuncs.com/Client/0/HelloFont.win.$version.zip"
+    },
     "notes": "Your HelloFont data are storaged in '%LOCALAPPDATA%\\HelloFont'."
 }
