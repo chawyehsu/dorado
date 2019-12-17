@@ -6,18 +6,15 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/LIKO-12/LIKO-12/releases/download/1.1.0/LIKO-12_V1.1.0_Windows_x86_64.zip",
-            "hash": "37b170cab4ed6c0ecec434313f559947a84531b6a4202ac05a1454da2dc4fcf1"
+            "hash": "37b170cab4ed6c0ecec434313f559947a84531b6a4202ac05a1454da2dc4fcf1",
+            "extract_dir": "LIKO-12_V1.1.0_Windows_x86_64"
         },
         "32bit": {
             "url": "https://github.com/LIKO-12/LIKO-12/releases/download/1.1.0/LIKO-12_V1.1.0_Windows_i686.zip",
-            "hash": "55dacb1cfeaede187cf2554bf2cabe93f619886f56545931471fb8565908c419"
+            "hash": "55dacb1cfeaede187cf2554bf2cabe93f619886f56545931471fb8565908c419",
+            "extract_dir": "LIKO-12_V1.1.0_Windows_xi686"
         }
     },
-    "extract_dir": "Windows_x86",
-    "bin": [
-        "LIKO-12.exe",
-        "LIKO-12_Console.exe"
-    ],
     "shortcuts": [
         [
             "LIKO-12.exe",
@@ -30,10 +27,12 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/LIKO-12/LIKO-12/releases/download/$version/LIKO-12_V$version_Windows_x86_64.zip"
+                "url": "https://github.com/LIKO-12/LIKO-12/releases/download/$version/LIKO-12_V$version_Windows_x86_64.zip",
+                "extract_dir": "LIKO-12_V$version_Windows_x86_64"
             },
             "32bit": {
-                "url": "https://github.com/LIKO-12/LIKO-12/releases/download/$version/LIKO-12_V$version_Windows_i686.zip"
+                "url": "https://github.com/LIKO-12/LIKO-12/releases/download/$version/LIKO-12_V$version_Windows_i686.zip",
+                "extract_dir": "LIKO-12_V$version_Windows_i686"
             }
         }
     },
