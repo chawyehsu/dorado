@@ -1,13 +1,13 @@
 {
     "homepage": "https://github.com/Molunerfinn/PicGo",
     "description": "A simple & beautiful tool for pictures uploading built by electron-vue.",
-    "version": "2.1.2",
+    "version": "2.2.0",
     "license": {
         "identifier": "996ICU",
         "url": "https://github.com/Molunerfinn/PicGo/blob/dev/LICENSE"
     },
-    "url": "https://github.com/Molunerfinn/PicGo/releases/download/v2.1.2/picgo-setup-2.1.2.exe#/dl.7z",
-    "hash": "sha512:0d0baacec8671b829a49790e097cec1cd548620cb19c890d13f7814bae4842ec55e464d772e2acf727c1197141df560ed7f119a9c9358580be67062bd0023117",
+    "url": "https://github.com/Molunerfinn/PicGo/releases/download/v2.2.0/picgo-setup-2.2.0.exe#/dl.7z",
+    "hash": "sha512:8eaa3616b770e3b08d098b13ddb76076da034263e1366e49f2d1069b1697cd3491c5470a9153de45e9d7dd7bf7e24aa12c4092f12c13bc694ff1c90e280514d8",
     "installer": {
         "script": [
             "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
