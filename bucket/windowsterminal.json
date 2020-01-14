@@ -1,13 +1,13 @@
 {
     "homepage": "https://github.com/microsoft/terminal",
     "description": "The new Windows Terminal, and the original Windows console host -- all in the same place!",
-    "version": "0.7.3451.0",
+    "version": "0.8.10091.0",
     "license": {
         "identifier": "MIT",
         "url": "https://github.com/microsoft/terminal/blob/master/LICENSE"
     },
-    "url": "https://github.com/microsoft/terminal/releases/download/v0.7.3451.0/Microsoft.WindowsTerminal_0.7.3451.0_8wekyb3d8bbwe.msixbundle#/windowsterminal.msixbundle",
-    "hash": "2bfbc43906448179afe250954a38714662693456b10a57a51d3302197422a2b6",
+    "url": "https://github.com/microsoft/terminal/releases/download/v0.8.10091.0/Microsoft.WindowsTerminal_0.8.10091.0_8wekyb3d8bbwe.msixbundle#/windowsterminal.msixbundle",
+    "hash": "5060dc0e2050360f1d88159888a7eb4536f0fe336614620a1e9de40e0ccf9f57",
     "installer": {
         "script": [
             "if ([Environment]::OSVersion.Version.Major -ne \"10\") {",
