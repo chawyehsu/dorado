@@ -25,7 +25,7 @@
         ]
     ],
     "checkver": {
-        "url": "http://scoop-services.azurewebsites.net/checkver?app=microsoftedge",
+        "url": "https://scoop-services.azurewebsites.net/checkver?app=microsoftedge",
         "jsonpath": "$.stable.x64.version"
     },
     "autoupdate": {
