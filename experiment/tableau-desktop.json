@@ -1,0 +1,39 @@
+{
+    "homepage": "https://www.tableau.com/",
+    "description": "Interactive data visualization software",
+    "version": "2019.4.3",
+    "license": "Proprietary",
+    "architecture": {
+        "64bit": {
+            "url": "https://downloads.tableau.com/esdalt/2019.4.3/TableauDesktop-64bit-2019-4-3.exe",
+            "hash": "e20392f4349787b4fdd9b01f24215701ed119a3db1cc927bac9ca39d7142e114"
+        }
+    },
+    "depends": "dark",
+    "installer": {
+        "script": [
+            "Expand-DarkArchive -Path \"$dir\\$fname\" -DestinationPath \"$dir\\extracted\" -Removal",
+            "Rename-Item @(Get-ChildItem \"$dir\\extracted\\AttachedContainer\\tableau-setup*.msi\")[0] -NewName \"$dir\\extracted\\AttachedContainer\\tableau-setup.msi\"",
+            "Expand-MsiArchive \"$dir\\extracted\\AttachedContainer\\tableau-setup.msi\" \"$dir\"",
+            "Move-Item \"$dir\\Tableau\\Tableau*\\*\" \"$dir\" -Force",
+            "# Remove-Item \"$dir\\extracted\", \"$dir\\Tableau\" -Force -Recurse"
+        ]
+    },
+    "shortcuts": [
+        [
+            "bin\\tableau.exe",
+            "Tableau"
+        ]
+    ],
+    "checkver": {
+        "url": "https://www.tableau.com/support/releases",
+        "regex": "releases/desktop/([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://downloads.tableau.com/esdalt/$version/TableauDesktop-64bit-$majorVersion-$minorVersion-$patchVersion.exe"
+            }
+        }
+    }
+}
