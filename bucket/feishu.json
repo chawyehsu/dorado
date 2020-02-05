@@ -6,7 +6,7 @@
         "url": "https://www.feishu.cn/en/terms"
     },
     "version": "3.17.1",
-    "url": "https://sf3-ttcdn-tos.pstatp.com/obj/ee-appcenter/Feishu-3.16.6.exe#/dl.7z",
+    "url": "https://sf3-ttcdn-tos.pstatp.com/obj/ee-appcenter/Feishu-3.17.1.exe#/dl.7z",
     "hash": "md5:a1f18b7186414b916be17e254008bfcc",
     "shortcuts": [
         [
@@ -19,7 +19,7 @@
         "regex": "Windows@V([\\d.]+)"
     },
     "autoupdate": {
-        "url": "https://sf3-ttcdn-tos.pstatp.com/obj/ee-appcenter/Feishu-3.16.6.exe#/dl.7z",
+        "url": "https://sf3-ttcdn-tos.pstatp.com/obj/ee-appcenter/Feishu-$version.exe#/dl.7z",
         "hash": {
             "url": "https://www.feishu.cn/api/downloads",
             "jsonpath": "$.versions.Windows.hash"
