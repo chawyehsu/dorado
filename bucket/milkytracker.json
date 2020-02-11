@@ -1,0 +1,39 @@
+{
+    "homepage": "http://milkytracker.github.io/",
+    "description": "An FT2 compatible music tracker",
+    "license": "GPL-3.0-only",
+    "version": "1.02.00",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/milkytracker/MilkyTracker/releases/download/v1.02.00/milkytracker-1.02.00-win64.zip",
+            "hash": "2b157fabcb5ae7f0a3442df8d4973b259c728f721d9dfeb2d981f5560551677f"
+        },
+        "32bit": {
+            "url": "https://github.com/milkytracker/MilkyTracker/releases/download/v1.02.00/milkytracker-1.02.00-win32.zip",
+            "hash": "f0d20e2c8b2c9c93ed5bddaf6a085e7d85618f16c043e1e42aa6dce8cfc8bbed"
+        }
+    },
+    "extract_dir": "milkytracker-1.02.00",
+    "shortcuts": [
+        [
+            "MilkyTracker.exe",
+            "MilkyTracker"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/milkytracker/MilkyTracker"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/milkytracker/MilkyTracker/releases/download/v$version/milkytracker-$version-win64.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/milkytracker/MilkyTracker/releases/download/v$version/milkytracker-$version-win32.zip"
+            }
+        },
+        "extract_dir": "milkytracker-$version"
+    }
+    ,
+    "notes": "We don't persist your MilkyTracker config data, they are storaged in '%APPDATA%\\MilkyTracker'."
+}
