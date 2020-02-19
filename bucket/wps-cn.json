@@ -1,13 +1,13 @@
 {
     "homepage": "https://pc.wps.cn",
     "description": "Complete office suite.",
-    "version": "11.1.0.9501",
+    "version": "11.1.0.9513",
     "license": {
         "identifier": "Freeware",
         "url": "https://www.wps.com/eula"
     },
-    "url": "https://pacakge.cache.wpscdn.cn/wps/download/W.P.S.9501.12012.2019.exe#/dl.7z",
-    "hash": "3b298d7b39869b9761e988d76b585a447e5affba538bbb4ed1b2cd13048b5a1c",
+    "url": "https://pacakge.cache.wpscdn.cn/wps/download/W.P.S.9513.12012.2019.exe#/dl.7z",
+    "hash": "385e218d5f1020b425f31e575471aa12e4007c53db510a25fb422dbef052c847",
     "extract_dir": "$_11_",
     "pre_install": [
         "Expand-7zipArchive \"$dir\\`$EXEFILE\" -Switches '-t#'",
