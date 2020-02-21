@@ -12,7 +12,7 @@
         ]
     ],
     "checkver": {
-        "url": "https://h404bi.azurewebsites.net/hellofont.php",
+        "url": "https://scoop-services.azurewebsites.net/checkver?app=hellofont",
         "jsonpath": "$.Version"
     },
     "autoupdate": {
