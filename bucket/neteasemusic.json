@@ -17,13 +17,13 @@
         ]
     ],
     "checkver": {
-        "url": "https://h404bi.azurewebsites.net/ncmversion.php",
+        "url": "https://scoop-services.azurewebsites.net/checkver?app=neteasemusic",
         "regex": "dmusic/(?<randompath>[\\w/]+)/cloudmusicsetup(?<version>[\\d.]+).exe"
     },
     "autoupdate": {
         "url": "https://d1.music.126.net/dmusic/$matchRandompath/cloudmusicsetup$version.exe#/dl.7z",
         "hash": {
-            "url": "https://h404bi.azurewebsites.net/ncmversion.php",
+            "url": "https://scoop-services.azurewebsites.net/checkver?app=neteasemusic",
             "jp": "$.updateFiles[0].hash"
         }
     },
