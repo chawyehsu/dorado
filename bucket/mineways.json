@@ -6,13 +6,12 @@
         "identifier": "Minutor License",
         "url": "https://github.com/erich666/Mineways/blob/master/license.txt"
     },
-    "url": "http://realtimerendering.com/erich/minecraft/public/mineways/mineways.zip",
-    "hash": "ee495a4f5552de1014872c40a4ee1b46d0170934e7c5afa0f628ad797e879311",
+    "url": "http://realtimerendering.com/erich/minecraft/public/mineways/minewaysV710.zip",
+    "hash": "cc0606765174374d8bd631bc3e35a9ec9a995cd26037efcc34f0c4ff3be6b18d",
     "extract_dir": "mineways",
-    "bin": "Mineways.exe",
     "shortcuts": [
         [
-            "Mineways.exe",
+            "Mineways32.exe",
             "Mineways"
         ]
     ],
@@ -20,6 +19,6 @@
         "github": "https://github.com/erich666/Mineways"
     },
     "autoupdate": {
-        "url": "http://realtimerendering.com/erich/minecraft/public/mineways/mineways.zip"
+        "url": "http://realtimerendering.com/erich/minecraft/public/mineways/minewaysV$majorVersion$minorVersion.zip"
     }
 }
