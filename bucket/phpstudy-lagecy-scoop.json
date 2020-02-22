@@ -1,0 +1,48 @@
+{
+    "homepage": "https://github.com/h404bi/phpstudy-lagecy-scoop",
+    "description": "A minimized package of the phpStudy2016 lagecy, repacked for working with Scoop.",
+    "version": "2.0",
+    "license": "Freeware",
+    "url": "https://raw.githubusercontent.com/h404bi/phpstudy-lagecy-scoop/master/phpstudy-lagecy-scoop/phpstudy-lagecy-scoop_v2.0.zip",
+    "hash": "faa170d30a9c6a4e3b5a141eaeb48ef421057d255c509c5126eb9510cbf06ebe",
+    "depends": [
+        "apache",
+        "nginx",
+        "mysql57",
+        "php-nts"
+    ],
+    "installer": {
+        "script": [
+            "if (!$env:SCOOP_APPS_DIR) { $env:SCOOP_APPS_DIR = Split-Path (Split-Path (Resolve-Path (scoop prefix scoop))) }",
+            "Write-Host 'Creating SymbolicLink...' -f DarkCyan",
+            "New-Item -Type Junction -Path \"$dir\\apache\" -Target \"$env:SCOOP_APPS_DIR\\apache\\current\" | Out-Null",
+            "New-Item -Type Junction -Path \"$dir\\nginx\" -Target \"$env:SCOOP_APPS_DIR\\nginx\\current\" | Out-Null",
+            "New-Item -Type Junction -Path \"$dir\\mysql\" -Target \"$env:SCOOP_APPS_DIR\\mysql57\\current\" | Out-Null",
+            "New-Item -Type Junction -Path \"$dir\\php\\php-current-nts\" -Target \"$env:SCOOP_APPS_DIR\\php-nts\\current\" | Out-Null",
+            "Write-Host 'Setting config files...' -f DarkCyan",
+            "(Get-Content \"$dir\\apache\\conf\\httpd.conf\").replace(\"`${SRVROOT}/htdocs\", \"$persist_dir\\www\") | Set-Content \"$dir\\apache\\conf\\httpd.conf\"",
+            "if ($null -eq ((Get-Content \"$dir\\nginx.conf\") | Select-String 'persist*www')) {",
+            "    (Get-Content \"$dir\\nginx.conf\").replace(\"D:/phpstudy/www\", \"$persist_dir\\www\") | Set-Content \"$dir\\nginx.conf\"",
+            "    Remove-Item -Force \"$dir\\nginx\\conf\\nginx.conf\"",
+            "    Move-Item \"$dir\\nginx.conf\" \"$dir\\nginx\\conf\\nginx.conf\"",
+            "} else {",
+            "    Remove-Item -Force \"$dir\\nginx.conf\"",
+            "}",
+            "Write-Host \"apache/nginx root directory was reset to $persist_dir\\www\" -f DarkCyan"
+        ]
+    },
+    "persist": [
+        "tools\\phpStudy.ini",
+        "www"
+    ],
+    "shortcuts": [
+        [
+            "phpStudy.exe",
+            "phpStudy Lagecy"
+        ]
+    ],
+    "notes": [
+        "If Apache/nginx/MySQL can't start, please view and edit your httpd.conf/nginx.conf/my.ini config files.",
+        "Apache does not work with PHP currently, please use nginx..."
+    ]
+}
