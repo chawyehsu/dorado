@@ -2,9 +2,9 @@
     "homepage": "https://github.com/huanghongxun/HMCL",
     "description": "A powered Minecraft launcher that supports a lot of features.",
     "license": "GPL-3.0-only",
-    "version": "3.2.140",
-    "url": "https://github.com/huanghongxun/HMCL/releases/download/v3.2.140/HMCL-3.2.140.exe#/hmcl.exe",
-    "hash": "22a1a82a5234e9bd72b456e7402e8971837a6e89d92ee0424795ec0ee97e4686",
+    "version": "3.2.149",
+    "url": "http://ci.huangyuhui.net/job/HMCL/149/artifact/HMCL/build/libs/HMCL-3.2.149.exe#/hmcl.exe",
+    "hash": "sha1:dee6a898ccf7faaab8a4079cc878216b3bc8a5ab",
     "bin": "hmcl.exe",
     "shortcuts": [
         [
@@ -31,9 +31,14 @@
         ".minecraft"
     ],
     "checkver": {
-        "github": "https://github.com/huanghongxun/HMCL"
+        "url": "https://hmcl.huangyuhui.net/api/update_link?channel=stable&download_link=true",
+        "jsonpath": "$.version"
     },
     "autoupdate": {
-        "url": "https://github.com/huanghongxun/HMCL/releases/download/v$version/HMCL-$version.exe#/hmcl.exe"
+        "url": "http://ci.huangyuhui.net/job/HMCL/$patchVersion/artifact/HMCL/build/libs/HMCL-$version.exe#/hmcl.exe",
+        "hash": {
+            "url": "https://hmcl.huangyuhui.net/api/update_link?channel=stable&download_link=true",
+            "jsonpath": "$.exesha1"
+        }
     }
 }
