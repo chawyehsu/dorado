@@ -30,7 +30,7 @@
         "PanData/user.db"
     ],
     "checkver": {
-        "re": "<li><a href=\"([\\d.]+)\">"
+        "re": "<li><a href=\".*?v([\\d.]+).zip\">"
     },
     "autoupdate": {
         "url": "http://dl.pandownload.club/dl/PanDownload_v$version.zip"
