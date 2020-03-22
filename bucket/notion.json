@@ -1,0 +1,30 @@
+{
+    "homepage": "https://www.notion.so",
+    "description": "The all-in-one workspace for your notes, tasks, wikis, and databases.",
+    "version": "2.0.8",
+    "license": "Proprietary",
+    "url": "https://desktop-release.notion-static.com/Notion%20Setup%202.0.8.exe#/dl.7z",
+    "hash": "7032eaaa0fe4dd30c0656965af8c8002ffc1bef34380f91e4e94a411905a4964",
+    "extract_dir": "$PLUGINSDIR",
+    "installer": {
+        "script": [
+            "Remove-Item \"$dir\\*\" -Exclude \"app-64.7z\"",
+            "Expand-7zipArchive \"$dir\\app-64.7z\" \"$dir\"",
+            "Remove-Item \"$dir\\app-64.7z\""
+        ]
+    },
+    "shortcuts": [
+        [
+            "Notion.exe",
+            "Notion"
+        ]
+    ],
+    "checkver": {
+        "url": "https://scoop-services.azurewebsites.net/checkver?app=notion",
+        "regex": "%20(?<version>[\\d.]+).exe"
+    },
+    "autoupdate": {
+        "url": "https://desktop-release.notion-static.com/Notion%20Setup%20$version.exe#/dl.7z"
+    },
+    "notes": "Your Notion data are storaged in '%LOCALAPPDATA%\\Mubu'."
+}
