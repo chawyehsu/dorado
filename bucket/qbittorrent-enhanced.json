@@ -1,0 +1,41 @@
+{
+    "homepage": "https://github.com/c0re100/qBittorrent-Enhanced-Edition",
+    "license": {
+        "identifier": "GPL-2.0-only",
+        "url": "https://github.com/qbittorrent/qBittorrent/blob/master/COPYING"
+    },
+    "version": "4.2.1.10",
+    "description": "qBittorrent BitTorrent client with anti-leech enhancement.",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/c0re100/qBittorrent-Enhanced-Edition/releases/download/release-4.2.1.10/qbittorrent_4.2.1.10_x64_setup.exe#/dl.7z",
+            "hash": "c8967317520daf96ddd248774799c8540f4776119645638b31967e8fd7071870"
+        },
+        "32bit": {
+            "url": "https://github.com/c0re100/qBittorrent-Enhanced-Edition/releases/download/release-4.2.1.10/qbittorrent_4.2.1.10_setup.exe#/dl.7z",
+            "hash": "df7f8f26b284b0719c570b3976f37cbe02bcb5330d6e64f146d9ebcb9b093f0e"
+        }
+    },
+    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\" -Force -Recurse",
+    "bin": "qbittorrent.exe",
+    "shortcuts": [
+        [
+            "qbittorrent.exe",
+            "qBittorrent"
+        ]
+    ],
+    "checkver": {
+        "url": "https://github.com/c0re100/qBittorrent-Enhanced-Edition/releases/latest",
+        "regex": "/releases/tag/release-([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/c0re100/qBittorrent-Enhanced-Edition/releases/download/release-$version/qbittorrent_$version_x64_setup.exe#/dl.7z"
+            },
+            "32bit": {
+                "url": "https://github.com/c0re100/qBittorrent-Enhanced-Edition/releases/download/release-$version/qbittorrent_$version_setup.exe#/dl.7z"
+            }
+        }
+    }
+}
