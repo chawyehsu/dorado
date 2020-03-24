@@ -6,5 +6,5 @@
     Push updates to mirror git server.
 #>
 
-$mirror = "https://git.dev.tencent.com/h404bi/dorado.git"
+$mirror = "https://gitee.com/h404bi/dorado.git"
 Invoke-Expression -command "git push $mirror"
