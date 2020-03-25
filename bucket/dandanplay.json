@@ -1,0 +1,38 @@
+{
+    "homepage": "http://dandanplay.com/",
+    "description": "A free to use bangumi player with danmaku support",
+    "version": "10.2.1",
+    "url": "http://47.240.64.98/dandanplay_10.2.1.zip",
+    "hash": "9583a5531bf30dea09253826b2cd1a87723e73759d8296b57eed01064a2c227f",
+    "extract_dir": "dandanplay",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\Config\")) {",
+        "    New-Item -Path \"$persist_dir\\Config\" -ItemType Directory | Out-Null",
+        "}",
+        "# Disable auto update",
+        "if (!(Test-Path \"$persist_dir\\Config\\ConnectionSettings.xml\")) {",
+        "    New-Item -Force -Path \"$persist_dir\\Config\\ConnectionSettings.xml\" -ItemType File -Value '<?xml version=\"1.0\"?><ConnectionSettings><EnableAutoUpdate>false</EnableAutoUpdate><NotifyOnUpdateDownloaded>false</NotifyOnUpdateDownloaded></ConnectionSettings>' | Out-Null",
+        "}",
+        "# Disable  tracking",
+        "if (!(Test-Path \"$persist_dir\\Config\\UserSettings.xml\")) {",
+        "    New-Item -Force -Path \"$persist_dir\\Config\\UserSettings.xml\" -ItemType File -Value '<?xml version=\"1.0\"?><UserSettings><EnableTelemetry>false</EnableTelemetry></UserSettings>' | Out-Null",
+        "}"
+    ],
+    "shortcuts": [
+        [
+            "dandanplay.exe",
+            "弹弹play"
+        ]
+    ],
+    "persist": [
+        "Config",
+        "Log",
+        "Cache"
+    ],
+    "checkver": {
+        "regex": "dandanplay_([\\d.]+).zip"
+    },
+    "autoupdate": {
+        "url": "http://47.240.64.98/dandanplay_$version.zip"
+    }
+}
