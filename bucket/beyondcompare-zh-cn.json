@@ -50,7 +50,7 @@
     ],
     "checkver": {
         "url": "https://www.scootersoftware.com/download.php?zz=dl4",
-        "re": "BCompare-zh-([\\d+].).exe"
+        "re": "BCompare-zh-([\\d.]+).exe"
     },
     "autoupdate": {
         "url": "https://www.scootersoftware.com/BCompare-zh-$version.exe"
