@@ -7,6 +7,8 @@
         "url": "https://www.scootersoftware.com/index.php?zz=kb_licensev4"
     },
     "url": "https://www.scootersoftware.com/BCompare-zh-4.3.4.24657.exe",
+    "hash": "04162b6d37967dd742863759243e8901449db3b48d6c26fee244856bf200f149",
+    "depends": "innounp",
     "pre_install": "Expand-InnoArchive -Path \"$dir\\$fname\" -Switches \"-a\"  -Removal",
     "architecture": {
         "64bit": {
