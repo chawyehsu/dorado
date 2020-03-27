@@ -5,6 +5,7 @@
     "version": "3.12.5.1551",
     "url": "https://dl-hdslb-com.oss-cn-shanghai.aliyuncs.com/bili/bililive/win/Livehime-Win-beta-3.12.5.1551.exe",
     "hash": "726783879703095a843b772bd51e9c9e593e97772a53b854ab766f0d8359f8df",
+    "depends": "innounp",
     "installer": {
         "script": "Expand-InnoArchive -Path \"$dir\\$fname\" -Removal"
     },
