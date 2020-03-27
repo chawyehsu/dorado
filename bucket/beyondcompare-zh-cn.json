@@ -1,0 +1,56 @@
+{
+    "homepage": "https://www.scootersoftware.com",
+    "description": "Beyond Compare is a multi-platform utility that combines directory compare and file compare functions in one package. Use it to manage source code, keep directories in sync, compare program output, etc.",
+    "version": "4.3.4.24657",
+    "license": {
+        "identifier": "Shareware",
+        "url": "https://www.scootersoftware.com/index.php?zz=kb_licensev4"
+    },
+    "url": "https://www.scootersoftware.com/BCompare-zh-4.3.4.24657.exe",
+    "pre_install": "Expand-InnoArchive -Path \"$dir\\$fname\" -Switches \"-a\"  -Removal",
+    "architecture": {
+        "64bit": {
+            "installer": {
+                "script": [
+                    "@('7z,1.dll', 'BCompare,1.exe', 'BCompare,1.tr', 'BCUnRAR,1.dll', 'mscoree,1.dll', 'PdfToText,1.exe') | ForEach-Object {",
+                    "    Remove-Item \"$dir\\$_\" -Force",
+                    "}",
+                    "@('7z,2.dll', 'BCompare,2.exe', 'BCompare,2.tr', 'BCUnRAR,2.dll', 'mscoree,2.dll', 'PdfToText,2.exe') | ForEach-Object {",
+                    "    $newName = $_.Replace(',2','')",
+                    "    Rename-Item \"$dir\\$_\" \"$dir\\$newName\"",
+                    "}"
+                ]
+            }
+        },
+        "32bit": {
+            "installer": {
+                "script": [
+                    "@('7z,1.dll', 'BCompare,1.exe', 'BCompare,1.tr', 'BCUnRAR,1.dll', 'mscoree,1.dll', 'PdfToText,1.exe') | ForEach-Object {",
+                    "    $newName = $_.Replace(',1','')",
+                    "    Rename-Item \"$dir\\$_\" \"$dir\\$newName\"",
+                    "}",
+                    "@('7z,2.dll', 'BCompare,2.exe', 'BCompare,2.tr', 'BCUnRAR,2.dll', 'mscoree,2.dll', 'PdfToText,2.exe') | ForEach-Object {",
+                    "    Remove-Item \"$dir\\$_\" -Force",
+                    "}"
+                ]
+            }
+        }
+    },
+    "shortcuts": [
+        [
+            "BCompare.exe",
+            "Beyond Compare 4"
+        ],
+        [
+            "BCClipboard.exe",
+            "Clipboard Compare"
+        ]
+    ],
+    "checkver": {
+        "url": "https://www.scootersoftware.com/download.php?zz=dl4",
+        "re": "BCompare-zh-([\\d+].).exe"
+    },
+    "autoupdate": {
+        "url": "https://www.scootersoftware.com/BCompare-zh-$version.exe"
+    }
+}
