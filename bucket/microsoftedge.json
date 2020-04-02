@@ -1,22 +1,20 @@
 {
     "homepage": "https://www.microsoft.com/en-us/edge",
     "description": "See what's new on the latest version of the Microsoft Edge browser.",
-    "version": "79.0.309.71",
+    "version": "80.0.361.103",
     "license": "Freeware",
     "architecture": {
         "64bit": {
             "url": "https://api.shuax.com/v2/download/edge/stable/x64#/dl.7z",
-            "hash": "73b4bca09a2a69dece6eb78f35f42c692a4642ede5e38bd6bb28b68700390669"
+            "hash": "80d56f6fc2a49f0742be6063a22df18c73a4545c843e162ee95a780389380a15"
         },
         "32bit": {
             "url": "https://api.shuax.com/v2/download/edge/stable/x86#/dl.7z",
-            "hash": "f00e7acfb40198d9c0066156cbcd5f221bbb2249e0edf3f29eb378508cab5660"
+            "hash": "4f5f135e93c7856664e63c23f1c894665d133f2e875629edf0c358bd27f219a6"
         }
     },
     "installer": {
-        "script": [
-            "Expand-7zipArchive -Path \"$dir\\MSEDGE.7z\" -ExtractDir \"Chrome-bin\" -Removal"
-        ]
+        "script": "Expand-7zipArchive -Path \"$dir\\MSEDGE.7z\" -ExtractDir \"Chrome-bin\" -Removal"
     },
     "shortcuts": [
         [
