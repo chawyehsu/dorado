@@ -4,7 +4,7 @@
     "version": "2.0.8",
     "license": "Proprietary",
     "url": "https://desktop-release.notion-static.com/Notion%20Setup%202.0.8.exe#/dl.7z",
-    "hash": "7032eaaa0fe4dd30c0656965af8c8002ffc1bef34380f91e4e94a411905a4964",
+    "hash": "sha512:b9eae8ba85ce9cc4ba8363f364162eaa62ad20631b06e1c0d82d3a5c12f264accd1318fd13006601c4e86ddf939dab31dc49e6c9272366cfae18ad8ebb01e2c0",
     "extract_dir": "$PLUGINSDIR",
     "installer": {
         "script": [
@@ -20,11 +20,15 @@
         ]
     ],
     "checkver": {
-        "url": "https://scoop-services.azurewebsites.net/checkver?app=notion",
-        "regex": "%20(?<version>[\\d.]+).exe"
+        "url": "https://desktop-release.notion-static.com/latest.yml",
+        "regex": "version:\\s+([\\d.]+)"
     },
     "autoupdate": {
-        "url": "https://desktop-release.notion-static.com/Notion%20Setup%20$version.exe#/dl.7z"
+        "url": "https://desktop-release.notion-static.com/Notion%20Setup%20$version.exe#/dl.7z",
+        "hash": {
+            "url": "$baseurl/latest.yml",
+            "regex": "sha512:\\s+$base64"
+        }
     },
     "notes": "Your Notion data are storaged in '%LOCALAPPDATA%\\Notion'."
 }
