@@ -6,9 +6,7 @@
     "url": "https://github.com/Bililive/BililiveRecorder/releases/download/v1.1.15/Setup.exe#/dl.7z",
     "hash": "736d387d11adc160a3b6c5f85ba0ee5b63f5744aa8fe62d1232c38d516096ee3",
     "installer": {
-        "script": [
-            "Expand-7zipArchive -Path \"$dir\\BililiveRecorder*.nupkg\" -ExtractDir 'lib\\net45' -Removal"
-        ]
+        "script": "Expand-7zipArchive -Path \"$dir\\BililiveRecorder*.nupkg\" -ExtractDir 'lib\\net45' -Removal"
     },
     "shortcuts": [
         [
