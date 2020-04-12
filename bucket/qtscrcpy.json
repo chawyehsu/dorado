@@ -1,18 +1,18 @@
 {
     "homepage": "https://github.com/barry-ran/QtScrcpy",
     "description": "QtScrcpy connects to Android devices via USB (or via TCP/IP) for display and control. It does NOT require the root privileges.",
-    "version": "1.3.0",
+    "version": "1.3.1",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/barry-ran/QtScrcpy/releases/download/v1.3.0/QtScrcpy-win-x64-v1.3.0.zip",
-            "hash": "3b8669941b838d99fef2d28ff2ec4401f1dae0162665bfd745448b14cd12d45a",
-            "extract_dir": "QtScrcpy-win-x64-v1.3.0"
+            "url": "https://github.com/barry-ran/QtScrcpy/releases/download/v1.3.1/QtScrcpy-win-x64-v1.3.1.zip",
+            "hash": "c01d3e6a1fdee1b938d79c69fd0654b1f722d8dc622c783703c12cce192f042f",
+            "extract_dir": "QtScrcpy-win-x64-v1.3.1"
         },
         "32bit": {
-            "url": "https://github.com/PowerShell/PowerShell/releases/download/v6.2.3/PowerShell-6.2.3-win-x86.zip",
-            "hash": "3fe6c7ec036b06548a56b3b66c0105ceced2c393a35016da288d5a130bd8b621",
-            "extract_dir": "QtScrcpy-win-x86-v1.3.0"
+            "url": "https://github.com/barry-ran/QtScrcpy/releases/download/v1.3.1/QtScrcpy-win-x86-v1.3.1.zip",
+            "hash": "ae98b98ea0563fa9b7cea6c898555e7f7771d59c64b1a2229d43d333a68d8ce6",
+            "extract_dir": "QtScrcpy-win-x86-v1.3.1"
         }
     },
     "bin": "QtScrcpy.exe",
