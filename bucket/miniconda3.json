@@ -14,19 +14,21 @@
         }
     },
     "installer": {
-        "script": [
-            "# Running installer",
-            "Start-Process \"$dir\\$fname\" \"/S /InstallationType=JustMe /RegisterPython=1 /NoRegistry=1 /AddToPath=0 /D=$dir\" -PassThru -NoNewWindow | Wait-Process",
-            "# Creating conda-hook ps1 shim",
-            "Write-Output 'if (!$env:_CONDA_ROOT){ & \"$PSScriptRoot\\..\\shell\\condabin\\conda-hook.ps1\" }' | Out-File \"$dir\\condabin\\conda.ps1\" -Encoding ASCII",
-            "write-output '& \"$env:ComSpec\" /c \"$PSScriptRoot\\conda.bat\" @args' | Out-File \"$dir\\condabin\\conda.ps1\" -Encoding ASCII -Append"
+        "args": [
+            "/S",
+            "/InstallationType=JustMe",
+            "/RegisterPython=0",
+            "/AddToPath=0",
+            "/NoRegistry=1",
+            "/D=$dir"
         ]
     },
     "uninstaller": {
         "file": "Uninstall-Miniconda3.exe",
         "args": "/S"
     },
-    "env_add_path": "condabin",
+    "bin": "scripts\\conda.exe",
+    "post_install": "conda config --set auto_activate_base false",
     "checkver": {
         "url": "https://repo.continuum.io/miniconda",
         "re": "Miniconda3-([\\d.]+)-Windows"
@@ -46,8 +48,7 @@
         }
     },
     "notes": [
-        "The deafult (base) env is not exposed, you'll need to run 'conda activate base' to activate it.",
-        "Conda envs are not persisted, better to setup envs_dirs to use '~/.conda/envs' first.",
+        "Conda envs are not persisted, we advice to setup envs_dirs to use '~/.conda/envs'.",
         "  https://conda.io/projects/conda/en/latest/user-guide/configuration/use-condarc.html#specify-environment-directories-envs-dirs"
     ]
 }
