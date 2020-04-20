@@ -26,7 +26,8 @@
         ]
     ],
     "checkver": {
-        "github": "https://github.com/ephtracy/ephtracy.github.io"
+        "url": "https://ephtracy.github.io/mv_main.html",
+        "regex": "releases/tag/([\\d.]+)\" role=\"button\"> ([\\d.]+)</a>"
     },
     "autoupdate": {
         "architecture": {
