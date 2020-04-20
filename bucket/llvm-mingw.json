@@ -1,0 +1,32 @@
+{
+    "homepage": "https://github.com/mstorsjo/llvm-mingw",
+    "description": "An LLVM/Clang/LLD based mingw-w64 toolchain",
+    "version": "20200325",
+    "license": "ISC",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/mstorsjo/llvm-mingw/releases/download/20200325/llvm-mingw-20200325-x86_64.zip",
+            "hash": "662302f3f1d836481ef412c2e70e870f93f30183c37bf90b9621b1dd16af3fb1"
+        },
+        "32bit": {
+            "url": "https://github.com/mstorsjo/llvm-mingw/releases/download/20200325/llvm-mingw-20200325-i686.zip",
+            "hash": "f7106458d430224db6f221a91fe8731db8140f44a099cbcc54cfa86d4545b6af"
+        }
+    },
+    "extract_dir": "llvm-mingw",
+    "bin": [
+        "bin\\clang.exe",
+        "bin\\lldb.exe"
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/mstorsjo/llvm-mingw/releases/download/$version/llvm-mingw-$version-x86_64.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/mstorsjo/llvm-mingw/releases/download/20200325/llvm-mingw-$version-i686.zip"
+            }
+        }
+    }
+}
