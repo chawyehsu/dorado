@@ -17,11 +17,31 @@
             "    throw \"Windows Terminal requires at least Windows 10 version 1903 (build 18362) to work.\"",
             "}",
             "Add-AppxPackage -Path \"$dir\\windowsterminal.msixbundle\"",
-            "Remove-Item \"$dir\\windowsterminal.msixbundle\""
+            "Remove-Item \"$dir\\windowsterminal.msixbundle\"",
+            "# Resolve settings",
+            "ensure $persist_dir | Out-Null",
+            "$settingsFile = \"$env:LocalAppData\\Packages\\Microsoft.WindowsTerminal_8wekyb3d8bbwe\\LocalState\\settings.json\"",
+            "if (!(Test-Path \"$persist_dir\\settings.json\")) {",
+            "    if (Test-Path $settingsFile) {",
+            "        Move-Item -Path $settingsFile -Destination \"$persist_dir\" | Out-Null",
+            "    } else {",
+            "        New-Item -Force -Path \"$persist_dir\\settings.json\" -ItemType File | Out-Null",
+            "    }",
+            "}",
+            "New-Item -ItemType SymbolicLink -Path $settingsFile -Target \"$persist_dir\\settings.json\" | Out-Null"
         ]
     },
     "uninstaller": {
-        "script": "Get-AppxPackage -Name Microsoft.WindowsTerminal | Remove-AppxPackage"
+        "script": [
+            "# Backup settings file",
+            "$settingsFile = \"$env:LocalAppData\\Packages\\Microsoft.WindowsTerminal_8wekyb3d8bbwe\\LocalState\\settings.json\"",
+            "if (!(Test-Path \"$persist_dir\\settings.json\")) {",
+            "    if (Test-Path $settingsFile) {",
+            "        Move-Item -Path $settingsFile -Destination \"$persist_dir\" | Out-Null",
+            "    }",
+            "}",
+            "Get-AppxPackage -Name Microsoft.WindowsTerminal | Remove-AppxPackage"
+        ]
     },
     "checkver": {
         "url": "https://github.com/microsoft/terminal/releases",
