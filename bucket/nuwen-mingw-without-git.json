@@ -3,12 +3,18 @@
     "description": "nuwen's MinGW Distro without git",
     "license": "GPL-2.0-only",
     "version": "17.1",
-    "url": "https://nuwen.net/files/mingw/mingw-17.1-without-git.exe#/dl.7z",
-    "hash": "ef5b9ab51776661f338642c386700be6acec2feb0091e9448af7daced0538ec8",
+    "url": [
+        "https://nuwen.net/files/mingw/mingw-17.1-without-git.exe#/dl.7z",
+        "https://raw.githubusercontent.com/h404bi/dorado/master/scripts/nuwen-mingw-without-git/nuwen_path_helper.ps1"
+    ],
+    "hash": [
+        "ef5b9ab51776661f338642c386700be6acec2feb0091e9448af7daced0538ec8",
+        "ba67fdc8c97d4c7de86eb824d0c9b2aef9aa910aa44178d7dd45520a21f34db0"
+    ],
     "extract_dir": "MinGW",
     "bin": [
         [
-            "open_distro_window.bat",
+            "nuwen_path_helper.ps1",
             "mingw"
         ]
     ],
