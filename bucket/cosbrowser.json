@@ -1,0 +1,39 @@
+{
+    "version": "2.1.0",
+    "description": "COSBrowser is an official tool for accessing Tencent Cloud COS.",
+    "homepage": "https://github.com/tencentyun/cosbrowser",
+    "license": "Unknown",
+    "url": "https://cosbrowser-1253960454.cos.ap-shanghai.myqcloud.com/releases/cosbrowser-setup-2.1.0.exe#/dl.7z",
+    "hash": "9520dd2de85a3cb19cbcf2cc61aa5338febb8fe5dd66258b8184111a8700c73f",
+    "architecture": {
+        "64bit": {
+            "installer": {
+                "script": [
+                    "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
+                    "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninstall*\" -Force -Recurse"
+                ]
+            }
+        },
+        "32bit": {
+            "installer": {
+                "script": [
+                    "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-32.7z\" \"$dir\"",
+                    "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninstall*\" -Force -Recurse"
+                ]
+            }
+        }
+    },
+    "shortcuts": [
+        [
+            "cosbrowser.exe",
+            "cosbrowser"
+        ]
+    ],
+    "checkver": {
+        "url": "https://raw.githubusercontent.com/tencentyun/cosbrowser/master/changelog.md",
+        "re": "v([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://cosbrowser-1253960454.cos.ap-shanghai.myqcloud.com/releases/cosbrowser-setup-$version.exe#/dl.7z"
+    }
+}
