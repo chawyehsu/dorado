@@ -1,21 +1,19 @@
 {
     "homepage": "https://github.com/moonlight-stream/moonlight-qt",
     "description": "GameStream client for PCs (Windows, Mac, Linux, and Steam Link)",
-    "version": "1.2.1",
+    "version": "2.0.0",
     "license": "GPL-3.0-only",
     "architecture": {
         "32bit": {
-            "url": "https://github.com/moonlight-stream/moonlight-qt/releases/download/v1.2.1/MoonlightPortable-x86-1.2.1.zip",
-            "hash": "65a9ad22d67a17a7c5ee3129e4d46551da181f2bb9f4ccc97c410d8aa8be456b"
+            "url": "https://github.com/moonlight-stream/moonlight-qt/releases/download/v2.0.0/MoonlightPortable-x86-2.0.0.zip",
+            "hash": "02be81cb3e9b789540f98e89ce25f4b6cb21a2842e7bb21e62f65e7573e0df41"
         },
         "64bit": {
-            "url": "https://github.com/moonlight-stream/moonlight-qt/releases/download/v1.2.1/MoonlightPortable-x64-1.2.1.zip",
-            "hash": "e198df5375229655dd704ed257aa8e87e00b7d6cc50e770169bbea7b5f3032ea"
+            "url": "https://github.com/moonlight-stream/moonlight-qt/releases/download/v2.0.0/MoonlightPortable-x64-2.0.0.zip",
+            "hash": "524395da0a6c4dcf16670e78c27ef563a5caabfe8acb4782d4b107580edf4464"
         }
     },
-    "persist": [
-        "Moonlight Game Streaming Project"
-    ],
+    "persist": "Moonlight Game Streaming Project",
     "shortcuts": [
         [
             "Moonlight.exe",
