@@ -1,0 +1,48 @@
+{
+    "homepage": "https://dotnet.microsoft.com/",
+    "description": "The dotnet desktop runtime enables you to run dotnet desktop applications. This release includes the .NET Core Runtime, you do not need to install it separately.",
+    "version": "3.1.3",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://dotnetcli.blob.core.windows.net/dotnet/Runtime/3.1.3/windowsdesktop-runtime-3.1.3-win-x64.exe",
+            "hash": "sha512:9e0c3ab51de6265d8ade1235f9cd6d5a9932459cfff6327fe09b9e9342f0b54c4d41bfc7bcc29c1e3e8994c5df7cfba530126a6ee06de3c32ea3cfcc36013a5f"
+        },
+        "32bit": {
+            "url": "https://dotnetcli.blob.core.windows.net/dotnet/Runtime/3.1.3/windowsdesktop-runtime-3.1.3-win-x86.exe",
+            "hash": "sha512:f56d72723864ad55b5a238d07a6b34ac3bcefe92c646aefb8b09cd00db54450192b88982cfc057eee7a6039fc41733da2ab9d626e6dde0240e009a494060699e"
+        }
+    },
+    "depends": "dark",
+    "installer": {
+        "script": [
+            "Expand-DarkArchive \"$dir\\$fname\" \"$dir\\extracted\" -Removal",
+            "Get-ChildItem \"$dir\\extracted\\AttachedContainer\\*.msi\" | ForEach-Object { Expand-MsiArchive $_ \"$dir\" }",
+            "Move-Item \"$dir\\dotnet\\*\" \"$dir\" -Force",
+            "@('dotnet', 'extracted') | ForEach-Object { Remove-Item \"$dir\\$_\" -Recurse }"
+        ]
+    },
+    "bin": "dotnet.exe",
+    "env_set": {
+        "DOTNET_ROOT": "$dir"
+    },
+    "checkver": {
+        "url": "https://dotnetcli.blob.core.windows.net/dotnet/release-metadata/releases-index.json",
+        "regex": "(?s)(?<version>[\\d.]+)[^\\d]*?(?<sdkversion>[\\d.]+)[^\\d]*?(?:current|lts)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://dotnetcli.blob.core.windows.net/dotnet/Runtime/$version/windowsdesktop-runtime-$version-win-x64.exe"
+            },
+            "32bit": {
+                "url": "https://dotnetcli.blob.core.windows.net/dotnet/Runtime/$version/windowsdesktop-runtime-$version-win-x86.exe"
+            }
+        },
+        "hash": {
+            "url": "https://dotnetcli.blob.core.windows.net/dotnet/checksums/$version-sha.txt",
+            "mode": "extract"
+        }
+    },
+    "notes": "This package only contains the .NET Core runtime, install 'dotnet-sdk' instead if you need .NET Core SDK"
+}
