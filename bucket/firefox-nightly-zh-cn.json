@@ -1,0 +1,27 @@
+{
+    "description": "Nightly builds of Firefox: the popular open source web browser.",
+    "homepage": "https://www.mozilla.org/zh-CN/firefox/nightly/",
+    "version": "nightly",
+    "license": "MPL-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://download.mozilla.org/?product=firefox-nightly-latest-l10n-ssl&os=win64&lang=zh-CN#/firefox.7z"
+        },
+        "32bit": {
+            "url": "https://download.mozilla.org/?product=firefox-nightly-latest-l10n-ssl&os=win&lang=zh-CN#/firefox.7z"
+        }
+    },
+    "extract_dir": "core",
+    "bin": [
+        [
+            "firefox.exe",
+            "firefox-nightly"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "firefox.exe",
+            "Firefox Nightly"
+        ]
+    ]
+}
