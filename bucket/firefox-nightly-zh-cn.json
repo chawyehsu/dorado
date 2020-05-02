@@ -1,16 +1,14 @@
 {
     "description": "Nightly builds of Firefox: the popular open source web browser.",
-    "homepage": "https://www.mozilla.org/zh-US/firefox/nightly",
-    "version": "77.0a1-2020-04-29-21-55-39",
+    "homepage": "https://www.mozilla.org/zh-CN/firefox/nightly/",
+    "version": "nightly",
     "license": "MPL-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://download-installer.cdn.mozilla.net/pub/firefox/nightly/2020/04/2020-04-29-21-55-39-mozilla-central-l10n/firefox-77.0a1.zh-CN.win64.installer.exe#/dl.7z",
-            "hash": "4c471b7460eb49c18558ae57f1af949a643b2c6b3e4a1b5831cff3107e3242d7"
+            "url": "https://download.mozilla.org/?product=firefox-nightly-latest-l10n-ssl&os=win64&lang=zh-CN#/firefox.7z"
         },
         "32bit": {
-            "url": "https://download-installer.cdn.mozilla.net/pub/firefox/nightly/2020/04/2020-04-29-21-55-39-mozilla-central-l10n/firefox-77.0a1.zh-CN.win32.installer.exe#/dl.7z",
-            "hash": "c0e0b13d8ea066e23f0efb17865a592195ae60355664c2245207985bb6becb4c"
+            "url": "https://download.mozilla.org/?product=firefox-nightly-latest-l10n-ssl&os=win&lang=zh-CN#/firefox.7z"
         }
     },
     "extract_dir": "core",
@@ -25,22 +23,5 @@
             "firefox.exe",
             "Firefox Nightly"
         ]
-    ],
-    "checkver": {
-        "url": "https://www.mozilla.org/zh-CN/firefox/nightly/notes/"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "hash": {
-                    "url": "https://download-installer.cdn.mozilla.net/pub/firefox/nightly/2020/04/2020-04-29-21-55-39-mozilla-central-l10n/firefox-77.0a1.zh-CN.win64.checksum"
-                }
-            },
-            "32bit": {
-                "hash": {
-                    "url": "https://download-installer.cdn.mozilla.net/pub/firefox/nightly/2020/04/2020-04-29-21-55-39-mozilla-central-l10n/firefox-77.0a1.zh-CN.win32.checksum"
-                }
-            }
-        }
-   }
+    ]
 }
