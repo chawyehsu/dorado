@@ -2,18 +2,18 @@
     "homepage": "https://u.tools/",
     "description": "Your productive tools set and launcher.",
     "license": "Unknown",
-    "version": "1.0.2-beta",
+    "version": "1.0.4-beta",
     "architecture": {
         "64bit": {
-            "url": "https://resource.u-tools.cn/currentversion/uTools-1.0.2-beta.exe#/dl.7z",
-            "hash": "sha512:204d81dc3914d28ca94d865b77412145a9fdbec5a6fd0a6a3ed95e9f8a46a7f32ceeec4d70f4a5df01779556f130b0f520d2cbdb07ad793b5280944ae55f652c",
+            "url": "https://resource.u-tools.cn/currentversion/uTools-1.0.4-beta.exe#/dl.7z",
+            "hash": "sha512:90a19ccd20561337acb48684db0109f2caa79a27f6fe4b8bcc8e62c98279e545ba0661dd48a4d5be36d48e25e3ef7032dfad72bdc1a60c8533c7e335fd3efd9c",
             "installer": {
                 "script": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR/app-64.7z\" \"$dir\""
             }
         },
         "32bit": {
-            "url": "https://resource.u-tools.cn/currentversion/uTools-1.0.2-beta-ia32.exe#/dl.7z",
-            "hash": "sha512:905eaed611573521ccf01324cda9b391cea4e4cba49b90f72addac5d005f9dca26831ca990e5b1b55b20cf7773e504ff82f645815c82a6cdde3e4cb26b26e237",
+            "url": "https://resource.u-tools.cn/currentversion/uTools-1.0.4-beta-ia32.exe#/dl.7z",
+            "hash": "sha512:8ca91ca2ff9b781a311405d49f48d08e95aa3b688a08f7888267c389ccda6e45c94e57a1665906b9f5a870ddfb70702f9d7f6c2409c2df329c173b94d58fe636",
             "installer": {
                 "script": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR/app-32.7z\" \"$dir\""
             }
