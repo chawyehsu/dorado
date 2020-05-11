@@ -1,25 +1,25 @@
 {
-	"homepage": "https://www.yy.com/yy8/",
-	"description": "The official client of YY, a Chinese video-based social network.",
-	"version": "8.57.0.1",
-	"license": {
-		"identifier": "EULA",
-		"url": "https://zc.yy.com/license.html"
-	},
-	"url": "https://yydl.duowan.com/4/setup/YYSetup-8.57.0.1-zh-CN.exe#/dl.7z",
-	"hash": "185acb377a42d2c60ac78796a2c4ad9945de3926eda17558a68adb191d16900d",
-	"extract_dir": "InstallDir",
-	"shortcuts": [
-		[
-			"YY.exe",
-			"YY语音"
-		]
-	],
-	"checkver": {
-		"url": "https://www.yy.com/web/pcyy_download/",
-		"regex": "YYSetup-([\\d.]+)-zh-CN.exe"
-	},
-	"autoupdate": {
-		"url": "https://yydl.duowan.com/4/setup/YYSetup-$version-zh-CN.exe#/dl.7z"
-	}
+    "homepage": "https://www.yy.com/yy8/",
+    "description": "The official client of YY, a Chinese video-based social network.",
+    "version": "8.57.0.1",
+    "license": {
+        "identifier": "EULA",
+        "url": "https://zc.yy.com/license.html"
+    },
+    "url": "https://yydl.duowan.com/4/setup/YYSetup-8.57.0.1-zh-CN.exe#/dl.7z",
+    "hash": "185acb377a42d2c60ac78796a2c4ad9945de3926eda17558a68adb191d16900d",
+    "extract_dir": "InstallDir",
+    "shortcuts": [
+        [
+            "YY.exe",
+            "YY语音"
+        ]
+    ],
+    "checkver": {
+        "url": "https://www.yy.com/web/pcyy_download/",
+        "regex": "YYSetup-([\\d.]+)-zh-CN.exe"
+    },
+    "autoupdate": {
+        "url": "https://yydl.duowan.com/4/setup/YYSetup-$version-zh-CN.exe#/dl.7z"
+    }
 }
