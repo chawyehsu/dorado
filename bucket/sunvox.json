@@ -1,0 +1,32 @@
+{
+    "homepage": "https://www.warmplace.ru/soft/sunvox/",
+    "description": "SunVox is a small, fast and powerful modular synthesizer with pattern-based sequencer (tracker).",
+    "license": "Freeware",
+    "version": "1.9.5d",
+    "url": "https://www.warmplace.ru/soft/sunvox/sunvox-1.9.5d.zip",
+    "hash": "9b60afb1c88e7a81850fb4cd05598377bbfaf5159ef30101ba822f0b091d0a88",
+    "architecture": {
+        "64bit": {
+            "shortcuts": [
+                [
+                    "sunvox\\sunvox\\windows_x86_64\\sunvox.exe",
+                    "SunVox"
+                ]
+            ]
+        },
+        "32bit": {
+            "shortcuts": [
+                [
+                    "sunvox\\sunvox\\windows_x86\\sunvox.exe",
+                    "SunVox"
+                ]
+            ]
+        }
+    },
+    "checkver": {
+        "regex": ">Latest release - v([\\d\\w.]+)"
+    },
+    "autoupdate": {
+        "url": "https://www.warmplace.ru/soft/sunvox/sunvox-$version.zip"
+    }
+}
