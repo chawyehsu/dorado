@@ -1,0 +1,20 @@
+{
+    "homepage": "https://www.warmplace.ru/soft/pixitracker/",
+    "description": "PixiTracker is a simple and fun tool to quickly create musical sketches, chiptunes and sound experiments.",
+    "license": "Freeware",
+    "version": "0.4.6",
+    "url": "https://www.warmplace.ru/soft/pixitracker/pixitracker.zip",
+    "hash": "e07f394d0bfbc0da0e924f0f5c00eadd3b5c50e1067ad20a8a9fc564f02bf73d",
+    "shortcuts": [
+        [
+            "pixitracker\\START_WINDOWS.exe",
+            "PixiTracker"
+        ]
+    ],
+    "checkver": {
+        "regex": ">Latest release - ([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://www.warmplace.ru/soft/pixitracker/pixitracker.zip"
+    }
+}
