@@ -5,17 +5,17 @@
         "identifier": "EULA",
         "url": "https://ephtracy.github.io/"
     },
-    "version": "0.99.4",
+    "version": "0.99.5",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ephtracy/ephtracy.github.io/releases/download/0.99.4/MagicaVoxel-0.99.4-alpha-win64.zip",
-            "hash": "5ec8df959b81ce9d0d338aa280b04998596188d60693fef333d90a7be92d9c2d",
-            "extract_dir": "MagicaVoxel-0.99.4-alpha-win64"
+            "url": "https://github.com/ephtracy/ephtracy.github.io/releases/download/0.99.5/MagicaVoxel-0.99.5-alpha-win64.zip",
+            "hash": "27af96194e11987cf4e76d1e31ac151281fb60b4aefe0d5a1503634f6c6b157b",
+            "extract_dir": "MagicaVoxel-0.99.5-alpha-win64"
         },
         "32bit": {
-            "url": "https://github.com/ephtracy/ephtracy.github.io/releases/download/0.99.4/MagicaVoxel-0.99.4-alpha-win32.zip",
-            "hash": "be466e7852c06d544cb7bb41fe054cfe4751b8a290a4c7cc3496e95d5ee4dc13",
-            "extract_dir": "MagicaVoxel-0.99.4-alpha-win32"
+            "url": "https://github.com/ephtracy/ephtracy.github.io/releases/download/0.99.5/MagicaVoxel-0.99.5-alpha-win32.zip",
+            "hash": "d7f87c166bad91e34bde0867c3e4d42678a722fca05942de40f0a5fdcc0fb32b",
+            "extract_dir": "MagicaVoxel-0.99.5-alpha-win32"
         }
     },
     "bin": "MagicaVoxel.exe",
@@ -27,7 +27,7 @@
     ],
     "checkver": {
         "url": "https://ephtracy.github.io/mv_main.html",
-        "regex": "releases/tag/([\\d.]+)\" role=\"button\"> ([\\d.]+)</a>"
+        "regex": "releases/tag/([\\d.]+)\" role=\"button\">.*?([\\d.]+)</a>"
     },
     "autoupdate": {
         "architecture": {
