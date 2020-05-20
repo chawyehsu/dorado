@@ -4,7 +4,7 @@
     "license": "GPL-3.0-only",
     "version": "2020.0",
     "url": "https://github.com/lework/RedisDesktopManager-Windows/releases/download/2020.0/redis-desktop-manager-2020.0.zip",
-    "hash": "a5a02b33735bac4ec26e6984f28e179de9f1ed3c064be095e3c033a7c09d3dcd",
+    "hash": "de4d32e9fcc31810992b3061796e9f5339203b4c2aa262160539f5c1f36ec6af",
     "installer": {
         "script": [
             "Get-ChildItem \"$dir\\redis-desktop-manager-*.exe\" | Rename-Item -NewName \"$dir\\installer.exe\"",
@@ -25,6 +25,9 @@
     },
     "checkver": {
         "github": "https://github.com/lework/RedisDesktopManager-Windows"
+    },
+    "autoupdate": {
+        "url": "https://github.com/lework/RedisDesktopManager-Windows/releases/download/$version/redis-desktop-manager-$version.zip"
     },
     "notes": [
         "RDM is available on Microsoft Store: https://www.microsoft.com/store/apps/9NDK76ZVZ3TM",
