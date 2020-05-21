@@ -7,12 +7,18 @@
     "hash": "ef5b9ab51776661f338642c386700be6acec2feb0091e9448af7daced0538ec8",
     "extract_dir": "MinGW",
     "pre_install": [
-        "$helperScript = $(Join-Path $(Find-BucketDirectory -Root -Name dorado) scripts/nuwen-mingw-without-git/nuwen_path_helper.ps1)",
+        "$helperScript = $(Join-Path $(Find-BucketDirectory -Root -Name dorado) scripts/nuwen-mingw-without-git/env_helper.ps1)",
         "Copy-Item -Path $helperScript -Destination $dir"
     ],
+    "uninstaller": {
+        "script": [
+            "# Ensure mingw environment variables have been unset.",
+            "mingw off | Out-Null"
+        ]
+    },
     "bin": [
         [
-            "nuwen_path_helper.ps1",
+            "env_helper.ps1",
             "mingw"
         ]
     ],
@@ -28,5 +34,5 @@
     "autoupdate": {
         "url": "https://nuwen.net/files/mingw/mingw-$version-without-git.exe#/dl.7z"
     },
-    "notes": "The mingw path helper can only work in PowerShell, use the shortcut if you want to use mingw in cmd.exe"
+    "notes": "Type 'mingw' for help. (This can only work in PowerShell, use the shortcut instead if you're in cmd.exe)"
 }
