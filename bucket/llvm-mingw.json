@@ -14,16 +14,7 @@
         }
     },
     "extract_dir": "llvm-mingw",
-    "pre_install": [
-        "$helperScript = $(Join-Path $(Find-BucketDirectory -Root -Name dorado) scripts/llvm-mingw/env_helper.ps1)",
-        "Copy-Item -Path $helperScript -Destination $dir"
-    ],
-    "bin": [
-        [
-            "env_helper.ps1",
-            "llvm-mingw"
-        ]
-    ],
+    "env_add_path": "bin",
     "checkver": "github",
     "autoupdate": {
         "architecture": {
@@ -34,6 +25,5 @@
                 "url": "https://github.com/mstorsjo/llvm-mingw/releases/download/20200325/llvm-mingw-$version-i686.zip"
             }
         }
-    },
-    "notes": "llvm-mingw is not added to PATH by deafult, but you can use 'llvm-mingw' env helper (only work in PowerShell) to toggle it dynamically."
+    }
 }

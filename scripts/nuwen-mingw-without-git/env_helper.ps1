@@ -1,7 +1,7 @@
 #Requires -Version 5
 # An environment setup helper for nuwen-mingw for PowerShell
 # Created by Chawye Hsu (https://github.com/h404bi), licensed under the Unlicense.
-# USE IT AS YOUR OWN RISK!
+# USE IT AT YOUR OWN RISK!
 
 # ensure the script file is in the right place.
 if (!(Test-Path "$PSScriptRoot\set_distro_paths.bat")) {
