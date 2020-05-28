@@ -1,16 +1,16 @@
 {
     "homepage": "https://dotnet.microsoft.com/",
     "description": "The dotnet desktop runtime enables you to run dotnet desktop applications. This release includes the .NET Core Runtime, you do not need to install it separately.",
-    "version": "3.1.3",
+    "version": "3.1.4",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://dotnetcli.blob.core.windows.net/dotnet/Runtime/3.1.3/windowsdesktop-runtime-3.1.3-win-x64.exe",
-            "hash": "sha512:9e0c3ab51de6265d8ade1235f9cd6d5a9932459cfff6327fe09b9e9342f0b54c4d41bfc7bcc29c1e3e8994c5df7cfba530126a6ee06de3c32ea3cfcc36013a5f"
+            "url": "https://dotnetcli.blob.core.windows.net/dotnet/Runtime/3.1.4/windowsdesktop-runtime-3.1.4-win-x64.exe",
+            "hash": "sha512:c410e768954df9fdb340a47e7cfe2421e19ac6ef362f5af336d8d68e513a74a7a33f50543abdbf48cbf277b0651bd08d946a8589bacc1ad138b35224769828a0"
         },
         "32bit": {
-            "url": "https://dotnetcli.blob.core.windows.net/dotnet/Runtime/3.1.3/windowsdesktop-runtime-3.1.3-win-x86.exe",
-            "hash": "sha512:f56d72723864ad55b5a238d07a6b34ac3bcefe92c646aefb8b09cd00db54450192b88982cfc057eee7a6039fc41733da2ab9d626e6dde0240e009a494060699e"
+            "url": "https://dotnetcli.blob.core.windows.net/dotnet/Runtime/3.1.4/windowsdesktop-runtime-3.1.4-win-x86.exe",
+            "hash": "sha512:616f7619d859d3c242e81313041bfd299dfbaa0514250d5f384d162a3e9ac74605b40dc971b6f8ad2ef5bdba6be4dd32c6f506241a3fe3634df05625f9f88ee9"
         }
     },
     "depends": "dark",
