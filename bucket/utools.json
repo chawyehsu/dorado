@@ -2,18 +2,18 @@
     "homepage": "https://u.tools/",
     "description": "Your productive tools set and launcher.",
     "license": "Unknown",
-    "version": "1.0.6-beta",
+    "version": "1.0.7-beta",
     "architecture": {
         "64bit": {
-            "url": "https://resource.u-tools.cn/currentversion/uTools-1.0.6-beta.exe#/dl.7z",
-            "hash": "sha512:0ded9761418ed8ac4aba6178162bed88864339d3afd8dbdbd2f22c7823d49cfaee28ae98218c9796c4fb8e22db0c462d3d28babc1d7f0ba420586e2f9d299224",
+            "url": "https://resource.u-tools.cn/currentversion/uTools-1.0.7-beta.exe#/dl.7z",
+            "hash": "D163071648F0705C83960B84052A1B6455E5F30F5A287C9FB8EF4FFC61B784CA",
             "installer": {
                 "script": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR/app-64.7z\" \"$dir\""
             }
         },
         "32bit": {
-            "url": "https://resource.u-tools.cn/currentversion/uTools-1.0.6-beta-ia32.exe#/dl.7z",
-            "hash": "sha512:22fcaa71a967e3b129d8b19a6c5309da890186282f00df2d30bd202d78bed4ed016216eef459c788ae055dc8cc68dc8ffa0e7a76f47517cba1883350041da969",
+            "url": "https://resource.u-tools.cn/currentversion/uTools-1.0.7-beta-ia32.exe#/dl.7z",
+            "hash": "196DDF7E0469C5D7954F11681985FA75D1A01CEBE6FAF3C3C1B5CB2EBEEA50A9",
             "installer": {
                 "script": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR/app-32.7z\" \"$dir\""
             }
