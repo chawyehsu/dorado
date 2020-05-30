@@ -8,12 +8,12 @@
     "description": "qBittorrent BitTorrent client with anti-leech enhancement.",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/c0re100/qBittorrent-Enhanced-Edition/releases/download/release-4.1.9.17/qbittorrent_4.1.9.17_x64_setup.exe#/dl.7z",
-            "hash": "1a02201f5bab85d0e92ce52085804310e2bd725aa710ba9e93605e1b27442577"
+            "url": "https://github.com/c0re100/qBittorrent-Enhanced-Edition/releases/download/release-4.2.5.11/qbittorrent_4.2.5.11_x64_setup.exe#/dl.7z",
+            "hash": "a6be9a4f109ba9239cc7efc644eaea0abf676125fbfa0b504d578e7156e15362"
         },
         "32bit": {
-            "url": "https://github.com/c0re100/qBittorrent-Enhanced-Edition/releases/download/release-4.1.9.17/qbittorrent_4.1.9.17_setup.exe#/dl.7z",
-            "hash": "38d34d4eb3ff1a67762d6f9991c730aa798d09cdc28a8c4dfcc67a45bd9ef58e"
+            "url": "https://github.com/c0re100/qBittorrent-Enhanced-Edition/releases/download/release-4.2.5.11/qbittorrent_4.2.5.11_setup.exe#/dl.7z",
+            "hash": "4e708fef593e327622827a868927dd70443ac1cd2a921878cc1c16486d4e79df"
         }
     },
     "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\" -Force -Recurse",
