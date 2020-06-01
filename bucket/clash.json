@@ -11,7 +11,10 @@
     },
     "pre_install": "Rename-Item @(Get-ChildItem $dir\\clash-*.exe)[0] $dir\\clash.exe",
     "bin": "clash.exe",
-    "checkver": "github",
+    "checkver": {
+        "url": "https://github.com/Dreamacro/clash/releases",
+        "regex": "releases/tag/v([\\d.]+)"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {
