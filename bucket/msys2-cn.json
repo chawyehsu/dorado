@@ -1,0 +1,46 @@
+{
+    "version": "20200602",
+    "description": "A software distro and building platform for Windows",
+    "homepage": "https://www.msys2.org",
+    "license": "GPL-2.0-only|BSD-3-Clause",
+    "architecture": {
+        "64bit": {
+            "url": "https://mirrors.tuna.tsinghua.edu.cn/msys2/distrib/x86_64/msys2-base-x86_64-20200602.tar.xz",
+            "hash": "sha1:acb80cdba391dadeeb630419c8acef2bd47111fb",
+            "extract_dir": "msys64"
+        }
+    },
+    "bin": [
+        [
+            "msys2_shell.cmd",
+            "msys2"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "msys2.exe",
+            "MSYS2"
+        ],
+        [
+            "mingw32.exe",
+            "MinGW32"
+        ],
+        [
+            "mingw64.exe",
+            "MinGW64"
+        ]
+    ],
+    "persist": "home",
+    "checkver": {
+        "url": "https://mirrors.tuna.tsinghua.edu.cn/msys2/distrib/x86_64/",
+        "re": "msys2-base-x86_64-(\\d+).tar.xz",
+        "reverse": true
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://mirrors.tuna.tsinghua.edu.cn/msys2/distrib/x86_64/msys2-base-x86_64-$version.tar.xz"
+            }
+        }
+    }
+}
