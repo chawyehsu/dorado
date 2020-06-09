@@ -14,7 +14,7 @@
     ],
     "checkver": {
         "url": "http://www.rejetto.com/hfs/?f=dl",
-        "re": "Latest version: \\<b\\>([\\w\\d.]+)\\<\\/b\\>"
+        "regex": "(?sm)Latest version: <b>([\\w\\d.]+)"
     },
     "autoupdate": {
         "url": "http://www.rejetto.com/hfs/hfs.exe"
