@@ -56,4 +56,4 @@ Please open new app request [issue](https://github.com/h404bi/dorado/issues). :)
 
 **3. Some apps are outdated, please update it!**
 
-Be a contributor, man! Fork it, update the outdated apps app manifest, and file pull-request. :D
+Be a contributor! Fork it, update the outdated apps app manifest, and file pull-request. :D
