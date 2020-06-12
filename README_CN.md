@@ -1,11 +1,11 @@
 <div align="center">
     <h1 align="center">🐟 dorado</h1>
     <p align="center">
-        <a href="https://ci.appveyor.com/project/h404bi/dorado/branch/master"><img src="https://img.shields.io/appveyor/ci/h404bi/dorado/master.svg?style=flat-square&label=AppVeyor&logo=appveyor" alt="AppVeyor Build Status"></a>
-        <a href="https://github.com/h404bi/dorado/blob/master/LICENSE"><img src="https://img.shields.io/github/license/h404bi/dorado.svg?style=flat-square" alt="License"></a>
+        <a href="https://ci.appveyor.com/project/chawyehsu/dorado/branch/master"><img src="https://img.shields.io/appveyor/ci/chawyehsu/dorado/master.svg?style=flat-square&label=AppVeyor&logo=appveyor" alt="AppVeyor Build Status"></a>
+        <a href="https://github.com/chawyehsu/dorado/blob/master/LICENSE"><img src="https://img.shields.io/github/license/chawyehsu/dorado.svg?style=flat-square" alt="License"></a>
         <a href="https://www.microsoft.com/en-us/windows"><img src="https://img.shields.io/badge/Target-Windows%2010-0067B8.svg?style=flat-square" alt="Powered by Saber" /></a>
-        <a href="https://github.com/h404bi/dorado"><img src="https://img.shields.io/github/repo-size/h404bi/dorado.svg?style=flat-square" alt="Repo size"></a>
-        <a href="https://github.com/h404bi/awesome-scoop/blob/master/README.md" title="Awesome Scoop"><img src="https://awesome.re/mentioned-badge-flat.svg" alt="Mentioned in Awesome Scoop"></a>
+        <a href="https://github.com/chawyehsu/dorado"><img src="https://img.shields.io/github/repo-size/chawyehsu/dorado.svg?style=flat-square" alt="Repo size"></a>
+        <a href="https://github.com/scoopinstaller/awesome/blob/master/README.md" title="Awesome Scoop"><img src="https://awesome.re/mentioned-badge-flat.svg" alt="Mentioned in Awesome Scoop"></a>
     </p>
     <p align="center">
         <a href="README.md">English</a>|<a href="README_CN.md">简体中文</a>
@@ -47,7 +47,7 @@
 确保你已经有 Scoop 环境，执行以下命令订阅本软件仓库：
 
 ``` powershell
-scoop bucket add dorado https://github.com/h404bi/dorado
+scoop bucket add dorado https://github.com/chawyehsu/dorado
 # 或者使用国内镜像，速度快但是非实时同步
 scoop bucket add dorado https://gitee.com/h404bi/dorado.git
 ```
@@ -60,7 +60,7 @@ scoop install dorado/<软件名>
 
 **2. 我想要某个软件，这个仓库里没有！**
 
-开 [issue](https://github.com/h404bi/dorado/issues)，描述你的需求。:)
+开 [issue](https://github.com/chawyehsu/dorado/issues)，描述你的需求。:)
 
 **3. 仓库中的某个软件版本落后了，求更新！**
 
