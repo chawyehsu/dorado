@@ -1,11 +1,11 @@
 <div align="center">
     <h1 align="center">🐟 dorado</h1>
     <p align="center">
-        <a href="https://ci.appveyor.com/project/h404bi/dorado/branch/master"><img src="https://img.shields.io/appveyor/ci/h404bi/dorado/master.svg?style=flat-square&label=AppVeyor&logo=appveyor" alt="AppVeyor Build Status"></a>
-        <a href="https://github.com/h404bi/dorado/blob/master/LICENSE"><img src="https://img.shields.io/github/license/h404bi/dorado.svg?style=flat-square" alt="License"></a>
+        <a href="https://ci.appveyor.com/project/chawyehsu/dorado/branch/master"><img src="https://img.shields.io/appveyor/ci/chawyehsu/dorado/master.svg?style=flat-square&label=AppVeyor&logo=appveyor" alt="AppVeyor Build Status"></a>
+        <a href="https://github.com/chawyehsu/dorado/blob/master/LICENSE"><img src="https://img.shields.io/github/license/chawyehsu/dorado.svg?style=flat-square" alt="License"></a>
         <a href="https://www.microsoft.com/en-us/windows"><img src="https://img.shields.io/badge/Target-Windows%2010-0067B8.svg?style=flat-square" alt="Powered by Saber" /></a>
-        <a href="https://github.com/h404bi/dorado"><img src="https://img.shields.io/github/repo-size/h404bi/dorado.svg?style=flat-square" alt="Repo size"></a>
-        <a href="https://github.com/h404bi/awesome-scoop/blob/master/README.md" title="Awesome Scoop"><img src="https://awesome.re/mentioned-badge-flat.svg" alt="Mentioned in Awesome Scoop"></a>
+        <a href="https://github.com/chawyehsu/dorado"><img src="https://img.shields.io/github/repo-size/chawyehsu/dorado.svg?style=flat-square" alt="Repo size"></a>
+        <a href="https://github.com/scoopinstaller/awesome/blob/master/README.md" title="Awesome Scoop"><img src="https://awesome.re/mentioned-badge-flat.svg" alt="Mentioned in Awesome Scoop"></a>
     </p>
     <p align="center">
         <a href="README.md">English</a>|<a href="README_CN.md">简体中文</a>
@@ -41,7 +41,7 @@ Question
 Run below command in PowerShell to add the bucket:
 
 ``` powershell
-scoop bucket add dorado https://github.com/h404bi/dorado
+scoop bucket add dorado https://github.com/chawyehsu/dorado
 ```
 
 Install apps from this bucket with below command:
@@ -52,7 +52,7 @@ scoop install dorado/<app_name>
 
 **2. I want some other apps!**
 
-Please open new app request [issue](https://github.com/h404bi/dorado/issues). :)
+Please open new app request [issue](https://github.com/chawyehsu/dorado/issues). :)
 
 **3. Some apps are outdated, please update it!**
 
