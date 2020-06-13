@@ -1,0 +1,30 @@
+{
+    "homepage": "https://github.com/lzdnico/ClashWeb",
+    "description": "Another clash gui for windows with integrated API and ultra-small memory consumption",
+    "version": "1.6.4",
+    "license": "GPL-3.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/lzdnico/ClashWeb/releases/download/ClashWeb1.6.4/ClashWebRelease1.6.4.7z",
+            "hash": "ceb947e0b03984e76fab3a48ec7558e6d7dd22c84fa7863020a2e41cf282a9a9"
+        }
+    },
+    "pre_install": "Move-Item \"$dir\\ClashWeb*\\*\" \"$dir\" -Force",
+    "shortcuts": [
+        [
+            "ClashWeb.exe",
+            "ClashWeb"
+        ]
+    ],
+    "checkver": {
+        "url": "https://github.com/lzdnico/ClashWeb/releases/latest",
+        "regex": "ClashWeb([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/lzdnico/ClashWeb/releases/download/ClashWeb$version/ClashWebRelease$version.7z"
+            }
+        }
+    }
+}
