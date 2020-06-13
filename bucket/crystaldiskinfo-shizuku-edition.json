@@ -11,6 +11,10 @@
                 [
                     "DiskInfo64S.exe",
                     "CrystalDiskInfo"
+                ],
+                [
+                    "DiskInfoA64S.exe",
+                    "CrystalDiskInfoA"
                 ]
             ],
             "shortcuts": [
@@ -25,6 +29,10 @@
                 [
                     "DiskInfo32S.exe",
                     "CrystalDiskInfo"
+                ],
+                [
+                    "DiskInfoA32S.exe",
+                    "CrystalDiskInfoA"
                 ]
             ],
             "shortcuts": [
@@ -50,5 +58,6 @@
             "url": "https://osdn.net/projects/crystaldiskinfo/downloads/$matchRelease/CrystalDiskInfo$underscoreVersionShizukuUltimate.zip/",
             "regex": "<dd>$sha256</dd>"
         }
-    }
+    },
+    "notes": "If you are using ARM SoC, run \"CrystalDiskInfoA\" instead."
 }
