@@ -1,0 +1,69 @@
+{
+    "homepage": "https://osdn.net/projects/crystaldiskmark/",
+    "description": "CrystalDiskMark is a disk benchmark software.",
+    "version": "7.0.0h",
+    "license": "BSD-3-Clause",
+    "url": "https://dotsrc.dl.osdn.net/osdn/crystaldiskmark/71859/CrystalDiskMark7_0_0hShizuku.zip",
+    "hash": "24f8c1146818e032fdd2363e9f578654854d2bcb10633e14d5879453d1d49a4d",
+    "architecture": {
+        "64bit": {
+            "bin": [
+                [
+                    "DiskMark64S.exe",
+                    "CrystalDiskMark"
+                ],
+                [
+                    "DiskMarkA64S.exe",
+                    "CrystalDiskMarkA"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "DiskMark64S.exe",
+                    "CrystalDiskMark Shizuku Edition"
+                ]
+            ]
+        },
+        "32bit": {
+            "bin": [
+                [
+                    "DiskMark32S.exe",
+                    "CrystalDiskMark"
+                ],
+                [
+                    "DiskMarkA32S.exe",
+                    "CrystalDiskMarkA"
+                ]
+            ],
+            "shortcuts": [
+                [
+                    "DiskMark32S.exe",
+                    "CrystalDiskMark Shizuku Edition"
+                ]
+            ]
+        }
+    },
+    "persist": [
+        "DiskMark32.ini",
+        "DiskMark64.ini"
+    ],
+    "pre_install": [
+        "if(!(Test-Path \"$dir/DiskMark64.ini\")) { Add-Content \"$dir/DiskMark64.ini\" $null }",
+        "if(!(Test-Path \"$dir/DiskMark32.ini\")) { Add-Content \"$dir/DiskMark32.ini\" $null }"
+    ],
+    "post_install":[
+        "if(Test-Path \"$dir/DiskMark64.ini.original\") { Remove-Item \"$dir/DiskMark64.ini.original\" -Force }",
+        "if(Test-Path \"$dir/DiskMark32.ini.original\") { Remove-Item \"$dir/DiskMark32.ini.original\" -Force }"
+    ],
+    "checkver": {
+        "regex": "releases/(?<release>[\\d]+)\">CrystalDiskMark ([\\w.]+)<"
+    },
+    "autoupdate": {
+        "url": "https://dotsrc.dl.osdn.net/osdn/crystaldiskmark/$matchRelease/CrystalDiskMark$underscoreVersionShizuku.zip",
+        "hash": {
+            "url": "https://osdn.net/projects/crystaldiskmark/downloads/$matchRelease/CrystalDiskMark$underscoreVersionShizuku.zip/",
+            "regex": "<dd>$sha256</dd>"
+        }
+    },
+    "notes": "If you are using ARM SoC, run \"CrystalDiskMarkA\" instead."
+}
