@@ -44,16 +44,16 @@
         }
     },
     "persist": [
-        "DiskMark32.ini",
-        "DiskMark64.ini"
+        "DiskMark32S.ini",
+        "DiskMark64S.ini"
     ],
     "pre_install": [
-        "if(!(Test-Path \"$dir/DiskMark64.ini\")) { Add-Content \"$dir/DiskMark64.ini\" $null }",
-        "if(!(Test-Path \"$dir/DiskMark32.ini\")) { Add-Content \"$dir/DiskMark32.ini\" $null }"
+        "if(!(Test-Path \"$dir/DiskMark64S.ini\")) { Add-Content \"$dir/DiskMark64S.ini\" $null }",
+        "if(!(Test-Path \"$dir/DiskMark32S.ini\")) { Add-Content \"$dir/DiskMark32S.ini\" $null }"
     ],
     "post_install":[
-        "if(Test-Path \"$dir/DiskMark64.ini.original\") { Remove-Item \"$dir/DiskMark64.ini.original\" -Force }",
-        "if(Test-Path \"$dir/DiskMark32.ini.original\") { Remove-Item \"$dir/DiskMark32.ini.original\" -Force }"
+        "if(Test-Path \"$dir/DiskMark64S.ini.original\") { Remove-Item \"$dir/DiskMark64S.ini.original\" -Force }",
+        "if(Test-Path \"$dir/DiskMark32S.ini.original\") { Remove-Item \"$dir/DiskMark32S.ini.original\" -Force }"
     ],
     "checkver": {
         "regex": "releases/(?<release>[\\d]+)\">CrystalDiskMark ([\\w.]+)<"
