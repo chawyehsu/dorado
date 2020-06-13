@@ -48,12 +48,8 @@
         "DiskMark64S.ini"
     ],
     "pre_install": [
-        "if(!(Test-Path \"$dir/DiskMark64S.ini\")) { Add-Content \"$dir/DiskMark64S.ini\" $null }",
-        "if(!(Test-Path \"$dir/DiskMark32S.ini\")) { Add-Content \"$dir/DiskMark32S.ini\" $null }"
-    ],
-    "post_install":[
-        "if(Test-Path \"$dir/DiskMark64S.ini.original\") { Remove-Item \"$dir/DiskMark64S.ini.original\" -Force }",
-        "if(Test-Path \"$dir/DiskMark32S.ini.original\") { Remove-Item \"$dir/DiskMark32S.ini.original\" -Force }"
+        "if(!(Test-Path \"$persist_dir/DiskMark64S.ini\")) { Add-Content \"$dir/DiskMark64S.ini\" $null }",
+        "if(!(Test-Path \"$persist_dir/DiskMark32S.ini\")) { Add-Content \"$dir/DiskMark32S.ini\" $null }"
     ],
     "checkver": {
         "regex": "releases/(?<release>[\\d]+)\">CrystalDiskMark ([\\w.]+)<"
