@@ -35,7 +35,10 @@
             ]
         }
     },
-    "persist": "DiskInfo.ini",
+    "persist": [
+        "DiskInfo.ini",
+        "Smart"
+    ],
     "pre_install": "if(!(Test-Path \"$dir/DiskInfo.ini\")) { Add-Content \"$dir/DiskInfo.ini\" $null }",
     "post_install": "if(Test-Path \"$dir/DiskInfo.ini.original\") { Remove-Item \"$dir/DiskInfo.ini.original\" -Force }",
     "checkver": {
