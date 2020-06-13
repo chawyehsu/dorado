@@ -1,0 +1,47 @@
+{
+    "homepage": "https://github.com/Trojan-Qt5/Trojan-Qt5",
+    "description": "A cross-platform ss/ssr/vmess/trojan GUI client based on shadowsocks-qt",
+    "version": "1.1.6",
+    "license": "GPL-3.0-or-later",
+    "url": "https://github.com/Trojan-Qt5/Trojan-Qt5/releases/download/v1.1.6/Trojan-Qt5-Windows.7z",
+    "hash": "05038f78c36151d7558aabde7492922857313837560228b99c138fe27e0f9102",
+    "installer": {
+        "script": [
+            "function CreateFile([String] $file, [String] $content = $null) {",
+            "    if (!(Test-Path \"$persist_dir\\$file\")) {",
+            "        New-Item -Force -Path \"$persist_dir\\$file\" -ItemType file -Value $content | Out-Null",
+            "    }",
+            "}",
+            "CreateFile 'config.ini'",
+            "CreateFile 'config.json'"
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "function BackupFile([String] $file) {",
+            "    Remove-Item \"$persist_dir\\$file\" -Force",
+            "    Move-Item \"$dir\\$file\" \"$persist_dir\" -Force",
+            "}",
+            "BackupFile 'config.ini'",
+            "BackupFile 'config.json'"
+        ]
+    },
+    "shortcuts": [
+        [
+            "trojan-qt5.exe",
+            "Trojan-Qt5"
+        ]
+    ],
+    "persist": [
+        "pac",
+        "config.ini",
+        "config.json"
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/Trojan-Qt5/Trojan-Qt5/releases/download/v$version/Trojan-Qt5-Windows.7z",
+        "hash": {
+            "url": "$url.hash"
+        }
+    }
+}
