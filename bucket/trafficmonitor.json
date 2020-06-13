@@ -14,23 +14,41 @@
         }
     },
     "extract_dir": "TrafficMonitor",
+    "installer": {
+        "script": [
+            "function CreateFile([String] $file, [String] $content = $null) {",
+            "    if (!(Test-Path \"$persist_dir\\$file\")) {",
+            "        New-Item -Force -Path \"$persist_dir\\$file\" -ItemType file -Value $content | Out-Null",
+            "    }",
+            "}",
+            "CreateFile 'config.ini' '[general]\ncheck_update_when_start=false'",
+            "CreateFile 'global_cfg.ini' '[config]\nportable_mode=true'",
+            "CreateFile 'history_traffic.dat'"
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "function BackupFile([String] $file) {",
+            "    if (!(Test-Path \"$persist_dir\\$file\")) {",
+            "        Remove-Item \"$persist_dir\\$file\" -Force",
+            "    }",
+            "    Move-Item \"$dir\\$file\" \"$persist_dir\" -Force",
+            "}",
+            "BackupFile 'config.ini'",
+            "BackupFile 'global_cfg.ini'",
+            "BackupFile 'history_traffic.dat'"
+        ]
+    },
     "shortcuts": [
         [
             "TrafficMonitor.exe",
             "TrafficMonitor"
         ]
     ],
-    "pre_install": [
-        "function CreateFile([String] $file, [String] $content = $null) {",
-        "    if (!(Test-Path \"$persist_dir\\$file\")) {",
-        "        New-Item -Force -Path \"$persist_dir\\$file\" -ItemType file -Value $content | Out-Null",
-        "    }",
-        "    # Create symbolic link directly",
-        "    New-Item -ItemType SymbolicLink -Path \"$dir\\$file\" -Target \"$persist_dir\\$file\" | Out-Null",
-        "}",
-        "CreateFile 'config.ini' '[general]\ncheck_update_when_start=false'",
-        "CreateFile 'global_cfg.ini' '[config]\nportable_mode=true'",
-        "CreateFile 'history_traffic.dat'"
+    "persist": [
+        "config.ini",
+        "global_cfg.ini",
+        "history_traffic.dat"
     ],
     "checkver": "github",
     "autoupdate": {

@@ -6,24 +6,36 @@
     "url": "https://github.com/MultiMC/MultiMC5/releases/download/0.6.11/mmc-stable-win32.zip",
     "hash": "007b517746a7659560c9d9abc8a2e42a7497e27337ada4adfad06390446f59bc",
     "extract_dir": "MultiMC",
-    "bin": "MultiMC.exe",
+    "installer": {
+        "script": [
+            "function CreateFile([String] $file, [String] $content = $null) {",
+            "    if (!(Test-Path \"$persist_dir\\$file\")) {",
+            "        New-Item -Force -Path \"$persist_dir\\$file\" -ItemType file -Value $content | Out-Null",
+            "    }",
+            "}",
+            "CreateFile 'accounts.json'",
+            "CreateFile 'multimc.cfg' 'UpdateChannel=stable'",
+            "CreateFile 'notifications.json'"
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "function BackupFile([String] $file) {",
+            "    if (!(Test-Path \"$persist_dir\\$file\")) {",
+            "        Remove-Item \"$persist_dir\\$file\" -Force",
+            "    }",
+            "    Move-Item \"$dir\\$file\" \"$persist_dir\" -Force",
+            "}",
+            "BackupFile 'accounts.json'",
+            "BackupFile 'multimc.cfg'",
+            "BackupFile 'notifications.json'"
+        ]
+    },
     "shortcuts": [
         [
             "MultiMC.exe",
             "MultiMC"
         ]
-    ],
-    "pre_install": [
-        "function CreateFile([String] $file, [String] $content = $null) {",
-        "    if (!(Test-Path \"$persist_dir\\$file\")) {",
-        "        New-Item -Force -Path \"$persist_dir\\$file\" -ItemType file -Value $content | Out-Null",
-        "    }",
-        "    # Create symbolic link directly",
-        "    New-Item -ItemType SymbolicLink -Path \"$dir\\$file\" -Target \"$persist_dir\\$file\" | Out-Null",
-        "}",
-        "CreateFile 'accounts.json'",
-        "CreateFile 'multimc.cfg' 'UpdateChannel=stable'",
-        "CreateFile 'notifications.json'"
     ],
     "persist": [
         "accounts",
@@ -32,7 +44,10 @@
         "libraries",
         "meta",
         "themes",
-        "translations"
+        "translations",
+        "accounts.json",
+        "multimc.cfg",
+        "notifications.json"
     ],
     "suggest": {
         "MCEdit": "dorado/mcedit"

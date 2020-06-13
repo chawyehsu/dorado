@@ -17,7 +17,7 @@
     "installer": {
         "script": [
             "if (!$env:SCOOP_APPS_DIR) { $env:SCOOP_APPS_DIR = Split-Path (Split-Path (Resolve-Path (scoop prefix scoop))) }",
-            "Write-Host 'Creating SymbolicLink...' -f DarkCyan",
+            "Write-Host 'Creating Junctions...' -f DarkCyan",
             "New-Item -Type Junction -Path \"$dir\\apache\" -Target \"$env:SCOOP_APPS_DIR\\apache\\current\" | Out-Null",
             "New-Item -Type Junction -Path \"$dir\\nginx\" -Target \"$env:SCOOP_APPS_DIR\\nginx\\current\" | Out-Null",
             "New-Item -Type Junction -Path \"$dir\\mysql\" -Target \"$env:SCOOP_APPS_DIR\\mysql57\\current\" | Out-Null",
