@@ -1,0 +1,48 @@
+{
+    "homepage": "https://volta.sh/",
+    "description": "Volta is a hassle-free way to manage your JavaScript command-line tools",
+    "license": "BSD-2-Clause",
+    "version": "0.8.2",
+    "url": "https://github.com/volta-cli/volta/releases/download/v0.8.2/volta-0.8.2-windows.zip",
+    "hash": "8f0d07c2290163c9776f3b23f1a26de575ac8ce099a1ede746a5a8d65b9e3ded",
+    "installer": {
+        "script": [
+            "function UpdateBasicShimFile([String] $file) {",
+            "    # override old shims",
+            "    if (Test-Path \"$persist_dir\\appdata\\bin\\$file\") {",
+            "        Remove-Item \"$persist_dir\\appdata\\bin\\$file\" -Force",
+            "        Copy-Item \"$dir\\volta-shim.exe\" \"$persist_dir\\appdata\\bin\\$file\"",
+            "    # or create new shims",
+            "    } else {",
+            "        if (!(Test-Path \"$dir\\appdata\\bin\")) {",
+            "            New-Item -Path \"$dir\\appdata\\bin\" -ItemType Directory | Out-Null",
+            "        }",
+            "        Copy-Item \"$dir\\volta-shim.exe\" \"$dir\\appdata\\bin\\$file\"",
+            "    }",
+            "}",
+            "UpdateBasicShimFile 'node.exe'",
+            "UpdateBasicShimFile 'npm.exe'",
+            "UpdateBasicShimFile 'npx.exe'",
+            "UpdateBasicShimFile 'yarn.exe'"
+        ]
+    },
+    "env_set": {
+        "VOLTA_HOME": "$dir\\appdata"
+    },
+    "env_add_path": [
+        ".",
+        "appdata\\bin"
+    ],
+    "persist": "appdata",
+    "checkver": {
+        "github": "https://github.com/volta-cli/volta"
+    },
+    "autoupdate": {
+        "url": "https://github.com/volta-cli/volta/releases/download/v$version/volta-$version-windows.zip"
+    },
+    "notes": [
+        "To use volta tab-completions, add following code to your PowerShell PROFILE:",
+        "",
+        "(& volta completions powershell) | Out-String | Invoke-Expression"
+    ]
+}
