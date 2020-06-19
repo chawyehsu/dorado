@@ -1,6 +1,6 @@
 {
     "homepage": "https://christopherwk210.github.io/bamboo/",
-    "description": "Leverage the power of the TinyPNG API to optimize your images with smart lossy compression.",
+    "description": "A cross-platform TinyPNG client",
     "version": "1.2.0",
     "license": "MIT",
     "url": "https://github.com/christopherwk210/bamboo/releases/download/v1.2.0/bamboo-win32-ia32.zip",
@@ -12,5 +12,10 @@
             "Bamboo"
         ]
     ],
-    "checkver": "github"
+    "checkver": {
+        "github": "https://github.com/christopherwk210/bamboo"
+    },
+    "autoupdate": {
+        "url": "https://github.com/christopherwk210/bamboo/releases/download/v$version/bamboo-win32-ia32.zip"
+    }
 }
