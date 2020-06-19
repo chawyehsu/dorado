@@ -7,38 +7,26 @@
     "hash": "5b3d2e8f73ee9dc7f9b05f262c31bfc3cce3ad138935837ec4c8e1a483ff7910",
     "architecture": {
         "64bit": {
-            "bin": [
-                [
-                    "DiskInfo64S.exe",
-                    "CrystalDiskInfo"
-                ],
-                [
-                    "DiskInfoA64S.exe",
-                    "CrystalDiskInfoA"
-                ]
-            ],
             "shortcuts": [
                 [
                     "DiskInfo64S.exe",
                     "CrystalDiskInfo Shizuku Edition"
+                ],
+                [
+                    "DiskInfoA64S.exe",
+                    "CrystalDiskInfo Shizuku Edition (ARM)"
                 ]
             ]
         },
         "32bit": {
-            "bin": [
-                [
-                    "DiskInfo32S.exe",
-                    "CrystalDiskInfo"
-                ],
-                [
-                    "DiskInfoA32S.exe",
-                    "CrystalDiskInfoA"
-                ]
-            ],
             "shortcuts": [
                 [
                     "DiskInfo32S.exe",
                     "CrystalDiskInfo Shizuku Edition"
+                ],
+                [
+                    "DiskInfoA32S.exe",
+                    "CrystalDiskInfo Shizuku Edition (ARM)"
                 ]
             ]
         }
@@ -58,5 +46,5 @@
             "regex": "<dd>$sha256</dd>"
         }
     },
-    "notes": "If you are using ARM SoC, run \"CrystalDiskInfoA\" instead."
+    "notes": "If you are using ARM SoC, run 'CrystalDiskInfo Shizuku Edition (ARM)' instead."
 }
