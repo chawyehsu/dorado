@@ -7,38 +7,26 @@
     "hash": "24f8c1146818e032fdd2363e9f578654854d2bcb10633e14d5879453d1d49a4d",
     "architecture": {
         "64bit": {
-            "bin": [
-                [
-                    "DiskMark64S.exe",
-                    "CrystalDiskMark"
-                ],
-                [
-                    "DiskMarkA64S.exe",
-                    "CrystalDiskMarkA"
-                ]
-            ],
             "shortcuts": [
                 [
                     "DiskMark64S.exe",
                     "CrystalDiskMark Shizuku Edition"
+                ],
+                [
+                    "DiskMarkA64S.exe",
+                    "CrystalDiskMark Shizuku Edition (ARM)"
                 ]
             ]
         },
         "32bit": {
-            "bin": [
-                [
-                    "DiskMark32S.exe",
-                    "CrystalDiskMark"
-                ],
-                [
-                    "DiskMarkA32S.exe",
-                    "CrystalDiskMarkA"
-                ]
-            ],
             "shortcuts": [
                 [
                     "DiskMark32S.exe",
                     "CrystalDiskMark Shizuku Edition"
+                ],
+                [
+                    "DiskMarkA32S.exe",
+                    "CrystalDiskMark Shizuku Edition (ARM)"
                 ]
             ]
         }
@@ -65,5 +53,5 @@
             "regex": "<dd>$sha256</dd>"
         }
     },
-    "notes": "If you are using ARM SoC, run \"CrystalDiskMarkA\" instead."
+    "notes": "If you are using ARM SoC, run 'CrystalDiskMark Shizuku Edition (ARM)' instead."
 }
