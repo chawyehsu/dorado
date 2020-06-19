@@ -1,13 +1,13 @@
 {
     "homepage": "https://github.com/microsoft/terminal",
-    "description": "The new Windows Terminal, and the original Windows console host -- all in the same place!",
-    "version": "1.1.1671.0",
+    "description": "The new Windows Terminal and the original Windows console host, all in the same place!",
+    "version": "1.0.1401.0",
     "license": {
         "identifier": "MIT",
         "url": "https://github.com/microsoft/terminal/blob/master/LICENSE"
     },
-    "url": "https://github.com/microsoft/terminal/releases/download/v1.1.1671.0/Microsoft.WindowsTerminal_1.1.1671.0_8wekyb3d8bbwe.msixbundle#/windowsterminal.msixbundle",
-    "hash": "35422fd395adfe1d18e8b7735806df478a65a2ccb24cb7afefd967e09d77bdb9",
+    "url": "https://github.com/microsoft/terminal/releases/download/v1.0.1401.0/Microsoft.WindowsTerminal_1.0.1401.0_8wekyb3d8bbwe.msixbundle",
+    "hash": "1017c8ff310e4cb4fb843de26c93baa170fe5a4764065d9faa25a45a6d724514",
     "installer": {
         "script": [
             "if ([Environment]::OSVersion.Version.Major -ne \"10\") {",
@@ -16,38 +16,30 @@
             "if ([Environment]::OSVersion.Version.Build -lt \"18362\") {",
             "    throw \"Windows Terminal requires at least Windows 10 version 1903 (build 18362) to work.\"",
             "}",
-            "Add-AppxPackage -Path \"$dir\\windowsterminal.msixbundle\"",
-            "Remove-Item \"$dir\\windowsterminal.msixbundle\"",
+            "Add-AppxPackage -Path \"$dir\\$fname\"",
+            "Remove-Item \"$dir\\$fname\"",
             "# Resolve settings",
             "ensure $persist_dir | Out-Null",
-            "$settingsFile = \"$env:LocalAppData\\Packages\\Microsoft.WindowsTerminal_8wekyb3d8bbwe\\LocalState\\settings.json\"",
-            "if (!(Test-Path \"$persist_dir\\settings.json\")) {",
-            "    if (Test-Path $settingsFile) {",
-            "        Move-Item -Path $settingsFile -Destination \"$persist_dir\" | Out-Null",
-            "    } else {",
-            "        New-Item -Force -Path \"$persist_dir\\settings.json\" -ItemType File | Out-Null",
-            "    }",
-            "}",
-            "New-Item -ItemType SymbolicLink -Path $settingsFile -Target \"$persist_dir\\settings.json\" | Out-Null"
+            "$packageName = (Get-AppxPackage -Name Microsoft.WindowsTerminal).PackageFamilyName",
+            "$settingsDir = \"$env:LocalAppData\\Packages\\$packageName\\LocalState\"",
+            "if (Test-Path \"$persist_dir\\settings.json\") {",
+            "    Copy-Item -Path \"$persist_dir\\settings.json\" -Destination $settingsDir | Out-Null",
+            "}"
         ]
     },
     "uninstaller": {
         "script": [
             "# Backup settings file",
-            "$settingsFile = \"$env:LocalAppData\\Packages\\Microsoft.WindowsTerminal_8wekyb3d8bbwe\\LocalState\\settings.json\"",
-            "if (!(Test-Path \"$persist_dir\\settings.json\")) {",
-            "    if (Test-Path $settingsFile) {",
-            "        Move-Item -Path $settingsFile -Destination \"$persist_dir\" | Out-Null",
-            "    }",
+            "$packageName = (Get-AppxPackage -Name Microsoft.WindowsTerminal).PackageFamilyName",
+            "$settingsFile = \"$env:LocalAppData\\Packages\\$packageName\\LocalState\\settings.json\"",
+            "if (Test-Path $settingsFile) {",
+            "    Copy-Item -Path $settingsFile -Destination \"$persist_dir\" -Force | Out-Null",
             "}",
             "Get-AppxPackage -Name Microsoft.WindowsTerminal | Remove-AppxPackage"
         ]
     },
-    "checkver": {
-        "url": "https://github.com/microsoft/terminal/releases",
-        "regex": "WindowsTerminal_([\\d.]+)_(?<hash>[\\w]+)\\.msix"
-    },
+    "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/microsoft/terminal/releases/download/v$version/Microsoft.WindowsTerminal_$version_$matchHash.msixbundle#/windowsterminal.msixbundle"
+        "url": "https://github.com/microsoft/terminal/releases/download/v$version/Microsoft.WindowsTerminal_$version_8wekyb3d8bbwe.msixbundle"
     }
 }
