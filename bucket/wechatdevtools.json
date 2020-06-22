@@ -1,16 +1,16 @@
 {
     "homepage": "https://developers.weixin.qq.com/miniprogram/dev/devtools/devtools.html",
     "description": "The official devtool to develop and debug WeChat Mini Programs",
-    "version": "1.03.2005140",
+    "version": "1.03.2006090",
     "license": "Freeware",
     "architecture": {
         "64bit": {
-            "url": "https://servicewechat.com/wxa-dev-logic/download_redirect?type=x64&from=mpwiki&download_version=1032005140&version_type=1#/installer.exe",
-            "hash": "2dca0a0c0db2b7cf2977457c3a6938bdfe4c82be169cc6c1d973f9666533a7f6"
+            "url": "https://servicewechat.com/wxa-dev-logic/download_redirect?type=x64&from=mpwiki&download_version=1032006090&version_type=1#/installer.exe",
+            "hash": "88708de2ea696a88797e534cc2b1e5d8a903eee022829b8bbfd31ce66456dad1"
         },
         "32bit": {
-            "url": "https://servicewechat.com/wxa-dev-logic/download_redirect?type=ia32&from=mpwiki&download_version=1032005140&version_type=1#/installer.exe",
-            "hash": "0bd6b4fd1819af0880853d95695f988311f101dbd81b35b61930a088dea4e9aa"
+            "url": "https://servicewechat.com/wxa-dev-logic/download_redirect?type=ia32&from=mpwiki&download_version=1032006090&version_type=1#/installer.exe",
+            "hash": "a432010af8348ead41e1e229cf9530e9cb1a81aa07ae5e5335a9efb2f53f2505"
         }
     },
     "pre_install": "Expand-7zipArchive \"$dir\\installer.exe\" \"$dir\\app\" -Removal",
