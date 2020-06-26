@@ -1,10 +1,10 @@
 {
     "homepage": "https://github.com/Fndroid/clash_for_windows_pkg",
     "description": "A Windows GUI based on Clash",
-    "version": "0.10.3",
+    "version": "0.10.4",
     "license": "MIT",
-    "url": "https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.10.3/Clash.for.Windows.Setup.0.10.3.exe#/dl.7z",
-    "hash": "48359d3ecc354513e5d410ae30e944557bee93fc390cc26efde3f588d2961114",
+    "url": "https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.10.4/Clash.for.Windows.Setup.0.10.4.exe#/dl.7z",
+    "hash": "2f5f1258087a9904091830a0abccd03aa0705238278ce8f2049266c6628fd2d2",
     "installer": {
         "script": [
             "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
