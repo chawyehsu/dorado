@@ -29,7 +29,11 @@
         "regex": "Yuque-([\\d.]+).exe"
     },
     "autoupdate": {
-        "url": "https://app.nlark.com/yuque-desktop/Yuque-$version.exe#/Yuque_$version.7z"
+        "architecture": {
+            "64bit": {
+                "url": "https://app.nlark.com/yuque-desktop/Yuque-$version.exe#/Yuque_$version.7z"
+            }
+        }
     },
     "notes": "Your Yuque data are not persisted by Scoop and still storaged in '%APPDATA%\\yuque-desktop'."
 }
