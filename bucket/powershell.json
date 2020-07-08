@@ -22,14 +22,15 @@
     ],
     "installer": {
         "script":[
-            "$Documents = [Environment]::GetFolderPath('MyDocuments')",
-            "cd $Documents",
+            "$CurrentDir = $pwd",
+            "$DocumentsDir = [Environment]::GetFolderPath('MyDocuments')",
+            "cd $DocumentsDir",
             "if (!(Test-Path \"PowerShell\")) {",
             "   if (is_directory \"WindowsPowerShell\") {",
             "       New-Item \"PowerShell\" -ItemType Junction -Target \"WindowsPowerShell\" | Out-Null",
             "   }",
             "}",
-            "cd $HOME"
+            "cd $CurrentDir"
         ]
     },
     "checkver": "github",
