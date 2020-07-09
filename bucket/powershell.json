@@ -22,7 +22,7 @@
     ],
     "installer": {
         "script":[
-            "$CurrentDir = $pwd",
+            "$CurrentDir = $pwd.path",
             "$DocumentsDir = [Environment]::GetFolderPath('MyDocuments')",
             "cd $DocumentsDir",
             "if (!(Test-Path \"PowerShell\")) {",
