@@ -49,13 +49,13 @@
     ],
     "uninstaller":{
         "script":[
-            "if (!(Test-Path \"resources\\static\\files\\config.yaml\")) {",
+            "if (!(Test-Path \"$dir\\resources\\static\\files\\config.yaml\")) {",
             "   Remove-Item \"$persist_dir\" -Force -Recurse",
             "}",
             "else {",
-            "   Copy-Item \"resources\\static\\files\\config.yaml\" \"$persist_dir\" -Force",
-            "   if (Test-Path \"resources\\static\\files\\cfw-settings.yaml\") {",
-            "       Copy-Item \"resources\\static\\files\\cfw-settings.yaml\" \"$persist_dir\" -Force",
+            "   Copy-Item \"$dir\\resources\\static\\files\\config.yaml\" \"$persist_dir\" -Force",
+            "   if (Test-Path \"$dir\\resources\\static\\files\\cfw-settings.yaml\") {",
+            "       Copy-Item \"$dir\\resources\\static\\files\\cfw-settings.yaml\" \"$persist_dir\" -Force",
             "   }",
             "}"
         ]
