@@ -26,7 +26,7 @@
         "   }",
         "}",
         "if (!(Test-Path \"$persist_dir\\cfw-settings.yaml\")) {",
-        "   Add-Content \"$persist_dir\\cfw-settings.yaml\" $null ",
+        "   Add-Content \"$persist_dir\\cfw-settings.yaml\" 'theme: 0' ",
         "}",
         "if (!(Test-Path \"$persist_dir\\config.yaml\")) {",
         "   Add-Content \"$persist_dir\\config.yaml\" $null ",
