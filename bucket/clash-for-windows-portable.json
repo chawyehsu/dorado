@@ -26,10 +26,10 @@
         "   }",
         "}",
         "if (!(Test-Path \"$persist_dir\\cfw-settings.yaml\")) {",
-        "   Add-Content \"$persist_dir\\cfw-settings.yaml\" $null -Encoding utf8NoBOM",
+        "   Add-Content \"$persist_dir\\cfw-settings.yaml\" $null ",
         "}",
         "if (!(Test-Path \"$persist_dir\\config.yaml\")) {",
-        "   Add-Content \"$persist_dir\\config.yaml\" $null -Encoding utf8NoBOM",
+        "   Add-Content \"$persist_dir\\config.yaml\" $null ",
         "}"
     ],
     "shortcuts": [
