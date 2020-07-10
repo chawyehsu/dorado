@@ -1,0 +1,32 @@
+{
+    "version": "1.4.8",
+    "description": "A little RCON cli based on james4k's RCON library for golang",
+    "homepage": "https://github.com/itzg/rcon-cli",
+    "license": "Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/itzg/rcon-cli/releases/download/1.4.8/rcon-cli.exe_1.4.8_windows_amd64.tar.gz",
+            "hash": "b3591869cc7d6a450a2b5bc26c880057b79c28ba7204003ed195296d18bbe5b8"
+        },
+        "32bit": {
+            "url": "https://github.com/itzg/rcon-cli/releases/download/1.4.8/rcon-cli.exe_1.4.8_windows_386.tar.gz",
+            "hash": "1fe110f43e3db03055db47ae64380c9244c1a05c30bf89a4c8887168ddb31567"
+        }
+    },
+    "bin": "rcon-cli.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/itzg/rcon-cli/releases/download/$version/rcon-cli.exe_$version_windows_amd64.tar.gz"
+            },
+            "32bit": {
+                "url": "https://github.com/itzg/rcon-cli/releases/download/$version/rcon-cli.exe_$version_windows_386.tar.gz"
+            }
+        },
+        "hash": {
+            "url": "https://github.com/itzg/rcon-cli/releases/download/$version/rcon-cli_$version_checksums.txt",
+            "mode": "extract"
+        }
+    }
+}
