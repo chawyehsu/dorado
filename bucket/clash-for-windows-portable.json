@@ -28,7 +28,7 @@
         "       Copy-Item \"$HOME\\.config\\clash\\profiles\" \"$persist_dir\" -Force -Recurse",
         "   }",
         "   if (Test-Path \"$HOME\\.config\\clash\\cfw-settings.yaml\") {",
-        "       Copy-Item \"$HOME\\.config\\clash\\*\" \"$persist_dir\" -Force",
+        "       Copy-Item \"$HOME\\.config\\clash\\cfw-settings.yaml\" \"$persist_dir\" -Force",
         "   }",
         "   if (Test-Path \"$HOME\\.config\\clash\\config.yaml\") {",
         "       Copy-Item \"$HOME\\.config\\clash\\config.yaml\" \"$persist_dir\" -Force",
