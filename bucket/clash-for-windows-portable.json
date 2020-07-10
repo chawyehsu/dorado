@@ -53,8 +53,10 @@
             "   Remove-Item \"$persist_dir\" -Force -Recurse",
             "}",
             "else {",
+            "   Remove-Item \"$persist_dir\\config.yaml\" -Force",
             "   Copy-Item \"$dir\\resources\\static\\files\\config.yaml\" \"$persist_dir\" -Force",
             "   if (Test-Path \"$dir\\resources\\static\\files\\cfw-settings.yaml\") {",
+            "       Remove-Item \"$persist_dir\\cfw-settings.yaml\" -Force",
             "       Copy-Item \"$dir\\resources\\static\\files\\cfw-settings.yaml\" \"$persist_dir\" -Force",
             "   }",
             "}"
