@@ -6,6 +6,12 @@
     "url": "https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.11.0/Clash.for.Windows.Setup.0.11.0.exe#/dl.7z",
     "hash": "d76156daf412bdc45311b1940161ae67eb332e97d9e4301713e2e59b736a9021",
     "notes":"Run 'scoop uninstall -p clash-for-windows-portable' if you want to delete all profiles and configs while uninstalling",
+    "shortcuts": [
+        [
+            "Clash for Windows.exe",
+            "Clash for Windows"
+        ]
+    ],
     "persist":[
         ["resources\\static\\files\\logs","logs"],
         ["resources\\static\\files\\profiles","profiles"],
@@ -41,12 +47,19 @@
         "   Add-Content \"$persist_dir\\config.yaml\" $null ",
         "}"
     ],
-    "shortcuts": [
-        [
-            "Clash for Windows.exe",
-            "Clash for Windows"
+    "uninstaller":{
+        "script":[
+            "if (!(Test-Path \"resources\\static\\files\\config.yaml\")) {",
+            "   Remove-Item \"$persist_dir\" -Force -Recurse",
+            "}",
+            "else {",
+            "   Copy-Item \"resources\\static\\files\\config.yaml\" \"$persist_dir\" -Force",
+            "   if (Test-Path \"resources\\static\\files\\cfw-settings.yaml\") {",
+            "       Copy-Item \"resources\\static\\files\\cfw-settings.yaml\" \"$persist_dir\" -Force",
+            "   }",
+            "}"
         ]
-    ],
+    },
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/Fndroid/clash_for_windows_pkg/releases/download/$version/Clash.for.Windows.Setup.$version.exe#/dl.7z",
