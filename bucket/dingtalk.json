@@ -5,9 +5,9 @@
         "identifier": "EULA",
         "url": "https://tms.dingtalk.com/markets/dingtalk/service-terms-zh"
     },
-    "version": "5.1.9.11",
-    "url": "https://dtapp-pub.dingtalk.com/dingtalk-desktop/win_installer/Release/DingTalk_v5.1.9.11.exe#/dl.7z",
-    "hash": "md5:a427b5f811f62145313fe2b557fda3f4",
+    "version": "5.1.11.15",
+    "url": "https://dtapp-pub.dingtalk.com/dingtalk-desktop/win_installer/Release/DingTalk_v5.1.11.15.exe#/dl.7z",
+    "hash": "md5:f74852d3cdf9555679895465fc39c75e",
     "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\" -Recurse",
     "shortcuts": [
         [
