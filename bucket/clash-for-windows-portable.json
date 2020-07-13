@@ -30,6 +30,7 @@
         "    New-Item \"$persist_dir\" -ItemType Directory -Force | Out-Null",
         "    New-Item \"$persist_dir\\providers\" -ItemType Directory -Force | Out-Null",
         "    Copy-Item \"$HOME\\.config\\clash\\*.yaml\" \"$persist_dir\\providers\" -Force",
+        "    Copy-Item \"$HOME\\.config\\clash\\*\\*.yaml\" \"$persist_dir\\providers\" -Force",
         "    if (Test-Path \"$persist_dir\\providers\\cfw-settings.yaml\") {",
         "        Move-Item \"$persist_dir\\providers\\cfw-settings.yaml\" \"$persist_dir\" -Force",
         "    }",
