@@ -73,9 +73,9 @@
             "}",
             "if (Test-Path \"$dir\\resources\\static\\files\\config.yaml\") {",
             "    Copy-Item \"$dir\\resources\\static\\files\\config.yaml\" \"$persist_dir\" -Force",
-            "}",
-            "if (Test-Path \"$dir\\resources\\static\\files\\cfw-settings.yaml\") {",
-            "    Copy-Item \"$dir\\resources\\static\\files\\cfw-settings.yaml\" \"$persist_dir\" -Force",
+            "    if (Test-Path \"$dir\\resources\\static\\files\\cfw-settings.yaml\") {",
+            "        Copy-Item \"$dir\\resources\\static\\files\\cfw-settings.yaml\" \"$persist_dir\" -Force",
+            "    }",
             "}"
         ]
     },
