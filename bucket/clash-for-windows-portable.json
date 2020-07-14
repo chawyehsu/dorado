@@ -57,13 +57,13 @@
         "    Add-Content \"$persist_dir\\cfw-settings.yaml\" 'theme: 0' ",
         "}",
         "if (Test-Path \"$persist_dir\\clash_win\") {",
-        "    Move-Item \"$persist_dir\\clash_win\" \"$env:appdata\" -Force -Recurse",
+        "    Move-Item \"$persist_dir\\clash_win\" \"$env:appdata\" -Force",
         "}"
     ],
     "uninstaller":{
         "script":[
             "if (Test-Path \"$env:appdata\\clash_win\") {",
-            "    Move-Item \"$env:appdata\\clash_win\" \"$persist_dir\" -Force -Recurse",
+            "    Move-Item \"$env:appdata\\clash_win\" \"$persist_dir\" -Force",
             "}",            
             "if (Test-path \"$persist_dir\\config.yaml\") {",
             "    Remove-Item \"$persist_dir\\config.yaml\" -Force",
