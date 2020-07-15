@@ -4,7 +4,7 @@
     "version": "1.4.0",
     "license": "GPL-3.0-or-later",
     "url": "https://github.com/Trojan-Qt5/Trojan-Qt5/releases/download/v1.4.0/Trojan-Qt5-Windows.7z",
-    "hash": "307e478e70c4d3e668473bfd7ba095ea08712d7d21821f8004af86b9d065c4d5",
+    "hash": "369d50bde8985a01ca1d6c807e5098209adf59540404d3d5584f0ab7f16523a0",
     "installer": {
         "script": [
             "function CreateFile([String] $file, [String] $content = $null) {",
@@ -43,7 +43,9 @@
     "autoupdate": {
         "url": "https://github.com/Trojan-Qt5/Trojan-Qt5/releases/download/v$version/Trojan-Qt5-Windows.7z",
         "hash": {
-            "url": "$url.hash"
+            "url": "$url.hash",
+            "mode": "extract",
+            "regex": "SHA256: $sha256"
         }
     }
 }
