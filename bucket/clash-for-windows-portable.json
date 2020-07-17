@@ -54,7 +54,7 @@
         "    }",
         "}",
         "if (!(Test-Path \"$persist_dir\\cfw-settings.yaml\")) {",
-        "    Add-Content \"$persist_dir\\cfw-settings.yaml\" 'theme: 0' ",
+        "    Add-Content \"$persist_dir\\cfw-settings.yaml\" $null ",
         "}"
     ],
     "uninstaller":{
