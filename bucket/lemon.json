@@ -1,0 +1,18 @@
+{
+  "version": "0.2.2",
+  "description": "A tiny judging environment for OI contest based on Lemon + LemonPlus.",
+  "homepage": "https://github.com/iotang/Project_LemonLime/",
+  "license": {
+    "identifier": "GPL-3.0"
+  },
+  "installer": {
+    "script": [
+      "Get-ChildItem -Path $dir\\5.15.0-desktop-win64_msvc2019_64\\* -Recurse | Move-Item -Destination $dir\\",
+      "Remove-Item $dir\\5.15.0-desktop-win64_msvc2019_64"
+    ]
+  },
+  "url": "https://github.com/iotang/Project_LemonLime/releases/download/v0.2.2/5.15.0-desktop-win64_msvc2019_64.zip",
+  "hash": "md5:48E5C9D2EB13563D8A134B7623EBF2D2",
+  "shortcuts": [["lemon.exe", "Lemon"]],
+  "bin": "lemon.exe"
+}
