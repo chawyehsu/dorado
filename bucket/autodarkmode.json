@@ -1,12 +1,17 @@
 {
     "homepage": "https://github.com/Armin2208/Windows-Auto-Night-Mode",
     "description": "Automatically switches between the dark and light theme of Windows 10",
-    "version": "2.3.1",
+    "version": "3.0",
     "license": "GPL-3.0-only",
-    "url": "https://github.com/Armin2208/Windows-Auto-Night-Mode/releases/download/2.3.1/AutoDarkMode_Setup.exe",
-    "hash": "fea01593ebcd7aeec3a4d7566e4c449a486c8c9fecd0b7941ebb036fb0fe2797",
+    "url": "https://github.com/Armin2208/Windows-Auto-Night-Mode/releases/download/3.0/AutoDarkMode_v3_Setup.zip",
+    "hash": "9070876f8646688aff139faa699db86acfc4fe4b9ac7062131fca775392261cf",
     "depends": "innounp",
-    "pre_install": "Expand-InnoArchive -Path \"$dir\\$fname\" -Switches \"-a\"  -Removal",
+    "installer": {
+        "script": [
+            "Rename-Item \"$dir\\*Setup.exe\" \"$dir\\setup.exe\"",
+            "Expand-InnoArchive -Path \"$dir\\setup.exe\" -Switches \"-a\" -Removal"
+        ]
+    },
     "shortcuts": [
         [
             "AutoDarkMode.exe",
@@ -15,6 +20,6 @@
     ],
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/Armin2208/Windows-Auto-Night-Mode/releases/download/$version/AutoDarkMode_Setup.exe"
+        "url": "https://github.com/Armin2208/Windows-Auto-Night-Mode/releases/download/$version/AutoDarkMode_v$majorVersion_Setup.zip"
     }
 }

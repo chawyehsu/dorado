@@ -1,0 +1,34 @@
+{
+    "homepage": "http://tomotoes.com/scrcpy-gui/",
+    "description": "A simple & beautiful GUI application for scrcpy",
+    "version": "1.5.1",
+    "license": "GPL-3.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Tomotoes/scrcpy-gui/releases/download/1.5.1/ScrcpyGui-1.5.1.win64.exe#/scrcpy-gui-1.5.1.win64.zip",
+            "hash": "a377b5fdbd4daa6aeaeaf384ffafced3f1c67b8cb4871d1c09315aa91d202350",
+            "installer": {
+                "script": [
+                    "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
+                    "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninst*\" -Force -Recurse"
+                ]
+            }
+        }
+    },
+    "shortcuts": [
+        [
+            "ScrcpyGui.exe",
+            "ScrcpyGui"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/Tomotoes/scrcpy-gui"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Tomotoes/scrcpy-gui/releases/download/$version/ScrcpyGui-$version.win64.exe#/scrcpy-gui-1.5.1.win64.zip"
+            }
+        }
+    }
+}
