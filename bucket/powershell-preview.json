@@ -1,5 +1,5 @@
 {
-    "homepage": "https://github.com/PowerShell/PowerShell",
+    "homepage": "https://github.com/PowerShell/PowerShell/",
     "description": "PowerShell (Preview), the cross-platform task automation and configuration management framework/tool.",
     "version": "7.1.0-preview.5",
     "license": "MIT",
@@ -20,19 +20,6 @@
             "PowerShell Preview"
         ]
     ],
-    "installer": {
-        "script":[
-            "$CurrentDir = $pwd.path",
-            "$DocumentsDir = [Environment]::GetFolderPath('MyDocuments')",
-            "cd $DocumentsDir",
-            "if (!(Test-Path \"PowerShell\")) {",
-            "   if (is_directory \"WindowsPowerShell\") {",
-            "       New-Item \"PowerShell\" -ItemType Junction -Target \"WindowsPowerShell\" | Out-Null",
-            "   }",
-            "}",
-            "cd $CurrentDir"
-        ]
-    },
     "checkver": {
         "url": "https://www.github.com/PowerShell/PowerShell/releases",
         "regex": "v([\\d.]+-[\\w.]+)</"

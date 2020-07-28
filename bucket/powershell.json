@@ -20,19 +20,6 @@
             "PowerShell"
         ]
     ],
-    "installer": {
-        "script":[
-            "$CurrentDir = $pwd.path",
-            "$DocumentsDir = [Environment]::GetFolderPath('MyDocuments')",
-            "cd $DocumentsDir",
-            "if (!(Test-Path \"PowerShell\")) {",
-            "   if (is_directory \"WindowsPowerShell\") {",
-            "       New-Item \"PowerShell\" -ItemType Junction -Target \"WindowsPowerShell\" | Out-Null",
-            "   }",
-            "}",
-            "cd $CurrentDir"
-        ]
-    },
     "checkver": "github",
     "autoupdate": {
         "architecture": {
