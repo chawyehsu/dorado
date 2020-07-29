@@ -3,7 +3,7 @@
     "description": "A cross-platform ss/ssr/vmess/trojan GUI client based on shadowsocks-qt",
     "version": "1.4.0",
     "license": "GPL-3.0-or-later",
-    "url": "https://github.com/Trojan-Qt5/Trojan-Qt5/releases/download/v1.4.0/Trojan-Qt5-Windows.7z",
+    "url": "https://github.com/kidonng/sushi/releases/download/binaries/Trojan-Qt5-Windows-1.4.0.7z",
     "hash": "369d50bde8985a01ca1d6c807e5098209adf59540404d3d5584f0ab7f16523a0",
     "installer": {
         "script": [
@@ -38,14 +38,5 @@
         "pac",
         "config.ini",
         "config.json"
-    ],
-    "checkver": "github",
-    "autoupdate": {
-        "url": "https://github.com/Trojan-Qt5/Trojan-Qt5/releases/download/v$version/Trojan-Qt5-Windows.7z",
-        "hash": {
-            "url": "$url.hash",
-            "mode": "extract",
-            "regex": "SHA256: $sha256"
-        }
-    }
+    ]
 }
