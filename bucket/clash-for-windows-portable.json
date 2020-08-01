@@ -57,11 +57,11 @@
         "        Write-Host 'This version uses profiles in scoop directory, old files in user directory can be removed by running \"Remove-Item $HOME\\.config\\clash -Force -Recurse\"' -ForegroundColor Yellow",
         "    }",
         "    else {",
-        "        Add-Content \"$persist_dir\\config.yaml\" $null ",
+        "        New-Item \"$persist_dir\\config.yaml\" | Out-Null",
         "    }",
         "}",
         "if (!(Test-Path \"$persist_dir\\cfw-settings.yaml\")) {",
-        "    Add-Content \"$persist_dir\\cfw-settings.yaml\" $null ",
+        "    New-Item \"$persist_dir\\cfw-settings.yaml\" | Out-Null",
         "}"
     ],
     "uninstaller":{
