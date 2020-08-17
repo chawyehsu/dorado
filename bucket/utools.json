@@ -5,7 +5,7 @@
     "version": "1.2.0",
     "architecture": {
         "64bit": {
-            "url": "ttps://res.u-tools.cn/currentversion/uTools-1.2.0.exe#/dl.7z",
+            "url": "https://res.u-tools.cn/currentversion/uTools-1.2.0.exe#/dl.7z",
             "hash": "sha512:7d2d1d2d63d9733d42762034b8533b843e6a1ca5b19ef87adaa23552b9fb6926d77f729df53daf12f3906619003c85451f5e77bab2445b984ef79805a17137d1",
             "installer": {
                 "script": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR/app-64.7z\" \"$dir\""
@@ -33,7 +33,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "ttps://res.u-tools.cn/currentversion/uTools-$version.exe#/dl.7z",
+                "url": "https://res.u-tools.cn/currentversion/uTools-$version.exe#/dl.7z",
                 "hash": {
                     "url": "https://res.u-tools.cn/currentversion/public.yml",
                     "mode": "extract",
