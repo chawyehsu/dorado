@@ -1,0 +1,33 @@
+{
+    "homepage": "https://github.com/tindy2013/stairspeedtest-reborn",
+    "description": "Proxy performance batch tester based on Shadowsocks(R) and V2Ray",
+    "license": "MIT",
+    "version": "0.7.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/tindy2013/stairspeedtest-reborn/releases/download/v0.7.0/stairspeedtest_reborn_win64.7z",
+            "hash": "8e519590f55af85b57292281598b3c080a077972494ea2b0d76cb75b94b3f982"
+        },
+        "32bit": {
+            "url": "https://github.com/tindy2013/stairspeedtest-reborn/releases/download/v0.7.0/stairspeedtest_reborn_win32.7z",
+            "hash": "5413ccda0672fd7c15d7f87859163bf82a5a5997bc12c1a59f86dd828150f6de"
+        }
+    },
+    "extract_dir": "stairspeedtest",
+    "bin": "stairspeedtest.exe",
+    "persist": [
+        "logs",
+        "results"
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/tindy2013/stairspeedtest-reborn/releases/download/v$version/stairspeedtest_reborn_win64.7z"
+            },
+            "32bit": {
+                "url": "https://github.com/tindy2013/stairspeedtest-reborn/releases/download/v$version/stairspeedtest_reborn_win32.7z"
+            }
+        }
+    }
+}
