@@ -21,7 +21,8 @@
     ],
     "bin": "chunky.jar",
     "checkver": {
-        "re": "Download version ([\\d.]+)"
+        "url": "https://chunky.llbit.se/download.html",
+        "re": "version ([\\d.]+)"
     },
     "autoupdate": {
         "url": "https://launchpad.net/chunky/$majorVersion.$minorVersion/$version/+download/Chunky-$version.exe#/dl.7z",
