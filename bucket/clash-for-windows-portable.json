@@ -1,11 +1,11 @@
 {
     "homepage": "https://github.com/Fndroid/clash_for_windows_pkg",
     "description": "A Windows GUI based on Clash",
-    "version": "0.11.5",
+    "version": "0.11.6",
     "license": "MIT",
-    "url": "https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.11.5/Clash.for.Windows.Setup.0.11.5.exe#/dl.7z",
-    "hash": "18b6bdedd9f7867d2ce0dcb7b23806eb6f3e8d36a2a489d542057c3b7d707f24",
-    "notes":[
+    "url": "https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.11.6/Clash.for.Windows.Setup.0.11.6.exe#/dl.7z",
+    "hash": "fd767064a08b5d2ad781fb99994bfcaf2243853d614d57b24f55cba65da7e3ea",
+    "notes": [
         "Place provider files in \".\\providers\\\" directory to keep persisted",
         "Profiles and settings will be permanently removed by running \"scoop uninstall -p clash-for-windows-portable\" while uninstalling"
     ],
@@ -15,12 +15,27 @@
             "Clash for Windows"
         ]
     ],
-    "persist":[
-        ["resources\\static\\files\\logs","logs"],
-        ["resources\\static\\files\\profiles","profiles"],
-        ["resources\\static\\files\\providers","providers"],
-        ["resources\\static\\files\\cfw-settings.yaml","cfw-settings.yaml"],
-        ["resources\\static\\files\\config.yaml","config.yaml"]
+    "persist": [
+        [
+            "resources\\static\\files\\logs",
+            "logs"
+        ],
+        [
+            "resources\\static\\files\\profiles",
+            "profiles"
+        ],
+        [
+            "resources\\static\\files\\providers",
+            "providers"
+        ],
+        [
+            "resources\\static\\files\\cfw-settings.yaml",
+            "cfw-settings.yaml"
+        ],
+        [
+            "resources\\static\\files\\config.yaml",
+            "config.yaml"
+        ]
     ],
     "installer": {
         "script": [
@@ -28,11 +43,11 @@
             "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninst*\" -Force -Recurse"
         ]
     },
-    "pre_install":[
+    "pre_install": [
         "if (Test-Path \"$persist_dir\\clash_win\") {",
         "    Move-Item \"$persist_dir\\clash_win\" \"$env:appdata\" -Force",
         "}",
-        "if (!(Test-Path \"$persist_dir\\config.yaml\")) {",     
+        "if (!(Test-Path \"$persist_dir\\config.yaml\")) {",
         "    if (!(Test-Path \"$persist_dir\")) {",
         "        New-Item \"$persist_dir\" -ItemType Directory -Force | Out-Null",
         "    }",
@@ -64,8 +79,8 @@
         "    New-Item \"$persist_dir\\cfw-settings.yaml\" | Out-Null",
         "}"
     ],
-    "uninstaller":{
-        "script":[
+    "uninstaller": {
+        "script": [
             "Remove-Item \"$persist_dir\\config.yaml\" -Force",
             "Remove-Item \"$persist_dir\\cfw-settings.yaml\" -Force",
             "if (Test-Path \"$dir\\resources\\static\\files\\config.yaml\") {",
