@@ -1,0 +1,34 @@
+{
+    "homepage": "https://microapp.bytedance.com/",
+    "description": "IDE for Bytedance Micro-App Development",
+    "version": "2.0.2",
+    "license": "Unknown",
+    "url": "https://sf3-ttcdn-tos.pstatp.com/obj/ee-entrust/5265dc598ac8341f7d251be8c71f13c5_bytedanceide-2.0.2.exe#/bytedanceide-2.0.2.7z",
+    "hash": "md5:5265dc598ac8341f7d251be8c71f13c5",
+    "extract_dir": "$PLUGINSDIR",
+    "installer": {
+        "script": [
+            "Remove-Item \"$dir\\*\" -Exclude \"app-64.7z\"",
+            "Expand-7zipArchive \"$dir\\app-64.7z\" \"$dir\"",
+            "Remove-Item \"$dir\\app-64.7z\""
+        ]
+    },
+    "shortcuts": [
+        [
+            "字节跳动开发者工具.exe",
+            "字节跳动开发者工具"
+        ]
+    ],
+    "checkver": {
+        "url": "https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/developer-instrument/developer-instrument-update-and-download/",
+        "regex": "https://sf3-ttcdn-tos.pstatp.com/obj/ee-entrust/(?<md5>[\\w/]*)_bytedanceide-(?<version>[\\d.]+).exe"
+    },
+    "autoupdate": {
+        "url": "https://sf3-ttcdn-tos.pstatp.com/obj/ee-entrust/$matchMd5_bytedanceide-$version.exe#/bytedanceide-$version.7z",
+        "hash": {
+            "url": "https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/developer-instrument/developer-instrument-update-and-download/",
+            "regex": "https://sf3-ttcdn-tos.pstatp.com/obj/ee-entrust/$md5_bytedanceide-$version.exe"
+        }
+    },
+    "notes": "Your  Bytedance Micro-App IDE data are storaged in '%APPDATA%\\字节跳动开发者工具'."
+}
