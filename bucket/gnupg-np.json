@@ -1,0 +1,26 @@
+{
+    "homepage": "https://www.gnupg.org/",
+    "description": "A complete and free implementation of the OpenPGP standard",
+    "version": "2.2.23",
+    "license": "GPL-3.0-or-later",
+    "url": "https://www.gnupg.org/ftp/gcrypt/binary/gnupg-w32-2.2.23_20200903.exe#/dl.7z",
+    "hash": "sha1:489bc6de0a078248086f3214ca298dd6145ec497",
+    "pre_install": [
+        "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\gnupg-uninstall.exe.nsis\" -Force -Recurse"
+    ],
+    "env_set": {
+        "GNUPGHOME": "$env:USERPROFILE\\.gnupg"
+    },
+    "env_add_path": "bin",
+    "checkver": {
+        "url": "https://www.gnupg.org/download/index.html",
+        "regex": "gnupg-w32-([\\d.]+)_(?<date>\\d+)\\.exe"
+    },
+    "autoupdate": {
+        "url": "https://www.gnupg.org/ftp/gcrypt/binary/gnupg-w32-$version_$matchDate.exe#/dl.7z",
+        "hash": {
+            "url": "https://www.gnupg.org/download/integrity_check.html",
+            "regex": "$sha1\\s+$basename"
+        }
+    }
+}
