@@ -1,0 +1,47 @@
+{
+    "version": "1.20.4",
+    "description": "Google’s mobile app SDK for crafting high-quality native interfaces on iOS and Android",
+    "homepage": "https://flutter.dev",
+    "license": "BSD-3-Clause",
+    "depends": [
+        "extras/android-sdk",
+        "java/ojdkbuild8"
+    ],
+    "suggest": {
+        "Visual Studio Code with Flutter Extension": [
+            "vscode",
+            "vscode-portable"
+        ],
+        "Andoid Studio with Flutter Extension": "android-studio",
+        "Intellij IDEA with Flutter Extension": [
+            "idea",
+            "idea-ultimate",
+            "idea-ultimate-eap"
+        ]
+    },
+    "url": "https://storage.flutter-io.cn/flutter_infra/releases/stable/windows/flutter_windows_1.20.4-stable.zip",
+    "hash": "8b52de9ae41bc2d51ca5ceb752c5fac52cd468fde5e8524a0238319d357ceaa1",
+    "extract_dir": "flutter",
+    "post_install": [
+        "Write-Host 'Some licenses need to be accepted before developing. It is recommended to do by running ''flutter doctor --android-licenses''.' -ForegroundColor Yellow",
+        "flutter doctor"
+    ],
+    "bin": "bin\\flutter.bat",
+    "env_add_path": "bin\\cache\\dart-sdk\\bin",
+    "env_set": {
+        "FLUTTER_STORAGE_BASE_URL": "https://storage.flutter-io.cn",
+        "PUB_HOSTED_URL": "https://pub.flutter-io.cn"
+    },
+    "checkver": {
+        "url": "https://storage.flutter-io.cn/flutter_infra/releases/releases_windows.json",
+        "regex": "windows_(v?[\\d.]+)(?<delim>[-+]?)(?<build>[\\w.]*)-stable",
+        "replace": "$1${delim}${build}"
+    },
+    "autoupdate": {
+        "url": "https://storage.flutter-io.cn/flutter_infra/releases/stable/windows/flutter_windows_$matchHead$matchDelim$matchBuild-stable.zip",
+        "hash": {
+            "url": "https://storage.flutter-io.cn/flutter_infra/releases/releases_windows.json",
+            "jsonpath": "$.releases[?(@.archive =~ /.*flutter_windows_$matchHead$matchDelim$matchBuild-stable.zip/)].sha256"
+        }
+    }
+}
