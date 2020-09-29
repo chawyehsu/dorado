@@ -1,0 +1,34 @@
+{
+    "version": "1.2.0916a",
+    "description": "ToDesk is a safe, practical and smooth remote assistance software, you can easily achieve remote control, file transfer and a series of operations, which greatly enhance the efficiency of the user's working life.",
+    "homepage": "https://www.todesk.com/index.html",
+    "license": "Unknown",
+    "url": "https://update.todesk.com/setup_20200916a.exe#/dl.7z",
+    "hash": "78bcc757b681c541b9f0a99b1d6c0566fb48ba3b97849f58c50d59d7f8de10fe",
+    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\uninstall.exe.nsis\", \"$dir\\todeskupd.exe\" -Force -Recurse",
+    "bin": "ToDesk.exe",
+    "pre_install": [
+        "@('config.ini', 'userInfo.json') | ForEach-Object {",
+        "    if(!(Test-Path \"$persist_dir\\$_\")) { New-Item \"$dir\\$_\" -Type File | Out-Null }",
+        "}"
+    ],
+    "persist": [
+        "config.ini",
+        "userInfo.json",
+        "Logs"
+    ],
+    "shortcuts": [
+        [
+            "ToDesk.exe",
+            "ToDesk"
+        ]
+    ],
+   "checkver": {
+        "url": "https://www.todesk.com/download.html",
+        "regex": "(?s)(\\d+)\\.(\\d+)\\.(?<code>\\d+[a-z]?)\\s*.*?</p>[\\s\\S]*?(?<year>\\d+)-",
+        "replace":"${1}.${2}.$code"
+    },
+    "autoupdate": {
+        "url": "https://update.todesk.com/setup_$matchYear$matchCode.exe#/dl.7z"
+    }
+}
