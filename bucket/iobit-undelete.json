@@ -1,0 +1,21 @@
+{
+    "version": "1.0.0",
+    "description": "Free File Recovery Tool for Getting Important Lost Data Back!",
+    "homepage": "https://www.iobit.com/en/iobitundelete.php",
+    "license": "Freeware",
+    "url": "https://cdn.iobit.com/dl/IObit-Undelete.exe",
+    "hash": "f1ca06ec966ac4e7ec1880ed081a0af2e3d3cbdc1e4ffeb387e8bc79456b3441",
+    "bin": "IObit-Undelete.exe",
+    "shortcuts": [
+        [
+            "IObit-Undelete.exe",
+            "IObit-Undelete"
+        ]
+    ],
+    "checkver": {
+        "regex": "(?i)ver_size.*V *([\\d.]+)</span>"
+    },
+    "autoupdate": {
+        "url": "https://cdn.iobit.com/dl/IObit-Undelete.exe"
+    }
+}
