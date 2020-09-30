@@ -27,7 +27,7 @@
         ]
     ],
     "checkver": {
-        "url": "https://resource.u-tools.cn/currentversion/public.yml?",
+        "url": "https://scoop-sushi.vercel.app/api/utools",
         "regex": "uTools-([\\w.-]+).exe"
     },
     "autoupdate": {
