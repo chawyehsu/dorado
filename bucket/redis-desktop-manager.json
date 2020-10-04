@@ -4,7 +4,7 @@
     "license": "GPL-3.0-only",
     "version": "2020.4",
     "url": "https://github.com/lework/RedisDesktopManager-Windows/releases/download/2020.4/redis-desktop-manager-2020.4.zip",
-    "hash": "1f8660e1a8d72c1e75a3173c82751952237527c0eda95d613e4c0236aec33a3a",
+    "hash": "697fd3c930dab3c9231069d69df454b2310c0ff175fe0275726e34ebff47ec6b",
     "installer": {
         "script": [
             "Get-ChildItem \"$dir\\redis-desktop-manager-*.exe\" | Rename-Item -NewName \"$dir\\installer.exe\"",
