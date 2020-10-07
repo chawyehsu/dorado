@@ -1,0 +1,20 @@
+{
+    "homepage": "https://c.139.com/",
+    "description": "The official client for China Mobile 139 Cloud and 139 Email",
+    "license": "Unknown",
+    "version": "nightly",
+    "url": "https://img.zone139.com/m2012/controlupdate/current/mCloud_Setup-002.exe#/mcloud-setup.7z",
+    "installer": {
+        "script": [
+            "Remove-Item -Force -Recurse \"$dir\\*\" -Exclude \"app.7z\"",
+            "Expand-7zipArchive \"$dir\\app.7z\" \"$dir\"",
+            "Remove-Item \"$dir\\app.7z\""
+        ]
+    },
+    "shortcuts": [
+        [
+            "139Mail.exe",
+            "和彩云"
+        ]
+    ]
+}
