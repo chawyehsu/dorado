@@ -13,30 +13,12 @@
             "hash": "2bca1f54045d2c5cac8cea9cf31c7fe180a74cd766f10cfce23c863850ee2366"
         }
     },
-    "pre_install": "Expand-7zipArchive \"$dir\\installer.exe\" \"$dir\\app\" -Removal",
     "installer": {
         "script": [
-            "$devtoolRoaming = \"$env:APPDATA\\Tencent\\微信开发者工具\"",
-            "$nwPath = \"$env:APPDATA\\Tencent\\微信开发者工具\\package.nw\"",
-            "if (Test-Path $nwPath) {",
-            "    Write-Output 'Removing old version NW.JS...'",
-            "    Remove-Item -Path \"$nwPath\" -Recurse -Force",
-            "}",
-            "if (!(Test-Path $devtoolRoaming)) {",
-            "    New-Item -Path \"$devtoolRoaming\" -ItemType Directory | Out-Null",
-            "}",
-            "Move-Item \"$dir\\app\\`$APPDATA\\Tencent\\微信开发者工具\\*\" \"$devtoolRoaming\" -Force",
-            "# Cleanup useless files",
-            "@('$APPDATA', '$PLUGINSDIR', '卸载微信开发者工具.exe.nsis') | ForEach-Object {",
+            "Expand-7zipArchive \"$dir\\installer.exe\" \"$dir\\app\" -Removal",
+            "@('$PLUGINSDIR', '卸载微信开发者工具.exe.nsis') | ForEach-Object {",
             "    Remove-Item \"$dir\\app\\$_\" -Recurse -Force",
             "}"
-        ]
-    },
-    "uninstaller": {
-        "script": [
-            "# Cleanup NW.JS",
-            "$nwPath = \"$env:APPDATA\\Tencent\\微信开发者工具\\package.nw\"",
-            "Remove-Item -Path \"$nwPath\" -Recurse -Force"
         ]
     },
     "shortcuts": [
