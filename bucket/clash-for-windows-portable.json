@@ -43,14 +43,15 @@
         "        Write-Host 'Importing config files from user directory for first install...' -ForegroundColor Yellow",
         "        Copy-Item \"$HOME\\.config\\clash\\*\" \"$persist_dir\" -Force -Recurse",
         "        Write-Host 'Import succeded!' -ForegroundColor Yellow",
-        "        Write-Host 'Portable version uses config files in app directory, ones in user directory can be removed by running ' -NoNewline -ForegroundColor Yellow",
-        "        Write-Host '\"Remove-Item $HOME\\.config\\clash -Force -Recurse\"' -ForegroundColor Green",
+        "        Write-Host 'Portable version uses config files in app directory, ones in user directory can be removed by running' -ForegroundColor Yellow",
+        "        Write-Host 'Remove-Item \"$HOME\\.config\\clash\" -Force -Recurse' -ForegroundColor Green",
         "    }",
         "}",
         "if (!(Test-Path \"$persist_dir\\data\")) {",
         "    New-Item \"$persist_dir\\data\" -Type Directory -Force | Out-Null",
         "    Get-ChildItem \"$persist_dir\" -Exclude \"data\" | Move-Item -Destination \"$persist_dir\\data\" -Force",
-        "}"
+        "}",
+        "Get-ChildItem \"$persist_dir\\data\" -Filter \"Country.mmdb\" | Remove-Item -Force"
     ],
     "uninstaller": {
         "script": [
