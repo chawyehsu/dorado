@@ -38,7 +38,7 @@
         "    Move-Item \"$persist_dir\\clash_win\" \"$env:appdata\" -Force",
         "}",
         "if (!(Test-Path \"$persist_dir\")) {",
-        "    New-Item \"$persist_dir\" -ItemType Directory -Force | Out-Null",
+        "    New-Item \"$persist_dir\" -Type Directory -Force | Out-Null",
         "    if (Test-Path \"$HOME\\.config\\clash\") {",
         "        Write-Host 'Importing config files from user directory for first install...' -ForegroundColor Yellow",
         "        Copy-Item \"$HOME\\.config\\clash\\*\" \"$persist_dir\" -Force -Recurse",
@@ -48,8 +48,8 @@
         "    }",
         "}",
         "if (!(Test-Path \"$persist_dir\\data\")) {",
-        "    New-Item \"$persist_dir\\data\" -ItemType Directory -Force | Out-Null",
-        "    Move-Item \"$persist_dir\\*\" \"$persist_dir\\data\" -Exclude \"$persist_dir\\data\" -Force -ErrorAction SilentlyContinue",
+        "    New-Item \"$persist_dir\\data\" -Type Directory -Force | Out-Null",
+        "    Get-ChildItem \"$persist_dir\" -Exclude \"data\" | Move-Item -Destination \"$persist_dir\\data\" -Force",
         "}"
     ],
     "uninstaller": {
