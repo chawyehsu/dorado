@@ -2,12 +2,12 @@
     "homepage": "https://redisdesktop.com/",
     "description": "Cross-platform GUI management tool for Redis",
     "license": "GPL-3.0-only",
-    "version": "2020.4",
-    "url": "https://github.com/lework/RedisDesktopManager-Windows/releases/download/2020.4/redis-desktop-manager-2020.4.zip",
-    "hash": "697fd3c930dab3c9231069d69df454b2310c0ff175fe0275726e34ebff47ec6b",
+    "version": "2020.5",
+    "url": "https://github.com/lework/RedisDesktopManager-Windows/releases/download/2020.5/rdm-2020.5.zip",
+    "hash": "204a7e3fe5c20f1f244b7ed11163b276a9443e7f295ae02b9a631b9967f71751",
     "installer": {
         "script": [
-            "Get-ChildItem \"$dir\\redis-desktop-manager-*.exe\" | Rename-Item -NewName \"$dir\\installer.exe\"",
+            "Get-ChildItem \"$dir\\rdm-*.exe\" | Rename-Item -NewName \"$dir\\installer.exe\"",
             "Expand-7zipArchive \"$dir\\installer.exe\" \"$dir\" | Out-Null",
             "Remove-Item \"$dir\\`$PLUGINSDIR\" -Recurse",
             "Remove-Item \"$dir\\installer.exe\" | Out-Null"
@@ -27,7 +27,7 @@
         "github": "https://github.com/lework/RedisDesktopManager-Windows"
     },
     "autoupdate": {
-        "url": "https://github.com/lework/RedisDesktopManager-Windows/releases/download/$version/redis-desktop-manager-$version.zip"
+        "url": "https://github.com/lework/RedisDesktopManager-Windows/releases/download/$version/rdm-$version.zip"
     },
     "notes": [
         "RDM is available on Microsoft Store: https://www.microsoft.com/store/apps/9NDK76ZVZ3TM",

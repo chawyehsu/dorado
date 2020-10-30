@@ -5,15 +5,85 @@
     "license": "GPL-2.0-only|BSD-3-Clause",
     "architecture": {
         "64bit": {
-            "url": "https://mirrors.tuna.tsinghua.edu.cn/msys2/distrib/x86_64/msys2-base-x86_64-20200903.tar.xz",
+            "url": "https://mirrors.ustc.edu.cn/msys2/distrib/x86_64/msys2-base-x86_64-20200903.tar.xz",
             "hash": "9d5700a2a8148837bd3869f4940f53d2e46ebfa4148de35c21ca49bf2c239f27",
             "extract_dir": "msys64"
         }
     },
+    "installer": {
+        "script": [
+            "# MSYS2 Bootstrap (First Run)",
+            "Write-Host 'Invoking MSYS2 First Run...' -ForegroundColor Yellow",
+            "$baseArgs = \"ps -ef | grep '[?]' | awk '{print `$2}' | xargs -r kill\"",
+            "$args = \"`\"$baseArgs`\"\"",
+            "Invoke-ExternalCommand -Path \"$dir\\msys2_shell.cmd\" -ArgumentList \"-msys2 -defterm -here -no-start -c $args\" | Out-Null",
+            "Write-Host 'Updating MSYS2 core...' -ForegroundColor Yellow",
+            "function Ensure-Mirror {",
+            "    Set-Content -Path \"$dir\\etc\\pacman.d\\mirrorlist.msys\" -Value 'Server = https://mirrors.ustc.edu.cn/msys2/msys/$arch/'",
+            "    Set-Content -Path \"$dir\\etc\\pacman.d\\mirrorlist.mingw32\" -Value 'Server = https://mirrors.ustc.edu.cn/msys2/mingw/i686/'",
+            "    Set-Content -Path \"$dir\\etc\\pacman.d\\mirrorlist.mingw64\" -Value 'Server = https://mirrors.ustc.edu.cn/msys2/mingw/x86_64/'",
+            "}",
+            "function Update-MSys2 {",
+            "    Write-Host 'Ensure pacman mirrors are used...' -ForegroundColor Yellow",
+            "    Ensure-Mirror",
+            "    $logPath = \"$dir\\update.log\"",
+            "    $stopSentence = 'there is nothing to do'",
+            "    $cntSentence = 2",
+            "    # Ignore pacman-mirrors: https://github.com/msys2/MSYS2-packages/issues/1907#issuecomment-716615697",
+            "    $args2 = \"`\"pacman --ask 20 --noconfirm -Syuu --disable-download-timeout --ignore=pacman-mirrors | tee -a /update.log;$baseArgs`\"\"",
+            "    $max = 5",
+            "    Write-Output \"Repeating update until there are no more updates or max $max iterations\"",
+            "    Write-Output \"Logs are recorded in: $logPath\"",
+            "    Remove-Item $logPath -ea 0",
+            "    $ErrorActionPreference = 'Continue'",
+            "    while (!$done) {",
+            "        ++$i",
+            "        Invoke-ExternalCommand -Path \"$dir\\msys2_shell.cmd\" -ArgumentList \"-msys2 -defterm -here -no-start -c $args2\" -ContinueExitCodes @{ 1 = 'Pacman exit with code 1 but it does not matter.'} | Out-Null",
+            "        $done = (Get-Content $logPath) -match $stopSentence | Measure-Object | ForEach-Object { $_.Count -ge $cntSentence }",
+            "        $done = $done -or ($i -ge $max)",
+            "        # Finally update pacman-mirrors",
+            "        if ($done) {",
+            "            $args2 = \"`\"pacman --noconfirm -Syuu --disable-download-timeout | tee -a /update.log;$baseArgs`\"\"",
+            "            # Using 'ContinueExitCodes' because of a pacman bug: https://github.com/msys2/msys2-installer/issues/5#issuecomment-639841311",
+            "            Invoke-ExternalCommand -Path \"$dir\\msys2_shell.cmd\" -ArgumentList \"-msys2 -defterm -here -no-start -c $args2\" -ContinueExitCodes @{ 1 = 'Pacman exit with code 1 but it does not matter.'} | Out-Null",
+            "        }",
+            "    }",
+            "}",
+            "Update-MSys2",
+            "Ensure-Mirror",
+            "# Detect saved_packages.txt",
+            "if (Test-Path \"$persist_dir\\var\\cache\\pacman\\saved_packages.txt\") {",
+            "    Write-Host \"To restore installed packages, you need to run 'pacman -S --needed `$(cat /var/cache/pacman/saved_packages.txt)' inside MSYS2\" -ForegroundColor DarkCyan",
+            "}"
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "$baseArgs = \"ps -ef | grep '[?]' | awk '{print `$2}' | xargs -r kill\"",
+            "# Stop gpg-agent process",
+            "$args = \"`\"gpgconf --kill gpg-agent;$baseArgs`\"\"",
+            "Invoke-ExternalCommand -Path \"$dir\\msys2_shell.cmd\" -ArgumentList \"-msys2 -defterm -here -no-start -c $args\" | Out-Null",
+            "# Backup installed packages",
+            "Write-Host 'Saving MSYS2 installed packages to /var/cache/pacman/saved_packages.txt...' -ForegroundColor Yellow",
+            "$args2 = \"`\"pacman -Qqe | xargs echo > /var/cache/pacman/saved_packages.txt;$baseArgs`\"\"",
+            "Invoke-ExternalCommand -Path \"$dir\\msys2_shell.cmd\" -ArgumentList \"-msys2 -defterm -here -no-start -c $args2\" | Out-Null"
+        ]
+    },
     "bin": [
         [
             "msys2_shell.cmd",
-            "msys2"
+            "msys2",
+            "-defterm -here -no-start -use-full-path -msys2"
+        ],
+        [
+            "msys2_shell.cmd",
+            "mingw32",
+            "-defterm -here -no-start -use-full-path -mingw32"
+        ],
+        [
+            "msys2_shell.cmd",
+            "mingw64",
+            "-defterm -here -no-start -use-full-path -mingw64"
         ]
     ],
     "shortcuts": [
@@ -30,16 +100,19 @@
             "MinGW64"
         ]
     ],
-    "persist": "home",
+    "persist": [
+        "home",
+        "var\\cache\\pacman"
+    ],
     "checkver": {
-        "url": "https://mirrors.tuna.tsinghua.edu.cn/msys2/distrib/x86_64/",
+        "url": "https://mirrors.ustc.edu.cn/msys2/distrib/x86_64/",
         "re": "msys2-base-x86_64-(\\d+).tar.xz",
         "reverse": true
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://mirrors.tuna.tsinghua.edu.cn/msys2/distrib/x86_64/msys2-base-x86_64-$version.tar.xz"
+                "url": "https://mirrors.ustc.edu.cn/msys2/distrib/x86_64/msys2-base-x86_64-$version.tar.xz"
             }
         }
     }
