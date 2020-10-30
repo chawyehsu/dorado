@@ -55,7 +55,6 @@
     ],
     "uninstaller": {
         "script": [
-            "Get-Process | Where-Object {$_.Name -eq \"Clash for Windows\"} | Stop-Process -Force",
             "if (Test-Path \"$env:appdata\\clash_win\") {",
             "    Move-Item \"$env:appdata\\clash_win\" \"$persist_dir\" -Force",
             "}"
