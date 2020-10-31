@@ -1,11 +1,11 @@
 {
-    "version": "1.3.1008a",
+    "version": "1.3.1026a",
     "description": "ToDesk is a safe, practical and smooth remote assistance software, you can easily achieve remote control, file transfer and a series of operations, which greatly enhance the efficiency of the user's working life.",
     "homepage": "https://www.todesk.com/index.html",
     "license": "Unknown",
-    "url": "https://update.todesk.com/setup_20201008a.exe#/dl.7z",
-    "hash": "35b6d5fae2cac1220a53ccf807096d4f3d8b43d86aa5294da1b052e35aa5cccf",
-    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\uninstall.exe.nsis\", \"$dir\\todeskupd.exe\" -Force -Recurse",
+    "url": "https://update.todesk.com/setup_20201026a.exe#/dl.7z",
+    "hash": "34f99606055be5bde6de395056ef5093e28626a32a1b4afdda91ea8386db25f7",
+    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\uninstall.exe\", \"$dir\\todeskupd.exe\" -Force -Recurse",
     "bin": "ToDesk.exe",
     "pre_install": [
         "@('config.ini', 'userInfo.json') | ForEach-Object {",
@@ -23,10 +23,10 @@
             "ToDesk"
         ]
     ],
-   "checkver": {
+    "checkver": {
         "url": "https://www.todesk.com/download.html",
-        "regex": "(?s)(\\d+)\\.(\\d+)\\.(?<code>\\d+[a-z]?)\\s*.*?</p>[\\s\\S]*?(?<year>\\d+)-",
-        "replace":"${1}.${2}.${code}"
+        "regex": "(?s):(\\d+)\\.(\\d+)\\.(?<code>\\d+[a-z]?)\\s*.*?</p>[\\s\\S]*?(?<year>\\d+)-",
+        "replace": "${1}.${2}.${code}"
     },
     "autoupdate": {
         "url": "https://update.todesk.com/setup_$matchYear$matchCode.exe#/dl.7z"
