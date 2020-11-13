@@ -5,12 +5,12 @@
     "license": "ISC",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/mstorsjo/llvm-mingw/releases/download/$version/llvm-mingw-$version-ucrt-x86_64.zip",
-            "hash": "8F619911B61554D0394537305157F63284FAB949AD0ABED137B84440689FA77E"
+            "url": "https://github.com/mstorsjo/llvm-mingw/releases/download/20201020/llvm-mingw-20201020-ucrt-x86_64.zip",
+            "hash": "8f619911b61554d0394537305157f63284fab949ad0abed137b84440689fa77e"
         },
         "32bit": {
-            "url": "https://github.com/mstorsjo/llvm-mingw/releases/download/$version/llvm-mingw-$version-ucrt-i686.zip",
-            "hash": "D40A231332AB50AD89293CD152D42E3546CE7711231F83DDAE5BA9468BFC0C58"
+            "url": "https://github.com/mstorsjo/llvm-mingw/releases/download/20201020/llvm-mingw-20201020-ucrt-i686.zip",
+            "hash": "4f07721a81a3ba0980fc089e839d1f1a5784bbc8cee1332c15cf1b6ba24525d6"
         }
     },
     "extract_dir": "llvm-mingw",
