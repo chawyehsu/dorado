@@ -5,11 +5,11 @@
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://dotnetcli.blob.core.windows.net/dotnet/Runtime/5.0.0/windowsdesktop-runtime-5.0.0-win-x64.exe",
+            "url": "https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/5.0.0/windowsdesktop-runtime-5.0.0-win-x64.exe",
             "hash": "sha512:243986604ea7ec1332960536e6a534b7755d2bf29a585ca7e5bcd60570ab72c0f8ace0755b0e1a0a5972dc77c28bb3a5f152f8ed84d2acb2fa76c22916ac4376"
         },
         "32bit": {
-            "url": "https://dotnetcli.blob.core.windows.net/dotnet/Runtime/5.0.0/windowsdesktop-runtime-5.0.0-win-x86.exe",
+            "url": "https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/5.0.0/windowsdesktop-runtime-5.0.0-win-x86.exe",
             "hash": "sha512:144df140b566aa76b4bbc6259288d832df36935325c90af4cb9c28027f8625bdddd8369b03787d78e7a0502597ed809fbd20411549b4b93b127e88ce94b36e27"
         }
     },
@@ -33,10 +33,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://dotnetcli.blob.core.windows.net/dotnet/Runtime/$version/windowsdesktop-runtime-$version-win-x64.exe"
+                "url": "https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/$version/windowsdesktop-runtime-$version-win-x64.exe"
             },
             "32bit": {
-                "url": "https://dotnetcli.blob.core.windows.net/dotnet/Runtime/$version/windowsdesktop-runtime-$version-win-x86.exe"
+                "url": "https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/$version/windowsdesktop-runtime-$version-win-x86.exe"
             }
         },
         "hash": {
