@@ -7,14 +7,9 @@
     "hash": "34f99606055be5bde6de395056ef5093e28626a32a1b4afdda91ea8386db25f7",
     "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\uninstall.exe\", \"$dir\\todeskupd.exe\" -Force -Recurse",
     "bin": "ToDesk.exe",
-    "pre_install": [
-        "@('config.ini', 'userInfo.json') | ForEach-Object {",
-        "    if(!(Test-Path \"$persist_dir\\$_\")) { New-Item \"$dir\\$_\" -Type File | Out-Null }",
-        "}"
-    ],
+    "pre_install": "if(!(Test-Path \"$persist_dir\\config.ini\")) { New-Item \"$dir\\config.ini\" -Type File | Out-Null }",
     "persist": [
         "config.ini",
-        "userInfo.json",
         "Logs"
     ],
     "shortcuts": [
