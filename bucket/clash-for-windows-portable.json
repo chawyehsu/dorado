@@ -1,21 +1,22 @@
 {
     "homepage": "https://github.com/Fndroid/clash_for_windows_pkg",
     "description": "A Windows GUI based on Clash",
-    "version": "0.13.0",
+    "version": "0.13.4",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.13.0/Clash.for.Windows.Setup.0.13.0.exe#/dl.7z",
-            "hash": "325341a6cd2d74e645b2963bbdcea21eeddba471e3d9fbea9eef7fb2991c4bb7"
+            "url": "https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.13.4/Clash.for.Windows.Setup.0.13.4.exe#/dl.7z",
+            "hash": "443f7fe562f3c7387de7417f083227c8a991315273a4771addd43c9ade31ae5c"
         },
         "32bit": {
-            "url": "https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.13.0/Clash.for.Windows.Setup.0.13.0.ia32.exe#/dl.7z",
-            "hash": "ec69d7031714444a4654be462ac06f28d4945a978bb1de76d46e3b31e121f9a1"
+            "url": "https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.13.4/Clash.for.Windows.Setup.0.13.4.ia32.exe#/dl.7z",
+            "hash": "f7187037b0df2258c6ef38ed05ed68be8887e6ca105f51cd686c44bc5ddb1667"
         }
     },
     "notes": [
-        "Place provider files in \".\\providers\\\" directory to keep persisted",
-        "Profiles and settings will be permanently removed by running \"scoop uninstall -p clash-for-windows-portable\" while uninstalling"
+        "Since version 0.13.1, Clash for Windows uses \"data\" folder in app directory to active portable mode and save user config",
+        "Simply click \"Open Folder\" button in \"General\" page and then you will be there",
+        "Config files will be permanently removed by running \"scoop uninstall -p clash-for-windows-portable\" while uninstalling"
     ],
     "shortcuts": [
         [
@@ -23,28 +24,7 @@
             "Clash for Windows"
         ]
     ],
-    "persist": [
-        [
-            "resources\\static\\files\\logs",
-            "logs"
-        ],
-        [
-            "resources\\static\\files\\profiles",
-            "profiles"
-        ],
-        [
-            "resources\\static\\files\\providers",
-            "providers"
-        ],
-        [
-            "resources\\static\\files\\cfw-settings.yaml",
-            "cfw-settings.yaml"
-        ],
-        [
-            "resources\\static\\files\\config.yaml",
-            "config.yaml"
-        ]
-    ],
+    "persist": "data",
     "installer": {
         "script": [
             "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
@@ -55,48 +35,24 @@
         "if (Test-Path \"$persist_dir\\clash_win\") {",
         "    Move-Item \"$persist_dir\\clash_win\" \"$env:appdata\" -Force",
         "}",
-        "if (!(Test-Path \"$persist_dir\\config.yaml\")) {",
-        "    if (!(Test-Path \"$persist_dir\")) {",
-        "        New-Item \"$persist_dir\" -ItemType Directory -Force | Out-Null",
-        "    }",
-        "    if (Test-Path \"$HOME\\.config\\clash\\config.yaml\") {",
-        "        Write-Host 'Importing profiles and settings from user directory...' -ForegroundColor Yellow",
-        "        Remove-Item \"$persist_dir\\*\" -Force -Recurse",
-        "        New-Item \"$persist_dir\\providers\" -ItemType Directory -Force | Out-Null",
-        "        Copy-Item \"$HOME\\.config\\clash\\*.yaml\" \"$persist_dir\\providers\" -Force",
-        "        Copy-Item \"$HOME\\.config\\clash\\*\\*.yaml\" \"$persist_dir\\providers\" -Force",
-        "        Move-Item \"$persist_dir\\providers\\config.yaml\" \"$persist_dir\" -Force",
-        "        if (Test-Path \"$persist_dir\\providers\\cfw-settings.yaml\") {",
-        "            Move-Item \"$persist_dir\\providers\\cfw-settings.yaml\" \"$persist_dir\" -Force",
-        "        }",
-        "        if (Test-Path \"$HOME\\.config\\clash\\logs\") {",
-        "            Copy-Item \"$HOME\\.config\\clash\\logs\" \"$persist_dir\" -Force -Recurse",
-        "        }",
-        "        if (Test-Path \"$HOME\\.config\\clash\\profiles\") {",
-        "            Copy-Item \"$HOME\\.config\\clash\\profiles\" \"$persist_dir\" -Force -Recurse",
-        "        }",
-        "        Write-Host 'Import succeded' -ForegroundColor Green",
-        "        Write-Host 'Provider files with .yaml suffix are persisted in \".\\providers\\\" directory, please edit \"path\" field in profiles' -ForegroundColor Green",
-        "        Write-Host 'This version uses profiles in scoop directory, old files in user directory can be removed by running \"Remove-Item $HOME\\.config\\clash -Force -Recurse\"' -ForegroundColor Yellow",
-        "    }",
-        "    else {",
-        "        New-Item \"$persist_dir\\config.yaml\" | Out-Null",
+        "if (!(Test-Path \"$persist_dir\")) {",
+        "    New-Item \"$persist_dir\" -Type Directory -Force | Out-Null",
+        "    if (Test-Path \"$HOME\\.config\\clash\") {",
+        "        Write-Host 'Importing config files from user directory for first install...' -ForegroundColor Yellow",
+        "        Copy-Item \"$HOME\\.config\\clash\\*\" \"$persist_dir\" -Force -Recurse",
+        "        Write-Host 'Import succeded!' -ForegroundColor Yellow",
+        "        Write-Host 'Portable version uses config files in app directory, ones in user directory can be removed by running' -ForegroundColor Yellow",
+        "        Write-Host 'Remove-Item \"$HOME\\.config\\clash\" -Force -Recurse' -ForegroundColor Green",
         "    }",
         "}",
-        "if (!(Test-Path \"$persist_dir\\cfw-settings.yaml\")) {",
-        "    New-Item \"$persist_dir\\cfw-settings.yaml\" | Out-Null",
-        "}"
+        "if (!(Test-Path \"$persist_dir\\data\")) {",
+        "    New-Item \"$persist_dir\\data\" -Type Directory -Force | Out-Null",
+        "    Get-ChildItem \"$persist_dir\" -Exclude \"data\" | Move-Item -Destination \"$persist_dir\\data\" -Force",
+        "}",
+        "Get-ChildItem \"$persist_dir\\data\" -Filter \"Country.mmdb\" | Remove-Item -Force"
     ],
     "uninstaller": {
         "script": [
-            "Remove-Item \"$persist_dir\\config.yaml\" -Force",
-            "Remove-Item \"$persist_dir\\cfw-settings.yaml\" -Force",
-            "if (Test-Path \"$dir\\resources\\static\\files\\config.yaml\") {",
-            "    Copy-Item \"$dir\\resources\\static\\files\\config.yaml\" \"$persist_dir\" -Force",
-            "    if (Test-Path \"$dir\\resources\\static\\files\\cfw-settings.yaml\") {",
-            "        Copy-Item \"$dir\\resources\\static\\files\\cfw-settings.yaml\" \"$persist_dir\" -Force",
-            "    }",
-            "}",
             "if (Test-Path \"$env:appdata\\clash_win\") {",
             "    Move-Item \"$env:appdata\\clash_win\" \"$persist_dir\" -Force",
             "}"

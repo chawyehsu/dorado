@@ -1,16 +1,16 @@
 {
     "homepage": "https://github.com/mstorsjo/llvm-mingw",
     "description": "An LLVM/Clang/LLD based mingw-w64 GNU toolchain",
-    "version": "20200325",
+    "version": "20201020",
     "license": "ISC",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/mstorsjo/llvm-mingw/releases/download/20200325/llvm-mingw-20200325-x86_64.zip",
-            "hash": "662302f3f1d836481ef412c2e70e870f93f30183c37bf90b9621b1dd16af3fb1"
+            "url": "https://github.com/mstorsjo/llvm-mingw/releases/download/20201020/llvm-mingw-20201020-ucrt-x86_64.zip",
+            "hash": "8f619911b61554d0394537305157f63284fab949ad0abed137b84440689fa77e"
         },
         "32bit": {
-            "url": "https://github.com/mstorsjo/llvm-mingw/releases/download/20200325/llvm-mingw-20200325-i686.zip",
-            "hash": "f7106458d430224db6f221a91fe8731db8140f44a099cbcc54cfa86d4545b6af"
+            "url": "https://github.com/mstorsjo/llvm-mingw/releases/download/20201020/llvm-mingw-20201020-ucrt-i686.zip",
+            "hash": "4f07721a81a3ba0980fc089e839d1f1a5784bbc8cee1332c15cf1b6ba24525d6"
         }
     },
     "extract_dir": "llvm-mingw",
@@ -19,10 +19,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/mstorsjo/llvm-mingw/releases/download/$version/llvm-mingw-$version-x86_64.zip"
+                "url": "https://github.com/mstorsjo/llvm-mingw/releases/download/$version/llvm-mingw-$version-ucrt-x86_64.zip"
             },
             "32bit": {
-                "url": "https://github.com/mstorsjo/llvm-mingw/releases/download/20200325/llvm-mingw-$version-i686.zip"
+                "url": "https://github.com/mstorsjo/llvm-mingw/releases/download/$version/llvm-mingw-$version-ucrt-i686.zip"
             }
         }
     }

@@ -49,7 +49,7 @@
 ``` powershell
 scoop bucket add dorado https://github.com/chawyehsu/dorado
 # 或者使用国内镜像，速度快但是非实时同步
-scoop bucket add dorado https://gitee.com/h404bi/dorado.git
+scoop bucket add dorado https://gitee.com/chawyehsu/dorado
 ```
 
 执行以下命令安装本仓库中的软件：

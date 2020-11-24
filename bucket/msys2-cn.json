@@ -1,12 +1,12 @@
 {
-    "version": "20200903",
+    "version": "20201109",
     "description": "A software distro and building platform for Windows",
     "homepage": "https://www.msys2.org",
     "license": "GPL-2.0-only|BSD-3-Clause",
     "architecture": {
         "64bit": {
-            "url": "https://mirrors.ustc.edu.cn/msys2/distrib/x86_64/msys2-base-x86_64-20200903.tar.xz",
-            "hash": "9d5700a2a8148837bd3869f4940f53d2e46ebfa4148de35c21ca49bf2c239f27",
+            "url": "https://mirrors.ustc.edu.cn/msys2/distrib/x86_64/msys2-base-x86_64-20201109.tar.xz",
+            "hash": "ca10a72aa3df219fabeff117aa4b00c1ec700ea93c4febf4cfc03083f4b2cacb",
             "extract_dir": "msys64"
         }
     },
@@ -19,12 +19,12 @@
             "Invoke-ExternalCommand -Path \"$dir\\msys2_shell.cmd\" -ArgumentList \"-msys2 -defterm -here -no-start -c $args\" | Out-Null",
             "Write-Host 'Updating MSYS2 core...' -ForegroundColor Yellow",
             "function Ensure-Mirror {",
-            "    Write-Host 'Ensure pacman mirrors are used...' -ForegroundColor Yellow",
             "    Set-Content -Path \"$dir\\etc\\pacman.d\\mirrorlist.msys\" -Value 'Server = https://mirrors.ustc.edu.cn/msys2/msys/$arch/'",
             "    Set-Content -Path \"$dir\\etc\\pacman.d\\mirrorlist.mingw32\" -Value 'Server = https://mirrors.ustc.edu.cn/msys2/mingw/i686/'",
             "    Set-Content -Path \"$dir\\etc\\pacman.d\\mirrorlist.mingw64\" -Value 'Server = https://mirrors.ustc.edu.cn/msys2/mingw/x86_64/'",
             "}",
             "function Update-MSys2 {",
+            "    Write-Host 'Ensure pacman mirrors are used...' -ForegroundColor Yellow",
             "    Ensure-Mirror",
             "    $logPath = \"$dir\\update.log\"",
             "    $stopSentence = 'there is nothing to do'",
@@ -52,8 +52,8 @@
             "Update-MSys2",
             "Ensure-Mirror",
             "# Detect saved_packages.txt",
-            "if (Test-Path \"$persist_dir\\home\\saved_packages.txt\") {",
-            "    Write-Host 'You may need to run 'pacman -S --needed $(cat /var/cache/pacman/saved_packages.txt)' inside MSYS2 to restore installed packages' -ForegroundColor Yellow",
+            "if (Test-Path \"$persist_dir\\var\\cache\\pacman\\saved_packages.txt\") {",
+            "    Write-Host \"To restore installed packages, you need to run 'pacman -S --needed `$(cat /var/cache/pacman/saved_packages.txt)' inside MSYS2\" -ForegroundColor DarkCyan",
             "}"
         ]
     },
