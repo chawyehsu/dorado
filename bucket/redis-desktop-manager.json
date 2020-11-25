@@ -2,9 +2,9 @@
     "homepage": "https://redisdesktop.com/",
     "description": "Cross-platform GUI management tool for Redis",
     "license": "GPL-3.0-only",
-    "version": "2020.5",
-    "url": "https://github.com/lework/RedisDesktopManager-Windows/releases/download/2020.5/rdm-2020.5.zip",
-    "hash": "204a7e3fe5c20f1f244b7ed11163b276a9443e7f295ae02b9a631b9967f71751",
+    "version": "2020.6",
+    "url": "https://github.com/lework/RedisDesktopManager-Windows/releases/download/2020.6/rdm-2020.6.zip",
+    "hash": "2fa94fb6163ba223a6fcf44c51249845cf86f27c042d36916c3bb143cfcf0411",
     "installer": {
         "script": [
             "Get-ChildItem \"$dir\\rdm-*.exe\" | Rename-Item -NewName \"$dir\\installer.exe\"",
