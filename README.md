@@ -10,7 +10,7 @@
     <p align="center">
         <a href="README.md">English</a>|<a href="README_CN.md">简体中文</a>
     </p>
-    <p align="center"><img align="center" src="screenshot.gif" alt="highlight" /></p>
+    <p align="center"><img align="center" src="https://user-images.githubusercontent.com/5764917/100413251-da9d0400-30b1-11eb-9bf8-3a97713e7730.gif" alt="highlight" /></p>
     <p align="center">
         Yet another <a href="https://github.com/lukesampson/scoop/wiki/Buckets"><code>bucket</code></a> for <a href="https://github.com/lukesampson/scoop">Scoop</a>.
     </p>
