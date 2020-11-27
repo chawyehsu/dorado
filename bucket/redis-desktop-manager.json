@@ -4,7 +4,7 @@
     "license": "GPL-3.0-only",
     "version": "2020.6",
     "url": "https://github.com/lework/RedisDesktopManager-Windows/releases/download/2020.6/rdm-2020.6.zip",
-    "hash": "2fa94fb6163ba223a6fcf44c51249845cf86f27c042d36916c3bb143cfcf0411",
+    "hash": "9c1e389e45b28e511ca2a380c25da179cfeeca72ca6bc3e2daed5476296d24a0",
     "installer": {
         "script": [
             "Get-ChildItem \"$dir\\rdm-*.exe\" | Rename-Item -NewName \"$dir\\installer.exe\"",
