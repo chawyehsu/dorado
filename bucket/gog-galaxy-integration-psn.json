@@ -1,29 +1,27 @@
 {
-  "version": "v0.30",
+  "version": "0.30",
   "description": "GOG Galaxy 2.0 Community integration for PSN.",
   "homepage": "https://github.com/FriendsOfGalaxy/galaxy-integration-psn",
   "license": "Shareware",
   "depends": "dorado/gog-galaxy",
   "url": "https://github.com/FriendsOfGalaxy/galaxy-integration-psn/releases/download/v0.30/windows.zip",
   "pre_install": [
-    "$tmp = \"$env:LOCALAPPDATA\\GOG.com\\Galaxy\\plugins\\installed\"",
-    "if ( !(Test-Path $tmp) ) { New-Item -Type Directory -Path $tmp -Force}"
+    "$dest = \"$env:LOCALAPPDATA\\GOG.com\\Galaxy\\plugins\\installed\"",
+    "if ( !(Test-Path $dest) ) { New-Item -Type Directory -Path $dest -Force}"
   ],
-  "installer": {
-    "script": [
-      "$tmp = \"$env:LOCALAPPDATA\\GOG.com\\Galaxy\\plugins\\installed\\$app\"",
-      "New-Item -Path $tmp -Type Junction -Value $dir -Force | Out-Null"
-    ]
-  },
+  "post_install": [
+      "$dest = \"$env:LOCALAPPDATA\\GOG.com\\Galaxy\\plugins\\installed\\$app\"",
+      "Move-Item -Force $dir\\* $dest"
+  ],
   "uninstaller": {
     "script": [
-      "$tmp = \"$env:LOCALAPPDATA\\GOG.com\\Galaxy\\plugins\\installed\\$app\"",
-      "if ( (Test-Path $tmp) ) { Remove-Item -Recurse -Force $tmp}"
+      "$dest = \"$env:LOCALAPPDATA\\GOG.com\\Galaxy\\plugins\\installed\\$app\"",
+      "if ( Test-Path $dest ) { Remove-Item -Recurse -Force $dest}"
     ]
   },
   "notes": "You should restart your GOG Galaxy.",
   "checkver": "github",
   "autoupdate": {
-    "url": "https://github.com/FriendsOfGalaxy/galaxy-integration-psn/releases/download/$version/windows.zip"
+    "url": "https://github.com/FriendsOfGalaxy/galaxy-integration-psn/releases/download/v$version/windows.zip"
   }
 }
