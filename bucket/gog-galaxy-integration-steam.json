@@ -21,6 +21,7 @@
       "if ( (Test-Path $tmp) ) { Remove-Item -Recurse -Force $tmp}"
     ]
   },
+  "notes": "You should restart your GOG Galaxy.",
   "checkver": "github",
   "autoupdate": {
     "url": "https://github.com/FriendsOfGalaxy/galaxy-integration-steam/releases/download/$version/windows.zip"
