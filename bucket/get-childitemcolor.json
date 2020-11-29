@@ -1,0 +1,19 @@
+{
+  "version": "v2.2.0",
+  "description": "A PowerShell module which provides colorization of outputs of Get-ChildItem Cmdlet of PowerShell.",
+  "homepage": "https://github.com/joonro/Get-ChildItemColor",
+  "license": {
+    "identifier": "MIT",
+    "url": "https://github.com/joonro/Get-ChildItemColor/blob/develop/LICENSE"
+  },
+  "url": "https://github.com/joonro/Get-ChildItemColor/archive/master.zip",
+  "hash": "3ec4147a5aadaca9bcd477af575ac67a88dca56877c88b3f5838d9b7e677ae02",
+  "extract_dir": "Get-ChildItemColor-master/src",
+  "psmodule": {
+    "name": "Get-ChildItemColor"
+  },
+  "checkver": {
+    "github": "https://github.com/dahlbyk/posh-git"
+  },
+  "notes": "To enable the module, you need to add \"Import-Module Get-ChildItemColor\" to your $PROFILE."
+}

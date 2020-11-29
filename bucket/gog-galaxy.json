@@ -1,50 +1,40 @@
 {
-    "version": "2.0.23.4",
-    "description": "GOG Galaxy 2.0. Gaming Client designed for a convenient purchasing, playing and updating games, as well as an online play between gaming platforms.",
-    "homepage": "https://www.gog.com/galaxy",
-    "license": {
-        "identifier": "Proprietary",
-        "url": "https://support.gog.com/hc/en-us/articles/212632089-User-Agreement"
-    },
-    "depends": [
-        "innounp",
-        "sudo"
-    ],
-    "url": "https://cdn.gog.com/open/galaxy/client/setup_galaxy_2.0.23.4.exe",
-    "hash": "md5:0f9284b653e1dc377368678a1bc18582",
-    "installer": {
-        "script": [
-            "$file = \"$dir\\$fname\"",
-            "Expand-InnoArchive $file -ExtractDir '{%ALLUSERSPROFILE}' -DestinationPath $env:ALLUSERSPROFILE",
-            "Expand-InnoArchive $file -Removal"
-        ]
-    },
-    "uninstaller": {
-        "script": [
-            "if (Test-Path $env:LOCALAPPDATA\\GOG.com) { Remove-Item -Recurse -Force $env:LOCALAPPDATA\\GOG.com }",
-            "sudo Remove-Item -Recurse -Force $env:ALLUSERSPROFILE\\GOG.com",
-            "echo 'Notice: if you have not installed sudo, please delete $env:ALLUSERSPROFILE\\GOG.com yourself.'"
-        ]
-    },
-    "persist": [
-        "plugins",
-        "Games"
-    ],
-    "shortcuts": [
-        [
-            "GalaxyClient.exe",
-            "GOG Galaxy"
-        ]
-    ],
-    "checkver": {
-        "url": "https://remote-config.gog.com/components/webinstaller?component_version=2.0.0",
-        "jsonpath": "$.content.windows.version"
-    },
-    "autoupdate": {
-        "url": "https://cdn.gog.com/open/galaxy/client/setup_galaxy_$version.exe",
-        "hash": {
-            "url": "https://remote-config.gog.com/components/webinstaller?component_version=2.0.0",
-            "jsonpath": "$.content.windows.installerMd5"
-        }
+  "version": "2.0.25.2",
+  "description": "Connect GOG GALAXY 2.0 with multiple platforms and unite all your games and friends scattered across them in one powerful app (A game platform designed to connect all game platforms).",
+  "homepage": "https://www.gog.com/galaxy",
+  "license": {
+    "identifier": "Proprietary",
+    "url": "https://support.gog.com/hc/en-us/articles/212632089-User-Agreement"
+  },
+  "depends": "innounp",
+  "url": "https://content-system.gog.com/open_link/download?path=/open/galaxy/client/setup_galaxy_2.0.25.2.exe",
+  "hash": "md5:d09244d6ccb563da59ffd83767b50b2b",
+  "installer": {
+    "script": [
+      "$file = \"$dir\\$fname\"",
+      "Expand-InnoArchive -Path $file -ExtractDir '{%ALLUSERSPROFILE}' -DestinationPath $env:ALLUSERSPROFILE",
+      "Expand-InnoArchive -Path $file -Removal"
+    ]
+  },
+  "uninstaller": {
+    "script": "Write-Host \"`nNote:`n------`nYou need to delete `$env:ALLUSERSPROFILE\\GOG.com yourself.`n\""
+  },
+  "shortcuts": [
+    [
+      "GalaxyClient.exe",
+      "GOG Galaxy"
+    ]
+  ],
+  "notes": "You can use <https://github.com/Mixaill/awesome-gog-galaxy> search plugins to connect to other platforms.",
+  "checkver": {
+    "url": "https://remote-config.gog.com/components/webinstaller?component_version=2.0.0",
+    "jsonpath": "$.content.windows.version"
+  },
+  "autoupdate": {
+    "url": "https://content-system.gog.com/open_link/download?path=/open/galaxy/client/setup_galaxy_$version.exe",
+    "hash": {
+      "url": "https://remote-config.gog.com/components/webinstaller?component_version=2.0.0",
+      "jsonpath": "$.content.windows.installerMd5"
     }
+  }
 }
