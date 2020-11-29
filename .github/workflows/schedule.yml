@@ -11,6 +11,6 @@ jobs:
     - name: Excavate
       uses: Ash258/Scoop-GithubActions@stable
       env:
-        GITH_EMAIL: chawyehsu@hotmail.com
+        GITH_EMAIL: 5764917+chawyehsu@users.noreply.github.com
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         SKIP_UPDATED: '1'
