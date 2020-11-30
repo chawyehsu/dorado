@@ -13,12 +13,14 @@
     "script": [
       "$file = \"$dir\\$fname\"",
       "Expand-InnoArchive -Path $file -ExtractDir '{%ALLUSERSPROFILE}' -DestinationPath $env:ALLUSERSPROFILE",
-      "Expand-InnoArchive -Path $file -Removal"
+      "Expand-InnoArchive -Path $file -Removal",
+      "if ( !(Test-Path $dir\\Games) ) { New-Item -Type Directory -Path $dir\\Games }"
     ]
   },
   "uninstaller": {
     "script": "Write-Host \"`nNote:`n------`nYou need to delete `$env:ALLUSERSPROFILE\\GOG.com yourself.`n\""
   },
+  "persist": "Games",
   "shortcuts": [
     [
       "GalaxyClient.exe",
