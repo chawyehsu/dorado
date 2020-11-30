@@ -19,12 +19,13 @@
     </p>
 </div>
 
-Feature Apps
+Featured Apps
 ------------
 
 | Manifest | Description |
 |----------|-------------|
 | hmcl | The most famous Minecraft launcher made in China |
+| llvm-mingw | The LLVM/Clang/LLD based **mingw-w64** toolchain |
 | miniconda3 | A `lazy & clean` version of Miniconda3, which will not add the default root env into your PATH unless you activate it |
 | nuwen-mingw-gcc | **Minimalist** GCC package from nuwen's [MinGW Distro](https://nuwen.net/mingw.html). Use `nuwen-mingw-without-git` instead if you want Boost/PCRE/zlib... libraries and make/gdb... tools. |
 | nvm-windows | A fork of [nvm-windows](https://github.com/coreybutler/nvm-windows), removed elevated permission, for non-admin scoop user |
