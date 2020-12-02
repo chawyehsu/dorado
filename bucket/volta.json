@@ -7,30 +7,33 @@
     "hash": "a6392e5be0b5b42fd3228320f8f992914c9f2130c02c994750d6dc3fa67fbd16",
     "installer": {
         "script": [
-            "function UpdateBasicShimFile([String] $file) {",
-            "    # persist new volta shims",
-            "    if (Test-Path \"$persist_dir\\appdata\\bin\\$file\") {",
+            "function UpdateExeFile([String] $original, [String] $file, [Switch] $Removal) {",
+            "    if (Test-Path \"$persist_dir\\appdata\\bin\\$file\") { # persist new volta shims",
             "        Remove-Item \"$persist_dir\\appdata\\bin\\$file\" -Force",
-            "        Copy-Item \"$dir\\volta-shim.exe\" \"$persist_dir\\appdata\\bin\\$file\"",
-            "    # or create new shims",
-            "    } else {",
-            "    if (!(Test-Path \"$persist_dir\\appdata\\bin\")) {",
-            "        New-Item -Path \"$persist_dir\\appdata\\bin\" -ItemType Directory | Out-Null",
+            "        Copy-Item \"$dir\\$original\" \"$persist_dir\\appdata\\bin\\$file\"",
+            "    } else { # or create new shims",
+            "        if (!(Test-Path \"$persist_dir\\appdata\\bin\")) {",
+            "            New-Item -Path \"$persist_dir\\appdata\\bin\" -ItemType Directory | Out-Null",
+            "        }",
+            "        Copy-Item \"$dir\\$original\" \"$persist_dir\\appdata\\bin\\$file\"",
             "    }",
-            "    Copy-Item \"$dir\\volta-shim.exe\" \"$persist_dir\\appdata\\bin\\$file\"",
+            "    if ($Removal) {",
+            "        Remove-Item \"$dir\\$original\" -Force",
             "    }",
             "}",
-            "UpdateBasicShimFile 'node.exe'",
-            "UpdateBasicShimFile 'npm.exe'",
-            "UpdateBasicShimFile 'npx.exe'",
-            "UpdateBasicShimFile 'yarn.exe'"
+            "UpdateExeFile 'volta-shim.exe' 'node.exe'",
+            "UpdateExeFile 'volta-shim.exe' 'npm.exe'",
+            "UpdateExeFile 'volta-shim.exe' 'npx.exe'",
+            "UpdateExeFile 'volta-shim.exe' 'yarn.exe'",
+            "UpdateExeFile 'volta.exe' 'volta.exe' -Removal",
+            "UpdateExeFile 'volta-migrate.exe' 'volta-migrate.exe' -Removal",
+            "UpdateExeFile 'volta-shim.exe' 'volta-shim.exe' -Removal"
         ]
     },
     "env_set": {
         "VOLTA_HOME": "$dir\\appdata"
     },
     "env_add_path": [
-        ".",
         "appdata\\bin"
     ],
     "persist": "appdata",
