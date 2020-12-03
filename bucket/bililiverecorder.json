@@ -2,9 +2,9 @@
     "homepage": "https://github.com/Bililive/BililiveRecorder",
     "description": "BiliBili Stream Recorder",
     "license": "GPL-3.0-only",
-    "version": "1.1.21",
-    "url": "https://github.com/Bililive/BililiveRecorder/releases/download/v1.1.21/Setup.exe#/dl.7z",
-    "hash": "eed6f6cf0e69d46c183920f3d301394a67e2bc11011e15666414edb2f9cb1a11",
+    "version": "1.1.22",
+    "url": "https://github.com/Bililive/BililiveRecorder/releases/download/v1.1.22/Setup.exe#/dl.7z",
+    "hash": "eb89dd96c51dcf3660c3e8c960169a67020fc261eafc4eeaed7995b8662c0062",
     "installer": {
         "script": "Expand-7zipArchive -Path \"$dir\\BililiveRecorder*.nupkg\" -ExtractDir 'lib\\net45' -Removal"
     },
