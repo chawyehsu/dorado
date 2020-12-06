@@ -1,0 +1,32 @@
+{
+    "homepage": "https://github.com/anael-seghezzi/CToy",
+    "description": "C-Toy is an interactive C(99) coding environment based on TCC",
+    "license": {
+        "identifier": "CTOY",
+        "url": "https://github.com/anael-seghezzi/CToy/blob/master/LICENSE.txt"
+    },
+    "version": "1.06",
+    "architecture": {
+        "64bit": {
+            "url": "http://anael.maratis3d.com/ctoy/bin/CToy-1.06-WIN-x86_64.zip",
+            "hash": "1dffd594f292cb7c974fe51022a3aee22e0e7680e6c0b436140fcc4eafc4bd57",
+            "extract_dir": "CToy-1.06-WIN-x86_64"
+        }
+    },
+    "bin": [
+        "CToy.exe",
+        "CToy_player.exe"
+    ],
+    "checkver": {
+        "url": "http://anael.maratis3d.com/ctoy/bin/?C=M;O=D",
+        "regex": "CToy-([\\d.]+)-WIN-x86_64.zip"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "http://anael.maratis3d.com/ctoy/bin/CToy-$version-WIN-x86_64.zip",
+                "extract_dir": "CToy-$version-WIN-x86_64"
+            }
+        }
+    }
+}
