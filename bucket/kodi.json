@@ -1,0 +1,43 @@
+{
+    "homepage": "https://kodi.tv",
+    "description": "Kodi is an award-winning free and open source software media player and entertainment hub for digital media",
+    "license": "GPL-2.0-or-later",
+    "version": "18.9",
+    "architecture": {
+        "64bit": {
+            "url": "https://mirrors.kodi.tv/releases/windows/win64/kodi-18.9-Leia-x64.exe#/kodi-18.9-Leia-x64.7z",
+            "hash": "1819c2bed5bf94b0491879c09e093a40eb358e8b0f5e024c54542d52a27fe78b"
+        },
+        "32bit": {
+            "url": "https://mirrors.kodi.tv/releases/windows/win32/kodi-18.9-Leia-x86.exe#/kodi-18.9-Leia-x86.7z",
+            "hash": "4b9fc49c2211b9c26190d584808cd4f89bf7ff8f7f9f8084ce8c09d538969bc1"
+        }
+    },
+    "installer": {
+        "script": [
+            "@('$PLUGINSDIR', '$TEMP', 'Uninstall.exe') | ForEach-Object {",
+            "    Remove-Item \"$dir\\$_\" -Recurse -Force",
+            "}"
+        ]
+    },
+    "shortcuts": [
+        [
+            "kodi.exe",
+            "Kodi"
+        ]
+    ],
+    "checkver": {
+        "url": "https://kodi.tv/download/849",
+        "regex": "kodi-([\\d.]+)-Leia-x64.exe"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://mirrors.kodi.tv/releases/windows/win64/kodi-$version-Leia-x64.exe#/kodi-$version-Leia-x64.7z"
+            },
+            "32bit": {
+                "url": "https://mirrors.kodi.tv/releases/windows/win32/kodi-$version-Leia-x86.exe#/kodi-$version-Leia-x86.7z"
+            }
+        }
+    }
+}
