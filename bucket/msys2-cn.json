@@ -52,8 +52,8 @@
             "Update-MSys2",
             "Ensure-Mirror",
             "# Detect saved_packages.txt",
-            "if (Test-Path \"$persist_dir\\var\\cache\\pacman\\saved_packages.txt\") {",
-            "    Write-Host \"To restore installed packages, you need to run 'pacman -S --needed `$(cat /var/cache/pacman/saved_packages.txt)' inside MSYS2\" -ForegroundColor DarkCyan",
+            "if (Test-Path \"$persist_dir\\home\\saved_packages.txt\") {",
+            "    Write-Host \"To restore installed packages, you need to run 'pacman -S --needed `$(cat /home/saved_packages.txt)' inside MSYS2\" -ForegroundColor DarkCyan",
             "}"
         ]
     },
@@ -64,8 +64,8 @@
             "$args = \"`\"gpgconf --kill gpg-agent;$baseArgs`\"\"",
             "Invoke-ExternalCommand -Path \"$dir\\msys2_shell.cmd\" -ArgumentList \"-msys2 -defterm -here -no-start -c $args\" | Out-Null",
             "# Backup installed packages",
-            "Write-Host 'Saving MSYS2 installed packages to /var/cache/pacman/saved_packages.txt...' -ForegroundColor Yellow",
-            "$args2 = \"`\"pacman -Qqe | xargs echo > /var/cache/pacman/saved_packages.txt;$baseArgs`\"\"",
+            "Write-Host 'Saving MSYS2 installed packages to /home/saved_packages.txt...' -ForegroundColor Yellow",
+            "$args2 = \"`\"pacman -Qqe | xargs echo > /home/saved_packages.txt;$baseArgs`\"\"",
             "Invoke-ExternalCommand -Path \"$dir\\msys2_shell.cmd\" -ArgumentList \"-msys2 -defterm -here -no-start -c $args2\" | Out-Null"
         ]
     },
@@ -101,8 +101,7 @@
         ]
     ],
     "persist": [
-        "home",
-        "var\\cache\\pacman"
+        "home"
     ],
     "checkver": {
         "url": "https://mirrors.ustc.edu.cn/msys2/distrib/x86_64/",
