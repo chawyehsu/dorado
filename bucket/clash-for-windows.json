@@ -6,18 +6,24 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.13.6/Clash.for.Windows.Setup.0.13.6.exe#/dl.7z",
-            "hash": "5561ea0ae9a2a71f960f7c36a3e5bf019c18bfddc8c398ee260edf87b1b708c0"
+            "hash": "5561ea0ae9a2a71f960f7c36a3e5bf019c18bfddc8c398ee260edf87b1b708c0",
+            "installer": {
+                "script": [
+                    "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
+                    "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninst*\" -Force -Recurse"
+                ]
+            }
         },
         "32bit": {
             "url": "https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.13.6/Clash.for.Windows.Setup.0.13.6.ia32.exe#/dl.7z",
-            "hash": "02a87028ad3cce6abeae01020e8799de11af847058f6109c165e080edbf69a92"
+            "hash": "02a87028ad3cce6abeae01020e8799de11af847058f6109c165e080edbf69a92",
+            "installer": {
+                "script": [
+                    "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-32.7z\" \"$dir\"",
+                    "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninst*\" -Force -Recurse"
+                ]
+            }
         }
-    },
-    "installer": {
-        "script": [
-            "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
-            "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninst*\" -Force -Recurse"
-        ]
     },
     "shortcuts": [
         [
