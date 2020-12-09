@@ -1,17 +1,17 @@
 {
     "description": "Web browser that connects to the internet via the Tor anonymity network",
     "homepage": "https://www.torproject.org/",
-    "version": "10.0.5",
+    "version": "10.0.6",
     "##": "Multiple components under various open source licenses. Included HTTPS Everywhere extension is the strictest.",
     "license": "GPL-3.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://dist.torproject.org/torbrowser/10.0.5/torbrowser-install-win64-10.0.5_zh-CN.exe",
-            "hash": "f99713b34740a1552f34293fc8cf3aad4e08acad52e23a518b7909ee913ae5b2"
+            "url": "https://dist.torproject.org/torbrowser/10.0.6/torbrowser-install-win64-10.0.6_zh-CN.exe",
+            "hash": "3f2ed78675bc3ec408ddda9f287d4d94e48e539e60467fdeef84eb3f00e03500"
         },
         "32bit": {
-            "url": "https://dist.torproject.org/torbrowser/10.0.5/torbrowser-install-10.0.5_zh-CN.exe",
-            "hash": "a3c51a2b3b8349ad356c08226344c940624db82c2ddebd7b30a61e846d0346d5"
+            "url": "https://dist.torproject.org/torbrowser/10.0.6/torbrowser-install-10.0.6_zh-CN.exe",
+            "hash": "16ac2bb4b326410a3cb6e813251f48d6884004ec8d61cd05067e3e7cb5dd0c4f"
         }
     },
     "installer": {
