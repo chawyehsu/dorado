@@ -1,0 +1,41 @@
+{
+    "version": "0.2.7",
+    "description": "A tiny judging environment for OI contest based on Lemon + LemonPlus",
+    "homepage": "https://github.com/Project-LemonLime/Project_LemonLime",
+    "license": "GPL-3.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Project-LemonLime/Project_LemonLime/releases/download/0.2.7/lemon-win-x64.zip",
+            "hash": "09ebcd7d1c2acba52abf548bf687e829b7e5cc03203453d44c5f8ed04c1e936c",
+            "extract_dir": "lemon.0.2.7.Windows-x64"
+        },
+        "32bit": {
+            "url": "https://github.com/Project-LemonLime/Project_LemonLime/releases/download/0.2.7/lemon-win-x86.zip",
+            "hash": "0a7191e516fb29b47790dc2cdf2d3c1919e03953e07c38a4b1a0e09f8f8705b0",
+            "extract_dir": "lemon.0.2.7.Windows-x86"
+        }
+    },
+    "shortcuts": [
+        [
+            "lemon.exe",
+            "Lemon"
+        ]
+    ],
+    "bin": "lemon.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Project-LemonLime/Project_LemonLime/releases/download/$version/lemon-win-x64.zip",
+                "extract_dir": "lemon.$version.Windows-x64"
+            },
+            "32bit": {
+                "url": "https://github.com/Project-LemonLime/Project_LemonLime/releases/download/$version/lemon-win-x86.zip",
+                "extract_dir": "lemon.$version.Windows-x86"
+            }
+        },
+        "hash": {
+            "url": "https://github.com/Project-LemonLime/Project_LemonLime/releases/download/$version/sha256.list"
+        }
+    }
+}
