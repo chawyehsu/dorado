@@ -1,16 +1,16 @@
 {
-    "version": "2.0.0",
+    "version": "5.3.1",
     "homepage": "https://www.anaconda.com/",
     "description": "The most popular Python distribution for data science",
     "license": "BSD-3-Clause",
     "architecture": {
         "64bit": {
-            "url": "https://repo.continuum.io/archive/Anaconda3-2.0.0-Windows-x86_64.exe",
-            "hash": "md5:35fb9536ccb1aca93ec34714e8e69a5b"
+            "url": "https://repo.continuum.io/archive/Anaconda3-5.3.1-Windows-x86_64.exe",
+            "hash": "md5:3e4d013223d8a71d0fa4d58fe5b31023"
         },
         "32bit": {
-            "url": "https://repo.continuum.io/archive/Anaconda3-2.0.0-Windows-x86.exe",
-            "hash": "md5:1fd12fc8c5c3defcdf3a0bee6f5129fa"
+            "url": "https://repo.continuum.io/archive/Anaconda3-5.3.1-Windows-x86.exe",
+            "hash": "md5:52d9041d33c0134dd3824e6c15b458c4"
         }
     },
     "installer": {
@@ -31,7 +31,8 @@
     "post_install": "conda config --set auto_activate_base false",
     "checkver": {
         "url": "https://repo.continuum.io/archive",
-        "re": "Anaconda3-([\\d.]+)-Windows"
+        "re": "Anaconda3-([\\d.]+)-Windows",
+        "reverse": true
     },
     "autoupdate": {
         "architecture": {
