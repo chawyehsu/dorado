@@ -6,7 +6,7 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/lbryio/lbry-desktop/releases/download/v0.49.0/LBRY_0.49.0.exe#/LBRY_0.49.0.7z",
-            "hash": "e2ee82dd6e7df5bbd0d54df3cebdb80bdc742cdad6f583a002554bb4c60d096e",
+            "hash": "sha512:20c336b107de3812ba1dd0b91beb3dc05fb3ecf2178f7fb2379dc237da44d2e4de94bfcdadadc7d31cad310ee5e683591f3f1fcb9b8d1c8135daf07fb7c17d33",
             "installer": {
                 "script": [
                     "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" -DestinationPath \"$dir\" -Removal",
@@ -16,7 +16,7 @@
         },
         "32bit": {
             "url": "https://github.com/lbryio/lbry-desktop/releases/download/v0.49.0/LBRY_0.49.0.exe#/LBRY_0.49.0.7z",
-            "hash": "e2ee82dd6e7df5bbd0d54df3cebdb80bdc742cdad6f583a002554bb4c60d096e",
+            "hash": "sha512:20c336b107de3812ba1dd0b91beb3dc05fb3ecf2178f7fb2379dc237da44d2e4de94bfcdadadc7d31cad310ee5e683591f3f1fcb9b8d1c8135daf07fb7c17d33",
             "installer": {
                 "script": [
                     "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-32.7z\" -DestinationPath \"$dir\" -Removal",
@@ -45,7 +45,8 @@
         },
         "hash": {
             "url": "https://github.com/lbryio/lbry-desktop/releases/download/v$version/latest.yml",
-            "mode": "extract"
+            "mode": "extract",
+            "regex": "(?sm)$version.exe.*?sha512: $base64"
         }
     }
 }
