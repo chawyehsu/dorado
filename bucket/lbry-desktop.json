@@ -1,0 +1,51 @@
+{
+    "version": "0.49.0",
+    "description": "A browser and wallet for LBRY, the decentralized, user-controlled content marketplace",
+    "homepage": "https://lbry.tv",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/lbryio/lbry-desktop/releases/download/v0.49.0/LBRY_0.49.0.exe#/LBRY_0.49.0.7z",
+            "hash": "e2ee82dd6e7df5bbd0d54df3cebdb80bdc742cdad6f583a002554bb4c60d096e",
+            "installer": {
+                "script": [
+                    "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" -DestinationPath \"$dir\" -Removal",
+                    "Remove-Item \"$dir\\`$PLUGINSDIR\" -Force -Recurse"
+                ]
+            }
+        },
+        "32bit": {
+            "url": "https://github.com/lbryio/lbry-desktop/releases/download/v0.49.0/LBRY_0.49.0.exe#/LBRY_0.49.0.7z",
+            "hash": "e2ee82dd6e7df5bbd0d54df3cebdb80bdc742cdad6f583a002554bb4c60d096e",
+            "installer": {
+                "script": [
+                    "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-32.7z\" -DestinationPath \"$dir\" -Removal",
+                    "Remove-Item \"$dir\\`$PLUGINSDIR\" -Force -Recurse"
+                ]
+            }
+        }
+    },
+    "shortcuts": [
+        [
+            "LBRY.exe",
+            "LBRY"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/lbryio/lbry-desktop"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/lbryio/lbry-desktop/releases/download/v$version/LBRY_$version.exe#/LBRY_$version.7z"
+            },
+            "32bit": {
+                "url": "https://github.com/lbryio/lbry-desktop/releases/download/v$version/LBRY_$version.exe#/LBRY_$version.7z"
+            }
+        },
+        "hash": {
+            "url": "https://github.com/lbryio/lbry-desktop/releases/download/v$version/latest.yml",
+            "mode": "extract"
+        }
+    }
+}
