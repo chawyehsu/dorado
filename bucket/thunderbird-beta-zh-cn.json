@@ -1,0 +1,21 @@
+{
+    "description": "Thunderbird is a free email application that’s easy to set up and customize (Beta)",
+    "homepage": "https://www.thunderbird.net/zh-CN/",
+    "version": "nightly",
+    "license": "MPL-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://download.mozilla.org/?product=thunderbird-beta-latest-ssl&os=win64&lang=zh-CN#/thunderbird-beta.7z"
+        },
+        "32bit": {
+            "url": "https://download.mozilla.org/?product=thunderbird-beta-latest-ssl&os=win&lang=zh-CN#/thunderbird-beta.7z"
+        }
+    },
+    "extract_dir": "core",
+    "shortcuts": [
+        [
+            "thunderbird.exe",
+            "Thunderbird Beta"
+        ]
+    ]
+}
