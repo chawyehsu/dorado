@@ -1,0 +1,45 @@
+{
+    "description": "Thunderbird is a free email application that’s easy to set up and customize",
+    "homepage": "https://www.thunderbird.net/zh-CN/",
+    "version": "78.5.1",
+    "license": "MPL-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://download.mozilla.org/?product=thunderbird-78.5.1-SSL&os=win64&lang=zh-CN#/thunderbird-78.5.1.7z",
+            "hash": "f1dac80d8741c297dac531c16c03226e5662689cb5153cde627ec2de0abab6e9"
+        },
+        "32bit": {
+            "url": "https://download.mozilla.org/?product=thunderbird-78.5.1-SSL&os=win&lang=zh-CN#/thunderbird-78.5.1.7z",
+            "hash": "eb92be64ccf706e7f4348c743cbb7bbb823ad3f6d5f7a629f385b2c3c7d72db5"
+        }
+    },
+    "extract_dir": "core",
+    "shortcuts": [
+        [
+            "thunderbird.exe",
+            "Thunderbird"
+        ]
+    ],
+    "checkver": {
+        "url": "https://www.thunderbird.net/en-US/thunderbird/all/",
+        "re": "thunderbird-([\\d.]+)-SSL&os=win64&lang=zh-CN"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://download.mozilla.org/?product=thunderbird-$version-SSL&os=win64&lang=zh-CN#/thunderbird-$version.7z",
+                "hash": {
+                    "find": "([a-fA-F0-9]{64})\\s+(?:win64/zh-CN/Thunderbird Setup ([\\d.]+).exe)",
+                    "url": "https://download-installer.cdn.mozilla.net/pub/thunderbird/releases/$version/SHA256SUMS"
+                }
+            },
+            "32bit": {
+                "url": "https://download.mozilla.org/?product=thunderbird-$version-SSL&os=win&lang=zh-CN#/thunderbird-$version.7z",
+                "hash": {
+                    "find": "([a-fA-F0-9]{64})\\s+(?:win32/zh-CN/Thunderbird Setup ([\\d.]+).exe)",
+                    "url": "https://download-installer.cdn.mozilla.net/pub/thunderbird/releases/$version/SHA256SUMS"
+                }
+            }
+        }
+    }
+}
