@@ -8,7 +8,7 @@
         <a href="https://github.com/scoopinstaller/awesome/blob/master/README.md" title="Awesome Scoop"><img src="https://awesome.re/mentioned-badge-flat.svg" alt="Mentioned in Awesome Scoop"></a>
     </p>
     <p align="center">
-        <a href="README.md">English</a>|<a href="README_CN.md">简体中文</a>
+        <a href="README.md">English</a>|<a href="README.zh-Hans.md">简体中文</a>
     </p>
     <p align="center"><img align="center" src="https://user-images.githubusercontent.com/5764917/100413251-da9d0400-30b1-11eb-9bf8-3a97713e7730.gif" alt="highlight" /></p>
     <p align="center">
