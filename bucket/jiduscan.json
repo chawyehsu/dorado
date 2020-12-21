@@ -1,23 +1,28 @@
 {
-
-    "homepage":"https://jidusm.wrste.com/",
-
-    "license":"unknown",
-
-    "version":"2.3.0",
-
-    "url":"https://jidu.wrste.com/jiduocr/%E6%9E%81%E5%BA%A6%E6%89%AB%E6%8F%8F%202.3.0%20x64%20.7z",
-
-    "hash":"c14487e235f5d8e0e463124b048cb81ad4c3a029b426f715edefe935612e4f72",
-
-    "bin":"极度扫描.exe",
-
-    "shortcuts":[
-
+    "version": "2.3.1",
+    "description": "Jidu Scan is an OCR tool that support mathpix",
+    "homepage": "https://jidusm.wrste.com/",
+    "license": "Proprietary",
+    "architecture": {
+        "64bit": {
+            "url": "https://jidu.wrste.com/jiduocr/%E6%9E%81%E5%BA%A6%E6%89%AB%E6%8F%8F%202.3.1%20x64%20.7z#/jiduscan_v2.3.1.7z",
+            "hash": "2e75bd56f64564ec70353da1d807484603d608d7c22da04b756bb2fd1e86d85e"
+        }
+    },
+    "shortcuts": [
         [
-
             "极度扫描.exe",
-
-            "极度扫描"]]
-
+            "极度扫描"
+        ]
+    ],
+    "checkver": {
+        "regex": "/jiduocr/%E6%9E%81%E5%BA%A6%E6%89%AB%E6%8F%8F%20([\\d.]+)%20x64%20.7z"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://jidu.wrste.com/jiduocr/%E6%9E%81%E5%BA%A6%E6%89%AB%E6%8F%8F%20$version%20x64%20.7z#/jiduscan_v$version.7z"
+            }
+        }
+    }
 }
