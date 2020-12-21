@@ -20,6 +20,9 @@
             "$installArgs = \"-no-gui -portable -non-admin -profile=$installProfile\"",
             "Invoke-ExternalCommand -Path \"$dir\\installer\\install-tl-windows.bat\" -ArgumentList $installArgs",
             "Remove-Item \"$dir\\installer\" -Recurse -Force | Out-Null",
+            "if (!(Test-Path \"$dir\\bin\\win64\")) {",
+            "    New-Item -Type Directory -Path \"$dir\\bin\\win64\" | Out-Null",
+            "}",
             "# Unset install envs",
             "$env:TEXLIVE_INSTALL_PAPER=''",
             "$env:TEXLIVE_INSTALL_PREFIX=''",
@@ -28,7 +31,10 @@
             "$env:TEXLIVE_INSTALL_ENV_NOCHECK=''"
         ]
     },
-    "env_add_path": "bin\\win32",
+    "env_add_path": [
+        "bin\\win64",
+        "bin\\win32"
+    ],
     "shortcuts": [
         [
             "tl-tray-menu.exe",
