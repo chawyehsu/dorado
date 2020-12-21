@@ -1,0 +1,57 @@
+{
+    "homepage": "https://tug.org/texlive/",
+    "description": "TeX Live is a cross-platform, free software distribution for the TeX typesetting system",
+    "license": "LPPL,GPL2",
+    "version": "2020",
+    "url": "http://mirror.ctan.org/systems/texlive/tlnet/install-tl.zip",
+    "hash": "sha512:03df98f34ccee9d2f63218b396d024a7b448e29250c1ff3adb48615a5f54ec11902a30775c13c754830f22ea7da846cd9f3edeb7ccadf2b8440dd5ce37fd249c",
+    "installer": {
+        "script": [
+            "Write-Host 'Invoking TeX Live installer...' -ForegroundColor DarkCyan",
+            "Write-Host 'This can take a few minutes to to a long time...' -ForegroundColor DarkYellow",
+            "Get-ChildItem \"$dir\\install-tl-*\" | Rename-Item -NewName \"$dir\\installer\"",
+            "$env:TEXLIVE_INSTALL_PAPER='a4'",
+            "$env:TEXLIVE_INSTALL_PREFIX=\"$dir\"",
+            "$env:TEXLIVE_INSTALL_NO_CONTEXT_CACHE=1",
+            "$env:TEXLIVE_INSTALL_NO_RESUME=1",
+            "$env:TEXLIVE_INSTALL_ENV_NOCHECK=1",
+            "$installProfile = \"$dir\\installer\\default.profile\"",
+            "Write-Output \"selected_scheme scheme-small\" | Out-File $installProfile",
+            "$installArgs = \"-no-gui -portable -non-admin -profile=$installProfile\"",
+            "Write-Output 'Downloading and installing TeX Live packages...'",
+            "Invoke-ExternalCommand -Path \"$dir\\installer\\install-tl-windows.bat\" -ArgumentList $installArgs",
+            "Remove-Item \"$dir\\installer\" -Recurse -Force | Out-Null",
+            "if (!(Test-Path \"$dir\\bin\\win64\")) {",
+            "    New-Item -Type Directory -Path \"$dir\\bin\\win64\" | Out-Null",
+            "}",
+            "# Unset install envs",
+            "$env:TEXLIVE_INSTALL_PAPER=''",
+            "$env:TEXLIVE_INSTALL_PREFIX=''",
+            "$env:TEXLIVE_INSTALL_NO_CONTEXT_CACHE=''",
+            "$env:TEXLIVE_INSTALL_NO_RESUME=''",
+            "$env:TEXLIVE_INSTALL_ENV_NOCHECK=''"
+        ]
+    },
+    "env_add_path": [
+        "bin\\win64",
+        "bin\\win32"
+    ],
+    "shortcuts": [
+        [
+            "tl-tray-menu.exe",
+            "Tex Live Manager"
+        ]
+    ],
+    "persist": [
+        "texmf-config"
+    ],
+    "checkver": {
+        "regex": "Current release: TeX Live ([\\d]+)"
+    },
+    "autoupdate": {
+        "url": "http://mirror.ctan.org/systems/texlive/tlnet/install-tl.zip",
+        "hash": {
+            "url": "$url.sha512"
+        }
+    }
+}
