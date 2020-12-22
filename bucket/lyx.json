@@ -15,7 +15,7 @@
     },
     "installer": {
         "script": [
-            "# Install detail: https://github.com/cburschka/lyx/blob/master/development/Win32/packaging/installer2/src/main.nsh",
+            "# Install detail: https://github.com/cburschka/lyx/blob/bce49b877e/development/Win32/packaging/installer2/src/main.nsh",
             "Remove-Item \"$dir\\`$PLUGINSDIR\" -Recurse -Force | Out-Null",
             "# Compile Python resources",
             "@(\"import os`r`n\",",
