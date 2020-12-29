@@ -28,7 +28,10 @@
         "args": "/S"
     },
     "bin": "scripts\\conda.exe",
-    "post_install": "conda config --set auto_activate_base false",
+    "post_install": [
+        "conda config --set auto_activate_base false",
+        "(& conda \"shell.powershell\" \"hook\") | Out-String | Invoke-Expression"
+    ],
     "checkver": {
         "url": "https://repo.continuum.io/archive",
         "re": "Anaconda3-([\\d.]+)-Windows",
