@@ -1,12 +1,12 @@
 {
-    "version": "0.49.1",
+    "version": "0.49.3",
     "description": "A browser and wallet for LBRY, the decentralized, user-controlled content marketplace",
     "homepage": "https://lbry.tv",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/lbryio/lbry-desktop/releases/download/v0.49.1/LBRY_0.49.1.exe#/LBRY_0.49.1.7z",
-            "hash": "sha512:e2af39f293705eb6a7609e415e6b9a535127f1b8bbe9e45e5bce6e56df9cef8f648d5da1cf33d37c353abb5c0139c8a921e58407da5dee6772bc096e5b382f23",
+            "url": "https://github.com/lbryio/lbry-desktop/releases/download/v0.49.3/LBRY_0.49.3.exe#/LBRY_0.49.3.7z",
+            "hash": "sha512:437c7fe0c772582089eabe68f35866d8c979214ef2b3cb79b118203e39914dea4da89b0052e4e0121038011d5db78903f1d2c256225e74224fcad382f28982c4",
             "installer": {
                 "script": [
                     "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" -DestinationPath \"$dir\" -Removal",
@@ -15,8 +15,8 @@
             }
         },
         "32bit": {
-            "url": "https://github.com/lbryio/lbry-desktop/releases/download/v0.49.1/LBRY_0.49.1.exe#/LBRY_0.49.1.7z",
-            "hash": "sha512:e2af39f293705eb6a7609e415e6b9a535127f1b8bbe9e45e5bce6e56df9cef8f648d5da1cf33d37c353abb5c0139c8a921e58407da5dee6772bc096e5b382f23",
+            "url": "https://github.com/lbryio/lbry-desktop/releases/download/v0.49.3/LBRY_0.49.3.exe#/LBRY_0.49.3.7z",
+            "hash": "sha512:437c7fe0c772582089eabe68f35866d8c979214ef2b3cb79b118203e39914dea4da89b0052e4e0121038011d5db78903f1d2c256225e74224fcad382f28982c4",
             "installer": {
                 "script": [
                     "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-32.7z\" -DestinationPath \"$dir\" -Removal",
