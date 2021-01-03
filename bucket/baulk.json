@@ -1,0 +1,32 @@
+{
+    "homepage": "https://github.com/baulk/baulk",
+    "description": "Minimal Package Manager for Windows",
+    "version": "1.7.1",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/baulk/baulk/releases/download/1.7.1/Baulk-1.7.1-win-x64.zip",
+            "hash": "bc63ea1facb8e19b42239c93afe576376fb6e448e7b954dd37d4efd8685ee662",
+            "extract_dir": "Baulk-1.7.1-win-x64"
+        },
+        "32bit": {
+            "url": "https://github.com/baulk/baulk/releases/download/1.7.1/Baulk-1.7.1-win-x86.zip",
+            "hash": "5271cae7e82ef641326662846200a30bd79a749b31c0bedfaef318846d6f4d4c",
+            "extract_dir": "Baulk-1.7.1-win-x86"
+        }
+    },
+    "bin": "baulkterminal.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/baulk/baulk/releases/download/$version/Baulk-$version-win-x64.zip",
+                "extract_dir": "Baulk-$version-win-x64"
+            },
+            "32bit": {
+                "url": "https://github.com/baulk/baulk/releases/download/$version/Baulk-$version-win-x86.zip",
+                "extract_dir": "Baulk-$version-win-x86"
+            }
+        }
+    }
+}
