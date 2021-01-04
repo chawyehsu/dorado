@@ -16,10 +16,13 @@
         ]
     },
     "env_set": {
-        "DVM_DIR": "$dir",
+        "DVM_DIR": "$dir\\versions",
         "DENO_INSTALL": "$dir"
     },
     "env_add_path": "bin",
+    "persist": [
+        "versions"
+    ],
     "checkver": {
         "url": "https://raw.githubusercontent.com/justjavac/dvm_releases/master/latest.txt",
         "regex": "([\\d.]+)"
