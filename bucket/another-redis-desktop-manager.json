@@ -1,0 +1,37 @@
+{
+    "homepage": "https://github.com/qishibo/AnotherRedisDesktopManager",
+    "description": "🚀🚀🚀A faster, better and more stable redis desktop manager, compatible with Linux, windows, mac. What's more, it won't crash when loading a large number of keys.",
+    "version": "1.4.0",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/qishibo/AnotherRedisDesktopManager/releases/download/v1.4.0/Another-Redis-Desktop-Manager.1.4.0.exe#/dl.7z",
+            "hash": "sha512:abdb5e5734c75121eb6abe14a8814a8d1ffec4fe5192da8a3be48f721048328cb79716eb9f854a8e6a30f526b4ad3646703caf84b79028880fb25d9f0869dd82",
+            "installer": {
+                "script": [
+                    "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
+                    "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninst*\" -Force -Recurse"
+                ]
+            }
+        }
+    },
+    "shortcuts": [
+        [
+            "Another Redis Desktop Manager.exe",
+            "Another Redis Desktop Manager"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/qishibo/AnotherRedisDesktopManager/releases/download/v$version/Another-Redis-Desktop-Manager.$version.exe#/dl.7z",
+                "hash": {
+                    "url": "https://github.com/qishibo/AnotherRedisDesktopManager/releases/download/v$version/latest.yml",
+                    "mode": "extract",
+                    "regex": "(?sm)$version.exe.*?sha512: $base64"
+                }
+            }
+        }
+    }
+}
