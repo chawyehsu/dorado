@@ -18,6 +18,7 @@
     },
     "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\" -Force -Recurse",
     "bin": "qbittorrent.exe",
+    "persist": "profile",
     "shortcuts": [
         [
             "qbittorrent.exe",
