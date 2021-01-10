@@ -21,6 +21,10 @@
         "github": "https://github.com/serge-rgb/milton"
     },
     "autoupdate": {
-        "url": "https://github.com/serge-rgb/milton/releases/download/v$version/Milton_$version_Standalone_x64.zip"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/serge-rgb/milton/releases/download/v$version/Milton_$version_Standalone_x64.zip"
+            }
+        }
     }
 }
