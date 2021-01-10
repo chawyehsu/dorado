@@ -1,0 +1,24 @@
+{
+    "homepage": "https://moul.app/",
+    "description": "The minimalist publishing tool for photographers",
+    "license": "Apache-2.0",
+    "version": "3.2.3",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/moulco/moul/releases/download/3.2.3/moul_windows_amd64.exe.zip",
+            "hash": "d1aed1f79718353aa1e547e3d030ad37c08fc322aebd0eb276d2c5a1f3efe991"
+        }
+    },
+    "pre_install": "Rename-Item @(Get-ChildItem $dir\\moul*.exe)[0] $dir\\moul.exe",
+    "bin": "moul.exe",
+    "checkver": {
+        "github": "https://github.com/moulco/moul"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/moulco/moul/releases/download/$version/moul_windows_amd64.exe.zip"
+            }
+        }
+    }
+}
