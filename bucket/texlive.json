@@ -4,7 +4,7 @@
     "license": "LPPL,GPL2",
     "version": "2020",
     "url": "http://mirror.ctan.org/systems/texlive/tlnet/install-tl.zip",
-    "hash": "sha512:03df98f34ccee9d2f63218b396d024a7b448e29250c1ff3adb48615a5f54ec11902a30775c13c754830f22ea7da846cd9f3edeb7ccadf2b8440dd5ce37fd249c",
+    "hash": "sha512:585d0d8b0bf7f24598e48e5de3593074d428fcae7850655cceabd838268137b487096ace2818dbec79b960b7749e37889915b9c3b58911b90648ecb4b56a14be",
     "installer": {
         "script": [
             "Write-Host 'Invoking TeX Live installer...' -ForegroundColor DarkCyan",
@@ -42,9 +42,7 @@
             "Tex Live Manager"
         ]
     ],
-    "persist": [
-        "texmf-config"
-    ],
+    "persist": "texmf-config",
     "checkver": {
         "regex": "Current release: TeX Live ([\\d]+)"
     },
