@@ -1,18 +1,18 @@
 {
     "homepage": "https://github.com/baulk/baulk",
     "description": "Minimal Package Manager for Windows",
-    "version": "1.7.2",
+    "version": "2.0.0",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/baulk/baulk/releases/download/1.7.2/Baulk-1.7.2-win-x64.zip",
-            "hash": "378e694b125c00589ec2ca84e9e6ccd7e6d91f3c672b70cd6d5549e3f2f205ba",
-            "extract_dir": "Baulk-1.7.2-win-x64"
+            "url": "https://github.com/baulk/baulk/releases/download/2.0.0/Baulk-2.0.0-win-x64.zip",
+            "hash": "ccf99d39fa361110e3facad8ac26c35ef13b991df1924103e511de5c9c4600db",
+            "extract_dir": "Baulk-2.0.0-win-x64"
         },
         "32bit": {
-            "url": "https://github.com/baulk/baulk/releases/download/1.7.2/Baulk-1.7.2-win-x86.zip",
-            "hash": "7990ee2c2b5059b5d6eb6421e6e16cfb3b8d866515d7a9385801046c11d7992e",
-            "extract_dir": "Baulk-1.7.2-win-x86"
+            "url": "https://github.com/baulk/baulk/releases/download/2.0.0/Baulk-2.0.0-win-x86.zip",
+            "hash": "0c34f38ece246a1de8698949fe9885857cd57c1aaefc61cfba06b623911099cd",
+            "extract_dir": "Baulk-2.0.0-win-x86"
         }
     },
     "bin": "baulkterminal.exe",
