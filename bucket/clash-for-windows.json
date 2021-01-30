@@ -1,12 +1,12 @@
 {
     "homepage": "https://github.com/Fndroid/clash_for_windows_pkg",
     "description": "A Windows GUI based on Clash",
-    "version": "0.14.2",
+    "version": "0.14.3",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.14.2/Clash.for.Windows.Setup.0.14.2.exe#/dl.7z",
-            "hash": "59b9eae2218621ec2b2d89bdca9f2ac83fe49f86b235a05010e6f352f9727cb9",
+            "url": "https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.14.3/Clash.for.Windows.Setup.0.14.3.exe#/dl.7z",
+            "hash": "fcf3d0e3060575f4abaa2fad640ae2dd4c13a0c339a9e0cbee6c94c32fd500f3",
             "installer": {
                 "script": [
                     "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
@@ -15,8 +15,8 @@
             }
         },
         "32bit": {
-            "url": "https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.14.2/Clash.for.Windows.Setup.0.14.2.ia32.exe#/dl.7z",
-            "hash": "b77da2e87c9cfd2f1eb501b1e73a8c8160d3ce335c1f72c39e6f6362936ffeaa",
+            "url": "https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.14.3/Clash.for.Windows.Setup.0.14.3.ia32.exe#/dl.7z",
+            "hash": "bba7f9f312e058de31dd9cfcf274f3a499d2b200de36c0ca7e9dc7d7ef20f40c",
             "installer": {
                 "script": [
                     "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-32.7z\" \"$dir\"",
