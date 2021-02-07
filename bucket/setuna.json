@@ -1,16 +1,16 @@
 {
     "homepage": "https://github.com/tylearymf/SETUNA2",
-    "description": "A tiny but useful screenshot software.",
-    "version": "2.6.0",
+    "description": "A tiny but useful screenshot software",
+    "version": "3.0.0.6",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/tylearymf/SETUNA2/releases/download/2.6.0/SETUNA2.6.0_x64.7z",
-            "hash": "68e9e1cf6331a9e5f971448d308a56f5cd043dcddd549c56d329a3b4bf100a40"
+            "url": "https://github.com/tylearymf/SETUNA2/releases/download/3.0.0.6/SETUNA_Release_x64.zip",
+            "hash": "6a3791c36dce444cbb36636a437dc063816be458a543606eea94bef8ec0006eb"
         },
         "32bit": {
-            "url": "https://github.com/tylearymf/SETUNA2/releases/download/2.6.0/SETUNA2.6.0_x86.7z",
-            "hash": "a861014a1a93aea2fdc8dab14ff893724813e09ed559db49a57d0411a78dfc13"
+            "url": "https://github.com/tylearymf/SETUNA2/releases/download/3.0.0.6/SETUNA_Release_x86.zip",
+            "hash": "b16a2345b17d3d5a9df55c9c0f55f3ff9ec490ce27d8043d2bbd6d8b7c223c9c"
         }
     },
     "pre_install": [
@@ -18,7 +18,6 @@
         "    New-Item -Force -Path \"$persist_dir\\SetunaConfig.xml\" -ItemType File -Value '<?xml version=\"1.0\"?><SetunaOption></SetunaOption>' | Out-Null",
         "}"
     ],
-    "bin": "SETUNA.exe",
     "shortcuts": [
         [
             "SETUNA.exe",
@@ -30,10 +29,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/tylearymf/SETUNA2/releases/download/$version/SETUNA$version_x64.7z"
+                "url": "https://github.com/tylearymf/SETUNA2/releases/download/$version/SETUNA_Release_x64.zip"
             },
             "32bit": {
-                "url": "https://github.com/tylearymf/SETUNA2/releases/download/$version/SETUNA$version_x86.7z"
+                "url": "https://github.com/tylearymf/SETUNA2/releases/download/$version/SETUNA_Release_x86.zip"
             }
         }
     }
