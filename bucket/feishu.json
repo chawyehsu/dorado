@@ -5,21 +5,21 @@
         "identifier": "EULA",
         "url": "https://www.feishu.cn/en/terms"
     },
-    "version": "3.40.3",
-    "url": "https://sf3-eecdn-tos.pstatp.com/obj/ee-appcenter/3cd560/Feishu-3.40.3.exe#/feishu-3.40.3.7z",
-    "hash": "md5:3cd5601cc4a65d95fa8f6533c9e3c297",
+    "version": "3.41.7",
+    "url": "https://sf3-eecdn-tos.pstatp.com/obj/ee-appcenter/9accf5/feishu-win-3.41.7-signed.exe#/feishu-3.41.7.7z",
+    "hash": "md5:9accf5cfe735bcd029b6b807f4de42ab",
     "shortcuts": [
         [
-            "Lark.exe",
+            "Feishu.exe",
             "飞书"
         ]
     ],
     "checkver": {
         "url": "https://www.feishu.cn/api/downloads",
-        "regex": "(?sm)Windows.*?https://(?<path>[\\w.-/].*?)/Feishu-(?<version>[\\d.]+).exe"
+        "regex": "(?sm)Windows.*?https://(?<path>[\\w.-/].*?)-(?<version>[\\d.]+)(?<suffix>[\\w.-].*?).exe"
     },
     "autoupdate": {
-        "url": "https://$matchPath/Feishu-$version.exe#/feishu-$version.7z",
+        "url": "https://$matchPath-$version$matchSuffix.exe#/feishu-$version.7z",
         "hash": {
             "url": "https://www.feishu.cn/api/downloads",
             "jsonpath": "$.versions.Windows.hash"
