@@ -1,37 +1,23 @@
 {
     "homepage": "https://chunky.llbit.se/",
-    "description": "Chunky is a Minecraft mapping and rendering tool.",
+    "description": "Chunky is a Minecraft mapping and rendering tool (for Minecraft 1.13 or newer)",
     "license": "GPL-3.0-only",
-    "version": "1.4.5",
-    "url": "https://launchpad.net/chunky/1.4/1.4.5/+download/Chunky-1.4.5.exe#/dl.7z",
-    "hash": "md5:9013ca1b9dcfd3c38b8a69577e157502",
+    "version": "2.3.0",
+    "url": "https://chunkyupdate.lemaik.de/ChunkyLauncher.jar#/chunky.jar",
+    "hash": "648318743d6f3d46e6d3b4a0b25637993833b16fbf0a83d50d0b3fdcd7719b2a",
     "suggest": {
         "JDK": [
-            "java/oraclejdk",
-            "java/openjdk"
+            "java/liberica-full",
+            "java/oraclejdk"
         ]
     },
-    "shortcuts": [
-        [
-            "chunky.jar",
-            "Chunky",
-            "",
-            "chunky.ico"
-        ]
-    ],
     "bin": "chunky.jar",
     "checkver": {
-        "url": "https://chunky.llbit.se/download.html",
-        "re": "version ([\\d.]+)"
+        "url": "https://chunky.llbit.se/chunky2.html",
+        "re": "> Chunky ([\\d.]+)"
     },
     "autoupdate": {
-        "url": "https://launchpad.net/chunky/$majorVersion.$minorVersion/$version/+download/Chunky-$version.exe#/dl.7z",
-        "hash": {
-            "url": "https://launchpad.net/chunky/$majorVersion.$minorVersion/$version/+download/Chunky-$version.exe/+md5"
-        }
+        "url": "https://chunkyupdate.lemaik.de/ChunkyLauncher.jar#/chunky.jar"
     },
-    "notes": [
-        "You'll need a JAVA runtime installed to run Chunky.",
-        "Select the recommended directory, i.e. 'Home Directory' to store Chunky configuration."
-    ]
+    "notes": "You'll need a Java runtime (with JFX) installed to run Chunky"
 }
