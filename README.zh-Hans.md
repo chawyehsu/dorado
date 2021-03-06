@@ -28,12 +28,15 @@
 | hmcl | 极受欢迎的国产 Minecraft 启动器 |
 | itch | itch.io 客户端，发现更多独立游戏/软件 |
 | liko-12 | 没有 PICO-8？可以试试 LIKO-12，也是很好玩的 |
+| msys2-cn | 专为国人安装使用而配置的 MSYS2，全自动无人值守安装即用 |
 | neteasemusic | 网易云音乐 —— 发现、分享 |
 | nuwen-mingw-gcc | 来自微软职工 nuwen 的最小 GCC 工具包，源自 [MinGW Distro](https://nuwen.net/mingw.html) |
 | nvm-windows | 颇受欢迎的 [nvm-windows](https://github.com/coreybutler/nvm-windows) 的修改版，移除了管理员提权要求，使得低权限的普通用户亦可无障碍使用 |
+| texlive | 需要 Tex 环境？TexLive 是最佳解决方法！ |
 | tcping | 通过 TCP 进行 ping 操作 |
 | translucenttb | 你可能需要的 Windows 10 任务栏透明化小工具 |
 | trash | 将待删除文件移至回收站，而不是直接 `rm-rf`，类似于 macOS 的 trash |
+| volta | 你可能不再需要 nvm-windows |
 | yarn-np | 非便携版的 Yarn，全局安装的 `node_modules` 仍然保持在原有的 `$env:LOCALAPPDATA\\Yarn\\bin` 路径下 |
 | wechat | 你可能需要的微信 PC 客户端 |
 
