@@ -1,0 +1,60 @@
+{
+    "homepage": "https://github.com/c0re100/qBittorrent-Enhanced-Edition",
+    "license": {
+        "identifier": "GPL-2.0-only",
+        "url": "https://github.com/qbittorrent/qBittorrent/blob/master/COPYING"
+    },
+    "version": "4.3.3.10",
+    "description": "qBittorrent BitTorrent client with anti-leech enhancement.",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/c0re100/qBittorrent-Enhanced-Edition/releases/download/release-4.3.3.10/qbittorrent_4.3.3.10_x64_setup.exe#/dl.7z",
+            "hash": "6c4b560a6392c6a149857762d860e8d3b854b828e220b65fb756bfbfadaab950"
+        },
+        "32bit": {
+            "url": "https://github.com/c0re100/qBittorrent-Enhanced-Edition/releases/download/release-4.3.3.10/qbittorrent_4.3.3.10_setup.exe#/dl.7z",
+            "hash": "c1c702e558ce18c63e48f03d1c669896dcd02671e25009c56dbb5777bd85bfc9"
+        }
+    },
+    "persist": "profile",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\profile\\qBittorrent\")) {",
+        "    Write-Host 'First installation detected, modifying for portable mode...' -ForegroundColor Yellow",
+        "    New-Item \"$persist_dir\\profile\\qBittorrent\\config\", \"$persist_dir\\profile\\qBittorrent\\data\" -Type Directory -Force | Out-Null",
+        "    if (Test-Path \"$env:Appdata\\qBittorrent\") {",
+        "        Write-Host 'Importing config files from non-portable version...' -ForegroundColor Yellow",
+        "        Get-ChildItem -Path \"$env:Appdata\\qBittorrent\" | Copy-Item -Destination \"$persist_dir\\profile\\qBittorrent\\config\" -Force -Recurse",
+        "    }",
+        "    if (Test-Path \"$env:LocalAppdata\\qBittorrent\") {",
+        "        Write-Host 'Importing data files from non-portable version...' -ForegroundColor Yellow",
+        "        Get-ChildItem -Path \"$env:LocalAppdata\\qBittorrent\" | Copy-Item -Destination \"$persist_dir\\profile\\qBittorrent\\data\" -Force -Recurse",
+        "        if (Test-Path \"$persist_dir\\profile\\qBittorrent\\data\\cache\") {",
+        "            Move-Item \"$persist_dir\\profile\\qBittorrent\\data\\cache\" \"$persist_dir\\profile\\qBittorrent\" -Force",
+        "        }",
+        "    }",
+        "    Write-Host 'Completed!' -ForegroundColor Yellow",
+        "}"
+    ],
+    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\" -Force -Recurse",
+    "bin": "qbittorrent.exe",
+    "shortcuts": [
+        [
+            "qbittorrent.exe",
+            "qBittorrent"
+        ]
+    ],
+    "checkver": {
+        "url": "https://github.com/c0re100/qBittorrent-Enhanced-Edition/releases/latest",
+        "regex": "/releases/tag/release-([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/c0re100/qBittorrent-Enhanced-Edition/releases/download/release-$version/qbittorrent_$version_x64_setup.exe#/dl.7z"
+            },
+            "32bit": {
+                "url": "https://github.com/c0re100/qBittorrent-Enhanced-Edition/releases/download/release-$version/qbittorrent_$version_setup.exe#/dl.7z"
+            }
+        }
+    }
+}
