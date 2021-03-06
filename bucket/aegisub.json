@@ -1,36 +1,24 @@
 {
-    "homepage": "http://www.aegisub.org",
-    "description": "Aegisub is a free, cross-platform open source tool for creating and modifying subtitles.",
+    "homepage": "https://github.com/Aegisub/Aegisub",
+    "description": "Aegisub is a free, cross-platform open source tool for creating and modifying subtitles",
     "version": "3.2.2",
     "license": "BSD-3-Clause",
     "architecture": {
         "64bit": {
-            "url": "http://ftp.aegisub.org/pub/archives/releases/windows/aegisub-3.2.2-portable-64.exe#dl.7z",
-            "hash": "md5:d316e4ce9bcbfb53d3803c86804c3f69",
+            "url": "https://github.com/Aegisub/Aegisub/releases/download/v3.2.2/aegisub-3.2.2-portable-64.exe#dl.7z",
+            "hash": "d3865957ef6b6be1a320f01ac2f264349f9db7abc4864457963f9fdad5cd2256",
             "extract_dir": "aegisub-3.2.2-portable-64",
-            "bin": [
-                [
-                    "aegisub64.exe",
-                    "aegisub"
-                ]
-            ],
             "shortcuts": [
                 [
                     "aegisub64.exe",
-                    "Aegisub x64"
+                    "Aegisub"
                 ]
             ]
         },
         "32bit": {
-            "url": "http://ftp.aegisub.org/pub/archives/releases/windows/aegisub-3.2.2-portable-32.exe#dl.7z",
-            "hash": "md5:908016606d64c52ef52b52a3704fc1b2",
+            "url": "https://github.com/Aegisub/Aegisub/releases/download/v3.2.2/aegisub-3.2.2-portable-32.exe#dl.7z",
+            "hash": "849f6005d18a33495dcc22d4a5ecb6a2d087f653994db9498ec85c1eb9110f51",
             "extract_dir": "aegisub-3.2.2-portable-32",
-            "bin": [
-                [
-                    "aegisub32.exe",
-                    "aegisub"
-                ]
-            ],
             "shortcuts": [
                 [
                     "aegisub32.exe",
@@ -39,24 +27,17 @@
             ]
         }
     },
-    "checkver": {
-        "url": "http://www.aegisub.org/downloads/",
-        "re": "The latest version is \\<strong\\>([\\d.]+)\\<\\/strong\\>"
-    },
+    "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "http://ftp.aegisub.org/pub/archives/releases/windows/aegisub-$version-portable-64.exe#dl.7z",
+                "url": "https://github.com/Aegisub/Aegisub/releases/download/v$version/aegisub-$version-portable-64.exe#dl.7z",
                 "extract_dir": "aegisub-$version-portable-64"
             },
             "32bit": {
-                "url": "http://ftp.aegisub.org/pub/archives/releases/windows/aegisub-$version-portable-32.exe#dl.7z",
+                "url": "https://github.com/Aegisub/Aegisub/releases/download/v$version/aegisub-$version-portable-32.exe#dl.7z",
                 "extract_dir": "aegisub-$version-portable-32"
             }
-        },
-        "hash": {
-            "mode": "extract",
-            "url": "$url.md5"
         }
     }
 }
