@@ -41,7 +41,7 @@
     ],
     "checkver": {
         "url": "https://www.lyx.org/Download",
-        "re": "([\\d.]+)/LyX-236-Installer-2-x64.exe"
+        "re": "([\\d.]+)/LyX-(?<date>[\\d]+)-Installer-(?<build>[\\d]+)-x64.exe"
     },
     "autoupdate": {
         "architecture": {
