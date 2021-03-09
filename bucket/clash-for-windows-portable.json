@@ -48,8 +48,7 @@
         "if (!(Test-Path \"$persist_dir\\data\")) {",
         "    New-Item \"$persist_dir\\data\" -Type Directory -Force | Out-Null",
         "    Get-ChildItem \"$persist_dir\" -Exclude \"data\" | Move-Item -Destination \"$persist_dir\\data\" -Force",
-        "}",
-        "Get-ChildItem \"$persist_dir\\data\" -Filter \"Country.mmdb\" | Remove-Item -Force"
+        "}"
     ],
     "uninstaller": {
         "script": [
