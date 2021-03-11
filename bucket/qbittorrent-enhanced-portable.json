@@ -16,6 +16,10 @@
             "hash": "c1c702e558ce18c63e48f03d1c669896dcd02671e25009c56dbb5777bd85bfc9"
         }
     },
+    "notes": [
+        "Removing \"qBittorrent\" folder in \"$persist_dir\\profile\" directory BEFORE RUNNING may reset all status and settings",
+        "Meanwhile, Removing it BEFORE UPDATING OR REINSTALLING will trigger importing scripts"
+    ],
     "persist": "profile",
     "pre_install": [
         "if (!(Test-Path \"$persist_dir\\profile\\qBittorrent\")) {",
@@ -36,11 +40,10 @@
         "}"
     ],
     "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\" -Force -Recurse",
-    "bin": "qbittorrent.exe",
     "shortcuts": [
         [
             "qbittorrent.exe",
-            "qBittorrent"
+            "qBEE portable"
         ]
     ],
     "checkver": {
