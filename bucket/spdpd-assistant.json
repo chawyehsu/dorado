@@ -1,0 +1,21 @@
+{
+    "homepage": "http://spdpd.net",
+    "description": "Spdpd Assitant is a toolbox for video editing",
+    "license": "Unknown",
+    "version": "0.2.3",
+    "url": "https://dl-1258309466.cos.ap-guangzhou.myqcloud.com/releases/0.2.3/%E5%A4%A7%E6%8B%8D%E6%A1%A3%E5%89%AA%E8%BE%91%E5%8A%A9%E6%89%8B0.2.3%E5%85%8D%E5%AE%89%E8%A3%85.rar#/dpd-assitant.rar",
+    "hash": "9e014c5e0ba7ede07c9c4a1186c1f20e2beee2002fc48d35440cb3fadebac360",
+    "extract_dir": "win-unpacked",
+    "shortcuts": [
+        [
+            "大拍档剪辑助手.exe",
+            "大拍档剪辑助手"
+        ]
+    ],
+    "checkver": {
+        "regex": "(?sm)当前版本：v.*?([\\d.]+).*?href=\"https://(?<link>.*?)\".*?download.*?Windows免安装版"
+    },
+    "autoupdate": {
+        "url": "https://$matchLink#/dpd-assitant.rar"
+    }
+}
