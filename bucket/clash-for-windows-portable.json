@@ -6,11 +6,23 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.14.9/Clash.for.Windows.Setup.0.14.9.exe#/dl.7z",
-            "hash": "bb5544d161a4d5222a491dd633f897de92afdbe822a8171f174b1067bfe64fef"
+            "hash": "bb5544d161a4d5222a491dd633f897de92afdbe822a8171f174b1067bfe64fef",
+            "installer": {
+                "script": [
+                    "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
+                    "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninst*\" -Force -Recurse"
+                ]
+            }
         },
         "32bit": {
             "url": "https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.14.9/Clash.for.Windows.Setup.0.14.9.ia32.exe#/dl.7z",
-            "hash": "7da2522b2d25957a716a2d8ad4a95a5142ee89f510e434c1edc199cc0f0ff3b6"
+            "hash": "7da2522b2d25957a716a2d8ad4a95a5142ee89f510e434c1edc199cc0f0ff3b6",
+            "installer": {
+                "script": [
+                    "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-32.7z\" \"$dir\"",
+                    "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninst*\" -Force -Recurse"
+                ]
+            }
         }
     },
     "notes": [
@@ -25,12 +37,6 @@
         ]
     ],
     "persist": "data",
-    "installer": {
-        "script": [
-            "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
-            "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninst*\" -Force -Recurse"
-        ]
-    },
     "pre_install": [
         "if (Test-Path \"$persist_dir\\clash_win\") {",
         "    Move-Item \"$persist_dir\\clash_win\" \"$env:appdata\" -Force",
