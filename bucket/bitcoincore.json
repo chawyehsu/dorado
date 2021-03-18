@@ -1,0 +1,42 @@
+{
+    "homepage": "https://bitcoincore.org/about/",
+    "description": "The Bitcoin client software called Bitcoin Core",
+    "version": "0.21.0",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://bitcoincore.org/bin/bitcoin-core-0.21.0/bitcoin-0.21.0-win64.zip",
+            "hash": "1d0052c4ce80227fb6d0bc1c4e673ba21033e219c1f935d25f130ef7f43360d4",
+            "extract_dir": "bitcoin-0.21.0"
+        }
+    },
+    "shortcuts": [
+        [
+            "bin\\bitcoin-qt.exe",
+            "Bitcoin Core",
+            "-datadir=\"$dir\\appdata\""
+        ]
+    ],
+    "persist": "appdata",
+    "checkver": {
+        "url": "https://bitcoincore.org/en/download/",
+        "regex": "Latest version: ([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://bitcoincore.org/bin/bitcoin-core-$version/bitcoin-$version-win64.zip",
+                "extract_dir": "bitcoin-$version"
+            }
+        },
+        "hash": {
+            "url": "https://bitcoincore.org/bin/bitcoin-core-$version/SHA256SUMS.asc",
+            "mode": "extract"
+        }
+    },
+    "notes": [
+        "[WARNING]: If you really want to use this for production or what, KEEP AN EYE OUT FOR YOUR DATA!!!",
+        "[WARNING]: THE SOFTWARE IS PROVIDED 'AS IS', I am not responsible for any data lost.",
+        "[WARNING]: The 'datadir' has been configured to '$dir\\appdata' (persisted) for portable purpose."
+    ]
+}
