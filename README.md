@@ -32,7 +32,9 @@ Featured Apps
 | tcping | Eli Fulkerson's TCP ping tool, ping over a tcp connection |
 | trash | Move files and folders to recycle bin instead of directly `rm-rf` it, like `brew install trash` but for Windows |
 | rustup-np | The `non-portable` version of Rustup. Keeping .rustup and .cargo in its original location: `$env:USERPROFILE` |
-| winlibs-mingw | A full **mingw-w64** toolchain built and distributed by [winlibs](http://winlibs.com/). (GCC 10.2) Check out `winlibs-mingw-llvm` for a LLVM/Clang integrated version. (LLVM 11) Or check out `winlibs-mingw-snapshot` for a snapshot version. (GCC 11 snapshot) |
+| winlibs-mingw | A full **mingw-w64** toolchain built and distributed by [winlibs](http://winlibs.com/). (GCC 10.2) |
+| winlibs-mingw-llvm | A LLVM integrated, full **mingw-w64** toolchain built and distributed by [winlibs](http://winlibs.com/). (GCC 10.2 + LLVM 11) |
+| winlibs-mingw-snapshot | A snapshot version of the full **mingw-w64** toolchain built and distributed by [winlibs](http://winlibs.com/). (GCC 11 snapshot) |
 | yarn-np | The `non-portable` version of the Yarn application. Keeping global node_modules in its original location: `$env:LOCALAPPDATA\\Yarn\\bin` |
 
 Question
