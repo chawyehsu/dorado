@@ -1,0 +1,29 @@
+{
+    "homepage": "https://activitywatch.net/",
+    "description": "Records what you do so that you can know how you've spent your time.All in a secure way where you control the data.",
+    "version": "0.10.0",
+    "license": "MPL-2.0",
+    "url": "https://github.com/ActivityWatch/activitywatch/releases/download/v0.10.0/activitywatch-v0.10.0-windows-x86_64.zip",
+    "hash": "daac3e9406f4f05b54ef438cf6b9cb0359d0d0b60abce5bb7f84c41e4ee77193",
+    "pre_install": "Move-Item \"$dir\\activitywatch\\*\" \"$dir\" -Force",
+    "bin": [
+        [
+            "aw-qt.exe",
+            "aw"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "aw-qt.exe",
+            "ActivityWatch"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/ActivityWatch/activitywatch"
+    },
+    "autoupdate": {
+        "url": "https://github.com/ActivityWatch/activitywatch/releases/download/v$version/activitywatch-v$version-windows-x86_64.zip",
+        "hash": "download"
+    },
+    "notes": "The files like data,config and so on are not persisted by scoop.Learn more from official docs."
+}
