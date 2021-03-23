@@ -27,11 +27,12 @@ Featured Apps
 | hmcl | The most famous Minecraft launcher made in China |
 | llvm-mingw | The LLVM/Clang/LLD based **mingw-w64** toolchain |
 | miniconda3 | A `lazy` version of Miniconda3, which will not add the default root venv into your PATH unless you activate it (with `conda activate base`) |
-| nuwen-mingw-gcc | **Minimalist** GCC package from nuwen's [MinGW Distro](https://nuwen.net/mingw.html). Use `nuwen-mingw-without-git` instead if you want Boost/PCRE/zlib... libraries and make/gdb... tools. |
+| nuwen-mingw-gcc | **Minimalist** C/C++ compiler from nuwen's [MinGW Distro](https://nuwen.net/mingw.html). It's **NOT** a full **mingw-w64** package, has no make, no gdb. Just the *gcc* and *ld* for 'quick-start' use case. |
 | nvm-windows | A fork of [nvm-windows](https://github.com/coreybutler/nvm-windows), removed elevated permission, for non-admin scoop user |
 | tcping | Eli Fulkerson's TCP ping tool, ping over a tcp connection |
 | trash | Move files and folders to recycle bin instead of directly `rm-rf` it, like `brew install trash` but for Windows |
 | rustup-np | The `non-portable` version of Rustup. Keeping .rustup and .cargo in its original location: `$env:USERPROFILE` |
+| winlibs-mingw | A full **mingw-w64** toolchain built and distributed by [winlibs](http://winlibs.com/). Check out `winlibs-mingw-llvm` for a LLVM/Clang integrated version. |
 | yarn-np | The `non-portable` version of the Yarn application. Keeping global node_modules in its original location: `$env:LOCALAPPDATA\\Yarn\\bin` |
 
 Question
