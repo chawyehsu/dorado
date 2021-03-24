@@ -28,10 +28,7 @@
         "args": "/S"
     },
     "bin": "scripts\\conda.exe",
-    "post_install": [
-        "conda config --set auto_activate_base false",
-        "(& conda \"shell.powershell\" \"hook\") | Out-String | Invoke-Expression"
-    ],
+    "post_install": "conda config --system --set auto_activate_base false",
     "checkver": {
         "url": "https://repo.continuum.io/archive",
         "re": "Anaconda3-([\\d.]+)-Windows",
@@ -52,7 +49,10 @@
         }
     },
     "notes": [
-        "Conda envs are not persisted, we advice to setup envs_dirs to use '~/.conda/envs'.",
-        "  https://conda.io/projects/conda/en/latest/user-guide/configuration/use-condarc.html#specify-environment-directories-envs-dirs"
+        "Conda envs and pkgs are not persisted by Scoop, we advice to setup `envs_dirs` to use '~/.conda/envs'.",
+        "  https://conda.io/projects/conda/en/latest/user-guide/configuration/use-condarc.html#specify-environment-directories-envs-dirs",
+        "",
+        "To enable conda tab-completion autoload, you need to add follow code to PowerShell $PROFILE:",
+        "Add-Content -Path $Profile -Value \"`n(& conda \"shell.powershell\" \"hook\") | Out-String | Invoke-Expression"
     ]
 }
