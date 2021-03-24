@@ -24,21 +24,19 @@
 
 | 软件 | 简介 |
 |----------|-------------|
-| multimc | 大概是，全世界最好用的正版 Minecraft 启动器 |
 | hmcl | 极受欢迎的国产 Minecraft 启动器 |
-| itch | itch.io 客户端，发现更多独立游戏/软件 |
-| liko-12 | 没有 PICO-8？可以试试 LIKO-12，也是很好玩的 |
+| llvm-mingw | [一个](https://github.com/mstorsjo/llvm-mingw) 基于 LLVM/Clang/LLD 的 **mingw-w64** 工具链 (LLVM 11) |
 | msys2-cn | 专为国人安装使用而配置的 MSYS2，全自动无人值守安装即用 |
-| neteasemusic | 网易云音乐 —— 发现、分享 |
-| nuwen-mingw-gcc | 来自微软职工 nuwen 的最小 GCC 工具包，源自 [MinGW Distro](https://nuwen.net/mingw.html) |
-| nvm-windows | 颇受欢迎的 [nvm-windows](https://github.com/coreybutler/nvm-windows) 的修改版，移除了管理员提权要求，使得低权限的普通用户亦可无障碍使用 |
-| texlive | 需要 Tex 环境？TexLive 是最佳解决方法！ |
-| tcping | 通过 TCP 进行 ping 操作 |
-| translucenttb | 你可能需要的 Windows 10 任务栏透明化小工具 |
+| neteasemusic | 网易云音乐客户端 |
+| nuwen-mingw-gcc | 来自微软职工 STL 的极简 C/C++ 编译器，源自 [MinGW Distro](https://nuwen.net/mingw.html), 快速使用 GCC 的最佳选择 (GCC 9.2) |
+| nvm-windows | 颇受欢迎的 [nvm-windows](https://github.com/chawyehsu/nvm-windows) 的修改版，移除了管理员提权要求，使得低权限的普通用户亦可无障碍使用 |
+| texlive | 需要 Tex 环境？TexLive 是当下最佳解决方法 |
 | trash | 将待删除文件移至回收站，而不是直接 `rm-rf`，类似于 macOS 的 trash |
 | volta | 你可能不再需要 nvm-windows |
-| yarn-np | 非便携版的 Yarn，全局安装的 `node_modules` 仍然保持在原有的 `$env:LOCALAPPDATA\\Yarn\\bin` 路径下 |
 | wechat | 你可能需要的微信 PC 客户端 |
+| winlibs-mingw | [winlibs](http://winlibs.com/) 编译的完整 **mingw-w64** 工具链发行版 (GCC 10.2) |
+| winlibs-mingw-llvm | [winlibs](http://winlibs.com/) 编译的完整 **mingw-w64** 工具链发行版，同时整合了 LLVM (GCC 10.2 + LLVM 11) |
+| winlibs-mingw-snapshot | [winlibs](http://winlibs.com/) 编译的完整 **mingw-w64** 工具链发行版的快照版本 (GCC 11 snapshot) |
 
 更多待你发现~
 
