@@ -30,6 +30,7 @@ Featured Apps
 | nvm-windows | A fork of [nvm-windows](https://github.com/chawyehsu/nvm-windows), removed elevated permission, for non-admin scoop user |
 | trash | Move files and folders to recycle bin instead of directly `rm-rf` it, like `brew install trash` but for Windows |
 | rustup-np | The `non-portable` version of Rustup, keeping .rustup and .cargo in its original location: `$env:USERPROFILE` |
+| volta | You don't need nvm-windows anymore |
 | winlibs-mingw | A full **mingw-w64** toolchain built and distributed by [winlibs](http://winlibs.com/). (GCC 10.2) |
 | winlibs-mingw-llvm | A LLVM integrated version of winlibs-mingw. (GCC 10.2 + LLVM 11) |
 | winlibs-mingw-snapshot | A snapshot version of winlibs-mingw. (GCC 11 snapshot) |
