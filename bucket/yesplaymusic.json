@@ -1,10 +1,10 @@
 {
-    "version": "0.3.3",
+    "version": "0.3.5",
     "description": "High-value third-party Netease music player",
     "homepage": "https://github.com/qier222/YesPlayMusic",
     "license": "MIT",
-    "url": "https://github.com/qier222/YesPlayMusic/releases/download/v0.3.3/YesPlayMusic.0.3.3.exe#/YesPlayMusic.exe",
-    "hash":"768b7caede29994e9863584c549837c2197c7236890872adc4210c0a35f206db",
+    "url": "https://github.com/qier222/YesPlayMusic/releases/download/v0.3.5/YesPlayMusic-0.3.5.exe#/YesPlayMusic.exe",
+    "hash":"839FDC54CCE3D310AE8646B79B007A0B040893E4C3B0683BE64374838BC93E50",
     "shortcuts": [
         [
             "YesPlayMusic.exe",
@@ -13,6 +13,6 @@
     ],
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/qier222/YesPlayMusic/releases/download/v$version/YesPlayMusic.$version.exe#/YesPlayMusic.exe"
+        "url": "https://github.com/qier222/YesPlayMusic/releases/download/v$version/YesPlayMusic-$version.exe#/YesPlayMusic.exe"
     }
 }
