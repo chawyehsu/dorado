@@ -1,13 +1,19 @@
 {
-    "homepage": "https://www.todesk.com/index.html",
-    "description": "ToDesk 是一款安全实用且流畅的远程控制软件，可以轻松实现远程控制、文件传输等一系列操作，提升工作生活的效率，为远程客户提供技术支援",
-    "version": "2.2.3",
+    "homepage": "https://www.todesk.com/",
+    "description": "A unlimited speed multifunctional remote control software",
+    "version": "3.0.0",
+    "license": "Proprietary",
     "url": "https://dl.todesk.com/windows/ToDesk_Setup.exe#/dl.7z",
-    "hash": "c78cd1a63cc9f5b27b8d84ef8a68bb7d4b6f7222360fecf45bcb026265a9c5e1",
-    "pre_install": [
-        "Expand-7zipArchive \"$dir\\app.7z\" \"$dir\"",
-        "Remove-Item \"$dir\\`$PLUGINSDIR\",\"$dir\\app.7z\",\"$dir\\`$PROGRAMFILES\" -Force -Recurse"
-    ],
+    "hash": "31f10f30a0626c4f624b2d8d4444e3a473eabdbb2068baa3718955fa3a1b1c9b",
+    "installer": {
+        "script": [
+            "Expand-7zipArchive \"$dir\\app.7z\" \"$dir\"",
+            "Remove-Item \"$dir\\`$PLUGINSDIR\",\"$dir\\app.7z\",\"$dir\\`$PROGRAMFILES\" -Force -Recurse",
+            "if (!(Test-Path \"$persist_dir\\config.ini\")) {",
+            "    New-Item -Force -Path \"$persist_dir\\config.ini\" -ItemType File -Value \"[ConfigInfo]`nautoStart=0\" | Out-Null",
+            "}"
+        ]
+    },
     "shortcuts": [
         [
             "ToDesk.exe",
@@ -15,17 +21,14 @@
         ]
     ],
     "persist": [
-        "config.ini",
-        "userInfo.json"
+        "Logs",
+        "config.ini"
     ],
     "checkver": {
         "url": "https://www.todesk.com/download.html",
-        "regex": "\\u5f53\\u524d\\u7248\\u672c:([\\d.]+)"
+        "regex": "当前版本:([\\d.]+)"
     },
     "autoupdate": {
-        "url": "https://dl.todesk.com/windows/ToDesk_Setup.exe#/dl.7z",
-        "hash": {
-            "mode": "download"
-        }
+        "url": "https://dl.todesk.com/windows/ToDesk_Setup.exe#/dl.7z"
     }
 }
