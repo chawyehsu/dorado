@@ -45,9 +45,7 @@
             "TeXworks"
         ]
     ],
-    "persist": [
-        "texmf-config"
-    ],
+    "persist": "texmf-config",
     "checkver": {
         "regex": "Current release: TeX Live ([\\d]+)"
     },

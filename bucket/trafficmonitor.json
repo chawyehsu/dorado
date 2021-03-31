@@ -21,10 +21,8 @@
             "        New-Item -Force -Path \"$persist_dir\\$file\" -ItemType file -Value $content | Out-Null",
             "    }",
             "}",
-            "CreateFile 'config.ini' '[general]
-check_update_when_start=false'",
-            "CreateFile 'global_cfg.ini' '[config]
-portable_mode=true'",
+            "CreateFile 'config.ini' \"[general]`ncheck_update_when_start=false\"",
+            "CreateFile 'global_cfg.ini' \"[config]`nportable_mode=true\"",
             "CreateFile 'history_traffic.dat'"
         ]
     },

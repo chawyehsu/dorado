@@ -14,9 +14,7 @@
     "checkver": {
         "regex": ">Latest release - ([\\d.]+)"
     },
-    "persist": [
-        "pixitracker_1bit\\pixilang_config.ini"
-    ],
+    "persist": "pixitracker_1bit\\pixilang_config.ini",
     "autoupdate": {
         "url": "https://www.warmplace.ru/soft/pixitracker/pixitracker_1bit.zip"
     }
