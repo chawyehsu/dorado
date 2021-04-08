@@ -28,7 +28,11 @@
         "args": "/S"
     },
     "bin": "scripts\\conda.exe",
-    "post_install": "conda config --system --set auto_activate_base false",
+    "post_install": [
+        "# PREVENT CREATING SHORTCUTS",
+        "Invoke-ExternalCommand -Path \"$dir\\_conda.exe\" -ArgumentList \"constructor --prefix $dir --rm-menus\" | Out-Null",
+        "conda config --system --set auto_activate_base false"
+    ],
     "checkver": {
         "url": "https://repo.continuum.io/archive",
         "re": "Anaconda3-([\\d.]+)-Windows",
