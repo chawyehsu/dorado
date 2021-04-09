@@ -1,0 +1,33 @@
+{
+    "homepage": "https://swift.org/",
+    "description": "The Swift Programming Language",
+    "license": "Apache-2.0",
+    "version": "5.3.3",
+    "url": "https://swift.org/builds/swift-5.3.3-release/windows10/swift-5.3.3-RELEASE/swift-5.3.3-RELEASE-windows10.exe",
+    "hash": "860c92b0eeacc28643f83b1a99f23a1a982e82b5f7ed036007da62fd07bd3b14",
+    "depends": "dark",
+    "installer": {
+        "script": [
+            "Expand-DarkArchive \"$dir\\$fname\" \"$dir\\extracted\" -Removal",
+            "Get-ChildItem \"$dir\\extracted\\AttachedContainer\\*.msi\" | ForEach-Object { Expand-MsiArchive $_ \"$dir\" }",
+            "@('extracted') | ForEach-Object { Remove-Item \"$dir\\$_\" -Recurse }"
+        ]
+    },
+    "env_add_path": [
+        "Library\\Developer\\Toolchains\\unknown-Asserts-development.xctoolchain\\usr\\bin",
+        "Library\\icu-67\\usr\\bin",
+        "Library\\Swift-development\\bin"
+    ],
+    "env_set": {
+        "SDKROOT": "$dir\\Library\\Developer\\Platforms\\Windows.platform\\Developer\\SDKs\\Windows.sdk",
+        "DEVELOPER_DIR": "$dir\\Library\\Developer"
+    },
+    "checkver": {
+        "url": "https://swift.org/download/#releases",
+        "regex": "(?sm)releases\">Releases</h2>.*?Swift ([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://swift.org/builds/swift-$version-release/windows10/swift-$version-RELEASE/swift-$version-RELEASE-windows10.exe"
+    },
+    "notes": "Please read https://swift.org/download/#using-downloads for further information."
+}

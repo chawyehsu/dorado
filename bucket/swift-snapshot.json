@@ -1,0 +1,34 @@
+{
+    "homepage": "https://swift.org/",
+    "description": "The Swift Programming Language",
+    "license": "Apache-2.0",
+    "version": "snapshot-03-25-a",
+    "url": "https://swift.org/builds/development/windows10/swift-DEVELOPMENT-SNAPSHOT-03-25-a/swift-DEVELOPMENT-SNAPSHOT-03-25-a-windows10.exe",
+    "hash": "92b0b98c7b7aa3ee940889871b4ffd2064b0a0d8d907f40c2f7c6bb5908392ec",
+    "depends": "dark",
+    "installer": {
+        "script": [
+            "Expand-DarkArchive \"$dir\\$fname\" \"$dir\\extracted\" -Removal",
+            "Get-ChildItem \"$dir\\extracted\\AttachedContainer\\*.msi\" | ForEach-Object { Expand-MsiArchive $_ \"$dir\" }",
+            "@('extracted') | ForEach-Object { Remove-Item \"$dir\\$_\" -Recurse }"
+        ]
+    },
+    "env_add_path": [
+        "Library\\Developer\\Toolchains\\unknown-Asserts-development.xctoolchain\\usr\\bin",
+        "Library\\icu-67\\usr\\bin",
+        "Library\\Swift-development\\bin"
+    ],
+    "env_set": {
+        "SDKROOT": "$dir\\Library\\Developer\\Platforms\\Windows.platform\\Developer\\SDKs\\Windows.sdk",
+        "DEVELOPER_DIR": "$dir\\Library\\Developer"
+    },
+    "checkver": {
+        "url": "https://swift.org/download/#snapshots",
+        "regex": "swift-DEVELOPMENT-SNAPSHOT-(?<build>[\\w\\-]+)-windows10.exe",
+        "replace": "snapshot-${build}"
+    },
+    "autoupdate": {
+        "url": "https://swift.org/builds/development/windows10/swift-DEVELOPMENT-SNAPSHOT-$matchBuild/swift-DEVELOPMENT-SNAPSHOT-$matchBuild-windows10.exe"
+    },
+    "notes": "Please read https://swift.org/download/#using-downloads for further information."
+}
