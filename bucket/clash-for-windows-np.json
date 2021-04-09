@@ -25,44 +25,12 @@
             }
         }
     },
-    "notes": [
-        "Since version 0.13.1, Clash for Windows uses \"data\" folder in app directory to active portable mode and save user config",
-        "Simply click \"Open Folder\" button in \"General\" page and then you will be there",
-        "Config files will be permanently removed by running \"scoop uninstall -p clash-for-windows-portable\" while uninstalling"
-    ],
     "shortcuts": [
         [
             "Clash for Windows.exe",
             "Clash for Windows"
         ]
     ],
-    "persist": "data",
-    "pre_install": [
-        "if (Test-Path \"$persist_dir\\clash_win\") {",
-        "    Move-Item \"$persist_dir\\clash_win\" \"$env:appdata\" -Force",
-        "}",
-        "if (!(Test-Path \"$persist_dir\")) {",
-        "    New-Item \"$persist_dir\" -Type Directory -Force | Out-Null",
-        "    if (Test-Path \"$HOME\\.config\\clash\") {",
-        "        Write-Host 'Importing config files from user directory for first install...' -ForegroundColor Yellow",
-        "        Copy-Item \"$HOME\\.config\\clash\\*\" \"$persist_dir\" -Force -Recurse",
-        "        Write-Host 'Import succeded!' -ForegroundColor Yellow",
-        "        Write-Host 'Portable version uses config files in app directory, ones in user directory can be removed by running' -ForegroundColor Yellow",
-        "        Write-Host 'Remove-Item \"$HOME\\.config\\clash\" -Force -Recurse' -ForegroundColor Green",
-        "    }",
-        "}",
-        "if (!(Test-Path \"$persist_dir\\data\")) {",
-        "    New-Item \"$persist_dir\\data\" -Type Directory -Force | Out-Null",
-        "    Get-ChildItem \"$persist_dir\" -Exclude \"data\" | Move-Item -Destination \"$persist_dir\\data\" -Force",
-        "}"
-    ],
-    "uninstaller": {
-        "script": [
-            "if (Test-Path \"$env:appdata\\clash_win\") {",
-            "    Move-Item \"$env:appdata\\clash_win\" \"$persist_dir\" -Force",
-            "}"
-        ]
-    },
     "checkver": "github",
     "autoupdate": {
         "architecture": {

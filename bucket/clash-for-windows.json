@@ -25,12 +25,21 @@
             }
         }
     },
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\data\")) {",
+        "    New-Item \"$persist_dir\\data\" -Type Directory -Force | Out-Null",
+        "    if (Test-Path \"$env:USERPROFILE\\.config\\clash\") {",
+        "        Copy-Item \"$env:USERPROFILE\\.config\\clash\\*\" \"$persist_dir\\data\" -Force -Recurse",
+        "    }",
+        "}"
+    ],
     "shortcuts": [
         [
             "Clash for Windows.exe",
             "Clash for Windows"
         ]
     ],
+    "persist": "data",
     "checkver": "github",
     "autoupdate": {
         "architecture": {
@@ -51,5 +60,6 @@
                 }
             }
         }
-    }
+    },
+    "notes": "Clash for Windows data are now saved into '$persist_dir' and persisted by Scoop."
 }
