@@ -26,6 +26,9 @@
         }
     },
     "pre_install": [
+        "if (Test-Path \"$persist_dir\\clash_win\") {",
+        "    Move-Item \"$persist_dir\\clash_win\" \"$env:APPDATA\" -Force",
+        "}",
         "if (!(Test-Path \"$persist_dir\\data\")) {",
         "    New-Item \"$persist_dir\\data\" -Type Directory -Force | Out-Null",
         "    if (Test-Path \"$env:USERPROFILE\\.config\\clash\") {",
@@ -33,6 +36,13 @@
         "    }",
         "}"
     ],
+    "uninstaller": {
+        "script": [
+            "if (Test-Path \"$env:APPDATA\\clash_win\") {",
+            "    Move-Item \"$env:APPDATA\\clash_win\" \"$persist_dir\" -Force",
+            "}"
+        ]
+    },
     "shortcuts": [
         [
             "Clash for Windows.exe",
