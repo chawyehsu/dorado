@@ -1,0 +1,43 @@
+{
+    "version": "2.3.3",
+    "homepage": "https://github.com/hao117/JsonView",
+    "license": {
+        "identifier": "Apache License 2.0",
+        "url": "https://github.com/hao117/JsonView/blob/master/LICENSE"
+    },
+    "architecture": {
+        "64bit": {
+            "url": [
+                "https://raw.githubusercontent.com/hao117/JsonView/master/bin/jsonView.exe",
+                "https://raw.githubusercontent.com/hao117/JsonView/master/src/main/resources/json.ico"
+            ],
+			"hash": [
+				"c55d4240fcae100efe817364e38846a4a4d8e854e2537eba5c4ef115b9a13f64",
+				"fe80c9a56c5e7bfb61922c7e5390397995654c73743d802c8450bfb527277a4d"
+			]
+        }
+    },
+    "bin": "jsonView.exe",
+    "shortcuts": [
+        [
+            "jsonView.exe",
+            "JsonView",
+            "",
+            "json.ico"
+        ]
+    ],
+    "checkver": {
+        "url": "https://raw.githubusercontent.com/hao117/JsonView/master/pom.xml",
+        "regex": "jsonview<\/artifactId>\n\\s+<version>(.*?)<"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": [
+                    "https://raw.githubusercontent.com/hao117/JsonView/master/bin/jsonView.exe",
+                    "https://raw.githubusercontent.com/hao117/JsonView/master/src/main/resources/json.ico"
+                ]
+            }
+        }
+    }
+}
