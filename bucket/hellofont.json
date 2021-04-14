@@ -12,7 +12,12 @@
         ]
     ],
     "checkver": {
-        "url": "https://scoop-services.azurewebsites.net/checkver?app=hellofont",
+        "script": [
+            "$api = 'http://back2.hellofont.cn/ziyou/clientversionmanagement/clientversionmanagerhandler.ashx?opera=GetLatestClientVersionItem'",
+            "$headers = @{'Referer'='http://www.hellofont.cn/download'}",
+            "$body = @{ json = \"{'PlatformId':0}\"}",
+            "return (iwr -useb $api -Method POST -Headers $header -Body $body).Content"
+        ],
         "jsonpath": "$.Version"
     },
     "autoupdate": {

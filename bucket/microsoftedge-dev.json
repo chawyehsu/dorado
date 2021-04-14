@@ -23,7 +23,7 @@
         ]
     ],
     "checkver": {
-        "url": "https://scoop-services.azurewebsites.net/checkver?app=microsoftedge",
+        "script": "return (iwr -useb 'https://api.shuax.com/v2/edge' -Method POST).Content",
         "jsonpath": "$.dev.x64.version"
     },
     "autoupdate": {
