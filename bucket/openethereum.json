@@ -1,0 +1,30 @@
+{
+    "homepage": "https://github.com/openethereum/openethereum",
+    "description": "The fast, light, and robust client for the Ethereum mainnet",
+    "version": "3.2.4",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/openethereum/openethereum/releases/download/v3.2.4/openethereum-windows-v3.2.4.zip",
+            "hash": "3323ee84220693358a102929997166edd09a8847f8395691e4eca6a212c196ad"
+        }
+    },
+    "bin": [
+        "ethkey.exe",
+        "ethstore.exe",
+        "openethereum.exe",
+        "openethereum-evm.exe"
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/openethereum/openethereum/releases/download/v$version/openethereum-windows-v$version.zip"
+            }
+        },
+        "hash": {
+            "url": "https://github.com/openethereum/openethereum/releases/tag/v$version",
+            "regex": "(?sm)openethereum-windows-v$version.zip.*?$sha256"
+        }
+    }
+}
