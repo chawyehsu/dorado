@@ -1,0 +1,43 @@
+{
+    "homepage": "https://dogecore.com/",
+    "description": "Very curreny!",
+    "version": "1.14.3",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/dogecoin/dogecoin/releases/download/v1.14.3/dogecoin-1.14.3-win64.zip",
+            "hash": "55cad1ec60a594aa9e448047de87a2b39ef415dc2f0a635b34a352351e656316"
+        },
+        "32bit": {
+            "url": "https://github.com/dogecoin/dogecoin/releases/download/v1.14.3/dogecoin-1.14.3-win32.zip",
+            "hash": "06eef064cfe136afda87d452aa40742c8eb36f88d2e52872f186232c974b9c90"
+        }
+    },
+    "extract_dir": "dogecoin-1.14.3",
+    "shortcuts": [
+        [
+            "bin\\dogecoin-qt.exe",
+            "Dogecoin Core",
+            "-datadir=\"$dir\\appdata\""
+        ]
+    ],
+    "persist": "appdata",
+    "checkver": {
+        "github": "https://github.com/dogecoin/dogecoin"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/dogecoin/dogecoin/releases/download/v$version/dogecoin-$version-win64.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/dogecoin/dogecoin/releases/download/v$version/dogecoin-$version-win32.zip"
+            }
+        }
+    },
+    "notes": [
+        "[WARNING]: If you really want to use this for production or what, KEEP AN EYE OUT FOR YOUR DATA!!!",
+        "[WARNING]: THE SOFTWARE IS PROVIDED 'AS IS', I am not responsible for any data lost.",
+        "[WARNING]: The 'datadir' has been configured to '$dir\\appdata' (persisted) for portable purpose."
+    ]
+}
