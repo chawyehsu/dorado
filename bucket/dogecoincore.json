@@ -33,7 +33,8 @@
             "32bit": {
                 "url": "https://github.com/dogecoin/dogecoin/releases/download/v$version/dogecoin-$version-win32.zip"
             }
-        }
+        },
+        "extract_dir": "dogecoin-$version"
     },
     "notes": [
         "[WARNING]: If you really want to use this for production or what, KEEP AN EYE OUT FOR YOUR DATA!!!",
