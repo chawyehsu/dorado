@@ -30,28 +30,6 @@ async function handleRequest(request) {
         return Response.redirect(url, 302)
       }
 
-      if (pathname === '/checkver') {
-        return new Response(JSON.stringify({
-          'version': version,
-          'name': name
-        }), {
-          headers: {
-            "content-type": "application/json; charset=UTF-8",
-          }
-        })
-      }
-
-      if (pathname === '/hash') {
-        return new Response(JSON.stringify({
-          'sha1': hash,
-          'name': name
-        }), {
-          headers: {
-            "content-type": "application/json; charset=UTF-8",
-          }
-        })
-      }
-
       return new Response(JSON.stringify({
         'url': url,
         'version': version,
