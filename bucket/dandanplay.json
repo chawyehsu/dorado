@@ -1,10 +1,14 @@
 {
     "homepage": "http://dandanplay.com/",
     "description": "A free to use bangumi player with danmaku support",
-    "version": "11.1.0",
-    "url": "http://47.240.64.98/dandanplay_11.1.0.zip",
-    "hash": "6e3ffd1248cf9832e7267ec8b4b2bd6bb79c108a4da061d7865a670bb6bef0f3",
-    "extract_dir": "dandanplay",
+    "version": "11.2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://dandan.sakurateam.top/dandanplay-x64_11.2.0.zip",
+            "hash": "59d4c28b524dcef27556f2851ebd9f77ce62ed63ece55022a4b65140d749008e",
+            "extract_dir": "dandanplay-x64"
+        }
+    },
     "pre_install": [
         "if (!(Test-Path \"$persist_dir\\Config\")) {",
         "    New-Item -Path \"$persist_dir\\Config\" -ItemType Directory | Out-Null",
@@ -30,9 +34,9 @@
         "Cache"
     ],
     "checkver": {
-        "regex": "dandanplay_([\\d.]+).zip"
+        "regex": "dandanplay-x64_([\\d.]+).zip"
     },
     "autoupdate": {
-        "url": "http://47.240.64.98/dandanplay_$version.zip"
+        "url": "https://dandan.sakurateam.top/dandanplay-x64_$version.zip"
     }
 }
