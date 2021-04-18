@@ -1,4 +1,4 @@
-async function handleRequest(request) {
+export default async function handleRequest(request) {
   const UPSTREAM_API = 'https://store.rg-adguard.net/api/GetFiles'
   // `9nhlgf0zwc5s` refers to:
   // https://www.microsoft.com/zh-cn/p/qq%E6%A1%8C%E9%9D%A2%E7%89%88/9nhlgf0zwc5s
@@ -24,9 +24,9 @@ async function handleRequest(request) {
       const version = groups[3]
       const hash = groups[4]
 
-      const { pathname } = new URL(request.url)
+      const sp = new URLSearchParams(new URL(request.url).search)
 
-      if (pathname === '/dl') {
+      if (sp.has('dl')) {
         return Response.redirect(url, 302)
       }
 
@@ -53,7 +53,3 @@ async function handleRequest(request) {
     },
   )
 }
-
-addEventListener("fetch", (event) => {
-  event.respondWith(handleRequest(event.request))
-})
