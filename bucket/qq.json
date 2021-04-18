@@ -22,5 +22,10 @@
             "jsonpath": "$.sha1"
         }
     },
-    "notes": "Scoop doesn't persist your QQ data, they are still stored in '%APPDATA%\\Tencent\\QQ'."
+    "notes": [
+        "Scoop doesn't persist your QQ data, by default they are stored in: ",
+        "'$env:USERPROFILE\\Documents\\Tencent Files'.",
+        "",
+        "Files produced at runtime leaves in '$env:APPDATA\\Tencent'."
+    ]
 }
