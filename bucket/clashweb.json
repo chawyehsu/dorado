@@ -1,12 +1,12 @@
 {
     "homepage": "https://github.com/lzdnico/ClashWeb",
     "description": "Another clash gui for windows with integrated API and ultra-small memory consumption",
-    "version": "2.0.1",
+    "version": "2.0.2",
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/lzdnico/ClashWeb/releases/download/ClashWeb2.0.1/ClashWebRelease2.0.1.7z",
-            "hash": "131c203f163626efd7bcdc1d3fcd78d6f7e0269423a5444a4a4b94960721cff8"
+            "url": "https://github.com/lzdnico/ClashWeb/releases/download/ClashWeb2.0.2/ClashWebRelease2.0.2.7z",
+            "hash": "c1984f5aadafe8b73f37528040d65b5b6ed364d058488012b3d830ab1f9ff099"
         }
     },
     "pre_install": "Move-Item \"$dir\\ClashWeb*\\*\" \"$dir\" -Force",
