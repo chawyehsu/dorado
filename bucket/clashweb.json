@@ -10,8 +10,7 @@
         }
     },
     "pre_install": "Move-Item \"$dir\\ClashWeb*\\*\" \"$dir\" -Force",
-    "persist":
-    [
+    "persist": [
         "Profile",
         "api\\currentmode.py",
         "App\\tmp.vbs"
