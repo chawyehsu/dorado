@@ -1,16 +1,16 @@
 {
     "homepage": "https://github.com/ClashDotNetFramework/ClashDotNetFramework",
     "description": "A .NET Framework based GUI Proxy For Windows",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "license": "Unknown",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ClashDotNetFramework/ClashDotNetFramework/releases/download/v1.0.0/Clash.NET.1.0.0-x64.7z",
-            "hash": "056d01709751b90ee728845cb2343f274711736ab4ef5ba17d6064ebce5e0eaf"
+            "url": "https://github.com/ClashDotNetFramework/ClashDotNetFramework/releases/download/v1.0.1/Clash.NET.1.0.1.x64.7z",
+            "hash": "97937c4e94826b248b8787dc141963ea6dc3cdc8daddc46eca7c75a06ef073f5"
         },
         "32bit": {
-            "url": "https://github.com/ClashDotNetFramework/ClashDotNetFramework/releases/download/v1.0.0/Clash.NET.1.0.0-x86.7z",
-            "hash": "6c8a9a3d1531e2d913382611d7e4992df8d86e3dda0016f47c51329611a55605"
+            "url": "https://github.com/ClashDotNetFramework/ClashDotNetFramework/releases/download/v1.0.1/Clash.NET.1.0.1.x86.7z",
+            "hash": "c3691cae9ab7f43e7c85650a435b42e167984c4d7c9202f552132e9ef86607a8"
         }
     },
     "extract_dir": "Clash .NET",
@@ -25,11 +25,16 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/ClashDotNetFramework/ClashDotNetFramework/releases/download/v$version/Clash.NET.$version-x64.7z"
+                "url": "https://github.com/ClashDotNetFramework/ClashDotNetFramework/releases/download/v$version/Clash.NET.$version.x64.7z"
             },
             "32bit": {
-                "url": "https://github.com/ClashDotNetFramework/ClashDotNetFramework/releases/download/v$version/Clash.NET.$version-x86.7z"
+                "url": "https://github.com/ClashDotNetFramework/ClashDotNetFramework/releases/download/v$version/Clash.NET.$version.x86.7z"
             }
+        },
+        "hash": {
+            "url": "https://github.com/ClashDotNetFramework/ClashDotNetFramework/releases/download/v$version/checksum",
+            "mode": "extract",
+            "regex": "$basename $sha256"
         }
     }
 }
