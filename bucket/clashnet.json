@@ -13,7 +13,7 @@
             "hash": "c3691cae9ab7f43e7c85650a435b42e167984c4d7c9202f552132e9ef86607a8"
         }
     },
-    "extract_dir": "Clash .NET",
+    "extract_dir": "Clash .NET 1.0.1",
     "shortcuts": [
         [
             "ClashDotNet.exe",
@@ -31,6 +31,7 @@
                 "url": "https://github.com/ClashDotNetFramework/ClashDotNetFramework/releases/download/v$version/Clash.NET.$version.x86.7z"
             }
         },
+        "extract_dir": "Clash .NET $version",
         "hash": {
             "url": "https://github.com/ClashDotNetFramework/ClashDotNetFramework/releases/download/v$version/checksum",
             "mode": "extract",
