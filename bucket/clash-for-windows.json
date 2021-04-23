@@ -26,20 +26,24 @@
         }
     },
     "pre_install": [
-        "if (Test-Path \"$persist_dir\\clash_win\") {",
-        "    Move-Item \"$persist_dir\\clash_win\" \"$env:APPDATA\" -Force",
-        "}",
         "if (!(Test-Path \"$persist_dir\\data\")) {",
         "    New-Item \"$persist_dir\\data\" -Type Directory -Force | Out-Null",
         "    if (Test-Path \"$env:USERPROFILE\\.config\\clash\") {",
         "        Copy-Item \"$env:USERPROFILE\\.config\\clash\\*\" \"$persist_dir\\data\" -Force -Recurse",
         "    }",
+        "}",
+        "$ClashWinTmp = (Get-ChildItem \"$persist_dir\" -Filter \"clash_win\").FullName",
+        "if ($ClashWinTmp -ne $null) {",
+        "    Copy-Item \"$ClashWinTmp\" \"$env:APPDATA\" -Force -Recurse",
+        "    Remove-Item \"$ClashWinTmp\" -Force -Recurse -ErrorAction SilentlyContinue",
         "}"
     ],
     "uninstaller": {
         "script": [
-            "if (Test-Path \"$env:APPDATA\\clash_win\") {",
-            "    Move-Item \"$env:APPDATA\\clash_win\" \"$persist_dir\" -Force",
+            "$ClashWinDir = (Get-ChildItem \"$env:APPDATA\" -Filter \"clash_win\").FullName",
+            "if ($ClashWinDir -ne $null) {",
+            "    Copy-Item \"$ClashWinDir\" \"$persist_dir\" -Force -Recurse",
+            "    Remove-Item \"$ClashWinDir\" -Force -Recurse -ErrorAction SilentlyContinue",
             "}"
         ]
     },
