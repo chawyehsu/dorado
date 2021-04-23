@@ -1,0 +1,63 @@
+{
+    "homepage": "https://www.adiirc.com/",
+    "description": "AdiIRC is a free Internet Relay Chat (IRC) client.",
+    "version": "4.0",
+    "license": "Freeware",
+    "architecture": {
+        "64bit": {
+            "url": "https://www.adiirc.com/AdiIRC64_4.0.zip",
+            "hash": "5a39d6384f4b45dcebcbb80ebfe53322114f4abffeb8d00d4297abc61ab26f58"
+        },
+        "32bit": {
+            "url": "https://www.adiirc.com/AdiIRC_4.0.zip",
+            "hash": "dceb61bc043a8f4d3c574172b64c75c6e0a37b240764f76d695fa4a2c90fe2b9"
+        }
+    },
+    "installer": {
+        "script": [
+            "function CreateFile([String] $file, [String] $content = $null) {",
+            "    if (!(Test-Path \"$persist_dir\\$file\")) {",
+            "        New-Item -Force -Path \"$persist_dir\\$file\" -ItemType file -Value $content | Out-Null",
+            "    }",
+            "}",
+            "CreateFile 'commands.ini'",
+            "CreateFile 'config.ini'"
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "function BackupFile([String] $file) {",
+            "    if (!(Test-Path \"$persist_dir\\$file\")) {",
+            "        Remove-Item \"$persist_dir\\$file\" -Force",
+            "    }",
+            "    Move-Item \"$dir\\$file\" \"$persist_dir\" -Force",
+            "}",
+            "BackupFile 'commands.ini'",
+            "BackupFile 'config.ini'"
+        ]
+    },
+    "shortcuts": [
+        [
+            "AdiIRC.exe",
+            "AdiIRC"
+        ]
+    ],
+    "persist": [
+        "commands.ini",
+        "config.ini"
+    ],
+    "checkver": {
+        "url": "https://www.adiirc.com/download.php",
+        "regex": "Latest stable:.*?>AdiIRC ([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://www.adiirc.com/AdiIRC64_$version.zip"
+            },
+            "32bit": {
+                "url": "https://www.adiirc.com/AdiIRC_$version.zip"
+            }
+        }
+    }
+}

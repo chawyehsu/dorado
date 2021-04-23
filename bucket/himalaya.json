@@ -1,0 +1,13 @@
+{
+    "homepage": "https://github.com/soywod/himalaya",
+    "description": "Minimalist CLI email client, written in Rust",
+    "license": "BSD-3-Clause",
+    "version": "0.2.6",
+    "url": "https://github.com/soywod/himalaya/releases/download/v0.2.6/himalaya-windows.tar.gz",
+    "hash": "8bf6c2649030f54cd2547f70b8cfebca657e177266f850d26d3825fd9e40e966",
+    "bin": "himalaya.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/soywod/himalaya/releases/download/v$version/himalaya-windows.tar.gz"
+    }
+}

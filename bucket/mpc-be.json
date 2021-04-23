@@ -1,14 +1,13 @@
 {
     "homepage": "https://mpcbe.sourceforge.io/",
     "description": "Media Player Classic - BE is a free and open source audio and video player for Windows",
-    "version": "1.5.3",
+    "version": "1.5.7",
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://sourceforge.net/projects/mpcbe/files/MPC-BE/Release%20builds/1.5.3/MPC-BE.1.5.3.x64.7z",
-            "hash": "sha1:a5bfb364e2c3518a249980ff6f2937c2ae5d82a8",
-            "extract_dir": "MPC-BE.1.5.3.4488.x64",
-            "bin": "mpc-be64.exe",
+            "url": "https://sourceforge.net/projects/mpcbe/files/MPC-BE/Release%20builds/1.5.7/MPC-BE.1.5.7.6180.x64.7z",
+            "hash": "sha1:9293075cbd71dd0e44dd05bb67a367555fd8f20b",
+            "extract_dir": "MPC-BE.1.5.7.6180.x64",
             "shortcuts": [
                 [
                     "mpc-be64.exe",
@@ -17,10 +16,9 @@
             ]
         },
         "32bit": {
-            "url": "https://sourceforge.net/projects/mpcbe/files/MPC-BE/Release%20builds/1.5.3/MPC-BE.1.5.3.x86.7z",
-            "hash": "sha1:6b7d71f5c342ef4dee372a1a085947219bcf22bf",
-            "extract_dir": "MPC-BE.1.5.3.4488.x86",
-            "bin": "mpc-be.exe",
+            "url": "https://sourceforge.net/projects/mpcbe/files/MPC-BE/Release%20builds/1.5.7/MPC-BE.1.5.7.6180.x86.7z",
+            "hash": "sha1:73c25bbf08a6895d1fc17fbdfe5b0b340d1402f2",
+            "extract_dir": "MPC-BE.1.5.7.6180.x86",
             "shortcuts": [
                 [
                     "mpc-be.exe",
@@ -31,31 +29,17 @@
     },
     "checkver": {
         "url": "https://sourceforge.net/p/mpcbe/code/HEAD/tree/",
-        "regex": "(?sm)tags<.*?\\[r(?<build>[\\d]+)\\].*?MPC-BE v([\\d.]+)"
+        "regex": "(?sm)tags<.*?\\[r(?<build>[\\d]+)\\].*?MPC-BE v?([\\d.]+)"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://sourceforge.net/projects/mpcbe/files/MPC-BE/Release%20builds/$version/MPC-BE.$version.x64.7z",
-                "extract_dir": "MPC-BE.$version.$matchBuild.x64",
-                "bin": "mpc-be64.exe",
-                "shortcuts": [
-                    [
-                        "mpc-be64.exe",
-                        "MPC-BE x64"
-                    ]
-                ]
+                "url": "https://sourceforge.net/projects/mpcbe/files/MPC-BE/Release%20builds/$version/MPC-BE.$version.$matchBuild.x64.7z",
+                "extract_dir": "MPC-BE.$version.$matchBuild.x64"
             },
             "32bit": {
-                "url": "https://sourceforge.net/projects/mpcbe/files/MPC-BE/Release%20builds/$version/MPC-BE.$version.x86.7z",
-                "extract_dir": "MPC-BE.$version.$matchBuild.x86",
-                "bin": "mpc-be.exe",
-                "shortcuts": [
-                    [
-                        "mpc-be.exe",
-                        "MPC-BE"
-                    ]
-                ]
+                "url": "https://sourceforge.net/projects/mpcbe/files/MPC-BE/Release%20builds/$version/MPC-BE.$version.$matchBuild.x86.7z",
+                "extract_dir": "MPC-BE.$version.$matchBuild.x86"
             }
         }
     }

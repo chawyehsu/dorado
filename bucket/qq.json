@@ -1,0 +1,31 @@
+{
+    "homepage": "https://im.qq.com/pcqq/",
+    "description": "An instant messaging software service developed by Tencent",
+    "license": "Freeware",
+    "version": "9.4.6.0",
+    "url": "https://dorado-api.deno.dev/appxqq?dl#/903DB504.46618D74B1ECA_9.4.6.0_x86__a99ra4d2cbcxa.appx.7z",
+    "hash": "sha1:ad44fc3bae0eb62b84ea1874d0d4c672976bc43d",
+    "shortcuts": [
+        [
+            "QQ\\Bin\\QQScLauncher.exe",
+            "QQ桌面版"
+        ]
+    ],
+    "checkver": {
+        "url": "https://dorado-api.deno.dev/appxqq",
+        "jsonpath": "$.version"
+    },
+    "autoupdate": {
+        "url": "https://dorado-api.deno.dev/appxqq?dl#/903DB504.46618D74B1ECA_$version_x86__a99ra4d2cbcxa.appx.7z",
+        "hash": {
+            "url": "https://dorado-api.deno.dev/appxqq",
+            "jsonpath": "$.sha1"
+        }
+    },
+    "notes": [
+        "Scoop doesn't persist your QQ data, by default they are stored in: ",
+        "'$env:USERPROFILE\\Documents\\Tencent Files'.",
+        "",
+        "Files produced at runtime leaves in '$env:APPDATA\\Tencent'."
+    ]
+}

@@ -1,13 +1,13 @@
 {
     "homepage": "https://music.163.com/",
     "description": "The official NetEase Cloud Music client.",
-    "version": "2.7.5.198554",
+    "version": "2.8.0.198822",
     "license": {
         "identifier": "EULA",
         "url": "https://music.163.com/html/web2/service.html"
     },
-    "url": "https://d1.music.126.net/dmusic/cloudmusicsetup2.7.5.198554.exe#/dl.7z",
-    "hash": "md5:5cd5f389b4ca6e31019340ffebfc5c2b",
+    "url": "https://d1.music.126.net/dmusic/cloudmusicsetup2.8.0.198822.exe#/dl.7z",
+    "hash": "8178f79aa0aeb1783e3ef45589fd3b6bef5d45bd1d48ac5e0836df37476884b0",
     "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\" -Force -Recurse",
     "bin": "cloudmusic.exe",
     "shortcuts": [
@@ -17,15 +17,11 @@
         ]
     ],
     "checkver": {
-        "url": "https://scoop-services.azurewebsites.net/checkver?app=neteasemusic",
-        "regex": "dmusic(?<randompath>[\\w/]*)/cloudmusicsetup(?<version>[\\d.]+).exe"
+        "script": "return (iwr -useb 'https://music.163.com/api/pc/package/download/latest' -Method Head).Headers['x-nos-object-name']",
+        "regex": "cloudmusicsetup(?<version>[\\d.]+).exe"
     },
     "autoupdate": {
-        "url": "https://d1.music.126.net/dmusic$matchRandompath/cloudmusicsetup$version.exe#/dl.7z",
-        "hash": {
-            "url": "https://scoop-services.azurewebsites.net/checkver?app=neteasemusic",
-            "jp": "$.updateFiles[0].hash"
-        }
+        "url": "https://d1.music.126.net/dmusic/cloudmusicsetup$version.exe#/dl.7z"
     },
-    "notes": "We don't persist your CloudMusic data, they are still storaged in '%LOCALAPPDATA%\\Netease\\CloudMusic'."
+    "notes": "Scoop doesn't persist your CloudMusic data, they are still storaged in '%LOCALAPPDATA%\\Netease\\CloudMusic'."
 }
