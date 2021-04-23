@@ -7,43 +7,49 @@
         "64bit": {
             "url": "https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.15.4/Clash.for.Windows.Setup.0.15.4.exe#/dl.7z",
             "hash": "8c63015c60f404c4dfbaae5d4c1c848de22ba6bd39418fed6945dd5cab6ab805",
-            "installer": {
-                "script": [
-                    "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
-                    "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninst*\" -Force -Recurse"
-                ]
-            }
+            "pre_install": [
+                "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
+                "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninst*\" -Force -Recurse"
+            ]
         },
         "32bit": {
             "url": "https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.15.4/Clash.for.Windows.Setup.0.15.4.ia32.exe#/dl.7z",
             "hash": "81d04361d1e445ed4c5a4d5b0e412730d1b747145b3fa984b10fb2b177caf342",
-            "installer": {
-                "script": [
-                    "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-32.7z\" \"$dir\"",
-                    "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninst*\" -Force -Recurse"
-                ]
-            }
+            "pre_install": [
+                "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-32.7z\" \"$dir\"",
+                "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninst*\" -Force -Recurse"
+            ]
         }
     },
-    "pre_install": [
-        "if (!(Test-Path \"$persist_dir\\data\")) {",
-        "    New-Item \"$persist_dir\\data\" -Type Directory -Force | Out-Null",
-        "    if (Test-Path \"$env:USERPROFILE\\.config\\clash\") {",
-        "        Copy-Item \"$env:USERPROFILE\\.config\\clash\\*\" \"$persist_dir\\data\" -Force -Recurse",
-        "    }",
-        "}",
-        "$ClashWinTmp = (Get-ChildItem \"$persist_dir\" -Filter \"clash_win\").FullName",
-        "if ($ClashWinTmp -ne $null) {",
-        "    Copy-Item \"$ClashWinTmp\" \"$env:APPDATA\" -Force -Recurse",
-        "    Remove-Item \"$ClashWinTmp\" -Force -Recurse -ErrorAction SilentlyContinue",
-        "}"
-    ],
+    "installer": {
+        "script": [
+            "if (!(Test-Path \"$persist_dir\\data\")) {",
+            "    New-Item \"$persist_dir\\data\" -Type Directory -Force | Out-Null",
+            "    if (Test-Path \"$env:USERPROFILE\\.config\\clash\") {",
+            "        Copy-Item -Path \"$env:USERPROFILE\\.config\\clash\\*\" -Destination \"$persist_dir\\data\" -Recurse -Container",
+            "    }",
+            "}",
+            "$runtimeCache = \"$env:APPDATA\\clash_win\"",
+            "$runtimeCachePersist = \"$persist_dir\\clash_win\"",
+            "if (Test-Path $runtimeCachePersist) {",
+            "    Remove-Item $runtimeCache -Force -Recurse -ErrorAction SilentlyContinue",
+            "    New-Item -Type Junction -Path $runtimeCache -Target $runtimeCachePersist | Out-Null",
+            "} else {",
+            "    if (Test-Path $runtimeCache) {",
+            "        Move-Item $runtimeCache $runtimeCachePersist -Force",
+            "        New-Item -Type Junction -Path $runtimeCache -Target $runtimeCachePersist | Out-Null",
+            "    }",
+            "}"
+        ]
+    },
     "uninstaller": {
         "script": [
-            "$ClashWinDir = (Get-ChildItem \"$env:APPDATA\" -Filter \"clash_win\").FullName",
-            "if ($ClashWinDir -ne $null) {",
-            "    Copy-Item \"$ClashWinDir\" \"$persist_dir\" -Force -Recurse",
-            "    Remove-Item \"$ClashWinDir\" -Force -Recurse -ErrorAction SilentlyContinue",
+            "$runtimeCache = \"$env:APPDATA\\clash_win\"",
+            "$runtimeCachePersist = \"$persist_dir\\clash_win\"",
+            "if (!(Test-Path $runtimeCachePersist)) {",
+            "    Move-Item $runtimeCache $runtimeCachePersist -Force",
+            "} else {",
+            "    Remove-Item $runtimeCache -Force -Recurse -ErrorAction SilentlyContinue",
             "}"
         ]
     },
