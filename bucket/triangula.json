@@ -1,0 +1,18 @@
+{
+    "homepage": "https://github.com/RH12503/triangula",
+    "description": "Generate high-quality triangulated art from images",
+    "version": "1.1.1",
+    "license": "MIT",
+    "url": "https://github.com/RH12503/triangula/releases/download/v1.1.1/triangula-windows-1.1.1.zip",
+    "hash": "a50349b0d285a8c517e638cabd81638adfc5b7fb2016e7842418b667642112d8",
+    "shortcuts": [
+        [
+            "Triangula.exe",
+            "Triangula"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/RH12503/triangula/releases/download/v$version/triangula-windows-$version.zip"
+    }
+}
