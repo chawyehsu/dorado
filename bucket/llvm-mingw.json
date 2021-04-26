@@ -6,23 +6,26 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/mstorsjo/llvm-mingw/releases/download/20210423/llvm-mingw-20210423-ucrt-x86_64.zip",
-            "hash": "f0ebb743478a29b159780cc73779da97703f5bf9b4a7d20cd8e12aa1dde99df7"
+            "hash": "f0ebb743478a29b159780cc73779da97703f5bf9b4a7d20cd8e12aa1dde99df7",
+            "extract_dir": "llvm-mingw-20210423-ucrt-x86_64"
         },
         "32bit": {
             "url": "https://github.com/mstorsjo/llvm-mingw/releases/download/20210423/llvm-mingw-20210423-ucrt-i686.zip",
-            "hash": "ae7f1b9574d80f02fd7468605a050f0baaef6330d74dd65c54ba99f1ff3c06ca"
+            "hash": "ae7f1b9574d80f02fd7468605a050f0baaef6330d74dd65c54ba99f1ff3c06ca",
+            "extract_dir": "llvm-mingw-20210423-ucrt-i686"
         }
     },
-    "extract_dir": "llvm-mingw",
     "env_add_path": "bin",
     "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/mstorsjo/llvm-mingw/releases/download/$version/llvm-mingw-$version-ucrt-x86_64.zip"
+                "url": "https://github.com/mstorsjo/llvm-mingw/releases/download/$version/llvm-mingw-$version-ucrt-x86_64.zip",
+                "extract_dir": "llvm-mingw-$version-ucrt-x86_64"
             },
             "32bit": {
-                "url": "https://github.com/mstorsjo/llvm-mingw/releases/download/$version/llvm-mingw-$version-ucrt-i686.zip"
+                "url": "https://github.com/mstorsjo/llvm-mingw/releases/download/$version/llvm-mingw-$version-ucrt-i686.zip",
+                "extract_dir": "llvm-mingw-$version-ucrt-i686"
             }
         }
     }
