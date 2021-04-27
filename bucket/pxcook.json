@@ -1,0 +1,40 @@
+{
+    "version": "3.9.960.202101211055",
+    "description": "Automatic image annotation tool for designers and engineers",
+    "homepage": "https://www.fancynode.com.cn/pxcook",
+    "license": {
+        "identifier": "EULA",
+        "url": "https://www.fancynode.com.cn/terms"
+    },
+    "innosetup": true,
+    "architecture": {
+        "64bit": {
+            "url": "https://assets.fancynode.com.cn/pxcook/client/win64/PxCook_v3.9.960_build_202101211055_x64.exe",
+            "hash": "1973d516bb868dace89a6c2480c10ac11424fb2b7734b988159c92c79cbcf719"
+        },
+        "32bit": {
+            "url": "https://assets.fancynode.com.cn/pxcook/client/win32/PxCook_v3.9.960_build_202101211055_x86.exe",
+            "hash": "6594bc33da2e14ff9695b4b54de36d6945a9f9b5f4de37e50ca2c5c61f9f2079"
+        }
+    },
+    "shortcuts": [
+        [
+            "PxCook.exe",
+            "PxCook"
+        ]
+    ],
+    "checkver": {
+        "regex": "downloadUrlWin64=\"https://assets.fancynode.com.cn/pxcook/client/win64/PxCook_v(?<major>[\\d.]+)_build_(?<build>\\d+)_x64.exe",
+        "replace": "${major}.${build}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://assets.fancynode.com.cn/pxcook/client/win64/PxCook_v$matchMajor_build_$matchBuild_x64.exe"
+            },
+            "32bit": {
+                "url": "https://assets.fancynode.com.cn/pxcook/client/win32/PxCook_v$matchMajor_build_$matchBuild_x86.exe"
+            }
+        }
+    }
+}
