@@ -2,9 +2,9 @@
     "homepage": "https://swift.org/",
     "description": "The Swift Programming Language",
     "license": "Apache-2.0",
-    "version": "5.3.3",
-    "url": "https://swift.org/builds/swift-5.3.3-release/windows10/swift-5.3.3-RELEASE/swift-5.3.3-RELEASE-windows10.exe",
-    "hash": "860c92b0eeacc28643f83b1a99f23a1a982e82b5f7ed036007da62fd07bd3b14",
+    "version": "5.4",
+    "url": "https://swift.org/builds/swift-5.4-release/windows10/swift-5.4-RELEASE/swift-5.4-RELEASE-windows10.exe",
+    "hash": "d5da5b12734665db43edca609c38626fbb0e73ea0ee987c84a0c99fea3fd4121",
     "depends": "dark",
     "installer": {
         "script": [
@@ -29,5 +29,5 @@
     "autoupdate": {
         "url": "https://swift.org/builds/swift-$version-release/windows10/swift-$version-RELEASE/swift-$version-RELEASE-windows10.exe"
     },
-    "notes": "Please read https://swift.org/download/#using-downloads for further information."
+    "notes": "Please read https://swift.org/download/#using-downloads for information about Supporting Files installation."
 }
