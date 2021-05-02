@@ -18,7 +18,7 @@
     "env_add_path": "bin",
     "checkver": {
         "url": "https://github.com/brechtsanders/winlibs_mingw/releases/latest",
-        "regex": "/tree/(?<version>((?<gccVersion>[\\d.]+)-(?<llvmVersion>[\\d.]+)-(?<mingwVersion>[\\d.]+)(-(?<revision>[\\w]+))?))"
+        "regex": "/tree/(?<version>((?<gccVersion>[\\d.]+)(-(?<llvmVersion>[\\d.]+))?-(?<mingwVersion>[\\d.]+)(-(?<revision>[\\w]+))?))"
     },
     "autoupdate": {
         "architecture": {
