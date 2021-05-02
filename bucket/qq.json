@@ -7,12 +7,15 @@
     "hash": "sha1:ad44fc3bae0eb62b84ea1874d0d4c672976bc43d",
     "pre_install": [
         "if ([Environment]::OSVersion.Version.Major -ne \"10\") {",
-        "    throw \"Windows Terminal requires Windows 10 to work.\"",
+        "    throw \"This app requires Windows 10 to work.\"",
         "}",
         "if ([Environment]::OSVersion.Version.Build -lt \"14393\") {",
-        "    throw \"Windows Terminal requires at least Windows 10 version 1607 (build 14393) to work.\"",
+        "    throw \"This app requires at least Windows 10 version 1607 (build 14393) to work.\"",
         "}"
     ],
+    "suggest": {
+        "vcruntime": "extras/vcredist2019"
+    },
     "shortcuts": [
         [
             "QQ\\Bin\\QQScLauncher.exe",
