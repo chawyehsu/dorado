@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tpc version="1.0.0">
+  <file-systems>
+    <file-system name="@thisskin:" path="Resource"/>
+    <file-system name="sysroot:" path=""/>
+    <file-system name="sysres:" path="@thisskin:Default\Res"/>
+    <file-system name="@thisres:" path="@thisskin:Default\Res"/>
+    <file-system name="@thisxtml:" path="@thisskin:Default\Xtml"/>
+  </file-systems>
+  <core-configs>
+    <core-config file="@thisskin:common.xml"/>
+    <core-config file="@thisskin:qm-control.xml"/>
+  </core-configs>
+  <gf-config file="@thisskin:gf-config.xml"/>
+  <i18n-config file="@thisskin:I18N\Config.xml"/>
+</tpc>
