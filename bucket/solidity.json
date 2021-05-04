@@ -1,0 +1,15 @@
+{
+    "version": "0.8.4",
+    "description": "Solidity, the Smart Contract Programming Language.",
+    "homepage": "https://soliditylang.org/",
+    "license": "GPL-3.0-only",
+    "url": "https://github.com/ethereum/solidity/releases/download/v0.8.4/solc-windows.exe#/solc.exe",
+    "hash": "6bd9bb0a601e791692358037b5558deba15f970d82de56d030c6eab0d1e28d67",
+    "bin": "solc.exe",
+    "checkver": {
+        "github": "https://github.com/ethereum/solidity"
+    },
+    "autoupdate": {
+        "url": "https://github.com/ethereum/solidity/releases/download/v$version/solc-windows.exe#/solc.exe"
+    }
+}
