@@ -1,10 +1,10 @@
 {
-    "version": "1.1.4",
+    "version": "2.1.0",
     "description": "Steam++ is a toolbox with lots of Steam tools",
     "homepage": "https://steampp.net/",
     "license": "GPL-3.0-only",
-    "url": "https://github.com/SteamTools-Team/SteamTools/releases/download/1.1.4/Steam++.v1.1.4.zip",
-    "hash": "6d3ae5dfe759fb6f067a3d7aea62e702da8513a1d2637ee1b1c968817e53009a",
+    "url": "https://github.com/SteamTools-Team/SteamTools/releases/download/2.1.0/Steam++_win_x86_v2.1.0.7z",
+    "hash": "f7aaf6f68d2e3a6ab22bfed20d837ebbc05eabd2affa44035497d53eba337047",
     "shortcuts": [
         [
             "Steam++.exe",
@@ -15,6 +15,10 @@
         "github": "https://github.com/SteamTools-Team/SteamTools"
     },
     "autoupdate": {
-        "url": "https://github.com/SteamTools-Team/SteamTools/releases/download/$version/Steam++.v$version.zip"
+        "url": "https://github.com/SteamTools-Team/SteamTools/releases/download/$version/Steam++_win_x86_v$version.7z",
+        "hash": {
+            "url": "https://api.github.com/repos/SteamTools-Team/SteamTools/releases",
+            "regex": "(?sm)win_x86_v$version.7z.*?$sha256"
+        }
     }
 }
