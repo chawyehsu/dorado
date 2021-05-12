@@ -16,7 +16,7 @@
         Yet another <a href="https://github.com/lukesampson/scoop/wiki/Buckets"><code>bucket</code></a> for <a href="https://github.com/lukesampson/scoop">Scoop</a>.
     </p>
     <p align="center">
-        All apps in this repository should <strong>NOT</strong> require elevated privileges while installation.
+        <strong>None</strong> of the apps in this repository require elevated (administrator) privileges to install.
     </p>
 </div>
 
