@@ -32,9 +32,9 @@ Featured Apps
 | trash | Move files and folders to recycle bin instead of directly `rm-rf` it, like `brew install trash` but for Windows |
 | rustup-np | The `non-portable` version of Rustup, keeping .rustup and .cargo in its original location: `$env:USERPROFILE` |
 | volta | You don't need nvm-windows anymore |
-| winlibs-mingw | A full **mingw-w64** toolchain built and distributed by [winlibs](http://winlibs.com/). (GCC 10.2) |
-| winlibs-mingw-llvm | A LLVM integrated version of winlibs-mingw. (GCC 10.2 + LLVM 11) |
-| winlibs-mingw-snapshot | A snapshot version of winlibs-mingw. (GCC 11 snapshot) |
+| winlibs-mingw | A full **mingw-w64** toolchain built and distributed by [winlibs](http://winlibs.com/). (GCC 10.3) |
+| winlibs-mingw-llvm | A LLVM integrated version of winlibs-mingw. (GCC 10.3 + LLVM 11) |
+| winlibs-mingw-snapshot | A snapshot version of winlibs-mingw. (GCC 11.0 snapshot) |
 
 Question
 --------
