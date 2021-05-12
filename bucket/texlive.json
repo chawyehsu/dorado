@@ -16,7 +16,7 @@
             "$env:TEXLIVE_INSTALL_NO_RESUME=1",
             "$env:TEXLIVE_INSTALL_ENV_NOCHECK=1",
             "$installProfile = \"$dir\\installer\\default.profile\"",
-            "Write-Output \"selected_scheme scheme-small\" | Out-File $installProfile",
+            "Write-Output \"selected_scheme scheme-small\" | Out-File $installProfile -Encoding ASCII",
             "$installArgs = \"-no-gui -portable -non-admin -profile=$installProfile\"",
             "Write-Output 'Downloading and installing TeX Live packages...'",
             "Invoke-ExternalCommand -Path \"$dir\\installer\\install-tl-windows.bat\" -ArgumentList $installArgs",

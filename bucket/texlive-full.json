@@ -16,7 +16,7 @@
             "$env:TEXLIVE_INSTALL_NO_RESUME=1",
             "$env:TEXLIVE_INSTALL_ENV_NOCHECK=1",
             "$installProfile = \"$dir\\installer\\default.profile\"",
-            "Write-Output \"selected_scheme scheme-full\" | Out-File $installProfile",
+            "Write-Output \"selected_scheme scheme-full\" | Out-File $installProfile -Encoding ASCII",
             "$installArgs = \"-no-gui -portable -non-admin -profile=$installProfile\"",
             "Invoke-ExternalCommand -Path \"$dir\\installer\\install-tl-windows.bat\" -ArgumentList $installArgs",
             "Remove-Item \"$dir\\installer\" -Recurse -Force | Out-Null",
