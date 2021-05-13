@@ -3,7 +3,7 @@
     "description": "TeX Live is a cross-platform, free software distribution for the TeX typesetting system",
     "license": "LPPL,GPL2",
     "version": "2021",
-    "url": "http://mirror.ctan.org/systems/texlive/Images/texlive2021.iso#/texlive2020.archive",
+    "url": "http://mirror.ctan.org/systems/texlive/Images/texlive2021.iso",
     "hash": "sha512:bad51ec47613cf295ed77472d10e517fe79e501f73ff918a1068f03ef43f4394ceb165051132bcbcb53a05650b77ea907f327c1799c38ae476ca38620aa7c1fe",
     "installer": {
         "script": [
@@ -50,7 +50,7 @@
         "regex": "Current release: TeX Live ([\\d]+)"
     },
     "autoupdate": {
-        "url": "http://mirror.ctan.org/systems/texlive/Images/texlive$version.iso#/texlive2020.archive",
+        "url": "http://mirror.ctan.org/systems/texlive/Images/texlive$version.iso",
         "hash": {
             "url": "$url.sha512"
         }
