@@ -1,9 +1,13 @@
 {
     "homepage": "https://www.epicgames.com/store/",
     "description": "The Launcher of the digital video game platform operated by Epic Games.",
-    "version": "nightly",
-    "license": "Freeware",
-    "url": "https://launcher-public-service-prod06.ol.epicgames.com/launcher/api/installer/download/EpicGamesLauncherInstaller.msi",
+    "version": "12.1.7",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://www.epicgames.com/store/en-US/eula"
+    },
+    "url": "https://epicgames-download1.akamaized.net/Builds/UnrealEngineLauncher/Installers/Win32/EpicInstaller-12.1.7.msi",
+    "hash": "6b069ab06ac7f0885b17214980b1ced6bfec5311d44cd510ef884ca5bf516aa1",
     "extract_dir": "Epic Games",
     "shortcuts": [
         [
@@ -11,5 +15,15 @@
             "Epic Games Launcher"
         ]
     ],
+    "checkver": {
+        "script": [
+            "$url = 'https://launcher-public-service-prod06.ol.epicgames.com/launcher/api/installer/download/EpicGamesLauncherInstaller.msi'",
+            "return (iwr -useb $url -Method Head).Headers['Content-Disposition']"
+        ],
+        "regex": "EpicInstaller-([\\d.]+).msi"
+    },
+    "autoupdate": {
+        "url": "https://epicgames-download1.akamaized.net/Builds/UnrealEngineLauncher/Installers/Win32/EpicInstaller-$version.msi"
+    },
     "notes": "Make sure your system has the DirectX Runtime installed."
 }
