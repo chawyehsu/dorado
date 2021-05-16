@@ -1,0 +1,18 @@
+{
+    "homepage": "https://github.com/HMBSbige/NatTypeTester",
+    "description": "Test tool for testing Nat network type",
+    "version": "3.4",
+    "license": "MIT",
+    "url": "https://github.com/HMBSbige/NatTypeTester/releases/download/3.4/NatTypeTester.exe",
+    "hash": "fe3ccff6c0edb4aa937583af5bb2222216a642762d9a4c802315e775fc41d8b4",
+    "shortcuts": [
+        [
+            "NatTypeTester.exe",
+            "NatTypeTester"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/HMBSbige/NatTypeTester/releases/download/$version/NatTypeTester.exe"
+    }
+}
