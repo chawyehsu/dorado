@@ -1,0 +1,31 @@
+{
+    "homepage": "https://httpd.apache.org/mod_fcgid/",
+    "description": "Apache mod_fcgid module is a high performance alternative to mod_cgi or mod_cgid",
+    "version": "3.2.2",
+    "license": "BSD-3-Clause",
+    "depends": "main/apache",
+    "architecture": {
+        "64bit": {
+            "url": "https://www.apachelounge.com/download/VS16/modules/mod_fcgid-2.3.10-win64-VS16.zip",
+            "hash": "d3865957ef6b6be1a320f01ac2f264349f9db7abc4864457963f9fdad5cd2256"
+        },
+        "32bit": {
+            "url": "https://www.apachelounge.com/download/VS16/modules/mod_fcgid-2.3.10-win32-VS16.zip",
+            "hash": "849f6005d18a33495dcc22d4a5ecb6a2d087f653994db9498ec85c1eb9110f51"
+        }
+    },
+    "checkver": {
+        "script": "return (iwr -useb 'https://www.apachelounge.com/download/' -MaximumRedirection 0)",
+        "regex": "mod_fcgid-([\\d.]+)-win64-VS16.zip"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://www.apachelounge.com/download/VS16/modules/mod_fcgid-2.3.10-win64-VS16.zip"
+            },
+            "32bit": {
+                "url": "https://www.apachelounge.com/download/VS16/modules/mod_fcgid-2.3.10-win32-VS16.zip"
+            }
+        }
+    }
+}

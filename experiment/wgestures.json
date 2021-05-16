@@ -1,0 +1,17 @@
+{
+    "homepage": "https://www.yingdev.com/projects/wgestures",
+    "description": "Modern mouse gestures for Windows",
+    "version": "1.8.4.0",
+    "license": "GPL-2.0-only",
+    "url": "https://www.yingdev.com/Content/Projects/WGestures/Release/1.8.4.0/Install%20WGestures%201.8.4.0.zip",
+    "hash": "7f126c0d574c1df8a387a7658f03f67bfffce6d35355c2783e1d7b7048a98ffd",
+    "installer": {
+        "script": "# FIXME"
+    },
+    "checkver": {
+        "regex": "(?sm)当前版本: .*?([\\d.]+)<"
+    },
+    "autoupdate": {
+        "url": "https://www.yingdev.com/Content/Projects/WGestures/Release/$version/Install%20WGestures%20$version.zip"
+    }
+}

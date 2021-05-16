@@ -1,0 +1,50 @@
+{
+    "version": "0.7.4",
+    "description": "Sandboxie community maintained version",
+    "homepage": "https://sandboxie-plus.com/",
+    "license": "GPL-3.0-only",
+    "innosetup": true,
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/sandboxie-plus/Sandboxie/releases/download/0.7.4/Sandboxie-Plus-x64-v0.7.4.exe",
+            "hash": "c48e23d3db8ad3023e3fa477a9b9fc3994a69ca52c667717559bfbd3e9d403c8"
+        },
+        "32bit": {
+            "url": "https://github.com/sandboxie-plus/Sandboxie/releases/download/0.7.4/Sandboxie-Plus-x86-v0.7.4.exe",
+            "hash": "8c7aa7b96fcb5c133d0c3ccad9c77f3b6b82bd55fd45ac15fed4f0dfe92aa1ad"
+        }
+    },
+    "installer": {
+        "script": [
+            "function CreateFile([String] $file, [String] $content = $null) {",
+            "    if (!(Test-Path \"$persist_dir\\$file\")) {",
+            "        New-Item -Force -Path \"$persist_dir\\$file\" -ItemType file -Value $content | Out-Null",
+            "    }",
+            "}",
+            "CreateFile 'config.ini' \"[GlobalSettings]`nFileRootPath=$dir\\Sandbox\\%SANDBOX%\""
+        ]
+    },
+    "shortcuts": [
+        [
+            "SandMan.exe",
+            "Sandboxie Manager"
+        ]
+    ],
+    "persist": [
+        "Sandboxie.ini",
+        "Sandboxie-Plus.ini"
+    ],
+    "checkver": {
+        "github": "https://github.com/sandboxie-plus/Sandboxie"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/sandboxie-plus/Sandboxie/releases/download/$version/Sandboxie-Plus-x64-v$version.exe"
+            },
+            "32bit": {
+                "url": "https://github.com/sandboxie-plus/Sandboxie/releases/download/$version/Sandboxie-Plus-x86-v$version.exe"
+            }
+        }
+    }
+}
