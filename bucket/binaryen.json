@@ -1,0 +1,26 @@
+{
+    "homepage": "https://github.com/WebAssembly/binaryen",
+    "description": "Compiler infrastructure and toolchain library for WebAssembly",
+    "version": "101",
+    "license": "Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/WebAssembly/binaryen/releases/download/version_101/binaryen-version_101-x86_64-windows.tar.gz",
+            "hash": "ae1ed9a281f90fd42181e4363ad44bf75a86fe4e1728500a026cae122d3853c1"
+        }
+    },
+    "extract_dir": "binaryen-version_101",
+    "env_add_path": "bin",
+    "checkver": {
+        "github": "https://github.com/WebAssembly/binaryen",
+        "regex": "/tree/version_([\\d]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/WebAssembly/binaryen/releases/download/version_$version/binaryen-version_101-x86_64-windows.tar.gz"
+            }
+        },
+        "extract_dir": "binaryen-version_$version"
+    }
+}
