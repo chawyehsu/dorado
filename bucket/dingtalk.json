@@ -5,9 +5,9 @@
         "identifier": "EULA",
         "url": "https://tms.dingtalk.com/markets/dingtalk/service-terms-zh"
     },
-    "version": "6.0.12.4190287",
-    "url": "https://dtapp-pub.dingtalk.com/dingtalk-desktop/win_installer/Release/DingTalk_v6.0.12.4190287.exe#/dl.7z",
-    "hash": "md5:936cdd179e71834e01712e66b6d50ead",
+    "version": "6.0.15.5080287",
+    "url": "https://dtapp-pub.dingtalk.com/dingtalk-desktop/win_installer/Release/DingTalk_v6.0.15.5080287.exe#/dl.7z",
+    "hash": "md5:74cfac5531185ef0a4543701eea7da6a",
     "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\" -Recurse",
     "shortcuts": [
         [
@@ -16,13 +16,13 @@
         ]
     ],
     "checkver": {
-        "url": "https://im.dingtalk.com/manifest/new/release_windows_vista_later_manual_lowpriority.json",
+        "url": "https://im.dingtalk.com/manifest/new/release_windows_vista_later_gray4.json",
         "regex": "DingTalk_v([\\d.]+).exe"
     },
     "autoupdate": {
         "url": "https://dtapp-pub.dingtalk.com/dingtalk-desktop/win_installer/Release/DingTalk_v$version.exe#/dl.7z",
         "hash": {
-            "url": "https://im.dingtalk.com/manifest/release_nativeui_windows_manual_check.json",
+            "url": "https://im.dingtalk.com/manifest/new/release_windows_vista_later_gray4.json",
             "jsonpath": "$.win.install.md5"
         }
     },
