@@ -5,12 +5,12 @@
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/zhongyang219/TrafficMonitor/releases/download/V1.80/TrafficMonitor_V1.80_x64.7z",
-            "hash": "7824da91dc126853b2ef4a0f266dc1458c25ad12a3e74ec7dad902c023bf94f3"
+            "url": "https://github.com/zhongyang219/TrafficMonitor/releases/download/V1.80/TrafficMonitor_V1.80_x64.zip",
+            "hash": "ebcb6bb9bd0a07b83e3b7466fa1e7a30c1b9e4632a10f4a9d79ab4da8c911ae5"
         },
         "32bit": {
-            "url": "https://github.com/zhongyang219/TrafficMonitor/releases/download/V1.80/TrafficMonitor_V1.80_x86.7z",
-            "hash": "ebcb6bb9bd0a07b83e3b7466fa1e7a30c1b9e4632a10f4a9d79ab4da8c911ae5"
+            "url": "https://github.com/zhongyang219/TrafficMonitor/releases/download/V1.80/TrafficMonitor_V1.80_x86.zip",
+            "hash": "7824da91dc126853b2ef4a0f266dc1458c25ad12a3e74ec7dad902c023bf94f3"
         }
     },
     "extract_dir": "TrafficMonitor",
@@ -54,10 +54,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/zhongyang219/TrafficMonitor/releases/download/V$version/TrafficMonitor_V$version_x64.7z"
+                "url": "https://github.com/zhongyang219/TrafficMonitor/releases/download/V$version/TrafficMonitor_V$version_x64.zip"
             },
             "32bit": {
-                "url": "https://github.com/zhongyang219/TrafficMonitor/releases/download/V$version/TrafficMonitor_V$version_x86.7z"
+                "url": "https://github.com/zhongyang219/TrafficMonitor/releases/download/V$version/TrafficMonitor_V$version_x86.zip"
             }
         }
     }
