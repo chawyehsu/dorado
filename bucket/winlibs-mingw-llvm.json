@@ -1,5 +1,5 @@
 {
-    "homepage": "https://github.com/brechtsanders/winlibs_mingw",
+    "homepage": "https://winlibs.com/",
     "description": "winlibs standalone build of GCC compiler and MinGW-w64 (with llvm)",
     "version": "11.1.0-12.0.0-8.0.2-r1",
     "license": "GPL-2.0-only,BSD-2-Clause,Apache-2.0,ZPL-2.1",
@@ -17,8 +17,7 @@
     },
     "env_add_path": "bin",
     "checkver": {
-        "url": "https://github.com/brechtsanders/winlibs_mingw/releases/latest",
-        "regex": "/tree/(?<version>((?<gccVersion>[\\d.]+)-(?<llvmVersion>[\\d.]+)-(?<mingwVersion>[\\d.]+)(-(?<revision>[\\w]+))?))"
+        "regex": "/download/(?<version>((?<gccVersion>11[\\d.]+)(-(?<llvmVersion>[\\d.]+))?-(?<mingwVersion>[\\d.]+)(-(?<revision>[\\w]+))?))"
     },
     "autoupdate": {
         "architecture": {
