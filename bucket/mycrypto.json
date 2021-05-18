@@ -1,0 +1,51 @@
+{
+    "version": "1.7.16",
+    "homepage": "https://app.mycrypto.com/",
+    "description": "An open-source tool that allows you to manage your Ethereum accounts privately and securely.",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/MyCryptoHQ/MyCrypto/releases/download/1.7.16/windows_1.7.16_MyCrypto.exe#/mycrypto-setup.zip",
+            "hash": "877e520fc08c9a7eacc21dd68c14df8a24e37efa99865584b9a3a3151dc340bd",
+            "installer": {
+                "script": [
+                    "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
+                    "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninst*\" -Force -Recurse"
+                ]
+            }
+        },
+        "32bit": {
+            "url": "https://github.com/MyCryptoHQ/MyCrypto/releases/download/1.7.16/windows_1.7.16_MyCrypto.exe#/mycrypto-setup.zip",
+            "hash": "877e520fc08c9a7eacc21dd68c14df8a24e37efa99865584b9a3a3151dc340bd",
+            "installer": {
+                "script": [
+                    "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
+                    "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninst*\" -Force -Recurse"
+                ]
+            }
+        }
+    },
+    "shortcuts": [
+        [
+            "MyCrypto.exe",
+            "MyCrypto"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/MyCryptoHQ/MyCrypto"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/MyCryptoHQ/MyCrypto/releases/download/$version/windows_$version_MyCrypto.exe#/mycrypto-setup.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/MyCryptoHQ/MyCrypto/releases/download/$version/windows_$version_MyCrypto.exe#/mycrypto-setup.zip"
+            }
+        },
+        "hash": {
+            "url": "https://github.com/MyCryptoHQ/MyCrypto/releases/download/$version/checksums.txt",
+            "regex": "$basename\\s+$sha256"
+        }
+    }
+}
