@@ -1,0 +1,45 @@
+{
+    "version": "1.10.3",
+    "homepage": "https://geth.ethereum.org/",
+    "description": "Official Go implementation of the Ethereum protocol",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://gethstore.blob.core.windows.net/builds/geth-windows-amd64-1.10.3-991384a7.exe#/geth.zip",
+            "hash": "md5:e5a30e0fe35242afcf051966b1d3d9d5"
+        },
+        "32bit": {
+            "url": "https://gethstore.blob.core.windows.net/builds/geth-windows-386-1.10.3-991384a7.exe#/geth.zip",
+            "hash": "md5:ca09148fcc412bbc6323ee2c1b0cd61e"
+        }
+    },
+    "bin": [
+        "abigen.exe",
+        "bootnode.exe",
+        "clef.exe",
+        "evm.exe",
+        "geth.exe",
+        "puppeth.exe",
+        "rlpdump.exe"
+    ],
+    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\",\"$dir\\uninstall.exe\" -Recurse",
+    "checkver": {
+        "url": "https://github.com/ethereum/go-ethereum/releases/latest",
+        "regex": "(?sm)/tree/v(?<version>[\\d.]+).*?/commit/(?<commit>[a-z0-9]{8})"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gethstore.blob.core.windows.net/builds/geth-windows-amd64-$version-$matchCommit.exe#/geth.zip"
+            },
+            "32bit": {
+                "url": "https://gethstore.blob.core.windows.net/builds/geth-windows-386-$version-$matchCommit.exe#/geth.zip"
+            }
+        },
+        "hash": {
+            "url": "https://gethstore.blob.core.windows.net/builds?restype=container&comp=list&maxresults=5&prefix=$basename",
+            "regex": "$basename.*?Content-MD5>$base64<"
+        }
+    },
+    "notes": "CAUTION: by default all your Ethereum data are stored in '$env:LOCALAPPDATA\\Ethereum', TAKE CARE!"
+}
