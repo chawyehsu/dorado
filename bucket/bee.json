@@ -1,0 +1,72 @@
+{
+    "homepage": "https://swarm.ethereum.org/",
+    "description": "A Swarm client implemented in Go",
+    "version": "0.5.3",
+    "license": "BSD-3-Clause",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/ethersphere/bee/releases/download/v0.5.3/bee-windows-amd64.zip",
+            "hash": "38e1471a31af469f23674a240b550ef5c3ef0ab308b2bdaf1a5fa7f1fc14dfa3"
+        }
+    },
+    "installer": {
+        "script": [
+            "$dataPersistDir = \"$persist_dir\\data\"",
+            "# A GeneratePassword that is compatible with PowerShell 6+",
+            "function GeneratePassword([int]$Length) {",
+            "    $CharSet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*'.ToCharArray()",
+            "    $rng = New-Object System.Security.Cryptography.RNGCryptoServiceProvider",
+            "    $bytes = New-Object byte[]($Length)",
+            "    $rng.GetBytes($bytes)",
+            "    $Return = New-Object char[]($Length)",
+            "    for ($i = 0 ; $i -lt $Length ; $i++) {",
+            "        $Return[$i] = $CharSet[$bytes[$i]%$CharSet.Length]",
+            "    }",
+            "    return (-join $Return)",
+            "}",
+            "if (!(Test-Path $dataPersistDir)) {",
+            "    New-Item -Force -Path $dataPersistDir -ItemType Directory | Out-Null",
+            "    $beeConfTemplate = \"$dir\\packaging\\scoop\\bee.yaml\"",
+            "    (Get-Content -Path $beeConfTemplate -Raw) -replace './bee.yaml',\"$dataPersistDir\\bee.yaml\" | Set-Content -Path $beeConfTemplate",
+            "    (Get-Content -Path $beeConfTemplate -Raw) -replace './data',\"$dataPersistDir\\.bee\" | Set-Content -Path $beeConfTemplate",
+            "    (Get-Content -Path $beeConfTemplate -Raw) -replace './password',\"$dataPersistDir\\password\" | Set-Content -Path $beeConfTemplate",
+            "    GeneratePassword(32) | Set-Content -Path \"$dataPersistDir\\password\"",
+            "    Copy-Item -Path $beeConfTemplate -Destination $dataPersistDir -Force",
+            "}",
+            "Remove-Item \"$dir\\packaging\" -Force -Recurse",
+            "# Create a bin shim to run bee with given --config flag",
+            "$binScript = \"@echo off`n%~dp0\\bee.exe --config %~dp0\\data\\bee.yaml %*\"",
+            "New-Item -Force -Path \"$dir\\bee.cmd\" -ItemType File -Value $binScript | Out-Null",
+            "# Copy service helper",
+            "$serviceHelper = $(Join-Path $(Find-BucketDirectory -Root -Name dorado) scripts/bee/beesvc.cmd)",
+            "Copy-Item -Path $serviceHelper -Destination $dir"
+        ]
+    },
+    "bin": [
+        "bee.cmd",
+        "beesvc.cmd"
+    ],
+    "persist": "data",
+    "checkver": {
+        "github": "https://github.com/ethersphere/bee"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/ethersphere/bee/releases/download/v$version/bee-windows-amd64.zip"
+            }
+        },
+        "hash": {
+            "url": "https://github.com/ethersphere/bee/releases/download/v$version/bee_$version_checksums.txt"
+        }
+    },
+    "notes": [
+        "CAUTION: All bee data (pvk, password included) are stored in '$persist_dir', and persisted by Scoop.",
+        "IF IT'S THE FIRST TIME you install bee, run 'bee init' to initialize bee (keys and addresses generation) before starting bee.",
+        "",
+        "Please make sure there is sufficient eth and bzz available on your address",
+        "Learn how to fund your node by visiting our docs at https://docs.ethswarm.org/docs/installation/quick-start#fund-your-node",
+        "",
+        "There is a helper tool named beesvc for Bee service management, type 'beesvc help' for more information."
+    ]
+}
