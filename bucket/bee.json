@@ -30,7 +30,7 @@
             "    (Get-Content -Path $beeConfTemplate -Raw) -replace './bee.yaml',\"$dataPersistDir\\bee.yaml\" | Set-Content -Path $beeConfTemplate",
             "    (Get-Content -Path $beeConfTemplate -Raw) -replace './data',\"$dataPersistDir\\.bee\" | Set-Content -Path $beeConfTemplate",
             "    (Get-Content -Path $beeConfTemplate -Raw) -replace './password',\"$dataPersistDir\\password\" | Set-Content -Path $beeConfTemplate",
-            "    GeneratePassword(32) | Set-Content -Path \"$dataPersistDir\\password\"",
+            "    GeneratePassword(32) | Out-File -FilePath \"$dataPersistDir\\password\" -Encoding ASCII -NoNewline -Force",
             "    Copy-Item -Path $beeConfTemplate -Destination $dataPersistDir -Force",
             "}",
             "Remove-Item \"$dir\\packaging\" -Force -Recurse",
