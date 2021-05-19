@@ -29,9 +29,9 @@ if !ERRORLEVEL! equ 0 (
   echo Swarm Bee serivce has already been created. skip creating.
   exit /b !ERRORLEVEL!
 ) else if !ERRORLEVEL! equ 1060 (
-  sc.exe create SwarmBeeSvc binPath= "%~dp0bee.exe start --config %~dp0data\bee.yaml >> %~dp0data\.bee\bee.log" type= share start= delayed-auto displayName= "Swarm Bee Service" >nul
+  sc.exe create SwarmBeeSvc binPath= "%~dp0bee.exe start --config=%~dp0data\bee.yaml" type= share start= delayed-auto displayName= "Bee" >nul
   if !ERRORLEVEL! equ 0 (
-    sc.exe description SwarmBeeSvc "The service for Swarm client implemented in Go" >nul
+    sc.exe description SwarmBeeSvc "Bee, Swarm client." >nul
     echo Swarm Bee serivce has been successfully created.
     exit /b 0
   ) else if !ERRORLEVEL! equ 5 (
