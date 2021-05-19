@@ -3,6 +3,9 @@
     "description": "A Swarm client implemented in Go",
     "version": "0.5.3",
     "license": "BSD-3-Clause",
+    "suggest": {
+        "sudo": "main/gsudo"
+    },
     "architecture": {
         "64bit": {
             "url": "https://github.com/ethersphere/bee/releases/download/v0.5.3/bee-windows-amd64.zip",
@@ -35,7 +38,7 @@
             "}",
             "Remove-Item \"$dir\\packaging\" -Force -Recurse",
             "# Create a bin shim to run bee with given --config flag",
-            "$binScript = \"@echo off`n%~dp0\\bee.exe --config %~dp0\\data\\bee.yaml %*\"",
+            "$binScript = \"@echo off`n%~dp0bee.exe --config %~dp0data\\bee.yaml %*\"",
             "New-Item -Force -Path \"$dir\\bee.cmd\" -ItemType File -Value $binScript | Out-Null",
             "# Copy service helper",
             "$serviceHelper = $(Join-Path $(Find-BucketDirectory -Root -Name dorado) scripts/bee/beesvc.cmd)",
@@ -65,8 +68,6 @@
         "IF IT'S THE FIRST TIME you install bee, run 'bee init' to initialize bee (keys and addresses generation) before starting bee.",
         "",
         "Please make sure there is sufficient eth and bzz available on your address",
-        "Learn how to fund your node by visiting our docs at https://docs.ethswarm.org/docs/installation/quick-start#fund-your-node",
-        "",
-        "There is a helper tool named beesvc for Bee service management, type 'beesvc help' for more information."
+        "Learn how to fund your node by visiting our docs at https://docs.ethswarm.org/docs/installation/quick-start#fund-your-node"
     ]
 }

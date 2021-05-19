@@ -1,9 +1,9 @@
 @echo off
 setlocal enabledelayedexpansion
 
-@rem bee.cmd check
-if not exist "%~dp0bee.cmd" (
-  echo Could not find bee.cmd, please make sure it's next to beesvc.
+@rem bee check
+if not exist "%~dp0bee.exe" (
+  echo Could not find bee.exe, please make sure it's next to beesvc.
   exit /b 0
 )
 
@@ -27,8 +27,9 @@ exit /b !ERRORLEVEL!
 sc.exe query SwarmBeeSvc >nul
 if !ERRORLEVEL! equ 0 (
   echo Swarm Bee serivce has already been created. skip creating.
+  exit /b !ERRORLEVEL!
 ) else if !ERRORLEVEL! equ 1060 (
-  sc.exe create SwarmBeeSvc binPath= "%~dp0bee.cmd start" type= share start= delayed-auto displayName= "Swarm Bee Service" >nul
+  sc.exe create SwarmBeeSvc binPath= "%~dp0bee.exe start --config %~dp0data\bee.yaml >> %~dp0data\.bee\bee.log" type= share start= delayed-auto displayName= "Swarm Bee Service" >nul
   if !ERRORLEVEL! equ 0 (
     sc.exe description SwarmBeeSvc "The service for Swarm client implemented in Go" >nul
     echo Swarm Bee serivce has been successfully created.
@@ -43,13 +44,14 @@ if !ERRORLEVEL! equ 0 (
   )
 ) else (
   echo Unkown error on command 'sc.exe query SwarmBeeSvc'. (code: !ERRORLEVEL!^)
+  exit /b !ERRORLEVEL!
 )
-exit /b !ERRORLEVEL!
 
 :delete
 sc.exe query SwarmBeeSvc >nul
 if !ERRORLEVEL! equ 1060 (
   echo Swarm Bee serivce has not been created yet, skip deleting.
+  exit /b !ERRORLEVEL!
 ) else if !ERRORLEVEL! equ 0 (
   sc.exe stop SwarmBeeSvc >nul
   @rem 0: stop success or 1062: not been started
@@ -76,13 +78,14 @@ if !ERRORLEVEL! equ 1060 (
   )
 ) else (
   echo Unkown error on command 'sc.exe query SwarmBeeSvc'. (code: !ERRORLEVEL!^)
+  exit /b !ERRORLEVEL!
 )
-exit /b !ERRORLEVEL!
 
 :start
 sc.exe query SwarmBeeSvc >nul
 if !ERRORLEVEL! equ 1060 (
   echo Swarm Bee serivce has not been created yet, please use '%~n0 create' first.
+  exit /b !ERRORLEVEL!
 ) else if !ERRORLEVEL! equ 0 (
   sc.exe start SwarmBeeSvc >nul
   if !ERRORLEVEL! equ 0 (
@@ -98,13 +101,14 @@ if !ERRORLEVEL! equ 1060 (
   )
 ) else (
   echo Unkown error on command 'sc.exe query SwarmBeeSvc'. (code: !ERRORLEVEL!^)
+  exit /b !ERRORLEVEL!
 )
-exit /b !ERRORLEVEL!
 
 :status
 sc.exe query SwarmBeeSvc >nul
 if !ERRORLEVEL! equ 1060 (
   echo Swarm Bee serivce has not been created yet, please use '%~n0 create' first.
+  exit /b !ERRORLEVEL!
 ) else if !ERRORLEVEL! equ 0 (
   sc.exe query SwarmBeeSvc | findstr.exe "RUNNING" >nul
   if !ERRORLEVEL! equ 0 (
@@ -116,13 +120,14 @@ if !ERRORLEVEL! equ 1060 (
   exit /b 0
 ) else (
   echo Unkown error on command 'sc.exe query SwarmBeeSvc'. (code: !ERRORLEVEL!^)
+  exit /b !ERRORLEVEL!
 )
-exit /b !ERRORLEVEL!
 
 :stop
 sc.exe query SwarmBeeSvc >nul
 if !ERRORLEVEL! equ 1060 (
   echo Swarm Bee serivce has not been created yet, skip stopping.
+  exit /b !ERRORLEVEL!
 ) else if !ERRORLEVEL! equ 0 (
   sc.exe stop SwarmBeeSvc >nul
   @rem 0: stop success or 1062: not been started
@@ -139,8 +144,8 @@ if !ERRORLEVEL! equ 1060 (
   )
 ) else (
   echo Unkown error on command 'sc.exe query SwarmBeeSvc'. (code: !ERRORLEVEL!^)
+  exit /b !ERRORLEVEL!
 )
-exit /b !ERRORLEVEL!
 
 :printhelp
 echo %~n0 0.1.0
