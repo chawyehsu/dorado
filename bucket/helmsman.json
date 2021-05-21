@@ -1,0 +1,24 @@
+{
+    "homepage": "https://github.com/Praqma/helmsman",
+    "description": "A Helm Charts (k8s applications) as Code tool which allows you to automate the deployment/management of your Helm charts from version controlled code.",
+    "version": "3.7.0",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Praqma/helmsman/releases/download/v3.7.0/helmsman_3.7.0_windows_amd64.tar.gz",
+            "hash": "b3abf3eb29a46a1941e8d1094e4ac2d877bf1d667c16b0b80a9eacac57e1691e"
+        }
+    },
+    "bin": "helmsman.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Praqma/helmsman/releases/download/v$version/helmsman_$version_windows_amd64.tar.gz"
+            }
+        },
+        "hash": {
+            "url": "https://github.com/Praqma/helmsman/releases/download/v$version/helmsman_$version_checksums.txt"
+        }
+    }
+}
