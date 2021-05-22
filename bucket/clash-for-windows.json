@@ -68,7 +68,7 @@
                 "hash": {
                     "url": "https://github.com/Fndroid/clash_for_windows_pkg/releases/download/$version/sha256sum",
                     "mode": "extract",
-                    "regex": "^exe: $sha256"
+                    "regex": "(?m)^exe: $sha256"
                 }
             },
             "32bit": {
