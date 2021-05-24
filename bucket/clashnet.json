@@ -35,7 +35,7 @@
         "hash": {
             "url": "https://github.com/ClashDotNetFramework/ClashDotNetFramework/releases/download/v$version/checksum",
             "mode": "extract",
-            "regex": "$basename $sha256"
+            "regex": "$basename\\s+$sha256"
         }
     }
 }
