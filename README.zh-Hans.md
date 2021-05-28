@@ -35,7 +35,6 @@
 | volta | 你可能不再需要 nvm-windows |
 | wechat | 你可能需要的微信 PC 客户端 |
 | winlibs-mingw | [winlibs](http://winlibs.com/) 编译的完整 **mingw-w64** 工具链发行版 (GCC 11.1) |
-| winlibs-mingw-llvm | [winlibs](http://winlibs.com/) 编译的完整 **mingw-w64** 工具链发行版，同时整合了 LLVM (GCC 11.1 + LLVM 12) |
 | winlibs-mingw-snapshot | [winlibs](http://winlibs.com/) 编译的完整 **mingw-w64** 工具链发行版的快照版本 (GCC 11.0.1 snapshot) |
 
 更多待你发现~

@@ -33,7 +33,6 @@ Featured Apps
 | rustup-np | The `non-portable` version of Rustup, keeping .rustup and .cargo in its original location: `$env:USERPROFILE` |
 | volta | You don't need nvm-windows anymore |
 | winlibs-mingw | A full **mingw-w64** toolchain built and distributed by [winlibs](http://winlibs.com/). (GCC 11.1) |
-| winlibs-mingw-llvm | A LLVM integrated version of winlibs-mingw. (GCC 11.1 + LLVM 12) |
 | winlibs-mingw-snapshot | A snapshot version of winlibs-mingw. (GCC 11.0.1 snapshot) |
 
 Question
