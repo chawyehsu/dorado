@@ -1,14 +1,16 @@
 {
+    "version": "90.0a1.20210529092554",
     "description": "Nightly builds of Firefox: the popular open source web browser.",
     "homepage": "https://www.mozilla.org/zh-CN/firefox/nightly/",
-    "version": "nightly",
     "license": "MPL-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://download.mozilla.org/?product=firefox-nightly-latest-l10n-ssl&os=win64&lang=zh-CN#/firefox.7z"
+            "url": "https://archive.mozilla.org/pub/firefox/nightly/2021/05/2021-05-29-09-25-54-mozilla-central-l10n/firefox-90.0a1.zh-CN.win64.installer.exe#/firefox.7z",
+            "hash": "sha512:69a54613d0ebb3991625084271788facb58e45d9bf21e2d2ad192f3388b9743dc595d777f9e4d28016481ab79f552f4b4baa0df311201a593a0604287cabda19"
         },
         "32bit": {
-            "url": "https://download.mozilla.org/?product=firefox-nightly-latest-l10n-ssl&os=win&lang=zh-CN#/firefox.7z"
+            "url": "https://archive.mozilla.org/pub/firefox/nightly/2021/05/2021-05-29-09-25-54-mozilla-central-l10n/firefox-90.0a1.zh-CN.win32.installer.exe#/firefox.7z",
+            "hash": "sha512:2c14282b7318092327294d24915209390698d923c30fd091014a6814b0e7397eb78c4efbeabb23b7dffcd203bf88c0339ae3042940bbb5f4181055b258e6735a"
         }
     },
     "extract_dir": "core",
@@ -23,5 +25,26 @@
             "firefox.exe",
             "Firefox Nightly"
         ]
-    ]
+    ],
+    "checkver": {
+        "url": "https://aus5.mozilla.org/update/6/Firefox/60.0/_/WINNT_x86_64-msvc-x64/zh-CN/nightly/_/_/_/_/update.xml",
+        "regex": "appVersion=\"([\\w.]+)\".*?buildID=\"((?<yyyy>\\d{4})(?<mm>\\d{2})(?<dd>\\d{2})(?<hr>\\d{2})(?<mi>\\d{2})(?<se>\\d{2}))",
+        "replace": "${1}.${2}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://archive.mozilla.org/pub/firefox/nightly/$matchYyyy/$matchMm/$matchYyyy-$matchMm-$matchDd-$matchHr-$matchMi-$matchSe-mozilla-central-l10n/firefox-$majorVersion.$minorVersion.zh-CN.win64.installer.exe#/firefox.7z",
+                "hash": {
+                    "url": "$baseurl/firefox-$majorVersion.$minorVersion.zh-CN.win64.checksums"
+                }
+            },
+            "32bit": {
+                "url": "https://archive.mozilla.org/pub/firefox/nightly/$matchYyyy/$matchMm/$matchYyyy-$matchMm-$matchDd-$matchHr-$matchMi-$matchSe-mozilla-central-l10n/firefox-$majorVersion.$minorVersion.zh-CN.win32.installer.exe#/firefox.7z",
+                "hash": {
+                    "url": "$baseurl/firefox-$majorVersion.$minorVersion.zh-CN.win32.checksums"
+                }
+            }
+        }
+    }
 }
