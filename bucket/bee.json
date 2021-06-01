@@ -14,6 +14,7 @@
     },
     "installer": {
         "script": [
+            "$beeConfTemplate = \"$dir\\packaging\\scoop\\bee.yaml\"",
             "$dataPersistDir = \"$persist_dir\\data\"",
             "# A GeneratePassword that is compatible with PowerShell 6+",
             "function GeneratePassword([int]$Length) {",
@@ -27,9 +28,9 @@
             "    }",
             "    return (-join $Return)",
             "}",
+            "Copy-Item -Path $beeConfTemplate -Destination \"$dir\\template.bee.yaml\" -Force",
             "if (!(Test-Path $dataPersistDir)) {",
             "    New-Item -Force -Path $dataPersistDir -ItemType Directory | Out-Null",
-            "    $beeConfTemplate = \"$dir\\packaging\\scoop\\bee.yaml\"",
             "    (Get-Content -Path $beeConfTemplate -Raw) -replace './bee.yaml',\"$dataPersistDir\\bee.yaml\" | Set-Content -Path $beeConfTemplate",
             "    (Get-Content -Path $beeConfTemplate -Raw) -replace './data',\"$dataPersistDir\\.bee\" | Set-Content -Path $beeConfTemplate",
             "    (Get-Content -Path $beeConfTemplate -Raw) -replace './password',\"$dataPersistDir\\password\" | Set-Content -Path $beeConfTemplate",
