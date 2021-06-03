@@ -1,13 +1,13 @@
 {
-    "version": "1.0.2",
+    "version": "2.0.0-rc1",
     "description": "The leading WebAssembly Runtime supporting WASI and Emscripten",
     "homepage": "https://wasmer.io/",
     "license": "MIT",
     "innosetup": true,
     "architecture": {
         "64bit": {
-            "url": "https://github.com/wasmerio/wasmer/releases/download/1.0.2/wasmer-windows.exe",
-            "hash": "f95ec0f061c2ce974fdb3e62245f0a889ec7e5cbbb3288a51e7dba87215ea923"
+            "url": "https://github.com/wasmerio/wasmer/releases/download/2.0.0-rc1/wasmer-windows.exe",
+            "hash": "2359a24ebc81a84b33e067d68ab4ef4a0d697d1c4cc2326adbfb85f3b4ecb490"
         }
     },
     "pre_install": [
