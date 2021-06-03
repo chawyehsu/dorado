@@ -1,19 +1,20 @@
 {
     "homepage": "https://swarm.ethereum.org/",
     "description": "A Swarm client implemented in Go",
-    "version": "0.6.0",
+    "version": "0.6.2",
     "license": "BSD-3-Clause",
     "suggest": {
         "sudo": "main/gsudo"
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ethersphere/bee/releases/download/v0.6.0/bee-windows-amd64.zip",
-            "hash": "7c127159b5ad7765d8acbfc2c34bd4629db77afefd9f180706b1140c59179d16"
+            "url": "https://github.com/ethersphere/bee/releases/download/v0.6.2/bee-windows-amd64.zip",
+            "hash": "c4ff152ea252708d28b780f39765ffd624a684bc8536c4f45e717195fb3e5284"
         }
     },
     "installer": {
         "script": [
+            "$beeConfTemplate = \"$dir\\packaging\\scoop\\bee.yaml\"",
             "$dataPersistDir = \"$persist_dir\\data\"",
             "# A GeneratePassword that is compatible with PowerShell 6+",
             "function GeneratePassword([int]$Length) {",
@@ -27,9 +28,9 @@
             "    }",
             "    return (-join $Return)",
             "}",
+            "Copy-Item -Path $beeConfTemplate -Destination \"$dir\\template.bee.yaml\" -Force",
             "if (!(Test-Path $dataPersistDir)) {",
             "    New-Item -Force -Path $dataPersistDir -ItemType Directory | Out-Null",
-            "    $beeConfTemplate = \"$dir\\packaging\\scoop\\bee.yaml\"",
             "    (Get-Content -Path $beeConfTemplate -Raw) -replace './bee.yaml',\"$dataPersistDir\\bee.yaml\" | Set-Content -Path $beeConfTemplate",
             "    (Get-Content -Path $beeConfTemplate -Raw) -replace './data',\"$dataPersistDir\\.bee\" | Set-Content -Path $beeConfTemplate",
             "    (Get-Content -Path $beeConfTemplate -Raw) -replace './password',\"$dataPersistDir\\password\" | Set-Content -Path $beeConfTemplate",
