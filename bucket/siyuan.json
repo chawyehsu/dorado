@@ -1,20 +1,20 @@
 {
     "homepage": "https://github.com/siyuan-note/siyuan",
     "description": "SiYuan is a Markdown Block-Reference and Bidirectional-Link note-taking application",
-    "version": "1.1.83",
+    "version": "1.2.0-beta1",
     "license": "Unknown",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/siyuan-note/siyuan/releases/download/v1.1.83/siyuan-1.1.83-win.exe#/dl.7z",
-            "hash": "5C2DC02AF26D2956C499C70BD942AAE0F1EF8240B48DA760937CE77194B5BA94",
+            "url": "https://github.com/siyuan-note/siyuan/releases/download/v1.2.0-beta1/siyuan-1.2.0-beta1-win.exe#/siyuan.7z",
+            "hash": "19981d941879ce25d21fe83b47cae457ad59c752c08610975b10cedb7b5afca0",
             "pre_install": [
                 "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
                 "Remove-Item \"$dir\\`$*\" -Recurse"
             ]
         },
         "32bit": {
-            "url": "https://github.com/siyuan-note/siyuan/releases/download/v1.1.83/siyuan-1.1.83-win32.exe#/dl.7z",
-            "hash": "FDE90C36001693A3B725115DEBC138D350A6BC5DA1005A092F8B3341F70E546C",
+            "url": "https://github.com/siyuan-note/siyuan/releases/download/v1.2.0-beta1/siyuan-1.2.0-beta1-win32.exe#/siyuan.7z",
+            "hash": "efaa399411e61c72a97a968f28449ccd326859a9df6a1e02eb0f34f5fbac33f9",
             "pre_install": [
                 "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-32.7z\" \"$dir\"",
                 "Remove-Item \"$dir\\`$*\" -Recurse"
@@ -27,14 +27,17 @@
             "思源笔记"
         ]
     ],
-    "checkver": "github",
+    "checkver": {
+        "url": "https://github.com/siyuan-note/siyuan/releases/latest",
+        "regex": "/tree/v([\\d.]+(-[\\w.]+)?)"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/siyuan-note/siyuan/releases/download/v$version/siyuan-$version-win.exe#/dl.7z"
+                "url": "https://github.com/siyuan-note/siyuan/releases/download/v$version/siyuan-$version-win.exe#/siyuan.7z"
             },
             "32bit": {
-                "url": "https://github.com/siyuan-note/siyuan/releases/download/v$version/siyuan-$version-win32.exe#/dl.7z"
+                "url": "https://github.com/siyuan-note/siyuan/releases/download/v$version/siyuan-$version-win32.exe#/siyuan.7z"
             }
         }
     }
