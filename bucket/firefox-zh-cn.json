@@ -5,12 +5,12 @@
     "license": "MPL-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://download.mozilla.org/?product=firefox-89.0-SSL&os=win64&lang=zh-CN#/firefox.7z",
-            "hash": "72acc9c80e3c5ed45ce039d54440135b90e6aded32591a3052105c105cba62bb"
+            "url": "https://download-installer.cdn.mozilla.net/pub/firefox/releases/89.0/win64/zh-CN/Firefox%20Setup%2089.0.exe#/firefox.7z",
+            "hash": "sha512:9991ddf368130a1bbaa0582deb052558e8b6fed1be3aaa84739a3572dd2319dae1008c267cd912a36a55d42d4784074355b8ad341f92e1444aaa47edd304b20b"
         },
         "32bit": {
-            "url": "https://download.mozilla.org/?product=firefox-89.0-SSL&os=win&lang=zh-CN#/firefox.7z",
-            "hash": "40e988c7ddcc33af5b01449a501d165ae9f6bf1713ad3deea89438ed45741817"
+            "url": "https://download-installer.cdn.mozilla.net/pub/firefox/releases/89.0/win32/zh-CN/Firefox%20Setup%2089.0.exe#/firefox.7z",
+            "hash": "sha512:32e1de7c40740974e1398c0e59a03a53627f56bffa8171abc22926c3a00aecd340d82bd5324908ef9fe6391ae03b765ba8b55b1c053d167ada769a3c7fe6d7d0"
         }
     },
     "extract_dir": "core",
