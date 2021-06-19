@@ -16,7 +16,7 @@
     ],
     "checkver": {
         "url": "https://uu.163.com/baike/js/dl.js",
-        "regex": "'dlUrl': 'https://uu.gdl.netease.com/(?<build>\\d+)/UU-(?<ver>[\\d.]+).exe'",
+        "regex": "'dlUrl': 'https://.*?.gdl.netease.com/(?<build>\\d+)/UU-(?<ver>[\\d.]+).exe'",
         "replace": "${ver}.${build}"
     },
     "autoupdate": {
