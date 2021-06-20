@@ -23,17 +23,7 @@
         ]
     ],
     "checkver": {
-        "script": "return (iwr -useb 'https://api.shuax.com/v2/edge' -Method POST).Content",
-        "jsonpath": "$.dev.x64.version"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://edge-dl.kidonng.workers.dev/https://api.shuax.com/v2/download/edge/dev/x64#/MicrosoftEdge-Dev-$version-x86_x64.7z"
-            },
-            "32bit": {
-                "url": "https://edge-dl.kidonng.workers.dev/https://api.shuax.com/v2/download/edge/dev/x86#/MicrosoftEdge-Dev-$version-x86.7z"
-            }
-        }
+        "url": "https://edgeupdates.microsoft.com/api/products",
+        "jsonpath": "$[?(@.Product == 'Dev')].Releases[?(@.Platform == 'Windows' && @.Architecture == 'x64')].ProductVersion"
     }
 }
