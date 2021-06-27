@@ -5,15 +5,15 @@
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/zhongyang219/TrafficMonitor/releases/download/V1.80.3/TrafficMonitor_V1.80.3_x64.zip",
-            "hash": "47b12bf9b918949c6c2acb3ac211712a94b0b1cb94746db8572f4180bf9e0b42"
+            "url": "https://github.com/zhongyang219/TrafficMonitor/releases/download/V1.80.3/TrafficMonitor_V1.80.3_x64_without_temperature.zip",
+            "hash": "77f0257ea9c48161b9c1fc5ed4ee17a04b867119be3ed7220e05da773d53c193"
         },
         "32bit": {
-            "url": "https://github.com/zhongyang219/TrafficMonitor/releases/download/V1.80.3/TrafficMonitor_V1.80.3_x86.zip",
-            "hash": "038391f4f423eb10a961e7b181a70f25f6f61e2864ff88746c77416d8b0dd659"
+            "url": "https://github.com/zhongyang219/TrafficMonitor/releases/download/V1.80.3/TrafficMonitor_V1.80.3_x86_without_temperature.zip",
+            "hash": "10f21b86ff440d570007478b220882a9743d2771089cecf60027aa165badc4a3"
         }
     },
-    "extract_dir": "TrafficMonitor",
+    "extract_dir": "TrafficMonitor-without-temperature",
     "installer": {
         "script": [
             "function CreateFile([String] $file, [String] $content = $null) {",
@@ -54,10 +54,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/zhongyang219/TrafficMonitor/releases/download/V$version/TrafficMonitor_V$version_x64.zip"
+                "url": "https://github.com/zhongyang219/TrafficMonitor/releases/download/V$version/TrafficMonitor_V$version_x64_without_temperature.zip"
             },
             "32bit": {
-                "url": "https://github.com/zhongyang219/TrafficMonitor/releases/download/V$version/TrafficMonitor_V$version_x86.zip"
+                "url": "https://github.com/zhongyang219/TrafficMonitor/releases/download/V$version/TrafficMonitor_V$version_x86_without_temperature.zip"
             }
         }
     }
