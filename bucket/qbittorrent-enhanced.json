@@ -4,16 +4,16 @@
         "identifier": "GPL-2.0-only",
         "url": "https://github.com/qbittorrent/qBittorrent/blob/master/COPYING"
     },
-    "version": "4.3.5.10",
+    "version": "4.3.6.10",
     "description": "qBittorrent BitTorrent client with anti-leech enhancement.",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/c0re100/qBittorrent-Enhanced-Edition/releases/download/release-4.3.5.10/qbittorrent_4.3.5.10_x64_setup.exe#/dl.7z",
-            "hash": "bfcc8374d9a14cc7fce1470bd7611ab3cb6d2fc3543c29462427f9ea601e7d1a"
+            "url": "https://github.com/c0re100/qBittorrent-Enhanced-Edition/releases/download/release-4.3.6.10/qbittorrent_4.3.6.10_x64_setup.exe#/dl.7z",
+            "hash": "254ecc20fe480003c8053bed997b7901958aa7f53127cdd4e718628bb0175d48"
         },
         "32bit": {
-            "url": "https://github.com/c0re100/qBittorrent-Enhanced-Edition/releases/download/release-4.3.5.10/qbittorrent_4.3.5.10_setup.exe#/dl.7z",
-            "hash": "121f7b31003d5a8cfb3fca965f4f608d0a895f841f8434d3ba241dabd09fd1d8"
+            "url": "https://github.com/c0re100/qBittorrent-Enhanced-Edition/releases/download/release-4.3.6.10/qbittorrent_4.3.6.10_setup.exe#/dl.7z",
+            "hash": "878886148139c2d7d195d52c92b4e282359663be68af7a2e750988926a3d0dfd"
         }
     },
     "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\" -Force -Recurse",
