@@ -1,8 +1,9 @@
 export default async function handleRequest(request) {
   const sp = new URLSearchParams(new URL(request.url).search)
-  if (sp.has('channel')) {
+  if (sp.has('arch') && sp.has('channel')) {
+    const arch = sp.get('arch')
     const channel = sp.get('channel')
-    const UPSTREAM_API = `https://scoop-services.azurewebsites.net/edge-backend?channel=${channel}`
+    const UPSTREAM_API = `https://scoop-services.azurewebsites.net/edge-backend?arch=${arch}&channel=${channel}`
     const response = await fetch(UPSTREAM_API, {
       method: "GET",
       headers: {
@@ -37,7 +38,7 @@ export default async function handleRequest(request) {
   }
 
   return new Response(
-    JSON.stringify({ message: "channel parameter is required" }),
+    JSON.stringify({ message: "arch and channel parameter are required" }),
     {
       status: 500,
       headers: {

@@ -21,8 +21,8 @@ async function handleRequest(request) {
       actions: [
         "/appxqq",
         "/appxqq?dl",
-        "/edge?channel=",
-        "/edge?channel=&dl"
+        "/edge?arch=&channel=",
+        "/edge?arch=&channel=&dl"
       ]
     }),
     {
