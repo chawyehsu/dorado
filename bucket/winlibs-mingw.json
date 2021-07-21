@@ -1,17 +1,17 @@
 {
     "homepage": "https://winlibs.com/",
     "description": "winlibs standalone build of GCC compiler and MinGW-w64",
-    "version": "11.1.0-12.0.0-9.0.0-r2",
+    "version": "11.1.0-12.0.0-9.0.0-r3",
     "license": "GPL-2.0-only,BSD-2-Clause,Apache-2.0,ZPL-2.1",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/brechtsanders/winlibs_mingw/releases/download/11.1.0-12.0.0-9.0.0-r2/winlibs-x86_64-posix-seh-gcc-11.1.0-mingw-w64-9.0.0-r2.7z",
-            "hash": "4d22e9a0cbc702b2341f5538cdc3d62f3c306171ce149d4bc55cc3c622f59c63",
+            "url": "https://github.com/brechtsanders/winlibs_mingw/releases/download/11.1.0-12.0.0-9.0.0-r3/winlibs-x86_64-posix-seh-gcc-11.1.0-mingw-w64-9.0.0-r3.7z",
+            "hash": "eedc0481e8cd4a4a82ffc91baec4412347d0bd4baaf546315be7a9b113316843",
             "extract_dir": "mingw64"
         },
         "32bit": {
-            "url": "https://github.com/brechtsanders/winlibs_mingw/releases/download/11.1.0-12.0.0-9.0.0-r2/winlibs-i686-posix-dwarf-gcc-11.1.0-mingw-w64-9.0.0-r2.7z",
-            "hash": "8e4164b3192f83cbb2a327250154f740797b3fd89d3442b9859932f05b3c63ae",
+            "url": "https://github.com/brechtsanders/winlibs_mingw/releases/download/11.1.0-12.0.0-9.0.0-r3/winlibs-i686-posix-dwarf-gcc-11.1.0-mingw-w64-9.0.0-r3.7z",
+            "hash": "8b95bafc945ae99d57c17958fcbc14a57960177cb5a99e077defe0319c5bb89b",
             "extract_dir": "mingw32"
         }
     },
