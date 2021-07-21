@@ -1,16 +1,16 @@
 {
     "homepage": "https://www.microsoft.com/en-us/edge",
     "description": "The chromium based Microsoft Edge browser",
-    "version": "91.0.864.48",
+    "version": "91.0.864.71",
     "license": "Freeware",
     "architecture": {
         "64bit": {
-            "url": "https://edge-dl.kidonng.workers.dev/https://api.shuax.com/v2/download/edge/stable/x64#/MicrosoftEdge-91.0.864.48-x86_x64.7z",
-            "hash": "22e11aa7c55db855129900b2e3822141231cd6b14b7531fb9a4985c651f55b80"
+            "url": "https://dorado-api.deno.dev/edge?arch=64&channel=stable&dl#/MicrosoftEdge-91.0.864.71-x64.7z",
+            "hash": "fa833063f6a02f8b272000872759fd3751f7b773ff1d25e145ce8a42f71a4acd"
         },
         "32bit": {
-            "url": "https://edge-dl.kidonng.workers.dev/https://api.shuax.com/v2/download/edge/stable/x86#/MicrosoftEdge-91.0.864.48-x86.7z",
-            "hash": "cbdcb6ce173b2f89513207e6f250519ccd5e82ad6a7fb62c1a1465a330cdc0b4"
+            "url": "https://dorado-api.deno.dev/edge?arch=86&channel=stable&dl#/MicrosoftEdge-91.0.864.71-x86.7z",
+            "hash": "f62db5399388a5fb22e3679f615c2516cfbd6e757afeae05d1f85ee50434a078"
         }
     },
     "installer": {
@@ -25,5 +25,23 @@
     "checkver": {
         "url": "https://edgeupdates.microsoft.com/api/products",
         "jsonpath": "$[?(@.Product == 'Stable')].Releases[?(@.Platform == 'Windows' && @.Architecture == 'x64')].ProductVersion"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://dorado-api.deno.dev/edge?arch=64&channel=stable&dl#/MicrosoftEdge-$version-x64.7z",
+                "hash": {
+                    "url": "https://dorado-api.deno.dev/edge?arch=64&channel=stable",
+                    "jsonpath": "$.Hashes.Sha256"
+                }
+            },
+            "32bit": {
+                "url": "https://dorado-api.deno.dev/edge?arch=86&channel=stable&dl#/MicrosoftEdge-$version-x86.7z",
+                "hash": {
+                    "url": "https://dorado-api.deno.dev/edge?arch=86&channel=stable",
+                    "jsonpath": "$.Hashes.Sha256"
+                }
+            }
+        }
     }
 }
