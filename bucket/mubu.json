@@ -1,10 +1,10 @@
 {
     "homepage": "https://mubu.com/apps",
     "description": "Mubu - Mind mapping tool",
-    "version": "3.5.0",
+    "version": "3.6.0",
     "license": "Freeware",
-    "url": "http://lf6-ttcdn-tos.pstatp.com/obj/mubu-img/client/Mubu-3.5.0.exe#/dl.7z",
-    "hash": "ae18a0dc7a0dcbe31ff75d121f16bc6c0674b8ca6073b2ef36e2bd56e75ed22b",
+    "url": "https://lf1-ttcdn-tos.pstatp.com/obj/mubu-assets/client/Mubu-3.6.0.exe#/mubu-3.6.0.7z",
+    "hash": "1449077fca34c50d7628bd2e6044a8274c23ad3da9c9c4c9a65dd876102cbf75",
     "extract_dir": "$PLUGINSDIR",
     "installer": {
         "script": [
@@ -24,7 +24,7 @@
         "regex": "client/Mubu-([\\d.]+).exe"
     },
     "autoupdate": {
-        "url": "http://lf6-ttcdn-tos.pstatp.com/obj/mubu-img/client/Mubu-$version.exe#/dl.7z"
+        "url": "https://lf1-ttcdn-tos.pstatp.com/obj/mubu-assets/client/Mubu-$version.exe#/mubu-$version.7z"
     },
     "notes": "Your Mubu data are stored in '%APPDATA%\\Mubu'"
 }
