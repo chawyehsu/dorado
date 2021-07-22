@@ -5,8 +5,8 @@
     "license": "Proprietary",
     "architecture": {
         "64bit": {
-            "url": "https://jidu.wrste.com/jiduocr/%E6%9E%81%E5%BA%A6%E6%89%AB%E6%8F%8F%202.3.4%20x64%20.7z#/jiduscan_v2.3.4.7z",
-            "hash": "b7ce3bfcc60e28d22e32a6a5224d15a7111411104226d159e61dfa56c12e30f2"
+            "url": "https://download.wrste.com/jidusm/jidusm2.3.4x64.7z",
+            "hash": "95d99c25cbafc84af23dbdb2f4305164c42142a56fa8e2bd66559d50652e1a98"
         }
     },
     "shortcuts": [
@@ -16,12 +16,12 @@
         ]
     ],
     "checkver": {
-        "regex": "/jiduocr/%E6%9E%81%E5%BA%A6%E6%89%AB%E6%8F%8F%20([\\d.]+)%20x64%20.7z"
+        "regex": "/jidusm/jidusm([\\d.]+)x64.7z"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://jidu.wrste.com/jiduocr/%E6%9E%81%E5%BA%A6%E6%89%AB%E6%8F%8F%20$version%20x64%20.7z#/jiduscan_v$version.7z"
+                "url": "https://download.wrste.com/jidusm/jidusm$versionx64.7z"
             }
         }
     }
