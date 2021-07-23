@@ -2,9 +2,9 @@
     "homepage": "https://altstore.io/",
     "description": "A home for apps that push the boundaries of iOS. No jailbreak required.",
     "license": "AGPL-3.0",
-    "version": "1.4.3",
+    "version": "1.4.6",
     "url": "https://f000.backblazeb2.com/file/altstore/altinstaller.zip",
-    "hash": "a0a98cdc61bbac11e176bcd07aa0e94b05600ca540ca653f7e4efc3eb352cad6",
+    "hash": "d0544a465d2b1fbe31fcf9a0cd4ca203af63828dbc0c3f48bfff5806e96a089c",
     "installer": {
         "script": [
             "if ([Environment]::OSVersion.Version.Major -ne \"10\") {",
@@ -31,3 +31,4 @@
         "Refer to https://altstore.io/faq/ for more inforamtion."
     ]
 }
+
