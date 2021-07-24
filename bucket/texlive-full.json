@@ -5,11 +5,11 @@
     "version": "2021",
     "url": "http://mirror.ctan.org/systems/texlive/Images/texlive2021.iso",
     "hash": "sha512:bad51ec47613cf295ed77472d10e517fe79e501f73ff918a1068f03ef43f4394ceb165051132bcbcb53a05650b77ea907f327c1799c38ae476ca38620aa7c1fe",
+    "extract_to": "installer",
     "installer": {
         "script": [
             "Write-Host 'Invoking TeX Live installer...' -ForegroundColor DarkCyan",
             "Write-Host 'This can take a few minutes to to a long time...' -ForegroundColor DarkYellow",
-            "Expand-7zipArchive -Path \"$dir\\$fname\" -DestinationPath \"$dir\\installer\" -Removal",
             "$env:TEXLIVE_INSTALL_PAPER='a4'",
             "$env:TEXLIVE_INSTALL_PREFIX=\"$dir\"",
             "$env:TEXLIVE_INSTALL_NO_CONTEXT_CACHE=1",
