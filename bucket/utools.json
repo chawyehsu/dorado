@@ -2,18 +2,18 @@
     "homepage": "https://u.tools/",
     "description": "Your productive tools set and launcher.",
     "license": "Unknown",
-    "version": "1.3.5",
+    "version": "2.1.0",
     "architecture": {
         "64bit": {
-            "url": "https://resource.u-tools.cn/currentversion/uTools-1.3.5.exe#/dl.7z",
-            "hash": "sha512:e1f79b0bd67f4e94f976e1e8d33bc021bb5b324b672c6f57dc34cfe775946d89c7a3d5437b6999047c6dc8f79ab823f0c38875d268b32cb93d3f99e3068bef4a",
+            "url": "https://resource.u-tools.cn/currentversion/uTools-2.1.0.exe#/dl.7z",
+            "hash": "sha512:d46cf74e3c6c0530370467536f6289de933ddf77c06f0bb288e9553ab0d80b88ad8d08fc3113bba6695f4b7beacf227df744ead822908e5388984c9b1315fdf5",
             "installer": {
                 "script": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR/app-64.7z\" \"$dir\""
             }
         },
         "32bit": {
-            "url": "https://resource.u-tools.cn/currentversion/uTools-1.3.5-ia32.exe#/dl.7z",
-            "hash": "sha512:9ec6e81cbb9392780a796f4fdc8ab62f4166cd47041cf42aa2d5038c252ebacd355ac8959bd3c58fdf3105b05bcf5fc14f7ef5cb8c2ed7f518797be4bd2e0e6c",
+            "url": "https://resource.u-tools.cn/currentversion/uTools-2.1.0-ia32.exe#/dl.7z",
+            "hash": "sha512:6f062225928e860969f2ee3e0fb621962e263c9f21afd518a58bdb2d2bd1f32e759a3fb50fb535d2c077fb338eca0e943a7de16498adac9a32e48fe7c35532a9",
             "installer": {
                 "script": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR/app-32.7z\" \"$dir\""
             }
@@ -26,12 +26,16 @@
             "uTools"
         ]
     ],
+    "checkver": {
+        "url": "https://resource.u-tools.cn/currentversion/latest.yml?",
+        "regex": "version: ([\\d.]+)"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {
                 "url": "https://resource.u-tools.cn/currentversion/uTools-$version.exe#/dl.7z",
                 "hash": {
-                    "url": "https://resource.u-tools.cn/currentversion/public.yml",
+                    "url": "https://resource.u-tools.cn/currentversion/latest.yml?",
                     "mode": "extract",
                     "regex": "(?sm)$version.exe.*?sha512: $base64"
                 }
@@ -39,7 +43,7 @@
             "32bit": {
                 "url": "https://resource.u-tools.cn/currentversion/uTools-$version-ia32.exe#/dl.7z",
                 "hash": {
-                    "url": "https://resource.u-tools.cn/currentversion/public-ia32.yml",
+                    "url": "https://resource.u-tools.cn/currentversion/latest-ia32.yml?",
                     "mode": "extract",
                     "regex": "(?sm)$version-ia32.exe.*?sha512: $base64"
                 }
