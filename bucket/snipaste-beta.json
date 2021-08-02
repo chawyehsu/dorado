@@ -1,16 +1,16 @@
 {
     "homepage": "https://www.snipaste.com/",
     "description": "A snipping tool, which allows you to pin the screenshot back onto the screen.",
-    "version": "2.6.3-Beta",
+    "version": "2.6.4-Beta",
     "license": "Proprietary",
     "architecture": {
         "64bit": {
-            "url": "https://bitbucket.org/liule/snipaste/downloads/Snipaste-2.6.3-Beta-x64.zip",
-            "hash": "sha1:cbc40a00821ade6fcafd26d2910a6c6986109f5b"
+            "url": "https://bitbucket.org/liule/snipaste/downloads/Snipaste-2.6.4-Beta-x64.zip",
+            "hash": "sha1:622cb5105cd01e84f6201d6ef11a23372d0498a7"
         },
         "32bit": {
-            "url": "https://bitbucket.org/liule/snipaste/downloads/Snipaste-2.6.3-Beta-x86.zip",
-            "hash": "sha1:12c4a2ad4a2f8a6fa3400f4c3121c846efaba6b2"
+            "url": "https://bitbucket.org/liule/snipaste/downloads/Snipaste-2.6.4-Beta-x86.zip",
+            "hash": "sha1:fa9739a45bedb386d4ec32ed78bc5905680a121a"
         }
     },
     "pre_install": "if (!(Test-Path \"$persist_dir\\config.ini\")) { Set-Content \"$dir\\config.ini\" '' -Encoding ASCII }",
