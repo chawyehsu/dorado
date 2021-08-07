@@ -1,0 +1,23 @@
+{
+    "homepage": "https://platform.wps.cn",
+    "description": "Complete office suite",
+    "version": "11.1.0.10700",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://www.wps.com/eula"
+    },
+    "url": "https://official-package.wpscdn.cn/wps/download/W.P.S.10700.12012.2019.exe#/wps.7z",
+    "hash": "27d8e9b2152fc3172e41e6ff0c826bee9781e4e4d7ebe5bb7ec08abda8a380c0",
+    "extract_dir": "$_11_",
+    "pre_install": [
+        "Expand-7zipArchive \"$dir\\`$EXEFILE\" -Switches '-t#'",
+        "Remove-Item \"$dir\\*\" -Exclude '4.7z' -Recurse",
+        "Expand-7zipArchive \"$dir\\4.7z\" -ExtractDir 'office6' -Removal"
+    ],
+    "shortcuts": [
+        [
+            "wpsoffice.exe",
+            "WPS Office"
+        ]
+    ]
+}
