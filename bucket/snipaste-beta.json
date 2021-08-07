@@ -13,17 +13,36 @@
             "hash": "1d6e00fce95f3d0f9e520a53c1e6854df12cbc3736e2b16e2c716575f2bedde2"
         }
     },
-    "pre_install": "if (!(Test-Path \"$persist_dir\\config.ini\")) { Set-Content \"$dir\\config.ini\" '' -Encoding ASCII }",
-    "persist": [
-        "history",
-        "config.ini"
-    ],
-    "bin": "Snipaste.exe",
+    "installer": {
+        "script": [
+            "function CreateFile([String] $file, [String] $content = $null) {",
+            "    if (!(Test-Path \"$persist_dir\\$file\")) {",
+            "        New-Item -Force -Path \"$persist_dir\\$file\" -ItemType file -Value $content | Out-Null",
+            "    }",
+            "}",
+            "CreateFile 'config.ini'"
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "function BackupFile([String] $file) {",
+            "    if (!(Test-Path \"$persist_dir\\$file\")) {",
+            "        Remove-Item \"$persist_dir\\$file\" -Force",
+            "    }",
+            "    Move-Item \"$dir\\$file\" \"$persist_dir\" -Force",
+            "}",
+            "BackupFile 'config.ini'"
+        ]
+    },
     "shortcuts": [
         [
             "Snipaste.exe",
             "Snipaste"
         ]
+    ],
+    "persist": [
+        "history",
+        "config.ini"
     ],
     "suggest": {
         "vcredist": "extras/vcredist2015"
