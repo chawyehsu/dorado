@@ -1,12 +1,12 @@
 {
-    "version": "1.7.16",
+    "version": "1.7.17",
     "homepage": "https://app.mycrypto.com/",
     "description": "An open-source tool that allows you to manage your Ethereum accounts privately and securely.",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/MyCryptoHQ/MyCrypto/releases/download/1.7.16/windows_1.7.16_MyCrypto.exe#/mycrypto-setup.zip",
-            "hash": "877e520fc08c9a7eacc21dd68c14df8a24e37efa99865584b9a3a3151dc340bd",
+            "url": "https://github.com/MyCryptoHQ/MyCrypto/releases/download/1.7.17/windows_1.7.17_MyCrypto.exe#/mycrypto-setup.zip",
+            "hash": "1f2b3380448e7c6517c9ddd0a6afef229442c43536d17ee9b41d8ed06116087c",
             "installer": {
                 "script": [
                     "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
@@ -15,8 +15,8 @@
             }
         },
         "32bit": {
-            "url": "https://github.com/MyCryptoHQ/MyCrypto/releases/download/1.7.16/windows_1.7.16_MyCrypto.exe#/mycrypto-setup.zip",
-            "hash": "877e520fc08c9a7eacc21dd68c14df8a24e37efa99865584b9a3a3151dc340bd",
+            "url": "https://github.com/MyCryptoHQ/MyCrypto/releases/download/1.7.17/windows_1.7.17_MyCrypto.exe#/mycrypto-setup.zip",
+            "hash": "1f2b3380448e7c6517c9ddd0a6afef229442c43536d17ee9b41d8ed06116087c",
             "installer": {
                 "script": [
                     "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
