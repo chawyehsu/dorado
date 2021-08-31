@@ -1,12 +1,12 @@
 {
     "homepage": "https://microapp.bytedance.com/",
     "description": "IDE for Bytedance Micro-App Development",
-    "version": "3.1.3",
+    "version": "3.1.4",
     "license": "Unknown",
     "architecture": {
         "64bit": {
-            "url": "https://sf3-ttcdn-tos.pstatp.com/obj/developer/ide/6545737/win32/%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-3.1.3.exe#/bytedanceide-3.1.3.7z",
-            "hash": "6d119d20cbe19de9ca99770270e5960c66eab0c1a99507b41ffc5218825dd0c1",
+            "url": "https://sf3-ttcdn-tos.pstatp.com/obj/developer/ide/6654990/win32/%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-3.1.4.exe#/bytedanceide-3.1.4.7z",
+            "hash": "3c4b7e4fae019975335d24774b3e0b3fc6be18ce7ad3ec69cb4830bad37afeb1",
             "installer": {
                 "script": [
                     "Remove-Item \"$dir\\*\" -Exclude \"app-64.7z\"",
