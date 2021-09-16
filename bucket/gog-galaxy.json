@@ -1,0 +1,43 @@
+{
+  "version": "2.0.25.2",
+  "description": "Connect GOG GALAXY 2.0 with multiple platforms and unite all your games and friends scattered across them in one powerful app (A game platform designed to connect all game platforms).",
+  "homepage": "https://www.gog.com/galaxy",
+  "license": {
+    "identifier": "Proprietary",
+    "url": "https://support.gog.com/hc/en-us/articles/212632089-User-Agreement"
+  },
+  "depends": "innounp",
+  "url": "https://content-system.gog.com/open_link/download?path=/open/galaxy/client/setup_galaxy_2.0.25.2.exe",
+  "hash": "md5:d09244d6ccb563da59ffd83767b50b2b",
+  "installer": {
+    "script": [
+      "$file = \"$dir\\$fname\"",
+      "Expand-InnoArchive -Path $file -ExtractDir '{%ALLUSERSPROFILE}' -DestinationPath $env:ALLUSERSPROFILE",
+      "Expand-InnoArchive -Path $file -Removal",
+      "if ( !(Test-Path $dir\\Games) ) { New-Item -Type Directory -Path $dir\\Games }"
+    ]
+  },
+  "uninstaller": {
+    "script": "Write-Host \"`nNote:`n------`nYou need to delete `$env:ALLUSERSPROFILE\\GOG.com yourself.`n\""
+  },
+  "persist": "Games",
+  "bin": "GalaxyClient.exe",
+  "shortcuts": [
+    [
+      "GalaxyClient.exe",
+      "GOG Galaxy"
+    ]
+  ],
+  "notes": "You can use <https://github.com/Mixaill/awesome-gog-galaxy> search plugins to connect to other platforms.",
+  "checkver": {
+    "url": "https://remote-config.gog.com/components/webinstaller?component_version=2.0.0",
+    "jsonpath": "$.content.windows.version"
+  },
+  "autoupdate": {
+    "url": "https://content-system.gog.com/open_link/download?path=/open/galaxy/client/setup_galaxy_$version.exe",
+    "hash": {
+      "url": "https://remote-config.gog.com/components/webinstaller?component_version=2.0.0",
+      "jsonpath": "$.content.windows.installerMd5"
+    }
+  }
+}
