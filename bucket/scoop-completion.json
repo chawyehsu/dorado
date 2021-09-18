@@ -1,16 +1,16 @@
 {
-    "homepage": "https://github.com/liuzijing97/scoop-completion/",
-    "description": "Scoop tab completion, work with powershell",
-    "version": "nightly",
+    "homepage": "https://github.com/Moeologist/scoop-completion",
     "license": "MIT",
-    "url": "https://github.com/liuzijing97/scoop-completion/archive/master.zip",
-    "extract_dir": "scoop-completion-master/src",
-    "psmodule": {
+    "version": "0.2.3",
+    "url": [
+		"https://raw.githubusercontent.com/Moeologist/scoop-completion/v0.2.3/src/scoop-completion.psm1",
+		"https://raw.githubusercontent.com/Moeologist/scoop-completion/v0.2.3/src/scoop-completion.psd1"
+	],
+	"hash": [
+		"0109e5b5f38c908a8c7b23be62665d1c673b920ba366d64c62c93a5eadea3d9f",
+		"8d777ec993fb27613c387c87db74f9d41e1793afd8c39c64fba8a1e77cc7772c"
+	],
+	"psmodule": {
         "name": "scoop-completion"
-    },
-    "post_install": "Import-Module $env:USERPROFILE\\scoop\\modules\\scoop-completion",
-    "notes": [
-        "To enable completion autoload, you need to add scoop-completion module to PowerShell $PROFILE by running:",
-        "Add-Content -Path $Profile -Value \"`nImport-Module $env:USERPROFILE\\scoop\\modules\\scoop-completion\""
-    ]
+    }
 }
