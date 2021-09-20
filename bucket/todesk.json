@@ -1,10 +1,10 @@
 {
     "homepage": "https://www.todesk.com/",
     "description": "A unlimited speed multifunctional remote control software",
-    "version": "3.3.0",
+    "version": "3.3.1",
     "license": "Proprietary",
     "url": "https://dl.todesk.com/windows/ToDesk_Setup.exe#/dl.7z",
-    "hash": "a45086d967355ff7659432414b36083fbb19cd07328ab1bc5c2c56e35574ce0f",
+    "hash": "ac9ab9e7131b299ac25a0fb8111c53cb8288681bb960b9ff5805ef502aec9941",
     "installer": {
         "script": [
             "Expand-7zipArchive \"$dir\\app.7z\" \"$dir\"",
