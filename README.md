@@ -25,15 +25,15 @@ Featured Apps
 
 | Manifest | Description |
 |----------|-------------|
-| llvm-mingw | [The](https://github.com/mstorsjo/llvm-mingw) LLVM/Clang/LLD based **mingw-w64** toolchain. (LLVM 12) |
+| llvm-mingw | [The](https://github.com/mstorsjo/llvm-mingw) LLVM/Clang/LLD based **mingw-w64** toolchain. (LLVM 13) |
 | miniconda3 | A version of Miniconda3 that dose not add the default venv into your PATH unless you activate it with `conda activate base` |
 | nuwen-mingw-gcc | **Minimalist** C/C++ compiler from STL's [MinGW Distro](https://nuwen.net/mingw.html). It's **NOT** a full **mingw-w64** package, has no make, no gdb. Just the *gcc* and *ld* for 'quick-start' use case. (GCC 9.2) |
 | nvm-windows | A fork of [nvm-windows](https://github.com/chawyehsu/nvm-windows), removed elevated permission, for non-admin scoop user |
 | trash | Move files and folders to recycle bin instead of directly `rm-rf` it, like `brew install trash` but for Windows |
 | rustup-np | The `non-portable` version of Rustup, keeping .rustup and .cargo in its original location: `$env:USERPROFILE` |
 | volta | You don't need nvm-windows anymore |
-| winlibs-mingw | A full **mingw-w64** toolchain built and distributed by [winlibs](http://winlibs.com/). (GCC 11.1) |
-| winlibs-mingw-snapshot | A snapshot version of winlibs-mingw. (GCC 11.0.1 snapshot) |
+| winlibs-mingw | A full **mingw-w64** toolchain built and distributed by [winlibs](http://winlibs.com/). (GCC 11.x) |
+| winlibs-mingw-snapshot | A snapshot version of winlibs-mingw. (GCC 11.x snapshot) |
 
 Question
 --------
