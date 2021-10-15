@@ -1,6 +1,6 @@
 {
     "version": "0.65",
-    "description": "A menu bar application using mpv as DLNA Media Renderer. You can push videos, pictures or musics from your mobile phone to your computer.",
+    "description": "A menu bar application using mpv as DLNA Media Renderer",
     "homepage": "https://xfangfang.github.io/Macast",
     "license": "GPL-3.0-only",
     "architecture": {
@@ -21,7 +21,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/zodiacon/RegExp/releases/download/v$version/Macast-Windows-v$version.exe#/Macast.exe"
+                "url": "https://github.com/xfangfang/Macast/releases/download/v$version/Macast-Windows-v$version.exe#/Macast.exe"
             }
         }
     }
