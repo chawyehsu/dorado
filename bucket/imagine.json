@@ -1,0 +1,34 @@
+{
+    "version": "0.6.1",
+    "description": "🖼️ PNG/JPEG optimization app for macOS, Windows and Linux.",
+    "homepage": "https://github.com/meowtec/Imagine",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/meowtec/Imagine/releases/download/v0.6.1/Imagine-Setup-0.6.1.exe#/dl.7z",
+            "hash": "sha512:9f04ef938559d61846677191304034bfe1a0729f665f046b6100e0036fb167d8a6a05a9581114e6c60c38e48324e4ce50e8489e07307e466052ae5271ff0c3fc",
+            "pre_install": [
+                "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
+                "Remove-Item \"$dir\\`$*\" -Recurse"
+            ]
+        }
+    },
+    "shortcuts": [
+        [
+            "Imagine.exe",
+            "Imagine"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/meowtec/Imagine/releases/download/v$version/Imagine-Setup-$version.exe#/dl.7z"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/latest.yml",
+            "regex": "sha512:\\s+$base64"
+        }
+    }
+}
