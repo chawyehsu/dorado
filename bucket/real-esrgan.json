@@ -14,7 +14,7 @@
     ],
     "checkver": {
         "github": "https://github.com/xinntao/Real-ESRGAN",
-        "regex": "v(?<version>[\\d.]+)/realesrgan-ncnn-vulkan-(?<date>[\\d]{8})-windows"
+        "regex": "v([\\d.]+)/realesrgan-ncnn-vulkan-(?<date>[\\d]{8})-windows"
     },
     "autoupdate": {
         "architecture": {
