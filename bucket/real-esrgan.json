@@ -13,12 +13,13 @@
         "realesrgan-ncnn-vulkan.exe"
     ],
     "checkver": {
-        "github": "https://github.com/xinntao/Real-ESRGAN"
+        "github": "https://github.com/xinntao/Real-ESRGAN",
+        "regex": "v(?<version>[\\d.]+)/realesrgan-ncnn-vulkan-(?<date>[\\d]{8})-windows"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/xinntao/Real-ESRGAN/releases/download/v$version/realesrgan-ncnn-vulkan-\\d+-windows.zip"
+                "url": "https://github.com/xinntao/Real-ESRGAN/releases/download/v$version/realesrgan-ncnn-vulkan-$matchDate-windows.zip"
             }
         }
     }
