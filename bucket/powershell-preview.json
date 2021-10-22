@@ -1,16 +1,16 @@
 {
     "homepage": "https://github.com/PowerShell/PowerShell/",
     "description": "PowerShell (Preview), the cross-platform task automation and configuration management framework/tool.",
-    "version": "7.2.0-preview.10",
+    "version": "7.2.0-rc.1",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.2.0-preview.10/PowerShell-7.2.0-preview.10-win-x64.zip",
-            "hash": "e6bba210ddc7ca7202e8334270609c021ee1db024bd0f740a4bc60569e56b6d8"
+            "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.2.0-rc.1/PowerShell-7.2.0-rc.1-win-x64.zip",
+            "hash": "1e59141281a5c6646c1bb0ca2458ae4f4aa7de78ad959617a8bd9c5a17dfaa14"
         },
         "32bit": {
-            "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.2.0-preview.10/PowerShell-7.2.0-preview.10-win-x86.zip",
-            "hash": "1b40173b5734b49d7c7595692b01d6ad1b12aa259302600cf17c35bbdda6b0e4"
+            "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.2.0-rc.1/PowerShell-7.2.0-rc.1-win-x86.zip",
+            "hash": "34d52b02ca38d2ffda1c9ff964676f0461b8c49b1dbd0dfdb43d40101f07898e"
         }
     },
     "bin": "pwsh.exe",
