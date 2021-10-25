@@ -20,13 +20,13 @@
         ]
     ],
     "checkver": {
-        "url": "https://g.alicdn.com/aliyun-drive-fe/aliyun-drive-desktop-version/0.0.14/win32/ia32/latest.yml",
+        "url": "https://g.alicdn.com/aliyun-drive-fe/aliyun-drive-desktop-version/0.0.15/win32/ia32/latest.yml",
         "re": "version: ([\\d.]+)"
     },
     "autoupdate": {
         "url": "https://tongyongxiezuo.oss-cn-zhangjiakou.aliyuncs.com/desktop/aDrive-desktop/$version/update/win32/ia32/aDrive-$version.exe#/aDrive-$version.7z",
         "hash": {
-            "url": "https://g.alicdn.com/aliyun-drive-fe/aliyun-drive-desktop-version/0.0.14/win32/ia32/latest.yml",
+            "url": "https://g.alicdn.com/aliyun-drive-fe/aliyun-drive-desktop-version/0.0.15/win32/ia32/latest.yml",
             "mode": "extract",
             "regex": "sha512: $base64"
         }
