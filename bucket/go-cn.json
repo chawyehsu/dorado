@@ -34,7 +34,7 @@
     "persist": "global_path",
     "checkver": {
         "url": "https://golang.google.cn/dl/",
-        "regex": "go([\\d.]+)\\."
+        "regex": "go([\\d.]+)\\.windows-"
     },
     "autoupdate": {
         "architecture": {
