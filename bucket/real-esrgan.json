@@ -1,0 +1,26 @@
+{
+    "version": "0.2.2.4",
+    "description": "General Image Restoration. Training Real-World Blind Super-Resolution with Pure Synthetic Data.",
+    "homepage": "https://github.com/xinntao/Real-ESRGAN",
+    "license": "BSD-3-Clause",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.2.4/realesrgan-ncnn-vulkan-20210901-windows.zip",
+            "hash": "4c3a9220c2b376b72910bdb936552d018ed4b33742599a0383b1261623970dd3"
+        }
+    },
+    "bin": [
+        "realesrgan-ncnn-vulkan.exe"
+    ],
+    "checkver": {
+        "github": "https://github.com/xinntao/Real-ESRGAN",
+        "regex": "v([\\d.]+)/realesrgan-ncnn-vulkan-(?<date>[\\d]{8})-windows"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/xinntao/Real-ESRGAN/releases/download/v$version/realesrgan-ncnn-vulkan-$matchDate-windows.zip"
+            }
+        }
+    }
+}
