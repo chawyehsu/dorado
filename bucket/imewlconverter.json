@@ -1,0 +1,20 @@
+{
+    "version": "2.9.0",
+    "description": "Input Method Editor word library converter",
+    "homepage": "https://github.com/studyzy/imewlconverter",
+    "license": "GPL-3.0-only",
+    "url": "https://github.com/studyzy/imewlconverter/releases/download/v2.9.0/imewlconverter_Windows.zip",
+    "hash": "96e4c2ffdec86cb61983435378fcf102e01f6a27e24b6f365f623f5fdf9a890a",
+    "shortcuts": [
+        [
+            "深蓝词库转换.exe",
+            "深蓝词库转换"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/studyzy/imewlconverter"
+    },
+    "autoupdate": {
+        "url": "https://github.com/studyzy/imewlconverter/releases/download/v$version/imewlconverter_Windows.zip"
+    }
+}
