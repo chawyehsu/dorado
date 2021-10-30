@@ -1,16 +1,16 @@
 {
-    "version": "72.0b11",
+    "version": "94.0b9",
     "description": "Developer builds of Firefox: the popular open source web browser.",
     "homepage": "https://www.mozilla.org/zh-CN/firefox/developer/",
     "license": "MPL-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://download-installer.cdn.mozilla.net/pub/devedition/releases/72.0b11/win64/zh-CN/Firefox%20Setup%2072.0b11.exe#/firefox-developer.7z",
-            "hash": "sha512:f2e4faaa6542cb01f6f024158912a86be801052d940d6d0a2f072ff2d8d07a7c6c3235fcbb467ae4c67fcc0b1ea46b0bdf4ce5b9766c07cdf9836503716d393a"
+            "url": "https://download-installer.cdn.mozilla.net/pub/devedition/releases/94.0b9/win64/zh-CN/Firefox%20Setup%2094.0b9.exe#/firefox-developer.7z",
+            "hash": "sha512:bf8b93302944b17e3af3c1b084b2b31c720bfb9ad075e8d87535f195ff373f9c3cd2030df9a927022d5fb804854940c548d6d49daabfaf2a783f7b94c20cf7f5"
         },
         "32bit": {
-            "url": "https://download-installer.cdn.mozilla.net/pub/devedition/releases/72.0b11/win32/zh-CN/Firefox%20Setup%2072.0b11.exe#/firefox-developer.7z",
-            "hash": "sha512:1e13dd4ebee57c029f713bb0e56b964a7a379f1091cace78af997781da8240cb2a56f89d4db0929bc644475e9575d0cddf3ea893dab3aa3ba5900a5a31f3fe3b"
+            "url": "https://download-installer.cdn.mozilla.net/pub/devedition/releases/94.0b9/win32/zh-CN/Firefox%20Setup%2094.0b9.exe#/firefox-developer.7z",
+            "hash": "sha512:82c6bc2b58295eca1e1e303ba0cc823018f298a3b75e4bd460ca55a352bcd90dc09164ae23b363e9f085c88c8f502a7d9193c2cd7892d49d90180bc439e0108c"
         }
     },
     "extract_dir": "core",
@@ -27,7 +27,7 @@
         ]
     ],
     "checkver": {
-        "url": "https://aus5.mozilla.org/update/6/Firefox/60.0/_/WINNT_x86_64-msvc-x64/zh-CN/aurora/_/_/_/_/update.xml",
+        "url": "https://aus5.mozilla.org/update/6/Firefox/93.0/_/WINNT_x86_64-msvc-x64/zh-CN/aurora/_/_/_/_/update.xml",
         "xpath": "/updates/update/patch/@URL",
         "regex": "devedition-([\\db.]+)-"
     },
