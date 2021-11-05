@@ -1,0 +1,35 @@
+{
+    "homepage": "https://winlibs.com/",
+    "description": "winlibs standalone build of GCC compiler and MinGW-w64",
+    "version": "11.2.0-13.0.0-9.0.0-ucrt-r2",
+    "license": "GPL-2.0-only,BSD-2-Clause,Apache-2.0,ZPL-2.1",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/brechtsanders/winlibs_mingw/releases/download/11.2.0-13.0.0-9.0.0-ucrt-r2/winlibs-x86_64-posix-seh-gcc-11.2.0-llvm-13.0.0-mingw-w64ucrt-9.0.0-r2.7z",
+            "hash": "E7E60632989FDEC8F1AC237838A204BFBE127E5781156DF1B2BBAAFA2DB7B76B",
+            "extract_dir": "mingw64"
+        },
+        "32bit": {
+            "url": "https://github.com/brechtsanders/winlibs_mingw/releases/download/11.2.0-13.0.0-9.0.0-ucrt-r2/winlibs-i686-posix-dwarf-gcc-11.2.0-llvm-13.0.0-mingw-w64ucrt-9.0.0-r2.7z",
+            "hash": "2479257A1D3C36550F2658B80D89D3197B8EBE8C143059B910834A379C9E0AE3",
+            "extract_dir": "mingw32"
+        }
+    },
+    "env_add_path": "bin",
+    "checkver": {
+        "regex": "/download/(?<version>((?<gccVersion>11[\\d.]+)(-(?<llvmVersion>[\\d.]+))?-(?<mingwVersion>[\\d.]+)-ucrt(-(?<revision>[\\w]+))?))"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/brechtsanders/winlibs_mingw/releases/download/$version/winlibs-x86_64-posix-seh-gcc-$matchGccversion-llvm-$matchLlvmVersion-mingw-w64ucrt-$matchMingwversion-$matchRevision.7z"
+            },
+            "32bit": {
+                "url": "https://github.com/brechtsanders/winlibs_mingw/releases/download/$version/winlibs-i686-posix-dwarf-gcc-$matchGccversion-llvm-$matchLlvmVersion-mingw-w64ucrt-$matchMingwversion-$matchRevision.7z"
+            }
+        },
+        "hash": {
+            "url": "$url.sha256"
+        }
+    }
+}
