@@ -1,7 +1,7 @@
 {
     "homepage": "https://www.todesk.com/",
     "description": "A unlimited speed multifunctional remote control software",
-    "version": ".",
+    "version": "3.3.3",
     "license": "Proprietary",
     "url": "https://dl.todesk.com/windows/ToDesk_Setup.exe#/dl.7z",
     "hash": "83a8fd190e5ba3dfbc75994b8e11cd53a98a8774edfd1003ad883af271e5413c",
@@ -25,8 +25,8 @@
         "config.ini"
     ],
     "checkver": {
-        "url": "https://www.todesk.com/download.html",
-        "regex": "(?s)Windows.*?版本.*?([\\d.]+)"
+        "url": "https://update.todesk.com/windows/uplog.html",
+        "regex": ">([\\d.]+)</div>"
     },
     "autoupdate": {
         "url": "https://dl.todesk.com/windows/ToDesk_Setup.exe#/dl.7z"
