@@ -34,8 +34,10 @@
 | trash | 将待删除文件移至回收站，而不是直接 `rm-rf`，类似于 macOS 的 trash |
 | volta | 你可能不再需要 nvm-windows |
 | wechat | 你可能需要的微信 PC 客户端 |
-| winlibs-mingw | [winlibs](http://winlibs.com/) 编译的完整 **mingw-w64** 工具链发行版 (GCC 11.1) |
-| winlibs-mingw-snapshot | [winlibs](http://winlibs.com/) 编译的完整 **mingw-w64** 工具链发行版的快照版本 (GCC 11.0.1 snapshot) |
+| winlibs-mingw | [winlibs](http://winlibs.com/) 编译的完整 MSVCRT 运行库 **mingw-w64** 工具链发行版 (GCC 11.1) |
+| winlibs-mingw-ucrt | [winlibs](http://winlibs.com/) 编译的完整 UCRT 运行库 **mingw-w64** 工具链发行版 (GCC 11.1) |
+| winlibs-mingw-llvm-ucrt | 包含 LLVM 13 支持的 *winlibs-mingw-ucrt* |
+| winlibs-mingw-snapshot  | [winlibs](http://winlibs.com/) 编译的完整 MSVCRT 运行库 **mingw-w64** 工具链发行版的快照版本 (GCC 11.0.1 snapshot) |
 
 更多待你发现~
 
