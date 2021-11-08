@@ -9,9 +9,7 @@
             "hash": "4c3a9220c2b376b72910bdb936552d018ed4b33742599a0383b1261623970dd3"
         }
     },
-    "bin": [
-        "realesrgan-ncnn-vulkan.exe"
-    ],
+    "bin": "realesrgan-ncnn-vulkan.exe",
     "checkver": {
         "github": "https://github.com/xinntao/Real-ESRGAN",
         "regex": "v([\\d.]+)/realesrgan-ncnn-vulkan-(?<date>[\\d]{8})-windows"
