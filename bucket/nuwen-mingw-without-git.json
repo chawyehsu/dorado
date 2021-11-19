@@ -1,27 +1,11 @@
 {
     "homepage": "https://nuwen.net/mingw.html",
     "description": "nuwen MinGW Distro by Stephan T. Lavavej (GNU toolchain variant, without git)",
-    "version": "17.1",
+    "version": "18.0",
     "license": "GPL-2.0-only",
-    "url": "https://nuwen.net/files/mingw/mingw-17.1-without-git.exe#/dl.7z",
-    "hash": "ef5b9ab51776661f338642c386700be6acec2feb0091e9448af7daced0538ec8",
+    "url": "https://nuwen.net/files/mingw/mingw-18.0-without-git.exe#/dl.7z",
+    "hash": "532aa9fc377fa8cb3985fc2fadf61da43f1c50bcc464719b8274dc2b2590d688",
     "extract_dir": "MinGW",
-    "pre_install": [
-        "$helperScript = $(Join-Path $(Find-BucketDirectory -Root -Name dorado) scripts/nuwen-mingw-without-git/env_helper.ps1)",
-        "Copy-Item -Path $helperScript -Destination $dir"
-    ],
-    "uninstaller": {
-        "script": [
-            "# Ensure mingw environment variables have been unset.",
-            "mingw off | Out-Null"
-        ]
-    },
-    "bin": [
-        [
-            "env_helper.ps1",
-            "mingw"
-        ]
-    ],
     "shortcuts": [
         [
             "open_distro_window.bat",
@@ -33,6 +17,5 @@
     },
     "autoupdate": {
         "url": "https://nuwen.net/files/mingw/mingw-$version-without-git.exe#/dl.7z"
-    },
-    "notes": "Type 'mingw' for help. (This can only work in PowerShell, use the shortcut instead if you're in cmd.exe)"
+    }
 }
