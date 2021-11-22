@@ -55,7 +55,7 @@
         "Conda envs and pkgs are not persisted by Scoop, we advice to setup `envs_dirs` to use '~/.conda/envs'.",
         "  https://conda.io/projects/conda/en/latest/user-guide/configuration/use-condarc.html#specify-environment-directories-envs-dirs",
         "",
-        "To enable conda tab-completion autoload, you need to add follow code to PowerShell $PROFILE:",
+        "To enable conda tab-completion autoload, run code below to add the shell hook:",
         "Add-Content -Path $Profile -Value \"`n(& conda \"shell.powershell\" \"hook\") | Out-String | Invoke-Expression"
     ]
 }
