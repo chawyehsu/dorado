@@ -11,12 +11,8 @@
             "DownKyi"
         ]
     ],
-    "persist": [
-        "Config"
-    ],
-    "checkver": {
-        "github": "https://github.com/leiurayer/downkyi"
-    },
+    "persist": "Config",
+    "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/leiurayer/downkyi/releases/download/v$version/DownKyi-$version.zip"
     }
