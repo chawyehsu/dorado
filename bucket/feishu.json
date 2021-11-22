@@ -1,6 +1,6 @@
 {
     "homepage": "https://www.feishu.cn/",
-    "description": "Download the Feishu apps so you can connect with teammates anytime and anywhere",
+    "description": "Connect with teammates anytime and anywhere",
     "license": {
         "identifier": "EULA",
         "url": "https://www.feishu.cn/en/terms"
@@ -8,10 +8,11 @@
     "version": "5.0.9",
     "url": "https://sf3-cn.feishucdn.com/obj/ee-appcenter/bc9c57/Feishu-win32_ia32-5.0.9-signed.exe#/feishu-5.0.9.7z",
     "hash": "md5:bc9c5707fe0b51e3a87ccc8f79b82330",
+    "extract_to": "app",
     "shortcuts": [
         [
-            "Feishu.exe",
-            "飞书"
+            "app/Feishu.exe",
+            "Feishu"
         ]
     ],
     "checkver": {
@@ -25,5 +26,5 @@
             "jsonpath": "$.versions.Windows.hash"
         }
     },
-    "notes": "We don't persist your FeiShu data, they are still storaged in '%APPDATA%\\Lark'."
+    "notes": "Runtime data are stored in '%APPDATA%\\LarkShell', and are not persisted by Scoop."
 }
