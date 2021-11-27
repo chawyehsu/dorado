@@ -1,4 +1,4 @@
-export default async function handleRequest(request) {
+export default async function handleRequest(request: Request): Promise<Response> {
   const UPSTREAM_API = 'https://store.rg-adguard.net/api/GetFiles'
   // `9nhlgf0zwc5s` refers to:
   // https://www.microsoft.com/zh-cn/p/qq%E6%A1%8C%E9%9D%A2%E7%89%88/9nhlgf0zwc5s

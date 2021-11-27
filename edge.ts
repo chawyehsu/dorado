@@ -1,4 +1,4 @@
-export default async function handleRequest(request) {
+export default async function handleRequest(request: Request): Promise<Response> {
   const sp = new URLSearchParams(new URL(request.url).search)
   if (sp.has('arch') && sp.has('channel')) {
     const arch = sp.get('arch')
