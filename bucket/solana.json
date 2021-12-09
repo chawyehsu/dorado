@@ -1,0 +1,31 @@
+{
+    "version": "1.8.5",
+    "description": "Web-Scale Blockchain for fast, secure, scalable, decentralized apps and marketplaces",
+    "homepage": "https://solana.com/",
+    "license": "Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/solana-labs/solana/releases/download/v1.8.5/solana-release-x86_64-pc-windows-msvc.tar.bz2",
+            "hash": "e35b97d97682c8befc28bf5b69b13b7c76d7c70daa208b29855ff8887a240e8c",
+            "extract_dir": "solana-release"
+        }
+    },
+    "bin": [
+        "bin\\solana-keygen.exe",
+        "bin\\solana-stake-accounts.exe",
+        "bin\\solana-test-validator.exe",
+        "bin\\solana-tokens.exe",
+        "bin\\solana.exe",
+        "bin\\spl-token.exe"
+    ],
+    "checkver": {
+        "github": "https://github.com/solana-labs/solana"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/solana-labs/solana/releases/download/v$version/solana-release-x86_64-pc-windows-msvc.tar.bz2"
+            }
+        }
+    }
+}
