@@ -1,12 +1,12 @@
 {
-    "version": "2.3.4",
+    "version": "2.3.5",
     "description": "Jidu Scan is an OCR tool that support mathpix",
     "homepage": "https://jidusm.wrste.com/",
     "license": "Proprietary",
     "architecture": {
         "64bit": {
-            "url": "https://download.wrste.com/jidusm/jidusm2.3.4x64.7z",
-            "hash": "95d99c25cbafc84af23dbdb2f4305164c42142a56fa8e2bd66559d50652e1a98"
+            "url": "https://jidu.wrste.com/jiduocr/%E6%9E%81%E5%BA%A6%E6%89%AB%E6%8F%8F%202.3.5%20x64%20.7z",
+            "hash": "e1906c934d216e264d3c734d22d8d371abfbe6ac148cdadd427ba8270202365c"
         }
     },
     "shortcuts": [
@@ -16,12 +16,12 @@
         ]
     ],
     "checkver": {
-        "regex": "/jidusm/jidusm([\\d.]+)x64.7z"
+        "regex": "/jiduocr/%E6%9E%81%E5%BA%A6%E6%89%AB%E6%8F%8F%20([\\d.]+)%20x64%20.7z"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://download.wrste.com/jidusm/jidusm$versionx64.7z"
+                "url": "https://jidu.wrste.com/jiduocr/%E6%9E%81%E5%BA%A6%E6%89%AB%E6%8F%8F%20$version%20x64%20.7z"
             }
         }
     }
