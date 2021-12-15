@@ -1,10 +1,11 @@
 {
     "homepage": "https://github.com/HMBSbige/NatTypeTester",
     "description": "Test tool for testing Nat network type",
-    "version": "3.4",
+    "version": "6.0.0",
     "license": "MIT",
-    "url": "https://github.com/HMBSbige/NatTypeTester/releases/download/3.4/NatTypeTester.exe",
-    "hash": "fe3ccff6c0edb4aa937583af5bb2222216a642762d9a4c802315e775fc41d8b4",
+    "url": "https://github.com/HMBSbige/NatTypeTester/releases/download/6.0.0/NatTypeTester-generic-6.0.0.7z",
+    "hash": "6d2343fd384106b7304366dd0c20b863f11d7b38387babd9abb120078d2aa671",
+    "extract_dir": "NatTypeTester",
     "shortcuts": [
         [
             "NatTypeTester.exe",
@@ -13,6 +14,11 @@
     ],
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/HMBSbige/NatTypeTester/releases/download/$version/NatTypeTester.exe"
+        "url": "https://github.com/HMBSbige/NatTypeTester/releases/download/$version/NatTypeTester-generic-$version.7z",
+        "hash": {
+            "url": "https://github.com/HMBSbige/NatTypeTester/releases/tag/$version",
+            "mode": "extract",
+            "regex": "(?sm)$version.7z.*?$sha256"
+        }
     }
 }
