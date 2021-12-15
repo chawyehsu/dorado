@@ -1,16 +1,16 @@
 {
     "homepage": "https://github.com/zhongyang219/TrafficMonitor",
     "description": "TrafficMonitor is a network monitoring suspension window software in Windows platform.",
-    "version": "1.81",
+    "version": "1.82",
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/zhongyang219/TrafficMonitor/releases/download/V1.81/TrafficMonitor_V1.81_x64_without_temperature.zip",
-            "hash": "040dff8e731f5e824ca069799c38a0528d9c8ace855769ca8c593303ae6d99c0"
+            "url": "https://github.com/zhongyang219/TrafficMonitor/releases/download/V1.82/TrafficMonitor_V1.82_x64_Lite.zip",
+            "hash": "a4880bafed7beeb32cc4eb7ec648478576c9cc4bd9bba056f1b56cc1f7770c89"
         },
         "32bit": {
-            "url": "https://github.com/zhongyang219/TrafficMonitor/releases/download/V1.81/TrafficMonitor_V1.81_x86_without_temperature.zip",
-            "hash": "eb313fae587758aea953edb0ed77679b19607fe1b591183951d5c651a4062f93"
+            "url": "https://github.com/zhongyang219/TrafficMonitor/releases/download/V1.82/TrafficMonitor_V1.82_x86_Lite.zip",
+            "hash": "713b12677aac3a69b181668f18c2bf859c6e53bfa6245b400dd2799abe0966d2"
         }
     },
     "extract_dir": "TrafficMonitor",
@@ -54,10 +54,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/zhongyang219/TrafficMonitor/releases/download/V$version/TrafficMonitor_V$version_x64_without_temperature.zip"
+                "url": "https://github.com/zhongyang219/TrafficMonitor/releases/download/V$version/TrafficMonitor_V$version_x64_Lite.zip"
             },
             "32bit": {
-                "url": "https://github.com/zhongyang219/TrafficMonitor/releases/download/V$version/TrafficMonitor_V$version_x86_without_temperature.zip"
+                "url": "https://github.com/zhongyang219/TrafficMonitor/releases/download/V$version/TrafficMonitor_V$version_x86_Lite.zip"
             }
         }
     }
