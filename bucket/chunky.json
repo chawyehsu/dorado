@@ -1,10 +1,10 @@
 {
-    "homepage": "https://chunky.llbit.se/",
+    "homepage": "https://chunky-dev.github.io/docs/",
     "description": "Chunky is a Minecraft mapping and rendering tool (for Minecraft 1.13 or newer)",
     "license": "GPL-3.0-only",
-    "version": "2.3.0",
+    "version": "2.4.1",
     "url": "https://chunkyupdate.lemaik.de/ChunkyLauncher.jar#/chunky.jar",
-    "hash": "a49567265aecf4fb2432d741c6d12b1585ec32aaf9f102529812e3323df13f78",
+    "hash": "319b910974e1bf7a79e4bcae365f283d1865bac52c1bf47cf11d6cb0ca6856f1",
     "suggest": {
         "JDK": [
             "java/liberica-full",
@@ -13,8 +13,7 @@
     },
     "bin": "chunky.jar",
     "checkver": {
-        "url": "https://chunky.llbit.se/chunky2.html",
-        "re": "> Chunky ([\\d.]+)"
+        "github": "https://github.com/chunky-dev/chunky/"
     },
     "autoupdate": {
         "url": "https://chunkyupdate.lemaik.de/ChunkyLauncher.jar#/chunky.jar"
