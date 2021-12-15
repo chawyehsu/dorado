@@ -2,9 +2,9 @@
     "homepage": "https://multimc.org/",
     "description": "A custom launcher for Minecraft that allows you to easily manage multiple installations of Minecraft at once",
     "license": "Apache-2.0",
-    "version": "0.6.13",
-    "url": "https://github.com/MultiMC/MultiMC5/releases/download/0.6.13/mmc-stable-win32.zip",
-    "hash": "27573d52e735ec1030a35a723eacb211513757930a99f8178a65d38407008a33",
+    "version": "0.6.14",
+    "url": "https://files.multimc.org/downloads/mmc-stable-win32.zip",
+    "hash": "d82f57db7c6816151835dcb24a41018bf91565747ec0ab986f69328d1a0724e0",
     "extract_dir": "MultiMC",
     "installer": {
         "script": [
@@ -53,9 +53,9 @@
         "MCEdit": "dorado/mcedit"
     },
     "checkver": {
-        "github": "https://github.com/MultiMC/MultiMC5"
+        "github": "https://github.com/MultiMC/Launcher"
     },
     "autoupdate": {
-        "url": "https://github.com/MultiMC/MultiMC5/releases/download/$version/mmc-stable-win32.zip"
+        "url": "https://files.multimc.org/downloads/mmc-stable-win32.zip"
     }
 }
