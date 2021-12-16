@@ -1,10 +1,14 @@
 {
-    "homepage": "https://swift.org/",
+    "homepage": "https://www.swift.org/",
     "description": "The Swift Programming Language",
     "license": "Apache-2.0",
-    "version": "5.5.1",
-    "url": "https://swift.org/builds/swift-5.5.1-release/windows10/swift-5.5.1-RELEASE/swift-5.5.1-RELEASE-windows10.exe",
-    "hash": "e0a8678a57ef49e5fc9aa8fe51e5b00879359764f48940e99ae314f16a1679f3",
+    "version": "5.5.2",
+    "architecture": {
+        "64bit": {
+            "url": "https://download.swift.org/swift-5.5.2-release/windows10/swift-5.5.2-RELEASE/swift-5.5.2-RELEASE-windows10.exe",
+            "hash": "a664c4d616aed3e6d4d180ec64d1195270d08dbbc1d1eea1f9ca01f1598ebebe"
+        }
+    },
     "depends": "dark",
     "installer": {
         "script": [
@@ -23,10 +27,14 @@
         "DEVELOPER_DIR": "$dir\\Library\\Developer"
     },
     "checkver": {
-        "url": "https://swift.org/download/#releases",
+        "url": "https://dorado-api.deno.dev/swift-tmp",
         "regex": "(?sm)releases\">Releases</h2>.*?Swift ([\\d.]+)"
     },
     "autoupdate": {
-        "url": "https://swift.org/builds/swift-$version-release/windows10/swift-$version-RELEASE/swift-$version-RELEASE-windows10.exe"
+        "architecture": {
+            "64bit": {
+                "url": "https://download.swift.org/swift-$version-release/windows10/swift-$version-RELEASE/swift-$version-RELEASE-windows10.exe"
+            }
+        }
     }
 }
