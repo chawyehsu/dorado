@@ -25,7 +25,7 @@
 | 软件 | 简介 |
 |----------|-------------|
 | hmcl | 极受欢迎的国产 Minecraft 启动器 |
-| llvm-mingw | [一个](https://github.com/mstorsjo/llvm-mingw) 基于 LLVM/Clang/LLD 的 **mingw-w64** 工具链 (LLVM 12) |
+| llvm-mingw | [一个](https://github.com/mstorsjo/llvm-mingw) 基于 LLVM/Clang/LLD 的 **mingw-w64** 工具链 (LLVM 13) |
 | msys2-cn | 专为国人安装使用而配置的 MSYS2，全自动无人值守安装即用 |
 | neteasemusic | 网易云音乐客户端 |
 | nuwen-mingw-gcc | 来自微软职工 STL 的极简 C/C++ 编译器，源自 [MinGW Distro](https://nuwen.net/mingw.html), 快速使用 GCC 的最佳选择 (GCC GCC 11.x) |
@@ -34,10 +34,10 @@
 | trash | 将待删除文件移至回收站，而不是直接 `rm-rf`，类似于 macOS 的 trash |
 | volta | 你可能不再需要 nvm-windows |
 | wechat | 你可能需要的微信 PC 客户端 |
-| winlibs-mingw | [winlibs](http://winlibs.com/) 编译的完整 MSVCRT 运行库 **mingw-w64** 工具链发行版 (GCC 11.1) |
-| winlibs-mingw-ucrt | [winlibs](http://winlibs.com/) 编译的完整 UCRT 运行库 **mingw-w64** 工具链发行版 (GCC 11.1) |
+| winlibs-mingw-msvcrt | [winlibs](http://winlibs.com/) 编译的完整 MSVCRT 运行库 **mingw-w64** 工具链发行版 (GCC 11.x) |
+| winlibs-mingw-ucrt | [winlibs](http://winlibs.com/) 编译的完整 UCRT 运行库 **mingw-w64** 工具链发行版 (GCC 11.x) |
 | winlibs-mingw-llvm-ucrt | 包含 LLVM 13 支持的 *winlibs-mingw-ucrt* |
-| winlibs-mingw-snapshot  | [winlibs](http://winlibs.com/) 编译的完整 MSVCRT 运行库 **mingw-w64** 工具链发行版的快照版本 (GCC 11.0.1 snapshot) |
+| winlibs-mingw-snapshot-\[msvcrt\|ucrt\] | [winlibs](http://winlibs.com/) **mingw-w64** 工具链发行版的快照版本 |
 
 更多待你发现~
 
