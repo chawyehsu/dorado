@@ -1,10 +1,14 @@
 {
-    "homepage": "https://swift.org/",
+    "homepage": "https://www.swift.org/",
     "description": "The Swift Programming Language",
     "license": "Apache-2.0",
-    "version": "snapshot-2021-11-20-a",
-    "url": "https://swift.org/builds/development/windows10/swift-DEVELOPMENT-SNAPSHOT-2021-11-20-a/swift-DEVELOPMENT-SNAPSHOT-2021-11-20-a-windows10.exe",
-    "hash": "5c4d54188ab586b6eaea27a3ebbe21ad4e5d21292456ef3813878c4d101ea34f",
+    "version": "snapshot-2021-12-06-a",
+    "architecture": {
+        "64bit": {
+            "url": "https://download.swift.org/development/windows10/swift-DEVELOPMENT-SNAPSHOT-2021-12-06-a/swift-DEVELOPMENT-SNAPSHOT-2021-12-06-a-windows10.exe",
+            "hash": "3d4b3638d4706913228d0a5a093c70cb0459f29d0efb0063127131e970f82b05"
+        }
+    },
     "depends": "dark",
     "installer": {
         "script": [
@@ -23,11 +27,15 @@
         "DEVELOPER_DIR": "$dir\\Library\\Developer"
     },
     "checkver": {
-        "url": "https://swift.org/download/#snapshots",
+        "url": "https://dorado-api.deno.dev/swift-tmp",
         "regex": "swift-DEVELOPMENT-SNAPSHOT-(?<build>[\\w\\-]+)-windows10.exe",
         "replace": "snapshot-${build}"
     },
     "autoupdate": {
-        "url": "https://swift.org/builds/development/windows10/swift-DEVELOPMENT-SNAPSHOT-$matchBuild/swift-DEVELOPMENT-SNAPSHOT-$matchBuild-windows10.exe"
+        "architecture": {
+            "64bit": {
+                "url": "https://download.swift.org/development/windows10/swift-DEVELOPMENT-SNAPSHOT-$matchBuild/swift-DEVELOPMENT-SNAPSHOT-$matchBuild-windows10.exe"
+            }
+        }
     }
 }
