@@ -2,9 +2,15 @@ import { serve } from "https://deno.land/std@0.114.0/http/server.ts";
 import handlerAppxqq from "./appxqq.ts"
 import handlerEdge from "./edge.ts"
 import handleTianyiEcloud from "./tianyi-ecloud.ts"
+import handleSwift from "./swift.ts"
 
 async function handler(request: Request): Promise<Response> {
   const { pathname } = new URL(request.url)
+
+  // swift (temporary fix)
+  if (pathname === '/swift-tmp') {
+    return await handleSwift(request)
+  }
 
   // appxqq
   if (pathname === '/appxqq') {
