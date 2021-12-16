@@ -12,7 +12,10 @@
             "noMeiryoUI"
         ]
     ],
-    "checkver": "github",
+    "checkver": {
+        "github": "https://github.com/Tatsu-syo/noMeiryoUI",
+        "regex": "/TAG-([\\d.]+)/"
+    },
     "autoupdate": {
         "url": "https://github.com/Tatsu-syo/noMeiryoUI/releases/download/TAG-$version/noMeiryoUI$cleanVersion.zip"
     }
