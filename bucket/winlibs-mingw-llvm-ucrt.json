@@ -1,6 +1,6 @@
 {
     "homepage": "https://winlibs.com/",
-    "description": "winlibs standalone build of GCC compiler and MinGW-w64 with llvm and UCRT",
+    "description": "winlibs standalone build of GCC compiler and MinGW-w64 with LLVM and UCRT",
     "version": "11.2.0-13.0.0-9.0.0-ucrt-r2",
     "license": "GPL-2.0-only,BSD-2-Clause,Apache-2.0,ZPL-2.1",
     "architecture": {
@@ -17,7 +17,7 @@
     },
     "env_add_path": "bin",
     "checkver": {
-        "regex": "/download/(?<version>((?<gccVersion>11[\\d.]+)-(?<llvmVersion>[\\d.]+)-(?<mingwVersion>[\\d.]+)-ucrt(-(?<revision>[\\w]+))?))"
+        "regex": "/download/(?<version>((?<gccVersion>11[\\d.]+)-(?<llvmVersion>[\\d.]+)-(?<mingwVersion>[\\d.]+)-ucrt-(?<revision>[\\w]+)))"
     },
     "autoupdate": {
         "architecture": {
