@@ -1,0 +1,36 @@
+{
+    "homepage": "https://librewolf.net/",
+    "description": "A fork of Firefox, focused on privacy, security and freedom.",
+    "license": "MPL-2.0",
+    "version": "95.0.1",
+    "architecture": {
+        "64bit": {
+            "url": "https://gitlab.com/librewolf-community/browser/windows/uploads/4d0727a2dcdb80beba39b2ee3a04769a/librewolf-95.0.1.en-US.win64.zip",
+            "hash": "c590be6659356d4357121cd559de199cf309b2ab743dd36562ef534b4d71eed0",
+            "extract_dir": "librewolf-95.0.1"
+        }
+    },
+    "shortcuts": [
+        [
+            "librewolf-portable.exe",
+            "LibreWolf"
+        ]
+    ],
+    "persist": "Profiles",
+    "checkver": {
+        "url": "https://gitlab.com/api/v4/projects/13852981/releases",
+        "regex": "(?sm)/windows/uploads/(?<ziphash>[\\w]{32})/librewolf-([\\d.]+).en-US.win64.zip.*?/windows/uploads/(?<shasumhash>[\\w]{32})/sha256sums.txt"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gitlab.com/librewolf-community/browser/windows/uploads/$matchZiphash/librewolf-$version.en-US.win64.zip",
+                "extract_dir": "librewolf-$version"
+            }
+        },
+        "hash": {
+            "url": "https://gitlab.com/librewolf-community/browser/windows/uploads/$matchShasumhash/sha256sums.txt",
+            "mode": "extract"
+        }
+    }
+}
