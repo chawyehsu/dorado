@@ -3,7 +3,7 @@
     "description": "A powered Minecraft launcher that supports a lot of features.",
     "license": "GPL-3.0-only",
     "version": "3.5.2",
-    "url": "http://ci.huangyuhui.net/job/HMCL/2/artifact/HMCL/build/libs/HMCL-3.5.2.exe#/hmcl.exe",
+    "url": "http://ci.huangyuhui.net/job/HMCL-stable/2/artifact/HMCL/build/libs/HMCL-3.5.2.exe#/hmcl.exe",
     "hash": "sha1:4b30eddeb5f4b5431662e4974d3c8e071556e3c0",
     "bin": "hmcl.exe",
     "shortcuts": [
@@ -35,7 +35,7 @@
         "jsonpath": "$.version"
     },
     "autoupdate": {
-        "url": "http://ci.huangyuhui.net/job/HMCL/$patchVersion/artifact/HMCL/build/libs/HMCL-$version.exe#/hmcl.exe",
+        "url": "http://ci.huangyuhui.net/job/HMCL-stable/$patchVersion/artifact/HMCL/build/libs/HMCL-$version.exe#/hmcl.exe",
         "hash": {
             "url": "https://hmcl.huangyuhui.net/api/update_link?channel=stable&download_link=true",
             "jsonpath": "$.exesha1"
