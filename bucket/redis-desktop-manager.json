@@ -4,7 +4,7 @@
     "license": "GPL-3.0-only",
     "version": "2021.10",
     "url": "https://github.com/lework/RedisDesktopManager-Windows/releases/download/2021.10/rdm-2021.10.zip",
-    "hash": "e176b41165624371e7aac97fa9920d1df59e51fa0648a9dc0ecd1482593a8c7a",
+    "hash": "b2c2e12aca09c7fb4e42059cbc43aaaeee077bbe4c00c0316efdf6617d6adbac",
     "installer": {
         "script": [
             "Get-ChildItem \"$dir\\rdm-*.exe\" | Rename-Item -NewName \"$dir\\installer.exe\"",
