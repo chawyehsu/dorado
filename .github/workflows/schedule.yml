@@ -1,5 +1,6 @@
 name: Excavator
 on:
+  workflow_dispatch:
   schedule:
   - cron: '1 0 * * *'
 jobs:
