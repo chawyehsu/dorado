@@ -5,7 +5,7 @@
     "version": "2.5.5.6688",
     "url": "https://lf3-faceucdn-tos.pstatp.com/obj/faceu-packages/Jianying_pro_2_5_5_6688_jianyingpro_0.exe#/jianyingpro.7z",
     "hash": "828bf71e21e39454120d39f6557e228a1d06211ef1954b0baf28f05724b2185e",
-    "extract_dir": "JYPacket",
+    "extract_dir": "JYPacket/2.5.5.6688",
     "shortcuts": [
         [
             "JianyingPro.exe",
@@ -18,6 +18,7 @@
         "replace": "${major}.${minor}.${patch}.${build}"
     },
     "autoupdate": {
-        "url": "https://lf3-faceucdn-tos.pstatp.com/obj/faceu-packages/Jianying_pro_$underscoreVersion_jianyingpro_0.exe#/jianyingpro.7z"
+        "url": "https://lf3-faceucdn-tos.pstatp.com/obj/faceu-packages/Jianying_pro_$underscoreVersion_jianyingpro_0.exe#/jianyingpro.7z",
+        "extract_dir": "JYPacket/$version"
     }
 }
