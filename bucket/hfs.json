@@ -3,8 +3,8 @@
     "description": "HFS is a free, one single executable file Http File Server software.",
     "license": "GPL-2.0-only",
     "version": "2.3m",
-    "url": "http://www.rejetto.com/hfs/hfs.exe",
-    "hash": "e678899d7ea9702184167b56655f91a69f8a0bdc9df65612762252c053c2cd7c",
+    "url": "https://downloads.sourceforge.net/project/hfs/HFS/2.3m/hfs2.3m.zip",
+    "hash": "sha1:adec3861661cba9d04c214223aaa078b4f4d35dd",
     "bin": "hfs.exe",
     "shortcuts": [
         [
@@ -17,6 +17,6 @@
         "regex": "(?sm)Latest version: <b>([\\w\\d.]+)"
     },
     "autoupdate": {
-        "url": "http://www.rejetto.com/hfs/hfs.exe"
+        "url": "https://downloads.sourceforge.net/project/hfs/HFS/$version/hfs$version.zip"
     }
 }
