@@ -17,14 +17,19 @@
     "bin": [
         [
             "firefox.exe",
-            "firefox-beta"
+            "firefox-beta",
+            "-profile \"$dir\\profile\""
         ]
     ],
     "shortcuts": [
         [
             "firefox.exe",
-            "Firefox Beta"
+            "Firefox Beta",
+            "-profile \"$dir\\profile\""
         ]
+    ],
+    "persist": [
+        "profile"
     ],
     "checkver": {
         "url": "https://aus5.mozilla.org/update/6/Firefox/60.0/_/WINNT_x86_64-msvc-x64/zh-CN/beta/_/_/_/_/update.xml",
