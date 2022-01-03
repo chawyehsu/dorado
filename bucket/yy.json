@@ -1,13 +1,13 @@
 {
     "homepage": "https://www.yy.com/yy8/",
     "description": "The official client of YY, a Chinese video-based social network.",
-    "version": "9.0.0.2",
+    "version": "9.1.0.1",
     "license": {
         "identifier": "EULA",
         "url": "https://zc.yy.com/license.html"
     },
-    "url": "https://yydl.duowan.com/4/setup/YYSetup-9.0.0.2-zh-CN.exe#/dl.7z",
-    "hash": "4e335cd361e928933efd2dfcaf8ae5f303a912fd03a192547a3bb17a0cf6f8d2",
+    "url": "https://yydl.duowan.com/4/setup/YYSetup-9.1.0.1-zh-CN.exe#/dl.7z",
+    "hash": "e54a64e1cdabe012414393d7cadcfbc4637d806e24f9da770d7f7b83e33a1e61",
     "extract_dir": "InstallDir",
     "shortcuts": [
         [
@@ -15,10 +15,6 @@
             "YY语音"
         ]
     ],
-    "checkver": {
-        "url": "https://www.yy.com/web/pcyy_download/",
-        "regex": "YYSetup-([\\d.]+)-zh-CN.exe"
-    },
     "autoupdate": {
         "url": "https://yydl.duowan.com/4/setup/YYSetup-$version-zh-CN.exe#/dl.7z"
     }
