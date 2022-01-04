@@ -1,16 +1,16 @@
 {
-    "version": "97.0a1.20220102213625",
+    "version": "97.0a1.20220103092929",
     "description": "Nightly builds of Firefox: the popular open source web browser.",
     "homepage": "https://www.mozilla.org/zh-CN/firefox/nightly/",
     "license": "MPL-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://archive.mozilla.org/pub/firefox/nightly/2022/01/2022-01-02-21-36-25-mozilla-central-l10n/firefox-97.0a1.zh-CN.win64.installer.exe#/firefox.7z",
-            "hash": "sha512:6345c99251fba11476733066f1dbaa4a1869f131b166287dde9ea051982ea4ced192b791a0159d5bb3a0d8bac971cc6168b2c2771ccf1d32a95a082b81f8296c"
+            "url": "https://archive.mozilla.org/pub/firefox/nightly/2022/01/2022-01-03-09-29-29-mozilla-central-l10n/firefox-97.0a1.zh-CN.win64.installer.exe#/firefox.7z",
+            "hash": "sha512:085131b29512aab15bfcb3e0b39228eb40b2fb146fe528443f2e490093d2cf055982601cd0c3c1a7440c8d671542a8e51baa56a41b3946f80887afdba6cc6fa9"
         },
         "32bit": {
-            "url": "https://archive.mozilla.org/pub/firefox/nightly/2022/01/2022-01-02-21-36-25-mozilla-central-l10n/firefox-97.0a1.zh-CN.win32.installer.exe#/firefox.7z",
-            "hash": "sha512:c6fa7be23ca84bba57e4a97a59ccc1cc5144e60cf1552a7d81a42bd516e6cd5455dfb5adaaae5f0bcb609a6525b0ec05e2c2ce0453a50a9dcf46e1e07c5b9476"
+            "url": "https://archive.mozilla.org/pub/firefox/nightly/2022/01/2022-01-03-09-29-29-mozilla-central-l10n/firefox-97.0a1.zh-CN.win32.installer.exe#/firefox.7z",
+            "hash": "sha512:6ef082beaee013acb0d1243cfc063aaee129d3a3d5bf6e25181b7d7167b6c44c6ffa0d487e1a25d6c8f1ffb064b3c8500da0bd6becb8e229ab3e21da9492ac79"
         }
     },
     "extract_dir": "core",
@@ -28,9 +28,7 @@
             "-profile \"$dir\\profile\""
         ]
     ],
-    "persist": [
-        "profile"
-    ],
+    "persist": "profile",
     "checkver": {
         "url": "https://aus5.mozilla.org/update/6/Firefox/60.0/_/WINNT_x86_64-msvc-x64/zh-CN/nightly/_/_/_/_/update.xml",
         "regex": "appVersion=\"([\\w.]+)\".*?buildID=\"((?<yyyy>\\d{4})(?<mm>\\d{2})(?<dd>\\d{2})(?<hr>\\d{2})(?<mi>\\d{2})(?<se>\\d{2}))",
