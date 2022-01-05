@@ -1,20 +1,20 @@
 {
     "homepage": "https://github.com/siyuan-note/siyuan",
     "description": "SiYuan is a Markdown Block-Reference and Bidirectional-Link note-taking application",
-    "version": "1.6.1",
+    "version": "1.6.2",
     "license": "Unknown",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/siyuan-note/siyuan/releases/download/v1.6.1/siyuan-1.6.1-win.exe#/siyuan.7z",
-            "hash": "8c00c6ec640fb1742f52916b08ea3f7a068fa35c166a9e81d9c2044fe32f0b08",
+            "url": "https://github.com/siyuan-note/siyuan/releases/download/v1.6.2/siyuan-1.6.2-win.exe#/siyuan.7z",
+            "hash": "0ccf649c8fd8d9d4f3295fd32e30d894b14c57d1350b0f78bfa0d7aa5b0f42a5",
             "pre_install": [
                 "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
                 "Remove-Item \"$dir\\`$*\" -Recurse"
             ]
         },
         "32bit": {
-            "url": "https://github.com/siyuan-note/siyuan/releases/download/v1.6.1/siyuan-1.6.1-win32.exe#/siyuan.7z",
-            "hash": "4fd69dd4b7b23a073659c36008b242bc26552046c482220e1896be950a14a677",
+            "url": "https://github.com/siyuan-note/siyuan/releases/download/v1.6.2/siyuan-1.6.2-win32.exe#/siyuan.7z",
+            "hash": "98a91de495fed8981178221115460bc0dcf261492d53e061bda01711aa56f448",
             "pre_install": [
                 "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-32.7z\" \"$dir\"",
                 "Remove-Item \"$dir\\`$*\" -Recurse"
