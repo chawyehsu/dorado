@@ -4,16 +4,16 @@
         "identifier": "GPL-2.0-only",
         "url": "https://github.com/qbittorrent/qBittorrent/blob/master/COPYING"
     },
-    "version": "4.3.9.10",
+    "version": "4.4.0.10",
     "description": "qBittorrent BitTorrent client with anti-leech enhancement.",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/c0re100/qBittorrent-Enhanced-Edition/releases/download/release-4.3.9.10/qbittorrent_4.3.9.10_x64_setup.exe#/dl.7z",
-            "hash": "59e6ee42f188fcc7b2e2f37477c539ccd1a618d45f5cceba3d1b03b270c32854"
+            "url": "https://github.com/c0re100/qBittorrent-Enhanced-Edition/releases/download/release-4.4.0.10/qbittorrent_enhanced_4.4.0.10_x64_setup.exe#/dl.7z",
+            "hash": "721055eab10962565f475dce88d1a2b4f58abfbc95b19197d94da4a15d5c1ddd"
         },
         "32bit": {
-            "url": "https://github.com/c0re100/qBittorrent-Enhanced-Edition/releases/download/release-4.3.9.10/qbittorrent_4.3.9.10_setup.exe#/dl.7z",
-            "hash": "80b43886c61d8ab3f0540960c6f21a090c7d6cd69086763a856a65f9f14fa47d"
+            "url": "https://github.com/c0re100/qBittorrent-Enhanced-Edition/releases/download/release-4.4.0.10/qbittorrent_enhanced_4.4.0.10_setup.exe#/dl.7z",
+            "hash": "3f1587f12cdd85e49d030d2bf912267bebb5c758915d7419ee84645b3120e057"
         }
     },
     "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\" -Force -Recurse",
@@ -32,10 +32,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/c0re100/qBittorrent-Enhanced-Edition/releases/download/release-$version/qbittorrent_$version_x64_setup.exe#/dl.7z"
+                "url": "https://github.com/c0re100/qBittorrent-Enhanced-Edition/releases/download/release-$version/qbittorrent_enhanced_$version_x64_setup.exe#/dl.7z"
             },
             "32bit": {
-                "url": "https://github.com/c0re100/qBittorrent-Enhanced-Edition/releases/download/release-$version/qbittorrent_$version_setup.exe#/dl.7z"
+                "url": "https://github.com/c0re100/qBittorrent-Enhanced-Edition/releases/download/release-$version/qbittorrent_enhanced_$version_setup.exe#/dl.7z"
             }
         }
     }
