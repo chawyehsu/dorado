@@ -1,0 +1,53 @@
+{
+    "homepage": "https://u.tools/",
+    "description": "Your productive tools set and launcher.",
+    "license": "YuanLi",
+    "version": "2.5.2",
+    "architecture": {
+        "64bit": {
+            "url": "https://res.u-tools.cn/version2/uTools-2.5.2.exe#/dl.7z",
+            "hash": "sha512:81930abd684759d9d8b9d4bfe79e91676c88a4abf7b629cf6ffc3a997d72c88717196417819be8efda979053337c5f3f3020773ff926f7679170d0eb0d5ffdf3",
+            "installer": {
+                "script": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR/app-64.7z\" \"$dir\""
+            }
+        },
+        "32bit": {
+            "url": "https://res.u-tools.cn/version2/uTools-2.5.2-ia32.exe#/dl.7z",
+            "hash": "sha512:2edc22328b1e44f43ddfecb4962af3cd89818188c3d97dc015d1e9305ace5551b7f12c1a957e66533b2055dfcaa6139a90ba22ebab6037a690a87f9557c1fc0f",
+            "installer": {
+                "script": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR/app-32.7z\" \"$dir\""
+            }
+        }
+    },
+    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninstall uTools.exe\" -Force -Recurse",
+    "shortcuts": [
+        [
+            "uTools.exe",
+            "uTools"
+        ]
+    ],
+    "checkver": {
+        "url": "https://res.u-tools.cn/version2/latest.yml?",
+        "regex": "version: ([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://res.u-tools.cn/version2/uTools-$version.exe#/dl.7z",
+                "hash": {
+                    "url": "https://res.u-tools.cn/version2/latest.yml?",
+                    "mode": "extract",
+                    "regex": "(?sm)$version.exe.*?sha512: $base64"
+                }
+            },
+            "32bit": {
+                "url": "https://res.u-tools.cn/version2/uTools-$version-ia32.exe#/dl.7z",
+                "hash": {
+                    "url": "https://res.u-tools.cn/version2/latest-ia32.yml?",
+                    "mode": "extract",
+                    "regex": "(?sm)$version-ia32.exe.*?sha512: $base64"
+                }
+            }
+        }
+    }
+}
