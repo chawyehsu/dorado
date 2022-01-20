@@ -1,0 +1,60 @@
+name: Tests
+
+on:
+  pull_request:
+  push:
+    branches:
+      - 'master'
+  workflow_dispatch:
+
+jobs:
+  test_powershell:
+    name: WindowsPowerShell
+    runs-on: windows-latest
+    steps:
+      - name: Checkout Bucket
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 2
+          path: 'my_bucket'
+      - name: Checkout Scoop
+        uses: actions/checkout@v2
+        with:
+          repository: ScoopInstaller/Scoop
+          ref: develop
+          path: 'scoop_core'
+      - name: Init Test Suite
+        uses: potatoqualitee/psmodulecache@v4
+        with:
+          modules-to-cache: PSScriptAnalyzer, BuildHelpers, Pester:4.10.1
+          shell: powershell
+      - name: Test
+        shell: powershell
+        run: |
+          $env:SCOOP_HOME="$(Resolve-Path '.\scoop_core')"
+          .\my_bucket\bin\test.ps1
+  test_pwsh:
+    name: PowerShell
+    runs-on: windows-latest
+    steps:
+      - name: Checkout Bucket
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 2
+          path: 'my_bucket'
+      - name: Checkout Scoop
+        uses: actions/checkout@v2
+        with:
+          repository: ScoopInstaller/Scoop
+          ref: develop
+          path: 'scoop_core'
+      - name: Init Test Suite
+        uses: potatoqualitee/psmodulecache@v4
+        with:
+          modules-to-cache: PSScriptAnalyzer, BuildHelpers, Pester:4.10.1
+          shell: pwsh
+      - name: Test
+        shell: pwsh
+        run: |
+          $env:SCOOP_HOME="$(Resolve-Path '.\scoop_core')"
+          .\my_bucket\bin\test.ps1
