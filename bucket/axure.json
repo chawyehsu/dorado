@@ -1,19 +1,19 @@
 {
     "homepage": "https://www.axure.com/",
     "description": "Prototypes, Specifications, and Diagrams in One Tool",
-    "version": "10.0.0.3826",
+    "version": "10.0.0.3857",
     "license": "Proprietary",
-    "url": "https://axure.cachefly.net/versions/10-0/AxureRP-Setup-3826.exe#/installer.exe",
-    "hash": "16eecdc23b64e95ce7ef1092889967219d255761b0e8b19a368635a3489d7456",
+    "url": "https://axure.cachefly.net/versions/10-0/AxureRP-Setup-3857.exe#/installer.exe",
+    "hash": "073fec64385e3fe05ee3d6fac1cf60fee8b4f707d4b188b201bbb5074b039131",
     "depends": "dark",
     "installer": {
         "script": [
-            "dark.exe -nologo -x \"$dir\\extracted\" \"$dir\\installer.exe\" | Out-Null",
+            "Expand-DarkArchive \"$dir\\installer.exe\" \"$dir\\extracted\" -Removal",
             "Get-ChildItem -Path \"$dir\\extracted\\AttachedContainer\" -Include \"A*.msi\" -Recurse | ForEach-Object {",
             "    Expand-MsiArchive $_ \"$dir\\msi\"",
             "}",
             "Move-Item \"$dir\\msi\\Axure\\Axure*\\*\" \"$dir\" -Force",
-            "Remove-Item \"$dir\\extracted\", \"$dir\\msi\", \"$dir\\installer.exe\" -Force -Recurse",
+            "Remove-Item \"$dir\\extracted\", \"$dir\\msi\" -Force -Recurse",
             "Copy-Item \"$dir\\AxureRP*.exe\" \"$dir\\AxureRP.exe\""
         ]
     },
@@ -25,7 +25,7 @@
     ],
     "checkver": {
         "url": "https://www.axure.com/release-history",
-        "re": "<h3>Version ([\\d.]+).*?</h3>"
+        "re": "<b>Axure RP ([\\d.]+)</b>"
     },
     "autoupdate": {
         "url": "https://axure.cachefly.net/versions/$majorVersion-$minorVersion/AxureRP-Setup-$buildVersion.exe#/installer.exe"
