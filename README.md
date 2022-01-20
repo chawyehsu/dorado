@@ -20,8 +20,6 @@
     </p>
 </div>
 
-[![Tests](https://github.com/ScoopInstaller/Tests/actions/workflows/ci.yml/badge.svg)](https://github.com/ScoopInstaller/Tests/actions/workflows/ci.yml)
-
 Featured Apps
 ------------
 
