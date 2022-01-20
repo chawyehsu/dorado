@@ -1,0 +1,23 @@
+{
+    "version": "4.9.3",
+    "homepage": "https://gmsh.info/",
+    "description": "A three-dimensional finite element mesh generator with built-in pre- and post-processing facilities.",
+    "license": "GPL-2.0-or-later",
+    "url": "https://gmsh.info/bin/Windows/gmsh-4.9.3-Windows64.zip",
+    "hash": "41c4ea305184ca709cf243f80db443cbe6e37650a85a3692ae0f0a24c3f3fa88",
+    "extract_dir": "gmsh-4.9.3-Windows64",
+    "bin": "gmsh.exe",
+    "shortcuts": [
+        [
+            "gmsh.exe",
+            "Gmsh"
+        ]
+    ],
+    "checkver": {
+        "regex": "Current stable release \\(version ([\\d.]+),"
+    },
+    "autoupdate": {
+        "url": "https://gmsh.info/bin/Windows/gmsh-$version-Windows64.zip",
+        "extract_dir": "gmsh-$version-Windows64"
+    }
+}
