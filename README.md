@@ -1,7 +1,7 @@
 <div align="center">
     <h1 align="center">🐟 dorado</h1>
     <p align="center">
-        <a href="https://ci.appveyor.com/project/chawyehsu/dorado/branch/master"><img src="https://img.shields.io/appveyor/ci/chawyehsu/dorado/master.svg?style=flat-square&label=AppVeyor&logo=appveyor" alt="AppVeyor Build Status"></a>
+        <a href="https://github.com/chawyehsu/dorado/actions/workflows/ci.yml"><img src="https://img.shields.io/github/workflow/status/chawyehsu/dorado/Tests?style=flat-square&logo=github&label=Tests" alt="GitHub Actions CI Status"></a>
         <a href="https://github.com/chawyehsu/dorado/blob/master/LICENSE"><img src="https://img.shields.io/github/license/chawyehsu/dorado.svg?style=flat-square" alt="License"></a>
         <a href="https://www.microsoft.com/en-us/windows"><img src="https://img.shields.io/badge/Target-Windows%2010-0067B8.svg?style=flat-square" alt="Powered by Saber" /></a>
         <a href="https://github.com/chawyehsu/dorado"><img src="https://img.shields.io/github/repo-size/chawyehsu/dorado.svg?style=flat-square" alt="Repo size"></a>
@@ -19,6 +19,8 @@
         <strong>None</strong> of the apps in this repository require elevated (administrator) privileges to install.
     </p>
 </div>
+
+[![Tests](https://github.com/ScoopInstaller/Tests/actions/workflows/ci.yml/badge.svg)](https://github.com/ScoopInstaller/Tests/actions/workflows/ci.yml)
 
 Featured Apps
 ------------
