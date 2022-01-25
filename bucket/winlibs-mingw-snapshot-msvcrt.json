@@ -1,12 +1,12 @@
 {
     "homepage": "https://winlibs.com/",
     "description": "winlibs standalone build of GCC compiler and MinGW-w64 with MSVCRT (Snapshot versions)",
-    "version": "12.0.0-9.0.0-snapshot20211205-msvcrt-r1",
+    "version": "12.0.1-9.0.0-snapshot20220123-msvcrt-r1",
     "license": "GPL-2.0-only,BSD-2-Clause,Apache-2.0,ZPL-2.1",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/brechtsanders/winlibs_mingw/releases/download/12.0.0-snapshot20211205-9.0.0-msvcrt-r1/winlibs-x86_64-posix-seh-gcc-12.0.0-snapshot20211205-mingw-w64-9.0.0-r1.7z",
-            "hash": "102dcf7c5f264b7e8e5707e0b7eb9f9c00b88280a79abade6bedc1cb67c027e4",
+            "url": "https://github.com/brechtsanders/winlibs_mingw/releases/download/12.0.1-snapshot20220123-9.0.0-msvcrt-r1/winlibs-x86_64-posix-seh-gcc-12.0.1-snapshot20220123-mingw-w64-9.0.0-r1.7z",
+            "hash": "f42904ef20a201a9d7f523f70e41496efce51a6e449c3f5a358a95abbb67e736",
             "extract_dir": "mingw64"
         }
     },
