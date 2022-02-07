@@ -3,12 +3,6 @@
     "description": "Nightly builds of Firefox: the popular open source web browser.",
     "homepage": "https://www.mozilla.org/zh-CN/firefox/nightly/",
     "license": "MPL-2.0",
-    "notes": [
-        "需要设置“Scoop-Nightly”为*默认*配置，否则将会在更新后丢失配置：",
-        "  - 运行“Firefox Nightly Profile Manager”，选择“Scoop-Nightly”然后点击“启动 Firefox”",
-        "  - 在 Firefox 中打开“about:profiles“页面检查*默认*配置",
-        "详情查看：https://support.mozilla.org/en-US/kb/profile-manager-create-remove-switch-firefox-profiles"
-    ],
     "architecture": {
         "64bit": {
             "url": "https://archive.mozilla.org/pub/firefox/nightly/2022/01/2022-01-27-21-36-27-mozilla-central-l10n/firefox-98.0a1.zh-CN.win64.installer.exe#/firefox.7z",
