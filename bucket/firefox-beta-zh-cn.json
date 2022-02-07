@@ -3,12 +3,6 @@
     "description": "Beta builds of Firefox: the popular open source web browser.",
     "homepage": "https://www.mozilla.org/zh-CN/firefox/beta/",
     "license": "MPL-2.0",
-    "notes": [
-        "需要设置“Scoop-Beta”为*默认*配置，否则将会在更新后丢失配置：",
-        "  - 运行“Firefox Beta Profile Manager”，选择“Scoop-Beta”然后点击“启动 Firefox”",
-        "  - 在 Firefox Beta 中打开“about:profiles“页面检查*默认*配置",
-        "详情查看：https://support.mozilla.org/en-US/kb/profile-manager-create-remove-switch-firefox-profiles"
-    ],
     "architecture": {
         "64bit": {
             "url": "https://download-installer.cdn.mozilla.net/pub/firefox/releases/97.0b8/win64/zh-CN/Firefox%20Setup%2097.0b8.exe#/firefox-beta.7z",
