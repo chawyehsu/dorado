@@ -5,15 +5,12 @@
     "license": "Proprietary",
     "url": "https://dl.todesk.com/windows/ToDesk_Setup.exe#/dl.7z",
     "hash": "f1a85cf32761fdbfdeaa952a1e7f8cc0492053df6a946c98c9ef29b0d951b0b2",
-    "installer": {
-        "script": [
-            "Expand-7zipArchive \"$dir\\app.7z\" \"$dir\"",
-            "Remove-Item \"$dir\\`$PLUGINSDIR\",\"$dir\\app.7z\",\"$dir\\`$PROGRAMFILES\" -Force -Recurse",
-            "if (!(Test-Path \"$persist_dir\\config.ini\")) {",
-            "    New-Item -Force -Path \"$persist_dir\\config.ini\" -ItemType File -Value \"[ConfigInfo]`nautoStart=0\" | Out-Null",
-            "}"
-        ]
-    },
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\config.ini\")) {",
+        "    New-Item -Force -Path \"$persist_dir\\config.ini\" -ItemType File -Value \"[ConfigInfo]`nautoStart=0\" | Out-Null",
+        "}"
+    ],
+    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\",\"$dir\\uninst.exe\" -Force -Recurse",
     "shortcuts": [
         [
             "ToDesk.exe",
