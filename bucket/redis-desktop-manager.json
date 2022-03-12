@@ -1,23 +1,23 @@
 {
-    "homepage": "https://redisdesktop.com/",
-    "description": "Cross-platform GUI management tool for Redis",
+    "homepage": "https://resp.app/",
+    "description": "Cross-platform open source GUI for Redis (formerly Redis Desktop Manager)",
     "license": "GPL-3.0-only",
-    "version": "2021.10",
-    "url": "https://github.com/lework/RedisDesktopManager-Windows/releases/download/2021.10/rdm-2021.10.zip",
-    "hash": "b2c2e12aca09c7fb4e42059cbc43aaaeee077bbe4c00c0316efdf6617d6adbac",
+    "version": "2022.2",
+    "url": "https://github.com/lework/RedisDesktopManager-Windows/releases/download/2022.2/resp-2022.2.zip",
+    "hash": "44485e07eb2c03a18e0ec18b4121ba853f31746f4c63d551c485a403a2cb69c9",
     "installer": {
         "script": [
-            "Get-ChildItem \"$dir\\rdm-*.exe\" | Rename-Item -NewName \"$dir\\installer.exe\"",
+            "Get-ChildItem \"$dir\\resp-*.exe\" | Rename-Item -NewName \"$dir\\installer.exe\"",
             "Expand-7zipArchive \"$dir\\installer.exe\" \"$dir\" | Out-Null",
             "Remove-Item \"$dir\\`$PLUGINSDIR\" -Recurse",
             "Remove-Item \"$dir\\installer.exe\" | Out-Null"
         ]
     },
-    "bin": "rdm.exe",
+    "bin": "resp.exe",
     "shortcuts": [
         [
-            "rdm.exe",
-            "Redis Desktop Manager"
+            "resp.exe",
+            "RESP"
         ]
     ],
     "suggest": {
@@ -27,10 +27,7 @@
         "github": "https://github.com/lework/RedisDesktopManager-Windows"
     },
     "autoupdate": {
-        "url": "https://github.com/lework/RedisDesktopManager-Windows/releases/download/$version/rdm-$version.zip"
+        "url": "https://github.com/lework/RedisDesktopManager-Windows/releases/download/$version/resp-$version.zip"
     },
-    "notes": [
-        "RDM is available on Microsoft Store: https://www.microsoft.com/store/apps/9NDK76ZVZ3TM",
-        "Please consider supporting the author if possible, the price ¥49.00 is super fair!"
-    ]
+    "notes": "RESP.app (formerly RDM) is available on Microsoft Store, please consider supporting the author if possible."
 }
