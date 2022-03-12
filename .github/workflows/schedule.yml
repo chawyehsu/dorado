@@ -1,16 +1,17 @@
-name: Excavator
 on:
   workflow_dispatch:
   schedule:
-  - cron: '1 0 * * *'
+    # run at 00:01:00 everyday (UTC)
+    - cron: '1 0 * * *'
+name: Excavator
 jobs:
   excavate:
     name: Excavate
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
     - uses: actions/checkout@main
     - name: Excavate
-      uses: kidonng/Scoop-GithubActions@stable
+      uses: ScoopInstaller/GithubActions@main
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         SKIP_UPDATED: '1'
