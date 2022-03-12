@@ -1,13 +1,13 @@
 {
-    "version": "2.2.9",
+    "version": "2.4.0",
     "description": "The official client for Alibaba's cloud dirve service",
     "homepage": "https://www.aliyundrive.com/",
     "license": {
         "identifier": "EULA",
         "url": "https://www.aliyundrive.com/protocol/service"
     },
-    "url": "https://tongyongxiezuo.oss-cn-zhangjiakou.aliyuncs.com/desktop/aDrive-desktop/2.2.9/update/win32/ia32/aDrive-2.2.9.exe#/aDrive-2.2.9.7z",
-    "hash": "sha512:32e000571b7e27b58ba4e04e9107e086b88a2fe72c065a0d8829f7a2fc797e71c85d5d36b54a6504c20446b520145731bfd3081dc4e63a1072c87469e615f97e",
+    "url": "https://tongyongxiezuo.oss-cn-zhangjiakou.aliyuncs.com/desktop/aDrive-desktop/2.4.0/update/win32/ia32/aDrive-2.4.0.exe#/aDrive-2.4.0.7z",
+    "hash": "sha512:712ee39677f6f3c90286d123464625ad0d0666d8b5819dd747645b694575b958442aab4c0d5de477dfc97bddd2ded3fdbb62ee3eefe441d678028e95312801c0",
     "post_install": [
         "@('$PLUGINSDIR', '$TEMP') | ForEach-Object {",
         "    Remove-Item \"$dir\\$_\" -Recurse -Force",
@@ -20,13 +20,13 @@
         ]
     ],
     "checkver": {
-        "url": "https://g.alicdn.com/aliyun-drive-fe/aliyun-drive-desktop-version/0.0.18/win32/ia32/latest.yml",
+        "script": "return (iwr -useb \"$($(iwr -useb 'https://www.aliyundrive.com/desktop/version/update.json' | ConvertFrom-Json).url)/win32/ia32/latest.yml\")",
         "re": "version: ([\\d.]+)"
     },
     "autoupdate": {
         "url": "https://tongyongxiezuo.oss-cn-zhangjiakou.aliyuncs.com/desktop/aDrive-desktop/$version/update/win32/ia32/aDrive-$version.exe#/aDrive-$version.7z",
         "hash": {
-            "url": "https://g.alicdn.com/aliyun-drive-fe/aliyun-drive-desktop-version/0.0.18/win32/ia32/latest.yml",
+            "url": "https://g.alicdn.com/aliyun-drive-fe/aliyun-drive-desktop-version/$version/win32/ia32/latest.yml",
             "mode": "extract",
             "regex": "sha512: $base64"
         }
