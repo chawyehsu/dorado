@@ -1,0 +1,36 @@
+{
+    "version": "1.0.1.0",
+    "description": "Show the list of shortcut keys for the active window.",
+    "homepage": "http://littletips.redisant.com/",
+    "license": "Unknown",
+    "architecture": {
+        "64bit": {
+            "url": "http://littletips.redisant.com/package/LT-1.0.1.0-x64.zip",
+            "hash": "68c4babd436a06b87d1484703dcb88d1ebab0effdecdc2628868f32515746a5e"
+        },
+        "32bit": {
+            "url": "http://littletips.redisant.com/package/LT-1.0.1.0-x86.zip",
+            "hash": "2ca86aa1d6e88032cb55d97b5173dd4ce1eb462d3cda5f91440595b89cd1c63a"
+        }
+    },
+    "extract_dir": "Release",
+    "shortcuts": [
+        [
+            "LittleTips.exe",
+            "LittleTips"
+        ]
+    ],
+    "checkver": {
+        "regex": "LT-([\\d.]+)-x64.zip"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "http://littletips.redisant.com/package/LT-$version-x64.zip"
+            },
+            "32bit": {
+                "url": "http://littletips.redisant.com/package/LT-$version-x86.zip"
+            }
+        }
+    }
+}
