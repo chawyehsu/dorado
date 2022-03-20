@@ -37,5 +37,9 @@
                 "url": "https://download.swift.org/development/windows10/swift-DEVELOPMENT-SNAPSHOT-$matchBuild/swift-DEVELOPMENT-SNAPSHOT-$matchBuild-windows10.exe"
             }
         }
-    }
+    },
+    "notes": [
+        "To make swift toolchain work, you must have Visual Studio and Windows SDK components installed.",
+        "Please read https://www.swift.org/getting-started/#support-files for Supporting Files installation guide."
+    ]
 }
