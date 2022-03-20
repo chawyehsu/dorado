@@ -1,10 +1,10 @@
 {
-    "version": "1.4.0",
+    "version": "1.5.0-alpha6",
     "description": "BiliBili Vedio Downloader",
     "homepage": "https://github.com/leiurayer/downkyi",
     "license": "Apache-2.0",
-    "url": "https://github.com/leiurayer/downkyi/releases/download/v1.4.0/DownKyi-1.4.0.zip",
-    "hash": "4ee517d175fc594856f6775cf694ab033b5e8c2ca82ec5d114f6c6fd44b165e8",
+    "url": "https://github.com/leiurayer/downkyi/releases/download/v1.5.0-alpha6/DownKyi-1.5.0-alpha6.zip",
+    "hash": "27f1e1a93ca9a2dc8268f7b4f20015d7ae913818733a66d905224b50f19e59c9",
     "shortcuts": [
         [
             "DownKyi.exe",
@@ -12,7 +12,10 @@
         ]
     ],
     "persist": "Config",
-    "checkver": "github",
+    "checkver": {
+        "github": "https://github.com/leiurayer/downkyi",
+        "regex": "/tree/v([0-9a-z-.]+)"
+    },
     "autoupdate": {
         "url": "https://github.com/leiurayer/downkyi/releases/download/v$version/DownKyi-$version.zip"
     }
