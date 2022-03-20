@@ -1,12 +1,12 @@
 {
     "homepage": "https://microapp.bytedance.com/",
     "description": "IDE for Bytedance Micro-App Development",
-    "version": "3.2.5",
+    "version": "3.2.5-2",
     "license": "Unknown",
     "architecture": {
         "64bit": {
-            "url": "https://sf1-cdn-tos.douyinstatic.com/obj/microapp/frontend/ide/package/obj/developer/ide/7811082/win32/%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-3.2.5.exe#/bytedanceide-3.2.5.7z",
-            "hash": "0fbb1532e5b933932ca87b2a2302b1b004bd300368794f0e46df64562a266f6c",
+            "url": "https://sf1-cdn-tos.douyinstatic.com/obj/microapp/frontend/ide/package/obj/developer/ide/7844005/win32/%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-3.2.5-2.exe#/dl.7z",
+            "hash": "1ac29c3ba13aef710c86ae0f1a0f0291e0fd8048cea82a81138e4b6fc99994cf",
             "installer": {
                 "script": [
                     "Remove-Item \"$dir\\*\" -Exclude \"app-64.7z\"",
@@ -25,12 +25,12 @@
     ],
     "checkver": {
         "url": "https://microapp.bytedance.com/docs/zh-CN/mini-app/develop/developer-instrument/download/developer-instrument-update-and-download/",
-        "regex": "/developer/ide/(?<build>[\\d.]+)/.*?-(?<version>[\\d.]+).exe"
+        "regex": "/developer/ide/(?<build>[\\d.]+)/.*?-(?<version>[0-9-.]+).exe"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://sf1-cdn-tos.douyinstatic.com/obj/microapp/frontend/ide/package/obj/developer/ide/$matchBuild/win32/%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-$version.exe#/bytedanceide-$version.7z"
+                "url": "https://sf1-cdn-tos.douyinstatic.com/obj/microapp/frontend/ide/package/obj/developer/ide/$matchBuild/win32/%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-$version.exe#/dl.7z"
             }
         }
     },
