@@ -1,0 +1,41 @@
+{
+    "version": "5.4.3.1328",
+    "description": "Utility for data recovery, disk partition management, backup & restore (Chinese edition)",
+    "homepage": "https://diskgenius.cn",
+    "license": "Unknown",
+    "architecture": {
+        "64bit": {
+            "url": "https://download.geniusite.com/DG5431328_x64.zip",
+            "hash": "f93eda58bf4b890e667817a86b0fe6686bf7b551e1adfe9ba8ad8e12e1a9751a"
+        },
+        "32bit": {
+            "url": "https://download.geniusite.com/DG5431328_x86.zip",
+            "hash": "53ffee7a6d82533532c95c52d24711769fd94c92b1b035a04f89207479d1f70b"
+        }
+    },
+    "extract_dir": "DiskGenius",
+    "pre_install": "if (!(Test-Path \"$persist_dir\\Options.ini\")) { New-Item \"$dir\\Options.ini\" | Out-Null }",
+    "bin": "DiskGenius.exe",
+    "shortcuts": [
+        [
+            "DiskGenius.exe",
+            "DiskGenius"
+        ]
+    ],
+    "persist": "Options.ini",
+    "checkver": {
+        "url": "https://internal.eassos.com/update/diskgenius/update.php",
+        "regex": "\\[([\\d.]+)\\]"
+    },
+    "notes": "This is in conflict with DiskGenius English edision for overwriting shim.",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://download.geniusite.com/DG$cleanVersion_x64.zip"
+            },
+            "32bit": {
+                "url": "https://download.geniusite.com/DG$cleanVersion_x86.zip"
+            }
+        }
+    }
+}
