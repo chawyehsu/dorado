@@ -9,7 +9,7 @@
             "hash": "5cf681592b1dfcd4917d1e05b042b8eac4f5ea8a8cf88ddb68664d875e0e24b6",
             "pre_install": [
                 "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
-                "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninst*\" -Force -Recurse"
+                "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\`$R0\" -Force -Recurse"
             ]
         },
         "32bit": {
@@ -17,7 +17,7 @@
             "hash": "bf135c5e35cddaf803050cf0493b369a4ccf2e4f495987b4f55c9055dac3d30f",
             "pre_install": [
                 "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-32.7z\" \"$dir\"",
-                "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninst*\" -Force -Recurse"
+                "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\`$R0\" -Force -Recurse"
             ]
         }
     },

@@ -10,7 +10,7 @@
             "installer": {
                 "script": [
                     "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
-                    "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninst*\" -Force -Recurse"
+                    "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\`$R0\" -Force -Recurse"
                 ]
             }
         },
@@ -20,7 +20,7 @@
             "installer": {
                 "script": [
                     "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-32.7z\" \"$dir\"",
-                    "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninst*\" -Force -Recurse"
+                    "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\`$R0\" -Force -Recurse"
                 ]
             }
         }
