@@ -5,11 +5,11 @@
     "license": "Freeware",
     "architecture": {
         "64bit": {
-            "url": "https://dorado-api.deno.dev/edge?arch=64&channel=canary&dl#/MicrosoftEdge-101.0.1204.0-x64.7z",
+            "url": "https://dorado-api.deno.dev/edge?arch=64&channel=canary&version=101.0.1204.0&dl#/MicrosoftEdge-101.0.1204.0-x64.7z",
             "hash": "0963ff78b267583c49151eac4ce5d711f8b769840235a9f06e2e2e62c0028ac8"
         },
         "32bit": {
-            "url": "https://dorado-api.deno.dev/edge?arch=86&channel=canary&dl#/MicrosoftEdge-101.0.1204.0-x86.7z",
+            "url": "https://dorado-api.deno.dev/edge?arch=86&channel=canary&version=101.0.1204.0&dl#/MicrosoftEdge-101.0.1204.0-x86.7z",
             "hash": "1d690b021540509d4e659557ba23a71301b85c4bfa91dcfbcf3a4679f1dc3e6b"
         }
     },
@@ -29,16 +29,16 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://dorado-api.deno.dev/edge?arch=64&channel=canary&dl#/MicrosoftEdge-$version-x64.7z",
+                "url": "https://dorado-api.deno.dev/edge?arch=64&channel=canary&version=$version&dl#/MicrosoftEdge-$version-x64.7z",
                 "hash": {
-                    "url": "https://dorado-api.deno.dev/edge?arch=64&channel=canary",
+                    "url": "https://dorado-api.deno.dev/edge?arch=64&channel=canary&version=$version",
                     "jsonpath": "$.Hashes.Sha256"
                 }
             },
             "32bit": {
-                "url": "https://dorado-api.deno.dev/edge?arch=86&channel=canary&dl#/MicrosoftEdge-$version-x86.7z",
+                "url": "https://dorado-api.deno.dev/edge?arch=86&channel=canary&version=$version&dl#/MicrosoftEdge-$version-x86.7z",
                 "hash": {
-                    "url": "https://dorado-api.deno.dev/edge?arch=86&channel=canary",
+                    "url": "https://dorado-api.deno.dev/edge?arch=86&channel=canary&version=$version",
                     "jsonpath": "$.Hashes.Sha256"
                 }
             }

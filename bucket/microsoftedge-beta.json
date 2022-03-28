@@ -5,11 +5,11 @@
     "license": "Freeware",
     "architecture": {
         "64bit": {
-            "url": "https://dorado-api.deno.dev/edge?arch=64&channel=beta&dl#/MicrosoftEdge-100.0.1185.17-x64.7z",
+            "url": "https://dorado-api.deno.dev/edge?arch=64&channel=beta&version=100.0.1185.17&dl#/MicrosoftEdge-100.0.1185.17-x64.7z",
             "hash": "dfcf3672c473f39b7635d03676c6c587be2d345b7b23a22d2b7922ff72936285"
         },
         "32bit": {
-            "url": "https://dorado-api.deno.dev/edge?arch=86&channel=beta&dl#/MicrosoftEdge-100.0.1185.17-x86.7z",
+            "url": "https://dorado-api.deno.dev/edge?arch=86&channel=beta&version=100.0.1185.17&dl#/MicrosoftEdge-100.0.1185.17-x86.7z",
             "hash": "802540355259deeb89ce107307fd1aa0be6fe0f438c3546ba17858dd9f25491a"
         }
     },
@@ -29,16 +29,16 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://dorado-api.deno.dev/edge?arch=64&channel=beta&dl#/MicrosoftEdge-$version-x64.7z",
+                "url": "https://dorado-api.deno.dev/edge?arch=64&channel=beta&version=$version&dl#/MicrosoftEdge-$version-x64.7z",
                 "hash": {
-                    "url": "https://dorado-api.deno.dev/edge?arch=64&channel=beta",
+                    "url": "https://dorado-api.deno.dev/edge?arch=64&channel=beta&version=$version",
                     "jsonpath": "$.Hashes.Sha256"
                 }
             },
             "32bit": {
-                "url": "https://dorado-api.deno.dev/edge?arch=86&channel=beta&dl#/MicrosoftEdge-$version-x86.7z",
+                "url": "https://dorado-api.deno.dev/edge?arch=86&channel=beta&version=$version&dl#/MicrosoftEdge-$version-x86.7z",
                 "hash": {
-                    "url": "https://dorado-api.deno.dev/edge?arch=86&channel=beta",
+                    "url": "https://dorado-api.deno.dev/edge?arch=86&channel=beta&version=$version",
                     "jsonpath": "$.Hashes.Sha256"
                 }
             }
