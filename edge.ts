@@ -3,7 +3,11 @@ export default async function handleRequest(request: Request): Promise<Response>
   if (sp.has('arch') && sp.has('channel')) {
     const arch = sp.get('arch')
     const channel = sp.get('channel')
-    const UPSTREAM_API = `https://scoop-services.azurewebsites.net/edge-backend?arch=${arch}&channel=${channel}`
+    const version = sp.get('version')
+    let UPSTREAM_API = `https://scoop-services.azurewebsites.net/edge-backend?arch=${arch}&channel=${channel}`
+    if (version) {
+      UPSTREAM_API = `https://scoop-services.azurewebsites.net/edge-backend?arch=${arch}&channel=${channel}&version=${version}`
+    }
     const response = await fetch(UPSTREAM_API, {
       method: "GET",
       headers: {
