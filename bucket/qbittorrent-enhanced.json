@@ -9,11 +9,11 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/c0re100/qBittorrent-Enhanced-Edition/releases/download/release-4.4.2.10/qbittorrent_enhanced_4.4.2.10_Qt5_x64_setup.exe#/dl.7z",
-            "hash": "e6c0022b8abf600d4538ca58a73d0f4c419b6460520c243eebe57d82320b2254"
+            "hash": "6b10334dd4889582dc6963aecf27f97a48ba028bc61d8118e060e9b08db9015f"
         },
         "32bit": {
             "url": "https://github.com/c0re100/qBittorrent-Enhanced-Edition/releases/download/release-4.4.2.10/qbittorrent_enhanced_4.4.2.10_setup.exe#/dl.7z",
-            "hash": "98f8de01fce499f5e8b92da06ad7eb3f7fc8b480bf3d64d777d584e49e07748b"
+            "hash": "5464423268ffeded3f1ef3346f8bf3960db7ab4b141d5eb01e60faf38db4be9e"
         }
     },
     "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\" -Force -Recurse",
