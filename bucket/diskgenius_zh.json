@@ -2,7 +2,7 @@
     "version": "5.4.3.1328",
     "description": "Utility for data recovery, disk partition management, backup & restore (Chinese edition)",
     "homepage": "https://diskgenius.cn",
-    "license": "Unknown",
+    "license": "Shareware",
     "architecture": {
         "64bit": {
             "url": "https://download.geniusite.com/DG5431328_x64.zip",
@@ -15,7 +15,6 @@
     },
     "extract_dir": "DiskGenius",
     "pre_install": "if (!(Test-Path \"$persist_dir\\Options.ini\")) { New-Item \"$dir\\Options.ini\" | Out-Null }",
-    "bin": "DiskGenius.exe",
     "shortcuts": [
         [
             "DiskGenius.exe",
