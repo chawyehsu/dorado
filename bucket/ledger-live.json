@@ -1,0 +1,39 @@
+{
+    "version": "2.40.2",
+    "description": "Ledger Live (Desktop)",
+    "homepage": "https://www.ledger.com/ledger-live",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/LedgerHQ/ledger-live-desktop/releases/download/v2.40.2/ledger-live-desktop-2.40.2-win-x64.exe#/dl.7z",
+            "hash": "sha512:b29faa8095eb2cac57202e2136af4d563b89eecd573d637a7546cc2a3d138eee011bf8183188cc2fcce42a93a403be232df329dabba5da43a56ebf75ab04f69e",
+            "installer": {
+                "script": [
+                    "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" -DestinationPath \"$dir\" -Removal",
+                    "Remove-Item \"$dir\\`$PLUGINSDIR\" -Force -Recurse"
+                ]
+            }
+        }
+    },
+    "shortcuts": [
+        [
+            "Ledger Live.exe",
+            "Ledger Live"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/LedgerHQ/ledger-live-desktop"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/LedgerHQ/ledger-live-desktop/releases/download/v$version/ledger-live-desktop-$version-win-x64.exe#/dl.7z"
+            }
+        },
+        "hash": {
+            "url": "https://github.com/LedgerHQ/ledger-live-desktop/releases/download/v$version/latest.yml",
+            "mode": "extract",
+            "regex": "(?sm)$version-win-x64.exe.*?sha512: $base64"
+        }
+    }
+}
