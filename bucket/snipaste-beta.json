@@ -26,10 +26,10 @@
     "uninstaller": {
         "script": [
             "function BackupFile([String] $file) {",
-            "    if (!(Test-Path \"$persist_dir\\$file\")) {",
+            "    if (Test-Path \"$persist_dir\\$file\") {",
             "        Remove-Item \"$persist_dir\\$file\" -Force",
             "    }",
-            "    Move-Item \"$dir\\$file\" \"$persist_dir\" -Force",
+            "    Copy-Item \"$dir\\$file\" \"$persist_dir\" -Force",
             "}",
             "BackupFile 'config.ini'"
         ]
@@ -41,6 +41,7 @@
         ]
     ],
     "persist": [
+        "crashes",
         "history",
         "config.ini"
     ],
