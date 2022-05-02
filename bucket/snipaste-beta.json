@@ -20,7 +20,8 @@
             "        New-Item -Force -Path \"$persist_dir\\$file\" -ItemType file -Value $content | Out-Null",
             "    }",
             "}",
-            "CreateFile 'config.ini'"
+            "CreateFile 'config.ini'",
+            "CreateFile 'splog.txt"
         ]
     },
     "uninstaller": {
@@ -31,7 +32,8 @@
             "    }",
             "    Copy-Item \"$dir\\$file\" \"$persist_dir\" -Force",
             "}",
-            "BackupFile 'config.ini'"
+            "BackupFile 'config.ini'",
+            "BackupFile 'splog.txt'"
         ]
     },
     "shortcuts": [
@@ -43,7 +45,8 @@
     "persist": [
         "crashes",
         "history",
-        "config.ini"
+        "config.ini",
+        "splog.txt"
     ],
     "suggest": {
         "vcredist": "extras/vcredist2015"
