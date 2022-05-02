@@ -30,7 +30,7 @@
             "    if (Test-Path \"$persist_dir\\$file\") {",
             "        Remove-Item \"$persist_dir\\$file\" -Force",
             "    }",
-            "    Copy-Item \"$dir\\$file\" \"$persist_dir\" -Force",
+            "    Copy-Item \"$dir\\$file\" \"$persist_dir\" -Force -ErrorAction SilentlyContinue",
             "}",
             "BackupFile 'config.ini'",
             "BackupFile 'splog.txt'"
