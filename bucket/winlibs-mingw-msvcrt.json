@@ -1,17 +1,17 @@
 {
     "homepage": "https://winlibs.com/",
     "description": "winlibs standalone build of GCC compiler and MinGW-w64 with MSVCRT",
-    "version": "11.2.0-9.0.0-msvcrt-r6",
+    "version": "11.3.0-14.0.3-10.0.0-msvcrt-r3",
     "license": "GPL-2.0-only,BSD-2-Clause,Apache-2.0,ZPL-2.1",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/brechtsanders/winlibs_mingw/releases/download/11.2.0-9.0.0-msvcrt-r6/winlibs-x86_64-posix-seh-gcc-11.2.0-mingw-w64-9.0.0-r6.7z",
-            "hash": "8b759e07e1006e6303822c68f4e7f11fa521f9cbda0250aba439179f5362694c",
+            "url": "https://github.com/brechtsanders/winlibs_mingw/releases/download/11.3.0-14.0.3-10.0.0-msvcrt-r3/winlibs-x86_64-posix-seh-gcc-11.3.0-mingw-w64msvcrt-10.0.0-r3.7z",
+            "hash": "fe72d6ef32d5a2b731488406796509aa3df326670709fb9886fb78f72b04f5ae",
             "extract_dir": "mingw64"
         },
         "32bit": {
-            "url": "https://github.com/brechtsanders/winlibs_mingw/releases/download/11.2.0-9.0.0-msvcrt-r6/winlibs-i686-posix-dwarf-gcc-11.2.0-mingw-w64-9.0.0-r6.7z",
-            "hash": "2f95583a0b2693d1533a9dffc7700750792cecdee3c4afd7764308632576df31",
+            "url": "https://github.com/brechtsanders/winlibs_mingw/releases/download/11.3.0-14.0.3-10.0.0-msvcrt-r3/winlibs-i686-posix-dwarf-gcc-11.3.0-mingw-w64msvcrt-10.0.0-r3.7z",
+            "hash": "64e69f4afd68bcd2a94bf4cc0237ae0641d237dd20f1a32f9834fc1b73381e72",
             "extract_dir": "mingw32"
         }
     },
@@ -22,10 +22,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/brechtsanders/winlibs_mingw/releases/download/$version/winlibs-x86_64-posix-seh-gcc-$matchGccversion-mingw-w64-$matchMingwversion-$matchRevision.7z"
+                "url": "https://github.com/brechtsanders/winlibs_mingw/releases/download/$version/winlibs-x86_64-posix-seh-gcc-$matchGccversion-mingw-w64msvcrt-$matchMingwversion-$matchRevision.7z"
             },
             "32bit": {
-                "url": "https://github.com/brechtsanders/winlibs_mingw/releases/download/$version/winlibs-i686-posix-dwarf-gcc-$matchGccversion-mingw-w64-$matchMingwversion-$matchRevision.7z"
+                "url": "https://github.com/brechtsanders/winlibs_mingw/releases/download/$version/winlibs-i686-posix-dwarf-gcc-$matchGccversion-mingw-w64msvcrt-$matchMingwversion-$matchRevision.7z"
             }
         },
         "hash": {
