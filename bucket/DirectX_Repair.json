@@ -1,0 +1,28 @@
+{
+    "version": "4.1.0.30770",
+    "description": "DirectX 修复工具 (DirectX Repair) 是一款系统级工具软件，简便易用",
+    "homepage": "https://blog.csdn.net/vbcom/article/details/7245186",
+    "license": "GNU General Public License v3.0",
+    "notes": [
+        "常见问题解答 <https://blog.csdn.net/VBcom/article/details/12647463>",
+        "问题反馈 <https://blog.csdn.net/vbcom/article/details/7245186>"
+    ],
+    "url": "https://pan.jiemi.workers.dev/?file=/scoop/DirectX_Repair/DirectX_Repair(Enhanced_Edition)_v4.1.0.30770.7z",
+    "hash": "76507bc43e17e584b0a7e0cebf95c3a5855c5e17dd6ea837dbdcd7fd299216ff",
+    "extract_dir": "DirectX_Repair(Enhanced_Edition)",
+    "bin": "DirectX Repair.exe",
+    "shortcuts": [
+        [
+            "DirectX Repair.exe",
+            "DirectX Repair"
+        ]
+    ],
+    "checkver": {
+        "url": "https://blog.csdn.net/VBcom/article/details/6962388",
+        "regex": "Version: (?<version>V([\\d.]+))"
+    },
+    "autoupdate": {
+        "url": "https://pan.jiemi.workers.dev/?file=/scoop/DirectX_Repair/DirectX_Repair(Enhanced_Edition)_v$version.7z",
+        "extract_dir": "DirectX_Repair(Enhanced_Edition)"
+    }
+}
