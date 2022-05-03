@@ -58,6 +58,9 @@ scoop install dorado/<app_name>
 
 Please open new app request [issue](https://github.com/chawyehsu/dorado/issues). :)
 
+Please consider submitting your new app pull requests to the official buckets if
+they satisfy the criteria before opening new app request in my bucket.
+
 **3. Some apps are outdated, please update it!**
 
 Be a contributor! Fork it, update the outdated apps app manifest, and file pull-request. :D
