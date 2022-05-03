@@ -20,18 +20,20 @@
             "        New-Item -Force -Path \"$persist_dir\\$file\" -ItemType file -Value $content | Out-Null",
             "    }",
             "}",
-            "CreateFile 'config.ini'"
+            "CreateFile 'config.ini'",
+            "CreateFile 'splog.txt'"
         ]
     },
     "uninstaller": {
         "script": [
             "function BackupFile([String] $file) {",
-            "    if (!(Test-Path \"$persist_dir\\$file\")) {",
+            "    if (Test-Path \"$persist_dir\\$file\") {",
             "        Remove-Item \"$persist_dir\\$file\" -Force",
             "    }",
-            "    Move-Item \"$dir\\$file\" \"$persist_dir\" -Force",
+            "    Copy-Item \"$dir\\$file\" \"$persist_dir\" -Force -ErrorAction SilentlyContinue",
             "}",
-            "BackupFile 'config.ini'"
+            "BackupFile 'config.ini'",
+            "BackupFile 'splog.txt'"
         ]
     },
     "shortcuts": [
@@ -41,8 +43,10 @@
         ]
     ],
     "persist": [
+        "crashes",
         "history",
-        "config.ini"
+        "config.ini",
+        "splog.txt"
     ],
     "suggest": {
         "vcredist": "extras/vcredist2015"
