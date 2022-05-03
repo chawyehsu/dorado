@@ -1,18 +1,20 @@
 {
-    "homepage": "https://unity3d.com",
+    "homepage": "https://unity.com/unity-hub",
     "description": "The world’s most popular development platform for creating 2D and 3D multiplatform games",
     "license": {
         "identifier": "Freeware",
         "url": "https://unity3d.com/legal/terms-of-service"
     },
-    "version": "nightly",
+    "version": "3.1.2",
     "architecture": {
         "64bit": {
             "url": "https://public-cdn.cloud.unity3d.com/hub/prod/UnityHubSetup.exe#/dl.7z",
-            "pre_install": [
-                "extract_7zip \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
-                "Remove-Item \"$dir\\`$PLUGINSDIR\" -Recurse"
-            ]
+            "installer": {
+                "script": [
+                    "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
+                    "Remove-Item \"$dir\\`$PLUGINSDIR\" -Recurse"
+                ]
+            }
         }
     },
     "shortcuts": [
@@ -20,5 +22,14 @@
             "Unity Hub.exe",
             "Unity Hub"
         ]
-    ]
+    ],
+    "checkver": {
+        "url": "https://unity3d.com/hub/whats-new",
+        "regex": "(?sm)Unity Hub Release Notes.*?name=\"([\\d.]+)\""
+    },
+    "autoupdate": {
+        "64bit": {
+            "url": "https://public-cdn.cloud.unity3d.com/hub/prod/UnityHubSetup.exe#/dl.7z"
+        }
+    }
 }
