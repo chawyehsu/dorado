@@ -1,21 +1,25 @@
 {
     "homepage": "https://github.com/zzzgydi/clash-verge",
     "description": "A Clash GUI based on tauri",
-    "version": "0.0.22",
-    "license": "GPL-3.0",
-    "url": "https://github.com/zzzgydi/clash-verge/releases/download/v0.0.22/Clash.Verge_0.0.22_x64_en-US.msi",
-    "hash": "a99fee7d4935e7a96c083bfddb37a1768c8c42f0a7b472d5e441296f1d8e4371",
-    "extract_dir": "PFiles\\Clash Verge",
+    "version": "1.0.1",
+    "license": "GPL-3.0-only",
+    "url": "https://github.com/zzzgydi/clash-verge/releases/download/v1.0.1/Clash.Verge_1.0.1_x64_portable.zip",
+    "hash": "c87820261e71f8a3f79d422d320391cdf97e293e36ae889d15c55f33317e1251",
     "shortcuts": [
         [
             "Clash Verge.exe",
             "Clash Verge"
         ]
     ],
-    "checkver": {
-        "github": "https://github.com/zzzgydi/clash-verge/releases"
-    },
+    "persist": ".config",
+    "post_install": [
+        "# https://github.com/zzzgydi/clash-verge/issues/21#issuecomment-1097467046=",
+        "if (!(Test-Path \"$persist_dir\\.config\\PORTABLE\")) {",
+        "    New-Item -Path \"$persist_dir\\.config\\PORTABLE\" -ItemType file | Out-Null",
+        "}"
+    ],
+    "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/zzzgydi/clash-verge/releases/download/v$version/clash-verge_0.0.21_x64_en-US.msi"
+        "url": "https://github.com/zzzgydi/clash-verge/releases/download/v$version/Clash.Verge_$version_x64_portable.zip"
     }
 }
