@@ -8,9 +8,20 @@
     "psmodule": {
         "name": "scoop-completion"
     },
-    "post_install": "Import-Module $env:USERPROFILE\\scoop\\modules\\scoop-completion",
-    "notes": [
-        "To enable completion autoload, you need to add scoop-completion module to PowerShell $PROFILE by running:",
-        "Add-Content -Path $Profile -Value \"`nImport-Module $env:USERPROFILE\\scoop\\modules\\scoop-completion\""
-    ]
+    "post_install": [
+        "Import-Module scoop-completion",
+        "if (!(test-path $profile)) {",
+        "    New-Item -Path $profile -Value \"Import-Module scoop-completion\" -ItemType File -Force | Out-Null",
+        "} else {",
+        "    Add-Content -Path $profile -Value \"`nImport-Module scoop-completion\" -NoNewLine",
+        "}"
+    ],
+    "uninstaller":{
+        "script":[
+            "function ClearProfile([string] $content) {",
+            "    ((Get-Content -Path $profile -raw) -replace $content,'').trim() | Set-Content $profile -NoNewLine",
+            "}",
+            "ClearProfile 'Import-Module scoop-completion'"
+        ]
+    }
 }
