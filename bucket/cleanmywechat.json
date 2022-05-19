@@ -5,6 +5,12 @@
     "license": "No license",
     "url": "https://github.com/blackboxo/CleanMyWechat/releases/download/v2.0/CleanMyWechat.zip",
     "hash": "422698F788A8E4C886F09939AE6E3BCA9CD20681A7B9982CA659EFC46C6E0C48",
+    "extract_dir": "CleanMyWechat",
+    "pre_install":[
+        "if (!(Test-Path $persist_dir\\config.json)) {",
+        "    New-Item -Path $persist_dir\\config.json -Value $NULL -ItemType File -Force | Out-Null",
+        "}"
+    ],
     "persist": "config.json",
     "shortcuts": [
         [
