@@ -19,7 +19,7 @@
     "uninstaller":{
         "script":[
             "function ClearProfile([string] $content) {",
-            "    ((Get-Content -Path $profile -raw) -replace $content,'').trim() | Set-Content $profile -NoNewLine",
+            "    ((Get-Content -Path $profile -raw) -replace \"[\\r\\n]*$content\",'').trim() | Set-Content $profile -NoNewLine",
             "}",
             "ClearProfile 'Import-Module scoop-completion'"
         ]
