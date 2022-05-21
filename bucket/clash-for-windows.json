@@ -33,24 +33,19 @@
             "$runtimeCachePersist = \"$persist_dir\\clash_win\"",
             "if (Test-Path $runtimeCachePersist) {",
             "    Remove-Item $runtimeCache -Force -Recurse -ErrorAction SilentlyContinue",
-            "    New-Item -Type Junction -Path $runtimeCache -Target $runtimeCachePersist | Out-Null",
             "} else {",
             "    if (Test-Path $runtimeCache) {",
-            "        Move-Item $runtimeCache $runtimeCachePersist -Force",
-            "        New-Item -Type Junction -Path $runtimeCache -Target $runtimeCachePersist | Out-Null",
+            "        Move-Item $runtimeCache $persist_dir -Force",
+            "    } else {",
+            "        ensure $runtimeCachePersist | Out-Null",
             "    }",
-            "}"
+            "}",
+            "New-Item -Type Junction -Path $runtimeCache -Target $runtimeCachePersist | Out-Null"
         ]
     },
     "uninstaller": {
         "script": [
-            "$runtimeCache = \"$env:APPDATA\\clash_win\"",
-            "$runtimeCachePersist = \"$persist_dir\\clash_win\"",
-            "if (!(Test-Path $runtimeCachePersist)) {",
-            "    Move-Item $runtimeCache $runtimeCachePersist -Force",
-            "} else {",
-            "    Remove-Item $runtimeCache -Force -Recurse -ErrorAction SilentlyContinue",
-            "}"
+            "Remove-Item \"$env:APPDATA\\clash_win\" -Force -Recurse -ErrorAction SilentlyContinue"
         ]
     },
     "shortcuts": [
