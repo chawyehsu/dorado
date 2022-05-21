@@ -20,7 +20,7 @@
             "    if (Test-Path $UserData) {",
             "        Move-Item $UserData $persist_dir -Force",
             "    } else {",
-            "        ensure $UserDataPersist | Out-Null",
+            "        New-Item $UserDataPersist -Type Directory -Force | Out-Null",
             "    }",
             "}",
             "New-Item -Type Junction -Path $UserData -Target $UserDataPersist | Out-Null"
