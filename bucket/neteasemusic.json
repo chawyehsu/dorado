@@ -8,7 +8,30 @@
     },
     "url": "https://d1.music.126.net/dmusic/cloudmusicsetup2.9.9.199909.exe#/dl.7z",
     "hash": "dfa07efeb984fe10dc2527461a4ea34121f3d8b42b5cda6ee61beabec12e9e2e",
-    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\" -Force -Recurse",
+    "installer":{
+        "script":[
+            "Get-ChildItem \"$dir\\redist_packages\" | Move-Item -Destination \"$dir\" -Force",
+            "ensure $persist_dir | Out-Null",
+            "$UserData = \"$env:LOCALAPPDATA\\Netease\\CloudMusic\"",
+            "$UserDataPersist = \"$persist_dir\\CloudMusic\"",
+            "if (Test-Path $UserDataPersist) {",
+            "    Remove-Item $UserData -Force -Recurse -ErrorAction SilentlyContinue",
+            "} else {",
+            "    if (Test-Path $UserData) {",
+            "        Move-Item $UserData $persist_dir -Force",
+            "    } else {",
+            "        ensure $UserDataPersist | Out-Null",
+            "    }",
+            "}",
+            "New-Item -Type Junction -Path $UserData -Target $UserDataPersist | Out-Null"
+        ]
+    },
+    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\",\"$dir\\redist_packages\" -Force -Recurse",
+    "uninstaller": {
+        "script": [
+            "Remove-Item \"$env:LOCALAPPDATA\\Netease\\CloudMusic\" -Force -Recurse -ErrorAction SilentlyContinue"
+        ]
+    },
     "bin": "cloudmusic.exe",
     "shortcuts": [
         [
@@ -23,5 +46,5 @@
     "autoupdate": {
         "url": "https://d1.music.126.net/dmusic/cloudmusicsetup$version$matchBug.exe#/dl.7z"
     },
-    "notes": "Scoop doesn't persist your CloudMusic data, they are still storaged in '%LOCALAPPDATA%\\Netease\\CloudMusic'."
+    "notes": "User data are now saved into '$persist_dir\\CloudMusic\\' and persisted by Scoop."
 }
