@@ -10,11 +10,14 @@
     },
     "post_install": [
         "Import-Module scoop-completion",
-        "if (!(test-path $profile)) {",
-        "    New-Item -Path $profile -Value \"Import-Module scoop-completion\" -ItemType File -Force | Out-Null",
-        "} else {",
-        "    Add-Content -Path $profile -Value \"`nImport-Module scoop-completion\" -NoNewLine",
-        "}"
+        "function AddtoProfile([string] $content) {",
+        "    if (!(test-path $profile)) {",
+        "        New-Item -Path $profile -Value \"$content\" -ItemType File -Force | Out-Null",
+        "    } else {",
+        "        Add-Content -Path $profile -Value \"`n$content\" -NoNewLine",
+        "    }",
+        "}",
+        "AddtoProfile 'Import-Module scoop-completion'"
     ],
     "uninstaller":{
         "script":[
