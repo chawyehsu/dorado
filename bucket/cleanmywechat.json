@@ -10,18 +10,24 @@
         }
     },
     "extract_dir": "CleanMyWechat",
-    "pre_install":[
-        "if (!(Test-Path $persist_dir\\config.json)) {",
-        "    New-Item -Path $persist_dir\\config.json -Value $NULL -ItemType File -Force | Out-Null",
-        "}"
-    ],
-    "persist": "config.json",
+    "installer": {
+        "script": [
+            "ensure $persist_dir",
+            "Get-ChildItem -Path \"$persist_dir\" -Filter \"config.json\" -File | Move-Item -Destination \"$dir\" -Force"
+        ]
+    },
     "shortcuts": [
         [
             "start.exe",
             "CleanMyWechat"
         ]
     ],
+    "uninstaller": {
+        "script": [
+            "Get-ChildItem -Path \"$persist_dir\" -Filter \"config.json\" | Remove-Item -Force",
+            "Get-ChildItem -Path \"$dir\" -Filter \"config.json\" -File | Move-Item -Destination \"$persist_dir\" -Force"
+        ]
+    },
     "checkver":"github",
     "autoupdate": {
         "architecture": {
