@@ -1,12 +1,12 @@
 {
     "homepage": "https://www.binance.com/",
     "description": "Binance's cryptocurrency exchange. Trade. Anywhere.",
-    "version": "1.35.0",
+    "version": "1.36.0",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://ftp.binance.com/electron-desktop/windows/production/binance-setup-1.35.0.exe#/binance-setup.7z",
-            "hash": "sha512:a71e201d114b94d43d7538f12491222fed94d0f9bd0feee53894b5b405539633f35f5a4cc37df35d08b57f24071f8459b955a5c306f00f71da33af72580f3d6f",
+            "url": "https://ftp.binance.com/electron-desktop/windows/production/binance-setup-1.36.0.exe#/binance-setup.7z",
+            "hash": "sha512:5f55bc321662056e54cb62452a5e29a834aef2cbe7573f8c02f04f3174cb0ff10d0c03e96d467daa0173dd7a0da34306e505b14969a31b382e73cfe20a62f767",
             "installer": {
                 "script": [
                     "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
