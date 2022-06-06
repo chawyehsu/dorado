@@ -1,0 +1,40 @@
+{
+    "homepage": "https://github.com/mamba-org/mamba",
+    "description": "Micromamba is a tiny version of mamba, the fast conda package installer.",
+    "version": "0.24.0-0",
+    "license": "BSD-3-Clause",
+    "architecture": {
+        "64bit": {
+            "url": "https://anaconda.org/conda-forge/micromamba/0.24.0/download/win-64/micromamba-0.24.0-0.tar.bz2",
+            "hash": "md5:cd6853d1e61b354dd3ad20455d5f2040"
+        }
+    },
+    "extract_dir": "Library\\bin",
+    "bin": [
+        "micromamba.exe",
+        [
+            "micromamba.exe",
+            "umamba"
+        ]
+    ],
+    "env_set": {
+        "MAMBA_ROOT_PREFIX": "$dir\\mamba"
+    },
+    "post_install": "Remove-Item \"$dir\\Library\" -Force",
+    "persist": "mamba",
+    "checkver": {
+        "url": "https://api.anaconda.org/release/conda-forge/micromamba/latest",
+        "regex": "win-64/micromamba-([\\d.-]+).tar.bz2"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://anaconda.org/conda-forge/micromamba/$matchHead/download/win-64/micromamba-$version.tar.bz2",
+                "hash": {
+                    "url": "https://api.anaconda.org/release/conda-forge/micromamba/latest",
+                    "regex": "(?sm)win-64/micromamba-$version.tar.bz2.*?$md5"
+                }
+            }
+        }
+    }
+}
