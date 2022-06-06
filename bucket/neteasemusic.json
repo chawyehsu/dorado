@@ -9,9 +9,21 @@
     "url": "https://d1.music.126.net/dmusic/cloudmusicsetup2.9.9.199909.exe#/dl.7z",
     "hash": "dfa07efeb984fe10dc2527461a4ea34121f3d8b42b5cda6ee61beabec12e9e2e",
     "installer": {
-        "script": "Get-ChildItem \"$dir\\redist_packages\" | Move-Item -Destination \"$dir\" -Force"
+        "script": [
+            "Get-ChildItem \"$dir\\redist_packages\" | Move-Item -Destination \"$dir\" -Force",
+            "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name dorado) scripts/DoradoUtils.psm1)",
+            "Mount-ExternalRuntimeData -Source \"$persist_dir\\appdata\" -Target \"$env:LOCALAPPDATA\\Netease\\CloudMusic\"",
+            "Remove-Module -Name DoradoUtils"
+        ]
     },
     "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\",\"$dir\\redist_packages\" -Force -Recurse",
+    "uninstaller": {
+        "script": [
+            "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name dorado) scripts/DoradoUtils.psm1)",
+            "Dismount-ExternalRuntimeData -Target \"$env:LOCALAPPDATA\\Netease\\CloudMusic\"",
+            "Remove-Module -Name DoradoUtils"
+        ]
+    },
     "bin": "cloudmusic.exe",
     "shortcuts": [
         [
