@@ -1,16 +1,16 @@
 {
     "homepage": "https://dotnet.microsoft.com/",
     "description": "The dotnet desktop runtime enables you to run dotnet desktop applications. This release includes the .NET Core Runtime, you do not need to install it separately.",
-    "version": "6.0.5",
+    "version": "6.0.6",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/6.0.5/windowsdesktop-runtime-6.0.5-win-x64.exe",
-            "hash": "sha512:5eb1537295cdb513197419c311777229fd43af6cea0ef6134f9990b32b8ac26aa51139f2c0b63d9cdfb6d753dd9db6f243b887ec511f15866157aa9e127b5cea"
+            "url": "https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/6.0.6/windowsdesktop-runtime-6.0.6-win-x64.exe",
+            "hash": "sha512:b4b5d989fdfca6c160fbd769660f91aec47b0cc0764de1d2fb3de9d1b86d5c789a84376497574ebd86fb6fb1c7a2a6aaf52661932e8be4f4c2efe8a47a60e469"
         },
         "32bit": {
-            "url": "https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/6.0.5/windowsdesktop-runtime-6.0.5-win-x86.exe",
-            "hash": "sha512:c62dfcd8f51ba6aa8d7fcf963aeb3e0756e06c2b106587b4cb0820d06ecf9dadb43555f94986941d1bd8e9d8a61fe2b2bb58fce48f9ecfd0783c0763c40babcb"
+            "url": "https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/6.0.6/windowsdesktop-runtime-6.0.6-win-x86.exe",
+            "hash": "sha512:8de470e216dd3066976e916f887697817e2245e7ea3db68326356c959abe0bb5dd408f889d154718cc316f046cc8b592ed9022c164a8f495448b6deed3cd9d24"
         }
     },
     "depends": "dark",
