@@ -1,0 +1,32 @@
+{
+    "version": "1.4.0",
+    "description": "A simple DNS forwarder that can make life easier",
+    "homepage": "https://github.com/IrineSistiana/mosdns-cn",
+    "license": "GPL-3.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/IrineSistiana/mosdns-cn/releases/download/v1.4.0/mosdns-cn-windows-amd64.zip",
+            "hash": "beead3445f4cb14b1891be77fd803d0915e65dfb2baa55a9f175c49c585a77fd"
+        },
+        "32bit": {
+            "url": "https://github.com/IrineSistiana/mosdns-cn/releases/download/v1.4.0/mosdns-cn-windows-386.zip",
+            "hash": "2fa1eacfef143f34a35618c13b0fb27b663b765a73a94aa4f7f01f18d99e2101"
+        }
+    },
+    "bin": "mosdns-cn.exe",
+    "persist": "config-template.yaml",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/IrineSistiana/mosdns-cn/releases/download/v$version/mosdns-cn-windows-amd64.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/IrineSistiana/mosdns-cn/releases/download/v$version/mosdns-cn-windows-386.zip"
+            }
+        },
+        "hash": {
+            "url": "https://github.com/IrineSistiana/mosdns-cn/releases/download/v$version/mosdns-cn_$version_checksums.txt"
+        }
+    }
+}
