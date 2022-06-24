@@ -1,10 +1,10 @@
 {
     "homepage": "https://www.figma.com/",
     "description": "Design, prototype, and gather feedback all in one place with Figma.",
-    "version": "116.0.4",
+    "version": "116.0.5",
     "license": "Proprietary",
     "url": "https://desktop.figma.com/win/FigmaSetup.exe#/dl.7z",
-    "hash": "aee4f3479ed21ae83fbf53b4c0c2c320715309c28d0269e923c9e457b14fde99",
+    "hash": "ea84657f6aa416350099d2448dae76582a94615ce0e98b48b03c22f52aece50f",
     "installer": {
         "script": "Expand-7zipArchive -Path \"$dir\\Figma-*-full.nupkg\" -ExtractDir 'lib\\net45' -Removal"
     },
