@@ -17,6 +17,19 @@
             }
         }
     },
+    "post_install": [
+        "Write-Host \"Registering unityhub:// protocol handler\"",
+        "$regpath = \"HKCU:\\SOFTWARE\\Classes\\unityhub\"",
+        "New-Item -Path $regpath -Value \"URL:unityhub\" -Force | Out-Null",
+        "New-ItemProperty -Path $regpath -Name \"URL Protocol\" -PropertyType String -Force | Out-Null",
+        "New-Item -Path \"$regpath\\shell\\Open\\command\" -Value \"`\"$dir\\Unity Hub.exe`\" `\"%1`\"\" -Force| Out-Null"
+    ],
+    "uninstaller": {
+        "script": [
+            "Write-Host \"Unregistering unityhub:// protocol handler\"",
+            "Remove-Item \"HKCU:\\SOFTWARE\\Classes\\unityhub\" -Recurse -Force"
+        ]
+    },
     "shortcuts": [
         [
             "Unity Hub.exe",
