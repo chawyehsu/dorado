@@ -1,0 +1,19 @@
+{
+    "version": "0.18",
+    "description": "A tool that makes shared subtitles, search subtitles, and downloading subtitles easier",
+    "homepage": "https://github.com/foxofice/sub_share",
+    "license": "GPL-3.0-only",
+    "url": "https://github.com/foxofice/sub_share/releases/download/0.18/Subtitles.DataBase.v0.18.7z",
+    "hash": "3e50181e9241d2dc23e52f3a9bfee19bc21ee5c90b906879948d4c88dc727109",
+    "extract_dir": "Subtitles DataBase",
+    "shortcuts": [
+        [
+            "sub_db.exe",
+            "Subtitles DataBase"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/foxofice/sub_share/releases/download/$version/Subtitles.DataBase.v$version.7z"
+    }
+}
