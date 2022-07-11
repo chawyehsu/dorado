@@ -1,0 +1,18 @@
+{
+    "version": "0.4.3.61",
+    "description": "A traditional-simplified subtitles conversion tool",
+    "homepage": "https://github.com/xiaoxinpro/ChineseSubtitleConversionTool",
+    "license": "GPL-3.0-only",
+    "url": "https://github.com/xiaoxinpro/ChineseSubtitleConversionTool/releases/download/V0.4.3.61/ChineseSubtitleConversionTool.zip",
+    "hash": "d01ced100545b8c6743fc627a795842b4809655b58f5ab4c553cdd6f9929b187",
+    "shortcuts": [
+        [
+            "ChineseSubtitleConversionTool.exe",
+            "ChineseSubtitleConversionTool"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/xiaoxinpro/ChineseSubtitleConversionTool/releases/download/V$version/ChineseSubtitleConversionTool.zip"
+    }
+}
