@@ -1,0 +1,25 @@
+{
+    "version": "1.0.8.3",
+    "description": "专业的游戏加速器 免费加速海量游戏",
+    "homepage": "https://www.golink.com/",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://www.golink.com/protocol"
+    },
+    "url": "https://update.golink.com/download/GoLink_v1.0.8.3.exe#/dl.7z",
+    "hash": "eda0a4c4444a2d46dc64de7a08271c5b5c9eb98c4113924e006fad66d72a33a1",
+    "post_install": "@('$PLUGINSDIR', '[NSIS].nsi', '卸载GoLink加速器.exe.nsis') | ForEach-Object { Remove-Item \"$dir\\$_\" -Recurse -Force -ErrorAction SilentlyContinue }",
+    "shortcuts": [
+        [
+            "GoLink.exe",
+            "GoLink"
+        ]
+    ],
+    "checkver": {
+        "url": "https://www.golink.com/",
+        "regex": "(?sm)电脑端下载.*?([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://update.golink.com/download/GoLink_v$version.exe#/dl.7z"
+    }
+}
