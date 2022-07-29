@@ -5,7 +5,7 @@
         "identifier": "Freeware",
         "url": "https://unity3d.com/legal/terms-of-service"
     },
-    "version": "3.1.2",
+    "version": "3.2.0",
     "architecture": {
         "64bit": {
             "url": "https://public-cdn.cloud.unity3d.com/hub/prod/UnityHubSetup.exe#/dl.7z",
@@ -37,8 +37,8 @@
         ]
     ],
     "checkver": {
-        "url": "https://unity3d.com/hub/whats-new",
-        "regex": "(?sm)Unity Hub Release Notes.*?name=\"([\\d.]+)\""
+        "url": "https://unity.com/unity-hub/release-notes",
+        "regex": "class=\"active\">([\\d.]+)</a>"
     },
     "autoupdate": {
         "64bit": {
