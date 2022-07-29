@@ -17,18 +17,16 @@
     "bin": [
         [
             "firefox.exe",
-            "firefox-beta",
-            "-profile \"$dir\\profile\""
+            "firefox-beta"
         ]
     ],
     "shortcuts": [
         [
             "firefox.exe",
-            "Firefox Beta",
-            "-profile \"$dir\\profile\""
+            "Firefox Beta"
         ]
     ],
-    "persist": "profile",
+    "persist": "profile-portable",
     "checkver": {
         "url": "https://aus5.mozilla.org/update/6/Firefox/93.0/_/WINNT_x86_64-msvc-x64/en-US/beta/_/_/_/_/update.xml",
         "xpath": "/updates/update/patch/@URL",
@@ -51,5 +49,6 @@
                 }
             }
         }
-    }
+    },
+    "notes": "To recover persisted profile, you need to open the Profile Manager with `firefox-beta -P` and create by selecting the portable profile directory."
 }

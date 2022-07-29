@@ -14,21 +14,14 @@
         }
     },
     "extract_dir": "core",
-    "bin": [
-        [
-            "firefox.exe",
-            "firefox",
-            "-profile \"$dir\\profile\""
-        ]
-    ],
+    "bin": "firefox.exe",
     "shortcuts": [
         [
             "firefox.exe",
-            "Mozilla Firefox",
-            "-profile \"$dir\\profile\""
+            "Mozilla Firefox"
         ]
     ],
-    "persist": "profile",
+    "persist": "profile-portable",
     "checkver": {
         "url": "https://www.mozilla.org/zh-CN/firefox/all/",
         "re": "data-latest-firefox=\"([\\d.]+)\""
@@ -50,5 +43,6 @@
                 }
             }
         }
-    }
+    },
+    "notes": "To recover persisted profile, you need to open the Profile Manager with `firefox -P` and create by selecting the portable profile directory."
 }
