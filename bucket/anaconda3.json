@@ -53,6 +53,9 @@
         }
     },
     "notes": [
+        "This variant does not add the default venv into your PATH unless you activate it with 'conda activate base'.",
+        "You may choose to install the one from the official bucket if you do not care about python PATH pollution.",
+        "",
         "Conda base env is not persisted by Scoop, packages installed to the base env will be removed when upgrading the app.",
         "We advice to setup 'envs_dirs' to use a seperated path like '~/.conda/envs' and avoid using the base env.",
         "https://conda.io/projects/conda/en/latest/user-guide/configuration/use-condarc.html#specify-environment-directories-envs-dirs",
