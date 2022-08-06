@@ -3,6 +3,10 @@
     "description": "A Windows GUI based on Clash",
     "version": "0.19.26",
     "license": "MIT",
+    "notes": [
+        "Run following script AS ADMINISTRATOR to update firewall rules for system stack in TUN mode:",
+        "$dir\\update-firewall-rules.ps1"
+    ],
     "architecture": {
         "64bit": {
             "url": "https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.19.26/Clash.for.Windows.Setup.0.19.26.exe#/dl.7z",
@@ -34,6 +38,25 @@
             "Remove-Module -Name DoradoUtils"
         ]
     },
+    "post_install":[
+        "$ScriptsDir = $(Find-BucketDirectory -Root -Name dorado | Join-Path -ChildPath \"scripts\\clash-for-windows\")",
+        "$CFWPath = $(Split-Path \"$dir\" | Join-Path -ChildPath \"$version\\Clash for Windows.exe\")",
+        "if ($architecture -eq '32bit') {",
+        "    $CorePath = $(Split-Path \"$dir\" | Join-Path -ChildPath \"$version\\resources\\static\\files\\win\\ia32\\clash-win32.exe\")",
+        "} else {",
+        "    $CorePath = $(Split-Path \"$dir\" | Join-Path -ChildPath \"$version\\resources\\static\\files\\win\\x64\\clash-win64.exe\")",
+        "}",
+        "if (Test-Path \"$ScriptsDir\\update-firewall-rules.ps1\") {",
+        "    Copy-Item \"$ScriptsDir\\update-firewall-rules.ps1\" \"$dir\\\"",
+        "    $Content = Get-Content \"$dir\\update-firewall-rules.ps1\"",
+        "    $Content = $Content.Replace('$version', \"$version\")",
+        "    $Content = $Content.Replace('$CFWPath', \"$CFWPath\")",
+        "    $Content = $Content.Replace('$CorePath', \"$CorePath\")",
+        "    $content | Set-Content -Path \"$dir\\update-firewall-rules.ps1\"",
+        "} else {",
+        "    Write-Host 'Missing files, please update scoop buckets and re-install this app' -ForegroundColor Red",
+        "}"
+    ],
     "uninstaller": {
         "script": [
             "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name dorado) scripts/DoradoUtils.psm1)",
