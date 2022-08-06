@@ -39,12 +39,12 @@
         ]
     },
     "post_install":[
-        "$ScriptsDir = $(Find-BucketDirectory -Root -Name dorado | Join-Path -ChildPath \"scripts\\clash-for-windows\")",
-        "$CFWPath = $(Split-Path \"$dir\" | Join-Path -ChildPath \"$version\\Clash for Windows.exe\")",
+        "$ScriptsDir = Find-BucketDirectory -Root -Name dorado | Join-Path -ChildPath \"scripts\\clash-for-windows\"",
+        "$CFWPath = Split-Path \"$dir\" | Join-Path -ChildPath \"$version\\Clash for Windows.exe\"",
         "if ($architecture -eq '32bit') {",
-        "    $CorePath = $(Split-Path \"$dir\" | Join-Path -ChildPath \"$version\\resources\\static\\files\\win\\ia32\\clash-win32.exe\")",
+        "    $CorePath = Split-Path \"$dir\" | Join-Path -ChildPath \"$version\\resources\\static\\files\\win\\ia32\\clash-win32.exe\"",
         "} else {",
-        "    $CorePath = $(Split-Path \"$dir\" | Join-Path -ChildPath \"$version\\resources\\static\\files\\win\\x64\\clash-win64.exe\")",
+        "    $CorePath = Split-Path \"$dir\" | Join-Path -ChildPath \"$version\\resources\\static\\files\\win\\x64\\clash-win64.exe\"",
         "}",
         "if (Test-Path \"$ScriptsDir\\update-firewall-rules.ps1\") {",
         "    Copy-Item \"$ScriptsDir\\update-firewall-rules.ps1\" \"$dir\\\"",
