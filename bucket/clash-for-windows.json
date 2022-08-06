@@ -52,7 +52,7 @@
         "    $Content = $Content.Replace('$version', \"$version\")",
         "    $Content = $Content.Replace('$CFWPath', \"$CFWPath\")",
         "    $Content = $Content.Replace('$CorePath', \"$CorePath\")",
-        "    $content | Set-Content -Path \"$dir\\update-firewall-rules.ps1\"",
+        "    $Content | Set-Content -Path \"$dir\\update-firewall-rules.ps1\"",
         "} else {",
         "    Write-Host 'Missing files, please update scoop buckets and re-install this app' -ForegroundColor Red",
         "}"
