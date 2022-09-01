@@ -1,14 +1,29 @@
 {
     "homepage": "https://music.163.com/",
     "description": "The official NetEase Cloud Music client.",
-    "version": "2.9.8.199759",
+    "version": "2.10.3.200198",
     "license": {
         "identifier": "EULA",
         "url": "https://music.163.com/html/web2/service.html"
     },
-    "url": "https://d1.music.126.net/dmusic/cloudmusicsetup2.9.8.199759.exe#/dl.7z",
-    "hash": "122f8a47abffafa1f1e926c3496975b0fd6e28e0b2c6290a2621339bea98946e",
-    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\" -Force -Recurse",
+    "url": "https://d1.music.126.net/dmusic/NeteaseCloudMusic_Music_official_2.10.3.200198.exe#/dl.7z",
+    "hash": "913457ec7a4d8ced097b18be1d2a987b6cc8426c70bf564ce56db786f3629021",
+    "installer": {
+        "script": [
+            "Get-ChildItem \"$dir\\redist_packages\" | Move-Item -Destination \"$dir\" -Force",
+            "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name dorado) scripts/DoradoUtils.psm1)",
+            "Mount-ExternalRuntimeData -Source \"$persist_dir\\appdata\" -Target \"$env:LOCALAPPDATA\\Netease\\CloudMusic\"",
+            "Remove-Module -Name DoradoUtils"
+        ]
+    },
+    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\",\"$dir\\redist_packages\" -Force -Recurse",
+    "uninstaller": {
+        "script": [
+            "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name dorado) scripts/DoradoUtils.psm1)",
+            "Dismount-ExternalRuntimeData -Target \"$env:LOCALAPPDATA\\Netease\\CloudMusic\"",
+            "Remove-Module -Name DoradoUtils"
+        ]
+    },
     "bin": "cloudmusic.exe",
     "shortcuts": [
         [
@@ -18,10 +33,9 @@
     ],
     "checkver": {
         "script": "return (iwr -useb 'https://music.163.com/api/pc/package/download/latest' -Method Head).Headers['x-nos-object-name']",
-        "regex": "cloudmusicsetup(?<version>[\\d.]+\\d)(?<bug>.*?).exe"
+        "regex": "(?<version>[\\d.]+\\d).exe"
     },
     "autoupdate": {
-        "url": "https://d1.music.126.net/dmusic/cloudmusicsetup$version$matchBug.exe#/dl.7z"
-    },
-    "notes": "Scoop doesn't persist your CloudMusic data, they are still storaged in '%LOCALAPPDATA%\\Netease\\CloudMusic'."
+        "url": "https://d1.music.126.net/dmusic/NeteaseCloudMusic_Music_official_$version.exe#/dl.7z"
+    }
 }

@@ -1,10 +1,10 @@
 {
-    "homepage": "https://www.epicgames.com/store/",
+    "homepage": "https://store.epicgames.com/",
     "description": "The Launcher of the digital video game platform operated by Epic Games.",
     "version": "13.3.0",
     "license": {
         "identifier": "Proprietary",
-        "url": "https://www.epicgames.com/store/en-US/eula"
+        "url": "https://store.epicgames.com/en-US/eula"
     },
     "url": "https://epicgames-download1.akamaized.net/Builds/UnrealEngineLauncher/Installers/Win32/EpicInstaller-13.3.0.msi",
     "hash": "aa81f2cc1813c01bc43ecc82380e0ddbc5f6d39e8bf6e3680e92354393930643",
@@ -16,6 +16,7 @@
         ]
     ],
     "checkver": {
+        "url": "https://example.com",
         "script": [
             "$url = 'https://launcher-public-service-prod06.ol.epicgames.com/launcher/api/installer/download/EpicGamesLauncherInstaller.msi'",
             "return (iwr -useb $url -Method Head).Headers['Content-Disposition']"

@@ -1,13 +1,13 @@
 {
-    "version": "3.3.0",
+    "version": "3.9.0",
     "description": "The official client for Alibaba's cloud dirve service",
     "homepage": "https://www.aliyundrive.com/",
     "license": {
         "identifier": "EULA",
         "url": "https://www.aliyundrive.com/protocol/service"
     },
-    "url": "https://tongyongxiezuo.oss-cn-zhangjiakou.aliyuncs.com/desktop/aDrive-desktop/3.3.0/update/win32/ia32/aDrive-3.3.0.exe#/aDrive-3.3.0.7z",
-    "hash": "sha512:aedff96b284500cf8d9663147bb911c1b83325f6a82f25269b62df2b3db87bb97b00d26884ab9cb7e2e8121fcf9a9d43139f491ece74ab6343f1d44219756be2",
+    "url": "https://cdn.aliyundrive.net/downloads/apps/desktop/update/3.9.0/win32/ia32/aDrive-3.9.0.exe#/aDrive-3.9.0.7z",
+    "hash": "sha512:62b494952b50cbf6e87af01b682df0a61e7ab8ec39a7b4934ac4bda7f689b070311b7f357172b45573bf678fff831da047718da891e4f21aa6cbf991aaa8ba1a",
     "post_install": [
         "@('$PLUGINSDIR', '$TEMP') | ForEach-Object {",
         "    Remove-Item \"$dir\\$_\" -Recurse -Force",
@@ -24,7 +24,7 @@
         "re": "version: ([\\d.]+)"
     },
     "autoupdate": {
-        "url": "https://tongyongxiezuo.oss-cn-zhangjiakou.aliyuncs.com/desktop/aDrive-desktop/$version/update/win32/ia32/aDrive-$version.exe#/aDrive-$version.7z",
+        "url": "https://cdn.aliyundrive.net/downloads/apps/desktop/update/$version/win32/ia32/aDrive-$version.exe#/aDrive-$version.7z",
         "hash": {
             "url": "https://g.alicdn.com/aliyun-drive-fe/aliyun-drive-desktop-version/$version/win32/ia32/latest.yml",
             "mode": "extract",

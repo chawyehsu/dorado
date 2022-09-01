@@ -1,34 +1,32 @@
 {
-    "version": "101.0b6",
+    "version": "105.0b5",
     "description": "Developer builds of Firefox: the popular open source web browser.",
     "homepage": "https://www.mozilla.org/zh-CN/firefox/developer/",
     "license": "MPL-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://download-installer.cdn.mozilla.net/pub/devedition/releases/101.0b6/win64/zh-CN/Firefox%20Setup%20101.0b6.exe#/firefox-developer.7z",
-            "hash": "sha512:53ba37ca8f80ff7eda0f09f07895235f08647106700d3e63627164a786608a35661b0891374a59eb96a52586953864abb379da5fce32ea385659abe244f0e5ca"
+            "url": "https://download-installer.cdn.mozilla.net/pub/devedition/releases/105.0b5/win64/zh-CN/Firefox%20Setup%20105.0b5.exe#/firefox-developer.7z",
+            "hash": "sha512:3cff00030657768a324387e59ee95a5a959e6c1968a375d599936775d6d8d719895a1e60abd8c03c26337cfe438c9f4f10bd5291f39b7edd5ef9855bd12d6a4e"
         },
         "32bit": {
-            "url": "https://download-installer.cdn.mozilla.net/pub/devedition/releases/101.0b6/win32/zh-CN/Firefox%20Setup%20101.0b6.exe#/firefox-developer.7z",
-            "hash": "sha512:ea55107bfb19899cd5100d459358c05ddeed616a15f99d5453249db3bafb925aba4a088019712af50fe84fb9e3de764ed4a66c2e0833cd0439a823fe29fa7e1d"
+            "url": "https://download-installer.cdn.mozilla.net/pub/devedition/releases/105.0b5/win32/zh-CN/Firefox%20Setup%20105.0b5.exe#/firefox-developer.7z",
+            "hash": "sha512:a0df6a368462fb07224941ceb16b53cec691f16519a0326ae5821e4243db3bba83221247cde59c561bf8da22cfe2a24073a3cc8b72432e8215aa1351cc81a79d"
         }
     },
     "extract_dir": "core",
     "bin": [
         [
             "firefox.exe",
-            "firefox-developer",
-            "-profile \"$dir\\profile\""
+            "firefox-developer"
         ]
     ],
     "shortcuts": [
         [
             "firefox.exe",
-            "Firefox Developer Edition",
-            "-profile \"$dir\\profile\""
+            "Firefox Developer Edition"
         ]
     ],
-    "persist": "profile",
+    "persist": "profile-portable",
     "checkver": {
         "url": "https://aus5.mozilla.org/update/6/Firefox/93.0/_/WINNT_x86_64-msvc-x64/zh-CN/aurora/_/_/_/_/update.xml",
         "xpath": "/updates/update/patch/@URL",
@@ -51,5 +49,6 @@
                 }
             }
         }
-    }
+    },
+    "notes": "To recover persisted profile, you need to open the Profile Manager with `firefox-developer -P` and create by selecting the portable profile directory."
 }

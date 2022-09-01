@@ -1,41 +1,26 @@
 {
     "homepage": "https://y.qq.com/",
     "description": "The official QQ Music client",
-    "version": "1851",
+    "version": "1882",
     "license": "Proprietary",
-    "url": "https://dldir1.qq.com/music/clntupate/QQMusic_Setup_1851.exe#/dl.7z",
-    "hash": "md5:a38168dd7d7df17025b5ee283fac3cf7",
+    "url": "https://dldir1.qq.com/music/clntupate/QQMusic_Setup_1882.exe#/dl.7z",
+    "hash": "md5:21ecd1f19d12defd6b4d7fc8cc92af63",
     "installer": {
         "script": [
             "# simulate instok check",
             "$helperScript = $(Join-Path $(Find-BucketDirectory -Root -Name dorado) scripts/qqmusic/instok)",
             "Copy-Item -Path $helperScript -Destination $dir",
             "# handle runtime cache",
-            "if (!(Test-Path $persist_dir)) {",
-            "    New-Item $persist_dir -Type Directory -Force | Out-Null",
-            "}",
-            "$runtimeCache = \"$env:APPDATA\\Tencent\\QQMusic\"",
-            "$runtimeCachePersist = \"$persist_dir\\appdata\"",
-            "if (Test-Path $runtimeCachePersist) {",
-            "    Remove-Item $runtimeCache -Force -Recurse -ErrorAction SilentlyContinue",
-            "    New-Item -Type Junction -Path $runtimeCache -Target $runtimeCachePersist | Out-Null",
-            "} else {",
-            "    if (Test-Path $runtimeCache) {",
-            "        Move-Item $runtimeCache $runtimeCachePersist -Force",
-            "        New-Item -Type Junction -Path $runtimeCache -Target $runtimeCachePersist | Out-Null",
-            "    }",
-            "}"
+            "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name dorado) scripts/DoradoUtils.psm1)",
+            "Mount-ExternalRuntimeData -Source \"$persist_dir\\appdata\" -Target \"$env:APPDATA\\Tencent\\QQMusic\"",
+            "Remove-Module -Name DoradoUtils"
         ]
     },
     "uninstaller": {
         "script": [
-            "$runtimeCache = \"$env:APPDATA\\Tencent\\QQMusic\"",
-            "$runtimeCachePersist = \"$persist_dir\\appdata\"",
-            "if (!(Test-Path $runtimeCachePersist)) {",
-            "    Move-Item $runtimeCache $runtimeCachePersist -Force",
-            "} else {",
-            "    Remove-Item $runtimeCache -Force -Recurse -ErrorAction SilentlyContinue",
-            "}"
+            "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name dorado) scripts/DoradoUtils.psm1)",
+            "Dismount-ExternalRuntimeData -Target \"$env:APPDATA\\Tencent\\QQMusic\"",
+            "Remove-Module -Name DoradoUtils"
         ]
     },
     "shortcuts": [

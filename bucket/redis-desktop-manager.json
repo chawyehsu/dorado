@@ -2,9 +2,9 @@
     "homepage": "https://resp.app/",
     "description": "Cross-platform open source GUI for Redis (formerly Redis Desktop Manager)",
     "license": "GPL-3.0-only",
-    "version": "2022.3",
-    "url": "https://github.com/lework/RedisDesktopManager-Windows/releases/download/2022.3/resp-2022.3.zip",
-    "hash": "3dd96f08c00efa8c3c6cb0b9084342718ebcef1ffe0999c7070c2e05f90f7be1",
+    "version": "2022.4.2",
+    "url": "https://github.com/lework/RedisDesktopManager-Windows/releases/download/2022.4.2/resp-2022.4.2.zip",
+    "hash": "fc13ae25b5b3da8739da9f3ec7af56fefe3d9d224dcab59a2c93425c100876ad",
     "installer": {
         "script": [
             "Get-ChildItem \"$dir\\resp-*.exe\" | Rename-Item -NewName \"$dir\\installer.exe\"",

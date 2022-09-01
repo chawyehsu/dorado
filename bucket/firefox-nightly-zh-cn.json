@@ -1,34 +1,32 @@
 {
-    "version": "102.0a1.20220514065807",
+    "version": "106.0a1.20220831093258",
     "description": "Nightly builds of Firefox: the popular open source web browser.",
     "homepage": "https://www.mozilla.org/zh-CN/firefox/nightly/",
     "license": "MPL-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://archive.mozilla.org/pub/firefox/nightly/2022/05/2022-05-14-06-58-07-mozilla-central-l10n/firefox-102.0a1.zh-CN.win64.installer.exe#/firefox.7z",
-            "hash": "sha512:034497bef4600a18841922f309541aafadef34acc615c234e34e993a72192f5f15ef48f18c76720b5821f31fccd1da1b66db1185d35e4aaae95dd39e271d1883"
+            "url": "https://archive.mozilla.org/pub/firefox/nightly/2022/08/2022-08-31-09-32-58-mozilla-central-l10n/firefox-106.0a1.zh-CN.win64.installer.exe#/firefox.7z",
+            "hash": "sha512:f6a32bc6addb6d87dcc400164e1dd13500f260d7e44073a16d45565a6bf390da99d862e7c9d99ddd069c8afae0fa7830934bdf635b53caf2748a8314eac4b4b8"
         },
         "32bit": {
-            "url": "https://archive.mozilla.org/pub/firefox/nightly/2022/05/2022-05-14-06-58-07-mozilla-central-l10n/firefox-102.0a1.zh-CN.win32.installer.exe#/firefox.7z",
-            "hash": "sha512:2daa83c5b028b969ebb15f6a46173b2473ed5cd8abd41f67b553cc93353bdcc83bdfdd704d9a2fbc67736f9833f1793fd7e3477955d25f6899873c89327a374e"
+            "url": "https://archive.mozilla.org/pub/firefox/nightly/2022/08/2022-08-31-09-32-58-mozilla-central-l10n/firefox-106.0a1.zh-CN.win32.installer.exe#/firefox.7z",
+            "hash": "sha512:e3d3311cf3ed5efdeea03ff9f81675769d6c9577bdf3e6d7b68bf4bfd4d52e3e56c6647c5321b2bf5284f7873b26a643dc306417393bda27b6b12d6dedda414a"
         }
     },
     "extract_dir": "core",
     "bin": [
         [
             "firefox.exe",
-            "firefox-nightly",
-            "-profile \"$dir\\profile\""
+            "firefox-nightly"
         ]
     ],
     "shortcuts": [
         [
             "firefox.exe",
-            "Firefox Nightly",
-            "-profile \"$dir\\profile\""
+            "Firefox Nightly"
         ]
     ],
-    "persist": "profile",
+    "persist": "profile-portable",
     "checkver": {
         "url": "https://aus5.mozilla.org/update/6/Firefox/60.0/_/WINNT_x86_64-msvc-x64/zh-CN/nightly/_/_/_/_/update.xml",
         "regex": "appVersion=\"([\\w.]+)\".*?buildID=\"((?<yyyy>\\d{4})(?<mm>\\d{2})(?<dd>\\d{2})(?<hr>\\d{2})(?<mi>\\d{2})(?<se>\\d{2}))",
@@ -49,5 +47,6 @@
                 }
             }
         }
-    }
+    },
+    "notes": "To recover persisted profile, you need to open the Profile Manager with `firefox-nightly -P` and create by selecting the portable profile directory."
 }
