@@ -18,13 +18,13 @@
         ]
     },
     "env_add_path": [
-        "Library\\Developer\\Toolchains\\unknown-Asserts-development.xctoolchain\\usr\\bin",
-        "Library\\icu-69.1\\usr\\bin",
-        "Library\\Swift-development\\bin"
+        "Developer\\Toolchains\\unknown-Asserts-development.xctoolchain\\usr\\bin",
+        "icu-69.1\\usr\\bin",
+        "runtime-development\\usr\\bin"
     ],
     "env_set": {
-        "SDKROOT": "$dir\\Library\\Developer\\Platforms\\Windows.platform\\Developer\\SDKs\\Windows.sdk",
-        "DEVELOPER_DIR": "$dir\\Library\\Developer"
+        "SDKROOT": "$dir\\Developer\\Platforms\\Windows.platform\\Developer\\SDKs\\Windows.sdk",
+        "DEVELOPER_DIR": "$dir\\Developer"
     },
     "checkver": {
         "url": "https://dorado-api.deno.dev/swift-tmp",
