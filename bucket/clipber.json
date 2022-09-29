@@ -2,9 +2,9 @@
     "homepage": "https://home.clipber.com/",
     "description": "Clipboard tool",
     "license": "Shareware",
-    "version": "2.1.7",
-    "url": "https://dl.clipber.com/windows/copies_2_1_7.zip",
-    "hash": "42e94bc1e04d9d67a0d96350b78347a218d8c18eaf3664f6f4a386361c80e81d",
+    "version": "2.2.1",
+    "url": "https://dl.clipber.com/windows/copies_2_2_1.zip",
+    "hash": "66b6436a0009cc59b1b7fb4bb3e9b08493aeb3c3753d63a814db7e81385893e8",
     "shortcuts": [
         [
             "clipManager.exe",
@@ -12,7 +12,7 @@
         ]
     ],
     "checkver": {
-        "regex": "(?sm)win7.*?版本：([\\d.]+)"
+        "regex": "([\\d.]+)绿色版"
     },
     "autoupdate": {
         "url": "https://dl.clipber.com/windows/copies_$underscoreVersion.zip"
