@@ -2,7 +2,7 @@
     "homepage": "https://crystalmark.info/en/",
     "description": "CrystalDiskMark is a disk benchmark software.",
     "version": "8.0.4b",
-    "license": "BSD-3-Clause",
+    "license": "MIT",
     "url": "https://dotsrc.dl.osdn.net/osdn/crystaldiskmark/77539/CrystalDiskMark8_0_4bShizuku.zip",
     "hash": "ee15f4782258e8d64a050859d22fe72077e671bccda4608cb2953a1b44a47bd6",
     "architecture": {
@@ -45,7 +45,7 @@
     ],
     "checkver": {
         "url": "https://osdn.net/projects/crystaldiskmark/",
-        "regex": "releases/(?<release>[\\d]+)\">CrystalDiskMark ([\\w.]+)<"
+        "regex": "releases\\/(?<release>[\\d]+)\">CrystalDiskMark ([\\w.]+)<"
     },
     "autoupdate": {
         "url": "https://dotsrc.dl.osdn.net/osdn/crystaldiskmark/$matchRelease/CrystalDiskMark$underscoreVersionShizuku.zip",
