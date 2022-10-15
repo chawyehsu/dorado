@@ -45,7 +45,7 @@
     ],
     "checkver": {
         "url": "https://osdn.net/projects/crystaldiskmark/",
-        "regex": "releases/(?<release>[\\d]+)\">CrystalDiskMark ([\\w.]+)<"
+        "regex": "releases/(?<release>[\\d]+)\">CrystalDiskMark ([\\d.]+)<"
     },
     "autoupdate": {
         "url": "https://dotsrc.dl.osdn.net/osdn/crystaldiskmark/$matchRelease/CrystalDiskMark$underscoreVersionShizuku.zip",
