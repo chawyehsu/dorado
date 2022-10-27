@@ -12,7 +12,7 @@
     },
     "env_add_path": "bin",
     "checkver": {
-        "url": "https://github.com/brechtsanders/winlibs_mingw/releases",
+        "url": "https://api.github.com/repos/brechtsanders/winlibs_mingw/releases?per_page=20",
         "regex": "/tag/(?<gccVersion>[\\d.]+)-snapshot(?<date>[\\d]+)-(?<mingwVersion>[\\d.]+)-ucrt-(?<revision>[\\w]+)",
         "replace": "${gccVersion}-${mingwVersion}-snapshot${date}-ucrt-${revision}"
     },
