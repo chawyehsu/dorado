@@ -16,7 +16,7 @@
         ]
     ],
     "checkver": {
-        "url": "https://example.com",
+        "url": "https://github.com/chawyehsu/dorado",
         "script": [
             "$url = 'https://launcher-public-service-prod06.ol.epicgames.com/launcher/api/installer/download/EpicGamesLauncherInstaller.msi'",
             "return (iwr -useb $url -Method Head).Headers['Content-Disposition']"
