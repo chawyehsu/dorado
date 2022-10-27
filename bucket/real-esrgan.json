@@ -11,7 +11,7 @@
     },
     "bin": "realesrgan-ncnn-vulkan.exe",
     "checkver": {
-        "github": "https://github.com/xinntao/Real-ESRGAN",
+        "url": "https://api.github.com/repos/xinntao/Real-ESRGAN/releases?per_page=10",
         "regex": "v([\\d.]+)/realesrgan-ncnn-vulkan-(?<date>[\\d]{8})-windows"
     },
     "autoupdate": {
