@@ -11,10 +11,6 @@
                 [
                     "DiskInfo64S.exe",
                     "CrystalDiskInfo Shizuku Edition"
-                ],
-                [
-                    "DiskInfoA64S.exe",
-                    "CrystalDiskInfo Shizuku Edition (ARM)"
                 ]
             ]
         },
@@ -23,17 +19,21 @@
                 [
                     "DiskInfo32S.exe",
                     "CrystalDiskInfo Shizuku Edition"
-                ],
+                ]
+            ]
+        },
+        "arm64": {
+            "shortcuts": [
                 [
-                    "DiskInfoA32S.exe",
-                    "CrystalDiskInfo Shizuku Edition (ARM)"
+                    "DiskInfoA64S.exe",
+                    "CrystalDiskInfo Shizuku Edition"
                 ]
             ]
         }
     },
     "pre_install": [
-        "if(!(Test-Path \"$persist_dir\\DiskInfo.ini\")) {",
-        "Add-Content \"$dir\\DiskInfo.ini\" $null",
+        "if (!(Test-Path \"$persist_dir\\DiskInfo.ini\")) {",
+        "    New-Item \"$dir\\DiskInfo.ini\" -ItemType File | Out-Null",
         "}"
     ],
     "persist": [
@@ -42,7 +42,7 @@
     ],
     "checkver": {
         "url": "https://osdn.net/projects/crystaldiskinfo/",
-        "regex": "<a href=\"/projects/crystaldiskinfo/releases/(?<release>[\\d]*)\">CrystalDiskInfo ([\\d+\\.*]+)</a>"
+        "regex": "releases\\/(?<release>[\\d]+)\">CrystalDiskInfo ([\\w.]+)<"
     },
     "autoupdate": {
         "url": "https://dotsrc.dl.osdn.net/osdn/crystaldiskinfo/$matchRelease/CrystalDiskInfo$underscoreVersionShizuku.zip",
@@ -50,6 +50,5 @@
             "url": "https://osdn.net/projects/crystaldiskinfo/releases/rss",
             "xpath": "//osdn:file[@url='https://osdn.net/projects/crystaldiskinfo/downloads/$matchRelease/CrystalDiskInfo$underscoreVersionShizuku.zip/']/@sha256"
         }
-    },
-    "notes": "If you are using ARM SoC, run 'CrystalDiskInfo Shizuku Edition (ARM)' instead."
+    }
 }
