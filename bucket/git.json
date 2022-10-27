@@ -37,7 +37,7 @@
         "GIT_INSTALL_ROOT": "$dir"
     },
     "checkver": {
-        "github": "https://github.com/git-for-windows/git",
+        "url": "https://api.github.com/repos/git-for-windows/git/releases/latest",
         "regex": "v([\\w.]+)/PortableGit-(?<full>[\\w.]+)-64-bit"
     },
     "autoupdate": {
