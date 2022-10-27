@@ -1,0 +1,29 @@
+{
+    "version": "1.2.3",
+    "description": "A command-line tool and Go package for wayback webpage to archive.today",
+    "homepage": "https://github.com/wabarc/archive.is",
+    "license": "GPL-3.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/wabarc/archive.is/releases/download/v1.2.3/archive.is-windows-amd64-1.2.3.zip",
+            "hash": "44936afb4978e03a8756728d52a7a28d34455e1196d602130574d1f8ab21ebe3"
+        },
+        "32bit": {
+            "url": "https://github.com/wabarc/archive.is/releases/download/v1.2.3/archive.is-windows-386-1.2.3.zip",
+            "hash": "5243bdee003c58d35cbb9cb55e49670f796fc10ca3f563efc1da0caf99d0865a"
+        }
+    },
+    "pre_install": "Rename-Item \"$dir\\archive.is*.exe\" \"$dir\\archive.is.exe\"",
+    "bin": "archive.is.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/wabarc/archive.is/releases/download/v$version/archive.is-windows-amd64-$version.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/wabarc/archive.is/releases/download/v$version/archive.is-windows-386-$version.zip"
+            }
+        }
+    }
+}
