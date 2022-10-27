@@ -1,9 +1,9 @@
 {
     "homepage": "https://docs.microsoft.com/en-us/sysinternals/downloads/pstools",
     "description": "The PsTools suite includes command-line utilities for listing the processes running on local or remote computers, running processes remotely, rebooting computers, dumping event logs, and more.",
-    "version": "2.45",
+    "version": "2.48",
     "license": {
-        "identifier": "Microsoft SysInternals EULA",
+        "identifier": "Freeware",
         "url": "https://docs.microsoft.com/en-us/sysinternals/license-terms"
     },
     "url": "https://download.sysinternals.com/files/PSTools.zip",
@@ -28,19 +28,62 @@
         },
         "64bit": {
             "bin": [
-                "psexec64.exe",
-                "psfile64.exe",
-                "psgetsid64.exe",
-                "psinfo64.exe",
-                "pskill64.exe",
-                "pslist64.exe",
-                "psloggedon64.exe",
-                "psloglist64.exe",
-                "pspasswd64.exe",
-                "psping64.exe",
-                "psservice64.exe",
-                "pssuspend64.exe"
+                [
+                    "psexec64.exe",
+                    "psexec"
+                ],
+                [
+                    "psfile64.exe",
+                    "psfile"
+                ],
+                [
+                    "psgetsid64.exe",
+                    "psgetsid"
+                ],
+                [
+                    "psinfo64.exe",
+                    "psinfo"
+                ],
+                [
+                    "pskill64.exe",
+                    "pskill"
+                ],
+                [
+                    "pslist64.exe",
+                    "pslist"
+                ],
+                [
+                    "psloggedon64.exe",
+                    "psloggedon"
+                ],
+                [
+                    "psloglist64.exe",
+                    "psloglist"
+                ],
+                [
+                    "pspasswd64.exe",
+                    "pspasswd"
+                ],
+                [
+                    "psping64.exe",
+                    "psping"
+                ],
+                [
+                    "psservice64.exe",
+                    "psservice"
+                ],
+                [
+                    "pssuspend64.exe",
+                    "pssuspend"
+                ]
             ]
         }
+    },
+    "checkver": {
+        "url": "https://docs.microsoft.com/en-us/sysinternals/downloads/",
+        "regex": "PsTools.*\\n.*v([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://download.sysinternals.com/files/PSTools.zip"
     }
 }
