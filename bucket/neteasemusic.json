@@ -1,13 +1,13 @@
 {
     "homepage": "https://music.163.com/",
     "description": "The official NetEase Cloud Music client.",
-    "version": "2.10.4.200396",
+    "version": "2.10.5.200451",
     "license": {
         "identifier": "EULA",
         "url": "https://music.163.com/html/web2/service.html"
     },
-    "url": "https://d1.music.126.net/dmusic/NeteaseCloudMusic_Music_official_2.10.4.200396.exe#/dl.7z",
-    "hash": "36ac04ec1c35cdb13cdbcfb4a8cba00ab0a3ec4dc18e177610553251a5b97d7d",
+    "url": "https://d1.music.126.net/dmusic/NeteaseCloudMusic_Music_official_2.10.5.200451.exe#/dl.7z",
+    "hash": "e1fcf1ff0f40522f544ee5a9228ab89eef1b2c0ff7b090f59150e444c723dfb5",
     "installer": {
         "script": [
             "Get-ChildItem \"$dir\\redist_packages\" | Move-Item -Destination \"$dir\" -Force",
