@@ -1,0 +1,29 @@
+{
+    "version": "1.2.6",
+    "description": "Offline OCR image-to-text tool",
+    "homepage": "https://github.com/hiroi-sora/Umi-OCR",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/hiroi-sora/Umi-OCR/releases/download/v1.2.6/Umi-OCR.v1.2.6.7z",
+            "hash": "212928a442094312ec043a99f6287ce7e9126dfead5127fadaa280921b2ceb37",
+            "extract_dir": "Umi-OCR"
+        }
+    },
+    "shortcuts": [
+        [
+            "Umi-OCR 批量图片转文字.exe",
+            "Umi-OCR"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/hiroi-sora/Umi-OCR"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/hiroi-sora/Umi-OCR/releases/download/v$version/Umi-OCR.v$version.7z"
+            }
+        }
+    }
+}
