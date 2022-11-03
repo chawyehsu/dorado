@@ -1,20 +1,20 @@
 {
-    "version": "0.17.0",
+    "version": "0.18.1",
     "description": "A self-hosted toolkit for archiving webpages to the Internet Archive, archive.today, IPFS, and local file systems",
     "homepage": "https://github.com/wabarc/wayback",
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/wabarc/wayback/releases/download/v0.17.0/wayback-windows-amd64-0.17.0.zip",
-            "hash": "6767f8f67e0a2b5a6c4364cf2f6a1f679d2b351524a85236fd6efca983696bc2"
+            "url": "https://github.com/wabarc/wayback/releases/download/v0.18.1/wayback-windows-amd64-0.18.1.zip",
+            "hash": "9cb36e8ab6fda95d57762a1159189fda2155383267f4f399c0012e051fa04e00"
         },
         "32bit": {
-            "url": "https://github.com/wabarc/wayback/releases/download/v0.17.0/wayback-windows-386-0.17.0.zip",
-            "hash": "93a3bb7ad4b6d2b3e81d99368b9c3a0528a6a0928fe9dcd406208e5cfe8b6b67"
+            "url": "https://github.com/wabarc/wayback/releases/download/v0.18.1/wayback-windows-386-0.18.1.zip",
+            "hash": "5744991a198289f23c5528a673d3925add02a04be99e10d24ac1d51d2ab12a74"
         },
         "arm64": {
-            "url": "https://github.com/wabarc/wayback/releases/download/v0.17.0/wayback-windows-arm64-0.17.0.zip",
-            "hash": "6e655a5c13ce5ded2cb0f6caf50918475faeed95be318793a9014b5af5d04e5a"
+            "url": "https://github.com/wabarc/wayback/releases/download/v0.18.1/wayback-windows-arm64-0.18.1.zip",
+            "hash": "6829b1eb545299b4618f8b792b70998f746c86f2c3b67d5f10a663271cffca71"
         }
     },
     "pre_install": "Rename-Item \"$dir\\wayback*.exe\" \"$dir\\wayback.exe\"",
