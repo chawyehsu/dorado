@@ -1,6 +1,6 @@
 {
     "homepage": "https://winlibs.com/",
-    "description": "winlibs standalone build of GCC compiler and MinGW-w64 with MSVCRT (Snapshot versions)",
+    "description": "winlibs standalone build of GCC compiler and MinGW-w64 with MSVCRT and POSIX Gthread (Snapshot versions)",
     "version": "13.0.0-10.0.0-snapshot20221030-msvcrt-r1posix",
     "license": "GPL-2.0-only,BSD-2-Clause,Apache-2.0,ZPL-2.1",
     "architecture": {
@@ -12,7 +12,7 @@
     },
     "env_add_path": "bin",
     "checkver": {
-        "url": "https://api.github.com/repos/brechtsanders/winlibs_mingw/releases?per_page=20",
+        "url": "https://api.github.com/repos/brechtsanders/winlibs_mingw/releases?per_page=50",
         "regex": "/winlibs-x86_64-posix-seh-gcc-(?<gccVersion>[12.\\d.]+)-snapshot(?<date>[\\d]+)-mingw-w64msvcrt-(?<mingwVersion>[\\d.]+)(-(?<revision>[\\w]+))?",
         "replace": "${gccVersion}-${mingwVersion}-snapshot${date}-msvcrt-${revision}"
     },
