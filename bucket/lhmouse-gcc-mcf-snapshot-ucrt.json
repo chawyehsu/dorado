@@ -1,0 +1,30 @@
+{
+    "homepage": "https://gcc-mcf.lhmouse.com/",
+    "description": "MinGW-w64 GCC build with UCRT and the MCF thread model (Snapshot version)",
+    "version": "13.0.0-20221104-ucrt",
+    "license": "GPL-2.0-only,LGPL-3.0-only,BSD-2-Clause,Apache-2.0,ZPL-2.1",
+    "architecture": {
+        "64bit": {
+            "url": "https://gcc-mcf.lhmouse.com/mingw-w64-gcc-mcf_20221104_13.0.0_x64-ucrt_5fab5d20992a3e832625212634fa4cfd96e5fb6d.7z",
+            "hash": "sha1:5fab5d20992a3e832625212634fa4cfd96e5fb6d",
+            "extract_dir": "ucrt64"
+        }
+    },
+    "env_add_path": "bin",
+    "checkver": {
+        "regex": "(?sm)mingw-w64-gcc-mcf_(?<version>(?<date>[\\d]{8})_(?<gccVersion>[\\d.]+))_x64-ucrt_(?<hash64>[0-9a-f]{40})",
+        "replace": "${gccVersion}-${date}-ucrt"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gcc-mcf.lhmouse.com/mingw-w64-gcc-mcf_$matchDate_$matchGccversion_x64-ucrt_$matchHash64.7z",
+                "hash": {
+                    "url": "https://gcc-mcf.lhmouse.com/",
+                    "mode": "extract",
+                    "regex": "$matchDate_$matchGccversion_x64-ucrt_$sha1"
+                }
+            }
+        }
+    }
+}
