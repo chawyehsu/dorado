@@ -6,11 +6,11 @@
     "architecture": {
         "64bit": {
             "url": "https://repo.anaconda.com/archive/Anaconda3-2022.05-Windows-x86_64.exe",
-            "hash": "md5:9dec53982beb2659b65107a6ad10e863"
+            "hash": "2766eb102f9d65da36d262b651777358de39fbe5f1a74f9854a2e5e29caeeeec"
         },
         "32bit": {
             "url": "https://repo.anaconda.com/archive/Anaconda3-2022.05-Windows-x86.exe",
-            "hash": "md5:f581359e0f0081a8cc83071556f9fd1d"
+            "hash": "cd8c688349bcd1f429e3b383620fb0d19f52be0f765b2eae78d63b41aefb2e73"
         }
     },
     "installer": {
@@ -35,8 +35,7 @@
     ],
     "checkver": {
         "url": "https://repo.anaconda.com/archive",
-        "re": "Anaconda3-(\\d{4}.[\\d.]+)-Windows",
-        "reverse": true
+        "re": "Anaconda3-(\\d{4}.[\\d.]+)-Windows-x86.exe"
     },
     "autoupdate": {
         "architecture": {
@@ -49,7 +48,7 @@
         },
         "hash": {
             "url": "$baseurl",
-            "find": "$basename<.*\\s+<.*\\s+<.*\\s+<td>([a-fA-F0-9]{32})</td>"
+            "regex": "(?sm)$basename.*?<td>$sha256</td>"
         }
     },
     "notes": [
