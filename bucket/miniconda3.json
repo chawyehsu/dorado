@@ -6,11 +6,11 @@
     "architecture": {
         "64bit": {
             "url": "https://repo.anaconda.com/miniconda/Miniconda3-py39_4.12.0-Windows-x86_64.exe",
-            "hash": "md5:db94d2476895f7a838a89a396ac75a0b"
+            "hash": "1acbc2e8277ddd54a5f724896c7edee112d068529588d944702966c867e7e9cc"
         },
         "32bit": {
             "url": "https://repo.anaconda.com/miniconda/Miniconda3-py39_4.12.0-Windows-x86.exe",
-            "hash": "md5:9753453d01c8369e3679d083f7ced75c"
+            "hash": "4fb64e6c9c28b88beab16994bfba4829110ea3145baa60bda5344174ab65d462"
         }
     },
     "installer": {
@@ -48,7 +48,7 @@
         },
         "hash": {
             "url": "$baseurl",
-            "find": "$basename<.*\\s+<.*\\s+<.*\\s+<td>([a-fA-F0-9]{32})</td>"
+            "regex": "(?sm)$basename.*?<td>$sha256</td>"
         }
     },
     "notes": [
