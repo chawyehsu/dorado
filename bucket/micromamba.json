@@ -20,6 +20,7 @@
     "env_set": {
         "MAMBA_ROOT_PREFIX": "$dir\\mamba"
     },
+    "env_add_path": "mamba",
     "post_install": "Remove-Item \"$dir\\Library\" -Force",
     "persist": "mamba",
     "checkver": {
