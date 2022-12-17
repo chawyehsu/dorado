@@ -1,28 +1,28 @@
 {
     "homepage": "https://github.com/Fndroid/clash_for_windows_pkg",
     "description": "A Windows GUI based on Clash",
-    "version": "0.20.10",
+    "version": "0.20.11",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.20.10/Clash.for.Windows.Setup.0.20.10.exe#/dl.7z",
-            "hash": "0f2b87b58c6511df363f8cf9309efcd4d68167d784522efea4b565a5ba019e46",
+            "url": "https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.20.11/Clash.for.Windows.Setup.0.20.11.exe#/dl.7z",
+            "hash": "6476af37f33469d309614e1ece851fa7d1d36d5d2f71d4576cf1416ff708f81b",
             "pre_install": [
                 "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
                 "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\`$R0\" -Force -Recurse"
             ]
         },
         "32bit": {
-            "url": "https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.20.10/Clash.for.Windows.Setup.0.20.10.ia32.exe#/dl.7z",
-            "hash": "49f098920b90a5c6bd20f71d4e2114274b042ad05b9a73883272055524f43b2f",
+            "url": "https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.20.11/Clash.for.Windows.Setup.0.20.11.ia32.exe#/dl.7z",
+            "hash": "6f53e9b4da766f340b6f0faab55494bcfe1d08ea24d60dd69f88b4a3966a0a68",
             "pre_install": [
                 "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-32.7z\" \"$dir\"",
                 "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\`$R0\" -Force -Recurse"
             ]
         },
         "arm64": {
-            "url": "https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.20.10/Clash.for.Windows.Setup.0.20.10.arm64.exe#/dl.7z",
-            "hash": "644aca450deaf09ef9be71782da35b546efbab9d6ff393406b3482a57a711745",
+            "url": "https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.20.11/Clash.for.Windows.Setup.0.20.11.arm64.exe#/dl.7z",
+            "hash": "2cd1946514a0ec03fa15519b57c98f9a79c07acd282b1d4c47357b46082b31b3",
             "pre_install": [
                 "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-arm64.7z\" \"$dir\"",
                 "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\`$R0\" -Force -Recurse"
