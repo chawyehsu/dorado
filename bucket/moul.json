@@ -2,23 +2,34 @@
     "homepage": "https://moul.app/",
     "description": "The minimalist publishing tool for photographers",
     "license": "Apache-2.0",
-    "version": "3.2.3",
+    "version": "4.0.0-beta.16",
     "architecture": {
+        "32bit": {
+            "url": "https://github.com/moulco/moul/releases/download/v4.0.0-beta.16/moul_4.0.0-beta.16_Windows_386.tar.gz",
+            "hash": "1e3a8215014da23832e1124f634d850d7f99ce5bc01f4730d94f06646435db61"
+        },
         "64bit": {
-            "url": "https://github.com/moulco/moul/releases/download/3.2.3/moul_windows_amd64.exe.zip",
-            "hash": "d1aed1f79718353aa1e547e3d030ad37c08fc322aebd0eb276d2c5a1f3efe991"
+            "url": "https://github.com/moulco/moul/releases/download/v4.0.0-beta.16/moul_4.0.0-beta.16_Windows_x86_64.tar.gz",
+            "hash": "3a8a1774c126b8aff2a8f792bc120c6a7d4d46ad9640b5c2ca66dcc55e3496aa"
         }
     },
     "pre_install": "Rename-Item @(Get-ChildItem $dir\\moul*.exe)[0] $dir\\moul.exe",
     "bin": "moul.exe",
     "checkver": {
-        "github": "https://github.com/moulco/moul"
+        "url": "https://api.github.com/repos/moulco/moul/releases/latest",
+        "regex": "moul_([\\d.]+(-(?<build>[a-z0-9.]+))?)_Windows"
     },
     "autoupdate": {
         "architecture": {
+            "32bit": {
+                "url": "https://github.com/moulco/moul/releases/download/v$version/moul_$version_Windows_386.tar.gz"
+            },
             "64bit": {
-                "url": "https://github.com/moulco/moul/releases/download/$version/moul_windows_amd64.exe.zip"
+                "url": "https://github.com/moulco/moul/releases/download/v$version/moul_$version_Windows_x86_64.tar.gz"
             }
+        },
+        "hash": {
+            "url": "$baseurl/checksums.txt"
         }
     }
 }
