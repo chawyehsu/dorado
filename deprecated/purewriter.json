@@ -1,12 +1,12 @@
 {
-    "version": "1.5.2",
+    "version": "1.7.0",
     "description": "Pure Writer Desktop",
     "homepage": "https://writer.drakeet.com/desktop",
     "license": "GPL-3.0-or-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/PureWriter/desktop/releases/download/1.5.2/PureWriter-1.5.2-Windows-x64.msi",
-            "hash": "0bcee69dc05b4acb92beb09b9df93ead29d94be6f489195d69b051fd4ffc3080"
+            "url": "https://github.com/PureWriter/desktop/releases/download/1.7.0/PureWriter-1.7.0-Windows-x64.exe",
+            "hash": "e3a26254800e0812c4d658e4710a5731b7a75698513c0996f886e69e24b8c2e2"
         }
     },
     "extract_dir": "Pure Writer",
@@ -22,7 +22,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/PureWriter/desktop/releases/download/$version/PureWriter-$version-Windows-x64.msi"
+                "url": "https://github.com/PureWriter/desktop/releases/download/$version/PureWriter-$version-Windows-x64.exe"
             }
         }
     }
