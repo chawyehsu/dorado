@@ -6,9 +6,14 @@
         "identifier": "Proprietary",
         "url": "https://store.epicgames.com/en-US/eula"
     },
-    "url": "https://epicgames-download1.akamaized.net/Builds/UnrealEngineLauncher/Installers/Win32/EpicInstaller-14.2.1.msi",
+    "url": "https://epicgames-download1.akamaized.net/Builds/UnrealEngineLauncher/Installers/Win32/EpicInstaller-14.2.1.msi#/dl.exe",
     "hash": "a60db9fc0b290f4bea8bc5729b6878d97392156979c1a47498bb27269e16915a",
-    "extract_dir": "Epic Games",
+    "pre_install": [
+        "if (!(get_config USE_LESSMSI)) {",
+        "    throw \"The installer requires lessmsi to work otherwise you'll encouter the 'decompress error', see https://github.com/chawyehsu/dorado/issues/333#issuecomment-841371544 and try again\"",
+        "}",
+        "Expand-MsiArchive \"$dir\\$fname\" \"$dir\" -ExtractDir 'Epic Games' -Removal"
+    ],
     "shortcuts": [
         [
             "Launcher\\Portal\\Binaries\\Win32\\EpicGamesLauncher.exe",
@@ -24,7 +29,7 @@
         "regex": "EpicInstaller-([\\d.]+).msi"
     },
     "autoupdate": {
-        "url": "https://epicgames-download1.akamaized.net/Builds/UnrealEngineLauncher/Installers/Win32/EpicInstaller-$version.msi"
+        "url": "https://epicgames-download1.akamaized.net/Builds/UnrealEngineLauncher/Installers/Win32/EpicInstaller-$version.msi#/dl.exe"
     },
     "notes": "Make sure your system has the DirectX Runtime installed."
 }
