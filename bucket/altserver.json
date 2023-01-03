@@ -1,0 +1,26 @@
+{
+    "homepage": "https://altstore.io/",
+    "description": "A home for apps that push the boundaries of iOS. No jailbreak required.",
+    "license": "AGPL-3.0",
+    "version": "nightly",
+    "url": "https://cdn.altstore.io/file/altstore/altinstaller.zip",
+    "installer": {
+        "script": [
+            "if ([Environment]::OSVersion.Version.Major -ne \"10\") {",
+            "    throw \"AltServer requires Windows 10 or later to work.\"",
+            "}",
+            "Remove-Item \"$dir\\setup.exe\"",
+            "Expand-MsiArchive \"$dir\\AltInstaller.msi\" \"$dir\" -Removal"
+        ]
+    },
+    "shortcuts": [
+        [
+            "AltServer.exe",
+            "AltServer"
+        ]
+    ],
+    "notes": [
+        "AltServer requires both iTunes and iCloud installed to work, you must download and install them from Apple's webstie.",
+        "Refer to https://faq.altstore.io/ for more inforamtion."
+    ]
+}
