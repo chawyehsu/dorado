@@ -1,6 +1,6 @@
 {
     "homepage": "https://itch.io/app",
-    "description": "The best way to play your itch.io games",
+    "description": "The itch.io desktop app",
     "version": "25.5.1",
     "license": "MIT",
     "architecture": {
@@ -21,7 +21,8 @@
         ]
     ],
     "checkver": {
-        "github": "https://github.com/itchio/itch"
+        "url": "https://itchio.itch.io/itch",
+        "regex": "(?sm)itch-windows-amd64.zip.*Version ([\\d.]+)"
     },
     "autoupdate": {
         "architecture": {
