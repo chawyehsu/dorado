@@ -12,6 +12,7 @@
     },
     "installer": {
         "script": [
+            "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name dorado) scripts/DoradoUtils.psm1)",
             "# Disable pacman key refreshing to speed up setup: https://github.com/msys2/setup-msys2/issues/45",
             "$postScript = \"$dir\\etc\\post-install\\07-pacman-key.post\"",
             "(Get-Content $postScript) -replace ' --refresh-keys', ' --version' | Set-Content $postScript",
@@ -19,7 +20,7 @@
             "Write-Host 'Invoking MSYS2 First Run...' -ForegroundColor Yellow",
             "$baseArgs = \"ps -ef | grep '[?]' | awk '{print `$2}' | xargs -r kill\"",
             "$args = \"`\"$baseArgs`\"\"",
-            "Invoke-ExternalCommand -Path \"$dir\\msys2_shell.cmd\" -ArgumentList \"-msys2 -defterm -here -no-start -c $args\" | Out-Null",
+            "Invoke-ExternalCommand2 -Path \"$dir\\msys2_shell.cmd\" -ArgumentList \"-msys2 -defterm -here -no-start -c $args\" | Out-Null",
             "Write-Host 'Updating MSYS2 core...' -ForegroundColor Yellow",
             "function Ensure-Mirror {",
             "    $pacmanConf = \"$dir\\etc\\pacman.conf\"",
@@ -41,7 +42,7 @@
             "    $ErrorActionPreference = 'Continue'",
             "    while (!$done) {",
             "        ++$i",
-            "        Invoke-ExternalCommand -Path \"$dir\\msys2_shell.cmd\" -ArgumentList \"-msys2 -defterm -here -no-start -c $args2\" -ContinueExitCodes @{ 1 = 'Pacman exit with code 1 but it does not matter.'} | Out-Null",
+            "        Invoke-ExternalCommand2 -Path \"$dir\\msys2_shell.cmd\" -ArgumentList \"-msys2 -defterm -here -no-start -c $args2\" -ContinueExitCodes @{ 1 = 'Pacman exit with code 1 but it does not matter.'} | Out-Null",
             "        $done = (Get-Content $logPath) -match $stopSentence | Measure-Object | ForEach-Object { $_.Count -ge $cntSentence }",
             "        $done = $done -or ($i -ge $max)",
             "    }",
@@ -50,19 +51,22 @@
             "# Detect saved_packages.txt",
             "if (Test-Path \"$persist_dir\\home\\saved_packages.txt\") {",
             "    Write-Host \"To restore installed packages, you need to run 'pacman -S --needed `$(cat /home/saved_packages.txt)' inside MSYS2\" -ForegroundColor DarkCyan",
-            "}"
+            "}",
+            "Remove-Module -Name DoradoUtils"
         ]
     },
     "uninstaller": {
         "script": [
+            "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name dorado) scripts/DoradoUtils.psm1)",
             "$baseArgs = \"ps -ef | grep '[?]' | awk '{print `$2}' | xargs -r kill\"",
             "# Stop gpg-agent process",
             "$args = \"`\"gpgconf --kill gpg-agent;$baseArgs`\"\"",
-            "Invoke-ExternalCommand -Path \"$dir\\msys2_shell.cmd\" -ArgumentList \"-msys2 -defterm -here -no-start -c $args\" | Out-Null",
+            "Invoke-ExternalCommand2 -Path \"$dir\\msys2_shell.cmd\" -ArgumentList \"-msys2 -defterm -here -no-start -c $args\" | Out-Null",
             "# Backup installed packages",
             "Write-Host 'Saving MSYS2 installed packages to /home/saved_packages.txt...' -ForegroundColor Yellow",
             "$args2 = \"`\"pacman -Qqe | xargs echo > /home/saved_packages.txt;$baseArgs`\"\"",
-            "Invoke-ExternalCommand -Path \"$dir\\msys2_shell.cmd\" -ArgumentList \"-msys2 -defterm -here -no-start -c $args2\" | Out-Null"
+            "Invoke-ExternalCommand2 -Path \"$dir\\msys2_shell.cmd\" -ArgumentList \"-msys2 -defterm -here -no-start -c $args2\" | Out-Null",
+            "Remove-Module -Name DoradoUtils"
         ]
     },
     "bin": [
