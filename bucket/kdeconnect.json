@@ -1,10 +1,10 @@
 {
-    "version": "22.08.3-1156",
+    "version": "22.12.1-1215",
     "description": "Enabling communication between all your devices. Made for people like you.",
     "homepage": "https://kdeconnect.kde.org",
     "license": "GPL-2.0-or-later",
-    "url": "https://binary-factory.kde.org/job/kdeconnect-kde_Release_win64/1156/artifact/kdeconnect-kde-22.08.3-1156-windows-msvc2019_64-cl.7z",
-    "hash": "8e557414017b816277aad7c9a7c89fe602d40c834ba12e9c5f975e1ecd9f96c9",
+    "url": "https://binary-factory.kde.org/job/kdeconnect-kde_Release_win64/1215/artifact/kdeconnect-kde-22.12.1-1215-windows-cl-msvc2019-x86_64.7z",
+    "hash": "5d315139655aee1642ca925f0aed25047e1e4bb1bddfa130438a8fa94b8584c7",
     "bin": "bin\\kdeconnect-cli.exe",
     "shortcuts": [
         [
@@ -17,7 +17,7 @@
         "regex": "kdeconnect-kde-([\\d.]+-(?<build>\\d+)).*"
     },
     "autoupdate": {
-        "url": "https://binary-factory.kde.org/job/kdeconnect-kde_Release_win64/$matchBuild/artifact/kdeconnect-kde-$version-windows-msvc2019_64-cl.7z",
+        "url": "https://binary-factory.kde.org/job/kdeconnect-kde_Release_win64/$matchBuild/artifact/kdeconnect-kde-$version-windows-cl-msvc2019-x86_64.7z",
         "hash": {
             "url": "$url.sha256",
             "regex": "$sha256"
