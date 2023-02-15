@@ -1,12 +1,12 @@
 {
     "homepage": "https://winlibs.com/",
     "description": "winlibs standalone build of GCC compiler and MinGW-w64 with UCRT (Snapshot versions)",
-    "version": "11.2.1-9.0.0-snapshot20220219-ucrt-r1",
+    "version": "12.2.1-10.0.0-snapshot20230211-ucrt-r1",
     "license": "GPL-2.0-only,BSD-2-Clause,Apache-2.0,ZPL-2.1",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/brechtsanders/winlibs_mingw/releases/download/11.2.1-snapshot20220219-9.0.0-ucrt-r1/winlibs-x86_64-posix-seh-gcc-11.2.1-snapshot20220219-mingw-w64ucrt-9.0.0-r1.7z",
-            "hash": "04ff0ba54468afa9e12d843d0c0e51949d5e5117710212adfc34b5883473fbad",
+            "url": "https://github.com/brechtsanders/winlibs_mingw/releases/download/12.2.1-snapshot20230211-10.0.0-ucrt-r1/winlibs-x86_64-posix-seh-gcc-12.2.1-snapshot20230211-mingw-w64ucrt-10.0.0-r1.7z",
+            "hash": "ffe9baa0e29da0eaca68246777dd3187d7f3b1ebdd5596afd46b7ce1a61688b5",
             "extract_dir": "mingw64"
         }
     },
