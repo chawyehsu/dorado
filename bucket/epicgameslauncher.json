@@ -1,13 +1,13 @@
 {
     "homepage": "https://store.epicgames.com/",
     "description": "The Launcher of the digital video game platform operated by Epic Games.",
-    "version": "14.2.1",
+    "version": "14.6.0",
     "license": {
         "identifier": "Proprietary",
         "url": "https://store.epicgames.com/en-US/eula"
     },
-    "url": "https://epicgames-download1.akamaized.net/Builds/UnrealEngineLauncher/Installers/Win32/EpicInstaller-14.2.1.msi#/dl.exe",
-    "hash": "a60db9fc0b290f4bea8bc5729b6878d97392156979c1a47498bb27269e16915a",
+    "url": "https://epicgames-download1.akamaized.net/Builds/UnrealEngineLauncher/Installers/Win32/EpicInstaller-14.6.0.msi#/dl.exe",
+    "hash": "31235b50602fd17c80aec1dcd86afca9e4bc4c65435ee6efeeb424a263644a92",
     "pre_install": [
         "if (!(get_config USE_LESSMSI)) {",
         "    throw \"The installer requires lessmsi to work otherwise you'll encouter the 'decompress error', see https://github.com/chawyehsu/dorado/issues/333#issuecomment-841371544 and try again\"",
