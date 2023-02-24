@@ -1,0 +1,17 @@
+{
+    "homepage": "https://aka.ms/dotnet-core-uninstall-docs",
+    "description": "A command line tool for uninstalling versions of the .NET Core SDK, Runtime, ASP.NET Core Runtime, and Hosting Bundles.",
+    "version": "1.6.0",
+    "license": "MIT",
+    "url": "https://github.com/dotnet/cli-lab/releases/download/1.6.0/dotnet-core-uninstall-1.6.0.msi",
+    "hash": "30bd7f95034d32a0830d9fdd089a176a84c77455e20dc07e433a1d8679feba9f",
+    "extract_dir": "dotnet-core-uninstall",
+    "bin": "dotnet-core-uninstall.exe",
+    "checkver": {
+        "github": "https://github.com/dotnet/cli-lab"
+    },
+    "autoupdate": {
+        "url": "https://github.com/dotnet/cli-lab/releases/download/$version/dotnet-core-uninstall-$version.msi"
+    },
+    "notes": "This tool requires admin privileges to run. You may use it with sudo or run it from an elevated command prompt."
+}
