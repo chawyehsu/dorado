@@ -1,12 +1,12 @@
 {
-    "version": "22.08.3-1307",
+    "version": "22.12.3-1420",
     "description": "Konversation is a user-friendly Internet Relay Chat (IRC) client.",
     "homepage": "https://konversation.kde.org",
     "license": "GPL-2.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://binary-factory.kde.org/job/Konversation_Release_win64/1307/artifact/konversation-22.08.3-1307-windows-msvc2019_64-cl.7z",
-            "hash": "e342c037a5330deaa1786b68ac26501d98e1cfa08bd2428ce2a1a847b27c10b9"
+            "url": "https://binary-factory.kde.org/job/Konversation_Release_win64/1420/artifact/konversation-22.12.3-1420-windows-cl-msvc2019-x86_64.7z",
+            "hash": "096cd8e7877447ede3ffc423945afe8c58b82bedc8d98d95b4413a61f74c63c9"
         }
     },
     "bin": "bin\\konversation.exe",
@@ -18,12 +18,12 @@
     ],
     "checkver": {
         "url": "https://binary-factory.kde.org/job/Konversation_Release_win64/lastSuccessfulBuild/api/json",
-        "regex": "konversation-([\\d.]+-(?<build>\\d+))-windows-msvc2019_64-cl.7z"
+        "regex": "konversation-([\\d.]+-(?<build>\\d+))-windows-cl-msvc2019-x86_64.7z"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://binary-factory.kde.org/job/Konversation_Release_win64/$matchBuild/artifact/konversation-$version-windows-msvc2019_64-cl.7z"
+                "url": "https://binary-factory.kde.org/job/Konversation_Release_win64/$matchBuild/artifact/konversation-$version-windows-cl-msvc2019-x86_64.7z"
             }
         },
         "hash": {
