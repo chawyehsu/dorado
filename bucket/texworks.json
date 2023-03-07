@@ -1,10 +1,10 @@
 {
-    "version": "0.6.7",
+    "version": "0.6.8",
     "description": "TeXworks is an environment for authoring TeX (LaTeX, ConTeXt, etc) documents",
     "homepage": "https://www.tug.org/texworks/",
     "license": "GPL-2.0-only",
-    "url": "https://github.com/TeXworks/texworks/releases/download/release-0.6.7/TeXworks-win-0.6.7-202202261139-git_23c4c74.zip",
-    "hash": "411953f61efe281ae11306642f9b505c3901811e5822b49b6ee46aa75dc9dd0b",
+    "url": "https://github.com/TeXworks/texworks/releases/download/release-0.6.8/TeXworks-win10-0.6.8-202302181302-git_6b1c6ab.zip",
+    "hash": "69d9278b8dd7c5b009e081e820b459bccec07e492890445e6af0e64ccdc4cc64",
     "shortcuts": [
         [
             "TeXworks.exe",
@@ -12,10 +12,14 @@
         ]
     ],
     "checkver": {
-        "url": "https://github.com/TeXworks/texworks/releases/latest",
-        "regex": "TeXworks-win-([\\d.]+)-(?<date>[\\d]+)-git_(?<commit>[\\w]{7}).zip"
+        "url": "https://api.github.com/repos/TeXworks/texworks/releases/latest",
+        "regex": "TeXworks-win10-([\\d.]+)-(?<date>[\\d]+)-git_(?<commit>[\\w]{7}).zip"
     },
     "autoupdate": {
-        "url": "https://github.com/TeXworks/texworks/releases/download/release-$version/TeXworks-win-$version-$matchDate-git_$matchCommit.zip"
+        "url": "https://github.com/TeXworks/texworks/releases/download/release-$version/TeXworks-win10-$version-$matchDate-git_$matchCommit.zip",
+        "hash": {
+            "url": "https://github.com/TeXworks/texworks/releases/tag/release-0.6.8",
+            "regex": "(?sm)TeXworks-win10-$version-$matchDate-git_$matchCommit.zip.*?$sha256"
+        }
     }
 }
