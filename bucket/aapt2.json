@@ -2,13 +2,14 @@
     "homepage": "https://developer.android.com/studio/command-line/aapt2",
     "description": "Android Asset Packaging Tool 2.",
     "license": "Apache-2.0",
-    "version": "7.4.0-alpha08-8691043",
-    "url": "https://dl.google.com/dl/android/maven2/com/android/tools/build/aapt2/7.4.0-alpha08-8691043/aapt2-7.4.0-alpha08-8691043-windows.jar#/dl.7z",
-    "hash": "88f281aa9d1ab525a7abd0f864bc5c4fc4b9b3fc2912a9f745edaa4b34c44dac",
+    "version": "8.1.0-alpha08-9603961",
+    "url": "https://dl.google.com/dl/android/maven2/com/android/tools/build/aapt2/8.1.0-alpha08-9603961/aapt2-8.1.0-alpha08-9603961-windows.jar#/dl.7z",
+    "hash": "9909e32fccac62805863a622756c309ad98d52fb3e68f58fe656d6003e32f427",
     "bin": "aapt2.exe",
     "checkver": {
-        "url": "https://mvnrepository.com/artifact/com.android.tools.build/aapt2",
-        "regex": "(?sm)align=\"center\">Version.*?<a href=\"aapt2/(([\\d.]+)(-[\\d\\w]+)?-([\\d]+))\""
+        "url": "https://dl.google.com/android/maven2/com/android/tools/build/group-index.xml",
+        "xpath": "/com.android.tools.build/aapt2/@versions",
+        "regex": ",([a-z0-9.-]+)$"
     },
     "autoupdate": {
         "url": "https://dl.google.com/dl/android/maven2/com/android/tools/build/aapt2/$version/aapt2-$version-windows.jar#/dl.7z"
