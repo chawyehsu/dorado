@@ -4,7 +4,7 @@
     "version": "4.0-final",
     "license": "Freeware",
     "url": "http://www.haoxg.net/ediary/download/ediary-4.0-final-copy.zip",
-    "hash": "410ec42e853aa676dfce7fd16e346f4b61f8fe4d32b575c033e078d234505bc5",
+    "hash": "f832709892059783abf4f02526002542e3fd6978ff05d59114c5f447e45e707a",
     "extract_dir": "eDiary-4.0-final",
     "pre_install": "if (!(Test-Path $persist_dir\\Config.ini)) { New-Item $dir\\Config.ini | Out-Null }",
     "shortcuts": [
