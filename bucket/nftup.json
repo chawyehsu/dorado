@@ -1,12 +1,12 @@
 {
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "App to easily upload NFTs to IPFS on NFT.Storage with no-code, from the comfort of your laptop computer machine",
     "homepage": "https://nft.storage/",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/nftstorage/nftup/releases/download/v1.0.1/NFT-UP-Setup-1.0.1.exe#/dl.7z",
-            "hash": "sha512:cd49000ea20393058f95517dab079f9f0115bd860f76163d3789d7bcfc0e70cb617c9381dfea83055b9a20b99861003acf557aee30e2352364c5dd5be7e09d44",
+            "url": "https://github.com/nftstorage/nftup/releases/download/v1.0.2/NFT-UP-Setup-1.0.2.exe#/dl.7z",
+            "hash": "sha512:d508b098f03a712e7c1ee2316c62dcd994003659793208cc9472f7260733d5b0e5ff296f54126f947e18170b847d2206b9bb6a7765fb368ee69bd44108ee9272",
             "installer": {
                 "script": [
                     "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
