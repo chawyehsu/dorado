@@ -1,12 +1,12 @@
 {
     "homepage": "https://www.tradingview.com/chart",
     "description": "TradingView Desktop",
-    "version": "2.1.0",
+    "version": "2.2.0",
     "license": "Proprietary",
     "architecture": {
         "64bit": {
-            "url": "https://tvd-packages.tradingview.com/stable/2.1.0/win32/x64/TradingView.msix",
-            "hash": "369e9f690d210a22a5ef87d7019b0816e9cffe4fd96b6e7d31077a7eb7ba90eb"
+            "url": "https://tvd-packages.tradingview.com/stable/2.2.0/win32/x64/TradingView.msix",
+            "hash": "02328ebd7b316bf83dbf1b61236bdb0bc61a9104d5e5b8addeb155cc63fa138e"
         }
     },
     "installer": {
@@ -19,8 +19,9 @@
         ]
     ],
     "checkver": {
-        "url": "https://www.tradingview.com/support/solutions/43000673888-tradingview-desktop-releases-and-release-notes/",
-        "regex": "version ([\\d.]+)"
+        "url": "https://tvd-packages.tradingview.com/",
+        "regex": "stable/([\\d.]+)/win32/x64",
+        "reverse": true
     },
     "autoupdate": {
         "architecture": {
