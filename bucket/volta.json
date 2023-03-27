@@ -21,14 +21,16 @@
             "        Remove-Item \"$dir\\$original\" -Force",
             "    }",
             "}",
-            "UpdateExeFile 'volta-shim.exe' 'node.exe'",
-            "UpdateExeFile 'volta-shim.exe' 'npm.exe'",
-            "UpdateExeFile 'volta-shim.exe' 'npx.exe'",
-            "UpdateExeFile 'volta-shim.exe' 'pnpm.exe'",
-            "UpdateExeFile 'volta-shim.exe' 'yarn.exe'",
-            "UpdateExeFile 'volta.exe' 'volta.exe' -Removal",
-            "UpdateExeFile 'volta-migrate.exe' 'volta-migrate.exe' -Removal",
-            "UpdateExeFile 'volta-shim.exe' 'volta-shim.exe' -Removal"
+            "@('node', 'npm', 'npx', 'pnpm', 'yarn') | ForEach-Object {",
+            "    UpdateExeFile 'volta-shim.exe' \"$_.exe\"",
+            "}",
+            "@('volta', 'volta-migrate', 'volta-shim') | ForEach-Object {",
+            "    UpdateExeFile \"$_.exe\" \"$_.exe\" -Removal",
+            "}",
+            "@('node', 'npm', 'npx', 'pnpm', 'yarn') | ForEach-Object {",
+            "    $cmd = \"@echo off`n`\"%~dpn0.exe`\" %*\"",
+            "    Set-Content \"$persist_dir\\appdata\\bin\\$_.cmd\" $cmd -Encoding utf8",
+            "}"
         ]
     },
     "env_set": {
