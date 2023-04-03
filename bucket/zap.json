@@ -1,12 +1,12 @@
 {
-    "version": "0.7.6-beta",
+    "version": "0.7.7-beta",
     "description": "Zap is a free Lightning Network wallet",
     "homepage": "https://zaphq.io/",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/LN-Zap/zap-desktop/releases/download/v0.7.6-beta/Zap-win-v0.7.6-beta.exe#/dl.7z",
-            "hash": "sha512:d07dfd78733dec6ea1f080b667e2c9d794b1708fe6ba6fd2756163e6c6a2272eca6ed2ccdddacceaf00ce7d1c4f793eeb2313b4521c974461636df989b2d8b23",
+            "url": "https://github.com/LN-Zap/zap-desktop/releases/download/v0.7.7-beta/Zap-win-v0.7.7-beta.exe#/dl.7z",
+            "hash": "sha512:115ef1c4294b0923b5e1166a3615ab110a7bf218d81270f8d0a99e2ce9e2bfb572ca0b2817c5cc067e06e361d4d936a9549978b5934c09d1aa5404d5bb3ad91a",
             "installer": {
                 "script": [
                     "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
