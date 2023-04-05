@@ -1,12 +1,12 @@
 {
     "homepage": "https://winlibs.com/",
     "description": "winlibs standalone build of GCC compiler and MinGW-w64 with MSVCRT and MCF Gthread (Snapshot versions)",
-    "version": "13.0.0-10.0.0-snapshot20221030-msvcrt-r1mcf",
+    "version": "13.0.1-11.0.0-snapshot20230402-msvcrt-r1",
     "license": "GPL-2.0-only,BSD-2-Clause,Apache-2.0,ZPL-2.1",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/brechtsanders/winlibs_mingw/releases/download/13.0.0-snapshot20221030-10.0.0-msvcrt-r1mcf/winlibs-x86_64-mcf-seh-gcc-13.0.0-snapshot20221030-mingw-w64msvcrt-10.0.0-r1mcf.7z",
-            "hash": "710d6a51fb3970dffa5d93dd87f55fbc80a3f561998424000ed0cb4897f925b2",
+            "url": "https://github.com/brechtsanders/winlibs_mingw/releases/download/13.0.1-snapshot20230402-11.0.0-msvcrt-r1/winlibs-x86_64-mcf-seh-gcc-13.0.1-snapshot20230402-mingw-w64msvcrt-11.0.0-r1.7z",
+            "hash": "d25814c5edb8c3149caf0e5b3a6125ea392b8f49b71933f156f1f8a2862d4797",
             "extract_dir": "mingw64"
         }
     },
