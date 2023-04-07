@@ -1,17 +1,17 @@
 {
     "homepage": "https://winlibs.com/",
     "description": "winlibs standalone build of GCC compiler and MinGW-w64 with LLVM and MSVCRT",
-    "version": "12.2.0-15.0.7-10.0.0-msvcrt-r4",
+    "version": "12.2.0-16.0.0-10.0.0-msvcrt-r5",
     "license": "GPL-2.0-only,BSD-2-Clause,Apache-2.0,ZPL-2.1",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/brechtsanders/winlibs_mingw/releases/download/12.2.0-15.0.7-10.0.0-msvcrt-r4/winlibs-x86_64-posix-seh-gcc-12.2.0-llvm-15.0.7-mingw-w64msvcrt-10.0.0-r4.7z",
-            "hash": "45511dd0a3092eba89ba5940ee9842b4b414f1ff114edbea2cd818cd520a4e58",
+            "url": "https://github.com/brechtsanders/winlibs_mingw/releases/download/12.2.0-16.0.0-10.0.0-msvcrt-r5/winlibs-x86_64-posix-seh-gcc-12.2.0-llvm-16.0.0-mingw-w64msvcrt-10.0.0-r5.7z",
+            "hash": "c6d934c580cda465f4b0bd6dbdc96beaf4c6122f574ccb5d74534bb74dd2b8d6",
             "extract_dir": "mingw64"
         },
         "32bit": {
-            "url": "https://github.com/brechtsanders/winlibs_mingw/releases/download/12.2.0-15.0.7-10.0.0-msvcrt-r4/winlibs-i686-posix-dwarf-gcc-12.2.0-llvm-15.0.7-mingw-w64msvcrt-10.0.0-r4.7z",
-            "hash": "ab965afb75a63b999eeb2b68871589af0c675bf61e2f5af56038631fad2440c7",
+            "url": "https://github.com/brechtsanders/winlibs_mingw/releases/download/12.2.0-16.0.0-10.0.0-msvcrt-r5/winlibs-i686-posix-dwarf-gcc-12.2.0-llvm-16.0.0-mingw-w64msvcrt-10.0.0-r5.7z",
+            "hash": "39974ff4b5992264d1374c98a555dcdbd0211ba1e79e3db17489f88dcfa360e5",
             "extract_dir": "mingw32"
         }
     },
