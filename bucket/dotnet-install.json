@@ -1,0 +1,13 @@
+{
+    "version": "nightly",
+    "description": "A script used to install the .NET SDK and the shared runtime.",
+    "homepage": "https://learn.microsoft.com/dotnet/core/tools/dotnet-install-script",
+    "license": "MIT",
+    "url": "https://dot.net/v1/dotnet-install.ps1",
+    "bin": "dotnet-install.ps1",
+    "notes": [
+        "This script is used to manually install .NET SDKs and shared runtimes.",
+        "This script will not set up environment variables automatically.",
+        "To set up a development environment or to run apps, use .NET installers rather than this script."
+    ]
+}
