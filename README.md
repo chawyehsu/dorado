@@ -20,36 +20,34 @@
     </p>
 </div>
 
-Featured Apps
-------------
+## Featured Apps
 
-| Manifest | Description |
-|----------|-------------|
-| llvm-mingw | [The](https://github.com/mstorsjo/llvm-mingw) LLVM/Clang/LLD based **mingw-w64** toolchain. |
-| miniconda3 | A version of Miniconda3 that dose not add the default venv into your PATH unless you activate it with `conda activate base` |
-| nuwen-mingw-gcc | **Minimalist** C/C++ compiler from STL's [MinGW Distro](https://nuwen.net/mingw.html). It's **NOT** a full **mingw-w64** package, has no make, no gdb. Just the *gcc* and *ld* for 'quick-start' use case. |
-| nvm-windows | A fork of [nvm-windows](https://github.com/chawyehsu/nvm-windows), removed elevated permission, for non-admin scoop user |
-| trash | Move files and folders to recycle bin instead of directly `rm-rf` it, like `brew install trash` but for Windows |
-| rustup-np | The `non-portable` version of Rustup, keeping .rustup and .cargo in its original location: `$env:USERPROFILE` |
-| volta | You don't need nvm-windows anymore |
-| winlibs-mingw-msvcrt | A full **mingw-w64** toolchain with MSVCRT runtime built and distributed by [winlibs](http://winlibs.com/). |
-| winlibs-mingw-ucrt | A full **mingw-w64** toolchain with UCRT runtime built and distributed by [winlibs](http://winlibs.com/). |
-| winlibs-mingw-llvm-ucrt | *winlibs-mingw-ucrt* with bundled LLVM support |
+| Manifest                | Description                                                                                                                                                                                                |
+| ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| llvm-mingw              | [The](https://github.com/mstorsjo/llvm-mingw) LLVM/Clang/LLD based **mingw-w64** toolchain.                                                                                                                |
+| miniconda3              | A version of Miniconda3 that dose not add the default venv into your PATH unless you activate it with `conda activate base`                                                                                |
+| nuwen-mingw-gcc         | **Minimalist** C/C++ compiler from STL's [MinGW Distro](https://nuwen.net/mingw.html). It's **NOT** a full **mingw-w64** package, has no make, no gdb. Just the _gcc_ and _ld_ for 'quick-start' use case. |
+| nvm-windows             | A fork of [nvm-windows](https://github.com/chawyehsu/nvm-windows), removed elevated permission, for non-admin scoop user                                                                                   |
+| trash                   | Move files and folders to recycle bin instead of directly `rm-rf` it, like `brew install trash` but for Windows                                                                                            |
+| rustup-np               | The `non-portable` version of Rustup, keeping .rustup and .cargo in its original location: `$env:USERPROFILE`                                                                                              |
+| volta                   | You don't need nvm-windows anymore                                                                                                                                                                         |
+| winlibs-mingw-msvcrt    | A full **mingw-w64** toolchain with MSVCRT runtime built and distributed by [winlibs](http://winlibs.com/).                                                                                                |
+| winlibs-mingw-ucrt      | A full **mingw-w64** toolchain with UCRT runtime built and distributed by [winlibs](http://winlibs.com/).                                                                                                  |
+| winlibs-mingw-llvm-ucrt | _winlibs-mingw-ucrt_ with bundled LLVM support                                                                                                                                                             |
 
-Question
---------
+## Question
 
 **1. How to install the apps from this bucket?**
 
 Run below command in PowerShell to add the bucket:
 
-``` powershell
+```powershell
 scoop bucket add dorado https://github.com/chawyehsu/dorado
 ```
 
 Install apps from this bucket with below command:
 
-``` powershell
+```powershell
 scoop install dorado/<app_name>
 ```
 
