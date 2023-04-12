@@ -1,4 +1,4 @@
-#Requires -Version 5
+#Requires -Version 5.1
 param(
     [String] $dir = "$PSScriptRoot\..\bucket",
     [Parameter(ValueFromRemainingArguments = $true)]
@@ -9,4 +9,4 @@ if (!$env:SCOOP_HOME) { $env:SCOOP_HOME = Resolve-Path (scoop prefix scoop) }
 $checkver = "$env:SCOOP_HOME\bin\checkver.ps1"
 $remainArgs = ($remainArgs | Select-Object -Unique) -join ' '
 
-Invoke-Expression -command "$checkver -dir $dir $remainArgs"
+Invoke-Expression -Command "$checkver -dir $dir $remainArgs"
