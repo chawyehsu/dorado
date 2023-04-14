@@ -1,13 +1,13 @@
 {
-    "homepage": "https://www.dingtalk.com/",
+    "version": "7.0.20.4119105",
     "description": "An all-in-one free communication and collaboration platform",
+    "homepage": "https://www.dingtalk.com/",
     "license": {
         "identifier": "EULA",
         "url": "https://tms.dingtalk.com/markets/dingtalk/service-terms-zh"
     },
-    "version": "7.0.10.3169101",
-    "url": "https://dtapp-pub.dingtalk.com/dingtalk-desktop/win_installer/Release/DingTalk_v7.0.10.3169101.exe#/dl.7z",
-    "hash": "md5:c1c261131bae7246929cf1f407625871",
+    "url": "https://dtapp-pub.dingtalk.com/dingtalk-desktop/win_installer/Release/DingTalk_v7.0.20.4119105.exe#/dl.7z",
+    "hash": "md5:77a267fd2aee9864331ae9e8d630318b",
     "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\" -Recurse",
     "shortcuts": [
         [
@@ -16,15 +16,14 @@
         ]
     ],
     "checkver": {
-        "url": "https://im.dingtalk.com/manifest/new/release_windows_vista_later_gray4.json",
+        "url": "https://im.dingtalk.com/manifest/x64/release_windows_vista_later_gray4.json",
         "regex": "DingTalk_v([\\d.]+).exe"
     },
     "autoupdate": {
         "url": "https://dtapp-pub.dingtalk.com/dingtalk-desktop/win_installer/Release/DingTalk_v$version.exe#/dl.7z",
         "hash": {
-            "url": "https://im.dingtalk.com/manifest/new/release_windows_vista_later_gray4.json",
+            "url": "https://im.dingtalk.com/manifest/x64/release_windows_vista_later_gray4.json",
             "jsonpath": "$.win.install.md5"
         }
-    },
-    "notes": "We don't persist your DingTalk data, they are still storaged in '%APPDATA%\\DingTalk'."
+    }
 }
