@@ -1,0 +1,24 @@
+{
+    "homepage": "https://www.bobwallet.io/",
+    "description": "Bob Wallet is a Handshake wallet with an integrated full node.",
+    "version": "2.0.0",
+    "license": "GPL-3.0-only",
+    "url": "https://github.com/kyokan/bob-wallet/releases/download/v2.0.0/Bob-2.0.0.msi",
+    "hash": "cf5b96b2f9b3b136218b893496363c11f6f397c31e352d0bfb3fc9c55538f048",
+    "extract_dir": "bob-wallet",
+    "shortcuts": [
+        [
+            "Bob.exe",
+            "Bob Wallet"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/kyokan/bob-wallet"
+    },
+    "autoupdate": {
+        "url": "https://github.com/kyokan/bob-wallet/releases/download/v$version/Bob-$version.msi",
+        "hash": {
+            "url": "$baseurl/SHA256SUMS.asc"
+        }
+    }
+}
