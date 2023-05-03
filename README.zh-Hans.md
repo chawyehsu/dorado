@@ -19,23 +19,22 @@
     </p>
 </div>
 
-## 特色软件
+## 推荐软件
 
-| 软件                    | 简介                                                                                                                                  |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| hmcl                    | 极受欢迎的国产 Minecraft 启动器                                                                                                       |
-| llvm-mingw              | [一个](https://github.com/mstorsjo/llvm-mingw) 基于 LLVM/Clang/LLD 的 **mingw-w64** 工具链                                            |
-| msys2-cn                | 专为国人安装使用而配置的 MSYS2，全自动无人值守安装即用                                                                                |
-| neteasemusic            | 网易云音乐客户端                                                                                                                      |
-| nuwen-mingw-gcc         | 来自微软职工 STL 的极简 C/C++ 编译器，源自 [MinGW Distro](https://nuwen.net/mingw.html), 快速使用 GCC 的最佳选择                      |
-| nvm-windows             | 颇受欢迎的 [nvm-windows](https://github.com/chawyehsu/nvm-windows) 的修改版，移除了管理员提权要求，使得低权限的普通用户亦可无障碍使用 |
-| texlive                 | 需要 Tex 环境？TexLive 是当下最佳解决方法                                                                                             |
-| trash                   | 将待删除文件移至回收站，而不是直接 `rm-rf`，类似于 macOS 的 trash                                                                     |
-| volta                   | 你可能不再需要 nvm-windows                                                                                                            |
-| wechat                  | 你可能需要的微信 PC 客户端                                                                                                            |
-| winlibs-mingw-msvcrt    | [winlibs](http://winlibs.com/) 编译的完整 MSVCRT 运行库 **mingw-w64** 工具链发行版                                                    |
-| winlibs-mingw-ucrt      | [winlibs](http://winlibs.com/) 编译的完整 UCRT 运行库 **mingw-w64** 工具链发行版                                                      |
-| winlibs-mingw-llvm-ucrt | 包含 LLVM 支持的 _winlibs-mingw-ucrt_                                                                                                 |
+| 软件                    | 简介                                                                                          |
+| ----------------------- | --------------------------------------------------------------------------------------------- |
+| hmcl                    | 好用的国产 Minecraft 启动器                                                                   |
+| llvm-mingw              | 一个基于 LLVM/Clang/LLD 的 **mingw-w64** 工具链                                               |
+| msys2-cn                | MSYS2 衍生，配置大陆镜像点自动无人值守安装                                                    |
+| neteasemusic            | 网易云音乐客户端                                                                              |
+| nuwen-mingw-gcc         | GCC 编译器极简包，源自 STL 的 [MinGW Distro]，只有 gcc 与 ld，最小化环境编译简单的 C/C++ 代码 |
+| nvm-windows             | [nvm-windows] 修改版，移除了管理员提权要求，使得非权限普通用户亦可使用                        |
+| texlive                 | 需要 Tex 环境？TexLive 大概是当下最佳解决方法                                                 |
+| trash                   | 将待删除文件移至回收站，而不是直接 `rm -rf`，类似于 macOS 的 trash                            |
+| volta                   | 你可能不再需要 nvm-windows                                                                    |
+| winlibs-mingw-msvcrt    | [winlibs](http://winlibs.com/) 编译的完整 MSVCRT 运行库 **mingw-w64** 工具链发行版            |
+| winlibs-mingw-ucrt      | [winlibs](http://winlibs.com/) 编译的完整 UCRT 运行库 **mingw-w64** 工具链发行版              |
+| winlibs-mingw-llvm-ucrt | 包含 LLVM 支持的 _winlibs-mingw-ucrt_                                                         |
 
 更多待你发现~
 
@@ -57,8 +56,18 @@ scoop install dorado/<软件名>
 
 **2. 我想要某个软件，这个仓库里没有！**
 
-开 [issue](https://github.com/chawyehsu/dorado/issues)，描述你的需求。:)
+开 [issue]，描述你的需求。:)
 
 **3. 仓库中的某个软件版本落后了，求更新！**
 
 欢迎 Fork 本仓库，修改落后的软件清单，并提交你的拉取请求。:D
+
+**4. 仓库名 dorado 是什么意思？**
+
+一种鱼：[Dorado (Mahi-Mahi)]。
+
+[MinGW Distro]: https://nuwen.net/mingw.html
+[nvm-windows]: https://github.com/chawyehsu/nvm-windows
+[winlibs]: https://winlibs.com/
+[issue]: https://github.com/chawyehsu/dorado/issues
+[Dorado (Mahi-Mahi)]: https://en.wikipedia.org/wiki/Mahi-mahi

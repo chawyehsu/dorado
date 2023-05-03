@@ -22,18 +22,18 @@
 
 ## Featured Apps
 
-| Manifest                | Description                                                                                                                                                                                                |
-| ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| llvm-mingw              | [The](https://github.com/mstorsjo/llvm-mingw) LLVM/Clang/LLD based **mingw-w64** toolchain.                                                                                                                |
-| miniconda3              | A version of Miniconda3 that dose not add the default venv into your PATH unless you activate it with `conda activate base`                                                                                |
-| nuwen-mingw-gcc         | **Minimalist** C/C++ compiler from STL's [MinGW Distro](https://nuwen.net/mingw.html). It's **NOT** a full **mingw-w64** package, has no make, no gdb. Just the _gcc_ and _ld_ for 'quick-start' use case. |
-| nvm-windows             | A fork of [nvm-windows](https://github.com/chawyehsu/nvm-windows), removed elevated permission, for non-admin scoop user                                                                                   |
-| trash                   | Move files and folders to recycle bin instead of directly `rm-rf` it, like `brew install trash` but for Windows                                                                                            |
-| rustup-np               | The `non-portable` version of Rustup, keeping .rustup and .cargo in its original location: `$env:USERPROFILE`                                                                                              |
-| volta                   | You don't need nvm-windows anymore                                                                                                                                                                         |
-| winlibs-mingw-msvcrt    | A full **mingw-w64** toolchain with MSVCRT runtime built and distributed by [winlibs](http://winlibs.com/).                                                                                                |
-| winlibs-mingw-ucrt      | A full **mingw-w64** toolchain with UCRT runtime built and distributed by [winlibs](http://winlibs.com/).                                                                                                  |
-| winlibs-mingw-llvm-ucrt | _winlibs-mingw-ucrt_ with bundled LLVM support                                                                                                                                                             |
+| Manifest                | Description                                                                                                                                            |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| llvm-mingw              | LLVM/Clang/LLD based **mingw-w64** toolchain.                                                                                                          |
+| miniconda3              | Miniconda3 variant which dose not add the default venv into your PATH unless you activate it with `conda activate base`                                |
+| nuwen-mingw-gcc         | **Minimalist** GCC compiler from STL's [MinGW Distro]. It's **NOT** a full toolchain. No make, gdb, just the _gcc_ and _ld_ for quick-start scenarios. |
+| nvm-windows             | A [nvm-windows] fork that removes elevated permission, for non-admin Scoop users                                                                       |
+| trash                   | Safely move files and folders to recycle bin instead of using `rm -rf`                                                                                 |
+| rustup-np               | `non-portable` variant of Rustup that keeps `.rustup` and `.cargo` in their original location: `$env:USERPROFILE`                                      |
+| volta                   | You don't need nvm-windows anymore                                                                                                                     |
+| winlibs-mingw-msvcrt    | A full **mingw-w64** toolchain with MSVCRT runtime built and distributed by [winlibs].                                                                 |
+| winlibs-mingw-ucrt      | A full **mingw-w64** toolchain with UCRT runtime built and distributed by [winlibs].                                                                   |
+| winlibs-mingw-llvm-ucrt | _winlibs-mingw-ucrt_ with LLVM support                                                                                                                 |
 
 ## Question
 
@@ -53,7 +53,7 @@ scoop install dorado/<app_name>
 
 **2. I want some other apps!**
 
-Please open new app request [issue](https://github.com/chawyehsu/dorado/issues). :)
+Please open new app request [issue]. :)
 
 Please consider submitting your new app pull requests to the official buckets if
 they satisfy the criteria before opening new app request in my bucket.
@@ -61,3 +61,13 @@ they satisfy the criteria before opening new app request in my bucket.
 **3. Some apps are outdated, please update it!**
 
 Be a contributor! Fork it, update the outdated apps app manifest, and file pull-request. :D
+
+**4. What does the bucket name "dorado" mean?**
+
+[Dorado (Mahi-Mahi)]
+
+[MinGW Distro]: https://nuwen.net/mingw.html
+[nvm-windows]: https://github.com/chawyehsu/nvm-windows
+[winlibs]: https://winlibs.com/
+[issue]: https://github.com/chawyehsu/dorado/issues
+[Dorado (Mahi-Mahi)]: https://en.wikipedia.org/wiki/Mahi-mahi
