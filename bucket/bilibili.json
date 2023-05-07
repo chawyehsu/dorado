@@ -26,8 +26,8 @@
         ]
     ],
     "checkver": {
-        "url": "https://api.bilibili.com/x/web-frontend/getappversion?target=pc_electron&cdn_url=https://dl.hdslb.com/mobile/fixed/bili_win/bili_win-install.exe",
-        "regex": "v=([\\d.]+)\""
+        "url": "https://api.bilibili.com/x/elec-frontend/update/latest.yml",
+        "regex": "version: ([\\d.]+)"
     },
     "autoupdate": {
         "architecture": {
