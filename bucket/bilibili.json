@@ -9,7 +9,7 @@
     "architecture": {
         "64bit": {
             "url": "https://dl.hdslb.com/mobile/fixed/bili_win/bili_win-install.exe?v=1.10.1#/dl.7z",
-            "hash": "b28de87fe8df0f20fffcd183a45d834833b979e675883e64f3d5a27067e892c9",
+            "hash": "sha512:a21ad15f5fbb28e2f795d4cbfe6a3bfb3d8baac19ea10173508d715265c99c9d5893a7721f74fc540e097f08ff541ac56dab17a7fc12709075cfd1f80ba36f7b",
             "extract_dir": "$PLUGINSDIR"
         }
     },
@@ -34,7 +34,10 @@
             "64bit": {
                 "url": "https://dl.hdslb.com/mobile/fixed/bili_win/bili_win-install.exe?v=$version#/dl.7z"
             }
+        },
+        "hash": {
+            "url": "https://api.bilibili.com/x/elec-frontend/update/latest.yml",
+            "regex": "sha512: $base64"
         }
-    },
-    "notes": "Your Bilibili data are not persisted by Scoop and still storaged in '%APPDATA%\\bilibili'."
+    }
 }
