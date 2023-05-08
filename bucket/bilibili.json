@@ -1,0 +1,40 @@
+{
+    "version": "1.10.1",
+    "description": "Bilibili Windows client.",
+    "homepage": "https://www.bilibili.com",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://www.bilibili.com/protocal/licence.html"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://dl.hdslb.com/mobile/fixed/bili_win/bili_win-install.exe?v=1.10.1#/dl.7z",
+            "hash": "b28de87fe8df0f20fffcd183a45d834833b979e675883e64f3d5a27067e892c9",
+            "extract_dir": "$PLUGINSDIR"
+        }
+    },
+    "installer": {
+        "script": [
+            "Remove-Item \"$dir\\*\" -Exclude 'app-64.7z' -Force -Recurse",
+            "Expand-7zipArchive \"$dir\\app-64.7z\" \"$dir\" -Removal"
+        ]
+    },
+    "shortcuts": [
+        [
+            "哔哩哔哩.exe",
+            "哔哩哔哩"
+        ]
+    ],
+    "checkver": {
+        "url": "https://api.bilibili.com/x/elec-frontend/update/latest.yml",
+        "regex": "version: ([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://dl.hdslb.com/mobile/fixed/bili_win/bili_win-install.exe?v=$version#/dl.7z"
+            }
+        }
+    },
+    "notes": "Your Bilibili data are not persisted by Scoop and still storaged in '%APPDATA%\\bilibili'."
+}
