@@ -8,7 +8,7 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://dl.hdslb.com/mobile/fixed/bili_win/bili_win-install.exe?v=1.10.1#/dl.7z",
+            "url": "https://dl.hdslb.com/mobile/pack/bili_win/11821533/public/bilibili-setup-v1.10.1.exe#/dl.7z",
             "hash": "sha512:a21ad15f5fbb28e2f795d4cbfe6a3bfb3d8baac19ea10173508d715265c99c9d5893a7721f74fc540e097f08ff541ac56dab17a7fc12709075cfd1f80ba36f7b",
             "extract_dir": "$PLUGINSDIR"
         }
@@ -26,18 +26,33 @@
         ]
     ],
     "checkver": {
-        "url": "https://api.bilibili.com/x/elec-frontend/update/latest.yml",
-        "regex": "version: ([\\d.]+)"
+        "script": [
+            "$url = 'https://api.bilibili.com/x/elec-frontend/update/latest.yml'",
+            "$cont = Invoke-RestMethod $url",
+            "$r = 'version:\\s*([\\d.]+)'",
+            "if (!($cont -match $r)) { Write-Error \"Could not match $r in $url\"; continue }",
+            "$ver = $matches[1]",
+            "$assetUrl = \"https://api.bilibili.com/x/elec-frontend/update/bilibili-setup-v$ver.exe.blockmap\"",
+            "$assetReq = [System.Net.HttpWebRequest]::Create($assetUrl)",
+            "$assetReq.Headers.Add('appversion', '0.0.0')",
+            "$assetCont = $assetReq.GetResponse().ResponseUri.AbsoluteUri",
+            "$r = 'win/([\\d]+)/public'",
+            "if (!($assetCont -match $r)) { Write-Error \"Could not match $r in $url\"; continue }",
+            "$code = $matches[1]",
+            "Write-Output $ver $code"
+        ],
+        "regex": "([\\d.]+) (?<code>[\\w.]+)"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://dl.hdslb.com/mobile/fixed/bili_win/bili_win-install.exe?v=$version#/dl.7z"
+                "url": "https://dl.hdslb.com/mobile/pack/bili_win/$matchCode/public/bilibili-setup-v$version.exe#/dl.7z",
+                "hash": {
+                    "url": "https://dl.hdslb.com/mobile/pack/bili_win/$matchCode/public/latest.yml",
+                    "regex": "sha512:\\s+$base64"
+                }
             }
-        },
-        "hash": {
-            "url": "https://api.bilibili.com/x/elec-frontend/update/latest.yml",
-            "regex": "sha512: $base64"
         }
-    }
+    },
+    "notes": "Your Bilibili data are not persisted by Scoop and still storaged in '%APPDATA%\\bilibili'."
 }
