@@ -15,6 +15,12 @@
     },
     "installer": {
         "script": [
+            "if (Test-Path \"$env:AppData\\bilibili\") {",
+            "    info '[Persistent AppData]: Moving user data...'",
+            "    ensure \"$persist_dir\\UserData\" | Out-Null",
+            "    Copy-Item \"$env:AppData\\bilibili\\*\" \"$persist_dir\\UserData\\\" -Recurse -Force -ErrorAction 'SilentlyContinue'",
+            "    Remove-Item \"$env:AppData\\bilibili\" -Recurse -Force -ErrorAction 'SilentlyContinue'",
+            "}",
             "Remove-Item \"$dir\\*\" -Exclude 'app-64.7z' -Force -Recurse",
             "Expand-7zipArchive \"$dir\\app-64.7z\" \"$dir\" -Removal"
         ]
@@ -22,9 +28,11 @@
     "shortcuts": [
         [
             "哔哩哔哩.exe",
-            "哔哩哔哩"
+            "哔哩哔哩",
+            "--user-data-dir=\"$persist_dir\\UserData\""
         ]
     ],
+    "persist": "UserData",
     "checkver": {
         "script": [
             "$url = 'https://api.bilibili.com/x/elec-frontend/update/latest.yml'",
@@ -53,6 +61,5 @@
                 }
             }
         }
-    },
-    "notes": "Your Bilibili data are not persisted by Scoop and still storaged in '%APPDATA%\\bilibili'."
+    }
 }
