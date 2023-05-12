@@ -16,7 +16,17 @@
     "installer": {
         "script": [
             "Remove-Item \"$dir\\*\" -Exclude 'app-64.7z' -Force -Recurse",
-            "Expand-7zipArchive \"$dir\\app-64.7z\" \"$dir\" -Removal"
+            "Expand-7zipArchive \"$dir\\app-64.7z\" \"$dir\" -Removal",
+            "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name dorado) scripts/DoradoUtils.psm1)",
+            "Mount-ExternalRuntimeData -Source \"$persist_dir\\UserData\" -Target \"$env:APPDATA\\bilibili\"",
+            "Remove-Module -Name DoradoUtils"
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name dorado) scripts/DoradoUtils.psm1)",
+            "Dismount-ExternalRuntimeData -Target \"$env:APPDATA\\bilibili\"",
+            "Remove-Module -Name DoradoUtils"
         ]
     },
     "shortcuts": [
@@ -53,6 +63,5 @@
                 }
             }
         }
-    },
-    "notes": "Your Bilibili data are not persisted by Scoop and still storaged in '%APPDATA%\\bilibili'."
+    }
 }
