@@ -15,21 +15,24 @@
     },
     "installer": {
         "script": [
-            "if (Test-Path \"$env:AppData\\bilibili\") {",
-            "    info '[Persistent AppData]: Moving user data...'",
-            "    ensure \"$persist_dir\\UserData\" | Out-Null",
-            "    Copy-Item \"$env:AppData\\bilibili\\*\" \"$persist_dir\\UserData\\\" -Recurse -Force -ErrorAction 'SilentlyContinue'",
-            "    Remove-Item \"$env:AppData\\bilibili\" -Recurse -Force -ErrorAction 'SilentlyContinue'",
-            "}",
             "Remove-Item \"$dir\\*\" -Exclude 'app-64.7z' -Force -Recurse",
-            "Expand-7zipArchive \"$dir\\app-64.7z\" \"$dir\" -Removal"
+            "Expand-7zipArchive \"$dir\\app-64.7z\" \"$dir\" -Removal",
+            "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name dorado) scripts/DoradoUtils.psm1)",
+            "Mount-ExternalRuntimeData -Source \"$persist_dir\\UserData\" -Target \"$env:APPDATA\\bilibili\"",
+            "Remove-Module -Name DoradoUtils"
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name dorado) scripts/DoradoUtils.psm1)",
+            "Dismount-ExternalRuntimeData -Target \"$env:APPDATA\\bilibili\"",
+            "Remove-Module -Name DoradoUtils"
         ]
     },
     "shortcuts": [
         [
             "哔哩哔哩.exe",
-            "哔哩哔哩",
-            "--user-data-dir=\"$persist_dir\\UserData\""
+            "哔哩哔哩"
         ]
     ],
     "persist": "UserData",
