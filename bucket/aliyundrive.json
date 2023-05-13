@@ -1,13 +1,13 @@
 {
-    "version": "4.3.1",
+    "version": "4.3.2",
     "description": "The official client for Alibaba's cloud dirve service",
     "homepage": "https://www.aliyundrive.com/",
     "license": {
         "identifier": "EULA",
         "url": "https://www.aliyundrive.com/protocol/service"
     },
-    "url": "https://cdn.aliyundrive.net/downloads/apps/desktop/update/4.3.1/win32/ia32/aDrive-4.3.1.exe#/aDrive-4.3.1.7z",
-    "hash": "sha512:c83bc0ef43ec52c916f23ddb6d53eabbc749d2b10e08468e4c17dd9b65a784adfde0fb16453d666db3401f8a2828e2bff1c8d40db55f723b36c43b18462d29a4",
+    "url": "https://cdn.aliyundrive.net/downloads/apps/desktop/update/4.3.2/win32/ia32/aDrive-4.3.2.exe#/aDrive-4.3.2.7z",
+    "hash": "sha512:988e11b30c503375c680e024bd9e2760677973349ddb52cd3b9fc76b4c5a724e31359bda8d63ad42f6880739fbbfb73cf0a69c2f19be1c41aa6afcab264f1795",
     "post_install": [
         "@('$PLUGINSDIR', '$TEMP') | ForEach-Object {",
         "    Remove-Item \"$dir\\$_\" -Recurse -Force",
