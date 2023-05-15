@@ -1,0 +1,64 @@
+{
+    "version": "3.2.0",
+    "description": "Cross-platform desktop video resource player, free and beautiful.",
+    "homepage": "https://github.com/Hiram-Wong/ZyPlayer",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Hiram-Wong/ZyPlayer/releases/download/v3.2.0/ZYPlayer-win-3.2.0-x64.exe#/dl.7z",
+            "hash": "sha512:1c006dd113aa0381d3e72b0c6d37853fadd38bb07eb250dd78110453f43aa0cd846db48f8551ed6b85cd51674851d46d30c50c8e8fee4859a29ad74a1144fedd",
+            "pre_install": [
+                "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
+                "Remove-Item \"$dir\\`$*\", \"$dir\\Uninst*\" -Recurse"
+            ]
+        },
+        "32bit": {
+            "url": "https://github.com/Hiram-Wong/ZyPlayer/releases/download/v3.2.0/ZYPlayer-win-3.2.0-ia32.exe#/dl.7z",
+            "hash": "sha512:a4211899c4ebd97ce12e1eccab8d11aed19c682f4f42e02b53deca0034f9a31ae0907d797c4c3bbbe2cb1d93c1044d0620ffb379c7b3b5642e20eae0d92a3904",
+            "pre_install": [
+                "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-32.7z\" \"$dir\"",
+                "Remove-Item \"$dir\\`$*\", \"$dir\\Uninst*\" -Recurse"
+            ]
+        }
+    },
+    "installer": {
+        "script": [
+            "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name dorado) scripts/DoradoUtils.psm1)",
+            "Mount-ExternalRuntimeData -Source \"$persist_dir\\UserData\" -Target \"$env:APPDATA\\zy-player\"",
+            "Remove-Module -Name DoradoUtils"
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name dorado) scripts/DoradoUtils.psm1)",
+            "Dismount-ExternalRuntimeData -Target \"$env:APPDATA\\zy-player\"",
+            "Remove-Module -Name DoradoUtils"
+        ]
+    },
+    "shortcuts": [
+        [
+            "ZYPlayer.exe",
+            "ZYPlayer"
+        ]
+    ],
+    "persist": "UserData",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Hiram-Wong/ZyPlayer/releases/download/v$version/ZYPlayer-win-$version-x64.exe#/dl.7z",
+                "hash": {
+                    "url": "$baseurl/latest.yml",
+                    "regex": "(?sm)x64.*?sha512:\\s+$base64"
+                }
+            },
+            "32bit": {
+                "url": "https://github.com/Hiram-Wong/ZyPlayer/releases/download/v$version/ZYPlayer-win-$version-ia32.exe#/dl.7z",
+                "hash": {
+                    "url": "$baseurl/latest.yml",
+                    "regex": "(?sm)ia32.*?sha512:\\s+$base64"
+                }
+            }
+        }
+    }
+}
