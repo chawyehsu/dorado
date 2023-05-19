@@ -1,16 +1,20 @@
 {
     "homepage": "https://www.microsoft.com/en-us/edge",
     "description": "The chromium based Microsoft Edge browser (Canary Channel)",
-    "version": "115.0.1834.0",
+    "version": "115.0.1864.0",
     "license": "Freeware",
     "architecture": {
         "64bit": {
-            "url": "https://dorado-api.deno.dev/edge?arch=64&channel=canary&version=115.0.1834.0&dl#/MicrosoftEdge-115.0.1834.0-x64.7z",
-            "hash": "2cf6da3511f8967f6f2c0d6baefc58f8007fba34fe254cf9552945f746894bab"
+            "url": "https://dorado-api.deno.dev/edge?arch=64&channel=canary&version=115.0.1864.0&dl#/MicrosoftEdge-115.0.1864.0-x64.7z",
+            "hash": "3f4c91896fcc5abf605812b59857d79a42bb05630fe04936795fdbaebd0c9cab"
         },
         "32bit": {
-            "url": "https://dorado-api.deno.dev/edge?arch=86&channel=canary&version=115.0.1834.0&dl#/MicrosoftEdge-115.0.1834.0-x86.7z",
-            "hash": "14e8ecefd45bcdcb760e68b2f5f0bac28e1ce6d7fa6110fa0ebb938fe05bb0d0"
+            "url": "https://dorado-api.deno.dev/edge?arch=86&channel=canary&version=115.0.1864.0&dl#/MicrosoftEdge-115.0.1864.0-x86.7z",
+            "hash": "5395cde3f9d0d3f4ed4631a0ff82499b510f2c1a4982d768b681b80c4ddc887c"
+        },
+        "arm64": {
+            "url": "https://dorado-api.deno.dev/edge?arch=arm64&channel=canary&version=115.0.1864.0&dl#/MicrosoftEdge-115.0.1864.0-arm64.7z",
+            "hash": "df02e8fb9dc75b639095289b61ab8b9ac01795099ff72d241347cd1dc7b33d2b"
         }
     },
     "installer": {
@@ -39,6 +43,13 @@
                 "url": "https://dorado-api.deno.dev/edge?arch=86&channel=canary&version=$version&dl#/MicrosoftEdge-$version-x86.7z",
                 "hash": {
                     "url": "https://dorado-api.deno.dev/edge?arch=86&channel=canary&version=$version",
+                    "jsonpath": "$.Hashes.Sha256"
+                }
+            },
+            "arm64": {
+                "url": "https://dorado-api.deno.dev/edge?arch=arm64&channel=canary&version=$version&dl#/MicrosoftEdge-$version-arm64.7z",
+                "hash": {
+                    "url": "https://dorado-api.deno.dev/edge?arch=arm64&channel=canary&version=$version",
                     "jsonpath": "$.Hashes.Sha256"
                 }
             }

@@ -1,16 +1,20 @@
 {
     "homepage": "https://www.microsoft.com/en-us/edge",
     "description": "The chromium based Microsoft Edge browser (Beta Channel)",
-    "version": "113.0.1774.32",
+    "version": "114.0.1823.18",
     "license": "Freeware",
     "architecture": {
         "64bit": {
-            "url": "https://dorado-api.deno.dev/edge?arch=64&channel=beta&version=113.0.1774.32&dl#/MicrosoftEdge-113.0.1774.32-x64.7z",
-            "hash": "ec212d8cb091ce4a5b9bf74726a8b70fc55f9bd43d6eece1f7443b56f7529921"
+            "url": "https://dorado-api.deno.dev/edge?arch=64&channel=beta&version=114.0.1823.18&dl#/MicrosoftEdge-114.0.1823.18-x64.7z",
+            "hash": "77c69ca4278b9adecfbfd1782af5ca045d619a93625e022cbc795ba1b042b9e1"
         },
         "32bit": {
-            "url": "https://dorado-api.deno.dev/edge?arch=86&channel=beta&version=113.0.1774.32&dl#/MicrosoftEdge-113.0.1774.32-x86.7z",
-            "hash": "3a144aa760a5281ec0202934830e79799c213937c4ebc555bee3eda5b8f184e8"
+            "url": "https://dorado-api.deno.dev/edge?arch=86&channel=beta&version=114.0.1823.18&dl#/MicrosoftEdge-114.0.1823.18-x86.7z",
+            "hash": "f729cd3e861062d5c8a0e836f68b28d56495327e53f678fd3bc21421fc9ab7db"
+        },
+        "arm64": {
+            "url": "https://dorado-api.deno.dev/edge?arch=arm64&channel=beta&version=114.0.1823.18&dl#/MicrosoftEdge-114.0.1823.18-arm64.7z",
+            "hash": "a537df64c018886855f5fb0711517c4eafba81291fa814f06da4bf86eb169854"
         }
     },
     "installer": {
@@ -39,6 +43,13 @@
                 "url": "https://dorado-api.deno.dev/edge?arch=86&channel=beta&version=$version&dl#/MicrosoftEdge-$version-x86.7z",
                 "hash": {
                     "url": "https://dorado-api.deno.dev/edge?arch=86&channel=beta&version=$version",
+                    "jsonpath": "$.Hashes.Sha256"
+                }
+            },
+            "arm64": {
+                "url": "https://dorado-api.deno.dev/edge?arch=arm64&channel=beta&version=$version&dl#/MicrosoftEdge-$version-arm64.7z",
+                "hash": {
+                    "url": "https://dorado-api.deno.dev/edge?arch=arm64&channel=beta&version=$version",
                     "jsonpath": "$.Hashes.Sha256"
                 }
             }
