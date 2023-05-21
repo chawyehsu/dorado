@@ -1,0 +1,30 @@
+{
+    "version": "1.12.0",
+    "description": "A user-friendly desktop GUI client for FRP on Windows.",
+    "homepage": "https://github.com/koho/frpmgr",
+    "license": "Apache-2.0",
+    "url": "https://github.com/koho/frpmgr/releases/download/v1.12.0/frpmgr-1.12.0-Setup.exe#/frpmgr.exe",
+    "hash": "50d9f4cf017c19c5a9c6ba5fbda8ef83441d6906d15bb7116cab24177cb5fece",
+    "pre_install": [
+        "Expand-7zipArchive \"$dir\\$fname\" -Overwrite 'Skip' -Removal",
+        "Remove-Item \"$dir\\`$*\" -Recurse",
+        "Move-Item \"$dir\\AppConfig\" \"$dir\\app.config\"",
+        "Move-Item \"$dir\\LangConfig\" \"$dir\\lang.config\"",
+        "Move-Item \"$dir\\MainApplication\" \"$dir\\frpmgr.exe\""
+    ],
+    "shortcuts": [
+        [
+            "frpmgr.exe",
+            "FRP Manager"
+        ]
+    ],
+    "persist": [
+        "lang.config",
+        "app.config",
+        "profiles"
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/koho/frpmgr/releases/download/v$version/frpmgr-$version-Setup.exe#/frpmgr.exe"
+    }
+}
