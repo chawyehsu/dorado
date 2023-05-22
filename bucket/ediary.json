@@ -1,11 +1,11 @@
 {
     "homepage": "http://www.haoxg.net/ediary/index.html",
     "description": "An electronic diary software born in 1999, which is still in active development.",
-    "version": "4.2.1-win64",
+    "version": "4.2.2-win64",
     "license": "Freeware",
-    "url": "http://www.haoxg.net/ediary/download/ediary-4.2.1-win64-copy.zip",
-    "hash": "a8bc40f096d09be9fdbd9d1fe95f7683d2dc6396fc73e11fb65fa1abaa911251",
-    "extract_dir": "eDiary-4.2.1-win64",
+    "url": "http://www.haoxg.net/ediary/download/ediary-4.2.2-win64-copy.zip",
+    "hash": "2abeb671082d21579442769424a8048265eb82c4da0ea519da0ac20a37c37a57",
+    "extract_dir": "eDiary-4.2.2-win64",
     "pre_install": "if (!(Test-Path $persist_dir\\Config.ini)) { New-Item $dir\\Config.ini | Out-Null }",
     "shortcuts": [
         [
