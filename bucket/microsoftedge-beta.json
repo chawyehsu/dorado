@@ -1,20 +1,20 @@
 {
     "homepage": "https://www.microsoft.com/en-us/edge",
     "description": "The chromium based Microsoft Edge browser (Beta Channel)",
-    "version": "114.0.1823.18",
+    "version": "114.0.1823.24",
     "license": "Freeware",
     "architecture": {
         "64bit": {
-            "url": "https://dorado-api.deno.dev/edge?arch=64&channel=beta&version=114.0.1823.18&dl#/MicrosoftEdge-114.0.1823.18-x64.7z",
-            "hash": "77c69ca4278b9adecfbfd1782af5ca045d619a93625e022cbc795ba1b042b9e1"
+            "url": "https://dorado-api.deno.dev/edge?arch=64&channel=beta&version=114.0.1823.24&dl#/MicrosoftEdge-114.0.1823.24-x64.7z",
+            "hash": "2b10c8afb1f5df1fc6f667362b5c99320e1f5ab5af46392e291c9d15e17abca4"
         },
         "32bit": {
-            "url": "https://dorado-api.deno.dev/edge?arch=86&channel=beta&version=114.0.1823.18&dl#/MicrosoftEdge-114.0.1823.18-x86.7z",
-            "hash": "f729cd3e861062d5c8a0e836f68b28d56495327e53f678fd3bc21421fc9ab7db"
+            "url": "https://dorado-api.deno.dev/edge?arch=86&channel=beta&version=114.0.1823.24&dl#/MicrosoftEdge-114.0.1823.24-x86.7z",
+            "hash": "1f111219252ec2bb7d9159e497aa87aabaab7b2ea11c841e84a98b9ae2f56290"
         },
         "arm64": {
-            "url": "https://dorado-api.deno.dev/edge?arch=arm64&channel=beta&version=114.0.1823.18&dl#/MicrosoftEdge-114.0.1823.18-arm64.7z",
-            "hash": "a537df64c018886855f5fb0711517c4eafba81291fa814f06da4bf86eb169854"
+            "url": "https://dorado-api.deno.dev/edge?arch=arm64&channel=beta&version=114.0.1823.24&dl#/MicrosoftEdge-114.0.1823.24-arm64.7z",
+            "hash": "1a55c687e5c552a8b55d4800555580bec50c76fc50d82832eda9abe14b480089"
         }
     },
     "installer": {
