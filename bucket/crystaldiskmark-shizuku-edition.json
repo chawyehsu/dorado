@@ -3,8 +3,8 @@
     "description": "CrystalDiskMark is a disk benchmark software.",
     "version": "8.0.4c",
     "license": "MIT",
-    "url": "https://dotsrc.dl.osdn.net/osdn/crystaldiskmark/77936/CrystalDiskMark8_0_4cShizuku.zip",
-    "hash": "4b3fc3fdc50d866526cb0cd78b0a95ba97a022884b78ce068179800ecc2cf0e8",
+    "url": "https://crystalmark.info/download/zz/CrystalDiskMark8_0_4cShizuku.zip",
+    "hash": "6adc29892115612160db4075ef673804dc44f2cff37681590814734afcd05989",
     "architecture": {
         "64bit": {
             "shortcuts": [
@@ -44,14 +44,10 @@
         "}"
     ],
     "checkver": {
-        "url": "https://osdn.net/projects/crystaldiskmark/",
-        "regex": "releases\\/(?<release>[\\d]+)\">CrystalDiskMark ([\\w.]+)<"
+        "url": "https://crystalmark.info/en/download/",
+        "regex": "meta name=\"description.+CrystalDiskMark ([\\w\\.]+) - Manual"
     },
     "autoupdate": {
-        "url": "https://dotsrc.dl.osdn.net/osdn/crystaldiskmark/$matchRelease/CrystalDiskMark$underscoreVersionShizuku.zip",
-        "hash": {
-            "url": "https://osdn.net/projects/crystaldiskmark/releases/rss",
-            "xpath": "//osdn:file[@url='https://osdn.net/projects/crystaldiskmark/downloads/$matchRelease/CrystalDiskMark$underscoreVersionShizuku.zip/']/@sha256"
-        }
+        "url": "https://crystalmark.info/download/zz/CrystalDiskMark$underscoreVersionShizuku.zip"
     }
 }
