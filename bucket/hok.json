@@ -1,20 +1,20 @@
 {
-    "version": "0.1.0-alpha.2",
+    "version": "0.1.0-alpha.3",
     "description": "Hok is a CLI implementation of Scoop in Rust",
     "homepage": "https://github.com/chawyehsu/hok",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/chawyehsu/hok/releases/download/v0.1.0-alpha.2/hok-x86_64-pc-windows-msvc.zip",
-            "hash": "ad0898490ac16729db8f8bf4a15d0faa30649aa03ff5bb32a0ef67bf8d25189f"
+            "url": "https://github.com/chawyehsu/hok/releases/download/v0.1.0-alpha.3/hok-x86_64-pc-windows-msvc.zip",
+            "hash": "87acd2d09f80d1fa1a17fa74c451eb32304976a147d6921145c5bc95d79bbc0a"
         },
         "32bit": {
-            "url": "https://github.com/chawyehsu/hok/releases/download/v0.1.0-alpha.2/hok-i686-pc-windows-msvc.zip",
-            "hash": "facdc2c9514742461361615587c15898f4b4fc0c31eaf40dda20d176badc0d5d"
+            "url": "https://github.com/chawyehsu/hok/releases/download/v0.1.0-alpha.3/hok-i686-pc-windows-msvc.zip",
+            "hash": "01d677e7e59a6f46f7778545e0e7edb2efc6b953c56662b6ed7ff2920e6a47f1"
         },
         "arm64": {
-            "url": "https://github.com/chawyehsu/hok/releases/download/v0.1.0-alpha.2/hok-aarch64-pc-windows-msvc.zip",
-            "hash": "abe219eded308400b4160fe057399938be58e34e13bfb87b3ea50064b53cba26"
+            "url": "https://github.com/chawyehsu/hok/releases/download/v0.1.0-alpha.3/hok-aarch64-pc-windows-msvc.zip",
+            "hash": "9ec0e69bb8afbecfaf990d0bb06b2b92d13e20705836a96f3d4ef1ff31861ebf"
         }
     },
     "bin": "hok.exe",
