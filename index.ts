@@ -1,4 +1,3 @@
-import { serve } from "https://deno.land/std@0.114.0/http/server.ts";
 import handlerAppxqq from "./appxqq.ts"
 import handlerEdge from "./edge.ts"
 import handleTianyiEcloud from "./tianyi-ecloud.ts"
@@ -50,4 +49,4 @@ async function handler(request: Request): Promise<Response> {
 }
 
 console.log("Listening on port 8000")
-await serve(handler)
+Deno.serve(handler)
