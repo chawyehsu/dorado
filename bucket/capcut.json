@@ -2,10 +2,10 @@
     "homepage": "https://www.capcut.com/",
     "description": "Video editing application produced by ByteDance",
     "license": "Proprietary",
-    "version": "2.1.0.419",
-    "url": "https://lf16-capcut.faceulv.com/obj/capcutpc-packages-us/packages/CapCut_2_1_0_419_capcutpc_0.exe#/capcut.7z",
-    "hash": "56a85c211400081b2a92ae53fdd4769d301344172b29a1b9e41cf45e49c0d787",
-    "extract_dir": "JYPacket/2.1.0.419",
+    "version": "2.4.0.634",
+    "url": "https://lf16-capcut.faceulv.com/obj/capcutpc-packages-us/packages/CapCut_2_4_0_634_capcutpc_0_creatortool.exe#/capcut.7z",
+    "hash": "302ef64d0322cb18ddad31edbe3f0af05c6a3618a38f6804f4690d44b46b29c7",
+    "extract_dir": "JYPacket/2.4.0.634",
     "shortcuts": [
         [
             "CapCut.exe",
@@ -17,7 +17,7 @@
         "replace": "${major}.${minor}.${patch}.${build}"
     },
     "autoupdate": {
-        "url": "https://lf16-capcut.faceulv.com/obj/capcutpc-packages-us/packages/CapCut_$underscoreVersion_capcutpc_0.exe#/capcut.7z",
+        "url": "https://lf16-capcut.faceulv.com/obj/capcutpc-packages-us/packages/CapCut_$underscoreVersion_capcutpc_0_creatortool.exe#/capcut.7z",
         "extract_dir": "JYPacket/$version"
     }
 }
