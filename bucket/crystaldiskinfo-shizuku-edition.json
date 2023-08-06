@@ -1,10 +1,10 @@
 {
     "homepage": "https://crystalmark.info/en/",
     "description": "CrystalDiskInfo is a HDD/SSD utility software which supports S.M.A.R.T and a part of USB-HDD.",
-    "version": "9.0.1a",
+    "version": "9.1.1",
     "license": "MIT",
-    "url": "https://dotsrc.dl.osdn.net/osdn/crystaldiskinfo/78836/CrystalDiskInfo9_0_1aShizuku.zip",
-    "hash": "ac0d51a6c978aa176faa94ce481c89dfa961b39db006917f6b1140b8a1e4378d",
+    "url": "https://crystalmark.info/download/zz/CrystalDiskInfo9_1_1Shizuku.zip",
+    "hash": "cee8575b8e19855495a1072e628ed7967aa0fd687b1650adf5864fbd7ce88607",
     "architecture": {
         "64bit": {
             "shortcuts": [
@@ -41,14 +41,10 @@
         "Smart"
     ],
     "checkver": {
-        "url": "https://osdn.net/projects/crystaldiskinfo/",
-        "regex": "releases\\/(?<release>[\\d]+)\">CrystalDiskInfo ([\\w.]+)<"
+        "url": "https://crystalmark.info/en/download/",
+        "regex": "meta name=\"description.+CrystalDiskInfo ([\\w\\.]+) - Manual"
     },
     "autoupdate": {
-        "url": "https://dotsrc.dl.osdn.net/osdn/crystaldiskinfo/$matchRelease/CrystalDiskInfo$underscoreVersionShizuku.zip",
-        "hash": {
-            "url": "https://osdn.net/projects/crystaldiskinfo/releases/rss",
-            "xpath": "//osdn:file[@url='https://osdn.net/projects/crystaldiskinfo/downloads/$matchRelease/CrystalDiskInfo$underscoreVersionShizuku.zip/']/@sha256"
-        }
+        "url": "https://crystalmark.info/download/zz/CrystalDiskInfo$underscoreVersionShizuku.zip"
     }
 }
