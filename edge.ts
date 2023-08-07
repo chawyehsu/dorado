@@ -16,9 +16,11 @@ interface DownloadInfo {
   };
 }
 
+const encoder = new TextEncoder();
+
 // Deno Deploy doesn't have this cert, and Deno.createHttpClient isn't stable yet,
 // so this is the best I could come up with.
-const caCert = await Deno.readTextFile(new URL("assets/Microsoft Update Secure Server CA 2.1.crt", import.meta.url));
+const caCert = await Deno.readTextFile(new URL("./assets/Microsoft Update Secure Server CA 2.1.crt", import.meta.url));
 
 async function fetchVersion(channel: string, arch: string, version?: string | null): Promise<Response> {
   const conn = await Deno.connectTls({
@@ -27,7 +29,6 @@ async function fetchVersion(channel: string, arch: string, version?: string | nu
     caCerts: [caCert],
   });
   const writer = new BufWriter(conn);
-  const encoder = new TextEncoder();
 
   const path = version === undefined || version === null
     ? "/latest?action=select"
