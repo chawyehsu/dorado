@@ -5,23 +5,14 @@
     "license": "BSD-3-Clause",
     "architecture": {
         "64bit": {
-            "url": "https://anaconda.org/conda-forge/micromamba/1.4.9/download/win-64/micromamba-1.4.9-0.tar.bz2",
-            "hash": "md5:cf59ab7b57f97d8bed3fd646e160ed3e"
+            "url": "https://github.com/mamba-org/micromamba-releases/releases/download/1.4.9-0/micromamba-win-64#/micromamba.exe",
+            "hash": "914abf35d85ba57fbff3bfc21c641e9c0309d1ab58997911fb36f09d3ae98175"
         }
     },
-    "extract_dir": "Library\\bin",
-    "bin": [
-        "micromamba.exe",
-        [
-            "micromamba.exe",
-            "umamba"
-        ]
-    ],
     "env_set": {
-        "MAMBA_ROOT_PREFIX": "$dir\\mamba"
+        "MAMBA_ROOT_PREFIX": "$dir\\mamba",
+        "MAMBA_EXE": "$dir\\micromamba.exe"
     },
-    "post_install": "Remove-Item \"$dir\\Library\" -Force",
-    "persist": "mamba",
     "checkver": {
         "url": "https://api.anaconda.org/release/conda-forge/micromamba/latest",
         "regex": "win-64/micromamba-([\\d.-]+).tar.bz2"
@@ -29,12 +20,18 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://anaconda.org/conda-forge/micromamba/$matchHead/download/win-64/micromamba-$version.tar.bz2",
+                "url": "https://github.com/mamba-org/micromamba-releases/releases/download/$version/micromamba-win-64#/micromamba.exe",
                 "hash": {
-                    "url": "https://api.anaconda.org/release/conda-forge/micromamba/latest",
-                    "regex": "(?sm)win-64/micromamba-$version.tar.bz2.*?$md5"
+                    "url": "$url.sha256"
                 }
             }
         }
-    }
+    },
+    "notes": [
+        "No shim is now exposed for micromamba, you have to add following hook to your PowerShell $PROFILE to use it:",
+        "",
+        "(& $env:MAMBA_EXE 'shell' 'hook' -s 'powershell' -p $env:MAMBA_ROOT_PREFIX) | Out-String | Invoke-Expression",
+        "",
+        "Also note that the base mamba environment located in $env:MAMBA_ROOT_PREFIX is now NOT persisted"
+    ]
 }
