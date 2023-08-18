@@ -32,6 +32,8 @@
         "",
         "(& $env:MAMBA_EXE 'shell' 'hook' -s 'powershell' -p $env:MAMBA_ROOT_PREFIX) | Out-String | Invoke-Expression",
         "",
-        "Also note that the base mamba environment located in $env:MAMBA_ROOT_PREFIX is now NOT persisted"
+        "Also note that the mamba base environment located in $env:MAMBA_ROOT_PREFIX is now NOT persisted,",
+        "we advice to setup 'envs_dirs' to use a seperated path like '~/.conda/envs' and avoid using the base env.",
+        "https://conda.io/projects/conda/en/latest/user-guide/configuration/use-condarc.html#specify-environment-directories-envs-dirs"
     ]
 }
