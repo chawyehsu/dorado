@@ -1,0 +1,30 @@
+{
+    "version": "0.3.6",
+    "description": "Open Source Dev-Environments-As-Code",
+    "homepage": "https://devpod.sh",
+    "license": "MPL-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/loft-sh/devpod/releases/download/v0.3.6/DevPod_windows_x64_en-US.msi",
+            "hash": "d02f787863eb23369ef669d5759fcb4251df1e7a56008e400c3c77eca407a0a3"
+        }
+    },
+    "extract_dir": "PFiles\\DevPod",
+    "bin": "devpod-cli.exe",
+    "shortcuts": [
+        [
+            "DevPod.exe",
+            "DevPod"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/loft-sh/devpod"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/loft-sh/devpod/releases/download/v$version/DevPod_windows_x64_en-US.msi"
+            }
+        }
+    }
+}
