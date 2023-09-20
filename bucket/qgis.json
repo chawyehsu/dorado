@@ -1,0 +1,21 @@
+{
+    "homepage": "https://www.qgis.org/",
+    "description": "A Free and Open Source Geographic Information System",
+    "version": "3.32.3-1",
+    "license": "GPL-2.0-only",
+    "url": "https://qgis.org/downloads/QGIS-OSGeo4W-3.32.3-1.msi",
+    "hash": "5c0416ff714e49ceee7af6fd23a5b7c0244959afb6bebd617516c12d795a9de8",
+    "extract_dir": "QGIS 3.32.3",
+    "bin": "OSGeo4W.bat",
+    "checkver": {
+        "url": "https://www.qgis.org/en/site/forusers/alldownloads.html",
+        "regex": "/downloads/QGIS-OSGeo4W-([\\d.]+(-\\d+)?).msi"
+    },
+    "autoupdate": {
+        "url": "https://qgis.org/downloads/QGIS-OSGeo4W-$version.msi",
+        "extract_dir": "QGIS $majorVersion.$minorVersion.$patchVersion",
+        "hash": {
+            "url": "https://qgis.org/downloads/QGIS-OSGeo4W-$version.sha256sum"
+        }
+    }
+}
