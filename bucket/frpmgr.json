@@ -1,10 +1,18 @@
 {
-    "version": "1.12.0",
+    "version": "1.15.0",
     "description": "A user-friendly desktop GUI client for FRP on Windows.",
     "homepage": "https://github.com/koho/frpmgr",
     "license": "Apache-2.0",
-    "url": "https://github.com/koho/frpmgr/releases/download/v1.12.0/frpmgr-1.12.0-Setup.exe#/frpmgr.exe",
-    "hash": "50d9f4cf017c19c5a9c6ba5fbda8ef83441d6906d15bb7116cab24177cb5fece",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/koho/frpmgr/releases/download/v1.15.0/frpmgr-1.15.0-setup-x64.exe",
+            "hash": "c311d2d8e8f7463cca4c4a5be15ad0f52e1739ad506978011d7069c58c737902"
+        },
+        "32bit": {
+            "url": "https://github.com/koho/frpmgr/releases/download/v1.15.0/frpmgr-1.15.0-setup-x86.exe",
+            "hash": "bb2f7b016a93066b3455960267e8a9c33c843e161eb570706bb480667a7b1ced"
+        }
+    },
     "pre_install": [
         "Expand-7zipArchive \"$dir\\$fname\" -Overwrite 'Skip' -Removal",
         "Remove-Item \"$dir\\`$*\" -Recurse",
@@ -25,6 +33,16 @@
     ],
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/koho/frpmgr/releases/download/v$version/frpmgr-$version-Setup.exe#/frpmgr.exe"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/koho/frpmgr/releases/download/v$version/frpmgr-$version-setup-x64.exe"
+            },
+            "32bit": {
+                "url": "https://github.com/koho/frpmgr/releases/download/v$version/frpmgr-$version-setup-x86.exe"
+            }
+        },
+        "hash": {
+            "url": "https://github.com/koho/frpmgr/releases/download/v$version/frpmgr-$version-sha256-checksums.txt"
+        }
     }
 }
