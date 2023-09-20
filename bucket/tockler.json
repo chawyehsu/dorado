@@ -1,0 +1,58 @@
+{
+    "homepage": "https://tockler.io/",
+    "description": "Application that tracks your time by monitoring your active window title and idle time.",
+    "version": "3.21.18",
+    "license": "GPL-3.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/MayGo/tockler/releases/download/v3.21.18/tockler-3.21.18-setup-win-x64.exe#/dl.7z",
+            "hash": "sha512:136da8625a89c2e29bc92ed520612effe747ded5d82df0ef0fe297574a498521dd046eee56b2cdf1cdb6afdceeb21bcd2ad73abef9f8fcabff29e18ad8d4ca09",
+            "pre_install": [
+                "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
+                "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\`$R0\" -Force -Recurse"
+            ]
+        },
+        "32bit": {
+            "url": "https://github.com/MayGo/tockler/releases/download/v3.21.18/tockler-3.21.18-setup-win-ia32.exe#/dl.7z",
+            "hash": "sha512:139004a8eb4f92aaee2965aa05b7434792661e6df8d828a92a70434ec8e8e13bbde74219b9700bbffc2dbf72336140934ae252f54b6b646516e816fa6439702d",
+            "pre_install": [
+                "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-32.7z\" \"$dir\"",
+                "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\`$R0\" -Force -Recurse"
+            ]
+        },
+        "arm64": {
+            "url": "https://github.com/MayGo/tockler/releases/download/v3.21.18/tockler-3.21.18-setup-win-arm64.exe#/dl.7z",
+            "hash": "sha512:07e77a227551a3eda8ad491363b3527000012927d243ca932541e02ea762d16166ba8132af617c46b76cb7a6b9c6ed4e743576c30616df5c02dce4fe579199db",
+            "pre_install": [
+                "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-arm64.7z\" \"$dir\"",
+                "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\`$R0\" -Force -Recurse"
+            ]
+        }
+    },
+    "shortcuts": [
+        [
+            "Tockler.exe",
+            "Tockler"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/MayGo/tockler"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/MayGo/tockler/releases/download/v$version/tockler-$version-setup-win-x64.exe#/dl.7z"
+            },
+            "32bit": {
+                "url": "https://github.com/MayGo/tockler/releases/download/v$version/tockler-$version-setup-win-ia32.exe#/dl.7z"
+            },
+            "arm64": {
+                "url": "https://github.com/MayGo/tockler/releases/download/v$version/tockler-$version-setup-win-arm64.exe#/dl.7z"
+            }
+        },
+        "hash": {
+            "url": "https://github.com/MayGo/tockler/releases/download/v$version/latest.yml",
+            "regex": "(?sm)$basename.*?sha512: $base64"
+        }
+    }
+}
