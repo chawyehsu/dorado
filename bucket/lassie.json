@@ -1,16 +1,16 @@
 {
-    "version": "0.9.2",
+    "version": "0.19.0",
     "description": "A minimal universal retrieval client library for IPFS and Filecoin",
     "homepage": "https://github.com/filecoin-project/lassie",
     "license": "MIT|Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/filecoin-project/lassie/releases/download/v0.9.2/lassie-v0.9.2-windows-amd64.zip",
-            "hash": "md5:6ae3ce6cfa615cf68023d8c81478b2eb"
+            "url": "https://github.com/filecoin-project/lassie/releases/download/v0.19.0/lassie_0.19.0_windows_amd64.zip",
+            "hash": "d1fb7cd1126a79415355b6bd54964a31b3e813dd4ac9e880c7c44d8c6221b56d"
         },
-        "32bit": {
-            "url": "https://github.com/filecoin-project/lassie/releases/download/v0.9.2/lassie-v0.9.2-windows-386.zip",
-            "hash": "md5:6bd080b658d613bacb8ef1055474690e"
+        "arm64": {
+            "url": "https://github.com/filecoin-project/lassie/releases/download/v0.19.0/lassie_0.19.0_windows_arm64.zip",
+            "hash": "b3309392ef796f4a05041ed36880953c59c9367f6ffa949769afda534d085762"
         }
     },
     "bin": "lassie.exe",
@@ -18,14 +18,14 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/filecoin-project/lassie/releases/download/v$version/lassie-v$version-windows-amd64.zip"
+                "url": "https://github.com/filecoin-project/lassie/releases/download/v$version/lassie_$version_windows_amd64.zip"
             },
-            "32bit": {
-                "url": "https://github.com/filecoin-project/lassie/releases/download/v$version/lassie-v$version-windows-386.zip"
+            "arm64": {
+                "url": "https://github.com/filecoin-project/lassie/releases/download/v$version/lassie_$version_windows_arm64.zip"
             }
         },
         "hash": {
-            "url": "$url.md5"
+            "url": "https://github.com/filecoin-project/lassie/releases/download/v$version/lassie_$version_checksums.txt"
         }
     }
 }
