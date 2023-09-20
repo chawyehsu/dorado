@@ -1,0 +1,53 @@
+name: Package Request
+description: Suggest a new package you wish for this bucket
+title: "[Request]: "
+labels: ["type: package request"]
+body:
+- type: checkboxes
+  attributes:
+    label: Check list
+    options:
+    - label: I confirm that the package does not exist in this bucket or any other official buckets such as Main and Extras.
+      required: true
+    - label: I confirm that there is no existing request for the package in this bucket or any other official bucket. (You should browse issue tracker of official buckets before submitting this request if you are not sure.)
+      required: true
+    - label: I believe that the package is suitable to be submitted to this bucket. (If it's not then you should submit the request to official buckets.)
+      required: true
+    - label: I understand that the owner of this bucket has the final decision on whether or not give a response to the request. (This is anyway a personal bucket and the owner may not be willing to accept packages they don't use.)
+      required: true
+- type: input
+  attributes:
+    label: Name
+    description: Name of the package
+  validations:
+    required: true
+- type: input
+  attributes:
+    label: Description
+    description: Clear and concise details of what it is
+  validations:
+    required: true
+- type: input
+  attributes:
+    label: Homepage
+    description: URI of the package's homepage
+  validations:
+    required: true
+- type: input
+  attributes:
+    label: Download Link(s)
+    description: URI(s) of the package's download(s)
+  validations:
+    required: true
+- type: input
+  attributes:
+    label: License
+    description: Possible license info about the package
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Other information
+    description: If any
+  validations:
+    required: false
