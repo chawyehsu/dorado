@@ -1,0 +1,40 @@
+{
+    "homepage": "https://alibaba.github.io/kt-connect/",
+    "description": "A toolkit for Integrating with your kubernetes dev environment more efficiently",
+    "version": "0.3.7",
+    "license": "GPL-3.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/alibaba/kt-connect/releases/download/v0.3.7/ktctl_0.3.7_Windows_x86_64.zip",
+            "hash": "81996f52f405499bb040ec1f9151572d788dd124a6ea2b17c36066e5d1396282"
+        },
+        "32bit": {
+            "url": "https://github.com/alibaba/kt-connect/releases/download/v0.3.7/ktctl_0.3.7_Windows_i386.zip",
+            "hash": "4d36b51d010b59ae6cd340ce2fa0577e0794accf8325db84575af6f97d99c228"
+        },
+        "arm64": {
+            "url": "https://github.com/alibaba/kt-connect/releases/download/v0.3.7/ktctl_0.3.7_Windows_arm_64.zip",
+            "hash": "8e6e1418d243f7b70a633b6c9bbd9b301972c15040af1a6dc4d803ccf3f00b03"
+        }
+    },
+    "bin": "ktctl.exe",
+    "checkver": {
+        "github": "https://github.com/alibaba/kt-connect"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/alibaba/kt-connect/releases/download/v$version/ktctl_$version_Windows_x86_64.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/alibaba/kt-connect/releases/download/v$version/ktctl_$version_Windows_i386.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/alibaba/kt-connect/releases/download/v$version/ktctl_$version_Windows_arm_64.zip"
+            }
+        },
+        "hash": {
+            "url": "https://github.com/alibaba/kt-connect/releases/download/v$version/v$version_checksums.txt"
+        }
+    }
+}
