@@ -1,16 +1,16 @@
 {
     "homepage": "http://gpac.io",
     "description": "Modular Multimedia framework for packaging, streaming and playing your favorite content.",
-    "version": "2.2",
+    "version": "2.2.1",
     "license": "LGPL-2.1-only",
     "architecture": {
         "64bit": {
-            "url": "https://download.tsi.telecom-paristech.fr/gpac/release/2.2/gpac-2.2-rev0-gab012bbf-master-x64.exe#/dl.7z",
-            "hash": "24ea2767214862faa37aa280a839f4c318a947649d9afffd47767505b9c69f9f"
+            "url": "https://download.tsi.telecom-paristech.fr/gpac/release/2.2.1/gpac-2.2.1-rev0-gb34e3851-release-2.2-x64.exe#/dl.7z",
+            "hash": "e50149fd8903999491d833a474b2cc656d9022be2effa6797029969368fbafe5"
         },
         "32bit": {
-            "url": "https://download.tsi.telecom-paristech.fr/gpac/release/2.2/gpac-2.2-rev0-gab012bbf-master-win32.exe#/dl.7z",
-            "hash": "12b6520e0c5f5568ad1b3a94af4120ef09c8934452796627ecaac4fb1d278e7a"
+            "url": "https://download.tsi.telecom-paristech.fr/gpac/release/2.2.1/gpac-2.2.1-rev0-gb34e3851-release-2.2-win32.exe#/dl.7z",
+            "hash": "f8166be45b93113f94814c3747eef900be7c216087fb56e1234f101dd1e784d7"
         }
     },
     "bin": [
@@ -30,15 +30,15 @@
     ],
     "checkver": {
         "url": "https://gpac.wp.imt.fr/downloads/",
-        "regex": "gpac-([\\d.]+)-(?<revision>rev\\d-[0-9a-z]+)-master-win32.exe"
+        "regex": "gpac-([\\d.]+)-(?<revision>rev\\d-[0-9a-z]+)-"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://download.tsi.telecom-paristech.fr/gpac/release/$matchHead/gpac-$version-$matchRevision-master-x64.exe#/dl.7z"
+                "url": "https://download.tsi.telecom-paristech.fr/gpac/release/$matchHead/gpac-$version-$matchRevision-release-$majorVersion.$minorVersion-x64.exe#/dl.7z"
             },
             "32bit": {
-                "url": "https://download.tsi.telecom-paristech.fr/gpac/release/$matchHead/gpac-$version-$matchRevision-master-win32.exe#/dl.7z"
+                "url": "https://download.tsi.telecom-paristech.fr/gpac/release/$matchHead/gpac-$version-$matchRevision-release-$majorVersion.$minorVersion-win32.exe#/dl.7z"
             }
         }
     }
