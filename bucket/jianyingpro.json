@@ -1,9 +1,9 @@
 {
-    "homepage": "https://lv.ulikecam.com/",
+    "homepage": "https://www.capcut.cn/",
     "description": "Video editing application produced by ByteDance",
     "license": "Proprietary",
     "version": "4.5.2.10484",
-    "url": "https://lf3-faceucdn-tos.pstatp.com/obj/faceu-packages/Jianying_4_5_2_10484_jianyingpro_0_creatortool.exe#/jianyingpro.7z",
+    "url": "https://lf3-package.vlabstatic.com/obj/faceu-packages/Jianying_4_5_2_10484_jianyingpro_0_creatortool.exe#/jianyingpro.7z",
     "hash": "675fcbd198e8c6ab2af6025d0c7056441ff1e3f229d4ffb9246380e8b6c70324",
     "extract_dir": "JYPacket/4.5.2.10484",
     "shortcuts": [
@@ -13,12 +13,12 @@
         ]
     ],
     "checkver": {
-        "url": "https://sf1-hscdn-tos.pstatp.com/obj/ies-fe-bee/bee_prod/biz_80/bee_prod_80_bee_publish_3563.json",
-        "regex": "/Jianying_(?<major>[\\d]+)_(?<minor>[\\d]+)_(?<patch>[\\d]+)_(?<build>[\\d]+)_jianyingpro_0_creatortool.exe",
+        "url": "https://lf3-beecdn.bytetos.com/obj/ies-fe-bee/bee_prod/biz_80/bee_prod_80_bee_publish_3563.json",
+        "regex": "default.*?https://(?<path>.*?)/Jianying_(?<major>[\\d]+)_(?<minor>[\\d]+)_(?<patch>[\\d]+)_(?<build>[\\d]+)_jianyingpro_0_creatortool.exe",
         "replace": "${major}.${minor}.${patch}.${build}"
     },
     "autoupdate": {
-        "url": "https://lf3-faceucdn-tos.pstatp.com/obj/faceu-packages/Jianying_$underscoreVersion_jianyingpro_0_creatortool.exe#/jianyingpro.7z",
+        "url": "https://$matchPath/Jianying_$underscoreVersion_jianyingpro_0_creatortool.exe#/jianyingpro.7z",
         "extract_dir": "JYPacket/$version"
     }
 }
