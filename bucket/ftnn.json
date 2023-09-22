@@ -2,9 +2,9 @@
     "homepage": "https://www.futunn.com/",
     "description": "Powerful tool facilitating trading and providing market information and data for Hong Kong, US and China A-Share Stocks",
     "license": "Unknown",
-    "version": "13.18.12218",
-    "url": "https://softwarefile.futunn.com/FTNN_13.18.12218.exe#/ftnn_13.18.12218.7z",
-    "hash": "bce01dbd0434d83fbbeb64ffe5e36e6d395c23075854e862af1a8d4689b0e3b3",
+    "version": "13.19.12508",
+    "url": "https://softwarefile.futunn.com/FTNN_13.19.12508.exe#/ftnn_13.19.12508.7z",
+    "hash": "e83307112221a6518ccbe3cf9c91efd43a3381ece0b496e3aaf9511e10dbaee4",
     "post_install": [
         "@('$PLUGINSDIR', '$_14_') | ForEach-Object {",
         "    Remove-Item \"$dir\\$_\" -Recurse -Force",
