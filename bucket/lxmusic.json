@@ -28,25 +28,18 @@
     },
     "autoupdate": {
         "architecture": {
-            "32bit": {
-                "url": "https://github.com/lyswhut/lx-music-desktop/releases/download/v$version/lx-music-desktop-v$version-win_x86-green.7z",
-                "hash": {
-                    "url": "https://github.com/lyswhut/lx-music-desktop/releases/tag/v$version",
-                    "regex": "$md5\\s+lx-music-desktop\\s+v$version\\s+win_x86\\s+green"
-                }
-            },
             "64bit": {
                 "url": "https://github.com/lyswhut/lx-music-desktop/releases/download/v$version/lx-music-desktop-v$version-win_x64-green.7z",
                 "hash": {
                     "url": "https://github.com/lyswhut/lx-music-desktop/releases/tag/v$version",
-                    "regex": "$md5\\s+lx-music-desktop\\s+v$version\\s+win_x64\\s+green"
+                    "regex": "$md5\\s+lx-music-desktop-v$version-win_x64-green"
                 }
             },
             "arm64": {
                 "url": "https://github.com/lyswhut/lx-music-desktop/releases/download/v$version/lx-music-desktop-v$version-win_arm64-green.7z",
                 "hash": {
                     "url": "https://github.com/lyswhut/lx-music-desktop/releases/tag/v$version",
-                    "regex": "$md5\\s+lx-music-desktop\\s+v$version\\s+win_arm64\\s+green"
+                    "regex": "$md5\\s+lx-music-desktop-v$version-win_arm64-green"
                 }
             }
         }
