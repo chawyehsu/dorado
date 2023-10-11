@@ -7,7 +7,7 @@
         "url": "https://tms.dingtalk.com/markets/dingtalk/service-terms-zh"
     },
     "url": "https://dtapp-pub.dingtalk.com/dingtalk-desktop/win_installer/Release/DingTalk_v7.1.0.10099103.exe#/dl.7z",
-    "hash": "md5:373e75e32c1166be2f428331358c51fe",
+    "hash": "md5:23dc7a36e3640586e095a77a25663509",
     "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\" -Recurse",
     "shortcuts": [
         [
