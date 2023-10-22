@@ -1,0 +1,31 @@
+{
+    "version": "2.25.1",
+    "description": "A light-weight C/C++ IDE based on Qt",
+    "homepage": "https://royqh.net/redpandacpp/",
+    "license": "GPL-3.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://downloads.sourceforge.net/projects/redpanda-cpp/files/2.25/RedPanda.C%2B%2B.2.25.1.win64.No.Compiler.Portable.7z",
+            "hash": "sha1:199e871aeffb4c1df09d55411c64f655faf63e67"
+        }
+    },
+    "extract_dir": "RedPanda-CPP",
+    "shortcuts": [
+        [
+            "RedPandaIDE.exe",
+            "Red Panda C++"
+        ]
+    ],
+    "persist": "config",
+    "checkver": {
+        "url": "https://sourceforge.net/p/redpanda-cpp/activity/feed",
+        "regex": "(\\d[\\d.]+).win64.No.Compiler"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://downloads.sourceforge.net/projects/redpanda-cpp/files/$majorVersion.$minorVersion/RedPanda.C%2B%2B.$version.win64.No.Compiler.Portable.7z"
+            }
+        }
+    }
+}
