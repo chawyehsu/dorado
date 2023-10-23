@@ -1,9 +1,9 @@
 {
-    "homepage": "https://github.com/h404bi/nvm-windows",
-    "description": "This is a fork of nvm-windows, removed elevated permission, for low permission scoop user.",
+    "homepage": "https://github.com/chawyehsu/nvm-windows",
+    "description": "A nvm-windows fork with NTFS junction patch which was rejected by upstream, for restricted user.",
     "license": "MIT",
     "version": "1.1.7",
-    "url": "https://github.com/h404bi/nvm-windows/releases/download/1.1.7/nvm-noinstall.zip",
+    "url": "https://github.com/chawyehsu/nvm-windows/releases/download/1.1.7/nvm-noinstall.zip",
     "hash": "de2cb79b6eb0b619826d77ba630c9407106feb1fdbd4654544e8be84bf873320",
     "bin": "nvm.exe",
     "persist": [
@@ -29,6 +29,14 @@
                 "    write-output \"root: $persist_dir\\nodejs`r`narch: 32`r`nproxy: none\" | out-file -encoding \"ASCII\" \"$dir\\settings.txt\"",
                 "}"
             ]
+        }
+    },
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/chawyehsu/nvm-windows/releases/download/$version/nvm-noinstall.zip",
+        "hash": {
+            "url": "https://github.com/chawyehsu/nvm-windows/releases/tag/$version",
+            "regex": "$sha256"
         }
     },
     "notes": "You'll need to restart powershell/cmd to have it reload Environment Variables so nvm will work correctly"
