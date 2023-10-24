@@ -1,17 +1,17 @@
 {
     "homepage": "https://gcc-mcf.lhmouse.com/",
     "description": "MinGW-w64 GCC build with the MCF thread model (Snapshot version)",
-    "version": "13.2.1-20231006-msvcrt",
+    "version": "13.2.1-20231023-msvcrt",
     "license": "GPL-2.0-only,LGPL-3.0-only,BSD-2-Clause,Apache-2.0,ZPL-2.1",
     "architecture": {
         "64bit": {
-            "url": "https://gcc-mcf.lhmouse.com/mingw-w64-gcc-mcf_20231006_13.2.1_x64-msvcrt_23df8a61350cb9a6ce685639e00fc6008fde7ec1.7z",
-            "hash": "sha1:23df8a61350cb9a6ce685639e00fc6008fde7ec1",
+            "url": "https://gcc-mcf.lhmouse.com/mingw-w64-gcc-mcf_20231023_13.2.1_x64-msvcrt_5636566136790f8915de21af2141eb4a859ea13d.7z",
+            "hash": "sha1:5636566136790f8915de21af2141eb4a859ea13d",
             "extract_dir": "mingw64"
         },
         "32bit": {
-            "url": "https://gcc-mcf.lhmouse.com/mingw-w64-gcc-mcf_20231006_13.2.1_x86-msvcrt_36df42c745b8d28d300d87e53eb971b5253a0113.7z",
-            "hash": "sha1:36df42c745b8d28d300d87e53eb971b5253a0113",
+            "url": "https://gcc-mcf.lhmouse.com/mingw-w64-gcc-mcf_20231023_13.2.1_x86-msvcrt_2998bd6c71ba8a51bd2781e2b7071536aafdce28.7z",
+            "hash": "sha1:2998bd6c71ba8a51bd2781e2b7071536aafdce28",
             "extract_dir": "mingw32"
         }
     },
