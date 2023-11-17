@@ -1,13 +1,13 @@
 {
-    "version": "7.1.10.11099106",
+    "version": "7.1.10.11169101",
     "description": "An all-in-one free communication and collaboration platform",
     "homepage": "https://www.dingtalk.com/",
     "license": {
         "identifier": "EULA",
         "url": "https://tms.dingtalk.com/markets/dingtalk/service-terms-zh"
     },
-    "url": "https://dtapp-pub.dingtalk.com/dingtalk-desktop/win_installer/Release/DingTalk_v7.1.10.11099106.exe#/dl.7z",
-    "hash": "md5:feaf3e5854ce9106872afa0bdea6e748",
+    "url": "https://dtapp-pub.dingtalk.com/dingtalk-desktop/win_installer/Release/DingTalk_v7.1.10.11169101.exe#/dl.7z",
+    "hash": "md5:30b650e938541c0cec1fd49e16581e72",
     "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\" -Recurse",
     "shortcuts": [
         [
