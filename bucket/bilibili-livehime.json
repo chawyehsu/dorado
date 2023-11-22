@@ -2,9 +2,13 @@
     "homepage": "https://live.bilibili.com/liveHime",
     "description": "BiliBili Live Streaming tool",
     "license": "Unknown",
-    "version": "4.24.1.3811",
-    "url": "https://dl-hdslb-com.oss-cn-shanghai.aliyuncs.com/bili/bililive/win/Livehime-Win-beta-4.24.1.3811.exe",
-    "hash": "ce46c5c5a9f8aa6e07a494596c67ae33240c0bf9b47f519570136a912e77268d",
+    "version": "4.55.1.6105",
+    "architecture": {
+        "64bit": {
+            "url": "https://dl.hdslb.com/bili/bililive/win/Livehime-Win-beta-4.55.1.6105-x64.exe",
+            "hash": "md5:3c8b0dc0b3da6b86108d0aa00b94501d"
+        }
+    },
     "depends": "innounp",
     "installer": {
         "script": "Expand-InnoArchive -Path \"$dir\\$fname\" -Removal"
@@ -16,10 +20,18 @@
         ]
     ],
     "checkver": {
-        "url": "https://api.live.bilibili.com/client/v1/LiveHime/download?type=3",
-        "regex": "hime.*?([\\d.]+).exe"
+        "url": "https://api.live.bilibili.com/xlive/app-blink/v1/liveVersionInfo/getHomePageLiveVersion?system_version=2",
+        "jsonpath": "$.data.curr_version"
     },
     "autoupdate": {
-        "url": "https://dl-hdslb-com.oss-cn-shanghai.aliyuncs.com/bili/bililive/win/Livehime-Win-beta-$version.exe"
+        "architecture": {
+            "64bit": {
+                "url": "https://dl.hdslb.com/bili/bililive/win/Livehime-Win-beta-$version-x64.exe",
+                "hash": {
+                    "url": "https://api.live.bilibili.com/xlive/app-blink/v1/liveVersionInfo/getHomePageLiveVersion?system_version=2",
+                    "jsonpath": "$.data.file_md5"
+                }
+            }
+        }
     }
 }
