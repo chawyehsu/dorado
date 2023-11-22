@@ -1,7 +1,7 @@
 {
     "homepage": "https://github.com/mstorsjo/llvm-mingw",
     "description": "An LLVM/Clang/LLD based mingw-w64 GNU toolchain",
-    "version": "20231114",
+    "version": "17.0.5-20231114",
     "license": "ISC",
     "architecture": {
         "64bit": {
@@ -20,20 +20,23 @@
         }
     },
     "env_add_path": "bin",
-    "checkver": "github",
+    "checkver": {
+        "regex": "llvm-mingw\\s+(?<date>\\d+)\\swith\\s+LLVM\\s+(?<llvmversion>[\\d.]+)",
+        "replace": "${llvmversion}-${date}"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/mstorsjo/llvm-mingw/releases/download/$version/llvm-mingw-$version-ucrt-x86_64.zip",
-                "extract_dir": "llvm-mingw-$version-ucrt-x86_64"
+                "url": "https://github.com/mstorsjo/llvm-mingw/releases/download/$matchDate/llvm-mingw-$matchDate-ucrt-x86_64.zip",
+                "extract_dir": "llvm-mingw-$matchDate-ucrt-x86_64"
             },
             "32bit": {
-                "url": "https://github.com/mstorsjo/llvm-mingw/releases/download/$version/llvm-mingw-$version-ucrt-i686.zip",
-                "extract_dir": "llvm-mingw-$version-ucrt-i686"
+                "url": "https://github.com/mstorsjo/llvm-mingw/releases/download/$matchDate/llvm-mingw-$matchDate-ucrt-i686.zip",
+                "extract_dir": "llvm-mingw-$matchDate-ucrt-i686"
             },
             "arm64": {
-                "url": "https://github.com/mstorsjo/llvm-mingw/releases/download/$version/llvm-mingw-$version-ucrt-aarch64.zip",
-                "extract_dir": "llvm-mingw-$version-ucrt-aarch64"
+                "url": "https://github.com/mstorsjo/llvm-mingw/releases/download/$matchDate/llvm-mingw-$matchDate-ucrt-aarch64.zip",
+                "extract_dir": "llvm-mingw-$matchDate-ucrt-aarch64"
             }
         }
     }
