@@ -1,0 +1,37 @@
+{
+    "homepage": "https://winlibs.com/",
+    "description": "winlibs standalone build of GCC compiler and MinGW-w64 with MSVCRT (MCF threading, snapshot version)",
+    "version": "13.0.1-11.0.0-snapshot20230402-msvcrt-r1",
+    "license": "GPL-2.0-only,BSD-2-Clause,Apache-2.0,ZPL-2.1",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/brechtsanders/winlibs_mingw/releases/download/13.0.1-snapshot20230402-11.0.0-msvcrt-r1/winlibs-x86_64-mcf-seh-gcc-13.0.1-snapshot20230402-mingw-w64msvcrt-11.0.0-r1.7z",
+            "hash": "d25814c5edb8c3149caf0e5b3a6125ea392b8f49b71933f156f1f8a2862d4797",
+            "extract_dir": "mingw64"
+        },
+        "32bit": {
+            "url": "https://github.com/brechtsanders/winlibs_mingw/releases/download/13.0.1-snapshot20230402-11.0.0-msvcrt-r1/winlibs-i686-mcf-dwarf-gcc-13.0.1-snapshot20230402-mingw-w64msvcrt-11.0.0-r1.7z",
+            "hash": "5b898f10fe5f7412ed6edfcb14a7cfd550d8e8d1713a77a9bb67f046984d3ef2",
+            "extract_dir": "mingw64"
+        }
+    },
+    "env_add_path": "bin",
+    "checkver": {
+        "url": "https://api.github.com/repos/brechtsanders/winlibs_mingw/releases?per_page=50",
+        "regex": "/winlibs-x86_64-mcf-seh-gcc-(?<gccVersion>[\\d.]+)-snapshot(?<date>[\\d]+)-mingw-w64msvcrt-(?<mingwVersion>[\\d.]+)(-(?<revision>[\\w]+))?",
+        "replace": "${gccVersion}-${mingwVersion}-snapshot${date}-msvcrt-${revision}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/brechtsanders/winlibs_mingw/releases/download/$matchGccversion-snapshot$matchDate-$matchMingwversion-msvcrt-$matchRevision/winlibs-x86_64-mcf-seh-gcc-$matchGccversion-snapshot$matchDate-mingw-w64msvcrt-$matchMingwversion-$matchRevision.7z"
+            },
+            "32bit": {
+                "url": "https://github.com/brechtsanders/winlibs_mingw/releases/download/$matchGccversion-snapshot$matchDate-$matchMingwversion-msvcrt-$matchRevision/winlibs-i686-mcf-dwarf-gcc-$matchGccversion-snapshot$matchDate-mingw-w64msvcrt-$matchMingwversion-$matchRevision.7z"
+            }
+        },
+        "hash": {
+            "url": "$url.sha256"
+        }
+    }
+}
