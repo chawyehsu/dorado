@@ -2,10 +2,10 @@
     "homepage": "https://www.capcut.cn/",
     "description": "Video editing application produced by ByteDance",
     "license": "Proprietary",
-    "version": "4.7.2.10739",
-    "url": "https://lf3-package.vlabstatic.com/obj/faceu-packages/Jianying_4_7_2_10739_jianyingpro_0_creatortool.exe#/jianyingpro.7z",
-    "hash": "5c0d0e809d96493db1d999a0c1974b86275b61f1506ac086c6619f3ac3fbfb7e",
-    "extract_dir": "JYPacket/4.7.2.10739",
+    "version": "4.8.0.10791",
+    "url": "https://lf3-package.vlabstatic.com/obj/faceu-packages/Jianying_split_4_8_0_10791_jianyingpro_0.exe#/jianyingpro.7z",
+    "hash": "d539cb3f403d7dfd0595fbca51768b9637dc892adea61e77aeef77c990409268",
+    "extract_dir": "JYPacket/4.8.0.10791",
     "shortcuts": [
         [
             "JianyingPro.exe",
@@ -14,11 +14,11 @@
     ],
     "checkver": {
         "url": "https://lf3-beecdn.bytetos.com/obj/ies-fe-bee/bee_prod/biz_80/bee_prod_80_bee_publish_3563.json",
-        "regex": "default.*?https://(?<path>.*?)/Jianying_(?<major>[\\d]+)_(?<minor>[\\d]+)_(?<patch>[\\d]+)_(?<build>[\\d]+)_jianyingpro_0_creatortool.exe",
+        "regex": "default.*?https://(?<path>.*?)/Jianying_split_(?<major>[\\d]+)_(?<minor>[\\d]+)_(?<patch>[\\d]+)_(?<build>[\\d]+)_jianyingpro_0.exe",
         "replace": "${major}.${minor}.${patch}.${build}"
     },
     "autoupdate": {
-        "url": "https://$matchPath/Jianying_$underscoreVersion_jianyingpro_0_creatortool.exe#/jianyingpro.7z",
+        "url": "https://$matchPath/Jianying_split_$underscoreVersion_jianyingpro_0.exe#/jianyingpro.7z",
         "extract_dir": "JYPacket/$version"
     }
 }
