@@ -1,29 +1,38 @@
 {
-    "homepage": "https://electerm.github.io/electerm",
-    "description": "Terminal/ssh/serial port/sftp client(linux, mac, win)",
     "version": "1.37.1",
+    "description": "Terminal/ssh/serial port/sftp client",
+    "homepage": "https://electerm.github.io/electerm/",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/electerm/electerm/releases/download/v1.37.1/electerm-1.37.1-win-x64.tar.gz",
-            "hash": "d51b088bf0c54a726c4053bfe341629a18a32d4d3420cdc6f3efc0c71ccffdd3",
-            "extract_dir": "electerm-1.37.1-win-x64"
+            "url": "https://github.com/electerm/electerm/releases/download/v1.37.1/electerm-1.37.1-win-x64-portable.tar.gz",
+            "hash": "a1d5f8f6d7fe0592259344a0e60a2483ad9c43510a8c3361fe6a07521fbdc334",
+            "extract_dir": "electerm-1.37.1-win-x64-portable"
         }
     },
+    "pre_install": [
+        "# copy config from non-portable version",
+        "if (!(Test-Path \"$persist_dir\\electerm\") -and (Test-Path \"$env:Appdata\\electerm\")) {",
+        "    if (!(Test-Path \"$dir\\electerm\")) { New-Item \"$dir\\electerm\" -ItemType Directory | Out-Null }",
+        "    Copy-Item \"$env:Appdata\\electerm\\*\" \"$dir\\electerm\\\" -Recurse -Force",
+        "}"
+    ],
+    "bin": "electerm.exe",
     "shortcuts": [
         [
             "electerm.exe",
             "Electerm"
         ]
     ],
+    "persist": "electerm",
     "checkver": {
         "github": "https://github.com/electerm/electerm"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/electerm/electerm/releases/download/v$version/electerm-$version-win-x64.tar.gz",
-                "extract_dir": "electerm-$version-win-x64"
+                "url": "https://github.com/electerm/electerm/releases/download/v$version/electerm-$version-win-x64-portable.tar.gz",
+                "extract_dir": "electerm-$version-win-x64-portable"
             }
         }
     }
