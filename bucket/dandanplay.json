@@ -1,12 +1,12 @@
 {
     "homepage": "https://www.dandanplay.com/",
     "description": "A free to use bangumi player with danmaku support",
-    "version": "13.6.0",
+    "version": "14.4.1",
     "license": "Unknown",
     "architecture": {
         "64bit": {
-            "url": "https://dandan.sakurateam.top/dandanplay-x64_13.6.0.zip",
-            "hash": "e8e3d7e46ed3173b941fe9e4effcbcbd148aaabec394cef0e326a8dc8fa23d9d",
+            "url": "https://dandan.sakurateam.top/dandanplay-x64_14.4.1.exe",
+            "hash": "67b2dd9733de8de181769af4e6f94e8c08080d0b984061c9359944982f991d44",
             "extract_dir": "dandanplay-x64"
         }
     },
@@ -23,6 +23,14 @@
         "    New-Item -Force -Path \"$persist_dir\\Config\\UserSettings.xml\" -ItemType File -Value '<?xml version=\"1.0\"?><UserSettings><EnableTelemetry>false</EnableTelemetry></UserSettings>' | Out-Null",
         "}"
     ],
+    "installer": {
+        "script": [
+            "Start-Process \"$dir\\$fname\" \"/extract $dir\" -PassThru -NoNewWindow | Wait-Process",
+            "$subdir = (Get-ChildItem -Path \"$dir\" -Exclude \"*NET*\" -Directory).Name",
+            "movedir \"$dir\\$subdir\" \"$dir\" | Out-Null",
+            "Remove-Item \"$dir\\$fname\",\"$dir\\decoder.dll\",\"$dir\\$subdir\" -Force -ErrorAction SilentlyContinue"
+        ]
+    },
     "shortcuts": [
         [
             "dandanplay.exe",
@@ -35,9 +43,9 @@
         "Cache"
     ],
     "checkver": {
-        "regex": "dandanplay-x64_([\\d.]+).zip"
+        "regex": "dandanplay-x64_([\\d.]+).exe\""
     },
     "autoupdate": {
-        "url": "https://dandan.sakurateam.top/dandanplay-x64_$version.zip"
+        "url": "https://dandan.sakurateam.top/dandanplay-x64_$version.exe"
     }
 }
