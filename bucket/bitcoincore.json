@@ -30,7 +30,7 @@
             }
         },
         "hash": {
-            "url": "https://bitcoincore.org/bin/bitcoin-core-$version/SHA256SUMS.asc",
+            "url": "https://raw.githubusercontent.com/bitcoin-core/guix.sigs/main/$version/fanquake/all.SHA256SUMS",
             "mode": "extract"
         }
     },
