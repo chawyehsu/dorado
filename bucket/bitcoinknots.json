@@ -1,0 +1,41 @@
+{
+    "homepage": "https://bitcoinknots.org/",
+    "description": "Bitcoin Knots is a combined Bitcoin node and wallet.",
+    "version": "25.1.knots20231115",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://bitcoinknots.org/files/25.x/25.1.knots20231115/bitcoin-25.1.knots20231115-win64.zip",
+            "hash": "4436ece2ce77aeddfcfe8e886272b3236932b323fd96dc9fe155b851332d9746",
+            "extract_dir": "bitcoin-25.1.knots20231115"
+        }
+    },
+    "shortcuts": [
+        [
+            "bin\\bitcoin-qt.exe",
+            "Bitcoin Knots",
+            "-datadir=\"$dir\\appdata\""
+        ]
+    ],
+    "persist": "appdata",
+    "checkver": {
+        "regex": "Latest version: ([\\d.]+knots[\\d]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://bitcoinknots.org/files/$majorVersion.x/$version/bitcoin-$version-win64.zip",
+                "extract_dir": "bitcoin-$version"
+            }
+        },
+        "hash": {
+            "url": "https://raw.githubusercontent.com/bitcoinknots/guix.sigs/knots/$version/luke-jr/noncodesigned.SHA256SUMS",
+            "mode": "extract"
+        }
+    },
+    "notes": [
+        "[WARNING]: If you really want to use this for production or what, KEEP AN EYE OUT FOR YOUR DATA!!!",
+        "[WARNING]: THE SOFTWARE IS PROVIDED 'AS IS', I am not responsible for any data lost.",
+        "[WARNING]: The 'datadir' has been configured to '$dir\\appdata' (persisted) for portable purpose."
+    ]
+}
