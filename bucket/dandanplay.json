@@ -6,8 +6,7 @@
     "architecture": {
         "64bit": {
             "url": "https://dandan.sakurateam.top/dandanplay-x64_14.4.1.exe",
-            "hash": "67b2dd9733de8de181769af4e6f94e8c08080d0b984061c9359944982f991d44",
-            "extract_dir": "dandanplay-x64"
+            "hash": "67b2dd9733de8de181769af4e6f94e8c08080d0b984061c9359944982f991d44"
         }
     },
     "pre_install": [
@@ -18,7 +17,7 @@
         "if (!(Test-Path \"$persist_dir\\Config\\ConnectionSettings.xml\")) {",
         "    New-Item -Force -Path \"$persist_dir\\Config\\ConnectionSettings.xml\" -ItemType File -Value '<?xml version=\"1.0\"?><ConnectionSettings><EnableAutoUpdate>false</EnableAutoUpdate><NotifyOnUpdateDownloaded>false</NotifyOnUpdateDownloaded></ConnectionSettings>' | Out-Null",
         "}",
-        "# Disable  tracking",
+        "# Disable tracking",
         "if (!(Test-Path \"$persist_dir\\Config\\UserSettings.xml\")) {",
         "    New-Item -Force -Path \"$persist_dir\\Config\\UserSettings.xml\" -ItemType File -Value '<?xml version=\"1.0\"?><UserSettings><EnableTelemetry>false</EnableTelemetry></UserSettings>' | Out-Null",
         "}"
