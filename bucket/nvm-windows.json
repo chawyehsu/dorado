@@ -4,7 +4,7 @@
     "license": "MIT",
     "version": "1.1.12",
     "url": "https://github.com/chawyehsu/nvm-windows/releases/download/1.1.12/nvm-noinstall.zip",
-    "hash": "6f13f31f798a93a6b08d3be0727120e9af35851fac7b9c620d6cf9a70068c136",
+    "hash": "27d87344e3cd9d8a31f911b612f3c2db266ae916007a4babff76fec71c9ce258",
     "bin": "nvm.exe",
     "persist": [
         "nodejs",
@@ -36,7 +36,7 @@
         "url": "https://github.com/chawyehsu/nvm-windows/releases/download/$version/nvm-noinstall.zip",
         "hash": {
             "url": "https://github.com/chawyehsu/nvm-windows/releases/tag/$version",
-            "regex": "$sha256"
+            "regex": "(?m)no-install.zip*?$sha256"
         }
     },
     "notes": "You'll need to restart powershell/cmd to have it reload Environment Variables so nvm will work correctly"
