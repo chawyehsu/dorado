@@ -1,13 +1,13 @@
 {
-    "version": "7.5.0.13039104",
+    "version": "7.5.0.13049105",
     "description": "An all-in-one free communication and collaboration platform",
     "homepage": "https://www.dingtalk.com/",
     "license": {
         "identifier": "EULA",
         "url": "https://tms.dingtalk.com/markets/dingtalk/service-terms-zh"
     },
-    "url": "https://dtapp-pub.dingtalk.com/dingtalk-desktop/win_installer/Release/DingTalk_v7.5.0.13039104.exe#/dl.7z",
-    "hash": "md5:aecb098187a2ff82b28dc38ee7ba2ef0",
+    "url": "https://dtapp-pub.dingtalk.com/dingtalk-desktop/win_installer/Release/DingTalk_v7.5.0.13049105.exe#/dl.7z",
+    "hash": "md5:740f72b3244d8bd6603eee935cf5e23a",
     "pre_install": [
         "Move-Item -Path \"$dir\\build\\dist\\*\" -Destination \"$dir\" -Force",
         "Remove-Item \"$dir\\build\", \"$dir\\setup.xml\", \"$dir\\uninst*\" -Force -Recurse"
