@@ -9,7 +9,27 @@
             "hash": "3c7fd86bf2e2f443420b3120789cd9c10fdff9bfe978a9e23ce4d3447b121299"
         }
     },
-    "bin": "pixi.exe",
+    "installer": {
+        "script": [
+            "if (Test-Path \"$persist_dir\\bin\\pixi.exe\") {",
+            "    Remove-Item \"$persist_dir\\bin\\pixi.exe\" -Force",
+            "    Move-Item \"$dir\\pixi.exe\" \"$persist_dir\\bin\\pixi.exe\"",
+            "} else {",
+            "    if (!(Test-Path \"$persist_dir\\bin\")) {",
+            "        New-Item -Path \"$persist_dir\\bin\" -ItemType Directory | Out-Null",
+            "    }",
+            "    Move-Item \"$dir\\pixi.exe\" \"$persist_dir\\bin\\pixi.exe\"",
+            "}"
+        ]
+    },
+    "env_set": {
+        "PIXI_HOME": "$dir"
+    },
+    "env_add_path": "bin",
+    "persist": [
+        "bin",
+        "envs"
+    ],
     "checkver": {
         "github": "https://github.com/prefix-dev/pixi"
     },
