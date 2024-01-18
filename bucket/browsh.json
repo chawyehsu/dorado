@@ -1,0 +1,33 @@
+{
+    "homepage": "https://www.brow.sh/",
+    "description": "A fully interactive, real-time, and modern text-based browser rendered to TTYs and browsers.",
+    "version": "1.8.2",
+    "license": "LGPL-2.1-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/browsh-org/browsh/releases/download/v1.8.2/browsh_1.8.2_windows_amd64.exe#/browsh.exe",
+            "hash": "97358d33e1d8931c20d55edf10e88cabe8bb451410dd1ebeb63df2e02c17f8ca"
+        },
+        "32bit": {
+            "url": "https://github.com/browsh-org/browsh/releases/download/v1.8.2/browsh_1.8.2_windows_386.exe#/browsh.exe",
+            "hash": "e1bb7e8ec5b06591c90f984aaaa018b93af32a4b89e4d20835f00edda0ff18d2"
+        }
+    },
+    "bin": "browsh.exe",
+    "checkver": {
+        "github": "https://github.com/browsh-org/browsh"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/browsh-org/browsh/releases/download/v$version/browsh_$version_windows_amd64.exe#/browsh.exe"
+            },
+            "32bit": {
+                "url": "https://github.com/browsh-org/browsh/releases/download/v$version/browsh_$version_windows_386.exe#/browsh.exe"
+            }
+        },
+        "hash": {
+            "url": "https://github.com/browsh-org/browsh/releases/download/v$version/browsh_$version_checksums.txt"
+        }
+    }
+}
