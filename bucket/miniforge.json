@@ -10,21 +10,25 @@
         }
     },
     "installer": {
-        "args": [
-            "/S",
-            "/InstallationType=JustMe",
-            "/RegisterPython=0",
-            "/AddToPath=0",
-            "/NoRegistry=1",
-            "/D=$dir"
+        "script": [
+            "# https://github.com/ScoopInstaller/Scoop/pull/5065",
+            "Move-Item \"$dir\\$fname\" \"$dir\\..\\setup.exe\" | Out-Null",
+            "Start-Process \"$dir\\..\\setup.exe\" -ArgumentList @('/S', '/InstallationType=JustMe', '/RegisterPython=0', '/AddToPath=0', '/NoRegistry=1', '/NoShortcuts=1', \"/D=$dir\") -Wait | Out-Null"
         ]
     },
     "uninstaller": {
-        "file": "Uninstall-Miniforge3.exe",
-        "args": "/S"
+        "script": [
+            "Start-Process \"$dir\\Uninstall-Miniforge3.exe\" -ArgumentList '/S' -Wait | Out-Null"
+        ]
     },
     "bin": "scripts\\conda.exe",
-    "post_install": "conda config --system --set auto_activate_base false",
+    "post_install": [
+        "Remove-Item \"$dir\\..\\setup.exe\" -Force | Out-Null",
+        "# Set auto_activate_base to false",
+        "(& $dir\\scripts\\conda.exe config --system --set auto_activate_base false) | Out-Null",
+        "# Invoke hook for current shell session",
+        "(& $dir\\scripts\\conda.exe shell.powershell hook) | Out-String | Invoke-Expression"
+    ],
     "checkver": {
         "github": "https://github.com/conda-forge/miniforge",
         "regex": "tag/([\\d.-]+)"
@@ -38,5 +42,16 @@
                 }
             }
         }
-    }
+    },
+    "notes": [
+        "This variant does not add the default venv into your PATH unless you activate it with 'conda activate base'.",
+        "You may choose to install the one from the official bucket if you do not care about python PATH pollution.",
+        "",
+        "Conda base env is not persisted by Scoop, packages installed to the base env will be removed when upgrading the app.",
+        "We advice to setup 'envs_dirs' to use a seperated path like '~/.conda/envs' and avoid using the base env.",
+        "https://conda.io/projects/conda/en/latest/user-guide/configuration/use-condarc.html#specify-environment-directories-envs-dirs",
+        "",
+        "To enable conda tab-completion autoload, you can add the following code to your PowerShell $PROFILE:",
+        "(& conda 'shell.powershell' 'hook') | Out-String | Invoke-Expression"
+    ]
 }
