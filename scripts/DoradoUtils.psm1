@@ -3,30 +3,30 @@ Set-StrictMode -Version 3.0
 
 # A temp fix for https://github.com/ScoopInstaller/Scoop/pull/5066#issuecomment-1372087032
 function Invoke-ExternalCommand2 {
-    [CmdletBinding(DefaultParameterSetName = "Default")]
+    [CmdletBinding(DefaultParameterSetName = 'Default')]
     [OutputType([Boolean])]
     param (
         [Parameter(Mandatory = $true,
-                   Position = 0)]
-        [Alias("Path")]
+            Position = 0)]
+        [Alias('Path')]
         [ValidateNotNullOrEmpty()]
         [String]
         $FilePath,
         [Parameter(Position = 1)]
-        [Alias("Args")]
+        [Alias('Args')]
         [String[]]
         $ArgumentList,
-        [Parameter(ParameterSetName = "UseShellExecute")]
+        [Parameter(ParameterSetName = 'UseShellExecute')]
         [Switch]
         $RunAs,
-        [Alias("Msg")]
+        [Alias('Msg')]
         [String]
         $Activity,
-        [Alias("cec")]
+        [Alias('cec')]
         [Hashtable]
         $ContinueExitCodes,
-        [Parameter(ParameterSetName = "Default")]
-        [Alias("Log")]
+        [Parameter(ParameterSetName = 'Default')]
+        [Alias('Log')]
         [String]
         $LogPath
     )
@@ -73,7 +73,7 @@ function Invoke-ExternalCommand2 {
         [void]$Process.Start()
     } catch {
         if ($Activity) {
-            Write-Host "error." -ForegroundColor DarkRed
+            Write-Host 'error.' -ForegroundColor DarkRed
         }
         Write-Host $_.Exception.Message -ForegroundColor DarkRed
         return $false
@@ -82,20 +82,20 @@ function Invoke-ExternalCommand2 {
     if ($Process.ExitCode -ne 0) {
         if ($ContinueExitCodes -and ($ContinueExitCodes.ContainsKey($Process.ExitCode))) {
             if ($Activity) {
-                Write-Host "done." -ForegroundColor DarkYellow
+                Write-Host 'done.' -ForegroundColor DarkYellow
             }
             Write-Host $ContinueExitCodes[$Process.ExitCode] -ForegroundColor DarkYellow
             return $true
         } else {
             if ($Activity) {
-                Write-Host "error." -ForegroundColor DarkRed
+                Write-Host 'error.' -ForegroundColor DarkRed
             }
             Write-Host "Exit code was $($Process.ExitCode)!" -ForegroundColor DarkRed
             return $false
         }
     }
     if ($Activity) {
-        Write-Host "done." -ForegroundColor Green
+        Write-Host 'done.' -ForegroundColor Green
     }
     return $true
 }
@@ -153,5 +153,5 @@ function Dismount-ExternalRuntimeData {
 
 Export-ModuleMember `
     -Function `
-        Mount-ExternalRuntimeData, Dismount-ExternalRuntimeData, `
-        Invoke-ExternalCommand2
+    Mount-ExternalRuntimeData, Dismount-ExternalRuntimeData, `
+    Invoke-ExternalCommand2
