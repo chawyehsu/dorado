@@ -7,7 +7,7 @@
         "url": "https://www.aliyundrive.com/protocol/service"
     },
     "url": "https://cdn.aliyundrive.net/downloads/apps/desktop/update/4.12.0/win32/ia32/aDrive-4.12.0.exe#/aDrive-4.12.0.7z",
-    "hash": "sha512:33a9d6057d1af1bc4198d1a3b599afc6b1deaa97c50a530fbb86175bb2775b94390dde5841e1c4d0ce87bde000570a7cc17cfafce162c158ed9afa8caf3049f1",
+    "hash": "sha512:ac515dda05f6167b4d3a3fbbb0bf4a015a938f0dd7108c3106b68fffa23dc7b73f299e03da18558369e606a6243aab48e06036ff726ae41ebffbfba0ec6c2abc",
     "post_install": [
         "@('$PLUGINSDIR', '$TEMP') | ForEach-Object {",
         "    Remove-Item \"$dir\\$_\" -Recurse -Force",
