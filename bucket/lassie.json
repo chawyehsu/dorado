@@ -1,16 +1,16 @@
 {
-    "version": "0.21.0",
+    "version": "0.22.0",
     "description": "A minimal universal retrieval client library for IPFS and Filecoin",
     "homepage": "https://github.com/filecoin-project/lassie",
     "license": "MIT|Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/filecoin-project/lassie/releases/download/v0.21.0/lassie_0.21.0_windows_amd64.zip",
-            "hash": "ee4b6dfe04b29aa96a9f8b3d81dbe322e2695548add7912088740d1096b9bedd"
+            "url": "https://github.com/filecoin-project/lassie/releases/download/v0.22.0/lassie_0.22.0_windows_amd64.zip",
+            "hash": "2052ea2e19fdad834ea0d3a0e070a7652991d9b6fe063269d658c5aa70a9585d"
         },
         "arm64": {
-            "url": "https://github.com/filecoin-project/lassie/releases/download/v0.21.0/lassie_0.21.0_windows_arm64.zip",
-            "hash": "6bf85a2b91885e2968476e66bebcb3ef43b21329265371925cf381cbd7e72702"
+            "url": "https://github.com/filecoin-project/lassie/releases/download/v0.22.0/lassie_0.22.0_windows_arm64.zip",
+            "hash": "0e71f57fa5bc23cd1db69539289591e647acd57015830b5ebbfd74ea98dc4cbc"
         }
     },
     "bin": "lassie.exe",
