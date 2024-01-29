@@ -11,12 +11,5 @@
             "QQPlayer.exe",
             "QQ影音"
         ]
-    ],
-    "checkver": {
-        "regex": "QQPlayerSetup([\\d.]+).exe"
-    },
-    "autoupdate": {
-        "url": "https://dldir1.qq.com/qqyy/pc/QQPlayerSetup$version.exe#/dl.7z"
-    },
-    "notes": "We don't persist your QQPlayer data, they are still storaged in '%LOCALAPPDATA%\\Tencent\\QQPlayer'."
+    ]
 }
