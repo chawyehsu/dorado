@@ -1,0 +1,21 @@
+{
+    "homepage": "https://nuwen.net/mingw.html",
+    "description": "MinGW Distro by Stephan T. Lavavej",
+    "version": "19.0",
+    "license": "GPL-2.0-only",
+    "url": "https://nuwen.net/files/mingw/mingw-19.0.exe#/dl.7z",
+    "hash": "5062d36fb66f72fd4ae00a340b5b036a31c8d5b71e862e4dc044e0f2dcc82ede",
+    "extract_dir": "MinGW",
+    "shortcuts": [
+        [
+            "open_distro_window.bat",
+            "MinGW (nuwen distro)"
+        ]
+    ],
+    "checkver": {
+        "re": "mingw-([\\d.]+).exe</a>"
+    },
+    "autoupdate": {
+        "url": "https://nuwen.net/files/mingw/mingw-$version.exe#/dl.7z"
+    }
+}
