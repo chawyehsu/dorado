@@ -1,5 +1,5 @@
 {
-    "version": "2.4.1",
+    "version": "2.5.0",
     "homepage": "http://lyswhut.github.io/lx-music-doc/",
     "description": "a free & open source music finder",
     "license": "Apache-2.0",
@@ -14,22 +14,22 @@
     },
     "architecture": {
         "32bit": {
-            "url": "https://github.com/lyswhut/lx-music-desktop/releases/download/v2.4.1/lx-music-desktop-v2.4.1-win_x86-green.7z",
-            "hash": "md5:d534772be6743435142fa71c79624a66"
+            "url": "https://github.com/lyswhut/lx-music-desktop/releases/download/v2.5.0/lx-music-desktop-v2.5.0-win7_x86-green.7z",
+            "hash": "md5:8bf9904ce565e9ea34409f15bb47bbcd"
         },
         "64bit": {
-            "url": "https://github.com/lyswhut/lx-music-desktop/releases/download/v2.4.1/lx-music-desktop-v2.4.1-win_x64-green.7z",
-            "hash": "md5:4260dcf5758325d029359c2064d73b18"
+            "url": "https://github.com/lyswhut/lx-music-desktop/releases/download/v2.5.0/lx-music-desktop-v2.5.0-win_x64-green.7z",
+            "hash": "md5:5600f7e6d3c2579cf9b5574501deefe3"
         },
         "arm64": {
-            "url": "https://github.com/lyswhut/lx-music-desktop/releases/download/v2.4.1/lx-music-desktop-v2.4.1-win_arm64-green.7z",
-            "hash": "md5:ad3e13f0034b67c801a81c9fe9c43641"
+            "url": "https://github.com/lyswhut/lx-music-desktop/releases/download/v2.5.0/lx-music-desktop-v2.5.0-win_arm64-green.7z",
+            "hash": "md5:e47eeb13db6ddb7a9e606977624a528d"
         }
     },
     "autoupdate": {
         "architecture": {
             "32bit": {
-                "url": "https://github.com/lyswhut/lx-music-desktop/releases/download/v$version/lx-music-desktop-v$version-win_x86-green.7z",
+                "url": "https://github.com/lyswhut/lx-music-desktop/releases/download/v$version/lx-music-desktop-v$version-win7_x86-green.7z",
                 "hash": {
                     "url": "https://github.com/lyswhut/lx-music-desktop/releases/tag/v$version",
                     "regex": "$md5\\s+lx-music-desktop\\s+v$version\\s+win_x86\\s+green"
