@@ -19,7 +19,7 @@
         ]
     ],
     "checkver": {
-        "regex": "/ysyy_v([\\d.]+)"
+        "regex": "/ysyy_v([\\d.]+).*?x64.exe"
     },
     "autoupdate": {
         "architecture": {
