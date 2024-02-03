@@ -1,0 +1,32 @@
+{
+    "homepage": "https://crystalmark.info/en/",
+    "description": "CrystalDiskInfo is a HDD/SSD utility software which supports S.M.A.R.T and a part of USB-HDD.",
+    "version": "9.2.2",
+    "license": "MIT",
+    "url": "https://sourceforge.net/projects/crystaldiskinfo/files/9.2.2/CrystalDiskInfo9_2_2Aoi.zip",
+    "hash": "b4412727f834bd71fe3959426ea29a607621706858d3458492f5362e6fa0db63",
+    "architecture": {
+        "64bit": {
+            "shortcuts": [["DiskInfo64A.exe", "CrystalDiskInfo Aoi Edition"]]
+        },
+        "32bit": {
+            "shortcuts": [["DiskInfo32A.exe", "CrystalDiskInfo Aoi Edition"]]
+        },
+        "arm64": {
+            "shortcuts": [["DiskInfoA64A.exe", "CrystalDiskInfo Aoi Edition"]]
+        }
+    },
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\DiskInfo.ini\")) {",
+        "    New-Item \"$dir\\DiskInfo.ini\" -ItemType File | Out-Null",
+        "}"
+    ],
+    "persist": ["DiskInfo.ini", "Smart"],
+    "checkver": {
+        "sourceforge": "crystaldiskinfo",
+        "regex": "([\\d.a-zA-Z]+)/CrystalDiskInfo.*.zip"
+    },
+    "autoupdate": {
+        "url": "https://sourceforge.net/projects/crystaldiskinfo/files/$version/CrystalDiskInfo$underscoreVersionAoi.zip"
+    }
+}
