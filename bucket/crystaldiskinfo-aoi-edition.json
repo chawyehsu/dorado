@@ -7,13 +7,28 @@
     "hash": "b4412727f834bd71fe3959426ea29a607621706858d3458492f5362e6fa0db63",
     "architecture": {
         "64bit": {
-            "shortcuts": [["DiskInfo64A.exe", "CrystalDiskInfo Aoi Edition"]]
+            "shortcuts": [
+                [
+                    "DiskInfo64A.exe",
+                    "CrystalDiskInfo Aoi Edition"
+                ]
+            ]
         },
         "32bit": {
-            "shortcuts": [["DiskInfo32A.exe", "CrystalDiskInfo Aoi Edition"]]
+            "shortcuts": [
+                [
+                    "DiskInfo32A.exe",
+                    "CrystalDiskInfo Aoi Edition"
+                ]
+            ]
         },
         "arm64": {
-            "shortcuts": [["DiskInfoA64A.exe", "CrystalDiskInfo Aoi Edition"]]
+            "shortcuts": [
+                [
+                    "DiskInfoA64A.exe",
+                    "CrystalDiskInfo Aoi Edition"
+                ]
+            ]
         }
     },
     "pre_install": [
@@ -21,7 +36,10 @@
         "    New-Item \"$dir\\DiskInfo.ini\" -ItemType File | Out-Null",
         "}"
     ],
-    "persist": ["DiskInfo.ini", "Smart"],
+    "persist": [
+        "DiskInfo.ini",
+        "Smart"
+    ],
     "checkver": {
         "sourceforge": "crystaldiskinfo",
         "regex": "([\\d.a-zA-Z]+)/CrystalDiskInfo.*.zip"
