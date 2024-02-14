@@ -2,15 +2,15 @@
     "homepage": "https://pot-app.com/",
     "description": "A cross-platform translation software",
     "license": "GPL-3.0-only",
-    "version": "2.7.4",
+    "version": "2.7.5",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/pot-app/pot-desktop/releases/download/2.7.4/pot_2.7.4_x64-setup.exe#/dl.7z",
-            "hash": "b9d119407ba88a408de816b63b94595706074bb12b69c64617bb22603057cbee"
+            "url": "https://github.com/pot-app/pot-desktop/releases/download/2.7.5/pot_2.7.5_x64-setup.exe#/dl.7z",
+            "hash": "b6c8557a65598ff95bb3eb0fd2f65700d61947a814fcd3e92050d9d7deff1ee8"
         },
         "32bit": {
-            "url": "https://github.com/pot-app/pot-desktop/releases/download/2.7.4/pot_2.7.4_x86-setup.exe#/dl.7z",
-            "hash": "7e695842389a2e8a458ed170a805362ebc566583d3a3745401b079ea3a124c0b"
+            "url": "https://github.com/pot-app/pot-desktop/releases/download/2.7.5/pot_2.7.5_x86-setup.exe#/dl.7z",
+            "hash": "7f25a1c52a40677239a09960026652cf6e8ab2a836778a69b9c4d5b4a33056a7"
         }
     },
     "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\" -Force -Recurse",
