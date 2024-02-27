@@ -9,21 +9,35 @@
             "hash": "1bafad828bb0bdc902af14a5f062edca0050f577c79abfe53f036f283a86ca4f"
         }
     },
-    "depends": "dark",
+    "depends": "dorado/wix",
+    "suggest": {
+        "python": "main/python",
+        "vcredist": "extras/vcredist2022"
+    },
     "installer": {
         "script": [
-            "Expand-DarkArchive \"$dir\\$fname\" \"$dir\\extracted\" -Removal",
-            "Get-ChildItem \"$dir\\extracted\\AttachedContainer\\*.msi\" | ForEach-Object { Expand-MsiArchive $_ \"$dir\" }",
-            "@('extracted') | ForEach-Object { Remove-Item \"$dir\\$_\" -Recurse }"
+            "wix.exe burn extract \"$dir\\$fname\" -o \"$dir\\extracted\" -oba \"$dir\\extracted\"",
+            "Get-ChildItem \"$dir\\extracted\\WixAttachedContainer\\*.msi\" | ForEach-Object {",
+            "    if ($_.Name -match 'rtl.msi') {",
+            "        Expand-MsiArchive $_ \"$dir\\LocalApp\\Programs\\Swift\\Runtimes\\0.0.0\\usr\\bin\"",
+            "    } else {",
+            "        Expand-MsiArchive $_ \"$dir\"",
+            "    }",
+            "}",
+            "if (Test-Path \"$dir\\SourceDir\") {",
+            "    Get-ChildItem \"$dir\\SourceDir\" | Copy-Item -Destination \"$dir\" -Force -Recurse",
+            "    Remove-Item \"$dir\\SourceDir\" -Recurse | Out-Null",
+            "}",
+            "Remove-Item \"$dir\\$fname\",\"$dir\\extracted\" -Recurse | Out-Null"
         ]
     },
     "env_add_path": [
-        "Developer\\Toolchains\\unknown-Asserts-development.xctoolchain\\usr\\bin",
-        "runtime-development\\bin"
+        "LocalApp\\Programs\\Swift\\Toolchains\\0.0.0+Asserts\\usr\\bin",
+        "LocalApp\\Programs\\Swift\\Runtimes\\0.0.0\\usr\\bin"
     ],
     "env_set": {
-        "SDKROOT": "$dir\\Developer\\Platforms\\Windows.platform\\Developer\\SDKs\\Windows.sdk",
-        "DEVELOPER_DIR": "$dir\\Developer"
+        "SDKROOT": "$dir\\LocalApp\\Programs\\Swift\\Platforms\\0.0.0\\Windows.platform\\Developer\\SDKs\\Windows.sdk",
+        "DEVELOPER_DIR": "$dir\\LocalApp\\Programs\\Swift\\Platforms\\0.0.0\\Windows.platform\\Developer"
     },
     "checkver": {
         "url": "https://dorado-api.deno.dev/swift-tmp",
@@ -36,9 +50,5 @@
                 "url": "https://download.swift.org/development/windows10/swift-DEVELOPMENT-SNAPSHOT-$matchBuild/swift-DEVELOPMENT-SNAPSHOT-$matchBuild-windows10.exe"
             }
         }
-    },
-    "notes": [
-        "To make swift toolchain work, you must have Visual Studio and Windows SDK components installed.",
-        "Please read https://www.swift.org/getting-started/#support-files for Supporting Files installation guide."
-    ]
+    }
 }
