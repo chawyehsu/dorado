@@ -9,26 +9,32 @@
             "hash": "d78a717551c78e824c9b74b0cfb1ad86060fc286ea071fddb26df18f56dc7212"
         }
     },
-    "depends": "dark",
+    "depends": "dorado/wix",
+    "suggest": {
+        "python": "main/python",
+        "vcredist": "extras/vcredist2022"
+    },
     "installer": {
         "script": [
-            "Expand-DarkArchive \"$dir\\$fname\" \"$dir\\extracted\" -Removal",
-            "Get-ChildItem \"$dir\\extracted\\AttachedContainer\\*.msi\" | ForEach-Object { Expand-MsiArchive $_ \"$dir\" }",
-            "@('extracted') | ForEach-Object { Remove-Item \"$dir\\$_\" -Recurse }"
+            "wix.exe burn extract \"$dir\\$fname\" -o \"$dir\\extracted\" -oba \"$dir\\extracted\"",
+            "Get-ChildItem \"$dir\\extracted\\WixAttachedContainer\\*.msi\" | ForEach-Object {",
+            "    Expand-MsiArchive $_ \"$dir\"",
+            "}",
+            "Get-ChildItem \"$dir\\PFiles64\" | Copy-Item -Destination \"$dir\\Library\\Developer\\Runtimes\" -Force -Recurse",
+            "Remove-Item \"$dir\\$fname\",\"$dir\\extracted\",\"$dir\\PFiles64\" -Recurse | Out-Null"
         ]
     },
     "env_add_path": [
-        "Developer\\Toolchains\\unknown-Asserts-development.xctoolchain\\usr\\bin",
-        "icu-69.1\\usr\\bin",
-        "runtime-development\\usr\\bin"
+        "Library\\Developer\\Toolchains\\unknown-Asserts-development.xctoolchain\\usr\\bin",
+        "Library\\Developer\\Runtimes\\runtime-development\\usr\\bin"
     ],
     "env_set": {
-        "SDKROOT": "$dir\\Developer\\Platforms\\Windows.platform\\Developer\\SDKs\\Windows.sdk",
-        "DEVELOPER_DIR": "$dir\\Developer"
+        "SDKROOT": "$dir\\Library\\Developer\\Platforms\\Windows.platform\\Developer\\SDKs\\Windows.sdk",
+        "DEVELOPER_DIR": "$dir\\Library\\Developer\\Platforms\\Windows.platform\\Developer"
     },
     "checkver": {
         "url": "https://dorado-api.deno.dev/swift-tmp",
-        "regex": "(?sm)releases\">Releases</h2>.*?Swift ([\\d.]+)"
+        "regex": "swift-(5.9[\\d.]+)-RELEASE-windows10.exe"
     },
     "autoupdate": {
         "architecture": {
@@ -36,9 +42,5 @@
                 "url": "https://download.swift.org/swift-$version-release/windows10/swift-$version-RELEASE/swift-$version-RELEASE-windows10.exe"
             }
         }
-    },
-    "notes": [
-        "To make swift toolchain work, you must have Visual Studio and Windows SDK components installed.",
-        "Please read https://www.swift.org/getting-started/#support-files for Supporting Files installation guide."
-    ]
+    }
 }
