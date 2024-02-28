@@ -1,15 +1,15 @@
 {
     "homepage": "https://www.yuque.com/",
     "description": "Professional note and document repositories",
-    "version": "3.3.1.1115",
+    "version": "3.4.0.1204",
     "license": {
         "identifier": "EULA",
         "url": "https://www.yuque.com/terms"
     },
     "architecture": {
         "64bit": {
-            "url": "https://app.nlark.com/yuque-desktop/3.3.1.1115/BJ0bd9b248a5e9495dbcacd0039edcee43/Yuque-3.3.1.1115.exe#/Yuque_3.3.1.1115.7z",
-            "hash": "fa7086f6d009d053af7382a87577c2de1524fd5031b4308f70061a43ab1b1825",
+            "url": "https://app.nlark.com/yuque-desktop/3.4.0.1204/BJ8f0d81d8b17a4d1f83208b417e1113e1/Yuque-3.4.0.1204.exe#/Yuque_3.4.0.1204.7z",
+            "hash": "a69cb433b40b8f69c65fea3082201a204231b7923ee5738dcc39c8d849243979",
             "installer": {
                 "script": [
                     "Expand-7zipArchive \"$dir\\`$PLUGINSDIR/app-64.7z\" \"$dir\" -Removal",
