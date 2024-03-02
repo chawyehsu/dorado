@@ -1,12 +1,16 @@
 {
     "homepage": "https://www.swift.org/",
-    "description": "The Swift Programming Language (Snapshot build)",
+    "description": "The Swift Programming Language (Nightly builds)",
     "license": "Apache-2.0",
-    "version": "snapshot-2024-02-29-a",
+    "version": "20240302.0",
     "architecture": {
         "64bit": {
-            "url": "https://download.swift.org/development/windows10/swift-DEVELOPMENT-SNAPSHOT-2024-02-29-a/swift-DEVELOPMENT-SNAPSHOT-2024-02-29-a-windows10.exe",
-            "hash": "b14a1c49a50f0ddeae2980eb2a45b7238261e2139c473b95d1e63d54e3422031"
+            "url": "https://github.com/thebrowsercompany/swift-build/releases/download/20240302.0/installer-amd64.exe",
+            "hash": "4f13b552a144ae21b2228969a79b31313e380333e71933485b77c19c79e095d5"
+        },
+        "arm64": {
+            "url": "https://github.com/thebrowsercompany/swift-build/releases/download/20240302.0/installer-arm64.exe",
+            "hash": "e0f3fd889190f454f157cce31877856070b32796d7de9c0752452f8404812d49"
         }
     },
     "depends": "dorado/wix",
@@ -24,10 +28,6 @@
             "        Expand-MsiArchive $_ \"$dir\"",
             "    }",
             "}",
-            "if (Test-Path \"$dir\\SourceDir\") {",
-            "    Get-ChildItem \"$dir\\SourceDir\" | Copy-Item -Destination \"$dir\" -Force -Recurse",
-            "    Remove-Item \"$dir\\SourceDir\" -Recurse | Out-Null",
-            "}",
             "Remove-Item \"$dir\\$fname\",\"$dir\\extracted\" -Recurse | Out-Null"
         ]
     },
@@ -40,15 +40,20 @@
         "DEVELOPER_DIR": "$dir\\LocalApp\\Programs\\Swift\\Platforms\\0.0.0\\Windows.platform\\Developer"
     },
     "checkver": {
-        "url": "https://dorado-api.deno.dev/swift-tmp",
-        "regex": "swift-DEVELOPMENT-SNAPSHOT-(?<build>[\\w\\-]+)-windows10.exe",
-        "replace": "snapshot-${build}"
+        "github": "https://api.github.com/repos/thebrowsercompany/swift-build/releases?per_page=50",
+        "regex": "tag/([\\d.]+)"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://download.swift.org/development/windows10/swift-DEVELOPMENT-SNAPSHOT-$matchBuild/swift-DEVELOPMENT-SNAPSHOT-$matchBuild-windows10.exe"
+                "url": "https://github.com/thebrowsercompany/swift-build/releases/download/$version/installer-amd64.exe"
+            },
+            "arm64": {
+                "url": "https://github.com/thebrowsercompany/swift-build/releases/download/$version/installer-arm64.exe"
             }
+        },
+        "hash": {
+            "url": "$url.sha256"
         }
     }
 }
