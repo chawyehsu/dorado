@@ -15,7 +15,7 @@
     },
     "depends": "dorado/wix",
     "suggest": {
-        "python": "main/python",
+        "python39": "versions/python39",
         "vcredist": "extras/vcredist2022"
     },
     "installer": {
@@ -55,5 +55,9 @@
         "hash": {
             "url": "$url.sha256"
         }
-    }
+    },
+    "notes": [
+        "Swift Toolchain does not bundle Python39 which is a requirement for LLDB to work.",
+        "Please install Python39 from versions/python39 if you want to use the LLDB debugger."
+    ]
 }

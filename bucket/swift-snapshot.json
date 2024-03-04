@@ -11,7 +11,7 @@
     },
     "depends": "dorado/wix",
     "suggest": {
-        "python": "main/python",
+        "python39": "versions/python39",
         "vcredist": "extras/vcredist2022"
     },
     "installer": {
@@ -50,5 +50,9 @@
                 "url": "https://download.swift.org/development/windows10/swift-DEVELOPMENT-SNAPSHOT-$matchBuild/swift-DEVELOPMENT-SNAPSHOT-$matchBuild-windows10.exe"
             }
         }
-    }
+    },
+    "notes": [
+        "Swift Toolchain does not bundle Python39 which is a requirement for LLDB to work.",
+        "Please install Python39 from versions/python39 if you want to use the LLDB debugger."
+    ]
 }
