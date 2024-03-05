@@ -1,19 +1,17 @@
 {
     "version": "3.19.2",
-    "description": "Google’s mobile app SDK for crafting high-quality native interfaces on iOS and Android",
+    "description": "Google's SDK for crafting beautiful, fast user experiences for mobile, web, and desktop",
     "homepage": "https://flutter.dev",
     "license": "BSD-3-Clause",
-    "depends": [
-        "extras/android-sdk",
-        "java/ojdkbuild8"
-    ],
     "suggest": {
-        "Visual Studio Code with Flutter Extension": [
-            "vscode",
-            "vscode-portable"
+        "Android SDK Tools": "android-clt",
+        "Java": [
+            "openjdk17",
+            "openjdk11"
         ],
-        "Andoid Studio with Flutter Extension": "android-studio",
-        "Intellij IDEA with Flutter Extension": [
+        "Android Studio": "android-studio",
+        "Visual Studio Code with Flutter extension": "vscode",
+        "Intellij IDEA with Flutter extension": [
             "idea",
             "idea-ultimate",
             "idea-ultimate-eap"
