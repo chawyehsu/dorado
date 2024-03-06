@@ -2,15 +2,15 @@
     "homepage": "https://im.qq.com/pcqq/index.shtml",
     "description": "An instant messaging software service developed by Tencent",
     "license": "Freeware",
-    "version": "9.9.7.21484",
+    "version": "9.9.7.240305",
     "architecture": {
         "64bit": {
-            "url": "https://dldir1.qq.com/qqfile/qq/QQNT/897bf087/QQ9.9.7.21484_x64.exe#/dl.7z",
-            "hash": "97ff95d3ff4055449912f4702f283c079efb4df872c2ad288a1993e4a661bff9"
+            "url": "https://dldir1.qq.com/qqfile/qq/QQNT/Windows/QQ_9.9.7_240305_x64_01.exe#/dl.7z",
+            "hash": "18ff4722148ca302bac9cbf25d5d104ed30778824921822520bf15bc8d41ac7f"
         },
         "32bit": {
-            "url": "https://dldir1.qq.com/qqfile/qq/QQNT/340572d2/QQ9.9.7.21484_x86.exe#/dl.7z",
-            "hash": "fca60b9b6e813c5f266cc6b6e076465702d1352de17cfb765c618bbab29366e1"
+            "url": "https://dldir1.qq.com/qqfile/qq/QQNT/Windows/QQ_9.9.7_240305_x86_01.exe#/dl.7z",
+            "hash": "89f0046c71938262261b2f976eee6246d91af58e66316f287e6aa75559bed9d6"
         }
     },
     "extract_dir": "Files",
@@ -21,16 +21,17 @@
         ]
     ],
     "checkver": {
-        "url": "https://cdn-go.cn/qq-web/im.qq.com_new/latest/rainbow/windowsDownloadUrl.js",
-        "regex": "ntDownload.*?/(?<commit86>\\w+)/QQ([\\d.]+)_x86.*?NT/(?<commit64>\\w+)/QQ(?<version64>[\\d.]+)_x64"
+        "url": "https://im.qq.com/pcqq",
+        "regex": "QQNT\\\\u002FWindows\\\\u002FQQ_([\\d\\.]+)_([\\d]+)_x86_01\\.exe",
+        "replace": "${1}.${2}"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://dldir1.qq.com/qqfile/qq/QQNT/$matchCommit64/QQ$version_x64.exe#/dl.7z"
+                "url": "https://dldir1.qq.com/qqfile/qq/QQNT/Windows/QQ_$match1_$match2_x64_01.exe#/dl.7z"
             },
             "32bit": {
-                "url": "https://dldir1.qq.com/qqfile/qq/QQNT/$matchCommit86/QQ$version_x86.exe#/dl.7z"
+                "url": "https://dldir1.qq.com/qqfile/qq/QQNT/Windows/QQ_$match1_$match2_x86_01.exe#/dl.7z"
             }
         }
     }
