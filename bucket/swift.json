@@ -2,11 +2,11 @@
     "homepage": "https://www.swift.org/",
     "description": "The Swift Programming Language",
     "license": "Apache-2.0",
-    "version": "5.9.2",
+    "version": "5.10",
     "architecture": {
         "64bit": {
-            "url": "https://download.swift.org/swift-5.9.2-release/windows10/swift-5.9.2-RELEASE/swift-5.9.2-RELEASE-windows10.exe",
-            "hash": "d78a717551c78e824c9b74b0cfb1ad86060fc286ea071fddb26df18f56dc7212"
+            "url": "https://download.swift.org/swift-5.10-release/windows10/swift-5.10-RELEASE/swift-5.10-RELEASE-windows10.exe",
+            "hash": "a0e2b32dfb56fcb83d4fec1d1ff4b43b4b0986ede4c065ff52f336ea9aa49322"
         }
     },
     "depends": "dorado/wix",
@@ -18,23 +18,30 @@
         "script": [
             "wix.exe burn extract \"$dir\\$fname\" -o \"$dir\\extracted\" -oba \"$dir\\extracted\"",
             "Get-ChildItem \"$dir\\extracted\\WixAttachedContainer\\*.msi\" | ForEach-Object {",
-            "    Expand-MsiArchive $_ \"$dir\"",
+            "    if ($_.Name -match 'rtl.msi') {",
+            "        Expand-MsiArchive $_ \"$dir\\LocalApp\\Programs\\Swift\\Runtimes\\5.10.0\\usr\\bin\"",
+            "    } else {",
+            "        Expand-MsiArchive $_ \"$dir\"",
+            "    }",
             "}",
-            "Get-ChildItem \"$dir\\PFiles64\" | Copy-Item -Destination \"$dir\\Library\\Developer\\Runtimes\" -Force -Recurse",
-            "Remove-Item \"$dir\\$fname\",\"$dir\\extracted\",\"$dir\\PFiles64\" -Recurse | Out-Null"
+            "if (Test-Path \"$dir\\SourceDir\") {",
+            "    Get-ChildItem \"$dir\\SourceDir\" | Copy-Item -Destination \"$dir\" -Force -Recurse",
+            "    Remove-Item \"$dir\\SourceDir\" -Recurse | Out-Null",
+            "}",
+            "Remove-Item \"$dir\\$fname\",\"$dir\\extracted\" -Recurse | Out-Null"
         ]
     },
     "env_add_path": [
-        "Library\\Developer\\Toolchains\\unknown-Asserts-development.xctoolchain\\usr\\bin",
-        "Library\\Developer\\Runtimes\\runtime-development\\usr\\bin"
+        "LocalApp\\Programs\\Swift\\Toolchains\\5.10.0+Asserts\\usr\\bin",
+        "LocalApp\\Programs\\Swift\\Runtimes\\5.10.0\\usr\\bin"
     ],
     "env_set": {
-        "SDKROOT": "$dir\\Library\\Developer\\Platforms\\Windows.platform\\Developer\\SDKs\\Windows.sdk",
-        "DEVELOPER_DIR": "$dir\\Library\\Developer\\Platforms\\Windows.platform\\Developer"
+        "SDKROOT": "$dir\\LocalApp\\Programs\\Swift\\Platforms\\5.10.0\\Windows.platform\\Developer\\SDKs\\Windows.sdk",
+        "DEVELOPER_DIR": "$dir\\LocalApp\\Programs\\Swift\\Platforms\\5.10.0\\Windows.platform\\Developer"
     },
     "checkver": {
         "url": "https://dorado-api.deno.dev/swift-tmp",
-        "regex": "swift-(5.9[\\d.]+)-RELEASE-windows10.exe"
+        "regex": "swift-(5.10([\\d.]+)?)-RELEASE-windows10.exe"
     },
     "autoupdate": {
         "architecture": {
