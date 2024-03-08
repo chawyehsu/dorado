@@ -3,51 +3,51 @@
     "description": "A simple disk benchmark software.",
     "homepage": "https://crystalmark.info/en/",
     "license": "MIT",
-    "url": "https://zenlayer.dl.sourceforge.net/project/crystaldiskmark/8.0.5/CrystalDiskMark8_0_5Shizuku.zip",
-    "hash": "sha1:a9bfcfaa2602bd1ae8679636fa949cf791c4c2fb",
+    "url": "https://zenlayer.dl.sourceforge.net/project/crystaldiskmark/8.0.5/CrystalDiskMark8_0_5Aoi.zip",
+    "hash": "c980e03aa877321fa7b8528bdcf4aa28bebc8e4baca7bbe3470a4baa48bc9f50",
     "architecture": {
         "64bit": {
             "shortcuts": [
                 [
-                    "DiskMark64S.exe",
-                    "CrystalDiskMark Shizuku Edition"
+                    "DiskMark64A.exe",
+                    "CrystalDiskMark Aoi Edition"
                 ]
             ]
         },
         "32bit": {
             "shortcuts": [
                 [
-                    "DiskMark32S.exe",
-                    "CrystalDiskMark Shizuku Edition"
+                    "DiskMark32A.exe",
+                    "CrystalDiskMark Aoi Edition"
                 ]
             ]
         },
         "arm64": {
             "shortcuts": [
                 [
-                    "DiskMarkA64S.exe",
-                    "CrystalDiskMark Shizuku Edition"
+                    "DiskMarkA64A.exe",
+                    "CrystalDiskMark Aoi Edition"
                 ]
             ]
         }
     },
     "pre_install": [
-        "'DiskMark32S.ini', 'DiskMark64S.ini', 'DiskMarkA64S.ini' | ForEach-Object {",
+        "'DiskMark32A.ini', 'DiskMark64A.ini', 'DiskMarkA64A.ini' | ForEach-Object {",
         "    if (!(Test-Path \"$persist_dir\\$_\")) {",
         "        New-Item \"$dir\\$_\" -ItemType File | Out-Null",
         "    }",
         "}"
     ],
     "persist": [
-        "DiskMark32S.ini",
-        "DiskMark64S.ini",
-        "DiskMarkA64S.ini"
+        "DiskMark32A.ini",
+        "DiskMark64A.ini",
+        "DiskMarkA64A.ini"
     ],
     "checkver": {
         "url": "https://crystalmark.info/en/download/",
         "regex": "CrystalDiskMark ([\\w\\.]+) &#8211;"
     },
     "autoupdate": {
-        "url": "https://zenlayer.dl.sourceforge.net/project/crystaldiskmark/$version/CrystalDiskMark$underscoreVersionShizuku.zip"
+        "url": "https://zenlayer.dl.sourceforge.net/project/crystaldiskmark/$version/CrystalDiskMark$underscoreVersionAoi.zip"
     }
 }
