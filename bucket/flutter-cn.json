@@ -24,9 +24,9 @@
         "Write-Host 'Some licenses need to be accepted before developing. It is recommended to do by running ''flutter doctor --android-licenses''.' -ForegroundColor Yellow",
         "flutter doctor"
     ],
-    "bin": "bin\\flutter.bat",
-    "env_add_path": "bin\\cache\\dart-sdk\\bin",
+    "env_add_path": "bin",
     "env_set": {
+        "FLUTTER_ROOT": "$dir",
         "FLUTTER_STORAGE_BASE_URL": "https://storage.flutter-io.cn",
         "PUB_HOSTED_URL": "https://pub.flutter-io.cn"
     },
