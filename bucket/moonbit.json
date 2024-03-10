@@ -1,5 +1,5 @@
 {
-    "version": "0.1.0-2024.03.10",
+    "version": "0.1.0-2024.03.08",
     "description": "MoonBit is an end-to-end programming language toolchain for cloud and edge computing using WebAssembly.",
     "homepage": "https://www.moonbitlang.com/",
     "license": "Unknown",
@@ -25,7 +25,7 @@
         "moonrun.exe"
     ],
     "checkver": {
-        "script": "return Get-Date \"$((iwr -Method HEAD https://cli.moonbitlang.com/windows/moon.exe).Headers.Date)\" -Format 'yyyy.MM.dd'",
+        "script": "return Get-Date \"$((iwr -Method HEAD https://cli.moonbitlang.com/windows/moon.exe).Headers.'Last-Modified')\" -Format 'yyyy.MM.dd'",
         "regex": "(?<date>[\\d.]+)",
         "replace": "0.1.0-${date}"
     },
