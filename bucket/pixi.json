@@ -19,6 +19,9 @@
             "        New-Item -Path \"$persist_dir\\bin\" -ItemType Directory | Out-Null",
             "    }",
             "    Move-Item \"$dir\\pixi.exe\" \"$persist_dir\\bin\\pixi.exe\"",
+            "}",
+            "if (!(Test-Path \"$persist_dir\\config.toml\") -and !(Test-Path \"$dir\\config.toml\")) {",
+            "    New-Item -Path \"$dir\\config.toml\" -ItemType File | Out-Null",
             "}"
         ]
     },
@@ -28,7 +31,8 @@
     "env_add_path": "bin",
     "persist": [
         "bin",
-        "envs"
+        "envs",
+        "config.toml"
     ],
     "checkver": {
         "github": "https://github.com/prefix-dev/pixi"
