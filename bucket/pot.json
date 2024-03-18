@@ -11,6 +11,10 @@
         "32bit": {
             "url": "https://github.com/pot-app/pot-desktop/releases/download/2.7.9/pot_2.7.9_x86-setup.exe#/dl.7z",
             "hash": "db1f3289d4ddd37c11f2fe5de759d95cd83476adb672ff0f973c7217d3852309"
+        },
+        "arm64": {
+            "url": "https://github.com/pot-app/pot-desktop/releases/download/2.7.9/pot_2.7.9_arm64-setup.exe#/dl.7z",
+            "hash": "7410823a7dc747e1d64b71d79002655b0543f79d0b5480a5c8d60a5ebf50e3cb"
         }
     },
     "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\" -Force -Recurse",
@@ -31,6 +35,9 @@
             },
             "32bit": {
                 "url": "https://github.com/pot-app/pot-desktop/releases/download/$version/pot_$version_x86-setup.exe#/dl.7z"
+            },
+            "arm64": {
+                "url": "https://github.com/pot-app/pot-desktop/releases/download/$version/pot_$version_arm64-setup.exe#/dl.7z"
             }
         }
     },
