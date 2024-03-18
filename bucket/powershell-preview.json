@@ -11,6 +11,10 @@
         "32bit": {
             "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.5.0-preview.2/PowerShell-7.5.0-preview.2-win-x86.zip",
             "hash": "e322270099ed943019a009c81ab6827f3381a5219178c4ef3793975f90a87e1d"
+        },
+        "arm64": {
+            "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.5.0-preview.2/PowerShell-7.5.0-preview.2-win-arm64.zip",
+            "hash": "54d282f5af2be2b5f596829d7232faaca7913849f63d6cd409ddd8d7ae58a06d"
         }
     },
     "bin": "pwsh.exe",
@@ -31,6 +35,9 @@
             },
             "32bit": {
                 "url": "https://github.com/PowerShell/PowerShell/releases/download/v$version/PowerShell-$version-win-x86.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/PowerShell/PowerShell/releases/download/v$version/PowerShell-$version-win-arm64.zip"
             }
         },
         "hash": {
