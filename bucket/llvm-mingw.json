@@ -16,7 +16,8 @@
         },
         "arm64": {
             "url": "https://github.com/mstorsjo/llvm-mingw/releases/download/20240308/llvm-mingw-20240308-ucrt-aarch64.zip",
-            "hash": "3c1e56f2d4947d6606865f2df430b479e95d23d834e11215ebc6be4fcd5f5e3d"
+            "hash": "3c1e56f2d4947d6606865f2df430b479e95d23d834e11215ebc6be4fcd5f5e3d",
+            "extract_dir": "llvm-mingw-20240308-ucrt-aarch64"
         }
     },
     "env_add_path": "bin",
