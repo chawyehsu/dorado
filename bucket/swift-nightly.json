@@ -21,23 +21,40 @@
     "installer": {
         "script": [
             "wix.exe burn extract \"$dir\\$fname\" -o \"$dir\\extracted\" -oba \"$dir\\extracted\"",
+            "$productVersion = ([xml](Get-Content -Raw \"$dir\\extracted\\manifest.xml\" -Encoding utf8)).BurnManifest.Registration.Version",
             "Get-ChildItem \"$dir\\extracted\\WixAttachedContainer\\*.msi\" | ForEach-Object {",
             "    if ($_.Name -match 'rtl.msi') {",
-            "        Expand-MsiArchive $_ \"$dir\\LocalApp\\Programs\\Swift\\Runtimes\\0.0.0\\usr\\bin\"",
+            "        Expand-MsiArchive $_ \"$dir\\Runtimes\\usr\\bin\"",
             "    } else {",
             "        Expand-MsiArchive $_ \"$dir\"",
             "    }",
             "}",
-            "Remove-Item \"$dir\\$fname\",\"$dir\\extracted\" -Recurse | Out-Null"
+            "if (Test-Path \"$dir\\LocalApp\\Programs\\Swift\\Tools\") {",
+            "    Get-ChildItem \"$dir\\LocalApp\\Programs\\Swift\\Tools\\$productVersion\" | ForEach-Object {",
+            "        Move-Item -Path $_ -Destination \"$dir\\LocalApp\\Programs\\Swift\\Toolchains\\$($productVersion)+Asserts\\usr\\bin\" -Force",
+            "    }",
+            "    Remove-Item \"$dir\\LocalApp\\Programs\\Swift\\Tools\" -Recurse | Out-Null",
+            "}",
+            "Move-Item -Path \"$dir\\LocalApp\\Programs\\Swift\\Platforms\\$productVersion\\Windows.platform\" -Destination \"$dir\\LocalApp\\Programs\\Swift\\Platforms\"",
+            "Move-Item -Path \"$dir\\LocalApp\\Programs\\Swift\\Toolchains\\$($productVersion)+Asserts\\usr\" -Destination \"$dir\\LocalApp\\Programs\\Swift\\Toolchains\"",
+            "Move-Item -Path \"$dir\\LocalApp\\Programs\\Swift\\Redistributables\\$productVersion\\*\" -Destination \"$dir\\LocalApp\\Programs\\Swift\\Redistributables\"",
+            "Get-ChildItem \"$dir\\LocalApp\\Programs\\Swift\" | ForEach-Object {",
+            "    Move-Item -Path $_ -Destination \"$dir\\\" -Force",
+            "}",
+            "Remove-Item \"$dir\\Platforms\\$productVersion\" | Out-Null",
+            "Remove-Item \"$dir\\Toolchains\\$($productVersion)+Asserts\" | Out-Null",
+            "Remove-Item \"$dir\\Redistributables\\$productVersion\" | Out-Null",
+            "@(\"$fname\", 'extracted', 'LocalApp', 'SourceDir') | ForEach-Object {",
+            "    Remove-Item \"$dir\\$_\" -Recurse -ErrorAction SilentlyContinue | Out-Null",
+            "}"
         ]
     },
     "env_add_path": [
-        "LocalApp\\Programs\\Swift\\Toolchains\\0.0.0+Asserts\\usr\\bin",
-        "LocalApp\\Programs\\Swift\\Runtimes\\0.0.0\\usr\\bin"
+        "Toolchains\\usr\\bin",
+        "Runtimes\\usr\\bin"
     ],
     "env_set": {
-        "SDKROOT": "$dir\\LocalApp\\Programs\\Swift\\Platforms\\0.0.0\\Windows.platform\\Developer\\SDKs\\Windows.sdk",
-        "DEVELOPER_DIR": "$dir\\LocalApp\\Programs\\Swift\\Platforms\\0.0.0\\Windows.platform\\Developer"
+        "SDKROOT": "$dir\\Platforms\\Windows.platform\\Developer\\SDKs\\Windows.sdk"
     },
     "checkver": {
         "github": "https://api.github.com/repos/thebrowsercompany/swift-build/releases?per_page=50",
