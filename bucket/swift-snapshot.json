@@ -17,7 +17,7 @@
     "installer": {
         "script": [
             "wix.exe burn extract \"$dir\\$fname\" -o \"$dir\\extracted\" -oba \"$dir\\extracted\"",
-            "$productVersion = ([xml](Get-Content -Raw \"$dir\\extracted\\manifest.xml\" -Encoding utf8)).BurnManifest.Registration.Version",
+            "$productVersion = '0.0.0'",
             "Get-ChildItem \"$dir\\extracted\\WixAttachedContainer\\*.msi\" | ForEach-Object {",
             "    if ($_.Name -match 'rtl.msi') {",
             "        Expand-MsiArchive $_ \"$dir\\Runtimes\\usr\\bin\"",
