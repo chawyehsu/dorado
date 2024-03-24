@@ -13,11 +13,11 @@
         ]
     ],
     "checkver": {
-        "url": "https://binary-factory.kde.org/job/kdeconnect-kde_Release_win64/lastSuccessfulBuild/api/json/",
-        "regex": "kdeconnect-kde-([\\d.]+-(?<build>\\d+)).*"
+        "url": "https://cdn.kde.org/ci-builds/network/kdeconnect-kde/release-24.02/windows/",
+        "regex": "kdeconnect-kde-release_([\\d.]+-\\d+)-windows-.*"
     },
     "autoupdate": {
-        "url": "https://binary-factory.kde.org/job/kdeconnect-kde_Release_win64/$matchBuild/artifact/kdeconnect-kde-$version-windows-cl-msvc2019-x86_64.7z",
+        "url": "https://cdn.kde.org/ci-builds/network/kdeconnect-kde/release-24.02/windows/kdeconnect-kde-release_$version-windows-cl-msvc2022-x86_64.7z",
         "hash": {
             "url": "$url.sha256",
             "regex": "$sha256"
