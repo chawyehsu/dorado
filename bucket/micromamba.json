@@ -9,8 +9,9 @@
             "hash": "fd477ae7e5eac5600dbf18333b2e4ebfd758e059f11a2b26680ccaa76db540bb"
         }
     },
+    "post_install": "New-Item -Path \"$dir\\base\" -ItemType Directory -Force | Out-Null",
     "env_set": {
-        "MAMBA_ROOT_PREFIX": "$dir\\mamba",
+        "MAMBA_ROOT_PREFIX": "$dir\\base",
         "MAMBA_EXE": "$dir\\micromamba.exe"
     },
     "checkver": {
@@ -30,7 +31,7 @@
     "notes": [
         "No shim is now exposed for micromamba, you have to add following hook to your PowerShell $PROFILE to use it:",
         "",
-        "(& $env:MAMBA_EXE 'shell' 'hook' -s 'powershell' -p $env:MAMBA_ROOT_PREFIX) | Out-String | Invoke-Expression",
+        "(& $env:MAMBA_EXE 'shell' 'hook' -s 'powershell') | Out-String | Invoke-Expression",
         "",
         "Also note that the mamba base environment located in $env:MAMBA_ROOT_PREFIX is now NOT persisted,",
         "we advice to setup 'envs_dirs' to use a seperated path like '~/.conda/envs' and avoid using the base env.",
