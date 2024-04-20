@@ -1,0 +1,13 @@
+{
+    "version": "1.1.2",
+    "description": "Tool to manage your The Binding of Isaac: Ribirth save files",
+    "homepage": "https://github.com/Zamiell/isaac-save-installer",
+    "license": "GPL-3.0-only",
+    "url": "https://github.com/Zamiell/isaac-save-installer/releases/download/1.1.2/isaac-save-installer.exe",
+    "hash": "b8b93d58a5406c898ee94695555767b7d4fa6d3de189a41fecaa3e3bd81a7cae",
+    "bin": "isaac-save-installer.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/Zamiell/isaac-save-installer/releases/download/$version/isaac-save-installer.exe"
+    }
+}
