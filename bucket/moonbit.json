@@ -8,14 +8,29 @@
         "https://cli.moonbitlang.com/windows/moonc.exe",
         "https://cli.moonbitlang.com/windows/moondoc.exe",
         "https://cli.moonbitlang.com/windows/moonfmt.exe",
-        "https://cli.moonbitlang.com/windows/moonrun.exe"
+        "https://cli.moonbitlang.com/windows/moonrun.exe",
+        "https://cli.moonbitlang.com/core.zip"
     ],
     "hash": [
         "452dd1a5f4a9abce729d542b3fb62bd24f078e19007ac46fca95c9237baf789a",
         "848b5325cdcfde24131d27dda37e2acca75c8885ad273cc845eab3a988cfa20e",
         "c0f0497c8d346c379d5300d64d09dce4e018a1eed9834c1d07aa6c2f76d94ccb",
         "a18b5a410f5b7c6767c2b7cecac706aecc397cd5edf0021b19f1b06194142851",
-        "43a4ec94fab5e4d07c84866bf80ae8c4711243981a1db91d8cc166af30bfc140"
+        "43a4ec94fab5e4d07c84866bf80ae8c4711243981a1db91d8cc166af30bfc140",
+        "31bf19d197bf4eccce8992956f35ae2cd1e036b21143d65ca3762d65b2ba134f"
+    ],
+    "pre_install": "New-Item -ItemType Directory -Force -Path \"$dir\\lib\" | Out-Null",
+    "post_install": [
+        "function CreateFile([String] $file, [String] $content = $null) {",
+        "    if (!(Test-Path \"$persist_dir\\$file\")) {",
+        "        New-Item -Force -Path \"$persist_dir\\$file\" -ItemType file -Value $content | Out-Null",
+        "    }",
+        "}",
+        "CreateFile 'credentials.json'",
+        "Move-Item -Path \"$dir\\core\" -Destination \"$dir\\lib\"",
+        "Push-Location \"$dir\\lib\\core\"",
+        "& moon bundle --all",
+        "Pop-Location"
     ],
     "bin": [
         "moon.exe",
@@ -23,6 +38,12 @@
         "moondoc.exe",
         "moonfmt.exe",
         "moonrun.exe"
+    ],
+    "env_set": {
+        "MOON_HOME": "$dir"
+    },
+    "persist": [
+        "credentials.json"
     ],
     "checkver": {
         "script": "return Get-Date \"$((iwr -Method HEAD https://cli.moonbitlang.com/windows/moon.exe).Headers.'Last-Modified')\" -Format 'yyyy.MM.dd'",
@@ -35,7 +56,8 @@
             "https://cli.moonbitlang.com/windows/moonc.exe",
             "https://cli.moonbitlang.com/windows/moondoc.exe",
             "https://cli.moonbitlang.com/windows/moonfmt.exe",
-            "https://cli.moonbitlang.com/windows/moonrun.exe"
+            "https://cli.moonbitlang.com/windows/moonrun.exe",
+            "https://cli.moonbitlang.com/core.zip"
         ]
     }
 }
