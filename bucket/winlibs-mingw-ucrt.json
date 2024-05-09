@@ -1,17 +1,17 @@
 {
     "homepage": "https://winlibs.com/",
     "description": "winlibs standalone build of GCC compiler and MinGW-w64 with UCRT",
-    "version": "13.2.0-11.0.1-ucrt-r8",
+    "version": "14.1.0-11.0.1-ucrt-r1",
     "license": "GPL-2.0-only,BSD-2-Clause,Apache-2.0,ZPL-2.1",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/brechtsanders/winlibs_mingw/releases/download/13.2.0posix-18.1.5-11.0.1-ucrt-r8/winlibs-x86_64-posix-seh-gcc-13.2.0-mingw-w64ucrt-11.0.1-r8.7z",
-            "hash": "54535ca325de2cf84679bc17846e9a2356acd042ceb21e424450836cde02ab9e",
+            "url": "https://github.com/brechtsanders/winlibs_mingw/releases/download/14.1.0posix-18.1.5-11.0.1-ucrt-r1/winlibs-x86_64-posix-seh-gcc-14.1.0-mingw-w64ucrt-11.0.1-r1.7z",
+            "hash": "b405932d4789ee1a69a2dce306ab6672681d8d6351dd3217555ccc4bea558941",
             "extract_dir": "mingw64"
         },
         "32bit": {
-            "url": "https://github.com/brechtsanders/winlibs_mingw/releases/download/13.2.0posix-18.1.5-11.0.1-ucrt-r8/winlibs-i686-posix-dwarf-gcc-13.2.0-mingw-w64ucrt-11.0.1-r8.7z",
-            "hash": "1f5ae7cdfc7a3db2d8edb6eaeb79c9e4e6db4a4854b6c58127f1617307242865",
+            "url": "https://github.com/brechtsanders/winlibs_mingw/releases/download/14.1.0posix-18.1.5-11.0.1-ucrt-r1/winlibs-i686-posix-dwarf-gcc-14.1.0-mingw-w64ucrt-11.0.1-r1.7z",
+            "hash": "667a2d41d2be68e59ab3246c8f9eddb1ce8463a7953352396fd9f9ec61e26f49",
             "extract_dir": "mingw32"
         }
     },
