@@ -1,16 +1,16 @@
 {
-    "version": "126.0b7",
+    "version": "126.0b9",
     "description": "Beta builds of Firefox: the popular open source web browser.",
     "homepage": "https://www.mozilla.org/zh-CN/firefox/beta/",
     "license": "MPL-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://download-installer.cdn.mozilla.net/pub/firefox/releases/126.0b7/win64/zh-CN/Firefox%20Setup%20126.0b7.exe#/firefox-beta.7z",
-            "hash": "sha512:42de2752fb4d239fd32b438739c4f96ba93c5a91b31a6988846236edcdedabcd63bbde42aaaa2ac75ad65aba90b20064e58819fb0fcd0e8abe2a3f0193de7d8d"
+            "url": "https://download-installer.cdn.mozilla.net/pub/firefox/releases/126.0b9/win64/zh-CN/Firefox%20Setup%20126.0b9.exe#/firefox-beta.7z",
+            "hash": "sha512:1a33305e3326744fe72a6ab7555acedfd5f81a207e1978d5aa741b61a66274b2eb561aa20467f748e253d0a1eae41db0a8c29e143eff765026452d637df6ef9b"
         },
         "32bit": {
-            "url": "https://download-installer.cdn.mozilla.net/pub/firefox/releases/126.0b7/win32/zh-CN/Firefox%20Setup%20126.0b7.exe#/firefox-beta.7z",
-            "hash": "sha512:26c5963e09249442ed586d29afec3a6438027d085d50e0c1eae20423450b06828f9f4630671a4636fb4d83fbabd540e00e66509eb981e41ff8aa7ed8a14d4127"
+            "url": "https://download-installer.cdn.mozilla.net/pub/firefox/releases/126.0b9/win32/zh-CN/Firefox%20Setup%20126.0b9.exe#/firefox-beta.7z",
+            "hash": "sha512:26c0433d40d0a44189cab468867f80e0dd122969754e52c9a42f914f28a7284cbd495f7bb9f7ccf80fe553e87aa0f93a45689136cc56896ede63834c6e8a39f7"
         }
     },
     "extract_dir": "core",

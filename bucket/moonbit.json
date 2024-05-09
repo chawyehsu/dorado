@@ -1,5 +1,5 @@
 {
-    "version": "0.1.0-2024.04.29",
+    "version": "0.1.0-2024.05.07",
     "description": "MoonBit is an end-to-end programming language toolchain for cloud and edge computing using WebAssembly.",
     "homepage": "https://www.moonbitlang.com/",
     "license": "Unknown",
@@ -8,14 +8,29 @@
         "https://cli.moonbitlang.com/windows/moonc.exe",
         "https://cli.moonbitlang.com/windows/moondoc.exe",
         "https://cli.moonbitlang.com/windows/moonfmt.exe",
-        "https://cli.moonbitlang.com/windows/moonrun.exe"
+        "https://cli.moonbitlang.com/windows/moonrun.exe",
+        "https://cli.moonbitlang.com/core.zip"
     ],
     "hash": [
-        "3b2a03067e4400eb5e81fd14dc5fee9635cceea089d4e7756e88f5e3f9118939",
-        "a14ca79fd475cf22a50e837e4b93a5e28e36770f14555447b46a35f949ed4f7e",
-        "71cd7beb44c6f3e4e2a9dc9d1877bf8e5fe36146d2686e841552e83d745780b7",
-        "f50b8c33c54d8bf8545264664335dcc1cee5d1b791da5b4c3f9f29a9694c97c7",
-        "93a4afdc1af3f139fbc29d4aeb144a0b9d571863ce0293e245f618d6e41a0e28"
+        "b627a846db8f6e4b3172b1dc42a02e25ee96311990702cdc1f80561eecf84b0f",
+        "2a1f2e4d6a61629ac3dbc423fe26818be9413ac746248255959149813bcf5db6",
+        "0e87ce1ed33816617c3d7940406f0769ebae107334772bbf629e2cfe1ae64e33",
+        "45fc179da2c23400a6ec263d8d7cd692e9286539dec3a2166b59151ceaf4ed4f",
+        "f66793908b7fbc76b2219f3b315b1ccd8ba695548590f03a38db1d5016116e6b",
+        "05de2bf289a4872afd570f0ba55d5e4f15ce87f72f35f47eef851c5e7411a69e"
+    ],
+    "pre_install": "New-Item -ItemType Directory -Force -Path \"$dir\\lib\" | Out-Null",
+    "post_install": [
+        "function CreateFile([String] $file, [String] $content = $null) {",
+        "    if (!(Test-Path \"$persist_dir\\$file\")) {",
+        "        New-Item -Force -Path \"$persist_dir\\$file\" -ItemType file -Value $content | Out-Null",
+        "    }",
+        "}",
+        "CreateFile 'credentials.json'",
+        "Move-Item -Path \"$dir\\core\" -Destination \"$dir\\lib\"",
+        "Push-Location \"$dir\\lib\\core\"",
+        "& moon bundle --all",
+        "Pop-Location"
     ],
     "bin": [
         "moon.exe",
@@ -24,6 +39,10 @@
         "moonfmt.exe",
         "moonrun.exe"
     ],
+    "env_set": {
+        "MOON_HOME": "$dir"
+    },
+    "persist": "credentials.json",
     "checkver": {
         "script": "return Get-Date \"$((iwr -Method HEAD https://cli.moonbitlang.com/windows/moon.exe).Headers.'Last-Modified')\" -Format 'yyyy.MM.dd'",
         "regex": "(?<date>[\\d.]+)",
@@ -35,7 +54,8 @@
             "https://cli.moonbitlang.com/windows/moonc.exe",
             "https://cli.moonbitlang.com/windows/moondoc.exe",
             "https://cli.moonbitlang.com/windows/moonfmt.exe",
-            "https://cli.moonbitlang.com/windows/moonrun.exe"
+            "https://cli.moonbitlang.com/windows/moonrun.exe",
+            "https://cli.moonbitlang.com/core.zip"
         ]
     }
 }
