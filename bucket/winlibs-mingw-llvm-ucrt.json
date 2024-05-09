@@ -17,7 +17,7 @@
     },
     "env_add_path": "bin",
     "checkver": {
-        "regex": "/download/(?<origin>((?<gccVersion>13[\\d.]+)posix-(?<llvmVersion>[\\d.]+)-(?<mingwVersion>[\\d.]+)-ucrt-(?<revision>[\\w]+)))",
+        "regex": "/download/(?<origin>((?<gccVersion>14[\\d.]+)posix-(?<llvmVersion>[\\d.]+)-(?<mingwVersion>[\\d.]+)-ucrt-(?<revision>[\\w]+)))",
         "replace": "${gccVersion}-${llvmVersion}-${mingwVersion}-ucrt-${revision}"
     },
     "autoupdate": {
