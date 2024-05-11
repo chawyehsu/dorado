@@ -1,0 +1,26 @@
+{
+    "version": "1.4.0",
+    "description": "The extism CLI is used to generate plugin scaffolding and manage Extism installations",
+    "homepage": "https://extism.org/",
+    "license": "BSD-3-Clause",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/extism/cli/releases/download/v1.4.0/extism-v1.4.0-windows-amd64.zip",
+            "hash": "md5:c052acad53fa4274f777365c0ed6aeac"
+        }
+    },
+    "bin": "extism.exe",
+    "checkver": {
+        "github": "https://github.com/extism/cli"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/extism/cli/releases/download/v$version/extism-v$version-windows-amd64.zip"
+            }
+        },
+        "hash": {
+            "url": "$url.md5"
+        }
+    }
+}
