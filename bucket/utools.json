@@ -2,18 +2,18 @@
     "homepage": "https://u.tools/",
     "description": "Your productive tools set and launcher.",
     "license": "Proprietary",
-    "version": "4.0.1",
+    "version": "5.1.0",
     "architecture": {
         "64bit": {
-            "url": "https://res.u-tools.cn/version2/uTools-4.0.1.exe#/dl.7z",
-            "hash": "sha512:05af1d664c39ee7ce8a689d4c02fb156bdbe04c3200734f16364dd78a3f947ad4977e8b00ffe558cda0017c68215af2d2f01bdf9061bcedf595bfb5f4b6557f2",
+            "url": "https://res.u-tools.cn/version2/uTools-5.1.0.exe#/dl.7z",
+            "hash": "sha512:d796d93f66cb5aeedcfdf0e6fbbe5272e4adde4852aa03c13a3debaf99c603ff6366129ededc05c13db932cf5d8a126a64bb49838dab7ecc12d4b2477dd6eb41",
             "installer": {
                 "script": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR/app-64.7z\" \"$dir\""
             }
         },
         "32bit": {
-            "url": "https://res.u-tools.cn/version2/uTools-4.0.1-ia32.exe#/dl.7z",
-            "hash": "sha512:ea0f138f1f0ec350e30b0be0da7a962fb6ef16e1ba5ef3da29fc21b46fb2aacc804f8d0cfdea32acf7b32e7300b5a6536c5e8895d9c9f2907f6b5be092eb5a7b",
+            "url": "https://res.u-tools.cn/version2/uTools-5.1.0-ia32.exe#/dl.7z",
+            "hash": "sha512:15f692c4578284c0ff88640a90d83ea4ed75e9d20bc8d12fde45712f5a4dcd2cc13c5b75201fbd46c896d36f09d2218e5e8d6dd2b2ebec4c389be7bb10aee0d0",
             "installer": {
                 "script": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR/app-32.7z\" \"$dir\""
             }
