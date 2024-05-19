@@ -42,7 +42,10 @@
     "env_set": {
         "MOON_HOME": "$dir"
     },
-    "persist": "credentials.json",
+    "persist": [
+        "registry",
+        "credentials.json"
+    ],
     "checkver": {
         "script": "return Get-Date \"$((iwr -Method HEAD https://cli.moonbitlang.com/windows/moon.exe).Headers.'Last-Modified')\" -Format 'yyyy.MM.dd'",
         "regex": "(?<date>[\\d.]+)",
