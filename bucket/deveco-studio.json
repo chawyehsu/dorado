@@ -1,0 +1,41 @@
+{
+    "version": "3.1.0.501",
+    "description": "The official IDE for HarmonyOS and OpenHarmony",
+    "homepage": "https://developer.huawei.com/consumer/cn/deveco-studio/",
+    "license": "Freeware",
+    "architecture": {
+        "64bit": {
+            "url": "https://contentcenter-vali-drcn.dbankcdn.cn/pvt_2/DeveloperAlliance_package_901_9/81/v3/tgRUB84wR72nTfE8Ir_xMw/devecostudio-windows-3.1.0.501.zip?HW-CC-KV=V1&HW-CC-Date=20230621T074329Z&HW-CC-Expire=315360000&HW-CC-Sign=22F6787DF6093ECB4D4E08F9379B114280E1F65DA710599E48EA38CB24F3DBF2#/dl.zip",
+            "hash": "fbe79d92017d642ee91b2471b36c3e22ff3c186a0df36f3ae683129cfd445d9c",
+            "extract_dir": "devecostudio-windows-3.1.0.501",
+            "installer": {
+                "script": [
+                    "Get-ChildItem \"$dir\\deveco*.exe\" | Rename-Item -NewName \"$dir\\installer.exe\"",
+                    "Expand-7zipArchive \"$dir\\installer.exe\" \"$dir\" | Out-Null",
+                    "Remove-Item \"$dir\\`$PLUGINSDIR\" -Recurse",
+                    "Remove-Item \"$dir\\installer.exe\" | Out-Null"
+                ]
+            },
+            "shortcuts": [
+                [
+                    "bin\\devecostudio64.exe",
+                    "DevEco Studio"
+                ]
+            ]
+        }
+    },
+    "checkver": {
+        "regex": "://(?<prefix>.*?)/devecostudio-windows-(?<version>[\\d.]+).zip(?<suffix>.*?)\""
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://$matchPrefix/devecostudio-windows-$version.zip$matchSuffix#/dl.zip",
+                "extract_dir": "devecostudio-windows-$version"
+            }
+        },
+        "hash": {
+            "regex": "(?sm)devecostudio-windows-$version.zip.*?$sha256"
+        }
+    }
+}
