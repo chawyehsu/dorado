@@ -3,11 +3,16 @@ on:
   schedule:
     # run at 00:01:00 everyday (UTC)
     - cron: '1 0 * * *'
+  push:
+    branches:
+      - 'master'
+
 name: Excavator
 jobs:
   excavate:
     name: Excavate
     runs-on: windows-latest
+    if: github.event_name != 'push' || contains(github.event.head_commit.message, 'checkver')
     steps:
     - uses: actions/checkout@main
     - name: Excavate
