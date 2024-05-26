@@ -24,10 +24,7 @@
             "PowerShell"
         ]
     ],
-    "checkver": {
-        "url": "https://raw.githubusercontent.com/PowerShell/PowerShell/master/README.md",
-        "regex": "\\[rl-windows-64\\].*releases/download/v([\\d.]+)/PowerShell"
-    },
+    "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {

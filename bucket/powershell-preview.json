@@ -25,8 +25,9 @@
         ]
     ],
     "checkver": {
-        "url": "https://raw.githubusercontent.com/PowerShell/PowerShell/master/README.md",
-        "regex": "\\[pv-windows-64\\].*releases/download/v([\\d.]+-[\\w.]+)/PowerShell"
+        "url": "https://api.github.com/repos/PowerShell/PowerShell/releases?per_page=10",
+        "jsonpath": "$[?(@.prerelease)].tag_name",
+        "regex": "v([\\d.]+-preview.\\d+)"
     },
     "autoupdate": {
         "architecture": {
