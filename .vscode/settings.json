@@ -2,12 +2,13 @@
     "editor.formatOnSave": true,
     "powershell.codeFormatting.preset": "OTBS",
     "powershell.codeFormatting.useCorrectCasing": true,
-    "prettier.useEditorConfig": true,
     "files.insertFinalNewline": true,
     "json.schemas": [
         {
             "url": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-            "fileMatch": ["bucket/*.json"]
+            "fileMatch": [
+                "bucket/*.json"
+            ]
         }
     ],
     "files.exclude": {
