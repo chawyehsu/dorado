@@ -1,5 +1,5 @@
 {
-    "version": "0.1.0-2024.05.27",
+    "version": "0.1.0-2024.06.03",
     "description": "MoonBit is an end-to-end programming language toolchain for cloud and edge computing using WebAssembly.",
     "homepage": "https://www.moonbitlang.com/",
     "license": "Unknown",
@@ -12,12 +12,12 @@
         "https://cli.moonbitlang.com/core.zip"
     ],
     "hash": [
-        "659fa15972ac6795fdab79109eb36762c2fcc584c1f6abd57564953e245c9dfd",
-        "0dc70d5ec010b460bf65e1737eedef13d18003ac07727a656797a1d0a271d470",
-        "44780fecaf6835840c8fd0f90090de1399e1df15751fc68e822b765a0d0fb199",
-        "195fec3c5fe6136bc8746909a4b34903caedaff89f5f4e4ce129322765bf8b84",
-        "6eac37ea08a3ac047578d26e617bfbe8448cadae8e43d9d5983d898921dbb8cc",
-        "2239dfadcf8208e6621c2ad8e5d416a5ee6a18057be956f90c12fc637de7ef9d"
+        "c06ef75724fb6a1c33a9a4a0d2b317e5708f09473755ea97b363f82b5ce06335",
+        "64485163625d2f9151d56c875f3c28f1bb7988b9f2b143a5e1c5f3d72add6ff4",
+        "ec85bdd056429b88ed9da7d7b99fe84e2b325279a6a0f188a73575d861dc5461",
+        "2bdb6b1d5e83a486795ab648ed9a51c4aa3b3a6f6a728a2c5281ed37b5b00ae1",
+        "0f467065eef447632c2c33e44d943ee9bb5f667fac14638fd453e9f5b654c3ba",
+        "92311c142e42a75bf8befa5ef1e58e4a6e511be5bd9fbcf85ddef06223bbea75"
     ],
     "pre_install": "New-Item -ItemType Directory -Force -Path \"$dir\\lib\" | Out-Null",
     "post_install": [
