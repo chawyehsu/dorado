@@ -1,18 +1,18 @@
 {
     "homepage": "http://www.haoxg.net/ediary/index.html",
     "description": "An electronic diary software born in 1999, which is still in active development.",
-    "version": "4.3",
+    "version": "4.3.1",
     "license": "Freeware",
     "architecture": {
         "64bit": {
-            "url": "http://www.haoxg.net/ediary/download/ediary-4.3-win64-copy.zip",
-            "hash": "bcc75b43c99b5361c526fc3289c523937a5d8f9f796c7b526f67e57df7021089",
-            "extract_dir": "eDiary-4.3-win64"
+            "url": "http://www.haoxg.net/ediary/download/ediary-4.3.1-win64-copy.zip",
+            "hash": "84adeb233194455a70e44595f7f4c2010a554ef0b5ce09be144f62c7094d8da4",
+            "extract_dir": "eDiary-4.3.1-win64"
         },
         "32bit": {
-            "url": "http://www.haoxg.net/ediary/download/ediary-4.3-win32-copy.zip",
-            "hash": "ae42ea959e7bdeaf1a0e802865a785ab2de12d8bb6085d262ad5e82e6e616717",
-            "extract_dir": "eDiary-4.3-win32"
+            "url": "http://www.haoxg.net/ediary/download/ediary-4.3.1-win32-copy.zip",
+            "hash": "7c910796e97b0556b5de6b93a843c799d3b4f135269f69f616c5682c63869a81",
+            "extract_dir": "eDiary-4.3.1-win32"
         }
     },
     "pre_install": "if (!(Test-Path $persist_dir\\Config.ini)) { New-Item $dir\\Config.ini | Out-Null }",
