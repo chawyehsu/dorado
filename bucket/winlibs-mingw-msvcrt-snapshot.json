@@ -1,17 +1,17 @@
 {
     "homepage": "https://winlibs.com/",
     "description": "winlibs standalone build of GCC compiler and MinGW-w64 with MSVCRT (snapshot version)",
-    "version": "14.0.1-11.0.1-snapshot20240324-msvcrt-r1",
+    "version": "15.0.0-12.0.0-snapshot20240616-msvcrt-r1",
     "license": "GPL-2.0-only,BSD-2-Clause,Apache-2.0,ZPL-2.1",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/brechtsanders/winlibs_mingw/releases/download/14.0.1-snapshot20240324posix-11.0.1-msvcrt-r1/winlibs-x86_64-posix-seh-gcc-14.0.1-snapshot20240324-mingw-w64msvcrt-11.0.1-r1.7z",
-            "hash": "8f1d0c3f3cf690d3b6a0cd8750939bef1af6f7ada010c87ac8bfd9cf7946c0a4",
+            "url": "https://github.com/brechtsanders/winlibs_mingw/releases/download/15.0.0-snapshot20240616posix-12.0.0-msvcrt-r1/winlibs-x86_64-posix-seh-gcc-15.0.0-snapshot20240616-mingw-w64msvcrt-12.0.0-r1.7z",
+            "hash": "85a6cfc2a8f680650689251dfa2dcf71cdb527b52f9d6a376d738c2d0888a0c6",
             "extract_dir": "mingw64"
         },
         "32bit": {
-            "url": "https://github.com/brechtsanders/winlibs_mingw/releases/download/14.0.1-snapshot20240324posix-11.0.1-msvcrt-r1/winlibs-i686-posix-dwarf-gcc-14.0.1-snapshot20240324-mingw-w64msvcrt-11.0.1-r1.7z",
-            "hash": "0ee7ec95bbf43288eaedabb3e82285f970b8b0ebb4eb2c996369f5f28eee09a8",
+            "url": "https://github.com/brechtsanders/winlibs_mingw/releases/download/15.0.0-snapshot20240616posix-12.0.0-msvcrt-r1/winlibs-i686-posix-dwarf-gcc-15.0.0-snapshot20240616-mingw-w64msvcrt-12.0.0-r1.7z",
+            "hash": "6932877811d4fa88e056e7cd090e98c33aa1a12bda745ca5bbe841ab0dd9582c",
             "extract_dir": "mingw64"
         }
     },
