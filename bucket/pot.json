@@ -2,19 +2,19 @@
     "homepage": "https://pot-app.com/",
     "description": "A cross-platform translation software",
     "license": "GPL-3.0-only",
-    "version": "3.0.4",
+    "version": "3.0.5",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/pot-app/pot-desktop/releases/download/3.0.4/pot_3.0.4_x64-setup.exe#/dl.7z",
-            "hash": "1f0559d5c19f28d97558b2e6946c137381315bb0c94c14ab5a38aa63faa8c857"
+            "url": "https://github.com/pot-app/pot-desktop/releases/download/3.0.5/pot_3.0.5_x64-setup.exe#/dl.7z",
+            "hash": "41bf20d071b286f635226796c26e60641bcebb87e92bf925f901ee1df2ffb6f6"
         },
         "32bit": {
-            "url": "https://github.com/pot-app/pot-desktop/releases/download/3.0.4/pot_3.0.4_x86-setup.exe#/dl.7z",
-            "hash": "a29491e302a66119086881c7c6eca7f4840852bf4ad72691da6108c8e941bace"
+            "url": "https://github.com/pot-app/pot-desktop/releases/download/3.0.5/pot_3.0.5_x86-setup.exe#/dl.7z",
+            "hash": "600d51cea5fc25429254e0f5f8446753dc1144ec9e6bf9dcea507d42adb2d703"
         },
         "arm64": {
-            "url": "https://github.com/pot-app/pot-desktop/releases/download/3.0.4/pot_3.0.4_arm64-setup.exe#/dl.7z",
-            "hash": "d680bee0a80fd66f04ffa421812cb3dd0a45b10526ce748771cedefd3342520f"
+            "url": "https://github.com/pot-app/pot-desktop/releases/download/3.0.5/pot_3.0.5_arm64-setup.exe#/dl.7z",
+            "hash": "89f5c0b0480dd2b222cfe8e34b9c14bd5293688c97cd0e50901622bdf822356b"
         }
     },
     "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\" -Force -Recurse",
