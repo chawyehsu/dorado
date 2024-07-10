@@ -1,16 +1,20 @@
 {
-    "version": "0.1.0-2024.07.09",
+    "version": "0.1.20240709+b6909a8c7",
     "description": "MoonBit is an end-to-end programming language toolchain for cloud and edge computing using WebAssembly.",
     "homepage": "https://www.moonbitlang.com/",
     "license": "Unknown",
-    "url": [
-        "https://cli.moonbitlang.com/binaries/latest/moonbit-windows-x86_64.zip",
-        "https://cli.moonbitlang.com/cores/core-latest.zip"
-    ],
-    "hash": [
-        "abdd07d22ac54bc8b0616c015128fd66a50ce804864fbedfd91a6c9d80306fe2",
-        "e73679f74e55c763df9afc4fdbb19b982c908d216d2453ebb3c0b00ee82a9948"
-    ],
+    "architecture": {
+        "64bit": {
+            "url": [
+                "https://github.com/chawyehsu/moonbit-binaries/releases/download/v0.1.20240709+b6909a8c7/moonbit-core-v0.1.20240709+b6909a8c7.zip",
+                "https://github.com/chawyehsu/moonbit-binaries/releases/download/v0.1.20240709+b6909a8c7/moonbit-v0.1.20240709+b6909a8c7-win-x64.zip"
+            ],
+            "hash": [
+                "e73679f74e55c763df9afc4fdbb19b982c908d216d2453ebb3c0b00ee82a9948",
+                "abdd07d22ac54bc8b0616c015128fd66a50ce804864fbedfd91a6c9d80306fe2"
+            ]
+        }
+    },
     "pre_install": "New-Item -ItemType Directory -Force -Path \"$dir\\lib\" | Out-Null",
     "post_install": [
         "function CreateFile([String] $file, [String] $content = $null) {",
@@ -42,14 +46,21 @@
         "credentials.json"
     ],
     "checkver": {
-        "script": "return Get-Date \"$((iwr -Method HEAD https://cli.moonbitlang.com/binaries/latest/moonbit-windows-x86_64.zip).Headers.'Last-Modified')\" -Format 'yyyy.MM.dd'",
-        "regex": "(?<date>[\\d.]+)",
-        "replace": "0.1.0-${date}"
+        "github": "https://github.com/chawyehsu/moonbit-binaries",
+        "regex": "v([\\d.]+(\\+[a-z0-9]+)?)"
     },
     "autoupdate": {
-        "url": [
-            "https://cli.moonbitlang.com/binaries/latest/moonbit-windows-x86_64.zip",
-            "https://cli.moonbitlang.com/cores/core-latest.zip"
-        ]
+        "architecture": {
+            "64bit": {
+                "url": [
+                    "https://github.com/chawyehsu/moonbit-binaries/releases/download/v$version/moonbit-core-v$version.zip",
+                    "https://github.com/chawyehsu/moonbit-binaries/releases/download/v$version/moonbit-v$version-win-x64.zip"
+                ]
+            }
+        },
+        "hash": {
+            "url": "$url.sha256",
+            "regex": "([a-f0-9]{64})"
+        }
     }
 }
