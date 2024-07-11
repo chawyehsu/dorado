@@ -1,19 +1,19 @@
 {
     "homepage": "https://flowus.cn/",
     "description": "A new generation of knowledge management and collaboration platform.",
-    "version": "1.1.7",
+    "version": "1.1.8",
     "license": "Proprietary",
     "architecture": {
         "64bit": {
-            "url": "https://desktopdownload.flowus.cn/production/windows/x64/FlowUs%20Setup%201.1.7.exe#/dl.7z",
-            "hash": "f1ed13d273f36a5f9181c06249147e3ae3b8dba5638b428fcc00ebd601b664a7",
+            "url": "https://desktopdownload.flowus.cn/production/windows/x64/FlowUs%20Setup%201.1.8.exe#/dl.7z",
+            "hash": "aaff15ca8a9045a896349154b2817bdceddabac7dd25511bdb29052885928ed2",
             "installer": {
                 "script": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\""
             }
         },
         "32bit": {
-            "url": "https://desktopdownload.flowus.cn/production/windows/ia32/FlowUs%20Setup%201.1.7.exe#/dl.7z",
-            "hash": "deb68e52043647d8b7264092c3ad522bdb5460f89b05936b4ce9f827cda087bf",
+            "url": "https://desktopdownload.flowus.cn/production/windows/ia32/FlowUs%20Setup%201.1.8.exe#/dl.7z",
+            "hash": "c663fa3f0b1adf836bcb890328dbf47f76259b7095732f129d597bf816277860",
             "installer": {
                 "script": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-32.7z\" \"$dir\""
             }
