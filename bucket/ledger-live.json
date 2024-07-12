@@ -22,7 +22,7 @@
         ]
     ],
     "checkver": {
-        "script": "return (iwr -useb 'https://download.live.ledger.com/latest/win' -Method HEAD -MaximumRedirection 0 -SkipHttpErrorCheck -ErrorAction:SilentlyContinue).Headers['Location']",
+        "url": "https://download.live.ledger.com/latest.yml",
         "regex": "ledger-live-desktop-([\\d.]+)-win"
     },
     "autoupdate": {
