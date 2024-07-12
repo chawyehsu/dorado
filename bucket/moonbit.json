@@ -15,7 +15,10 @@
             ]
         }
     },
-    "pre_install": "New-Item -ItemType Directory -Force -Path \"$dir\\lib\" | Out-Null",
+    "pre_install": [
+        "New-Item -ItemType Directory -Force -Path \"$dir\\bin\" | Out-Null",
+        "New-Item -ItemType Directory -Force -Path \"$dir\\lib\" | Out-Null"
+    ],
     "post_install": [
         "function CreateFile([String] $file, [String] $content = $null) {",
         "    if (!(Test-Path \"$persist_dir\\$file\")) {",
@@ -23,21 +26,13 @@
         "    }",
         "}",
         "CreateFile 'credentials.json'",
+        "Move-Item -Path \"$dir\\*.exe\" -Destination \"$dir\\bin\"",
         "Move-Item -Path \"$dir\\core\" -Destination \"$dir\\lib\"",
         "Push-Location \"$dir\\lib\\core\"",
         "& moon bundle --all",
         "Pop-Location"
     ],
-    "bin": [
-        "moon.exe",
-        "moonc.exe",
-        "mooncake.exe",
-        "moondoc.exe",
-        "moonfmt.exe",
-        "mooninfo.exe",
-        "moonrun.exe",
-        "moon_cove_report.exe"
-    ],
+    "env_add_path": "bin",
     "env_set": {
         "MOON_HOME": "$dir"
     },
