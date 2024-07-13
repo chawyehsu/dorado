@@ -4,7 +4,7 @@
     "version": "4.7.4.2",
     "license": "Proprietary",
     "url": "https://dl.todesk.com/windows/ToDesk_Setup.exe#/dl.7z",
-    "hash": "f7097a455e272d6149ef35b5ae3f93f4be0f14e471cec179d4ffe69c1a47dc50",
+    "hash": "35ef5fa64be5bc9e3e6418f959421ef6d858c68c3352ea4277c66171a6c6d1b3",
     "pre_install": [
         "if (!(Test-Path \"$persist_dir\\config.ini\")) {",
         "    New-Item -Force -Path \"$persist_dir\\config.ini\" -ItemType File -Value \"[ConfigInfo]`nautoStart=0\" | Out-Null",
