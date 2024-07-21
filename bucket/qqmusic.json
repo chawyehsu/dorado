@@ -1,10 +1,10 @@
 {
     "homepage": "https://y.qq.com/",
     "description": "The official QQ Music client",
-    "version": "1933",
+    "version": "20.31.0",
     "license": "Proprietary",
-    "url": "https://dldir1.qq.com/music/clntupate/QQMusic_Setup_1933.exe#/dl.7z",
-    "hash": "md5:c18dd6703fb8d62ee565b8a677ba377a",
+    "url": "https://dldir1v6.qq.com/music/clntupate/QQMusic_Setup_Home_2031.exe#/dl.7z",
+    "hash": "3236d473506848578670eba7fdfc544b4e4d148d7a0160895d8c716b81412096",
     "installer": {
         "script": [
             "# simulate instok check",
@@ -28,16 +28,5 @@
             "QQMusic.exe",
             "QQ音乐"
         ]
-    ],
-    "checkver": {
-        "url": "https://c.y.qq.com/pcupdate/fcgi-bin/fcg_update_player.fcg?cmd=QueryModuleUpdate&module_type=QQ&MusicNew&update_strategy=0",
-        "regex": "QQMusic_Setup_(\\d+).exe"
-    },
-    "autoupdate": {
-        "url": "https://dldir1.qq.com/music/clntupate/QQMusic_Setup_$version.exe#/dl.7z",
-        "hash": {
-            "url": "https://c.y.qq.com/pcupdate/fcgi-bin/fcg_update_player.fcg?cmd=QueryModuleUpdate&module_type=QQ&MusicNew&update_strategy=0",
-            "regex": "module_hash>$md5"
-        }
-    }
+    ]
 }
