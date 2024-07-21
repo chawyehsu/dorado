@@ -7,6 +7,10 @@
         "64bit": {
             "url": "https://download.swift.org/development/windows10/swift-DEVELOPMENT-SNAPSHOT-2024-07-02-a/swift-DEVELOPMENT-SNAPSHOT-2024-07-02-a-windows10.exe",
             "hash": "ce799b41195b70af9e7734dfed19c4ec4ec79bbc9eadba611e37e8888b16a734"
+        },
+        "arm64": {
+            "url": "https://download.swift.org/development/windows10-arm64/swift-DEVELOPMENT-SNAPSHOT-2024-07-02-a/swift-DEVELOPMENT-SNAPSHOT-2024-07-02-a-windows10-arm64.exe",
+            "hash": "037bdbf9d1a1a99d7156584948870a8a958fd27cc4ff5711691cc0a76f2e88f5"
         }
     },
     "depends": "main/wixtoolset",
@@ -53,7 +57,7 @@
         "SDKROOT": "$dir\\Platforms\\Windows.platform\\Developer\\SDKs\\Windows.sdk"
     },
     "checkver": {
-        "url": "https://dorado-api.deno.dev/swift-tmp",
+        "url": "https://download.swift.org/development/windows10/latest-build.json",
         "regex": "swift-DEVELOPMENT-SNAPSHOT-(?<build>[\\w\\-]+)-windows10.exe",
         "replace": "snapshot-${build}"
     },
@@ -61,6 +65,9 @@
         "architecture": {
             "64bit": {
                 "url": "https://download.swift.org/development/windows10/swift-DEVELOPMENT-SNAPSHOT-$matchBuild/swift-DEVELOPMENT-SNAPSHOT-$matchBuild-windows10.exe"
+            },
+            "arm64": {
+                "url": "https://download.swift.org/development/windows10-arm64/swift-DEVELOPMENT-SNAPSHOT-$matchBuild/swift-DEVELOPMENT-SNAPSHOT-$matchBuild-windows10-arm64.exe"
             }
         }
     },
