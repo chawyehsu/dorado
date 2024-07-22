@@ -1,29 +1,21 @@
 {
-    "version": "2.2.1",
+    "version": "3.22.3",
     "description": "Google's SDK for crafting beautiful, fast user experiences for mobile, web, and desktop",
     "homepage": "https://flutter.dev",
     "license": "BSD-3-Clause",
+    "notes": " - Run 'flutter doctor' to see if there are any platform dependencies you need to complete the setup.",
     "suggest": {
         "Android SDK Tools": "android-clt",
+        "Android Studio": "extras/android-studio",
         "Java": [
-            "openjdk17",
-            "openjdk11"
+            "java/oraclejdk-lts",
+            "java/openjdk11"
         ],
-        "Android Studio": "android-studio",
-        "Visual Studio Code with Flutter extension": "vscode",
-        "Intellij IDEA with Flutter extension": [
-            "idea",
-            "idea-ultimate",
-            "idea-ultimate-eap"
-        ]
+        "Visual Studio Code with Flutter extension": "extras/vscode"
     },
-    "url": "https://storage.flutter-io.cn/flutter_infra/releases/stable/windows/flutter_windows_2.2.1-stable.zip",
-    "hash": "e2c6184fd01338031214c611ad27235d314ecb03a065426a85098a527925a671",
+    "url": "https://storage.flutter-io.cn/flutter_infra/releases/stable/windows/flutter_windows_3.22.3-stable.zip",
+    "hash": "fd7e3e4f4484a8608866bdb12d82051d34f525f80710e87ecae84f5104fc264d",
     "extract_dir": "flutter",
-    "post_install": [
-        "Write-Host 'Some licenses need to be accepted before developing. It is recommended to do by running ''flutter doctor --android-licenses''.' -ForegroundColor Yellow",
-        "flutter doctor"
-    ],
     "env_add_path": "bin",
     "env_set": {
         "FLUTTER_ROOT": "$dir",
@@ -32,14 +24,13 @@
     },
     "checkver": {
         "url": "https://storage.flutter-io.cn/flutter_infra/releases/releases_windows.json",
-        "regex": "windows_(v?[\\d.]+)(?<delim>[-+]?)(?<build>[\\w.]*)-stable",
-        "replace": "$1${delim}${build}"
+        "regex": "windows_([\\d.]+)-stable"
     },
     "autoupdate": {
-        "url": "https://storage.flutter-io.cn/flutter_infra/releases/stable/windows/flutter_windows_$matchHead$matchDelim$matchBuild-stable.zip",
+        "url": "https://storage.flutter-io.cn/flutter_infra/releases/stable/windows/flutter_windows_$version-stable.zip",
         "hash": {
             "url": "https://storage.flutter-io.cn/flutter_infra/releases/releases_windows.json",
-            "jsonpath": "$.releases[?(@.archive =~ /.*flutter_windows_$matchHead$matchDelim$matchBuild-stable.zip/)].sha256"
+            "jsonpath": "$.releases[?(@.archive =~ /.*flutter_windows_$version-stable.zip/)].sha256"
         }
     }
 }
