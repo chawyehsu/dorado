@@ -1,13 +1,21 @@
 {
     "homepage": "https://music.163.com/",
     "description": "The official NetEase Cloud Music client.",
-    "version": "2.10.13.202675_32",
+    "version": "3.0.1.202965",
     "license": {
         "identifier": "EULA",
         "url": "https://music.163.com/html/web2/service.html"
     },
-    "url": "https://d1.music.126.net/dmusic/NeteaseCloudMusic_Music_official_2.10.13.202675_32.exe#/dl.7z",
-    "hash": "45f8aa74a4bae7b253fe370a129f3fe22cedb8b24e3c06d04c772dd41486ffb2",
+    "architecture": {
+        "64bit": {
+            "url": "https://d1.music.126.net/dmusic/NeteaseCloudMusic_Music_official_3.0.1.202965_64.exe#/dl.7z",
+            "hash": "6b7f7e2d4b72eee843f8e924f581993500d3a5e73ff69ede4f3bc846c0caad71"
+        },
+        "32bit": {
+            "url": "https://d1.music.126.net/dmusic/NeteaseCloudMusic_Music_official_3.0.1.202965_32.exe#/dl.7z",
+            "hash": "4ae9776a604ff2680b1137aed108e75c8aec4575275086943fcf2dcd3688becc"
+        }
+    },
     "installer": {
         "script": [
             "Get-ChildItem \"$dir\\redist_packages\" | Move-Item -Destination \"$dir\" -Force",
@@ -32,10 +40,17 @@
         ]
     ],
     "checkver": {
-        "script": "return (iwr -useb 'https://music.163.com/api/pc/package/download/latest' -Method Head).Headers['x-nos-object-name']",
-        "regex": "(?<version>[\\d.]+(?:_[\\d.]+)?).exe"
+        "url": "https://music.163.com/api/appcustomconfig/get?key=web-pc-beta-download-links",
+        "regex": "(?<version>[\\d.]+)_32.exe"
     },
     "autoupdate": {
-        "url": "https://d1.music.126.net/dmusic/NeteaseCloudMusic_Music_official_$version.exe#/dl.7z"
+        "architecture": {
+            "64bit": {
+                "url": "https://d1.music.126.net/dmusic/NeteaseCloudMusic_Music_official_$version_64.exe#/dl.7z"
+            },
+            "32bit": {
+                "url": "https://d1.music.126.net/dmusic/NeteaseCloudMusic_Music_official_$version_32.exe#/dl.7z"
+            }
+        }
     }
 }
