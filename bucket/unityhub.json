@@ -38,11 +38,13 @@
     ],
     "checkver": {
         "url": "https://unity.com/unity-hub/release-notes",
-        "regex": "class=\"active\">([\\d.]+)</a>"
+        "regex": "/release-notes#([\\d.]+)"
     },
     "autoupdate": {
-        "64bit": {
-            "url": "https://public-cdn.cloud.unity3d.com/hub/prod/UnityHubSetup.exe#/dl.7z"
+        "architecture": {
+            "64bit": {
+                "url": "https://public-cdn.cloud.unity3d.com/hub/prod/UnityHubSetup.exe#/dl.7z"
+            }
         }
     }
 }
