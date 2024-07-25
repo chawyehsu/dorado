@@ -1,33 +1,33 @@
 {
     "homepage": "https://winlibs.com/",
     "description": "winlibs standalone build of GCC compiler and MinGW-w64 with UCRT (snapshot version)",
-    "version": "13.0.1-11.0.0-snapshot20230402-ucrt-r1",
+    "version": "15.0.0-12.0.0-snapshot20240616-ucrt-r1",
     "license": "GPL-2.0-only,BSD-2-Clause,Apache-2.0,ZPL-2.1",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/brechtsanders/winlibs_mingw/releases/download/13.0.1-snapshot20230402-11.0.0-ucrt-r1/winlibs-x86_64-mcf-seh-gcc-13.0.1-snapshot20230402-mingw-w64ucrt-11.0.0-r1.7z",
-            "hash": "20f7bf60295b626e91b3267670130e4b9f8207d644cc3bad8c361afd3e41962d",
+            "url": "https://github.com/brechtsanders/winlibs_mingw/releases/download/15.0.0-snapshot20240616posix-12.0.0-ucrt-r1/winlibs-x86_64-posix-seh-gcc-15.0.0-snapshot20240616-mingw-w64ucrt-12.0.0-r1.7z",
+            "hash": "46d24169bdefb31a0a8e570ca9a3302929ff2e45488a7734e1afee79874472a5",
             "extract_dir": "mingw64"
         },
         "32bit": {
-            "url": "https://github.com/brechtsanders/winlibs_mingw/releases/download/13.0.1-snapshot20230402-11.0.0-ucrt-r1/winlibs-x86_64-mcf-seh-gcc-13.0.1-snapshot20230402-mingw-w64ucrt-11.0.0-r1.7z",
-            "hash": "20f7bf60295b626e91b3267670130e4b9f8207d644cc3bad8c361afd3e41962d",
+            "url": "https://github.com/brechtsanders/winlibs_mingw/releases/download/15.0.0-snapshot20240616posix-12.0.0-ucrt-r1/winlibs-i686-posix-dwarf-gcc-15.0.0-snapshot20240616-mingw-w64ucrt-12.0.0-r1.7z",
+            "hash": "d821de767f3ed8274400bd7fab45e7098c15e6f803f38e985579660ff737757b",
             "extract_dir": "mingw64"
         }
     },
     "env_add_path": "bin",
     "checkver": {
         "url": "https://api.github.com/repos/brechtsanders/winlibs_mingw/releases?per_page=50",
-        "regex": "/tag/(?<gccVersion>[\\d.]+)-snapshot(?<date>[\\d]+)-(?<mingwVersion>[\\d.]+)-ucrt-(?<revision>[\\w]+)",
+        "regex": "/winlibs-x86_64-posix-seh-gcc-(?<gccVersion>[\\d.]+)-snapshot(?<date>[\\d]+)-mingw-w64ucrt-(?<mingwVersion>[\\d.]+)(-(?<revision>[\\w]+))?",
         "replace": "${gccVersion}-${mingwVersion}-snapshot${date}-ucrt-${revision}"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/brechtsanders/winlibs_mingw/releases/download/$matchGccversion-snapshot$matchDate-$matchMingwversion-ucrt-$matchRevision/winlibs-x86_64-mcf-seh-gcc-$matchGccversion-snapshot$matchDate-mingw-w64ucrt-$matchMingwversion-$matchRevision.7z"
+                "url": "https://github.com/brechtsanders/winlibs_mingw/releases/download/$matchGccversion-snapshot$matchDateposix-$matchMingwversion-ucrt-$matchRevision/winlibs-x86_64-posix-seh-gcc-$matchGccversion-snapshot$matchDate-mingw-w64ucrt-$matchMingwversion-$matchRevision.7z"
             },
             "32bit": {
-                "url": "https://github.com/brechtsanders/winlibs_mingw/releases/download/$matchGccversion-snapshot$matchDate-$matchMingwversion-ucrt-$matchRevision/winlibs-i686-mcf-dwarf-gcc-$matchGccversion-snapshot$matchDate-mingw-w64ucrt-$matchMingwversion-$matchRevision.7z"
+                "url": "https://github.com/brechtsanders/winlibs_mingw/releases/download/$matchGccversion-snapshot$matchDateposix-$matchMingwversion-ucrt-$matchRevision/winlibs-i686-posix-dwarf-gcc-$matchGccversion-snapshot$matchDate-mingw-w64ucrt-$matchMingwversion-$matchRevision.7z"
             }
         },
         "hash": {
