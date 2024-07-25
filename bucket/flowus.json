@@ -31,8 +31,8 @@
         ]
     ],
     "checkver": {
-        "url": "https://flowus.cn/download",
-        "regex": "winVersion\":\"([\\d.]+)\""
+        "url": "https://desktopdownload.flowus.cn/production/windows/x64/latest.yml",
+        "regex": "FlowUs Setup ([\\d.]+).exe"
     },
     "autoupdate": {
         "architecture": {
