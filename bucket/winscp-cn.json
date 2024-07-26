@@ -3,14 +3,8 @@
     "description": "Copy files between a local computer and remote servers using FTP, FTPS, SCP, SFTP, WebDAV or S3 file transfer protocols.",
     "homepage": "https://winscp.net",
     "license": "GPL-3.0-or-later",
-    "url": [
-        "https://downloads.sourceforge.net/project/winscp/WinSCP/6.3.4/WinSCP-6.3.4-Portable.zip",
-        "https://winscp.net/translations/dll/6.3.4/chs.zip"
-    ],
-    "hash": [
-        "0f7e564ac10facb04012693f4d62970e31cc09dec67b9d1aa37ff56e9bfcfb6f",
-        "b8f4b5cf83472f3ad94dd6cf18c8e4c1e993960ea023cb09a64dc3c41bae72f6"
-    ],
+    "url": "https://downloads.sourceforge.net/project/winscp/WinSCP/6.3.4/WinSCP-6.3.4-Portable.zip",
+    "hash": "0f7e564ac10facb04012693f4d62970e31cc09dec67b9d1aa37ff56e9bfcfb6f",
     "pre_install": [
         "if (!(Test-Path \"$persist_dir\\winscp.ini\")) {",
         "    @(",
@@ -18,6 +12,11 @@
         "        'RandomSeedFile=.\\winscp.rnd'",
         "    ) | Add-Content -Path \"$dir\\winscp.ini\" -Encoding ASCII -Force",
         "}"
+    ],
+    "post_install": [
+        "$url = \"https://winscp.net/translations/dll/$version/chs.zip\"",
+        "Invoke-WebRequest -Uri $url -OutFile \"$dir\\chs.zip\"",
+        "Expand-7ZipArchive \"$dir\\chs.zip\" -Removal"
     ],
     "bin": [
         "WinSCP.exe",
@@ -38,10 +37,7 @@
         "regex": "WinSCP-([\\d.]+)-Portable\\.zip"
     },
     "autoupdate": {
-        "url": [
-            "https://downloads.sourceforge.net/project/winscp/WinSCP/$version/WinSCP-$version-Portable.zip",
-            "https://winscp.net/translations/dll/$version/chs.zip"
-        ],
+        "url": "https://downloads.sourceforge.net/project/winscp/WinSCP/$version/WinSCP-$version-Portable.zip",
         "hash": {
             "url": "https://winscp.net/download/WinSCP-$version-ReadMe.txt",
             "regex": "(?sm)$basename.*?SHA-256: $sha256"
