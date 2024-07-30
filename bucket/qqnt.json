@@ -2,15 +2,15 @@
     "homepage": "https://im.qq.com/pcqq/index.shtml",
     "description": "An instant messaging software service developed by Tencent",
     "license": "Freeware",
-    "version": "9.9.12.240715",
+    "version": "9.9.12.240729",
     "architecture": {
         "64bit": {
-            "url": "https://dldir1.qq.com/qqfile/qq/QQNT/Windows/QQ_9.9.12_240715_x64_01.exe#/dl.7z",
-            "hash": "7564581911375a83487d044e94b60333d5b2118abf4ec6829aaa4eb953855256"
+            "url": "https://dldir1.qq.com/qqfile/qq/QQNT/Windows/QQ_9.9.12_240729_x64_01.exe#/dl.7z",
+            "hash": "5b0168af050c2abbd7c5437502c31afed621421816bcf6785892c9321f7fd26f"
         },
         "32bit": {
-            "url": "https://dldir1.qq.com/qqfile/qq/QQNT/Windows/QQ_9.9.12_240715_x86_01.exe#/dl.7z",
-            "hash": "11f16becbb65e266c25613449052cf01328d36f547d30daa82c71520234085c7"
+            "url": "https://dldir1.qq.com/qqfile/qq/QQNT/Windows/QQ_9.9.12_240729_x86_01.exe#/dl.7z",
+            "hash": "15a4708ea74a262120348d028db60807d3788c0cdd89a681538cb984eb400cdd"
         }
     },
     "extract_dir": "Files",
@@ -21,7 +21,7 @@
         ]
     ],
     "checkver": {
-        "url": "https://qq-web.cdn-go.cn/im.qq.com_new/f2ff7664/rainbow/windowsDownloadUrl.js",
+        "url": "https://qq-web.cdn-go.cn/im.qq.com_new/4d7d217d/202407291849/windowsDownloadUrl.js",
         "regex": "QQNT/Windows/QQ_([\\d\\.]+)_([\\d]+)_x86_01.exe",
         "replace": "${1}.${2}"
     },
