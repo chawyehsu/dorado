@@ -21,7 +21,14 @@
         ]
     ],
     "checkver": {
-        "url": "https://qq-web.cdn-go.cn/im.qq.com_new/f2ff7664/rainbow/windowsDownloadUrl.js",
+        "script": [
+            "$url = 'https://im.qq.com/pcqq/index.shtml'",
+            "$resp = Invoke-WebRequest -Uri $url",
+            "$cont = $resp.Content",
+            "$pattern = 'https://qq-web.cdn-go.cn.*windowsDownloadUrl.js'",
+            "$jsUrl = [regex]::Match($cont, $pattern).Value",
+            "Invoke-WebRequest -Uri $jsUrl"
+        ],
         "regex": "QQNT/Windows/QQ_([\\d\\.]+)_([\\d]+)_x86_01.exe",
         "replace": "${1}.${2}"
     },
