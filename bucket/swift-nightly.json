@@ -41,9 +41,9 @@
             "Get-ChildItem \"$dir\\LocalApp\\Programs\\Swift\" | ForEach-Object {",
             "    Move-Item -Path $_ -Destination \"$dir\\\" -Force",
             "}",
-            "Remove-Item \"$dir\\Platforms\\$productVersion\" | Out-Null",
-            "Remove-Item \"$dir\\Toolchains\\$($productVersion)+Asserts\" | Out-Null",
-            "Remove-Item \"$dir\\Redistributables\\$productVersion\" | Out-Null",
+            "Remove-Item \"$dir\\Platforms\\$productVersion\" -Recurse | Out-Null",
+            "Remove-Item \"$dir\\Toolchains\\$($productVersion)+Asserts\" -Recurse | Out-Null",
+            "Remove-Item \"$dir\\Redistributables\\$productVersion\" -Recurse | Out-Null",
             "@(\"$fname\", 'extracted', 'LocalApp', 'SourceDir') | ForEach-Object {",
             "    Remove-Item \"$dir\\$_\" -Recurse -ErrorAction SilentlyContinue | Out-Null",
             "}"
