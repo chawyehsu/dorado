@@ -1,19 +1,19 @@
 {
     "homepage": "https://dogecore.com/",
     "description": "Very curreny!",
-    "version": "1.14.7",
+    "version": "1.14.8",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/dogecoin/dogecoin/releases/download/v1.14.7/dogecoin-1.14.7-win64.zip",
-            "hash": "8475ba266761e830f2a270c542b5513a3e33892951e8d31318ca3b48cf5465f1"
+            "url": "https://github.com/dogecoin/dogecoin/releases/download/v1.14.8/dogecoin-1.14.8-win64.zip",
+            "hash": "580230912317d607530df3ee04e8713bafd9cd6bc03e2026926673d18446eab1"
         },
         "32bit": {
-            "url": "https://github.com/dogecoin/dogecoin/releases/download/v1.14.7/dogecoin-1.14.7-win32.zip",
-            "hash": "d870d08ea59a6f40b3f2a03048bcdcfc4150896430ffade1bc466925dda93737"
+            "url": "https://github.com/dogecoin/dogecoin/releases/download/v1.14.8/dogecoin-1.14.8-win32.zip",
+            "hash": "5b29f61cdcfb5405d1d36812d6a365aef9dbb99f718bfc239689d12082fb0298"
         }
     },
-    "extract_dir": "dogecoin-1.14.7",
+    "extract_dir": "dogecoin-1.14.8",
     "shortcuts": [
         [
             "bin\\dogecoin-qt.exe",
