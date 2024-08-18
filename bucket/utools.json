@@ -2,18 +2,18 @@
     "homepage": "https://u.tools/",
     "description": "Your productive tools set and launcher.",
     "license": "Proprietary",
-    "version": "5.1.0",
+    "version": "5.1.1",
     "architecture": {
         "64bit": {
-            "url": "https://res.u-tools.cn/version2/uTools-5.1.0.exe#/dl.7z",
-            "hash": "sha512:d796d93f66cb5aeedcfdf0e6fbbe5272e4adde4852aa03c13a3debaf99c603ff6366129ededc05c13db932cf5d8a126a64bb49838dab7ecc12d4b2477dd6eb41",
+            "url": "https://open.u-tools.cn/download/uTools-5.1.1.exe#/dl.7z",
+            "hash": "sha512:b5fb20065022811269bbf7d3f0d40b636dfcd5e81eb4ba85140c7ff82c3da8e50f8a2e0f40f551edf98834caf408e9615c4090694121e67a762c47baf8b68097",
             "installer": {
                 "script": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR/app-64.7z\" \"$dir\""
             }
         },
         "32bit": {
-            "url": "https://res.u-tools.cn/version2/uTools-5.1.0-ia32.exe#/dl.7z",
-            "hash": "sha512:15f692c4578284c0ff88640a90d83ea4ed75e9d20bc8d12fde45712f5a4dcd2cc13c5b75201fbd46c896d36f09d2218e5e8d6dd2b2ebec4c389be7bb10aee0d0",
+            "url": "https://open.u-tools.cn/download/uTools-5.1.1-ia32.exe#/dl.7z",
+            "hash": "sha512:0e18b4e59afd96c2fad09955349b2b63895517a2d6aae00eb7dd20e3baef9eb2e8d834580fae156e6f9a9ded4f62350e8f2714433a6b7865362ffaa6d81192f8",
             "installer": {
                 "script": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR/app-32.7z\" \"$dir\""
             }
@@ -27,25 +27,25 @@
         ]
     ],
     "checkver": {
-        "url": "https://res.u-tools.cn/version2/latest.yml",
-        "regex": "version: ([\\d.]+)"
+        "url": "https://www.u.tools/docs/guide/changelog.html",
+        "regex": "uTools\s+v((5\.1\.2|5\.2\.0)(-beta(\.\d+)?)?)"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://res.u-tools.cn/version2/uTools-$version.exe#/dl.7z",
+                "url": "https://open.u-tools.cn/download/uTools-$version.exe#/dl.7z",
                 "hash": {
-                    "url": "https://res.u-tools.cn/version2/latest.yml?",
+                    "url": "https://www.u.tools/docs/guide/changelog.html",
                     "mode": "extract",
-                    "regex": "(?sm)$version.exe.*?sha512: $base64"
+                    "regex": "uTools\s+v((5\.1\.2|5\.2\.0)(-beta(\.\d+)?)?)"
                 }
             },
             "32bit": {
-                "url": "https://res.u-tools.cn/version2/uTools-$version-ia32.exe#/dl.7z",
+                "url": "https://open.u-tools.cn/download/uTools-$version-ia32.exe#/dl.7z",
                 "hash": {
-                    "url": "https://res.u-tools.cn/version2/latest-ia32.yml?",
+                    "url": "https://www.u.tools/docs/guide/changelog.html",
                     "mode": "extract",
-                    "regex": "(?sm)$version-ia32.exe.*?sha512: $base64"
+                    "regex": "uTools\s+v((5\.1\.2|5\.2\.0)(-beta(\.\d+)?)?)"
                 }
             }
         }
