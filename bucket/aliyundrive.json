@@ -20,13 +20,13 @@
         ]
     ],
     "checkver": {
-        "script": "return (iwr -useb \"$($(iwr -useb 'https://www.aliyundrive.com/desktop/version/update.json' | ConvertFrom-Json).url)/win32/ia32/latest.yml\")",
+        "script": "return (iwr -useb \"$($(iwr -useb 'https://www.aliyundrive.com/desktop/version/update.json' | ConvertFrom-Json).url)/win32/x64/latest.yml\")",
         "re": "version: ([\\d.]+)"
     },
     "autoupdate": {
         "url": "https://cdn.aliyundrive.net/downloads/apps/desktop/update/$version/win32/x64/aDrive-$version.exe#/aDrive-$version.7z",
         "hash": {
-            "url": "https://g.alicdn.com/aliyun-drive-fe/aliyun-drive-desktop-version/$version/win32/ia32/latest.yml",
+            "url": "https://g.alicdn.com/aliyun-drive-fe/aliyun-drive-desktop-version/$version/win32/x64/latest.yml",
             "mode": "extract",
             "regex": "sha512: $base64"
         }
