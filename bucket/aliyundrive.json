@@ -6,7 +6,7 @@
         "identifier": "EULA",
         "url": "https://www.aliyundrive.com/protocol/service"
     },
-    "url": "https://cdn.aliyundrive.net/downloads/apps/desktop/update/6.3.2/win32/ia32/aDrive-6.3.2.exe#/aDrive-6.3.2.7z",
+    "url": "https://cdn.aliyundrive.net/downloads/apps/desktop/update/6.3.2/win32/x64/aDrive-6.3.2.exe#/aDrive-6.3.2.7z",
     "hash": "sha512:a4af7893e1223aef57c0a6b811b345903ea65335cf869503ef41eb96a8794f196996d3cb135827e9ac92201638b012e249ea037a41d5f92807278511a4ad530d",
     "post_install": [
         "@('$PLUGINSDIR', '$TEMP') | ForEach-Object {",
@@ -24,7 +24,7 @@
         "re": "version: ([\\d.]+)"
     },
     "autoupdate": {
-        "url": "https://cdn.aliyundrive.net/downloads/apps/desktop/update/$version/win32/ia32/aDrive-$version.exe#/aDrive-$version.7z",
+        "url": "https://cdn.aliyundrive.net/downloads/apps/desktop/update/$version/win32/x64/aDrive-$version.exe#/aDrive-$version.7z",
         "hash": {
             "url": "https://g.alicdn.com/aliyun-drive-fe/aliyun-drive-desktop-version/$version/win32/ia32/latest.yml",
             "mode": "extract",
