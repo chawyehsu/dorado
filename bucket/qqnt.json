@@ -13,13 +13,32 @@
             "hash": "0f472dd8e466951095c3e8debef484628d7ba72c439d62368c04bce1610049b0"
         }
     },
-    "extract_dir": "Files",
+    "installer": {
+        "script": [
+            "$configpath = \"$env:PUBLIC\\Documents\\Tencent\\QQ\"",
+            "if (!(Test-Path \"$configpath\")) {",
+            "    New-Item -Path \"$configpath\" -Type Directory -Force | Out-Null",
+            "}",
+            "Set-Content -NoNewline -Path \"$configpath\\UserDataInfo.ini\" -Value \"[UserDataSet]`nUserDataSavePathType=2`nUserDataSavePath=$persist_dir\\QQ-Files\"",
+            "# handle runtime cache",
+            "ensure \"$persist_dir\\appdata\" | Out-Null",
+            "New-Item \"$env:APPDATA\\QQ\" -ItemType Junction -Target \"$persist_dir\\appdata\" | Out-Null"
+        ]
+    },
     "shortcuts": [
         [
-            "QQ.exe",
+            "Files\\QQ.exe",
             "QQ"
         ]
     ],
+    "persist": "QQ-Files",
+    "uninstaller": {
+        "script": [
+            "Remove-Item -Path \"$env:PUBLIC\\Documents\\Tencent\" -Recurse -Force | Out-Null",
+            "#remove handle runtime cache",
+            "Remove-Item \"$env:APPDATA\\QQ\" -Recurse -Force -ErrorAction 'SilentlyContinue'"
+        ]
+    },
     "checkver": {
         "script": [
             "$url = 'https://im.qq.com/pcqq/index.shtml'",
