@@ -1,0 +1,82 @@
+{
+    "homepage": "https://www.snipaste.com/",
+    "description": "A snipping tool, which allows you to pin the screenshot back onto the screen.",
+    "version": "2.10.2",
+    "license": "Proprietary",
+    "architecture": {
+        "64bit": {
+            "url": "https://bitbucket.org/liule/snipaste/downloads/Snipaste-2.10.2-x64.zip",
+            "hash": "sha1:6ea179d99664775120401f914b5774790d8f839a"
+        },
+        "32bit": {
+            "url": "https://bitbucket.org/liule/snipaste/downloads/Snipaste-2.10.2-x86.zip",
+            "hash": "sha1:f8133b213909ea3255ad4efe1f9ab1183acb4ba7"
+        }
+    },
+    "installer": {
+        "script": [
+            "$beta_persist_dir = \"$scoopdir\\persist\\snipaste-beta\"",
+            "if ((-not(Test-Path \"$persist_dir\")) -and (Test-Path \"$beta_persist_dir\")) { ",
+            "    Write-Host \"`nImporting profiles from beta version...\" -ForegroundColor Yellow",
+            "    New-Item \"$persist_dir\" -ItemType Directory | Out-Null",
+            "    Copy-Item -Path \"$beta_persist_dir\\*\" -Destination \"$persist_dir\" -Force -Recurse",
+            "    if ($?) {",
+            "        Write-Host \"Succeeded! You can uninstall 'snipaste-beta' now.\" -ForegroundColor Green",
+            "    } else {",
+            "        Write-Host \"Failed. Skip importing.\" -ForegroundColor Red",
+            "    }",
+            "}",
+            "function CreateFile([String] $file, [String] $content = $null) {",
+            "    if (!(Test-Path \"$persist_dir\\$file\")) {",
+            "        New-Item -Force -Path \"$persist_dir\\$file\" -ItemType file -Value $content | Out-Null",
+            "    }",
+            "}",
+            "CreateFile 'config.ini'",
+            "CreateFile 'splog.txt'"
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "function BackupFile([String] $file) {",
+            "    if (Test-Path \"$persist_dir\\$file\") {",
+            "        Remove-Item \"$persist_dir\\$file\" -Force",
+            "    }",
+            "    Copy-Item \"$dir\\$file\" \"$persist_dir\" -Force -ErrorAction SilentlyContinue",
+            "}",
+            "BackupFile 'config.ini'",
+            "BackupFile 'splog.txt'"
+        ]
+    },
+    "shortcuts": [
+        [
+            "Snipaste.exe",
+            "Snipaste 2"
+        ]
+    ],
+    "persist": [
+        "crashes",
+        "history",
+        "config.ini",
+        "splog.txt"
+    ],
+    "suggest": {
+        "vcredist": "extras/vcredist2015"
+    },
+    "checkver": {
+        "url": "https://bitbucket.org/liule/snipaste/downloads/",
+        "regex": "Snipaste-([\\d\\.]+)-x64\\.zip"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://bitbucket.org/liule/snipaste/downloads/Snipaste-$version-x64.zip"
+            },
+            "32bit": {
+                "url": "https://bitbucket.org/liule/snipaste/downloads/Snipaste-$version-x86.zip"
+            }
+        },
+        "hash": {
+            "url": "https://dl.snipaste.com/sha-1.txt"
+        }
+    }
+}
