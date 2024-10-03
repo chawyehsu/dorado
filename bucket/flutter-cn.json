@@ -29,7 +29,7 @@
     "autoupdate": {
         "url": "https://storage.flutter-io.cn/flutter_infra/releases/stable/windows/flutter_windows_$version-stable.zip",
         "hash": {
-            "url": "https://storage.flutter-io.cn/flutter_infra/releases/releases_windows.json",
+            "url": "https://storage.googleapis.com/flutter_infra_release/releases/releases_windows.json",
             "jsonpath": "$.releases[?(@.archive =~ /.*flutter_windows_$version-stable.zip/)].sha256"
         }
     }
