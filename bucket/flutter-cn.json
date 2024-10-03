@@ -13,7 +13,7 @@
         ],
         "Visual Studio Code with Flutter extension": "extras/vscode"
     },
-    "url": "https://storage.flutter-io.cn/flutter_infra/releases/stable/windows/flutter_windows_3.24.3-stable.zip",
+    "url": "https://storage.flutter-io.cn/flutter_infra_release/releases/stable/windows/flutter_windows_3.24.3-stable.zip",
     "hash": "74007227350e1c73278e90fba5b1d02780e7299d4d48fdacff035c669530a6d8",
     "extract_dir": "flutter",
     "env_add_path": "bin",
@@ -27,7 +27,7 @@
         "regex": "windows_([\\d.]+)-stable"
     },
     "autoupdate": {
-        "url": "https://storage.flutter-io.cn/flutter_infra/releases/stable/windows/flutter_windows_$version-stable.zip",
+        "url": "https://storage.flutter-io.cn/flutter_infra_release/releases/stable/windows/flutter_windows_$version-stable.zip",
         "hash": {
             "url": "https://storage.googleapis.com/flutter_infra_release/releases/releases_windows.json",
             "jsonpath": "$.releases[?(@.archive =~ /.*flutter_windows_$version-stable.zip/)].sha256"
