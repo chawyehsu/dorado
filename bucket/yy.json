@@ -19,7 +19,7 @@
         "script": [
             "$content = irm 'https://www.yy.com/web/pcyy_download/'",
             "$jsPathname = 'https://web.yystatic.com/project/pcyy_download/pc/assets/'",
-            "$jsChunk = (Select-String -InputObject $content -Pattern 'js/index.*chunk.js').Matches.Value",
+            "$jsChunk = (Select-String -InputObject $content -Pattern 'js/index.*.js').Matches.Value",
             "$content = irm \"$jsPathname$jsChunk\"",
             "return (Select-String -InputObject $content -Pattern 'YYSetup-([\\d.]+)-zh-CN.exe').Matches.Value"
         ],
