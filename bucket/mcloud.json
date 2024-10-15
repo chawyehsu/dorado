@@ -13,8 +13,16 @@
     },
     "shortcuts": [
         [
-            "139Mail.exe",
-            "和彩云"
+            "mCloud.exe",
+            "中国移动云盘"
         ]
-    ]
+    ],
+    "checkver": {
+        "script": "(Invoke-WebRequest -UseBasicParsing -Uri 'https://yun.139.com/platformInfo/advertapi/adv-filter/adv-filter/AdInfoFilter/getAdInfos' -Method Post -ContentType 'application/json' -Body '{\"adpostid\": 2016}').Content",
+        "jsonpath": "$.body[?(@.name == 'Windows')].description",
+        "regex": "V([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://yun.mcloud.139.com/mCloudPc/v$cleanVersion/mCloud_Setup-001.exe#/dl.7z"
+    }
 }
