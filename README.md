@@ -2,7 +2,7 @@
     <h1 align="center">🐟 dorado</h1>
     <p align="center">
         <a href="https://github.com/chawyehsu/dorado/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/chawyehsu/dorado/ci.yml?style=flat-square&logo=github&label=Tests" alt="GitHub Actions CI Status"></a>
-        <a href="https://github.com/chawyehsu/dorado/blob/master/LICENSE"><img src="https://img.shields.io/github/license/chawyehsu/dorado.svg?style=flat-square" alt="License"></a>
+        <a href="https://github.com/chawyehsu/dorado/blob/master/UNLICENSE"><img src="https://img.shields.io/github/license/chawyehsu/dorado.svg?style=flat-square" alt="License"></a>
         <a href="https://www.microsoft.com/en-us/windows"><img src="https://img.shields.io/badge/Target-Windows%2010-0067B8.svg?style=flat-square" alt="Powered by Saber" /></a>
         <a href="https://github.com/chawyehsu/dorado"><img src="https://img.shields.io/github/repo-size/chawyehsu/dorado.svg?style=flat-square" alt="Repo size"></a>
         <a href="https://t.me/scoop_rs" title="Telegram Group"><img src="https://img.shields.io/badge/Telegram-Group-0067B8.svg?style=flat-square&logo=telegram&color=0088cc&labelColor=282c34&longCache=true" alt="Telegram Group"></a>
