@@ -1,0 +1,30 @@
+{
+    "version": "1.6.0",
+    "description": "交互式网络小说下载器，支持 Windows、macOS、Linux",
+    "homepage": "https://github.com/freeok/so-novel",
+    "license": {
+        "identifier": "Apache-2.0 license",
+        "url": "https://github.com/freeok/so-novel#Apache-2.0-1-ov-file"
+    },
+    "notes": [
+      "使用前请阅读 readme.txt"
+    ],
+    "url": "https://github.com/freeok/so-novel/releases/download/v1.6.0/sonovel-windows.tar.gz",
+    "hash": "6f7a53903f11fc65ae8d997abe57cd63605f3ef1689f5a5d8779dc9ba6e2d937",
+    "extract_dir": "SoNovel",
+    "shortcuts": [
+        [
+            "SoNovel.exe",
+            "SoNovel"
+        ]
+    ],
+    "persist": "config.ini",
+    "checkver": {
+        "url": "https://api.github.com/repos/freeok/so-novel/releases",
+        "jsonpath": "$[0].assets[*].browser_download_url",
+        "regex": "/releases/download/v([\\d.]+)/(?<file>sonovel-win.*?\\.tar.gz)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/freeok/so-novel/releases/download/v$version/$matchFile"
+    }
+}
