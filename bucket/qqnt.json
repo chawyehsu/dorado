@@ -11,6 +11,10 @@
         "32bit": {
             "url": "https://dldir1.qq.com/qqfile/qq/QQNT/Windows/QQ_9.9.15_241009_x86_01.exe#/dl.7z",
             "hash": "8d27110f54aa03370eeb68a464ecb9eb2b1883bb67035f8fa3875e277c650ead"
+        },
+        "arm64": {
+            "url": "https://dldir1.qq.com/qqfile/qq/QQNT/Windows/QQ_9.9.15_241009_arm64_01.exe#/dl.7z",
+            "hash": "c0768e1f3fb2d4f938db06d419607d27e4007650f7d7eabe37fab1ff8047f7f3"
         }
     },
     "extract_dir": "Files",
@@ -39,6 +43,9 @@
             },
             "32bit": {
                 "url": "https://dldir1.qq.com/qqfile/qq/QQNT/Windows/QQ_$match1_$match2_x86_01.exe#/dl.7z"
+            },
+            "arm64": {
+                "url": "https://dldir1.qq.com/qqfile/qq/QQNT/Windows/QQ_$match1_$match2_arm64_01.exe#/dl.7z"
             }
         }
     }
