@@ -1,16 +1,16 @@
 {
     "homepage": "https://github.com/ethersphere/beekeeper",
     "description": "Swarm Beekeeper is an orchestrator that can manage a cluster of Bee nodes and call into their API.",
-    "version": "0.17.9",
+    "version": "0.19.0",
     "license": "BSD-3-Clause",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ethersphere/beekeeper/releases/download/v0.17.9/beekeeper-windows-amd64.exe#/beekeeper.exe",
-            "hash": "fcf67da5b43291ea07eb7aefdf8d00a5820ef19eed6e975f1a84abb72d018ad8"
+            "url": "https://github.com/ethersphere/beekeeper/releases/download/v0.19.0/beekeeper-windows-amd64.exe#/beekeeper.exe",
+            "hash": "09c11dddaecf390f87c8af4de952d4b8c503b783acad9250e14929566a8f3983"
         },
         "32bit": {
-            "url": "https://github.com/ethersphere/beekeeper/releases/download/v0.17.9/beekeeper-windows-386.exe#/beekeeper.exe",
-            "hash": "83cca51901724704592c2343fdbf3478cb5cdce78ed97edd6f6ab7135ad34f83"
+            "url": "https://github.com/ethersphere/beekeeper/releases/download/v0.19.0/beekeeper-windows-386.exe#/beekeeper.exe",
+            "hash": "4b4678511e143a6d7217fcde0fa87e18b6feca28a19d250443046504245aec27"
         }
     },
     "bin": "beekeeper.exe",
