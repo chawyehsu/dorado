@@ -7,6 +7,10 @@
         "64bit": {
             "url": "https://github.com/prefix-dev/pixi/releases/download/v0.34.0/pixi-x86_64-pc-windows-msvc.zip",
             "hash": "d5080caf66a613b01a1485bf99fc290b8ebd079986db87de594b8cf24ab5b7a9"
+        },
+        "arm64": {
+            "url": "https://github.com/prefix-dev/pixi/releases/download/v0.34.0/pixi-aarch64-pc-windows-msvc.zip",
+            "hash": "9257825e546032e1e18545c6b6b94d46c7bc8e9c1b02d6b79cedd01ad8ab84c8"
         }
     },
     "installer": {
@@ -42,6 +46,9 @@
         "architecture": {
             "64bit": {
                 "url": "https://github.com/prefix-dev/pixi/releases/download/v$version/pixi-x86_64-pc-windows-msvc.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/prefix-dev/pixi/releases/download/v$version/pixi-aarch64-pc-windows-msvc.zip"
             }
         }
     }
