@@ -5,7 +5,7 @@
     "license": "GPL-3.0-or-later",
     "url": "https://www.gnupg.org/ftp/gcrypt/binary/gnupg-w32-2.4.6_20241029.exe#/dl.7z",
     "hash": "sha1:6d6b2017152fea4532afe38ce00e38a438b1e4bb",
-    "pre_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\gnupg-uninstall.exe.nsis\" -Force -Recurse",
+    "pre_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\gnupg-uninstall.exe.nsis\" -Force -Recurse -ErrorAction SilentlyContinue",
     "env_set": {
         "GNUPGHOME": "$env:USERPROFILE\\.gnupg"
     },
