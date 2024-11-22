@@ -1,12 +1,12 @@
 {
     "homepage": "https://github.com/mamba-org/mamba",
     "description": "Micromamba is a tiny version of mamba, the fast conda package installer.",
-    "version": "2.0.4alpha2-0",
+    "version": "2.0.4alpha3-0",
     "license": "BSD-3-Clause",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/mamba-org/micromamba-releases/releases/download/2.0.4alpha2-0/micromamba-win-64#/micromamba.exe",
-            "hash": "ed0399d936dec70c9bcb5f6c783278bbb9fd5e167ae40a3cc89636dda85303ea"
+            "url": "https://github.com/mamba-org/micromamba-releases/releases/download/2.0.4alpha3-0/micromamba-win-64#/micromamba.exe",
+            "hash": "d486f9c47e3edf7f7682f4bfba76561935e99a6cc05327c06498bb4c3d6da5ad"
         }
     },
     "post_install": "New-Item -Path \"$dir\\base\" -ItemType Directory -Force | Out-Null",
