@@ -7,8 +7,8 @@ import handleSwift from "./swift.ts"
 async function handler(request: Request): Promise<Response> {
   const { pathname } = new URL(request.url)
 
-  // aliundrive
-  if (pathname === '/aliyundrive') {
+  // aliundrive/alipan
+  if (pathname === '/alipan') {
     return await handlerAliyunDrive(request)
   }
 
