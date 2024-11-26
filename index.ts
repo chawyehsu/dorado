@@ -1,3 +1,4 @@
+import handlerAliyunDrive from "./alipan.ts"
 import handlerAppxqq from "./appxqq.ts"
 import handlerEdge from "./edge.ts"
 import handleTianyiEcloud from "./tianyi-ecloud.ts"
@@ -5,6 +6,11 @@ import handleSwift from "./swift.ts"
 
 async function handler(request: Request): Promise<Response> {
   const { pathname } = new URL(request.url)
+
+  // aliundrive
+  if (pathname === '/aliyundrive') {
+    return await handlerAliyunDrive(request)
+  }
 
   // swift (temporary fix)
   if (pathname === '/swift-tmp') {
@@ -31,6 +37,8 @@ async function handler(request: Request): Promise<Response> {
       message: "need to specify an action",
       help: "https://github.com/chawyehsu/dorado/tree/api",
       actions: [
+        "/alipan",
+        "/alipan?version=&dl",
         "/appxqq",
         "/appxqq?dl",
         "/edge?arch=&channel=",
