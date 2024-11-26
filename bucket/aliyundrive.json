@@ -1,13 +1,13 @@
 {
-    "version": "6.6.0",
+    "version": "6.7.3",
     "description": "The official client for Alibaba's cloud dirve service",
-    "homepage": "https://www.aliyundrive.com/",
+    "homepage": "https://www.alipan.com/",
     "license": {
         "identifier": "EULA",
-        "url": "https://www.aliyundrive.com/protocol/service"
+        "url": "https://www.alipan.com/protocol/service"
     },
-    "url": "https://cdn.aliyundrive.net/downloads/apps/desktop/update/6.6.0/win32/ia32/aDrive-6.6.0.exe#/aDrive-6.6.0.7z",
-    "hash": "sha512:a4af7893e1223aef57c0a6b811b345903ea65335cf869503ef41eb96a8794f196996d3cb135827e9ac92201638b012e249ea037a41d5f92807278511a4ad530d",
+    "url": "https://dorado-api.deno.dev/alipan?version=6.7.3&dl#/aDrive-6.7.3.7z",
+    "hash": "8f59a43065320d2c500bf04c96072d10b4448616b265b83620b973de1f8d30c9",
     "post_install": [
         "@('$PLUGINSDIR', '$TEMP') | ForEach-Object {",
         "    Remove-Item \"$dir\\$_\" -Recurse -Force",
@@ -20,15 +20,10 @@
         ]
     ],
     "checkver": {
-        "script": "return (iwr -useb \"$($(iwr -useb 'https://www.aliyundrive.com/desktop/version/update.json' | ConvertFrom-Json).url)/win32/ia32/latest.yml\")",
-        "re": "version: ([\\d.]+)"
+        "url": "https://dorado-api.deno.dev/alipan",
+        "jsonpath": "$.version"
     },
     "autoupdate": {
-        "url": "https://cdn.aliyundrive.net/downloads/apps/desktop/update/$version/win32/ia32/aDrive-$version.exe#/aDrive-$version.7z",
-        "hash": {
-            "url": "https://g.alicdn.com/aliyun-drive-fe/aliyun-drive-desktop-version/$version/win32/ia32/latest.yml",
-            "mode": "extract",
-            "regex": "sha512: $base64"
-        }
+        "url": "https://dorado-api.deno.dev/alipan?version=$version&dl#/aDrive-$version.7z"
     }
 }
