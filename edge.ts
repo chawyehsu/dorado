@@ -1,9 +1,9 @@
-import { decode } from "https://deno.land/std@0.196.0/encoding/base64.ts";
+import { decode } from "https://deno.land/std@0.158.0/encoding/base64.ts";
 import { bufferToHex } from "https://deno.land/x/hextools@v1.0.0/mod.ts";
 import {
   BufReader,
   BufWriter,
-} from "https://deno.land/std@0.196.0/io/mod.ts";
+} from "https://deno.land/std@0.158.0/io/mod.ts";
 import { TextProtoReader } from "https://deno.land/std@0.158.0/textproto/mod.ts";
 
 interface DownloadInfo {
