@@ -11,6 +11,10 @@
         "32bit": {
             "url": "https://github.com/git-for-windows/git/releases/download/v2.47.1.windows.1/PortableGit-2.47.1-32-bit.7z.exe#/dl.7z",
             "hash": "7d022cdf6a79b0206db4274231f51bee271001d8c88fe2e25d5ff81cc0535b80"
+        },
+        "arm64": {
+            "url": "https://github.com/git-for-windows/git/releases/download/v2.47.1.windows.1/PortableGit-2.47.1-arm64.7z.exe#/dl.7z",
+            "hash": "d366f44ef2b65e11f7b5a1430ae43aceb5f7c640150f325fa4b767f6da472845"
         }
     },
     "bin": [
@@ -47,6 +51,9 @@
             },
             "32bit": {
                 "url": "https://github.com/git-for-windows/git/releases/download/v$version/PortableGit-$matchFull-32-bit.7z.exe#/dl.7z"
+            },
+            "arm64": {
+                "url": "https://github.com/git-for-windows/git/releases/download/v$version/PortableGit-$matchFull-arm64.7z.exe#/dl.7z"
             }
         },
         "hash": {
