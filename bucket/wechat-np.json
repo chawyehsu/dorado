@@ -7,16 +7,12 @@
         "url": "https://weixin.qq.com/cgi-bin/readtemplate?lang=zh_CN&t=weixin_agreement&s=default"
     },
     "url": "https://dldir1.qq.com/weixin/Windows/WeChatSetup.exe#/dl.7z",
+    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\" -Force -Recurse",
     "shortcuts": [
         [
             "wechat.exe",
             "WeChat"
         ]
     ],
-    "post_install": [
-        "Remove-Item \"$dir\\`$PLUGINSDIR\" -Force -Recurse",
-        "Remove-Item \"$dir\\`$_15_\" -Force -Recurse",
-        "Remove-Item \"$dir\\`$R5\" -Force -Recurse"
-    ],
-    "notes": "We don't persist your WeChat data, they are still storaged in '%APPDATA%\\Tencent\\WeChat'."
+    "notes": "Your WeChat data will not be persisted and still stored in '%APPDATA%\\Tencent\\WeChat'."
 }
