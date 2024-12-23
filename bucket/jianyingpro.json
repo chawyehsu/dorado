@@ -2,10 +2,10 @@
     "homepage": "https://www.capcut.cn/",
     "description": "Video editing application produced by ByteDance",
     "license": "Proprietary",
-    "version": "5.5.0.11332",
-    "url": "https://lf3-package.vlabstatic.com/obj/faceu-packages/Jianying_split_5_5_0_11332_jianyingpro_0.exe#/jianyingpro.7z",
-    "hash": "855cdd7c3816813773e79c6b0e532b248c526e2d56907faa346afa7ec070cdfe",
-    "extract_dir": "JYPacket/5.5.0.11332",
+    "version": "7.3.0.12489",
+    "url": "https://lf3-package.vlabstatic.com/obj/faceu-packages/Jianying_7_3_0_12489_jianyingpro_0_creatortool.exe#/jianyingpro.7z",
+    "hash": "md5:c7666a2920273e8cf619d8eb2f9f217d",
+    "extract_dir": "JYPacket/7.3.0.12489",
     "shortcuts": [
         [
             "JianyingPro.exe",
@@ -13,12 +13,17 @@
         ]
     ],
     "checkver": {
-        "url": "https://lf3-beecdn.bytetos.com/obj/ies-fe-bee/bee_prod/biz_80/bee_prod_80_bee_publish_3563.json",
-        "regex": "default.*?https://(?<path>.*?)/Jianying_split_(?<major>[\\d]+)_(?<minor>[\\d]+)_(?<patch>[\\d]+)_(?<build>[\\d]+)_jianyingpro_0.exe",
+        "url": "https://is.snssdk.com/service/settings/v3/?device_platform=windows&os_version=10&aid=3704&iid=0&version_code=197888",
+        "jsonpath": "$.data.settings.update_reminder.lastest_stable_url",
+        "regex": "https://(?<path>.*?)/Jianying_(?<major>[\\d]+)_(?<minor>[\\d]+)_(?<patch>[\\d]+)_(?<build>[\\d]+)_jianyingpro_0_creatortool.exe",
         "replace": "${major}.${minor}.${patch}.${build}"
     },
     "autoupdate": {
-        "url": "https://$matchPath/Jianying_split_$underscoreVersion_jianyingpro_0.exe#/jianyingpro.7z",
+        "url": "https://$matchPath/Jianying_$underscoreVersion_jianyingpro_0_creatortool.exe#/jianyingpro.7z",
+        "hash": {
+            "url": "https://is.snssdk.com/service/settings/v3/?device_platform=windows&os_version=10&aid=3704&iid=0&version_code=197888",
+            "jsonpath": "$.data.settings.update_reminder.lastest_stable_url_md5"
+        },
         "extract_dir": "JYPacket/$version"
     }
 }
