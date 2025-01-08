@@ -66,6 +66,9 @@
             "Remove-Module -Name DoradoUtils"
         ]
     },
+    "env_set": {
+        "MSYS2_PATH": "$dir"
+    },
     "bin": [
         [
             "msys2_shell.cmd",
