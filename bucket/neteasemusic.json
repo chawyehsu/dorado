@@ -1,19 +1,19 @@
 {
     "homepage": "https://music.163.com/",
     "description": "The official NetEase Cloud Music client.",
-    "version": "3.1.1.203306",
+    "version": "3.1.3.203419",
     "license": {
         "identifier": "EULA",
         "url": "https://music.163.com/html/web2/service.html"
     },
     "architecture": {
         "64bit": {
-            "url": "https://d1.music.126.net/dmusic/NeteaseCloudMusic_Music_official_3.1.1.203306_64.exe#/dl.7z",
-            "hash": "e73e5cc8bca8742c445b39edbe099d44d64489390ca780fffa27c02493ada104"
+            "url": "https://d1.music.126.net/dmusic/NeteaseCloudMusic_Music_official_3.1.3.203419_64.exe#/dl.7z",
+            "hash": "afcd6b7b57fc1d9a43f9a23046782b99f0da987495da4d0fade286b7ba812114"
         },
         "32bit": {
-            "url": "https://d1.music.126.net/dmusic/NeteaseCloudMusic_Music_official_3.1.1.203306_32.exe#/dl.7z",
-            "hash": "844b3043390102fff8e0b4f892b34d3db0012f268e9354f8c4736e4de759252c"
+            "url": "https://d1.music.126.net/dmusic/NeteaseCloudMusic_Music_official_3.1.3.203419_32.exe#/dl.7z",
+            "hash": "09c1b0a21e275a0e5da59f0896303efaac61d50697f6050c48d685d071d48a4a"
         }
     },
     "installer": {
@@ -40,8 +40,9 @@
         ]
     ],
     "checkver": {
-        "url": "https://music.163.com/api/appcustomconfig/get?key=web-pc-beta-download-links",
-        "regex": "(?<version>[\\d.]+)_32.exe"
+        "url": "https://music.163.com/api/appcustomconfig/get",
+        "jsonpath": "$.data.web-new-download.pc64.downloadUrl",
+        "regex": "NeteaseCloudMusic_Music_official_([\\d.]+)_64.exe"
     },
     "autoupdate": {
         "architecture": {
