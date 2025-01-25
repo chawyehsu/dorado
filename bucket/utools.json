@@ -2,18 +2,18 @@
     "homepage": "https://u.tools/",
     "description": "Your productive tools set and launcher.",
     "license": "Proprietary",
-    "version": "5.1.0",
+    "version": "6.1.0",
     "architecture": {
         "64bit": {
-            "url": "https://res.u-tools.cn/version2/uTools-5.1.0.exe#/dl.7z",
-            "hash": "sha512:d796d93f66cb5aeedcfdf0e6fbbe5272e4adde4852aa03c13a3debaf99c603ff6366129ededc05c13db932cf5d8a126a64bb49838dab7ecc12d4b2477dd6eb41",
+            "url": "https://open.u-tools.cn/download/uTools-6.1.0.exe#/dl.7z",
+            "hash": "b6eea8420f124dda26823c846f846f04bd2ceb6693303a7d7d273d43ceabd892",
             "installer": {
                 "script": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR/app-64.7z\" \"$dir\""
             }
         },
         "32bit": {
-            "url": "https://res.u-tools.cn/version2/uTools-5.1.0-ia32.exe#/dl.7z",
-            "hash": "sha512:15f692c4578284c0ff88640a90d83ea4ed75e9d20bc8d12fde45712f5a4dcd2cc13c5b75201fbd46c896d36f09d2218e5e8d6dd2b2ebec4c389be7bb10aee0d0",
+            "url": "https://open.u-tools.cn/download/uTools-6.1.0-ia32.exe#/dl.7z",
+            "hash": "1cd987fdbabb7b64f13d416cd5ae5918cad1d9c5e5882d53b49d84467c5d2b7d",
             "installer": {
                 "script": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR/app-32.7z\" \"$dir\""
             }
@@ -27,26 +27,16 @@
         ]
     ],
     "checkver": {
-        "url": "https://res.u-tools.cn/version2/latest.yml",
-        "regex": "version: ([\\d.]+)"
+        "url": "https://www.u-tools.cn/download/",
+        "regex": "/download/uTools-([\\d.]+).exe"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://res.u-tools.cn/version2/uTools-$version.exe#/dl.7z",
-                "hash": {
-                    "url": "https://res.u-tools.cn/version2/latest.yml?",
-                    "mode": "extract",
-                    "regex": "(?sm)$version.exe.*?sha512: $base64"
-                }
+                "url": "https://open.u-tools.cn/download/uTools-$version.exe#/dl.7z"
             },
             "32bit": {
-                "url": "https://res.u-tools.cn/version2/uTools-$version-ia32.exe#/dl.7z",
-                "hash": {
-                    "url": "https://res.u-tools.cn/version2/latest-ia32.yml?",
-                    "mode": "extract",
-                    "regex": "(?sm)$version-ia32.exe.*?sha512: $base64"
-                }
+                "url": "https://open.u-tools.cn/download/uTools-$version-ia32.exe#/dl.7z"
             }
         }
     }
