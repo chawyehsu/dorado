@@ -1,0 +1,37 @@
+{
+    "homepage": "https://chatboxai.app/",
+    "description": "User-friendly Desktop Client App for AI Models/LLMs",
+    "version": "0.10.4",
+    "license": "GPL-3.0-only",
+    "url": "https://github.com/Bin-Huang/chatbox/releases/download/v0.10.4/Chatbox.CE-0.10.4-Setup.exe#/dl.7z",
+    "hash": "sha512:0981eca6f7ec46ef16219edd3f3cbcb513d92de05d1705481ac2c53f3358331e9547b33c41fe582bde902d16d992cf09ba5c9b2253ea87c56922d93fa4639b5c",
+    "architecture": {
+        "64bit": {
+            "installer": {
+                "script": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\""
+            }
+        },
+        "arm64": {
+            "installer": {
+                "script": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-arm64.7z\" \"$dir\""
+            }
+        }
+    },
+    "post_install": "Remove-Item \"$dir\\`$R0\",\"$dir\\`$PLUGINSDIR\",\"$dir\\Uninst*\" -Force -Recurse",
+    "checkver": {
+        "github": "https://github.com/Bin-Huang/chatbox"
+    },
+    "shortcuts": [
+        [
+            "Chatbox CE.exe",
+            "Chatbox CE"
+        ]
+    ],
+    "autoupdate": {
+        "url": "https://github.com/Bin-Huang/chatbox/releases/download/v$version/Chatbox.CE-$version-Setup.exe#/dl.7z",
+        "hash": {
+            "url": "https://github.com/Bin-Huang/chatbox/releases/download/v$version/latest.yml",
+            "regex": "sha512:\\s+$base64"
+        }
+    }
+}
