@@ -1,12 +1,12 @@
 {
-    "version": "2.98.0",
+    "version": "2.100.0",
     "description": "Ledger Live (Desktop)",
     "homepage": "https://www.ledger.com/ledger-live",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://download.live.ledger.com/ledger-live-desktop-2.98.0-win-x64.exe#/dl.7z",
-            "hash": "sha512:ac935f04d8db1b9d76925e2633115c35c8139c96731f9b5319ec4831c9de1d68989fa022487b9850ac47392b1c6959110b3aec50b8f9e81fa03901a4fb1d3306",
+            "url": "https://download.live.ledger.com/ledger-live-desktop-2.100.0-win-x64.exe#/dl.7z",
+            "hash": "sha512:01cc68c98a3d2d06f94408f40edf3bcc126e86ca2e48d28c1c8d2fe42bf9b36fe80a83b864d2b0ec6a885cce30279139028576ac967fd91504457d7544fb3bc8",
             "installer": {
                 "script": [
                     "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" -DestinationPath \"$dir\" -Removal",
