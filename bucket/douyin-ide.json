@@ -1,12 +1,12 @@
 {
     "homepage": "https://developer.open-douyin.com/",
     "description": "IDE for ByteDance/Douyin MicroApp Development",
-    "version": "4.3.5",
+    "version": "4.3.6",
     "license": "Unknown",
     "architecture": {
         "64bit": {
-            "url": "https://sf1-cdn-tos.douyinstatic.com/obj/microapp/frontend/ide/package/obj/developer/ide/12283236/win32/%E6%8A%96%E9%9F%B3%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-4.3.5.exe#/dl.7z",
-            "hash": "sha512:0a9010383760b39b5a04f8bc0bef11b48a2f6ced1d2131a183c209321cc8da7b53ecfde4fd5010b99c738271b26cb519d6413134216097ff6e75ee7f39b8c13c",
+            "url": "https://sf1-cdn-tos.douyinstatic.com/obj/microapp/frontend/ide/package/obj/developer/ide/12297501/win32/%E6%8A%96%E9%9F%B3%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7-4.3.6.exe#/dl.7z",
+            "hash": "sha512:4fa1c4ecafebec8971f41e19c3703efb0b13d6fc0a3d99f35ee6b5ac9dc40131c23d188efe0c983ff5d230a794130a26f84f797e3cbd98459f4af775c6e56fbd",
             "installer": {
                 "script": [
                     "Remove-Item \"$dir\\*\" -Exclude \"app-64.7z\"",
