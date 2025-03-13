@@ -1,28 +1,28 @@
 {
     "homepage": "https://tockler.io/",
     "description": "Application that tracks your time by monitoring your active window title and idle time.",
-    "version": "3.22.22",
+    "version": "3.22.18",
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/MayGo/tockler/releases/download/v3.22.22/tockler-3.22.22-setup-win-x64.exe#/dl.7z",
-            "hash": "sha512:4ab9a99608ba842b4a7a35b1f967934dc30e5463b937300410e9901391b46b783fadbd52dc876037a5a21814ff78ed086b8b2023e1bea8243537d75c682f6fd0",
+            "url": "https://github.com/MayGo/tockler/releases/download/v3.22.18/tockler-3.22.18-setup-win-x64.exe#/dl.7z",
+            "hash": "sha512:aff1861bdefe5c183c73128937a9bcc0510e40c9e73a2772650f06422486cbbadd443b1d29432bb81c8bf49d6f786f6dac25418ba132a34bef056800c9c1d58d",
             "pre_install": [
                 "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
                 "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\`$R0\" -Force -Recurse"
             ]
         },
         "32bit": {
-            "url": "https://github.com/MayGo/tockler/releases/download/v3.22.22/tockler-3.22.22-setup-win-ia32.exe#/dl.7z",
-            "hash": "sha512:da4ca8a87cd307bbc22ae9d39ef1da92491fc30a895f2fb2a23097cefe95a636ba369b7733cf3e0ace9fc40cfdc739a0b97685ee6a3f5899e5a5a3bcecb447c3",
+            "url": "https://github.com/MayGo/tockler/releases/download/v3.22.18/tockler-3.22.18-setup-win-ia32.exe#/dl.7z",
+            "hash": "sha512:14eefe4ddf00e2130d46aa8bf65a89d765986d8be640922d9398ace7775f958735cc369389249bb9dcec2a1d0e3c38910aeb4b5cb7e16a791a656f5852ae7f29",
             "pre_install": [
                 "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-32.7z\" \"$dir\"",
                 "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\`$R0\" -Force -Recurse"
             ]
         },
         "arm64": {
-            "url": "https://github.com/MayGo/tockler/releases/download/v3.22.22/tockler-3.22.22-setup-win-arm64.exe#/dl.7z",
-            "hash": "sha512:50908491c624310f9bd8338d017a6296f3b572c9a948032f123d4d5ed6b026e11356a75a1d9bdc56cfc2a229c6b0bfdd085dcf6e48bd6ab00e8c3963e59f8e71",
+            "url": "https://github.com/MayGo/tockler/releases/download/v3.22.18/tockler-3.22.18-setup-win-arm64.exe#/dl.7z",
+            "hash": "sha512:c87e4544c1325a46d5125329472798cfd89509f934772686540b66e97ffd52fb63711dfa5572db080caf8e83f8dfede545abd1ca0a2d1a2e4063c333e1257ecb",
             "pre_install": [
                 "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-arm64.7z\" \"$dir\"",
                 "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\`$R0\" -Force -Recurse"
