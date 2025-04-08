@@ -1,11 +1,11 @@
 {
     "homepage": "https://www.capcut.com/",
-    "description": "Video editing application produced by ByteDance",
+    "description": "All-in-one video editing application produced by ByteDance",
     "license": "Proprietary",
-    "version": "2.5.3.801",
-    "url": "https://lf16-capcut.faceulv.com/obj/capcutpc-packages-us/packages/CapCut_2_5_3_801_capcutpc_0_creatortool.exe#/capcut.7z",
-    "hash": "e0192324dea3e69ea48e923b19d7556d6c23e888d693661df3bbf72dd398579d",
-    "extract_dir": "JYPacket/2.5.3.801",
+    "version": "5.9.1.2256",
+    "url": "https://lf16-capcut.faceulv.com/obj/capcutpc-packages-sg/packages/CapCut_5_9_1_2256_capcutpc_0_creatortool.exe#/capcut.7z",
+    "hash": "d42a596e7e4381fa84d956b2617432ccc120928fd2bf8328d80f9fcd03e2e384",
+    "extract_dir": "JYPacket/5.9.1.2256",
     "shortcuts": [
         [
             "CapCut.exe",
@@ -13,11 +13,13 @@
         ]
     ],
     "checkver": {
-        "regex": "(?<major>[\\d]+)_(?<minor>[\\d]+)_(?<patch>[\\d]+)_(?<build>[\\d]+)_capcutpc",
+        "url": "https://editor-api-sg.capcut.com/service/settings/v3/?app=1&aid=562354&device_platform=windows&from_aid=562354&from_channel=capcutpc_0",
+        "jsonpath": "$.data.settings.installer_downloader_config.url",
+        "regex": "_(?<major>[\\d]+)_(?<minor>[\\d]+)_(?<patch>[\\d]+)_(?<build>[\\d]+)_capcutpc_0",
         "replace": "${major}.${minor}.${patch}.${build}"
     },
     "autoupdate": {
-        "url": "https://lf16-capcut.faceulv.com/obj/capcutpc-packages-us/packages/CapCut_$underscoreVersion_capcutpc_0_creatortool.exe#/capcut.7z",
+        "url": "https://lf16-capcut.faceulv.com/obj/capcutpc-packages-sg/packages/CapCut_$underscoreVersion_capcutpc_0_creatortool.exe#/capcut.7z",
         "extract_dir": "JYPacket/$version"
     }
 }
