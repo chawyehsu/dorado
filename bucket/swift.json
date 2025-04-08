@@ -2,15 +2,15 @@
     "homepage": "https://www.swift.org/",
     "description": "The Swift Programming Language",
     "license": "Apache-2.0",
-    "version": "6.0.2",
+    "version": "6.1",
     "architecture": {
         "64bit": {
-            "url": "https://download.swift.org/swift-6.0.2-release/windows10/swift-6.0.2-RELEASE/swift-6.0.2-RELEASE-windows10.exe",
-            "hash": "516fe8e64713bd92f03c01e5198011b74a27f8c1c88627607a2f421718636126"
+            "url": "https://download.swift.org/swift-6.1-release/windows10/swift-6.1-RELEASE/swift-6.1-RELEASE-windows10.exe",
+            "hash": "8c8aef8b4a449ebeefd74482ac767e269f8cbe7e520871c1d103c7079c5f4c6a"
         },
         "arm64": {
-            "url": "https://download.swift.org/swift-6.0.2-release/windows10-arm64/swift-6.0.2-RELEASE/swift-6.0.2-RELEASE-windows10-arm64.exe",
-            "hash": "8936b544041a9608e016a60a4885921868ddfcd530bb4080c579137363cec328"
+            "url": "https://download.swift.org/swift-6.1-release/windows10-arm64/swift-6.1-RELEASE/swift-6.1-RELEASE-windows10-arm64.exe",
+            "hash": "c0ad594e3e033c30b9f472b1a689a2d05ff20f265a4fc44acd1b5eae3751a341"
         }
     },
     "depends": "main/wixtoolset",
