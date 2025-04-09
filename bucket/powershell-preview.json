@@ -1,20 +1,20 @@
 {
     "homepage": "https://github.com/PowerShell/PowerShell/",
     "description": "PowerShell (Preview), the cross-platform task automation and configuration management framework/tool.",
-    "version": "7.6.0-preview.3",
+    "version": "7.6.0-preview.4",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.6.0-preview.3/PowerShell-7.6.0-preview.3-win-x64.zip",
-            "hash": "8440060f77f4fea5f2b382cf097332e75f8f8dacf7a5567dcfdf559d1c1a526a"
+            "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.6.0-preview.4/PowerShell-7.6.0-preview.4-win-x64.zip",
+            "hash": "385012237c108ecdfcd35dbdbb989194f56d8381f864ea69e4ecc8bd7215c6b4"
         },
         "32bit": {
-            "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.6.0-preview.3/PowerShell-7.6.0-preview.3-win-x86.zip",
-            "hash": "361de4d94b5c537642b4d039561ff6089b896322c8b00f6dea6c7ec629517247"
+            "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.6.0-preview.4/PowerShell-7.6.0-preview.4-win-x86.zip",
+            "hash": "fe9798670058404b3b2ad1e4b611dfc74bc3a12c7c4c9f2bfb4d46903c0ada4f"
         },
         "arm64": {
-            "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.6.0-preview.3/PowerShell-7.6.0-preview.3-win-arm64.zip",
-            "hash": "12d7407362974dde45c969ec8820535def4671645e78931d1ba4914aad7f2a44"
+            "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.6.0-preview.4/PowerShell-7.6.0-preview.4-win-arm64.zip",
+            "hash": "57c875b583801e3ca6208c8772471a7d913aa4c727e868a0b1a24ba16c43dfaf"
         }
     },
     "bin": "pwsh.exe",
