@@ -1,17 +1,17 @@
 {
     "homepage": "https://winlibs.com/",
     "description": "winlibs standalone build of GCC compiler and MinGW-w64 with UCRT (snapshot version)",
-    "version": "15.0.0-12.0.0-snapshot20240616-ucrt-r1",
+    "version": "15.0.1-12.0.0-snapshot20250406-ucrt-r1",
     "license": "GPL-2.0-only,BSD-2-Clause,Apache-2.0,ZPL-2.1",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/brechtsanders/winlibs_mingw/releases/download/15.0.0-snapshot20240616posix-12.0.0-ucrt-r1/winlibs-x86_64-posix-seh-gcc-15.0.0-snapshot20240616-mingw-w64ucrt-12.0.0-r1.7z",
-            "hash": "46d24169bdefb31a0a8e570ca9a3302929ff2e45488a7734e1afee79874472a5",
+            "url": "https://github.com/brechtsanders/winlibs_mingw/releases/download/15.0.1-snapshot20250406posix-12.0.0-ucrt-r1/winlibs-x86_64-posix-seh-gcc-15.0.1-snapshot20250406-mingw-w64ucrt-12.0.0-r1.7z",
+            "hash": "d14c1a4aef67e0c5db7ef201db51d0b689654455302a82aeda388e5537c24463",
             "extract_dir": "mingw64"
         },
         "32bit": {
-            "url": "https://github.com/brechtsanders/winlibs_mingw/releases/download/15.0.0-snapshot20240616posix-12.0.0-ucrt-r1/winlibs-i686-posix-dwarf-gcc-15.0.0-snapshot20240616-mingw-w64ucrt-12.0.0-r1.7z",
-            "hash": "d821de767f3ed8274400bd7fab45e7098c15e6f803f38e985579660ff737757b",
+            "url": "https://github.com/brechtsanders/winlibs_mingw/releases/download/15.0.1-snapshot20250406posix-12.0.0-ucrt-r1/winlibs-i686-posix-dwarf-gcc-15.0.1-snapshot20250406-mingw-w64ucrt-12.0.0-r1.7z",
+            "hash": "c585b6634ccdda3e48c92b916053d585b7d065ee2f0ba17fa4a58d3dcadd7d46",
             "extract_dir": "mingw64"
         }
     },
