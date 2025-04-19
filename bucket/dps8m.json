@@ -1,0 +1,47 @@
+{
+    "version": "3.0.1",
+    "description": "GE / Honeywell / Bull DPS‑8/M mainframe simulator engineered to support the Multics operating system",
+    "homepage": "https://dps8m.gitlab.io/dps8m/",
+    "license": {
+        "identifier": "ICU",
+        "url": "https://gitlab.com/dps8m/dps8m/-/blob/master/LICENSE.md"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://dps8m.gitlab.io/dps8m-r3.0.1-archive/R3.0.1/dps8m-r3.0.1-mingw-x86.zip",
+            "hash": "d8d034083c33a3039663eef9e892e849ad862b23549993562f75519c65a4b54c"
+        },
+        "32bit": {
+            "url": "https://dps8m.gitlab.io/dps8m-r3.0.1-archive/R3.0.1/dps8m-r3.0.1-mingw-x32.zip",
+            "hash": "aeaeae11fe3c9ea6b1fdd97a9d0a4743610fee9742bdf32b282fffc2231eae77"
+        },
+        "arm64": {
+            "url": "https://dps8m.gitlab.io/dps8m-r3.0.1-archive/R3.0.1/dps8m-r3.0.1-mingw-a64.zip",
+            "hash": "31e8fd25c61e64428a1687052d1bc719917606f84efa4b1469ffe5c26eafbd96"
+        }
+    },
+    "extract_dir": "dps8m-r3.0.1",
+    "bin": "dps8.exe",
+    "checkver": {
+        "url": "https://dps8m.gitlab.io/dps8m/Releases/",
+        "regex": "dps8m-r([\\d.]+)-mingw-x86.zip"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://dps8m.gitlab.io/dps8m-r$version-archive/R$version/dps8m-r$version-mingw-x86.zip"
+            },
+            "32bit": {
+                "url": "https://dps8m.gitlab.io/dps8m-r$version-archive/R$version/dps8m-r$version-mingw-x32.zip"
+            },
+            "arm64": {
+                "url": "https://dps8m.gitlab.io/dps8m-r$version-archive/R$version/dps8m-r$version-mingw-a64.zip"
+            }
+        },
+        "extract_dir": "dps8m-r$version",
+        "hash": {
+            "url": "$url.sha256",
+            "regex": "= $sha256"
+        }
+    }
+}
