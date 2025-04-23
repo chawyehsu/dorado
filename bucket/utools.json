@@ -2,18 +2,18 @@
     "homepage": "https://u.tools/",
     "description": "Your productive tools set and launcher.",
     "license": "Proprietary",
-    "version": "7.1.0",
+    "version": "7.1.1",
     "architecture": {
         "64bit": {
-            "url": "https://open.u-tools.cn/download/uTools-7.1.0.exe#/dl.7z",
-            "hash": "0ccd9fa369b1fd89726697b7511d8ae155c31fbf4b0670ff6b861975a7f74585",
+            "url": "https://open.u-tools.cn/download/uTools-7.1.1.exe#/dl.7z",
+            "hash": "9b135fb53d6dd5403be8174aec17440814600e19a095f9af68c4b8df68b41c37",
             "installer": {
                 "script": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR/app-64.7z\" \"$dir\""
             }
         },
         "32bit": {
-            "url": "https://open.u-tools.cn/download/uTools-7.1.0-ia32.exe#/dl.7z",
-            "hash": "9ffc293247d762d9b4b5646d2933c2c3c1ac858646acb17c6264634a323f50a7",
+            "url": "https://open.u-tools.cn/download/uTools-7.1.1-ia32.exe#/dl.7z",
+            "hash": "94fe89432f9678e955a7fa7378f0aa5fa9dec38d8cf8dbf726015fadf072c78c",
             "installer": {
                 "script": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR/app-32.7z\" \"$dir\""
             }
