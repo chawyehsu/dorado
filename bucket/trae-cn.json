@@ -1,0 +1,32 @@
+{
+    "version": "1.0.12518",
+    "description": "An AI-powered IDE(China Edition) that makes programming more enjoyable and efficient.",
+    "homepage": "https://www.trae.com.cn",
+    "license": "Freeware",
+    "architecture": {
+        "64bit": {
+            "url": "https://lf-cdn.trae.com.cn/obj/trae-com-cn/pkg/app/releases/stable/1.0.12518/win32/Trae%20CN-Setup-x64.exe",
+            "hash": "2362d5758ed43278b3b31e33d9af58d0976478e80778a1af2f89bcdda4c4d60b",
+            "extract_dir": "{code_GetDestDir}"
+        }
+    },
+    "innosetup": true,
+    "bin": "bin/trae.cmd",
+    "shortcuts": [
+        [
+            "Trae CN.exe",
+            "Trae CN"
+        ]
+    ],
+    "checkver": {
+        "url": "https://api.trae.com.cn/icube/api/v1/native/version/trae/cn/latest",
+        "jsonpath": "$.data.manifest.win32.version"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://lf-cdn.trae.com.cn/obj/trae-com-cn/pkg/app/releases/stable/$version/win32/Trae%20CN-Setup-x64.exe"
+            }
+        }
+    }
+}
