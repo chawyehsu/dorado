@@ -1,20 +1,20 @@
 {
     "homepage": "https://github.com/rust-lang-nursery/rustup.rs",
     "description": "The Rust toolchain installer",
-    "version": "1.28.1",
+    "version": "1.28.2",
     "license": "MIT|Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://static.rust-lang.org/rustup/archive/1.28.1/x86_64-pc-windows-msvc/rustup-init.exe",
-            "hash": "7b83039a1b9305b0c50f23b2e2f03319b8d7859b28106e49ba82c06d81289df6"
+            "url": "https://static.rust-lang.org/rustup/archive/1.28.2/x86_64-pc-windows-msvc/rustup-init.exe",
+            "hash": "88d8258dcf6ae4f7a80c7d1088e1f36fa7025a1cfd1343731b4ee6f385121fc0"
         },
         "32bit": {
-            "url": "https://static.rust-lang.org/rustup/archive/1.28.1/i686-pc-windows-msvc/rustup-init.exe",
-            "hash": "494bbeb52bd102891be4e7e5adc74eeb1c532adfdc33d51ae1aa9fd2ff5f1048"
+            "url": "https://static.rust-lang.org/rustup/archive/1.28.2/i686-pc-windows-msvc/rustup-init.exe",
+            "hash": "d33375f474f105e529ff3225529a8d6a79a8a4e23f6eab88fba427889e538f34"
         },
         "arm64": {
-            "url": "https://static.rust-lang.org/rustup/archive/1.28.1/aarch64-pc-windows-msvc/rustup-init.exe",
-            "hash": "9054ad509637940709107920176f14cee334bc5cfe50bc0a24a3dc59b6f4d458"
+            "url": "https://static.rust-lang.org/rustup/archive/1.28.2/aarch64-pc-windows-msvc/rustup-init.exe",
+            "hash": "de9f7d29ccd39efa59a3dda3ec363b396e09b92681229b9b8f6aaa4c84285e9c"
         }
     },
     "checkver": {
