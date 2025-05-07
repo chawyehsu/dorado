@@ -1,0 +1,35 @@
+{
+    "homepage": "https://cisco.github.io/ChezScheme",
+    "description": "Chez Scheme is both a programming language and an implementation of that language.",
+    "license": "Apache-2.0",
+    "version": "10.2.0",
+    "depends": "dark",
+    "url": "https://github.com/cisco/ChezScheme/releases/download/v10.2.0/ChezScheme10.2.0.exe",
+    "hash": "0c9b6606a445262fdcb1c201bb06f72075fbb6c14f717d33467e73022df952c9",
+    "architecture": {
+        "64bit": {
+            "installer": {
+                "script": [
+                    "Expand-DarkArchive \"$dir\\$fname\" \"$dir\\extracted\" -Removal",
+                    "Get-ChildItem \"$dir\\extracted\\AttachedContainer\\*64.msi\" | ForEach-Object { Expand-MsiArchive $_ \"$dir\\extracted\" }",
+                    "Get-ChildItem \"$dir\\extracted\\Chez Scheme *\\*\" | ForEach-Object { Move-Item $_ -Destination \"$dir\" -Force }",
+                    "@('extracted') | ForEach-Object { Remove-Item \"$dir\\$_\" -Recurse }"
+                ]
+            }
+        }
+    },
+    "bin": [
+        "bin\\ta6nt\\scheme.exe",
+        "bin\\ta6nt\\petite.exe"
+    ],
+    "checkver": {
+        "github": "https://github.com/cisco/ChezScheme"
+    },
+    "autoupdate": {
+        "url": "https://github.com/cisco/ChezScheme/releases/download/v$version/ChezScheme$version.exe",
+        "hash": {
+            "url": "https://github.com/cisco/ChezScheme/releases/tag/v$version",
+            "regex": "$basename: $sha256"
+        }
+    }
+}
