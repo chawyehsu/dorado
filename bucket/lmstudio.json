@@ -1,5 +1,5 @@
 {
-    "version": "0.3.15-11",
+    "version": "0.3.16-7",
     "description": "Discover, download, and run local LLMs",
     "homepage": "https://lmstudio.ai/",
     "license": {
@@ -8,8 +8,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://installers.lmstudio.ai/win32/x64/0.3.15-11/LM-Studio-0.3.15-11-x64.exe#/dl.7z",
-            "hash": "91fae0aae8ecd5c6b4b374fbddf47e5b907188174972828af20e780e83432968",
+            "url": "https://installers.lmstudio.ai/win32/x64/0.3.16-7/LM-Studio-0.3.16-7-x64.exe#/dl.7z",
+            "hash": "1a9569db0ecb9f2ca0a47cec294218bf87b0b140120843b7ce66b15e71e17c5b",
             "installer": {
                 "script": [
                     "Remove-Item \"$dir\\*\" -Exclude \"app-64.7z\"",
@@ -19,8 +19,8 @@
             }
         },
         "arm64": {
-            "url": "https://installers.lmstudio.ai/win32/arm64/0.3.15-11/LM-Studio-0.3.15-11-arm64.exe#/dl.7z",
-            "hash": "7ae07bc4d973e5708dfdffb9b7685762ded038daef34fad252f8acd134bda3b0",
+            "url": "https://installers.lmstudio.ai/win32/arm64/0.3.16-7/LM-Studio-0.3.16-7-arm64.exe#/dl.7z",
+            "hash": "49db82be10e02af4fb5a6a9f2186e365b7350d7088ca2d6fbf7b386f5f4e59a7",
             "installer": {
                 "script": [
                     "Remove-Item \"$dir\\*\" -Exclude \"app-arm64.7z\"",
