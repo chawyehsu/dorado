@@ -1,0 +1,49 @@
+{
+    "version": "17.06",
+    "description": "Process Explorer - A powerful task manager and system monitoring tool from Sysinternals.",
+    "homepage": "https://learn.microsoft.com/en-us/sysinternals/downloads/process-explorer#introduction",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://learn.microsoft.com/en-us/sysinternals/license-terms"
+    },
+    "url": "https://download.sysinternals.com/files/ProcessExplorer.zip#/dl.7z",
+    "hash": "54336cd4f4608903b1f89a43ca88f65c2f209f4512a5201cebd2b38ddc855f24",
+    "notes": [
+        "Runs on:",
+        "- Client: Windows 10 and higher.",
+        "- Server: Windows Server 2016 and higher."
+    ],
+    "architecture": {
+        "32bit": {
+            "bin": "procexp.exe",
+            "shortcuts": [
+                ["procexp.exe", "Process Explorer (32-bit)"]
+            ]
+        },
+        "64bit": {
+            "bin": "procexp64.exe",
+            "shortcuts": [
+                ["procexp64.exe", "Process Explorer (64-bit)"]
+            ]
+        },
+        "arm64": {
+            "bin": "procexp64a.exe",
+            "shortcuts": [
+                ["procexp64a.exe", "Process Explorer (ARM64)"]
+            ]
+        }
+    },
+    "shortcuts": [
+        [
+            "procexp.exe",
+            "Process Explorer"
+        ]
+    ],
+    "checkver": {
+        "url": "https://learn.microsoft.com/en-us/sysinternals/downloads/process-explorer",
+        "regex": "Process Explorer v([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://download.sysinternals.com/files/ProcessExplorer.zip#/dl.7z"
+    }
+}
