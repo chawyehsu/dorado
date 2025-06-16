@@ -2,15 +2,15 @@
     "homepage": "https://www.swift.org/",
     "description": "The Swift Programming Language (Nightly builds)",
     "license": "Apache-2.0",
-    "version": "20250614.3",
+    "version": "20250615.3",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/thebrowsercompany/swift-build/releases/download/20250614.3/installer-amd64.exe",
-            "hash": "2fcf7ba0aef1ec2cb3114263498c8858549756589f5e365af3969e4003c3e673"
+            "url": "https://github.com/thebrowsercompany/swift-build/releases/download/20250615.3/installer-amd64.exe",
+            "hash": "75c7aaedf67019fa66759ce1ebe52089b3f7c97253f5efcdb806efe71ac614d3"
         },
         "arm64": {
-            "url": "https://github.com/thebrowsercompany/swift-build/releases/download/20250614.3/installer-arm64.exe",
-            "hash": "fb1cfc2f0642e47565cd2d70cf60f550665ba89181d7314fe88082c7ca177a90"
+            "url": "https://github.com/thebrowsercompany/swift-build/releases/download/20250615.3/installer-arm64.exe",
+            "hash": "686dc993dcce65cc95d2484bc02a4a2182d56fcdf53a8a7cfa7e8e82014e2bb3"
         }
     },
     "depends": "main/wixtoolset",
