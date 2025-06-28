@@ -1,0 +1,30 @@
+{
+    "version": "0.2.1",
+    "description": "A CLI tool convert an image/wallpaper to any color-scheme / palette",
+    "homepage": "https://github.com/Achno/gowall",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Achno/gowall/releases/download/v0.2.1/gowall_0.2.1_windows_amd64.tar.gz",
+            "hash": "4b2600154e7c673aa3e1114254ef0fe9683d8424cda1cf8089a2c731ee84bfa8"
+        },
+        "arm64": {
+            "url": "https://github.com/Achno/gowall/releases/download/v0.2.1/gowall_0.2.1_windows_arm64.tar.gz",
+            "hash": "802b68dcf709a92dce8cf7eb7ae1eaa5fe7cebb6bd236c0efbcb6986ad6fb003"
+        }
+    },
+    "bin": "gowall.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Achno/gowall/releases/download/v$version/gowall_$version_windows_amd64.tar.gz"
+            },
+            "arm64": {
+                "url": "https://github.com/Achno/gowall/releases/download/v$version/gowall_$version_windows_arm64.tar.gz"
+            }
+        },
+        "hash": {
+            "url": "https://github.com/Achno/gowall/releases/download/v$version/gowall_$version_checksums.txt"
+        }
+    }
+}
