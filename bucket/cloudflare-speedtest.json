@@ -1,21 +1,21 @@
 {
-    "version": "2.2.5",
+    "version": "2.3.0",
     "description": "Test Cloudflare CDN latency and speed to get the fastest IP!",
     "homepage": "https://github.com/XIU2/CloudflareSpeedTest",
     "license": "GPL-3.0-only",
     "notes": "cloudflarest-ip: load the default ip files(ip.txt & ipv6.txt) to perform speed test",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/XIU2/CloudflareSpeedTest/releases/download/v2.2.5/CloudflareST_windows_amd64.zip",
-            "hash": "6b40691bda8af67a46cc4d67527b561ee307e37b0da86af150a0d8f8d18a98f2"
+            "url": "https://github.com/XIU2/CloudflareSpeedTest/releases/download/v2.3.0/CloudflareST_windows_amd64.zip",
+            "hash": "4a5020bac259ebd2182976ffc52e7129c48962289828eb4f3caa93f7e4dd3a26"
         },
         "arm64": {
-            "url": "https://github.com/XIU2/CloudflareSpeedTest/releases/download/v2.2.5/CloudflareST_windows_arm64.zip",
-            "hash": "60840335f4d0f003693620008fa34f064aa1d18da877cc9e6643b1ae41eea416"
+            "url": "https://github.com/XIU2/CloudflareSpeedTest/releases/download/v2.3.0/CloudflareST_windows_arm64.zip",
+            "hash": "0668722579da73e53a2ac0ca3128e9a503694ef2df742a78059619e1e6e65951"
         },
         "32bit": {
-            "url": "https://github.com/XIU2/CloudflareSpeedTest/releases/download/v2.2.5/CloudflareST_windows_386.zip",
-            "hash": "017d2b2836679fa37eae2959b2c7b521473a830197cf74d461bdfddb20d3f532"
+            "url": "https://github.com/XIU2/CloudflareSpeedTest/releases/download/v2.3.0/CloudflareST_windows_386.zip",
+            "hash": "a2c2f6f537293078b67cd46ac72bd3fe1607546c0bf950f63fb200825ddd6b83"
         }
     },
     "bin": [
