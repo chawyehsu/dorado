@@ -1,20 +1,16 @@
 {
-    "version": "2.48.1.windows.1",
+    "version": "2.50.0.windows.2",
     "description": "Distributed version control system",
     "homepage": "https://gitforwindows.org",
     "license": "GPL-2.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/git-for-windows/git/releases/download/v2.48.1.windows.1/PortableGit-2.48.1-64-bit.7z.exe#/dl.7z",
-            "hash": "a4335111b3363871cac632be93d7466154d8eb08782ff55103866b67d6722257"
-        },
-        "32bit": {
-            "url": "https://github.com/git-for-windows/git/releases/download/v2.48.1.windows.1/PortableGit-2.48.1-32-bit.7z.exe#/dl.7z",
-            "hash": "63ddbc7ea11ea8a1375f39f45d38f928dbec564360ad12dd11d0d649474063a0"
+            "url": "https://github.com/git-for-windows/git/releases/download/v2.50.0.windows.2/PortableGit-2.50.0.2-64-bit.7z.exe#/dl.7z",
+            "hash": "de8e309e780201d74b09e4b248209fd5544c45acbb5a4d131562739460aeeb46"
         },
         "arm64": {
-            "url": "https://github.com/git-for-windows/git/releases/download/v2.48.1.windows.1/PortableGit-2.48.1-arm64.7z.exe#/dl.7z",
-            "hash": "095c68dd2d64d05415534c1b98c9d8b1b661c1a5e553a7aa83381fa136fa9454"
+            "url": "https://github.com/git-for-windows/git/releases/download/v2.50.0.windows.2/PortableGit-2.50.0.2-arm64.7z.exe#/dl.7z",
+            "hash": "ae8331ea65e1f7677b6ce140edb0f5501aa108abbd8bab943cd995c4ddf1218e"
         }
     },
     "bin": [
@@ -48,9 +44,6 @@
         "architecture": {
             "64bit": {
                 "url": "https://github.com/git-for-windows/git/releases/download/v$version/PortableGit-$matchFull-64-bit.7z.exe#/dl.7z"
-            },
-            "32bit": {
-                "url": "https://github.com/git-for-windows/git/releases/download/v$version/PortableGit-$matchFull-32-bit.7z.exe#/dl.7z"
             },
             "arm64": {
                 "url": "https://github.com/git-for-windows/git/releases/download/v$version/PortableGit-$matchFull-arm64.7z.exe#/dl.7z"
