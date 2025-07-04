@@ -18,9 +18,9 @@
     ],
     "checkver": {
         "url": "https://www.futunn.com/api/futunn/download/fetch-lasted-link?clientType=10",
-        "regex": "FTNN_([\\d.]+).exe"
+        "regex": "FTNN_legacy_([\\d.]+).exe"
     },
     "autoupdate": {
-        "url": "https://softwaredownload.futunn.com/FTNN_$version.exe#/ftnn_$version.7z"
+        "url": "https://softwaredownload.futunn.com/FTNN_legacy_$version.exe#/ftnn_$version.7z"
     }
 }
