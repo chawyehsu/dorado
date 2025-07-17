@@ -1,5 +1,5 @@
 {
-    "version": "25.6.3",
+    "version": "25.7.2",
     "description": "Trezor Suite application (Trezor Desktop)",
     "homepage": "https://trezor.io/trezor-suite",
     "license": {
@@ -8,8 +8,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/trezor/trezor-suite/releases/download/v25.6.3/Trezor-Suite-25.6.3-win-x64.exe#/dl.7z",
-            "hash": "sha512:a6cf93219321bb549d4b19c82814e87caf6570b78aa3c5a40a514e7d0e111a998f5c30374273f1540da4826beede1812997ceb4cd0dfff5c6f155d29ed6a828b",
+            "url": "https://github.com/trezor/trezor-suite/releases/download/v25.7.2/Trezor-Suite-25.7.2-win-x64.exe#/dl.7z",
+            "hash": "sha512:99c46c5fb0aadcae1f279c4f7ddcca28d54dbfe34cba50f2d8d0b91c386ae3b33c3f075021f17902653d9d41ef44e839ed522b5ea430feb876b7f91372f8ce03",
             "installer": {
                 "script": [
                     "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" -DestinationPath \"$dir\" -Removal",
