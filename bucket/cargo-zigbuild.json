@@ -1,20 +1,20 @@
 {
-    "version": "0.20.0",
+    "version": "0.20.1",
     "description": "Compile Cargo project with zig as linker",
     "homepage": "https://github.com/rust-cross/cargo-zigbuild",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/rust-cross/cargo-zigbuild/releases/download/v0.20.0/cargo-zigbuild-v0.20.0.windows-x64.zip",
-            "hash": "8a1103d46dc65c8ced3166170bef8137aecda0378574e58f7d141a9a3477a241"
+            "url": "https://github.com/rust-cross/cargo-zigbuild/releases/download/v0.20.1/cargo-zigbuild-v0.20.1.windows-x64.zip",
+            "hash": "b0bb728ba068ee61342f40a2124b3d8d234af8f716dd416b7c1f794dfeb4e478"
         },
         "32bit": {
-            "url": "https://github.com/rust-cross/cargo-zigbuild/releases/download/v0.20.0/cargo-zigbuild-v0.20.0.windows-x86.zip",
-            "hash": "84d2d5d77539fa27b88339cf3c793fcaba3fd08a823b5472ec0ae6f51238ce29"
+            "url": "https://github.com/rust-cross/cargo-zigbuild/releases/download/v0.20.1/cargo-zigbuild-v0.20.1.windows-x86.zip",
+            "hash": "c0774e4112891bb64fcf1f5f78a1655c71450d78e7378c36f4cc96937191aed7"
         },
         "arm64": {
-            "url": "https://github.com/rust-cross/cargo-zigbuild/releases/download/v0.20.0/cargo-zigbuild-v0.20.0.windows-arm64.zip",
-            "hash": "ea121bd4c5649e38af203af8fb2dcab51a0a8b5aad98a5bd7326b2ac6384099f"
+            "url": "https://github.com/rust-cross/cargo-zigbuild/releases/download/v0.20.1/cargo-zigbuild-v0.20.1.windows-arm64.zip",
+            "hash": "c33134882efe6d0f83751650e4b1617411ecf62e8ba3eaf764ad5a4bbf5e083b"
         }
     },
     "bin": "cargo-zigbuild.exe",
