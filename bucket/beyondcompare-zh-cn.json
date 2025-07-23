@@ -1,13 +1,13 @@
 {
     "homepage": "https://www.scootersoftware.com",
     "description": "Beyond Compare is a multi-platform utility that combines directory compare and file compare functions in one package. Use it to manage source code, keep directories in sync, compare program output, etc.",
-    "version": "5.1.0.31016",
+    "version": "5.1.1.31157",
     "license": {
         "identifier": "Shareware",
         "url": "https://www.scootersoftware.com/index.php?zz=kb_licensev4"
     },
-    "url": "https://www.scootersoftware.com/BCompare-zh-5.1.0.31016.exe",
-    "hash": "976668207bbee793d6c20316edbd658e669f94bf0653a1bc92ea61348135e3d2",
+    "url": "https://www.scootersoftware.com/BCompare-zh-5.1.1.31157.exe",
+    "hash": "1e8cb445050507fcc294b302cc7b730ba544a7970b1a628ca71f1cdd5b2dbc5e",
     "depends": "innounp",
     "pre_install": "Expand-InnoArchive -Path \"$dir\\$fname\" -Switches \"-a\"  -Removal",
     "architecture": {
