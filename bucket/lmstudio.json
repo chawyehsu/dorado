@@ -1,5 +1,5 @@
 {
-    "version": "0.3.19-4",
+    "version": "0.3.20-4",
     "description": "Discover, download, and run local LLMs",
     "homepage": "https://lmstudio.ai/",
     "license": {
@@ -8,8 +8,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://installers.lmstudio.ai/win32/x64/0.3.19-4/LM-Studio-0.3.19-4-x64.exe#/dl.7z",
-            "hash": "b442cd0d5c3e8e72d73a3bcb5ebcac17cce8c63f4242d82c701f36780595201d",
+            "url": "https://installers.lmstudio.ai/win32/x64/0.3.20-4/LM-Studio-0.3.20-4-x64.exe#/dl.7z",
+            "hash": "7a79885b985dbaf236841e9e70157dfa09b4bc92469ad89589a459116b6a5033",
             "installer": {
                 "script": [
                     "Remove-Item \"$dir\\*\" -Exclude \"app-64.7z\"",
@@ -19,8 +19,8 @@
             }
         },
         "arm64": {
-            "url": "https://installers.lmstudio.ai/win32/arm64/0.3.19-4/LM-Studio-0.3.19-4-arm64.exe#/dl.7z",
-            "hash": "5f15333f82cbb81811728f039516bf1714cab37134529247542ed64dc9033078",
+            "url": "https://installers.lmstudio.ai/win32/arm64/0.3.20-4/LM-Studio-0.3.20-4-arm64.exe#/dl.7z",
+            "hash": "f9367469fc37b44a7dba975fb70c01bb67de88157e97ffdcab039ab75ef8526c",
             "installer": {
                 "script": [
                     "Remove-Item \"$dir\\*\" -Exclude \"app-arm64.7z\"",
