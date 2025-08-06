@@ -1,6 +1,6 @@
 {
     "version": "1.18.26",
-    "description": "Web-Scale Blockchain for fast, secure, scalable, decentralized apps and marketplaces",
+    "description": "Web-Scale Blockchain for fast, secure, scalable, decentralized apps and marketplaces (The Solana blockchain validator)",
     "homepage": "https://solana.com/",
     "license": "Apache-2.0",
     "architecture": {
@@ -27,5 +27,6 @@
                 "url": "https://github.com/solana-labs/solana/releases/download/v$version/solana-release-x86_64-pc-windows-msvc.tar.bz2"
             }
         }
-    }
+    },
+    "notes": "This package is discontinued and will not receive updates. Please use the 'agave' package instead"
 }

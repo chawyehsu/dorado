@@ -1,0 +1,31 @@
+{
+    "version": "2.3.6",
+    "description": "Agave is a validator for the Solana blockchain maintained by the Anza team (fork of original Solana validator)",
+    "homepage": "https://www.anza.xyz/",
+    "license": "Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/anza-xyz/agave/releases/download/v2.3.6/solana-release-x86_64-pc-windows-msvc.tar.bz2",
+            "hash": "e3130616ed69a3f15a54c4ecf51059f2919142c955967634469290d353af7be8",
+            "extract_dir": "solana-release"
+        }
+    },
+    "bin": [
+        "bin\\solana-keygen.exe",
+        "bin\\solana-stake-accounts.exe",
+        "bin\\solana-test-validator.exe",
+        "bin\\solana-tokens.exe",
+        "bin\\solana.exe",
+        "bin\\spl-token.exe"
+    ],
+    "checkver": {
+        "github": "https://github.com/anza-xyz/agave"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/anza-xyz/agave/releases/download/v$version/solana-release-x86_64-pc-windows-msvc.tar.bz2"
+            }
+        }
+    }
+}
