@@ -1,12 +1,12 @@
 {
-    "version": "10.2.4",
+    "version": "10.3.2",
     "description": "Douyin Streaming Tool",
     "homepage": "https://streamingtool.douyin.com/",
     "license": "Proprietary",
     "architecture": {
         "64bit": {
-            "url": "https://lf6-cdn-tos.douyinstatic.com/obj/venus/StreamingTool-10.2.4-x64.exe#/dl.7z",
-            "hash": "a600e54133236a61e483554139a9bbb231d96ebcd94de429f6cb678155ca70d6",
+            "url": "https://lf6-cdn-tos.douyinstatic.com/obj/venus/StreamingTool-10.3.2-x64.exe#/dl.7z",
+            "hash": "eb15509f0192b2a24a864a6565b33883b5cf64a2f2d236b85a3dfed7246360dd",
             "installer": {
                 "script": [
                     "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
@@ -15,8 +15,8 @@
             }
         },
         "32bit": {
-            "url": "https://lf6-cdn-tos.douyinstatic.com/obj/venus/StreamingTool-10.2.4-x86.exe#/dl.7z",
-            "hash": "8de49967cbec05c14d82ed8cec59da9afd8f214381c6242081f1a609c5d9fe5f",
+            "url": "https://lf6-cdn-tos.douyinstatic.com/obj/venus/StreamingTool-10.3.2-x86.exe#/dl.7z",
+            "hash": "0f89b7885552b3c65bef46806bcfbb02bf079b2fa9980f824f360c16694ced0b",
             "installer": {
                 "script": [
                     "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-86.7z\" \"$dir\"",
