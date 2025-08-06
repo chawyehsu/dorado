@@ -6,8 +6,7 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/WasmEdge/WasmEdge/releases/download/0.15.0/WasmEdge-0.15.0-windows.zip",
-            "hash": "1d18b4d06b60f8610f3be4ae3ecd330442e65613f1384006a3f628c5d00831da",
-            "extract_dir": "WasmEdge-0.15.0-Windows"
+            "hash": "1d18b4d06b60f8610f3be4ae3ecd330442e65613f1384006a3f628c5d00831da"
         }
     },
     "bin": [
@@ -20,8 +19,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/WasmEdge/WasmEdge/releases/download/$version/WasmEdge-$version-windows.zip",
-                "extract_dir": "WasmEdge-$version-Windows"
+                "url": "https://github.com/WasmEdge/WasmEdge/releases/download/$version/WasmEdge-$version-windows.zip"
             }
         }
     }
