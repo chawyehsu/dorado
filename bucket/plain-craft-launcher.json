@@ -1,5 +1,5 @@
 {
-    "version": "2.10.6",
+    "version": "2.10.7",
     "description": "新一代 Minecraft / 我的世界 启动器",
     "homepage": "https://github.com/Hex-Dragon/PCL2",
     "license": {
@@ -7,7 +7,7 @@
         "url": "https://shimo.im/docs/rGrd8pY8xWkt6ryW/read"
     },
     "url": "https://github.com/Hex-Dragon/PCL2/raw/main/%E6%9C%80%E6%96%B0%E6%AD%A3%E5%BC%8F%E7%89%88.zip",
-    "hash": "829286550a48c16d211e778a1315e4479ec2f1e26c2e968219fbfbf80fb60d21",
+    "hash": "ce125000ea933748a3cad7079626134a9f2acc6fa8662392b334cf223d601ced",
     "pre_install": [
         "ensure \"$persist_dir\\PCL\" | Out-Null",
         "ensure \"$persist_dir\\.minecraft\" | Out-Null",
