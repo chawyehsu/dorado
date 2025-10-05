@@ -13,10 +13,10 @@
         ]
     ],
     "autoupdate": {
-        "url": "https://github.com/PrelinaMontelli/Edge-Monitor/releases/download/EdgeMonitor-v$version/EdgeMonitor-v$version.zip",
-        "extract_dir": "EdgeMonitor-v$version"
+        "url": "https://github.com/PrelinaMontelli/Edge-Monitor/releases/download/EdgeMonitor-v$version/EdgeMonitor-v$version.zip"
     },
     "checkver": {
-        "github": "https://github.com/PrelinaMontelli/Edge-Monitor"
+        "github": "https://github.com/PrelinaMontelli/Edge-Monitor",
+        "regex": "EdgeMonitor-v([\\d.]+)"
     }
 }
