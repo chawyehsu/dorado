@@ -1,19 +1,19 @@
 {
     "homepage": "https://music.163.com/",
     "description": "The official NetEase Cloud Music client.",
-    "version": "3.1.16.204365",
+    "version": "3.1.20.204558",
     "license": {
         "identifier": "EULA",
         "url": "https://music.163.com/html/web2/service.html"
     },
     "architecture": {
         "64bit": {
-            "url": "https://d1.music.126.net/dmusic/NeteaseCloudMusic_Music_official_3.1.16.204365_64.exe#/dl.7z",
-            "hash": "2e203755b0dbe402fd9d56e078a38dade1026e692b271587ec2e65a1a8a75daf"
+            "url": "https://d8.music.126.net/dmusic2/NeteaseCloudMusic_Music_official_3.1.20.204558_64.exe#/dl.7z",
+            "hash": "81053fcaad3773e1b877bde2e7a76997eacad3d8cdbe2c7e700d55b18cfd9ec2"
         },
         "32bit": {
-            "url": "https://d1.music.126.net/dmusic/NeteaseCloudMusic_Music_official_3.1.16.204365_32.exe#/dl.7z",
-            "hash": "cfbfecf64984adadc111c5d7a6ec206d940f9302c40e25c064c1121e7a81332e"
+            "url": "https://d8.music.126.net/dmusic2/NeteaseCloudMusic_Music_official_3.1.20.204558_32.exe#/dl.7z",
+            "hash": "5f4570963ad480f1c69990ec1bb2df5f7fefd72b6b384fe069ade47584fee8c6"
         }
     },
     "installer": {
@@ -47,10 +47,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://d1.music.126.net/dmusic/NeteaseCloudMusic_Music_official_$version_64.exe#/dl.7z"
+                "url": "https://d8.music.126.net/dmusic2/NeteaseCloudMusic_Music_official_$version_64.exe#/dl.7z"
             },
             "32bit": {
-                "url": "https://d1.music.126.net/dmusic/NeteaseCloudMusic_Music_official_$version_32.exe#/dl.7z"
+                "url": "https://d8.music.126.net/dmusic2/NeteaseCloudMusic_Music_official_$version_32.exe#/dl.7z"
             }
         }
     }
