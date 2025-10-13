@@ -1,13 +1,13 @@
 {
     "homepage": "https://bitcoinknots.org/",
     "description": "Bitcoin Knots is a combined Bitcoin node and wallet.",
-    "version": "28.1.knots20250305",
+    "version": "29.2.knots20251010",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://bitcoinknots.org/files/28.x/28.1.knots20250305/bitcoin-28.1.knots20250305-win64.zip",
-            "hash": "813ebd0bb4600e365b6883ead26b07969e6dea33406ae2341cce26807b16a50e",
-            "extract_dir": "bitcoin-28.1.knots20250305"
+            "url": "https://bitcoinknots.org/files/29.x/29.2.knots20251010/bitcoin-29.2.knots20251010-win64-pgpverifiable.zip",
+            "hash": "0794d6ddd137550ebe2a4e5eef09352caca0f4849473d37ec84a943d03cfe94c",
+            "extract_dir": "bitcoin-29.2.knots20251010"
         }
     },
     "shortcuts": [
@@ -24,18 +24,18 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://bitcoinknots.org/files/$majorVersion.x/$version/bitcoin-$version-win64.zip",
+                "url": "https://bitcoinknots.org/files/$majorVersion.x/$version/bitcoin-$version-win64-pgpverifiable.zip",
                 "extract_dir": "bitcoin-$version"
             }
         },
         "hash": {
-            "url": "https://raw.githubusercontent.com/bitcoinknots/guix.sigs/knots/$version/luke-jr/noncodesigned.SHA256SUMS",
+            "url": "https://raw.githubusercontent.com/bitcoinknots/guix.sigs/knots/$version/luke-jr/all.SHA256SUMS",
             "mode": "extract"
         }
     },
     "notes": [
         "[WARNING]: If you really want to use this for production or what, KEEP AN EYE OUT FOR YOUR DATA!!!",
-        "[WARNING]: THE SOFTWARE IS PROVIDED 'AS IS', I am not responsible for any data lost.",
+        "[WARNING]: THE SOFTWARE IS PROVIDED 'AS IS', I (the manifest maintainer) am not responsible for any data lost.",
         "[WARNING]: The 'datadir' has been configured to '$dir\\appdata' (persisted) for portable purpose."
     ]
 }
