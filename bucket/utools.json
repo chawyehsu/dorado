@@ -1,43 +1,63 @@
 {
-    "homepage": "https://u.tools/",
-    "description": "Your productive tools set and launcher.",
-    "license": "Proprietary",
-    "version": "7.3.1",
-    "architecture": {
-        "64bit": {
-            "url": "https://open.u-tools.cn/download/uTools-7.3.1.exe#/dl.7z",
-            "hash": "18061b0721d20234fc1088056e66d1955bccca6e7187d8e84a1c747c22f017cd",
-            "installer": {
-                "script": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR/app-64.7z\" \"$dir\""
-            }
-        },
-        "32bit": {
-            "url": "https://open.u-tools.cn/download/uTools-7.3.1-ia32.exe#/dl.7z",
-            "hash": "dd331772b4909cfb0affadce363c20473219cccb0e61c4d1dffc66655ef2e449",
-            "installer": {
-                "script": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR/app-32.7z\" \"$dir\""
-            }
-        }
-    },
-    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\`$R0\" -Force -Recurse",
-    "shortcuts": [
-        [
-            "uTools.exe",
-            "uTools"
+  "homepage": "https://u.tools/",
+  "description": "Your productive tools set and launcher.",
+  "license": "Proprietary",
+  "version": "7.3.1",
+  "architecture": {
+    "64bit": {
+      "url": "https://open.u-tools.cn/download/uTools-7.3.1.exe#/dl.7z",
+      "hash": "18061b0721d20234fc1088056e66d1955bccca6e7187d8e84a1c747c22f017cd",
+      "installer": {
+        "script": [
+            "7z x $original_dir/PLUGINSDIR/app-64.7z -o\"$original_dir\\utools\"",
+            "ensure \"$persist_dir\" | Out-Null",
+            "$targetPath = \"$env:APPDATA\\uTools\"",
+            "$linkType = (Get-Item -Path $targetPath -ErrorAction SilentlyContinue).LinkType",
+            "if (Test-Path $targetPath) {",
+            "    if ($linkType -eq 'Junction') {",
+            "        Remove-Item -Path $targetPath -Force",
+            "    } else {",
+            "        Get-ChildItem -Path $targetPath -Force | Move-Item -Destination $persist_dir -Force",
+            "        Remove-Item -Path $targetPath -Force -Recurse",
+            "    }",
+            "}",
+            "New-Item \"$env:APPDATA\\uTools\" -ItemType Junction -Target \"$persist_dir\" | Out-Null"
         ]
-    ],
-    "checkver": {
-        "url": "https://www.u-tools.cn/download/",
-        "regex": "/download/uTools-([\\d.]+).exe"
+      }
     },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://open.u-tools.cn/download/uTools-$version.exe#/dl.7z"
-            },
-            "32bit": {
-                "url": "https://open.u-tools.cn/download/uTools-$version-ia32.exe#/dl.7z"
-            }
-        }
+    "32bit": {
+      "url": "https://open.u-tools.cn/download/uTools-7.3.1-ia32.exe#/dl.7z",
+      "hash": "dd331772b4909cfb0affadce363c20473219cccb0e61c4d1dffc66655ef2e449",
+      "installer": {
+        "script": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR/app-32.7z\" \"$dir\""
+      }
     }
+  },
+  "extract_dir": "$PLUGINSDIR",
+  "extract_to": "PLUGINSDIR",
+  "bin": "utools\\uTools.exe",
+  "post_install": "Remove-Item -RECURSE $original_dir/PLUGINSDIR",
+  "uninstaller": {
+    "script": "Remove-Item \"$env:APPDATA\\uTools\" -Recurse -Force -ErrorAction 'SilentlyContinue'"
+  },
+  "shortcuts": [
+    [
+      "utools\\uTools.exe",
+      "uTools"
+    ]
+  ],
+  "checkver": {
+    "url": "https://www.u-tools.cn/download/",
+    "regex": "/download/uTools-([\\d.]+).exe"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://open.u-tools.cn/download/uTools-$version.exe#/dl.7z"
+      },
+      "32bit": {
+        "url": "https://open.u-tools.cn/download/uTools-$version-ia32.exe#/dl.7z"
+      }
+    }
+  }
 }
