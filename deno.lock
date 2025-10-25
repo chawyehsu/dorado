@@ -1,11 +1,18 @@
 {
   "version": "5",
+  "specifiers": {
+    "jsr:@std/encoding@^1.0.10": "1.0.10"
+  },
+  "jsr": {
+    "@std/encoding@1.0.10": {
+      "integrity": "8783c6384a2d13abd5e9e87a7ae0520a30e9f56aeeaa3bdf910a3eaaf5c811a1"
+    }
+  },
   "remote": {
     "https://deno.land/std@0.158.0/_util/assert.ts": "e94f2eb37cebd7f199952e242c77654e43333c1ac4c5c700e929ea3aa5489f74",
     "https://deno.land/std@0.158.0/bytes/bytes_list.ts": "aba5e2369e77d426b10af1de0dcc4531acecec27f9b9056f4f7bfbf8ac147ab4",
     "https://deno.land/std@0.158.0/bytes/equals.ts": "3c3558c3ae85526f84510aa2b48ab2ad7bdd899e2e0f5b7a8ffc85acb3a6043a",
     "https://deno.land/std@0.158.0/bytes/mod.ts": "763f97d33051cc3f28af1a688dfe2830841192a9fea0cbaa55f927b49d49d0bf",
-    "https://deno.land/std@0.158.0/encoding/base64.ts": "c57868ca7fa2fbe919f57f88a623ad34e3d970d675bdc1ff3a9d02bba7409db2",
     "https://deno.land/std@0.158.0/fmt/colors.ts": "ff7dc9c9f33a72bd48bc24b21bbc1b4545d8494a431f17894dbc5fe92a938fc4",
     "https://deno.land/std@0.158.0/io/buffer.ts": "fae02290f52301c4e0188670e730cd902f9307fb732d79c4aa14ebdc82497289",
     "https://deno.land/std@0.158.0/io/files.ts": "d199ef64e918a256320ba8d8d44ae91de87c9077df8f8d6cca013f1b9fbbe285",
@@ -18,9 +25,11 @@
     "https://deno.land/std@0.158.0/testing/_diff.ts": "a23e7fc2b4d8daa3e158fa06856bedf5334ce2a2831e8bf9e509717f455adb2c",
     "https://deno.land/std@0.158.0/testing/_format.ts": "cd11136e1797791045e639e9f0f4640d5b4166148796cad37e6ef75f7d7f3832",
     "https://deno.land/std@0.158.0/testing/asserts.ts": "8696c488bc98d8d175e74dc652a0ffbc7fca93858da01edc57ed33c1148345da",
-    "https://deno.land/std@0.158.0/textproto/mod.ts": "84c243523e3f5ca1ee3a5e0be1ef2842e8418614d0aedc802ff16bc1dc40d236",
-    "https://deno.land/x/hextools@v1.0.0/mod.ts": "72d2e6960407dd043ea5a616fe1b4c5506e67fd824cb8e63d4341a9d9b2a9254",
-    "https://deno.land/x/hextools@v1.0.0/src/buffer_to_hex.ts": "9ba639e48c6a45e803b6d9506a1193285cefaffb5b2eb7671fb76a3fd0fae93f",
-    "https://deno.land/x/hextools@v1.0.0/src/hex_to_buffer.ts": "9dac9e83dea2d601e457d556b5274779f626d19008129961fe63d1f961051440"
+    "https://deno.land/std@0.158.0/textproto/mod.ts": "84c243523e3f5ca1ee3a5e0be1ef2842e8418614d0aedc802ff16bc1dc40d236"
+  },
+  "workspace": {
+    "dependencies": [
+      "jsr:@std/encoding@^1.0.10"
+    ]
   }
 }

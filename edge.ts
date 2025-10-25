@@ -1,5 +1,4 @@
-import { decode } from 'https://deno.land/std@0.158.0/encoding/base64.ts'
-import { bufferToHex } from 'https://deno.land/x/hextools@v1.0.0/mod.ts'
+import { decodeBase64 } from '@std/encoding'
 import { BufReader, BufWriter } from 'https://deno.land/std@0.158.0/io/mod.ts'
 import { TextProtoReader } from 'https://deno.land/std@0.158.0/textproto/mod.ts'
 
@@ -177,8 +176,8 @@ export default async function handleRequest(
   }
 
   // Convert hashes to a format Scoop understands
-  item.Hashes.Sha1 = bufferToHex(decode(item.Hashes.Sha1))
-  item.Hashes.Sha256 = bufferToHex(decode(item.Hashes.Sha256))
+  item.Hashes.Sha1 = decodeBase64(item.Hashes.Sha1).toHex()
+  item.Hashes.Sha256 = decodeBase64(item.Hashes.Sha256).toHex()
 
   return new Response(JSON.stringify(item), {
     headers: {

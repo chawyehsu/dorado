@@ -5,5 +5,8 @@
   },
   "tasks": {
     "dev": "deno run --allow-net --allow-read --allow-env --watch index.ts"
+  },
+  "imports": {
+    "@std/encoding": "jsr:@std/encoding@^1.0.10"
   }
 }
