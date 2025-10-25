@@ -1,7 +1,7 @@
 name: Deno Deploy
 on:
   push:
-    branches: api
+    branches: [api]
 
 jobs:
   deploy:
@@ -14,7 +14,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Install Deno
         uses: denoland/setup-deno@v2
