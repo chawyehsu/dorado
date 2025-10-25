@@ -1,11 +1,14 @@
-export default async function handleRequest(request: Request): Promise<Response> {
-  const UPSTREAM_API = 'https://cloud.189.cn/api/portal/listClients.action?pcClientType='
+export default async function handleRequest(
+  request: Request,
+): Promise<Response> {
+  const UPSTREAM_API =
+    'https://cloud.189.cn/api/portal/listClients.action?pcClientType='
 
   const response = await fetch(UPSTREAM_API, {
-    method: "GET",
+    method: 'GET',
     headers: {
-      "user-agent": "Deno/1.0 (Deno Deploy) Scoop/1.0 (+https://scoop.sh)",
-      "content-type": "application/x-www-form-urlencoded",
+      'user-agent': 'Deno/1.0 (Deno Deploy) Scoop/1.0 (+https://scoop.sh)',
+      'content-type': 'application/x-www-form-urlencoded',
     },
   })
 
@@ -22,14 +25,17 @@ export default async function handleRequest(request: Request): Promise<Response>
       return Response.redirect(url, 302)
     }
 
-    return new Response(JSON.stringify({
-      'url': url,
-      'version': version
-    }), {
-      headers: {
-        "content-type": "application/json; charset=UTF-8",
-      }
-    })
+    return new Response(
+      JSON.stringify({
+        'url': url,
+        'version': version,
+      }),
+      {
+        headers: {
+          'content-type': 'application/json; charset=UTF-8',
+        },
+      },
+    )
   }
 
   return new Response(
@@ -37,7 +43,7 @@ export default async function handleRequest(request: Request): Promise<Response>
     {
       status: 500,
       headers: {
-        "content-type": "application/json; charset=UTF-8",
+        'content-type': 'application/json; charset=UTF-8',
       },
     },
   )

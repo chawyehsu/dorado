@@ -1,9 +1,9 @@
-import handlerAliyunDrive from "./alipan.ts"
-import handlerAppxqq from "./appxqq.ts"
-import handlerEdge from "./edge.ts"
-import handleTianyiEcloud from "./tianyi-ecloud.ts"
-import handleSwift from "./swift.ts"
-import handlerNeteaseUU from "./neteaseuu.ts"
+import handlerAliyunDrive from './alipan.ts'
+import handlerAppxqq from './appxqq.ts'
+import handlerEdge from './edge.ts'
+import handleTianyiEcloud from './tianyi-ecloud.ts'
+import handleSwift from './swift.ts'
+import handlerNeteaseUU from './neteaseuu.ts'
 
 async function handler(request: Request): Promise<Response> {
   const { pathname } = new URL(request.url)
@@ -40,28 +40,28 @@ async function handler(request: Request): Promise<Response> {
 
   return new Response(
     JSON.stringify({
-      message: "need to specify an action",
-      help: "https://github.com/chawyehsu/dorado/tree/api",
+      message: 'need to specify an action',
+      help: 'https://github.com/chawyehsu/dorado/tree/api',
       actions: [
-        "/alipan",
-        "/alipan?version=&dl",
-        "/appxqq",
-        "/appxqq?dl",
-        "/edge?arch=&channel=",
-        "/edge?arch=&channel=&dl",
-        "/tianyi-ecloud",
-        "/tianyi-ecloud?dl",
-        "/neteaseuu?version=",
-      ]
+        '/alipan',
+        '/alipan?version=&dl',
+        '/appxqq',
+        '/appxqq?dl',
+        '/edge?arch=&channel=',
+        '/edge?arch=&channel=&dl',
+        '/tianyi-ecloud',
+        '/tianyi-ecloud?dl',
+        '/neteaseuu?version=',
+      ],
     }),
     {
       status: 200,
       headers: {
-        "content-type": "application/json; charset=UTF-8",
+        'content-type': 'application/json; charset=UTF-8',
       },
     },
   )
 }
 
-console.log("Listening on port 8000")
+console.log('Listening on port 8000')
 Deno.serve(handler)
