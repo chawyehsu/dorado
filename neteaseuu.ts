@@ -53,9 +53,9 @@ export default async function handleRequest(request: Request): Promise<Response>
 
   const js = await r.text()
   const match = js.match(new RegExp(regex))
-  if (!match) {
+  if (!match || match.length < 2) {
     return new Response('Failed to find download keys', { status: 500 })
   }
 
-  return Response.redirect(match[0], 302);
+  return Response.redirect(match[1], 302);
 }
