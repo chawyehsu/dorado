@@ -49,7 +49,7 @@ export default async function handleRequest(request: Request): Promise<Response>
     },
   })
 
-  const regex = `${downloadUrl.replaceAll(/\./g, '\\.')}\\?key.*?"`
+  const regex = `(${downloadUrl.replaceAll(/\./g, '\\.')}\\?key.*?)"`
 
   const js = await r.text()
   const match = js.match(new RegExp(regex))
