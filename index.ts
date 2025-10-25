@@ -3,6 +3,7 @@ import handlerAppxqq from "./appxqq.ts"
 import handlerEdge from "./edge.ts"
 import handleTianyiEcloud from "./tianyi-ecloud.ts"
 import handleSwift from "./swift.ts"
+import handlerNeteaseUU from "./neteaseuu.ts"
 
 async function handler(request: Request): Promise<Response> {
   const { pathname } = new URL(request.url)
@@ -27,6 +28,11 @@ async function handler(request: Request): Promise<Response> {
     return await handlerEdge(request)
   }
 
+  // neteaseuu
+  if (pathname === '/neteaseuu') {
+    return await handlerNeteaseUU(request)
+  }
+
   // tianyi-ecloud
   if (pathname === '/tianyi-ecloud') {
     return await handleTianyiEcloud(request)
@@ -44,7 +50,8 @@ async function handler(request: Request): Promise<Response> {
         "/edge?arch=&channel=",
         "/edge?arch=&channel=&dl",
         "/tianyi-ecloud",
-        "/tianyi-ecloud?dl"
+        "/tianyi-ecloud?dl",
+        "/neteaseuu?version=",
       ]
     }),
     {
