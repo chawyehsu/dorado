@@ -1,6 +1,6 @@
-import { decodeBase64 } from '@std/encoding'
 import { BufReader, BufWriter } from 'https://deno.land/std@0.158.0/io/mod.ts'
 import { TextProtoReader } from 'https://deno.land/std@0.158.0/textproto/mod.ts'
+import { decodeBase64 } from '@std/encoding'
 
 interface DownloadInfo {
   FileId: string
@@ -168,8 +168,8 @@ export default async function handleRequest(
   }
 
   // Find the install package and not the update packages
-  const item = data.find((item: DownloadInfo) =>
-    item.FileId.split('_').length === 3
+  const item = data.find(
+    (item: DownloadInfo) => item.FileId.split('_').length === 3,
   )
   if (sp.has('dl')) {
     return Response.redirect(item.Url, 302)
