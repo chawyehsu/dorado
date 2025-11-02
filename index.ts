@@ -4,6 +4,9 @@ import handlerEdge from './edge.ts'
 import handleTianyiEcloud from './tianyi-ecloud.ts'
 import handleSwift from './swift.ts'
 import handlerNeteaseUU from './neteaseuu.ts'
+import { toHexPolyfill } from './utils.ts'
+
+toHexPolyfill()
 
 async function handler(request: Request): Promise<Response> {
   const { pathname } = new URL(request.url)

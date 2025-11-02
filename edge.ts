@@ -169,7 +169,7 @@ export default async function handleRequest(
 
   // Find the install package and not the update packages
   const item = data.find((item: DownloadInfo) =>
-    item.FileId.split('_').length == 3
+    item.FileId.split('_').length === 3
   )
   if (sp.has('dl')) {
     return Response.redirect(item.Url, 302)
