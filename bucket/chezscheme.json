@@ -4,7 +4,7 @@
     "license": "Apache-2.0",
     "version": "10.3.0",
     "depends": "dark",
-    "url": "https://github.com/cisco/ChezScheme/releases/download/v10.3.0/ChezScheme10.3.0.exe",
+    "url": "https://github.com/cisco/ChezScheme/releases/download/v10.3.0/ChezScheme.exe",
     "hash": "3cbb49061e01bcc7305642dbd3ebc2d10ca923a1ec66359140fafafea60809d1",
     "architecture": {
         "64bit": {
@@ -26,10 +26,6 @@
         "github": "https://github.com/cisco/ChezScheme"
     },
     "autoupdate": {
-        "url": "https://github.com/cisco/ChezScheme/releases/download/v$version/ChezScheme$version.exe",
-        "hash": {
-            "url": "https://github.com/cisco/ChezScheme/releases/tag/v$version",
-            "regex": "$basename: $sha256"
-        }
+        "url": "https://github.com/cisco/ChezScheme/releases/download/v$version/ChezScheme.exe"
     }
 }
