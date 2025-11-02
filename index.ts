@@ -1,6 +1,7 @@
 import handlerAliyunDrive from './alipan.ts'
 import handlerAppxqq from './appxqq.ts'
 import handlerEdge from './edge.ts'
+import handleKook from './kook.ts'
 import handlerNeteaseUU from './neteaseuu.ts'
 import handleSwift from './swift.ts'
 import handleTianyiEcloud from './tianyi-ecloud.ts'
@@ -31,6 +32,11 @@ async function handler(request: Request): Promise<Response> {
     return await handlerEdge(request)
   }
 
+  // kook
+  if (pathname === '/kook') {
+    return await handleKook(request)
+  }
+
   // neteaseuu
   if (pathname === '/neteaseuu') {
     return await handlerNeteaseUU(request)
@@ -55,6 +61,7 @@ async function handler(request: Request): Promise<Response> {
         '/tianyi-ecloud',
         '/tianyi-ecloud?dl',
         '/neteaseuu?version=',
+        '/kook?version=',
       ],
     }),
     {
