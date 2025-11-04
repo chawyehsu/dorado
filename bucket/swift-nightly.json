@@ -5,12 +5,12 @@
     "version": "20251103.3",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/thebrowsercompany/swift-build/releases/download/20251103.3/installer-amd64.exe",
-            "hash": "0c7cccd7982dd4437aab054ac85f8652f045f45460d8b73850097c24d7694bd6"
+            "url": "https://github.com/thebrowsercompany/swift-build/releases/download/20251103.3/installer-offline-amd64.exe",
+            "hash": "32e88a38f0ab12cfdfd28ce343b66f8735aeb318d265adac5e78a25903b7cd39"
         },
         "arm64": {
-            "url": "https://github.com/thebrowsercompany/swift-build/releases/download/20251103.3/installer-arm64.exe",
-            "hash": "e09f2eac5afa7c55a98785978112898ddc1c47f749b031a8c02e74356afa37c3"
+            "url": "https://github.com/thebrowsercompany/swift-build/releases/download/20251103.3/installer-offline-arm64.exe",
+            "hash": "7132a14107babead92d5f462aba5d7b117924df2d981ae0d4b370050b877fe52"
         }
     },
     "depends": "main/wixtoolset",
@@ -63,14 +63,11 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/thebrowsercompany/swift-build/releases/download/$version/installer-amd64.exe"
+                "url": "https://github.com/thebrowsercompany/swift-build/releases/download/$version/installer-offline-amd64.exe"
             },
             "arm64": {
-                "url": "https://github.com/thebrowsercompany/swift-build/releases/download/$version/installer-arm64.exe"
+                "url": "https://github.com/thebrowsercompany/swift-build/releases/download/$version/installer-offline-arm64.exe"
             }
-        },
-        "hash": {
-            "url": "$url.sha256"
         }
     },
     "notes": [
