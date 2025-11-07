@@ -1,6 +1,6 @@
 {
     "version": "2.132.0",
-    "description": "Ledger Live (Desktop)",
+    "description": "Ledger Wallet, formerly Ledger Live (Desktop)",
     "homepage": "https://www.ledger.com/ledger-live",
     "license": "MIT",
     "architecture": {
@@ -10,15 +10,15 @@
             "installer": {
                 "script": [
                     "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" -DestinationPath \"$dir\" -Removal",
-                    "Remove-Item \"$dir\\`$PLUGINSDIR\" -Force -Recurse"
+                    "Remove-Item \"$dir\\`$R0\",\"$dir\\`$PLUGINSDIR\" -Force -Recurse"
                 ]
             }
         }
     },
     "shortcuts": [
         [
-            "Ledger Live.exe",
-            "Ledger Live"
+            "Ledger Wallet.exe",
+            "Ledger Wallet"
         ]
     ],
     "checkver": {
