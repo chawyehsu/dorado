@@ -1,13 +1,13 @@
 {
-    "version": "1.240.0",
+    "version": "1.241.2",
     "description": "CLI and Rust libraries for low-level manipulation of WebAssembly modules",
     "homepage": "https://github.com/bytecodealliance/wasm-tools",
     "license": "Apache-2.0|MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/bytecodealliance/wasm-tools/releases/download/v1.240.0/wasm-tools-1.240.0-x86_64-windows.zip",
-            "hash": "81f012832e80fe09d384d86bb961d4779f6372a35fa965cc64efe318001ab27e",
-            "extract_dir": "wasm-tools-1.240.0-x86_64-windows"
+            "url": "https://github.com/bytecodealliance/wasm-tools/releases/download/v1.241.2/wasm-tools-1.241.2-x86_64-windows.zip",
+            "hash": "9eb1af8331ec073d37bb025598426dcb747bd51db085861066e123b9e823fa52",
+            "extract_dir": "wasm-tools-1.241.2-x86_64-windows"
         }
     },
     "bin": "wasm-tools.exe",
