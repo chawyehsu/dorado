@@ -1,0 +1,38 @@
+{
+    "homepage": "https://pixcall.com/",
+    "description": "Pixcall is a local digital asset manager for designers with easy media organization and multi-sync support.",
+    "version": "0.9.3+build2",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://docs.pixcall.com/docs/about/agreement/"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://px-releases.pixcall.com/desktop/Pixcall-0.9.3+build2-win-x64.exe#/dl.7z",
+            "hash": "7b658a55aa2b7746cc751b328c8ee4d31d20b3ff68683b5fad39f8a23747badb"
+        }
+    },
+    "installer": {
+        "script": [
+            "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
+            "Remove-Item \"$dir\\`$PLUGINSDIR\",\"$dir\\`$R0\",\"$dir\\Uninst*\" -Force -Recurse"
+        ]
+    },
+    "shortcuts": [
+        [
+            "Pixcall.exe",
+            "Pixcall"
+        ]
+    ],
+    "checkver": {
+        "url": "https://pixcall.com/download/",
+        "regex": "version\":\"([\\d.]+(\\+[a-z0-9]+))\""
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://px-releases.pixcall.com/desktop/Pixcall-$version-win-x64.exe#/dl.7z"
+            }
+        }
+    }
+}
