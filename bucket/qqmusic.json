@@ -1,10 +1,10 @@
 {
     "homepage": "https://y.qq.com/",
     "description": "The official QQ Music client",
-    "version": "21.61",
+    "version": "21.92",
     "license": "Proprietary",
-    "url": "https://c.y.qq.com/cgi-bin/file_redirect.fcg?bid=dldir&file=ecosfile%2Fmusic_clntupate%2Fpc%2Fother%2FQQMusic_Setup_2161.exe&sign=1-c630686be67e75b88b06d2e82e16f8ba7097ab138acb5a4aac811db4c8dcd4b7-686b921a#/dl.7z",
-    "hash": "950572828b56351f2342924b7ebfb395af046e0a09770836a0d181364ffad33b",
+    "url": "https://c.y.qq.com/cgi-bin/file_redirect.fcg?bid=dldir&file=ecosfile%2Fmusic_clntupate%2Fpc%2Fother%2FQQMusic_Setup_2192.exe&sign=1-d6866199d19e35c8a07c9faf1eca71659cb525d1a0fd7063015a2fce964162bc-68d8e14c#/dl.7z",
+    "hash": "f6c6d0d41b886590d8a840033b249a1d86d63bf01173a5dc8071790cac092f07",
     "installer": {
         "script": [
             "# simulate instok check",
@@ -41,6 +41,6 @@
         "replace": "${major}.${minor}"
     },
     "autoupdate": {
-        "url": "https://c.y.qq.com/cgi-bin/file_redirect.fcg?bid=dldir&file=ecosfile%2Fmusic_clntupate%2Fpc%2Fother%2FQQMusic_Setup_$cleanVersion.exe&sign=1-c630686be67e75b88b06d2e82e16f8ba7097ab138acb5a4aac811db4c8dcd4b7-686b921a#/dl.7z"
+        "url": "https://c.y.qq.com/cgi-bin/file_redirect.fcg?bid=dldir&file=ecosfile%2Fmusic_clntupate%2Fpc%2Fother%2FQQMusic_Setup_$cleanVersion.exe&sign=1-d6866199d19e35c8a07c9faf1eca71659cb525d1a0fd7063015a2fce964162bc-68d8e14c#/dl.7z"
     }
 }
