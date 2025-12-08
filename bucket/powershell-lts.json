@@ -1,20 +1,20 @@
 {
     "homepage": "https://github.com/PowerShell/PowerShell",
-    "description": "PowerShell, the cross-platform task automation and configuration management framework/tool.",
-    "version": "7.5.4",
+    "description": "PowerShell (LTS), the cross-platform task automation and configuration management framework/tool.",
+    "version": "7.4.13",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.5.4/PowerShell-7.5.4-win-x64.zip",
-            "hash": "b40d192ae95ba6ccc4cc362ff4e1b18ca6fb5055bebbcd3920684e12701fa8f6"
+            "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.4.13/PowerShell-7.4.13-win-x64.zip",
+            "hash": "8fb52d2172d285b230c2857a90ba4dd28ecf6477ba4a91f91b6854a647b33b65"
         },
         "32bit": {
-            "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.5.4/PowerShell-7.5.4-win-x86.zip",
-            "hash": "8283470773105dc8481ae28673c688b95dbd11c2cc7887b933a6caeed3b76407"
+            "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.4.13/PowerShell-7.4.13-win-x86.zip",
+            "hash": "39f2ca251e27c2721282a4b0ec3b18f093ffd57867b2edd53b23033c333fdc34"
         },
         "arm64": {
-            "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.5.4/PowerShell-7.5.4-win-arm64.zip",
-            "hash": "0c0b2bf04e853917508280531cd49bba8b3049837e3c805ebc042e2741ca52b3"
+            "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.4.13/PowerShell-7.4.13-win-arm64.zip",
+            "hash": "1820febe6f9567c8bab21be601dacb902777c1185e1beb81843c3a6f902d6b9d"
         }
     },
     "bin": "pwsh.exe",
@@ -24,7 +24,10 @@
             "PowerShell"
         ]
     ],
-    "checkver": "github",
+    "checkver": {
+        "url": "https://api.github.com/repos/PowerShell/PowerShell/releases?per_page=10",
+        "regex": "v(7.4[\\d.]+)"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {
