@@ -33,7 +33,7 @@
             "Move-Item -Path \"$dir\\LocalApp\\Programs\\Swift\\Platforms\\$productVersion\\*.platform\" -Destination \"$dir\\LocalApp\\Programs\\Swift\\Platforms\"",
             "Move-Item -Path \"$dir\\LocalApp\\Programs\\Swift\\Redistributables\\$productVersion\\*\" -Destination \"$dir\\LocalApp\\Programs\\Swift\\Redistributables\"",
             "Get-ChildItem \"$dir\\LocalApp\\Programs\\Swift\" | ForEach-Object {",
-            "    Move-Item -Path $_ -Destination \"$dir\\\" -Force",
+            "    Move-Item -Path \"$($_.FullName)\" -Destination \"$dir\\\" -Force",
             "}",
             "Remove-Item \"$dir\\Platforms\\$productVersion\" -Recurse | Out-Null",
             "Remove-Item \"$dir\\Redistributables\\$productVersion\" -Recurse | Out-Null",
