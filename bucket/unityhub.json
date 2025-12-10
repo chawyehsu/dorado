@@ -5,11 +5,11 @@
         "identifier": "Freeware",
         "url": "https://unity3d.com/legal/terms-of-service"
     },
-    "version": "3.15.2",
+    "version": "3.15.3",
     "architecture": {
         "64bit": {
             "url": "https://public-cdn.cloud.unity3d.com/hub/prod/UnityHubSetup.exe#/dl.7z",
-            "hash": "6bb6dabc4b7b7a43d6740e8e8d24478e4be324b8d02cfec0188a1cb93145ced3",
+            "hash": "e63e78a347fc60e200e1d417e3da73fbef0f28ded5b08f3a7e816f6685f85e59",
             "installer": {
                 "script": [
                     "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
