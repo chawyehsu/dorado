@@ -3,21 +3,51 @@
     "description": "Automatically switches between the dark and light theme of Windows 10 and Windows 11",
     "version": "11.0.0.54",
     "license": "GPL-3.0-only",
-    "url": "https://github.com/AutoDarkMode/Windows-Auto-Night-Mode/releases/download/11.0.0.54/AutoDarkMode_11.0.0.54_x86.zip",
-    "hash": "4323e639fb363a90b3ca7de0e9523bdfd7e09bc45bb272f5eb6f2ccc8651b512",
-    "extract_dir": "adm-app\\ui",
+    "extract_dir": "adm-app",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/AutoDarkMode/Windows-Auto-Night-Mode/releases/download/11.0.0.54/AutoDarkMode_11.0.0.54_x64.exe",
+            "hash": "C8C6CD8F679C01402AA5F7C1091C17F0E5D6214E38FE07AFA6BD5A88939CC620"
+        },
+        "32bit": {
+            "url": "https://github.com/AutoDarkMode/Windows-Auto-Night-Mode/releases/download/11.0.0.54/AutoDarkMode_11.0.0.54_x86.exe",
+            "hash": "C8C6CD8F679C01402AA5F7C1091C17F0E5D6214E38FE07AFA6BD5A88939CC620"
+        },
+        "arm64": {
+            "url": "https://github.com/AutoDarkMode/Windows-Auto-Night-Mode/releases/download/11.0.0.54/AutoDarkMode_11.0.0.54_ARM64.exe",
+            "hash": "02529BB298CE6A9953E33C9F1BBF8249E064DEF9466088E25E0CDB034E338D4D"
+        }
+    },
     "shortcuts": [
         [
-            "AutoDarkModeApp.exe",
+            "adm-app\\ui\\AutoDarkModeApp.exe",
             "Auto Dark Mode"
         ]
     ],
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/AutoDarkMode/Windows-Auto-Night-Mode/releases/download/$version/AutoDarkMode_$version_x86.zip",
-        "hash": {
-            "url": "$baseurl/AutoDarkMode_$version_x86.sha256",
-            "mode": "extract"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/AutoDarkMode/Windows-Auto-Night-Mode/releases/download/$version/AutoDarkMode_$version_x64.exe",
+                "hash": {
+                    "url": "$baseurl/AutoDarkMode_$version_x64.exe.sha256",
+                    "mode": "extract"
+                }
+            },
+            "32bit": {
+                "url": "https://github.com/AutoDarkMode/Windows-Auto-Night-Mode/releases/download/$version/AutoDarkMode_$version_x86.exe",
+                "hash": {
+                    "url": "$baseurl/AutoDarkMode_$version_x86.exe.sha256",
+                    "mode": "extract"
+                }
+            },
+            "arm64": {
+                "url": "https://github.com/AutoDarkMode/Windows-Auto-Night-Mode/releases/download/$version/AutoDarkMode_$version_ARM64.exe",
+                "hash": {
+                    "url": "$baseurl/AutoDarkMode_$version_ARM64.exe.sha256",
+                    "mode": "extract"
+                }
+            }
         }
     }
 }
