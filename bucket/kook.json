@@ -1,10 +1,10 @@
 {
-    "version": "0.100.1.0",
+    "version": "0.100.3.0",
     "description": "KOOK, formerly KaiHeiLa, is a voice communication tool that is known as the Chinese Discord",
     "homepage": "https://www.kookapp.cn/",
     "license": "Proprietary",
-    "url": "https://dl.kookapp.cn/assets/release/html_pc/kook_2353/Kook_PC_Setup_v0.100.1.0_b2ZmaWNpYWwuc2l0ZS4uLi5wYw==.exe#/dl.7z",
-    "hash": "6706d2b9ddb8ffc4261bcd83c113771c4cc12f863798d50b2cb8e50ba5f30d68",
+    "url": "https://dl.kookapp.cn/assets/release/html_pc/kook_2360/Kook_PC_Setup_v0.100.3.0_b2ZmaWNpYWwuc2l0ZS4uLi5wYw==.exe#/dl.7z",
+    "hash": "5bdac89556138fe312ed95a4e38c0bf90d6e62a13b7805647e5dc0053beea7c9",
     "installer": {
         "script": [
             "Expand-7zipArchive -Path \"$dir\\`$1\\SquirrelTemp\\app.7z\" -Destination \"$dir\" -Removal",
