@@ -1,0 +1,48 @@
+{
+    "version": "3.10.16",
+    "description": "腾讯文档 - 跨平台多人实时协作的可在线编辑文档",
+    "homepage": "https://docs.qq.com/desktop",
+    "license": "Freeware",
+    "architecture": {
+        "64bit": {
+            "url": "https://docs.qq.com/api/package/get?channel_id=30001&version_id=latest&package_name=TencentDocs-x86_64.exe#/dl.7z",
+            "hash": "da01ae488346659b26c17a8770afa5d5d81c6f8c1e11e85228e8d183bf3392a3"
+        },
+        "32bit": {
+            "url": "https://docs.qq.com/api/package/get?channel_id=30001&version_id=latest&package_name=TencentDocs-x86_64.exe#/dl.7z",
+            "hash": "da01ae488346659b26c17a8770afa5d5d81c6f8c1e11e85228e8d183bf3392a3"
+        }
+    },
+    "pre_install": [
+        "$app = if ($architecture -eq '64bit') { 'app-64.7z' } else { 'app-32.7z' }",
+        "& 7z x \"$dir\\`$PLUGINSDIR\\$app\" \"-o$dir\" -y | Out-Null",
+        "Move-Item \"$dir\\`$R0\\Uninstall TencentDocs.exe\" \"$dir\" -Force",
+        "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\`$R0\", \"$dir\\$fname\" -Recurse -Force -ErrorAction SilentlyContinue"
+    ],
+    "bin": "TencentDocs.exe",
+    "shortcuts": [
+        [
+            "TencentDocs.exe",
+            "腾讯文档"
+        ]
+    ],
+    "checkver": {
+        "script": [
+            "$url = 'https://docs.qq.com/rainbow/config.v2.ConfigService/PullConfigReq'",
+            "$payload = '{\"pull_item\":{\"app_id\":\"e4099bf9-f579-4233-9a15-6625a48bcb56\",\"group\":\"Prod.Common.AutoUpdate\",\"envName\":\"Default\"}}'",
+            "$res = Invoke-RestMethod -Method Post -Uri $url -Body $payload -ContentType 'application/json'",
+            "Write-Output $res.config.items[0].key_values[0].value"
+        ],
+        "regex": "'30001':\\s*(?<version>[\\d.]+)\\n"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://docs.qq.com/api/package/get?channel_id=30001&version_id=latest&package_name=TencentDocs-x86_64.exe#/dl.7z"
+            },
+            "32bit": {
+                "url": "https://docs.qq.com/api/package/get?channel_id=30001&version_id=latest&package_name=TencentDocs-x86_64.exe#/dl.7z"
+            }
+        }
+    }
+}
