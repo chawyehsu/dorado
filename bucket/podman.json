@@ -14,6 +14,7 @@
         }
     },
     "extract_dir": "PFiles64\\Podman",
+    "post_install": "Remove-Item \"$dir\\*.html\" -Force -ErrorAction SilentlyContinue",
     "bin": "podman.exe",
     "checkver": {
         "github": "https://github.com/containers/podman"
