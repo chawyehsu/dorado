@@ -31,6 +31,11 @@
         "    $defaultSettings | Out-File -FilePath $settingsPath -Encoding UTF8",
         "}"
     ],
+    "suggest": {
+        "docker-compose": "dorado/docker-compose",
+        "kubectl": "main/kubectl",
+        "kind": "main/kind"
+    },
     "shortcuts": [
         [
             "Podman Desktop.exe",
