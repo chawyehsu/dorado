@@ -22,6 +22,15 @@
             ]
         }
     },
+    "post_install": [
+        "# https://github.com/podman-desktop/podman-desktop/blob/main/website/docs/configuration/settings-reference.md",
+        "$settingsPath = Join-Path $env:USERPROFILE '\\.local\\share\\containers\\podman-desktop\\configuration\\settings.json'",
+        "if (-not (Test-Path $settingsPath)) {",
+        "    New-Item -ItemType Directory -Path (Split-Path $settingsPath) -Force | Out-Null",
+        "    $defaultSettings = '{\"telemetry.enabled\":false,\"telemetry.check\":true,\"preferences.update.reminder\":\"never\"}'",
+        "    $defaultSettings | Out-File -FilePath $settingsPath -Encoding UTF8",
+        "}"
+    ],
     "shortcuts": [
         [
             "Podman Desktop.exe",
