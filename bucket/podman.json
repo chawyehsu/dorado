@@ -16,6 +16,9 @@
     "extract_dir": "PFiles64\\Podman",
     "post_install": "Remove-Item \"$dir\\*.html\" -Force -ErrorAction SilentlyContinue",
     "bin": "podman.exe",
+    "suggest": {
+        "docker-compose": "dorado/docker-compose"
+    },
     "checkver": {
         "github": "https://github.com/containers/podman"
     },
