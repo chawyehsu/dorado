@@ -1,13 +1,13 @@
 {
     "homepage": "https://work.weixin.qq.com/",
     "description": "Messaging and calling application for business",
-    "version": "5.0.3.6005",
+    "version": "5.0.6.6013",
     "license": {
         "identifier": "Proprietary",
         "url": "https://work.weixin.qq.com/eula"
     },
-    "url": "https://dldir1.qq.com/wework/work_weixin/WeCom_5.0.3.6005.exe#/dl.7z",
-    "hash": "f9739183d0ed67655f914268b2aa1354d3e43ae14f73b0ba17b15af520963c68",
+    "url": "https://dldir1.qq.com/wework/work_weixin/WeCom_5.0.6.6013.exe#/dl.7z",
+    "hash": "c428313e499bdf1cd3d1f576a486dfcc19ed81077609783267fd0743545a57d8",
     "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\",\"$dir\\Uninstall*\" -Force -Recurse",
     "shortcuts": [
         [
