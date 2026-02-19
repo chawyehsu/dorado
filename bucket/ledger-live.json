@@ -1,12 +1,12 @@
 {
-    "version": "2.139.1",
+    "version": "2.141.0",
     "description": "Ledger Wallet, formerly Ledger Live (Desktop)",
     "homepage": "https://www.ledger.com/ledger-live",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://download.live.ledger.com/ledger-live-desktop-2.139.1-win-x64.exe#/dl.7z",
-            "hash": "sha512:fe17e98c419b81cf8ac55f06065832463319d7419135120efe8ac6cff185c781362a86d2b5679b619ff0d836c4c497528356be7484930dce6d1375416f99bfbb",
+            "url": "https://download.live.ledger.com/ledger-live-desktop-2.141.0-win-x64.exe#/dl.7z",
+            "hash": "sha512:ef70f89e64c07b83100e990de643f70900f69e25a2b5ae72d79376cd67f2431385ed7d26c88b243fc7b1dbc88a8a6a5fb79ec352645ea845a5d0238a856742b0",
             "installer": {
                 "script": [
                     "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" -DestinationPath \"$dir\" -Removal",
