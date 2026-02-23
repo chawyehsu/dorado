@@ -1,0 +1,28 @@
+{
+    "version": "3.9.0",
+    "description": "CLI tool to pin GitHub Actions to full hashes and versions",
+    "license": "MIT",
+    "homepage": "https://github.com/suzuki-shunsuke/pinact",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/suzuki-shunsuke/pinact/releases/download/v3.9.0/pinact_windows_amd64.zip",
+            "hash": "b923a567f88417d79ce183e59c2a2372d9cae9b697a472ce1f95d745932746b1"
+        },
+        "arm64": {
+            "url": "https://github.com/suzuki-shunsuke/pinact/releases/download/v3.9.0/pinact_windows_arm64.zip",
+            "hash": "a2dbfba73410063ee683636ee61cd57c43f130b7df90442a40f5d57734c73a5a"
+        }
+    },
+    "bin": "pinact.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/suzuki-shunsuke/pinact/releases/download/v$version/pinact_windows_amd64.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/suzuki-shunsuke/pinact/releases/download/v$version/pinact_windows_arm64.zip"
+            }
+        }
+    }
+}
