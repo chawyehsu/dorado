@@ -1,12 +1,12 @@
 {
     "homepage": "https://chatwise.app/",
     "description": "Fast AI Chatbot for any LLM",
-    "version": "0.10.5",
+    "version": "0.10.7",
     "license": "Proprietary",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/egoist/chatwise-releases/releases/download/v0.10.5/ChatWise_0.10.5_x64-setup.exe#/dl.7z",
-            "hash": "0c7a06b3b5488a523398921471b27ff904364781a8ebf2791f143bc50bccef43"
+            "url": "https://github.com/egoist/chatwise-releases/releases/download/v0.10.7/ChatWise_0.10.7_x64-setup.exe#/dl.7z",
+            "hash": "37c59617fc238bfe59e1a017aad4fe7e6217401ef82cf0769c80e2e1332fb083"
         }
     },
     "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\",\"$dir\\Uninst*\" -Force -Recurse -ErrorAction SilentlyContinue",
