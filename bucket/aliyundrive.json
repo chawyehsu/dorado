@@ -1,13 +1,13 @@
 {
-    "version": "6.9.0",
+    "version": "6.9.1",
     "description": "The official client for Alibaba's cloud dirve service",
     "homepage": "https://www.alipan.com/",
     "license": {
         "identifier": "EULA",
         "url": "https://www.alipan.com/protocol/service"
     },
-    "url": "https://dorado-api.deno.dev/alipan?version=6.9.0&dl#/aDrive-6.9.0.7z",
-    "hash": "842f3d0f584c92592e0418241ed80bf19849dbed83808133367c997268651ef4",
+    "url": "https://dorado-api.deno.dev/alipan?version=6.9.1&dl#/aDrive-6.9.1.7z",
+    "hash": "cc40289de6c35821214c816b8a1101c3ada822f05c7da3b770ae432067eea76a",
     "post_install": [
         "@('$PLUGINSDIR', '$TEMP') | ForEach-Object {",
         "    Remove-Item \"$dir\\$_\" -Recurse -Force",
