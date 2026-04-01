@@ -2,10 +2,10 @@ on:
   workflow_dispatch:
   schedule:
     # run at 00:01:00 everyday (UTC)
-    - cron: '1 0 * * *'
+    - cron: "1 0 * * *"
   push:
     branches:
-      - 'master'
+      - "master"
 
 name: Excavator
 jobs:
@@ -14,9 +14,9 @@ jobs:
     runs-on: windows-latest
     if: github.event_name != 'push' || contains(github.event.head_commit.message, 'checkver')
     steps:
-    - uses: actions/checkout@v4
-    - name: Excavate
-      uses: ScoopInstaller/GithubActions@main
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        SKIP_UPDATED: '1'
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+      - name: Excavate
+        uses: ScoopInstaller/GithubActions@main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SKIP_UPDATED: "1"
