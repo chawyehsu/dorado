@@ -2,19 +2,19 @@
     "homepage": "https://im.qq.com/pcqq/index.shtml",
     "description": "An instant messaging software service developed by Tencent",
     "license": "Freeware",
-    "version": "9.9.20.250626",
+    "version": "9.9.29.260401",
     "architecture": {
         "64bit": {
-            "url": "https://dldir1.qq.com/qqfile/qq/QQNT/Windows/QQ_9.9.20_250626_x64_01.exe#/dl.7z",
-            "hash": "97b99108b5be55fd9ebfca9d825b584450f3fd2fc7a96f7ace0587bbcba5cfd7"
+            "url": "https://dldir1v6.qq.com/qqfile/qq/QQNT/Windows/QQ_9.9.29_260401_x64_01.exe#/dl.7z",
+            "hash": "d52601a3224d29364f03f4948a487ecd2710db1921383730801d795397e0a808"
         },
         "32bit": {
-            "url": "https://dldir1.qq.com/qqfile/qq/QQNT/Windows/QQ_9.9.20_250626_x86_01.exe#/dl.7z",
-            "hash": "ab6eb98d0ddd5e6c319a5237e0540e1d5e09c7820c7c1a2844513d766ae911bb"
+            "url": "https://dldir1v6.qq.com/qqfile/qq/QQNT/Windows/QQ_9.9.29_260401_x86_01.exe#/dl.7z",
+            "hash": "7b36370844a6f449389eab73953269d3dd9314d67f078d48987bfcfefee13887"
         },
         "arm64": {
-            "url": "https://dldir1.qq.com/qqfile/qq/QQNT/Windows/QQ_9.9.20_250626_arm64_01.exe#/dl.7z",
-            "hash": "fbf1f99be04c102d02b629e1369891891fe30795c392c33e63f54d7cc0e0c03c"
+            "url": "https://dldir1v6.qq.com/qqfile/qq/QQNT/Windows/QQ_9.9.29_260401_arm64_01.exe#/dl.7z",
+            "hash": "9093d23c99cf337ee6c40a2faf2d339c9299e567133d2e30bd159981f46fd6a9"
         }
     },
     "extract_dir": "Files",
@@ -26,26 +26,33 @@
     ],
     "checkver": {
         "script": [
-            "$url = 'https://im.qq.com/pcqq/index.shtml'",
-            "$resp = Invoke-WebRequest -Uri $url",
-            "$cont = $resp.Content",
-            "$pattern = 'https://qq-web.cdn-go.cn.*windowsDownloadUrl.js'",
-            "$jsUrl = [regex]::Match($cont, $pattern).Value",
-            "Invoke-WebRequest -Uri $jsUrl"
+            "$check_regex = [regex]\"QQNT\\/Windows\\/QQ_([\\d.]+)_([\\d]+)_x64_01\\.exe\"",
+            "$check_url = \"https://cdn-go.cn/qq-web/im.qq.com_new/latest/rainbow/windowsConfig.js\"",
+            "$check_page = Invoke-WebRequest -Uri $check_url -UseBasicParsing | Select-Object -ExpandProperty Content",
+            "$check_page -match $check_regex",
+            "$fetch_version_head = $matches[1]",
+            "$fetch_version_tail = $matches[2]",
+            "$fetch_version = ($fetch_version_head, $fetch_version_tail) -Join \".\"",
+            "$current_version_tail = $json.version -Split \"\\.\" | Select-Object -Last 1",
+            "if ([int]$fetch_version_tail -ge [int]$current_version_tail) {",
+            "    return $fetch_version",
+            "} else {",
+            "    Write-Warning \"[TencentQQNT] Fetched latest version: $fetch_version, aborting update...\"",
+            "    return $json.version",
+            "}"
         ],
-        "regex": "QQNT/Windows/QQ_([\\d\\.]+)_([\\d]+)_x86_01.exe",
-        "replace": "${1}.${2}"
+        "regex": "([\\d.]+)"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://dldir1.qq.com/qqfile/qq/QQNT/Windows/QQ_$match1_$match2_x64_01.exe#/dl.7z"
+                "url": "https://dldir1v6.qq.com/qqfile/qq/QQNT/Windows/QQ_$matchHead_$buildVersion_x64_01.exe#/dl.7z"
             },
             "32bit": {
-                "url": "https://dldir1.qq.com/qqfile/qq/QQNT/Windows/QQ_$match1_$match2_x86_01.exe#/dl.7z"
+                "url": "https://dldir1v6.qq.com/qqfile/qq/QQNT/Windows/QQ_$matchHead_$buildVersion_x86_01.exe#/dl.7z"
             },
             "arm64": {
-                "url": "https://dldir1.qq.com/qqfile/qq/QQNT/Windows/QQ_$match1_$match2_arm64_01.exe#/dl.7z"
+                "url": "https://dldir1v6.qq.com/qqfile/qq/QQNT/Windows/QQ_$matchHead_$buildVersion_arm64_01.exe#/dl.7z"
             }
         }
     }
