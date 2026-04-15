@@ -1,16 +1,16 @@
 {
-    "version": "5.8.1",
+    "version": "5.8.2",
     "description": "A tool for managing OCI containers and pods",
     "homepage": "https://podman.io/",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/containers/podman/releases/download/v5.8.1/podman-installer-windows-amd64.msi",
-            "hash": "1ddee378080ce727023d58ff594b692b7174c85fc2e097a0a2250b6347483cbd"
+            "url": "https://github.com/containers/podman/releases/download/v5.8.2/podman-installer-windows-amd64.msi",
+            "hash": "eda54f26f9695d198d9a679fa45ae24ba35b78444f432b5fe0c122c5a3624c57"
         },
         "arm64": {
-            "url": "https://github.com/containers/podman/releases/download/v5.8.1/podman-installer-windows-arm64.msi",
-            "hash": "86bd05a7575838183e092f35d536f88a35f0c85341a3af0c08c6c095b2c7d6bf"
+            "url": "https://github.com/containers/podman/releases/download/v5.8.2/podman-installer-windows-arm64.msi",
+            "hash": "77e9810e7598ef588b1fe7a850bf6baf572b30545dde82879a31638708c97bcd"
         }
     },
     "extract_dir": "PFiles64\\Podman",
