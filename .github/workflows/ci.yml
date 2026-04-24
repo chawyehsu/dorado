@@ -7,13 +7,16 @@ on:
       - "master"
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   test:
     name: Test
     runs-on: windows-latest
     strategy:
       matrix:
-        shell: [powershell, pwsh]
+        shell: [ powershell, pwsh ]
     defaults:
       run:
         shell: ${{ matrix.shell }}

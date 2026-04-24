@@ -1,3 +1,5 @@
+name: Excavator
+
 on:
   workflow_dispatch:
   schedule:
@@ -7,14 +9,18 @@ on:
     branches:
       - "master"
 
-name: Excavator
+permissions:
+  contents: write
+
 jobs:
   excavate:
     name: Excavate
     runs-on: windows-latest
-    if: github.event_name != 'push' || contains(github.event.head_commit.message, 'checkver')
+    if: github.event_name != 'push' || contains(github.event.head_commit.message,
+      'checkver')
     steps:
-      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
       - name: Excavate
         uses: ScoopInstaller/GithubActions@main
         env:
