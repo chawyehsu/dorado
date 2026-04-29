@@ -20,11 +20,12 @@
         ]
     ],
     "checkver": {
-        "url": "https://mubu.com/apps",
-        "regex": "client/Mubu-([\\d.]+).exe"
+        "url": "https://api2.mubu.com/v3/api/desktop_client/latest_version",
+        "jsonpath": "$.data.windows",
+        "regex": "([\\d.]+)"
     },
     "autoupdate": {
-        "url": "https://assets.mubu.com/client/Mubu-$version.exe#/mubu-$version.7z"
+        "url": "https://assets.mubu.com/client/$version/win/Mubu-$version-ia32.exe#/mubu-$version.7z"
     },
     "notes": "Your Mubu data are stored in '%APPDATA%\\Mubu'"
 }

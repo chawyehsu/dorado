@@ -45,6 +45,7 @@
             "$assetUrl = \"https://api.bilibili.com/x/elec-frontend/update/bilibili-setup-v$ver.exe.blockmap\"",
             "$assetReq = [System.Net.HttpWebRequest]::Create($assetUrl)",
             "$assetReq.Headers.Add('appversion', '0.0.0')",
+            "$assetReq.UserAgent = 'bilibili_pc'",
             "$assetCont = $assetReq.GetResponse().ResponseUri.AbsoluteUri",
             "$r = 'win/([\\d]+)/public'",
             "if (!($assetCont -match $r)) { Write-Error \"Could not match $r in $url\"; continue }",

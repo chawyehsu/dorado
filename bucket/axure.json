@@ -25,7 +25,7 @@
     ],
     "checkver": {
         "url": "https://www.axure.com/release-history",
-        "re": "<b>Axure RP ([\\d.]+)</b>"
+        "regex": "Axure RP ([\\d.]+) for Windows"
     },
     "autoupdate": {
         "url": "https://axure.cachefly.net/versions/$majorVersion-$minorVersion/AxureRP-Setup-$buildVersion.exe#/installer.exe"

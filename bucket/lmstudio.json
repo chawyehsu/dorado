@@ -38,7 +38,8 @@
         ]
     ],
     "checkver": {
-        "regex": "LM-Studio-([\\d.-]+)-x64.exe"
+        "url": "https://lmstudio.ai/downloads",
+        "regex": "win32.*?x64.*?version\\\\\":\\\\\"([\\d.-]+)"
     },
     "autoupdate": {
         "architecture": {

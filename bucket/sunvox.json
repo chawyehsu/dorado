@@ -24,7 +24,7 @@
         }
     },
     "checkver": {
-        "regex": ">Latest release - v([\\d\\w.]+)"
+        "regex": ">Latest release - ([\\w.]+)"
     },
     "autoupdate": {
         "url": "https://www.warmplace.ru/soft/sunvox/sunvox-$version.zip"
