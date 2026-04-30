@@ -1,41 +1,39 @@
 {
-    "version": "7.2-22.1",
-    "description": "The legendary small and friendly GNU editor, UTF-8 and mouse ready for Windows 32/64/ARM CLI",
-    "homepage": "https://github.com/okibcn/nano-for-windows",
+    "version": "9.0-1",
+    "description": "GNU nano text editor for Windows",
+    "homepage": "https://github.com/chawyehsu/nano-for-windows",
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/okibcn/nano-for-windows/releases/download/v7.2-22.1/nano-for-windows_win64_v7.2-22.1.zip",
-            "hash": "ce50a799a5fae37ac36ff2d7f3680968ca4af11a808edad96bcce746c13ccd20"
-        },
-        "32bit": {
-            "url": "https://github.com/okibcn/nano-for-windows/releases/download/v7.2-22.1/nano-for-windows_win32_v7.2-22.1.zip",
-            "hash": "0ac8fa4fc97f5b9eaf16d5b561c4b5df5d923deb29d5a8f21265e58dfaf2513d"
+            "url": "https://github.com/chawyehsu/nano-for-windows/releases/download/v9.0-1/nano-9.0-1-win-64.conda#/dl.zip",
+            "hash": "12e70a1b0b2ad4ec61cae20b2af5db00dc76316240e8a290886314a9f5b484f1"
         },
         "arm64": {
-            "url": "https://github.com/okibcn/nano-for-windows/releases/download/v7.2-22.1/nano-for-windows_arm64_v7.2-22.1.zip",
-            "hash": "30977c243c8eb97d35559b13d742190c2c1d2812cd7691e7e3f3e026ed6de205"
+            "url": "https://github.com/chawyehsu/nano-for-windows/releases/download/v9.0-1/nano-9.0-1-win-arm64.conda#/dl.zip",
+            "hash": "b40ea361484ff0d264f331686e97ec7a2434c56e94199e39cbed2ef0aec44d88"
         }
     },
-    "bin": "nano.exe",
+    "installer": {
+        "script": [
+            "Rename-Item $dir\\pkg*.tar.zst $dir\\nano.tar.zst",
+            "Expand-7zipArchive $dir\\nano.tar.zst $dir",
+            "Remove-Item $dir\\*.tar.zst,$dir\\metadata.json -Force -ErrorAction SilentlyContinue"
+        ]
+    },
+    "bin": "bin\\nano.exe",
     "checkver": {
-        "url": "https://github.com/okibcn/nano-for-windows/releases",
-        "regex": "assets/v([\\d\\.\\-]+)"
+        "github": "https://api.github.com/repos/chawyehsu/nano-for-windows/releases/latest",
+        "jsonpath": "$.tag_name",
+        "regex": "v([\\w.-]+)"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/okibcn/nano-for-windows/releases/download/v$version/nano-for-windows_win64_v$version.zip"
-            },
-            "32bit": {
-                "url": "https://github.com/okibcn/nano-for-windows/releases/download/v$version/nano-for-windows_win32_v$version.zip"
+                "url": "https://github.com/chawyehsu/nano-for-windows/releases/download/v$version/nano-$version-win-64.conda#/dl.zip"
             },
             "arm64": {
-                "url": "https://github.com/okibcn/nano-for-windows/releases/download/v$version/nano-for-windows_arm64_v$version.zip"
+                "url": "https://github.com/chawyehsu/nano-for-windows/releases/download/v$version/nano-$version-win-arm64.conda#/dl.zip"
             }
-        },
-        "hash": {
-            "url": "https://github.com/okibcn/nano-for-windows/releases/download/v$version/hashes.txt"
         }
     }
 }
