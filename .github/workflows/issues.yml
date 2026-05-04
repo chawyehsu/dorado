@@ -5,7 +5,8 @@ on:
     types: [ opened, labeled ]
 
 permissions:
-  contents: read
+  # Auto hash fixing via direct commit
+  contents: write
   issues: write
 
 jobs:
