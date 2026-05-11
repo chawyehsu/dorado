@@ -1,24 +1,17 @@
 {
-    "version": "9.0-1",
+    "version": "9.0-2",
     "description": "GNU nano text editor for Windows",
     "homepage": "https://github.com/chawyehsu/nano-for-windows",
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/chawyehsu/nano-for-windows/releases/download/v9.0-1/nano-9.0-1-win-64.conda#/dl.zip",
-            "hash": "12e70a1b0b2ad4ec61cae20b2af5db00dc76316240e8a290886314a9f5b484f1"
+            "url": "https://github.com/chawyehsu/nano-for-windows/releases/download/v9.0-2/nano-9.0-2-win-64.zip",
+            "hash": "5ce1f44cce0764844dd2d7ab0991a2877c29e7bb0b8476356fd1824d8227bbc9"
         },
         "arm64": {
-            "url": "https://github.com/chawyehsu/nano-for-windows/releases/download/v9.0-1/nano-9.0-1-win-arm64.conda#/dl.zip",
-            "hash": "b40ea361484ff0d264f331686e97ec7a2434c56e94199e39cbed2ef0aec44d88"
+            "url": "https://github.com/chawyehsu/nano-for-windows/releases/download/v9.0-2/nano-9.0-2-win-arm64.zip",
+            "hash": "61992fd4456742dad354162729847bc9ce7eadb5d411a74f88edb579e4aa02f7"
         }
-    },
-    "installer": {
-        "script": [
-            "Rename-Item $dir\\pkg*.tar.zst $dir\\nano.tar.zst",
-            "Expand-7zipArchive $dir\\nano.tar.zst $dir",
-            "Remove-Item $dir\\*.tar.zst,$dir\\metadata.json -Force -ErrorAction SilentlyContinue"
-        ]
     },
     "bin": "bin\\nano.exe",
     "checkver": {
@@ -29,10 +22,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/chawyehsu/nano-for-windows/releases/download/v$version/nano-$version-win-64.conda#/dl.zip"
+                "url": "https://github.com/chawyehsu/nano-for-windows/releases/download/v$version/nano-$version-win-64.zip"
             },
             "arm64": {
-                "url": "https://github.com/chawyehsu/nano-for-windows/releases/download/v$version/nano-$version-win-arm64.conda#/dl.zip"
+                "url": "https://github.com/chawyehsu/nano-for-windows/releases/download/v$version/nano-$version-win-arm64.zip"
             }
         }
     }
