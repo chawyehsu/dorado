@@ -1,10 +1,10 @@
 {
     "homepage": "https://www.gnupg.org/",
     "description": "A complete and free implementation of the OpenPGP standard",
-    "version": "2.5.19",
+    "version": "2.5.20",
     "license": "GPL-3.0-or-later",
-    "url": "https://www.gnupg.org/ftp/gcrypt/binary/gnupg-w32-2.5.19_20260424.exe#/dl.7z",
-    "hash": "sha1:a2b9b2d0ad979209e1c74f28ff910ce6f97f0e41",
+    "url": "https://www.gnupg.org/ftp/gcrypt/binary/gnupg-w32-2.5.20_20260513.exe#/dl.7z",
+    "hash": "sha1:6353c4a98c07b29250ce21ba0321e0d2abd7d1cb",
     "pre_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\gnupg-uninstall.exe.nsis\" -Force -Recurse -ErrorAction SilentlyContinue",
     "env_set": {
         "GNUPGHOME": "$env:USERPROFILE\\.gnupg"
