@@ -17,13 +17,32 @@
             "hash": "9921311876b5f24e93036a130a76dec442dd6c8a66f58a7809ae8b1de6f942cc"
         }
     },
-    "extract_dir": "Files",
+    "installer": {
+        "script": [
+            "$configpath = \"$env:PUBLIC\\Documents\\Tencent\\QQ\"",
+            "if (!(Test-Path \"$configpath\")) {",
+            "    New-Item -Path \"$configpath\" -Type Directory -Force | Out-Null",
+            "}",
+            "Set-Content -NoNewline -Path \"$configpath\\UserDataInfo.ini\" -Value \"[UserDataSet]`nUserDataSavePathType=2`nUserDataSavePath=$persist_dir\\QQ-Files\"",
+            "# handle runtime cache",
+            "ensure \"$persist_dir\\appdata\" | Out-Null",
+            "New-Item \"$env:APPDATA\\QQ\" -ItemType Junction -Target \"$persist_dir\\appdata\" | Out-Null"
+        ]
+    },
     "shortcuts": [
         [
-            "QQ.exe",
+            "Files\\QQ.exe",
             "QQ"
         ]
     ],
+    "persist": "QQ-Files",
+    "uninstaller": {
+        "script": [
+            "Remove-Item -Path \"$env:PUBLIC\\Documents\\Tencent\" -Recurse -Force | Out-Null",
+            "#remove handle runtime cache",
+            "Remove-Item \"$env:APPDATA\\QQ\" -Recurse -Force -ErrorAction 'SilentlyContinue'"
+        ]
+    },
     "checkver": {
         "url": "https://im.qq.com/proxy/domain/cdn-go.cn/qq-web/im.qq.com_new/latest/rainbow/pcConfig.json",
         "regex": "Windows\":{\"version\":\"([\\d.]+)\",\"updateDate\":\"20([\\d]+)-([\\d]+)-([\\d]+)\".*gtimg\\.cn\\/([\\w\\-\\/.]+x86_01.exe)\".*gtimg\\.cn\\/([\\w\\-\\/.]+x64_01.exe)\".*gtimg\\.cn\\/([\\w\\-\\/.]+arm64_01.exe)\"",
