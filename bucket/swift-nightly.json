@@ -2,15 +2,15 @@
     "homepage": "https://www.swift.org/",
     "description": "The Swift Programming Language (Nightly builds)",
     "license": "Apache-2.0",
-    "version": "20260513.2",
+    "version": "20260514.2",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/thebrowsercompany/swift-build/releases/download/20260513.2/installer-offline-amd64.exe",
-            "hash": "06ffdf0818bc429edc6a0c3901afde927d769e2547b8bd6a0527e8b1f886f3bc"
+            "url": "https://github.com/thebrowsercompany/swift-build/releases/download/20260514.2/installer-offline-amd64.exe",
+            "hash": "106b135af7535b31e96b79ce499cac29e54b71d732adc5a68ba7a61cf11daf19"
         },
         "arm64": {
-            "url": "https://github.com/thebrowsercompany/swift-build/releases/download/20260513.2/installer-offline-arm64.exe",
-            "hash": "f6df5bbdf8497327e2c204d89b8f146ff5bf3fec254de1159d3f4762fb97d280"
+            "url": "https://github.com/thebrowsercompany/swift-build/releases/download/20260514.2/installer-offline-arm64.exe",
+            "hash": "82cd3738bc5844c8418c0abc418043f156841de6953ec1fff11c2a7e05ad380b"
         }
     },
     "depends": "main/wixtoolset",
