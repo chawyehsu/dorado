@@ -1,0 +1,48 @@
+{
+    "version": "3.1.4.0",
+    "description": "截图、录屏、OCR - 一款快速灵活的工具。",
+    "homepage": "https://pixpin.cn/",
+    "license": {
+        "identifier": "Freemium",
+        "url": "https://pixpin.cn/docs/policy/tos_zh_CN"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://download.pixpin.cn/PixPin_cn_zh-cn_3.1.4.0.zip#dl.zip",
+            "hash": "1974429a678d213115f7aa2b95b9478caeb4370edf5d73d12db01735f6616065"
+        }
+    },
+    "extract_dir": "PixPin",
+    "shortcuts": [
+        [
+            "PixPin.exe",
+            "PixPin"
+        ]
+    ],
+    "persist": [
+        "Config",
+        "Data",
+        "History",
+        "OcrModel"
+    ],
+    "post_install": [
+        "$configPath = \"$persist_dir\\Config\\PixPinConfig.json\"",
+        "if (Test-Path $configPath) {",
+        "    return",
+        "}",
+        "$timestamp = [DateTimeOffset]::Now.ToUnixTimeSeconds()",
+        "$content = '{\"System.Update.UpgradeMode#s.win\":{\"t\":' + $timestamp + ',\"v\":0}}'",
+        "$content | Set-Content -Path $configPath -Encoding UTF8"
+    ],
+    "checkver": {
+        "url": "https://pixpin.cn/download/",
+        "regex": "PixPin_cn_zh-cn_(\\d+(?:\\.\\d+)*)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://download.pixpin.cn/PixPin_cn_zh-cn_$version.zip#dl.zip"
+            }
+        }
+    }
+}
