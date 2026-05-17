@@ -1,13 +1,13 @@
 {
-    "version": "0.14.0",
+    "version": "0.15.0",
     "description": "Your favorite Rust → Wasm workflow tool!",
     "homepage": "https://rustwasm.github.io/wasm-pack/",
     "license": "Apache-2.0|MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/rustwasm/wasm-pack/releases/download/v0.14.0/wasm-pack-v0.14.0-x86_64-pc-windows-msvc.tar.gz",
-            "hash": "d484c8e8bcd9e8c30097fbac78b52dd159598f99d11e43a50f5d143b67c721f1",
-            "extract_dir": "wasm-pack-v0.14.0-x86_64-pc-windows-msvc"
+            "url": "https://github.com/rustwasm/wasm-pack/releases/download/v0.15.0/wasm-pack-v0.15.0-x86_64-pc-windows-msvc.tar.gz",
+            "hash": "518dc51180c7bc864699c9279b3bc99025bc109123e0249a34ba34d130a509bf",
+            "extract_dir": "wasm-pack-v0.15.0-x86_64-pc-windows-msvc"
         }
     },
     "bin": "wasm-pack.exe",
