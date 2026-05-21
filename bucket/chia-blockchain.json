@@ -2,9 +2,9 @@
     "homepage": "https://www.chia.net/",
     "description": "Chia is a modern cryptocurrency built from scratch, designed to be efficient, decentralized, and secure.",
     "license": "Apache-2.0",
-    "version": "2.7.0",
-    "url": "https://github.com/Chia-Network/chia-blockchain/releases/download/2.7.0/ChiaSetup-2.7.0.exe#/ChiaSetup-2.7.0.7z",
-    "hash": "224cefc84d9757ae166ee666669401e87edfaf4463049c1dc0fe9c1942432e8f",
+    "version": "2.7.1",
+    "url": "https://github.com/Chia-Network/chia-blockchain/releases/download/2.7.1/ChiaSetup-2.7.1.exe#/ChiaSetup-2.7.1.7z",
+    "hash": "a48d7fe86a9dff8086281c2021af377404afa0f9f5cfc1157bdd1112dd65da2f",
     "installer": {
         "script": "Expand-7zipArchive -Path \"$dir\\chia-blockchain*.nupkg\" -ExtractDir 'lib\\net45' -Removal"
     },
