@@ -1,18 +1,18 @@
 {
     "homepage": "https://www.haoxg.net/",
     "description": "An electronic diary software born in 1999, which is still in active development.",
-    "version": "4.4.1",
+    "version": "4.4.2",
     "license": "Freeware",
     "architecture": {
         "64bit": {
-            "url": "https://down.haoxg.net/download/ediary/windows/ediary-4.4.1-win64-portable.zip",
-            "hash": "9be000954ff78ea3e12b9b5463a59d9eb3f4b860195007e57312b52f3ca4f08e",
-            "extract_dir": "eDiary-4.4.1-win64"
+            "url": "https://down.haoxg.net/download/ediary/windows/ediary-4.4.2-win64-portable.zip",
+            "hash": "1d101eac6d1c0c0297f394c42593c9a4c07a0d97b44aea5a9488c2ba2cf8023e",
+            "extract_dir": "eDiary-4.4.2-win64"
         },
         "32bit": {
-            "url": "https://down.haoxg.net/download/ediary/windows/ediary-4.4.1-win32-portable.zip",
-            "hash": "d4ddbdff4b6c217113936960c14cf6952b1a96f16b6286b970139641725d9710",
-            "extract_dir": "eDiary-4.4.1-win32"
+            "url": "https://down.haoxg.net/download/ediary/windows/ediary-4.4.2-win32-portable.zip",
+            "hash": "dec372f971ebecc8b9eccb5a3bfa73ac77c9a03d262ae7d471b8170d97ed0d68",
+            "extract_dir": "eDiary-4.4.2-win32"
         }
     },
     "pre_install": "if (!(Test-Path $persist_dir\\Config.ini)) { New-Item $dir\\Config.ini | Out-Null }",
