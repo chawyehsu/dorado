@@ -1,28 +1,27 @@
 {
-    "version": "2.3.0",
+    "version": "2.3.5",
     "description": "Test Cloudflare CDN latency and speed to get the fastest IP!",
     "homepage": "https://github.com/XIU2/CloudflareSpeedTest",
     "license": "GPL-3.0-only",
     "notes": "cloudflarest-ip: load the default ip files(ip.txt & ipv6.txt) to perform speed test",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/XIU2/CloudflareSpeedTest/releases/download/v2.3.0/CloudflareST_windows_amd64.zip",
-            "hash": "4a5020bac259ebd2182976ffc52e7129c48962289828eb4f3caa93f7e4dd3a26"
+            "url": "https://github.com/XIU2/CloudflareSpeedTest/releases/download/v2.3.5/cfst_windows_amd64.zip",
+            "hash": "67d06a0c68b7fd6998d5e6abea1dbf850cac2c19c5d8c5980aa32fc7aba1ff5f"
         },
         "arm64": {
-            "url": "https://github.com/XIU2/CloudflareSpeedTest/releases/download/v2.3.0/CloudflareST_windows_arm64.zip",
-            "hash": "0668722579da73e53a2ac0ca3128e9a503694ef2df742a78059619e1e6e65951"
+            "url": "https://github.com/XIU2/CloudflareSpeedTest/releases/download/v2.3.5/cfst_windows_arm64.zip",
+            "hash": "84db1fd918fbc4e6fc1fc127681b24810dfdb4b31aa22374e5e129c6ec529573"
         },
         "32bit": {
-            "url": "https://github.com/XIU2/CloudflareSpeedTest/releases/download/v2.3.0/CloudflareST_windows_386.zip",
-            "hash": "a2c2f6f537293078b67cd46ac72bd3fe1607546c0bf950f63fb200825ddd6b83"
+            "url": "https://github.com/XIU2/CloudflareSpeedTest/releases/download/v2.3.5/cfst_windows_386.zip",
+            "hash": "1ce8beb838bd01a9bfa520ad6a592fc1973a6b4b70e5aac3c25db98105f67935"
         }
     },
     "bin": [
-        "CloudflareST.exe",
+        "cfst.exe",
         [
-            "CloudflareST.exe",
-            "cloudflarest-ip",
+            "cfst.exe",
             "-f",
             "$dir\\ip.txt",
             "-f",
@@ -33,13 +32,13 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/XIU2/CloudflareSpeedTest/releases/download/v$version/CloudflareST_windows_amd64.zip"
+                "url": "https://github.com/XIU2/CloudflareSpeedTest/releases/download/v$version/cfst_windows_amd64.zip"
             },
             "arm64": {
-                "url": "https://github.com/XIU2/CloudflareSpeedTest/releases/download/v$version/CloudflareST_windows_arm64.zip"
+                "url": "https://github.com/XIU2/CloudflareSpeedTest/releases/download/v$version/cfst_windows_arm64.zip"
             },
             "32bit": {
-                "url": "https://github.com/XIU2/CloudflareSpeedTest/releases/download/v$version/CloudflareST_windows_386.zip"
+                "url": "https://github.com/XIU2/CloudflareSpeedTest/releases/download/v$version/cfst_windows_386.zip"
             }
         }
     }
