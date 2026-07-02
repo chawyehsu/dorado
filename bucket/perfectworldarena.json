@@ -1,10 +1,10 @@
 {
     "homepage": "https://pvp.wanmei.com/",
     "description": "Esport arena operated by Perfect World",
-    "version": "1.0.26062512",
+    "version": "1.0.26070211",
     "license": "Proprietary",
-    "url": "https://client.wmpvp.com/download/perfectworldarena_win32_v1.0.26062512.exe#/dl.7z",
-    "hash": "sha512:b38a98cc01b3de75d576dd794428b9b6cfcc2f91c10bb0e914b0670b9bbfd9274dc187e690ad906458c013e623463f61187aafc3de6d4a06f9a84496a6746f0b",
+    "url": "https://client.wmpvp.com/download/perfectworldarena_win32_v1.0.26070211.exe#/dl.7z",
+    "hash": "sha512:a4bb87053493161b521b5bef7e75abe8e5d89ebd45483ccd2e6f1ae301c0f64411ff84ba7a232164cc4db7de31110b285f8bde745d19926f18eda730d74721d4",
     "installer": {
         "script": [
             "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-32.7z\" \"$dir\"",
