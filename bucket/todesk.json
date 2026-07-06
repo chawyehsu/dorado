@@ -10,8 +10,8 @@
             "Expand-7zipArchive -Path \"$dir\\$package_archive\" -DestinationPath \"$dir\"",
             "Remove-Item -Path \"$dir\\`$PLUGINSDIR\", \"$dir\\app*.7z\", \"$dir\\uninst.exe\" -Force -Recurse",
             "if (-not (Test-Path \"$persist_dir\\config.ini\")) {",
-            "    $initial_config = \"[ConfigInfo]`nautoStart=0\"",
-            "    $initial_config | Out-File -FilePath \"$dir\\config.ini\" -Encoding UTF8",
+            "    $initial_config = \"[ConfigInfo]`nautoStart=0`nautoupdate=0`n\"",
+            "    New-Item -Force -Path \"$dir\\config.ini\" -ItemType File -Value $initial_config | Out-Null",
             "}"
         ]
     },
