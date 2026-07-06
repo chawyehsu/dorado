@@ -8,10 +8,10 @@
         "script": [
             "$package_archive = if ($architecture -eq '64bit') {'app64.7z'} else {'app32.7z'}",
             "Expand-7zipArchive -Path \"$dir\\$package_archive\" -DestinationPath \"$dir\"",
-            "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\app*.7z\", \"$dir\\uninst.exe\" -Force -Recurse",
+            "Remove-Item -Path \"$dir\\`$PLUGINSDIR\", \"$dir\\app*.7z\", \"$dir\\uninst.exe\" -Force -Recurse",
             "if (-not (Test-Path \"$persist_dir\\config.ini\")) {",
-            "    $ini_config = \"[ConfigInfo]`nautoStart=0\"",
-            "    $ini_config | Out-File -FilePath \"$dir\\config.ini\" -Encoding UTF8",
+            "    $initial_config = \"[ConfigInfo]`nautoStart=0\"",
+            "    $initial_config | Out-File -FilePath \"$dir\\config.ini\" -Encoding UTF8",
             "}"
         ]
     },
