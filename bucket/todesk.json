@@ -1,15 +1,20 @@
 {
-    "homepage": "https://www.todesk.com/",
-    "description": "A unlimited speed multifunctional remote control software",
     "version": "nightly",
+    "description": "A unlimited speed multifunctional remote control software",
+    "homepage": "https://www.todesk.com/",
     "license": "Proprietary",
     "url": "https://dl.todesk.com/windows/ToDesk_Setup.exe#/dl.7z",
-    "pre_install": [
-        "if (!(Test-Path \"$persist_dir\\config.ini\")) {",
-        "    New-Item -Force -Path \"$persist_dir\\config.ini\" -ItemType File -Value \"[ConfigInfo]`nautoStart=0\" | Out-Null",
-        "}"
-    ],
-    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\",\"$dir\\uninst.exe\" -Force -Recurse",
+    "installer": {
+        "script": [
+            "$package_archive = if ($architecture -eq '64bit') {'app64.7z'} else {'app32.7z'}",
+            "Expand-7zipArchive -Path \"$dir\\$package_archive\" -DestinationPath \"$dir\"",
+            "Remove-Item -Path \"$dir\\`$PLUGINSDIR\", \"$dir\\app*.7z\", \"$dir\\uninst.exe\" -Force -Recurse",
+            "if (-not (Test-Path \"$persist_dir\\config.ini\")) {",
+            "    $initial_config = \"[ConfigInfo]`nautoStart=0`nautoupdate=0`n\"",
+            "    New-Item -Force -Path \"$dir\\config.ini\" -ItemType File -Value $initial_config | Out-Null",
+            "}"
+        ]
+    },
     "shortcuts": [
         [
             "ToDesk.exe",
