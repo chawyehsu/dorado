@@ -37,7 +37,8 @@
     "checkver": {
         "url": "https://pixpin.cn/download/",
         "regex": "(PixPin[a-zA-Z0-9_.-]+_(\\d+(?:\\.\\d+)*)\\.zip)",
-        "replace": "$2"
+        "replace": "$2",
+        "useragent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
     },
     "autoupdate": {
         "architecture": {
