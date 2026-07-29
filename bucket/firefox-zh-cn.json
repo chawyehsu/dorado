@@ -1,16 +1,16 @@
 {
     "description": "Popular open source web browser. Cross-platform and available in many languages.",
     "homepage": "https://www.mozilla.org/zh-CN/firefox/new/",
-    "version": "153.0",
+    "version": "153.0.1",
     "license": "MPL-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://download-installer.cdn.mozilla.net/pub/firefox/releases/153.0/win64/zh-CN/Firefox%20Setup%20153.0.exe#/firefox.7z",
-            "hash": "sha512:9e67e4eb8876a99d2bfc59c2a59a99d29b83c5fa25f5375e143736273789e8d064b74d017363108d6db235f86d3feb4882137a258b69be29038c6badfd2edcd0"
+            "url": "https://download-installer.cdn.mozilla.net/pub/firefox/releases/153.0.1/win64/zh-CN/Firefox%20Setup%20153.0.1.exe#/firefox.7z",
+            "hash": "sha512:4162d3116289621426ad2e14ec104de79da3e580e177a15ea1da8698c01f4e9d88c5a3c0b91ccb35516f11852bd7946863f37599fbf13e2b3a4e15e82bc8b166"
         },
         "32bit": {
-            "url": "https://download-installer.cdn.mozilla.net/pub/firefox/releases/153.0/win32/zh-CN/Firefox%20Setup%20153.0.exe#/firefox.7z",
-            "hash": "sha512:c95fae92b338fb8ac1e400f0e80b3d1895c82fbeb891d365b6e74e7ae6300b347a503142d793e37e70bdb5d7bd7e2d207bb29759c5b06ba8dcdc6f12d6e96e91"
+            "url": "https://download-installer.cdn.mozilla.net/pub/firefox/releases/153.0.1/win32/zh-CN/Firefox%20Setup%20153.0.1.exe#/firefox.7z",
+            "hash": "sha512:b12822fb1bff4696b46a5d2d0b565817abbd8780327427ce8ba3eefa3f428dc219210fd22f8d2314cd711b40f532d1129922ffeb4e8c5fa48b99572687fae22e"
         }
     },
     "extract_dir": "core",
