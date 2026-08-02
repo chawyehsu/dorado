@@ -5,15 +5,15 @@
     "license": "Freeware",
     "architecture": {
         "64bit": {
-            "url": "https://dorado-api.deno.dev/edge?arch=64&channel=dev&version=152.0.4167.0&dl#/MicrosoftEdge-152.0.4167.0-x64.7z",
+            "url": "https://dorado-api.chawyehsu.deno.net/edge?arch=64&channel=dev&version=152.0.4167.0&dl#/MicrosoftEdge-152.0.4167.0-x64.7z",
             "hash": "8c857721d2c632d92a36b73f5449d153115a6975b1be001cb7eb001f18ee83f1"
         },
         "32bit": {
-            "url": "https://dorado-api.deno.dev/edge?arch=86&channel=dev&version=152.0.4167.0&dl#/MicrosoftEdge-152.0.4167.0-x86.7z",
+            "url": "https://dorado-api.chawyehsu.deno.net/edge?arch=86&channel=dev&version=152.0.4167.0&dl#/MicrosoftEdge-152.0.4167.0-x86.7z",
             "hash": "09ae880fe7cbb93faaf38af20f73711c0a46ba844fdd69c45c92eb4a130a0710"
         },
         "arm64": {
-            "url": "https://dorado-api.deno.dev/edge?arch=arm64&channel=dev&version=152.0.4167.0&dl#/MicrosoftEdge-152.0.4167.0-arm64.7z",
+            "url": "https://dorado-api.chawyehsu.deno.net/edge?arch=arm64&channel=dev&version=152.0.4167.0&dl#/MicrosoftEdge-152.0.4167.0-arm64.7z",
             "hash": "820ee8d4e9995f95a16101b8d4ea964134a11e94fd9f90f990d0f9c6faff1522"
         }
     },
@@ -27,29 +27,29 @@
         ]
     ],
     "checkver": {
-        "url": "https://dorado-api.deno.dev/edge?arch=64&channel=dev",
+        "url": "https://dorado-api.chawyehsu.deno.net/edge?arch=64&channel=dev",
         "jsonpath": "$.Version"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://dorado-api.deno.dev/edge?arch=64&channel=dev&version=$version&dl#/MicrosoftEdge-$version-x64.7z",
+                "url": "https://dorado-api.chawyehsu.deno.net/edge?arch=64&channel=dev&version=$version&dl#/MicrosoftEdge-$version-x64.7z",
                 "hash": {
-                    "url": "https://dorado-api.deno.dev/edge?arch=64&channel=dev&version=$version",
+                    "url": "https://dorado-api.chawyehsu.deno.net/edge?arch=64&channel=dev&version=$version",
                     "jsonpath": "$.Hashes.Sha256"
                 }
             },
             "32bit": {
-                "url": "https://dorado-api.deno.dev/edge?arch=86&channel=dev&version=$version&dl#/MicrosoftEdge-$version-x86.7z",
+                "url": "https://dorado-api.chawyehsu.deno.net/edge?arch=86&channel=dev&version=$version&dl#/MicrosoftEdge-$version-x86.7z",
                 "hash": {
-                    "url": "https://dorado-api.deno.dev/edge?arch=86&channel=dev&version=$version",
+                    "url": "https://dorado-api.chawyehsu.deno.net/edge?arch=86&channel=dev&version=$version",
                     "jsonpath": "$.Hashes.Sha256"
                 }
             },
             "arm64": {
-                "url": "https://dorado-api.deno.dev/edge?arch=arm64&channel=dev&version=$version&dl#/MicrosoftEdge-$version-arm64.7z",
+                "url": "https://dorado-api.chawyehsu.deno.net/edge?arch=arm64&channel=dev&version=$version&dl#/MicrosoftEdge-$version-arm64.7z",
                 "hash": {
-                    "url": "https://dorado-api.deno.dev/edge?arch=arm64&channel=dev&version=$version",
+                    "url": "https://dorado-api.chawyehsu.deno.net/edge?arch=arm64&channel=dev&version=$version",
                     "jsonpath": "$.Hashes.Sha256"
                 }
             }

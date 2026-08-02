@@ -6,7 +6,7 @@
         "identifier": "EULA",
         "url": "https://uu.163.com/agreement.html"
     },
-    "url": "https://dorado-api.deno.dev/neteaseuu?version=6.13.2.5231#/dl.7z",
+    "url": "https://dorado-api.chawyehsu.deno.net/neteaseuu?version=6.13.2.5231#/dl.7z",
     "hash": "263cd573345635aaa7539e278d7d3afdcdd7abd9152351e587f849cff8c2ac00",
     "shortcuts": [
         [
@@ -24,6 +24,6 @@
         "replace": "${ver}.${build}"
     },
     "autoupdate": {
-        "url": "https://dorado-api.deno.dev/neteaseuu?version=$version#/dl.7z"
+        "url": "https://dorado-api.chawyehsu.deno.net/neteaseuu?version=$version#/dl.7z"
     }
 }

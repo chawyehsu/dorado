@@ -3,7 +3,7 @@
     "description": "The official client for Tianyi cloud dirve service",
     "version": "7.2.2",
     "license": "Proprietary",
-    "url": "https://dorado-api.deno.dev/tianyi-ecloud?dl#/tianyi-ecloud-7.2.2.7z",
+    "url": "https://dorado-api.chawyehsu.deno.net/tianyi-ecloud?dl#/tianyi-ecloud-7.2.2.7z",
     "hash": "955387fb8fb389b8de291e92965f42c2fee5d706b86e0166d0070119f1e96cc4",
     "shortcuts": [
         [
@@ -17,10 +17,10 @@
         "}"
     ],
     "checkver": {
-        "url": "https://dorado-api.deno.dev/tianyi-ecloud",
+        "url": "https://dorado-api.chawyehsu.deno.net/tianyi-ecloud",
         "jsonpath": "$.version"
     },
     "autoupdate": {
-        "url": "https://dorado-api.deno.dev/tianyi-ecloud?dl#/tianyi-ecloud-$version.7z"
+        "url": "https://dorado-api.chawyehsu.deno.net/tianyi-ecloud?dl#/tianyi-ecloud-$version.7z"
     }
 }

@@ -6,7 +6,7 @@
         "identifier": "EULA",
         "url": "https://www.alipan.com/protocol/service"
     },
-    "url": "https://dorado-api.deno.dev/alipan?version=6.9.3&dl#/aDrive-6.9.3.7z",
+    "url": "https://dorado-api.chawyehsu.deno.net/alipan?version=6.9.3&dl#/aDrive-6.9.3.7z",
     "hash": "3ccbdfa920528bd0295c1197a84bcd552cc1cfe2bf2ad722ace7d5dd93bdb281",
     "post_install": [
         "@('$PLUGINSDIR', '$TEMP') | ForEach-Object {",
@@ -20,10 +20,10 @@
         ]
     ],
     "checkver": {
-        "url": "https://dorado-api.deno.dev/alipan",
+        "url": "https://dorado-api.chawyehsu.deno.net/alipan",
         "jsonpath": "$.version"
     },
     "autoupdate": {
-        "url": "https://dorado-api.deno.dev/alipan?version=$version&dl#/aDrive-$version.7z"
+        "url": "https://dorado-api.chawyehsu.deno.net/alipan?version=$version&dl#/aDrive-$version.7z"
     }
 }

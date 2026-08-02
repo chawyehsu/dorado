@@ -3,7 +3,7 @@
     "description": "An instant messaging software service developed by Tencent",
     "license": "Freeware",
     "version": "9.5.4.0",
-    "url": "https://dorado-api.deno.dev/appxqq?dl#/903DB504.46618D74B1ECA_9.5.4.0_x86__a99ra4d2cbcxa.appx.7z",
+    "url": "https://dorado-api.chawyehsu.deno.net/appxqq?dl#/903DB504.46618D74B1ECA_9.5.4.0_x86__a99ra4d2cbcxa.appx.7z",
     "hash": "sha1:9988eb4140bd5cfd7d94fb91229b5f9c0117eb0c",
     "pre_install": [
         "if ([Environment]::OSVersion.Version.Major -ne \"10\") {",
@@ -23,13 +23,13 @@
         ]
     ],
     "checkver": {
-        "url": "https://dorado-api.deno.dev/appxqq",
+        "url": "https://dorado-api.chawyehsu.deno.net/appxqq",
         "jsonpath": "$.version"
     },
     "autoupdate": {
-        "url": "https://dorado-api.deno.dev/appxqq?dl#/903DB504.46618D74B1ECA_$version_x86__a99ra4d2cbcxa.appx.7z",
+        "url": "https://dorado-api.chawyehsu.deno.net/appxqq?dl#/903DB504.46618D74B1ECA_$version_x86__a99ra4d2cbcxa.appx.7z",
         "hash": {
-            "url": "https://dorado-api.deno.dev/appxqq",
+            "url": "https://dorado-api.chawyehsu.deno.net/appxqq",
             "jsonpath": "$.sha1"
         }
     },
