@@ -1,16 +1,16 @@
 {
     "homepage": "https://www.charlesproxy.com/",
     "description": "An HTTP proxy / HTTP monitor / Reverse Proxy that enables a developer to view all of the HTTP and SSL / HTTPS traffic between their machine and the Internet.",
-    "version": "5.2",
+    "version": "5.2.1",
     "license": "Proprietary",
     "architecture": {
         "64bit": {
-            "url": "https://www.charlesproxy.com/assets/release/5.2/charles-proxy-5.2-win-x86_64.appx#/dl.7z",
-            "hash": "6222f301f21383191e48512b50acf48836b738debe62a55e003cbf1cbfded53c"
+            "url": "https://www.charlesproxy.com/assets/release/5.2.1/charles-proxy-5.2.1-win-x86_64.appx#/dl.7z",
+            "hash": "2d81e61f1e0ec2ed833e2afefb6931a9e7aff0b33d666c78e030ec419b44d293"
         },
         "arm64": {
-            "url": "https://www.charlesproxy.com/assets/release/5.2/charles-proxy-5.2-win-arm64.appx#/dl.7z",
-            "hash": "76bbec9350ccfb50327cf9444a0fd28d352b66d704f599377e964433f2c2270a"
+            "url": "https://www.charlesproxy.com/assets/release/5.2.1/charles-proxy-5.2.1-win-arm64.appx#/dl.7z",
+            "hash": "c74265497cb8b0646ec7456583475fc37f32e3d31fa73c5da77a14c04f9c8bbb"
         }
     },
     "extract_dir": "VFS\\ProgramFilesX64\\Charles",
