@@ -36,12 +36,14 @@
     ],
     "checkver": {
         "url": "https://pixpin.cn/download/",
-        "regex": "PixPin_cn_zh-cn_(\\d+(?:\\.\\d+)*)"
+        "regex": "(PixPin[a-zA-Z0-9_.-]+_(\\d+(?:\\.\\d+)*)\\.zip)",
+        "replace": "$2",
+        "useragent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://download.pixpin.cn/PixPin_cn_zh-cn_$version.zip#/dl.zip"
+                "url": "https://down.pixpin.cn/$match1#/dl.zip"
             }
         }
     }
