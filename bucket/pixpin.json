@@ -1,5 +1,5 @@
 {
-    "version": "3.2.3.1",
+    "version": "3.4.3.2",
     "description": "Screenshots, screen recording, OCR tool.",
     "homepage": "https://pixpin.cn/",
     "license": {
@@ -8,8 +8,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://download.pixpin.cn/PixPin_cn_zh-cn_3.2.3.1.zip#/dl.zip",
-            "hash": "52f469aa83d8f6bf8615cb68b9afb95f22d7c766dc513471c8f14bf39801be31"
+            "url": "https://down.pixpin.cn/PixPin_win_3.4.3.2.zip#/dl.zip",
+            "hash": "1ed2b048f7e1468cdd3dc869c3db0653d9308ffe4f48fb42091b0b559a90b211"
         }
     },
     "extract_dir": "PixPin",
@@ -36,12 +36,12 @@
     ],
     "checkver": {
         "url": "https://pixpin.cn/download/",
-        "regex": "PixPin_cn_zh-cn_(\\d+(?:\\.\\d+)*)"
+        "regex": "PixPin_win_(\\d+(?:\\.\\d+)*)"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://download.pixpin.cn/PixPin_cn_zh-cn_$version.zip#/dl.zip"
+                "url": "https://down.pixpin.cn/PixPin_win_$version.zip#/dl.zip"
             }
         }
     }
