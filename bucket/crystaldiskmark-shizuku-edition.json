@@ -44,8 +44,8 @@
         "DiskMarkA64S.ini"
     ],
     "checkver": {
-        "url": "https://crystalmark.info/en/download/",
-        "regex": "CrystalDiskMark ([\\w\\.]+) &#8211;"
+        "sourceforge": "crystaldiskmark",
+        "regex": "([\\d.a-zA-Z]+)/CrystalDiskMark.*.zip"
     },
     "autoupdate": {
         "url": "https://zenlayer.dl.sourceforge.net/project/crystaldiskmark/$version/CrystalDiskMark$underscoreVersionShizuku.zip"
