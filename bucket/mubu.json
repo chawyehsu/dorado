@@ -19,6 +19,7 @@
             "$packageFile = [string] 'app-{0}.7z' -f $(if ($architecture -eq '64bit') {'64'} else {'32'})",
             "Remove-Item \"$dir\\*\" -Exclude \"$packageFile\"",
             "Expand-7zipArchive \"$dir\\$packageFile\" \"$dir\" -Removal",
+            "Remove-Item \"$dir\\uninst*\" -Recurse -Force",
             "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name dorado) scripts/DoradoUtils.psm1)",
             "Mount-ExternalRuntimeData -Source \"$persist_dir\\Mubu\" -Target \"$env:APPDATA\\Mubu\"",
             "Remove-Module -Name DoradoUtils"
