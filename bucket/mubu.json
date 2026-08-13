@@ -16,7 +16,7 @@
     "extract_dir": "$PLUGINSDIR",
     "installer": {
         "script": [
-            "$packageFile = [string] 'app-{0}.7z' -f $(if ($architecture -eq '64bit') {'64'} else {'32'})",
+            "$packageFile = if ($architecture -eq '64bit') { [string] 'app-64.7z' } else { [string] 'app-32.7z' }",
             "Remove-Item \"$dir\\*\" -Exclude \"$packageFile\"",
             "Expand-7zipArchive \"$dir\\$packageFile\" \"$dir\" -Removal",
             "Remove-Item \"$dir\\uninst*\" -Recurse -Force",
