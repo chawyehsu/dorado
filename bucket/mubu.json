@@ -1,16 +1,27 @@
 {
-    "homepage": "https://mubu.com/apps",
-    "description": "Mubu - Mind mapping tool",
     "version": "5.7.3",
+    "description": "Mubu - Mind mapping tool",
+    "homepage": "https://mubu.com/home",
     "license": "Freeware",
-    "url": "https://assets.mubu.com/client/5.7.3/win/Mubu-5.7.3-ia32.exe#/mubu-5.7.3.7z",
-    "hash": "6d5affbdd1ebc79f7fc77936f3c488a2113830cc80a7e97f3db29c443418f002",
+    "architecture": {
+        "64bit": {
+            "url": "https://assets.mubu.com/client/5.7.3/win/Mubu-5.7.3-x64.exe#/mubu.7z",
+            "hash": "2476605edce42c4a8604ffef167cefbf0eb3c35b4250354864918a06f9938f73"
+        },
+        "32bit": {
+            "url": "https://assets.mubu.com/client/5.7.3/win/Mubu-5.7.3-ia32.exe#/mubu.7z",
+            "hash": "6d5affbdd1ebc79f7fc77936f3c488a2113830cc80a7e97f3db29c443418f002"
+        }
+    },
     "extract_dir": "$PLUGINSDIR",
     "installer": {
         "script": [
-            "Remove-Item \"$dir\\*\" -Exclude \"app-32.7z\"",
-            "Expand-7zipArchive \"$dir\\app-32.7z\" \"$dir\"",
-            "Remove-Item \"$dir\\app-32.7z\""
+            "$packageFile = [string] 'app-{0}.7z' -f $(if ($architecture -eq '64bit') {'64'} else {'32'})",
+            "Remove-Item \"$dir\\*\" -Exclude \"$packageFile\"",
+            "Expand-7zipArchive \"$dir\\$packageFile\" \"$dir\" -Removal",
+            "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name dorado) scripts/DoradoUtils.psm1)",
+            "Mount-ExternalRuntimeData -Source \"$persist_dir\\Mubu\" -Target \"$env:APPDATA\\Mubu\"",
+            "Remove-Module -Name DoradoUtils"
         ]
     },
     "shortcuts": [
@@ -19,13 +30,26 @@
             "幕布"
         ]
     ],
+    "uninstaller": {
+        "script": [
+            "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name dorado) scripts/DoradoUtils.psm1)",
+            "Dismount-ExternalRuntimeData -Target \"$env:APPDATA\\Mubu\"",
+            "Remove-Module -Name DoradoUtils"
+        ]
+    },
     "checkver": {
         "url": "https://api2.mubu.com/v3/api/desktop_client/latest_version",
         "jsonpath": "$.data.windows",
         "regex": "([\\d.]+)"
     },
     "autoupdate": {
-        "url": "https://assets.mubu.com/client/$version/win/Mubu-$version-ia32.exe#/mubu-$version.7z"
-    },
-    "notes": "Your Mubu data are stored in '%APPDATA%\\Mubu'"
+        "architecture": {
+            "64bit": {
+                "url": "https://assets.mubu.com/client/$version/win/Mubu-$version-x64.exe#/mubu.7z"
+            },
+            "32bit": {
+                "url": "https://assets.mubu.com/client/$version/win/Mubu-$version-ia32.exe#/mubu.7z"
+            }
+        }
+    }
 }
