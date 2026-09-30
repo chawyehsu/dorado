@@ -12,7 +12,7 @@
     "installer": {
         "script": [
             "# https://github.com/ScoopInstaller/Scoop/pull/5065",
-            "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name dorado) scripts/DoradoUtils.psm1)",
+            "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name $bucket) scripts/DoradoUtils.psm1)",
             "Move-Item \"$dir\\$fname\" \"$dir\\..\\setup.exe\" | Out-Null",
             "Invoke-ExternalCommand2 -Path \"$dir\\..\\setup.exe\" -ArgumentList @('/S', '/InstallationType=JustMe', '/RegisterPython=0', '/AddToPath=0', '/NoRegistry=1', '/NoShortcuts=1', \"/D=$dir\") | Out-Null",
             "Remove-Module -Name DoradoUtils"
@@ -20,7 +20,7 @@
     },
     "uninstaller": {
         "script": [
-            "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name dorado) scripts/DoradoUtils.psm1)",
+            "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name $bucket) scripts/DoradoUtils.psm1)",
             "Start-Process \"$dir\\Uninstall-Miniforge3.exe\" -ArgumentList '/S' -Wait | Out-Null",
             "Remove-Module -Name DoradoUtils"
         ]

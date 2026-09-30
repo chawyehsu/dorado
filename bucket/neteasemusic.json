@@ -19,7 +19,7 @@
     "installer": {
         "script": [
             "Get-ChildItem \"$dir\\redist_packages\" | Move-Item -Destination \"$dir\" -Force",
-            "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name dorado) scripts/DoradoUtils.psm1)",
+            "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name $bucket) scripts/DoradoUtils.psm1)",
             "Mount-ExternalRuntimeData -Source \"$persist_dir\\appdata\" -Target \"$env:LOCALAPPDATA\\Netease\\CloudMusic\"",
             "Remove-Module -Name DoradoUtils"
         ]
@@ -27,7 +27,7 @@
     "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\",\"$dir\\redist_packages\" -Force -Recurse",
     "uninstaller": {
         "script": [
-            "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name dorado) scripts/DoradoUtils.psm1)",
+            "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name $bucket) scripts/DoradoUtils.psm1)",
             "Dismount-ExternalRuntimeData -Target \"$env:LOCALAPPDATA\\Netease\\CloudMusic\"",
             "Remove-Module -Name DoradoUtils"
         ]
