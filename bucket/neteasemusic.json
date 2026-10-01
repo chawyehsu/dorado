@@ -1,19 +1,19 @@
 {
     "homepage": "https://music.163.com/",
     "description": "The official NetEase Cloud Music client.",
-    "version": "3.1.30.205130",
+    "version": "3.1.40.205461",
     "license": {
         "identifier": "EULA",
         "url": "https://music.163.com/html/web2/service.html"
     },
     "architecture": {
         "64bit": {
-            "url": "https://d8.music.126.net/dmusic2/NeteaseCloudMusic_Music_official_3.1.30.205130_64.exe#/dl.7z",
-            "hash": "9ae0f1fabc4286bc4121176d864b871e85c7b5bc24b40a41883dd19ecbe6aba5"
+            "url": "https://d8.music.126.net/dmusic2/NeteaseCloudMusic_Music_official_3.1.40.205461_64.exe#/dl.7z",
+            "hash": "b2d80aefaa2869e26986c6446d05119448fa30b2df2b72dd70c96924af2922b7"
         },
         "32bit": {
-            "url": "https://d8.music.126.net/dmusic2/NeteaseCloudMusic_Music_official_3.1.30.205130_32.exe#/dl.7z",
-            "hash": "b38e0448c75451c7f52799153197120a88322a09b080db1489e7917d73bf8ae9"
+            "url": "https://d8.music.126.net/dmusic2/NeteaseCloudMusic_Music_official_3.1.40.205461_32.exe#/dl.7z",
+            "hash": "eeec4f61eb872373df37ab9c558d41ba7f9052333dad49b5f29561c7403416b0"
         }
     },
     "installer": {
@@ -41,8 +41,11 @@
     ],
     "checkver": {
         "url": "https://music.163.com/api/appcustomconfig/get",
-        "jsonpath": "$.data.web-new-download.pc64.downloadUrl",
-        "regex": "NeteaseCloudMusic_Music_official_([\\d.]+)_64.exe"
+        "script": [
+            "# The checkver url is treated as a placeholder because the homepage url returns an incorrect charset name 'utf8' (it should be 'utf-8'), which causes error in checkver progress.",
+            "return $(Invoke-WebRequest -Uri 'https://music.163.com/download/pc/latest' -Method Head -UseBasicParsing | Select-Object -ExpandProperty RawContent)"
+        ],
+        "regex": "NeteaseCloudMusic_Music_official_([\\d.]+)_[\\d]+.exe"
     },
     "autoupdate": {
         "architecture": {
