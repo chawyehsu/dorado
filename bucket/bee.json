@@ -42,7 +42,7 @@
             "$binScript = \"@echo off`n%~dp0bee.exe --config %~dp0data\\bee.yaml %*\"",
             "New-Item -Force -Path \"$dir\\bee.cmd\" -ItemType File -Value $binScript | Out-Null",
             "# Copy service helper",
-            "$serviceHelper = $(Join-Path $(Find-BucketDirectory -Root -Name dorado) scripts/bee/beesvc.cmd)",
+            "$serviceHelper = $(Join-Path $(Find-BucketDirectory -Root -Name $bucket) scripts/bee/beesvc.cmd)",
             "Copy-Item -Path $serviceHelper -Destination $dir"
         ]
     },
