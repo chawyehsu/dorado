@@ -1,16 +1,28 @@
 {
-    "homepage": "https://mubu.com/apps",
-    "description": "Mubu - Mind mapping tool",
     "version": "6.0.2",
+    "description": "Mubu - Mind mapping tool",
+    "homepage": "https://mubu.com/home",
     "license": "Freeware",
-    "url": "https://assets.mubu.com/client/6.0.2/win/Mubu-6.0.2-ia32.exe#/mubu-6.0.2.7z",
-    "hash": "01bbbb807dfc999ade564b5f346a3b17be600e457e47f480d041f22e90f3461f",
+    "architecture": {
+        "64bit": {
+            "url": "https://assets.mubu.com/client/6.0.2/win/Mubu-6.0.2-x64.exe#/mubu.7z",
+            "hash": "824290d881b46bf2862570bdbc7c85d85583f54a0892d2ae7195063a0bb8a64b"
+        },
+        "32bit": {
+            "url": "https://assets.mubu.com/client/6.0.2/win/Mubu-6.0.2-ia32.exe#/mubu.7z",
+            "hash": "01bbbb807dfc999ade564b5f346a3b17be600e457e47f480d041f22e90f3461f"
+        }
+    },
     "extract_dir": "$PLUGINSDIR",
     "installer": {
         "script": [
-            "Remove-Item \"$dir\\*\" -Exclude \"app-32.7z\"",
-            "Expand-7zipArchive \"$dir\\app-32.7z\" \"$dir\"",
-            "Remove-Item \"$dir\\app-32.7z\""
+            "$packageFile = if ($architecture -eq '64bit') { [string] 'app-64.7z' } else { [string] 'app-32.7z' }",
+            "Remove-Item \"$dir\\*\" -Exclude \"$packageFile\"",
+            "Expand-7zipArchive \"$dir\\$packageFile\" \"$dir\" -Removal",
+            "Remove-Item \"$dir\\uninst*\" -Recurse -Force",
+            "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name $bucket) scripts/DoradoUtils.psm1)",
+            "Mount-ExternalRuntimeData -Source \"$persist_dir\\Mubu\" -Target \"$env:APPDATA\\Mubu\"",
+            "Remove-Module -Name DoradoUtils"
         ]
     },
     "shortcuts": [
@@ -19,13 +31,26 @@
             "幕布"
         ]
     ],
+    "uninstaller": {
+        "script": [
+            "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name $bucket) scripts/DoradoUtils.psm1)",
+            "Dismount-ExternalRuntimeData -Target \"$env:APPDATA\\Mubu\"",
+            "Remove-Module -Name DoradoUtils"
+        ]
+    },
     "checkver": {
         "url": "https://api2.mubu.com/v3/api/desktop_client/latest_version",
         "jsonpath": "$.data.windows",
         "regex": "([\\d.]+)"
     },
     "autoupdate": {
-        "url": "https://assets.mubu.com/client/$version/win/Mubu-$version-ia32.exe#/mubu-$version.7z"
-    },
-    "notes": "Your Mubu data are stored in '%APPDATA%\\Mubu'"
+        "architecture": {
+            "64bit": {
+                "url": "https://assets.mubu.com/client/$version/win/Mubu-$version-x64.exe#/mubu.7z"
+            },
+            "32bit": {
+                "url": "https://assets.mubu.com/client/$version/win/Mubu-$version-ia32.exe#/mubu.7z"
+            }
+        }
+    }
 }
