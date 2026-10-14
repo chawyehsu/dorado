@@ -1,20 +1,20 @@
 {
     "homepage": "https://github.com/PowerShell/PowerShell",
     "description": "PowerShell (LTS), the cross-platform task automation and configuration management framework/tool.",
-    "version": "7.4.20",
+    "version": "7.4.21",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.4.20/PowerShell-7.4.20-win-x64.zip",
-            "hash": "fb88cd3731847006b157978d6c0a426390d346696d91d1ed85b5e5eb88cb2d40"
+            "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.4.21/PowerShell-7.4.21-win-x64.zip",
+            "hash": "b47ee814b9fe5fe6b713a26667998cadd6bbb74cb3889fadea56c775f11953a2"
         },
         "32bit": {
-            "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.4.20/PowerShell-7.4.20-win-x86.zip",
-            "hash": "bc6970066c15585f2d27d6aa3d78de9e15abc6b3af368f32aa9b025377308da7"
+            "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.4.21/PowerShell-7.4.21-win-x86.zip",
+            "hash": "1ad31bca0e805c59853a0e9dc39b2957490fcf3b36c87aabb77f55f5fe3a7ea4"
         },
         "arm64": {
-            "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.4.20/PowerShell-7.4.20-win-arm64.zip",
-            "hash": "67eff749d5dae357501c95a3eec1dcd93f669824e3ca2b1d2adcdecdebf04f35"
+            "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.4.21/PowerShell-7.4.21-win-arm64.zip",
+            "hash": "b0f04fc5cf2f44d42e41707532089e22dad681c973cf75a6720270db575f396b"
         }
     },
     "bin": "pwsh.exe",
