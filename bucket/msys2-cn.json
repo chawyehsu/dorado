@@ -12,7 +12,7 @@
     },
     "installer": {
         "script": [
-            "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name dorado) scripts/DoradoUtils.psm1)",
+            "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name $bucket) scripts/DoradoUtils.psm1)",
             "# 0x00: Disable pacman Key Refreshing to speed up the setup: https://github.com/msys2/setup-msys2/issues/45",
             "$postScript = \"$dir\\etc\\post-install\\07-pacman-key.post\"",
             "(Get-Content $postScript) -replace ' --refresh-keys', ' --version' | Set-Content $postScript",
@@ -54,7 +54,7 @@
     },
     "uninstaller": {
         "script": [
-            "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name dorado) scripts/DoradoUtils.psm1)",
+            "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name $bucket) scripts/DoradoUtils.psm1)",
             "$msys2Pskill = \"ps -ef | grep '[?]' | awk '{print `$2}' | xargs -r kill\"",
             "# 0x00: Stop potential gpg-agent processes",
             "$args1 = \"gpgconf --kill gpg-agent;$msys2Pskill\"",
