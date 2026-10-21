@@ -1,16 +1,16 @@
 {
     "description": "Thunderbird is a free email application that’s easy to set up and customize",
     "homepage": "https://www.thunderbird.net/zh-CN/",
-    "version": "158.0",
+    "version": "158.0.1",
     "license": "MPL-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://archive.mozilla.org/pub/thunderbird/releases/158.0/win64/zh-CN/Thunderbird%20Setup%20158.0.exe#/dl.7z",
-            "hash": "sha512:b0cd925d8b13dc7d1208aaad6d6985e97b79473fa1602d58d608180a9f460e7efce9405cdabeb9e6e313f4e53ca1158bf79930bb419307c65379338bf395fd32"
+            "url": "https://archive.mozilla.org/pub/thunderbird/releases/158.0.1/win64/zh-CN/Thunderbird%20Setup%20158.0.1.exe#/dl.7z",
+            "hash": "sha512:e39250ae1321bb37d028d5e5fd3bcacf5f6c2b3b18196459bf235f2ab274c45d6cb22c5b10f03088cb02bca805abe8b6264966bd63a1bfa3608364db22818464"
         },
         "32bit": {
-            "url": "https://archive.mozilla.org/pub/thunderbird/releases/158.0/win32/zh-CN/Thunderbird%20Setup%20158.0.exe#/dl.7z",
-            "hash": "sha512:799ddc4012a94e3f25584546f67064808e6f36a6e9d4c7b0a11f5f03b602b12e0352b90886fb9bae3f206a7a661b7146652ae6f267e9bb8d30dcccb38dc4edfd"
+            "url": "https://archive.mozilla.org/pub/thunderbird/releases/158.0.1/win32/zh-CN/Thunderbird%20Setup%20158.0.1.exe#/dl.7z",
+            "hash": "sha512:02106fa0db8c61126efeee88af05339401c2c73bdc204dbd377bd1c589f26f13ca297ee72c328a5dc845d8e6096fa52882fd1389f1bc8110e8cc25fc41e7b439"
         }
     },
     "extract_dir": "core",
