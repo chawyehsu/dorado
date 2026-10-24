@@ -1,16 +1,16 @@
 {
-    "version": "9.2",
+    "version": "9.3",
     "description": "GNU nano text editor for Windows",
     "homepage": "https://github.com/chawyehsu/nano-for-windows",
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/chawyehsu/nano-for-windows/releases/download/v9.2/nano-9.2-win-64.zip",
-            "hash": "314facd43eb96191e75a827e10bfe4c48e1e39f99d994fd8b49e0ddefb15e0f8"
+            "url": "https://github.com/chawyehsu/nano-for-windows/releases/download/v9.3/nano-9.3-win-64.zip",
+            "hash": "33b60092321c6f3c3fdb9b8c39cd4b3c2e89f45785f4598ffb05a7a2068c771e"
         },
         "arm64": {
-            "url": "https://github.com/chawyehsu/nano-for-windows/releases/download/v9.2/nano-9.2-win-arm64.zip",
-            "hash": "aa46c262482f51114f7ffd4aae54c850287004af2da26b40dbe0f64ff877c322"
+            "url": "https://github.com/chawyehsu/nano-for-windows/releases/download/v9.3/nano-9.3-win-arm64.zip",
+            "hash": "7a7f1f7081438d82b8360f4231792eb87c64e787a37652bc0bba2b3bb8078377"
         }
     },
     "bin": "bin\\nano.exe",
