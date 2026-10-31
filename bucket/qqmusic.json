@@ -8,17 +8,17 @@
     "installer": {
         "script": [
             "# simulate instok check",
-            "$helperScript = $(Join-Path $(Find-BucketDirectory -Root -Name dorado) scripts/qqmusic/instok)",
+            "$helperScript = $(Join-Path $(Find-BucketDirectory -Root -Name $bucket) scripts/qqmusic/instok)",
             "Copy-Item -Path $helperScript -Destination $dir",
             "# handle runtime cache",
-            "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name dorado) scripts/DoradoUtils.psm1)",
+            "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name $bucket) scripts/DoradoUtils.psm1)",
             "Mount-ExternalRuntimeData -Source \"$persist_dir\\appdata\" -Target \"$env:APPDATA\\Tencent\\QQMusic\"",
             "Remove-Module -Name DoradoUtils"
         ]
     },
     "uninstaller": {
         "script": [
-            "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name dorado) scripts/DoradoUtils.psm1)",
+            "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name $bucket) scripts/DoradoUtils.psm1)",
             "Dismount-ExternalRuntimeData -Target \"$env:APPDATA\\Tencent\\QQMusic\"",
             "Remove-Module -Name DoradoUtils"
         ]
