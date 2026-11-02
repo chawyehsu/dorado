@@ -1,0 +1,58 @@
+{
+    "version": "5.34.2026102909",
+    "description": "Lightweight IDE for Vue and uni-app development",
+    "homepage": "https://www.dcloud.io/hbuilderx.html",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://www.dcloud.io/license/hbuilder.html"
+    },
+    "notes": [
+        "Settings are stored in '%APPDATA%\\HBuilder X'.",
+        "Close HBuilderX before updating and use Scoop to update the editor."
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://download1.dcloud.net.cn/download/HBuilderX.5.34.2026102909.zip",
+            "hash": "5ddef1fe3d61f9f11bd8f390b633f204eec00bd2c04fff270cbba21727c6eff4"
+        }
+    },
+    "extract_dir": "HBuilderX",
+    "pre_install": [
+        "# Refresh bundled plugins while retaining separately installed plugins.",
+        "if (Test-Path \"$persist_dir\\plugins\") {",
+        "    Get-ChildItem -LiteralPath \"$dir\\plugins\" | ForEach-Object {",
+        "        $target = Join-Path \"$persist_dir\\plugins\" $_.Name",
+        "        if (Test-Path -LiteralPath $target) { Remove-Item -LiteralPath $target -Recurse -Force }",
+        "        Move-Item -LiteralPath $_.FullName -Destination $target",
+        "    }",
+        "}"
+    ],
+    "bin": [
+        [
+            "HBuilderX.exe",
+            "hbuilderx"
+        ],
+        [
+            "cli.exe",
+            "hbuilderx-cli"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "HBuilderX.exe",
+            "HBuilderX"
+        ]
+    ],
+    "persist": "plugins",
+    "checkver": {
+        "url": "https://download1.dcloud.net.cn/hbuilderx/release.json",
+        "jsonpath": "$.version"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://download1.dcloud.net.cn/download/HBuilderX.$version.zip"
+            }
+        }
+    }
+}
