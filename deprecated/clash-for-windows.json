@@ -25,14 +25,14 @@
             "        Copy-Item -Path \"$env:USERPROFILE\\.config\\clash\\*\" -Destination \"$persist_dir\\data\" -Recurse -Container",
             "    }",
             "}",
-            "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name dorado) scripts/DoradoUtils.psm1)",
+            "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name $bucket) scripts/DoradoUtils.psm1)",
             "Mount-ExternalRuntimeData -Source \"$persist_dir\\clash_win\" -Target \"$env:APPDATA\\clash_win\"",
             "Remove-Module -Name DoradoUtils"
         ]
     },
     "uninstaller": {
         "script": [
-            "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name dorado) scripts/DoradoUtils.psm1)",
+            "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name $bucket) scripts/DoradoUtils.psm1)",
             "Dismount-ExternalRuntimeData -Target \"$env:APPDATA\\clash_win\"",
             "Remove-Module -Name DoradoUtils"
         ]
