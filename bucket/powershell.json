@@ -1,16 +1,16 @@
 {
     "homepage": "https://github.com/PowerShell/PowerShell",
     "description": "PowerShell, the cross-platform task automation and configuration management framework/tool.",
-    "version": "7.6.9",
+    "version": "7.7.0",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.6.9/PowerShell-7.6.9-win-x64.zip",
-            "hash": "ce7484804c0f0ad4dda10c958e71acdaf7eebfb22505c1b480f89e0e9f1da94d"
+            "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.7.0/PowerShell-7.7.0-win-x64.zip",
+            "hash": "7c74e03b20a75b59715847439d046a6214b1863ee79b187872980f139bb4a05f"
         },
         "arm64": {
-            "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.6.9/PowerShell-7.6.9-win-arm64.zip",
-            "hash": "2157fb002178e606c2a5532c56647118d90d029742f04d4900a71e3b478c2363"
+            "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.7.0/PowerShell-7.7.0-win-arm64.zip",
+            "hash": "5dc7440cd98f0ba786a44d7db9205df5058474fd4db143caf7171e8375f34f75"
         }
     },
     "bin": "pwsh.exe",
