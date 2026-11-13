@@ -1,20 +1,20 @@
 {
-    "version": "2.15.0",
+    "version": "2.16.0",
     "description": "ChatGPT in terminal without needing API keys",
     "homepage": "https://github.com/aandrew-me/tgpt",
     "license": "GPL-3.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/aandrew-me/tgpt/releases/download/v2.15.0/tgpt-amd64.exe#/tgpt.exe",
-            "hash": "9974d187c0e920da9e1a8e9e7d4ad9f138e1919ab1615a2d5bc6675a58162d31"
+            "url": "https://github.com/aandrew-me/tgpt/releases/download/v2.16.0/tgpt-amd64.exe#/tgpt.exe",
+            "hash": "0f22e2b0136ea46e0736390bfd250f9a5307e32add2afaa56caf2a4786c51244"
         },
         "32bit": {
-            "url": "https://github.com/aandrew-me/tgpt/releases/download/v2.15.0/tgpt-i386.exe#/tgpt.exe",
-            "hash": "1c40a9a672816e5606a4c93935b1dfe9faf87c4da229ec5356df9baf6f12aaee"
+            "url": "https://github.com/aandrew-me/tgpt/releases/download/v2.16.0/tgpt-i386.exe#/tgpt.exe",
+            "hash": "6b8c833030a29994a23603be2f0efd4c0a3e2ff2bb1aa1b922a43c718a9a3929"
         },
         "arm64": {
-            "url": "https://github.com/aandrew-me/tgpt/releases/download/v2.15.0/tgpt-arm64.exe#/tgpt.exe",
-            "hash": "fb12e4213b063ffa13cdfbb4f18e8caf4da8bf9d9d74211c2e5b6fae5facfa95"
+            "url": "https://github.com/aandrew-me/tgpt/releases/download/v2.16.0/tgpt-arm64.exe#/tgpt.exe",
+            "hash": "4611e4b04fb3006f30cf0da792b2b081f74a3c4e0f013d1431265f754a4cec05"
         }
     },
     "bin": "tgpt.exe",
