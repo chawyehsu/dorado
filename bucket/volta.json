@@ -2,45 +2,40 @@
     "homepage": "https://volta.sh/",
     "description": "Volta is a hassle-free way to manage your JavaScript command-line tools (maintained fork)",
     "license": "BSD-2-Clause",
-    "version": "2.0.3",
+    "version": "2.1.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/chawyehsu/volta/releases/download/v2.0.3/volta-2.0.3-windows.zip",
-            "hash": "ccaa1690b789a66536c7f9714f3f476fa587ba9acf6e3bf31beca8a4fbf05e11"
+            "url": "https://github.com/chawyehsu/volta/releases/download/v2.1.0/volta-x86_64-pc-windows-msvc.zip",
+            "hash": "4b28932068fe9721a65dc4a8dc80f44825ee3fd34780ddca6a2752af9251a392"
         },
         "arm64": {
-            "url": "https://github.com/chawyehsu/volta/releases/download/v2.0.3/volta-2.0.3-windows-arm.zip",
-            "hash": "2ed8a2aa120fb1ce4b1066d4e83c4647839167e3309d0b2312c1664055dc2881"
+            "url": "https://github.com/chawyehsu/volta/releases/download/v2.1.0/volta-aarch64-pc-windows-msvc.zip",
+            "hash": "a5a04087824864f2470b2c11395facef27484312ad0883d0cd92d00257949264"
         }
     },
     "installer": {
         "script": [
-            "function UpdateExeFile([String] $original, [String] $file, [Switch] $Removal) {",
-            "    if (Test-Path \"$persist_dir\\appdata\\bin\\$file\") { # persist new volta shims",
-            "        Remove-Item \"$persist_dir\\appdata\\bin\\$file\" -Force",
-            "        Copy-Item \"$dir\\$original\" \"$persist_dir\\appdata\\bin\\$file\"",
-            "    } else { # or create new shims",
-            "        if (!(Test-Path \"$persist_dir\\appdata\\bin\")) {",
-            "            New-Item -Path \"$persist_dir\\appdata\\bin\" -ItemType Directory | Out-Null",
-            "        }",
-            "        Copy-Item \"$dir\\$original\" \"$persist_dir\\appdata\\bin\\$file\"",
+            "# remove old shim wrappers as they are now unnecessary",
+            "@('node', 'npm', 'npx', 'pnpm', 'yarn', 'yarnpkg') | ForEach-Object {",
+            "    if (Test-Path \"$persist_dir\\appdata\\bin\\$_\") {",
+            "        Remove-Item \"$persist_dir\\appdata\\bin\\$_\" -Force -ErrorAction SilentlyContinue",
             "    }",
-            "    if ($Removal) {",
-            "        Remove-Item \"$dir\\$original\" -Force",
+            "    if (Test-Path \"$persist_dir\\appdata\\bin\\$_.cmd\") {",
+            "        Remove-Item \"$persist_dir\\appdata\\bin\\$_.cmd\" -Force -ErrorAction SilentlyContinue",
             "    }",
             "}",
-            "@('node', 'npm', 'npx', 'pnpm', 'yarn') | ForEach-Object {",
-            "    UpdateExeFile 'volta-shim.exe' \"$_.exe\"",
-            "}",
+            "# remove old volta exes as now they are located in the install root",
             "@('volta', 'volta-migrate', 'volta-shim') | ForEach-Object {",
-            "    UpdateExeFile \"$_.exe\" \"$_.exe\" -Removal",
-            "}",
-            "@('node', 'npm', 'npx', 'pnpm', 'yarn') | ForEach-Object {",
-            "    $cmd = \"@echo off`n`\"%~dpn0.exe`\" %*\"",
-            "    Set-Content \"$persist_dir\\appdata\\bin\\$_.cmd\" $cmd -Encoding utf8",
+            "    if (Test-Path \"$persist_dir\\appdata\\bin\\$_.exe\") {",
+            "        Remove-Item \"$persist_dir\\appdata\\bin\\$_.exe\" -Force -ErrorAction SilentlyContinue",
+            "    }",
             "}"
         ]
     },
+    "bin": [
+        "volta.exe",
+        "volta-migrate.exe"
+    ],
     "env_set": {
         "VOLTA_HOME": "$dir\\appdata"
     },
@@ -52,10 +47,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/chawyehsu/volta/releases/download/v$version/volta-$version-windows.zip"
+                "url": "https://github.com/chawyehsu/volta/releases/download/v$version/volta-x86_64-pc-windows-msvc.zip"
             },
             "arm64": {
-                "url": "https://github.com/chawyehsu/volta/releases/download/v$version/volta-$version-windows-arm.zip"
+                "url": "https://github.com/chawyehsu/volta/releases/download/v$version/volta-aarch64-pc-windows-msvc.zip"
             }
         }
     },
