@@ -2,14 +2,17 @@
     "homepage": "https://www.futunn.com/",
     "description": "Powerful tool facilitating trading and providing market information and data for Hong Kong, US and China A-Share Stocks",
     "license": "Proprietary",
-    "version": "16.35.24758",
-    "url": "https://softwaredownload.futunn.com/FTNN_legacy_16.35.24758.exe#/ftnn_16.35.24758.7z",
-    "hash": "ac56bafb68808e285c27b2ed2a264942c8ea33bbdef574ab3eee4f5c234e0cb2",
-    "post_install": [
-        "@('$PLUGINSDIR', '$_14_') | ForEach-Object {",
-        "    Remove-Item \"$dir\\$_\" -Recurse -Force",
-        "}"
-    ],
+    "version": "16.39.27508",
+    "url": "https://softwaredownload.futunn.com/FTNN_desktop_16.39.27508.exe#/ftnn_16.39.27508.7z",
+    "hash": "24208916537a9a6ee649aa861fb6faf281f820a99ed2fde0c1300fa746b2181f",
+    "installer": {
+        "script": [
+            "Move-Item \"$dir\\`$_10_\\*\" \"$dir\" -Force",
+            "@('$PLUGINSDIR', '$_2_', '$_10_') | ForEach-Object {",
+            "    Remove-Item \"$dir\\$_\" -Recurse -Force -ErrorAction SilentlyContinue",
+            "}"
+        ]
+    },
     "shortcuts": [
         [
             "FTNN.exe",
@@ -17,10 +20,10 @@
         ]
     ],
     "checkver": {
-        "url": "https://www.futunn.com/api/futunn/download/fetch-lasted-link?clientType=10",
-        "regex": "FTNN_legacy_([\\d.]+).exe"
+        "url": "https://dorado-api.chawyehsu.deno.net/futunn",
+        "jsonpath": "$.version"
     },
     "autoupdate": {
-        "url": "https://softwaredownload.futunn.com/FTNN_legacy_$version.exe#/ftnn_$version.7z"
+        "url": "https://softwaredownload.futunn.com/FTNN_desktop_$version.exe#/ftnn_$version.7z"
     }
 }
