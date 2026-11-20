@@ -1,18 +1,18 @@
 {
-    "version": "26.3.2-3",
+    "version": "26.7.2-0",
     "homepage": "https://github.com/conda-forge/miniforge",
     "description": "A minimal conda distribution specific to conda-forge.",
     "license": "BSD-3-Clause",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/conda-forge/miniforge/releases/download/26.3.2-3/Miniforge3-26.3.2-3-Windows-x86_64.exe",
-            "hash": "14a8635465b5190537ddad6286746ffebbc55a1ed2a7bb14a506595fe3191e1e"
+            "url": "https://github.com/conda-forge/miniforge/releases/download/26.7.2-0/Miniforge3-26.7.2-0-Windows-x86_64.exe",
+            "hash": "71cf9519087be74fa53021219ff292beb2fc05fa49e0bb6eb0e0b6b14fccbaab"
         }
     },
     "installer": {
         "script": [
             "# https://github.com/ScoopInstaller/Scoop/pull/5065",
-            "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name dorado) scripts/DoradoUtils.psm1)",
+            "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name $bucket) scripts/DoradoUtils.psm1)",
             "Move-Item \"$dir\\$fname\" \"$dir\\..\\setup.exe\" | Out-Null",
             "Invoke-ExternalCommand2 -Path \"$dir\\..\\setup.exe\" -ArgumentList @('/S', '/InstallationType=JustMe', '/RegisterPython=0', '/AddToPath=0', '/NoRegistry=1', '/NoShortcuts=1', \"/D=$dir\") | Out-Null",
             "Remove-Module -Name DoradoUtils"
@@ -20,7 +20,7 @@
     },
     "uninstaller": {
         "script": [
-            "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name dorado) scripts/DoradoUtils.psm1)",
+            "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name $bucket) scripts/DoradoUtils.psm1)",
             "Start-Process \"$dir\\Uninstall-Miniforge3.exe\" -ArgumentList '/S' -Wait | Out-Null",
             "Remove-Module -Name DoradoUtils"
         ]
@@ -33,10 +33,7 @@
         "# Invoke hook for current shell session",
         "(& $dir\\scripts\\conda.exe shell.powershell hook) | Out-String | Invoke-Expression"
     ],
-    "checkver": {
-        "github": "https://github.com/conda-forge/miniforge",
-        "regex": "tag/([\\d.-]+)"
-    },
+    "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
