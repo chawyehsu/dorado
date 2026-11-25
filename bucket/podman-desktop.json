@@ -1,21 +1,21 @@
 {
-    "version": "1.30.7",
+    "version": "1.31.0",
     "description": "A graphical tool for developing on containers and Kubernetes",
     "homepage": "https://podman-desktop.io/",
     "license": "Apache-2.0",
     "depends": "dorado/podman",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/podman-desktop/podman-desktop/releases/download/v1.30.7/podman-desktop-1.30.7-x64.exe#/podman-desktop.7z",
-            "hash": "1c9d4573a2f6a9c952dd8ba4156da5448856326df51851143bc74b417e597269",
+            "url": "https://github.com/podman-desktop/podman-desktop/releases/download/v1.31.0/podman-desktop-1.31.0-x64.exe#/podman-desktop.7z",
+            "hash": "a7c29e75cc13aa7b5798eb5a5d5571852ea7edf24470c6bf88e23cecd63544fb",
             "pre_install": [
                 "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
                 "Remove-Item \"$dir\\`$*\", \"$dir\\Uninstall*\" -Force -Recurse"
             ]
         },
         "arm64": {
-            "url": "https://github.com/podman-desktop/podman-desktop/releases/download/v1.30.7/podman-desktop-1.30.7-arm64.exe#/podman-desktop.7z",
-            "hash": "e2168e44cce0d4f7c7ad9646ded6d0d833910d0b1157cfc0c104b3a6cb874138",
+            "url": "https://github.com/podman-desktop/podman-desktop/releases/download/v1.31.0/podman-desktop-1.31.0-arm64.exe#/podman-desktop.7z",
+            "hash": "fc012bc06d12a345b4afd2038c06b0b35eb86b3d38317a0659c805aa9eac939a",
             "pre_install": [
                 "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-arm64.7z\" \"$dir\"",
                 "Remove-Item \"$dir\\`$*\", \"$dir\\Uninstall*\" -Force -Recurse"
